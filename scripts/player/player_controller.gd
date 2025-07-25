@@ -44,9 +44,11 @@ var is_jumping: bool = false
 var is_crouching: bool = false
 var is_mouse_hidden: bool = false
 var is_running: bool = false
+var is_falling: bool = false
 
 func _ready() -> void:
 	camera.fov = FOV_MIN
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 #unhandled input process
 func _unhandled_input(event: InputEvent) -> void:
@@ -59,7 +61,6 @@ func _unhandled_input(event: InputEvent) -> void:
 #main physics process
 #contains all movement related functions
 func _physics_process(delta: float) -> void:
-	var was_on_floor = is_on_floor()
 	handle_gravity(delta)
 	handle_move(delta)
 	handle_sprint(delta)
@@ -67,7 +68,10 @@ func _physics_process(delta: float) -> void:
 	toggle_mouse()
 	handle_head_roll(input_dir, delta)
 	handle_crouch(delta)
+	check_jump_and_fall()
 	move_and_slide()
+	
+	player_debug()
 
 func handle_gravity(delta):
 	#gravities the player so they're always goin down down
@@ -97,11 +101,18 @@ func handle_move(delta):
 func handle_jump():
 	#handles jumping
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		is_jumping = true
-		print('jump')
 		velocity.y = player_jump_height
+
+func check_jump_and_fall():
+	if velocity.y > 0:
+		is_jumping = true
+		is_falling = false
+	elif velocity.y < 0:
+		is_jumping = false
+		is_falling = true
 	else:
 		is_jumping = false
+		is_falling = false
 
 func handle_crouch(delta):
 	# Handle crouch. Player speed is reduced. Source-like crouch jumping behaviour from https://www.youtube.com/@MajikayoGames
@@ -118,7 +129,7 @@ func handle_crouch(delta):
 		_set_current_speed(WALK_SPEED)
 		_crouch_cam_speed*=2.5
 	#some bullshit i found that mimics the source jump
-	var translate_y_if_possible := 0
+	var translate_y_if_possible := 0.0
 	if was_crouched_last_frame != is_crouching and not is_on_floor(): #was player on floor last frame?
 		translate_y_if_possible = crouch_jump_add if is_crouching else -crouch_jump_add #if the player was not on the floor add a small value, subtract otherwise
 	if translate_y_if_possible != 0.0:
@@ -154,7 +165,10 @@ func handle_sprint(delta):
 		_set_current_speed(RUN_SPEED)
 	else:
 		is_running = false
-		_set_current_speed(WALK_SPEED)
+		if is_crouching:
+			_set_current_speed(CROUCH_SPEED) #fuckass solution, kinda half baked. cant source jump sprint with this but prevents crouch hopping.
+		else:
+			_set_current_speed(WALK_SPEED)
 
 func fov_change(delta, minfov, maxfov):
 		if is_running and is_moving:
@@ -171,3 +185,13 @@ func _set_current_speed(speedmod):
 	current_speed = _WALK_SPEED * speedmod
 func _get_current_speed():
 	return current_speed
+	
+##Debug Info
+func player_debug():
+
+	Global.debug.add_property('Is Moving',is_moving,1)
+	Global.debug.add_property('Is Crouching',is_crouching,1)
+	Global.debug.add_property('Is Jumping',is_jumping,1)
+	Global.debug.add_property('Is Falling', is_falling, 1)
+	Global.debug.add_property('Is Running',is_running,1)
+	Global.debug.add_property('Current Speed', velocity.snappedf(0.01), 1)

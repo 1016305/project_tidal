@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlfk08xleb3kw"]
+
+[ext_resource type="Script" uid="uid://cbbsm2eihvi53" path="res://scripts/player/reticle.gd" id="1_syvep"]
+[ext_resource type="Theme" uid="uid://c7kwjwrfwnkj" path="res://ui_themes/debug_panel.tres" id="2_y1h3b"]
+[ext_resource type="Script" uid="uid://dn8ud3onrum6d" path="res://scripts/utility/debug.gd" id="3_jbsfc"]
+
+[node name="user_interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="reticle" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_syvep")
+
+[node name="top" type="Line2D" parent="reticle"]
+points = PackedVector2Array(0, -5, 0, -15)
+width = 2.0
+
+[node name="left" type="Line2D" parent="reticle"]
+points = PackedVector2Array(-15, 0, -5, 0)
+width = 2.0
+
+[node name="right" type="Line2D" parent="reticle"]
+points = PackedVector2Array(15, 0, 5, 0)
+width = 2.0
+
+[node name="bottom" type="Line2D" parent="reticle"]
+points = PackedVector2Array(0, 5, 0, 15)
+width = 2.0
+
+[node name="debug_menu" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 50.0
+theme = ExtResource("2_y1h3b")
+script = ExtResource("3_jbsfc")
+
+[node name="MarginContainer" type="MarginContainer" parent="debug_menu"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="debug_menu/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="debug_menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "DEBUG"
