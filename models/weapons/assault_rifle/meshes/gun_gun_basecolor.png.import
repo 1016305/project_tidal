@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bobhrehaydur0"
-path.s3tc="res://.godot/imported/gun_gun_basecolor.png-db5b84ea531202c4e09fea67743e378e.s3tc.ctex"
+path="res://.godot/imported/gun_gun_basecolor.png-db5b84ea531202c4e09fea67743e378e.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "7ef87b5bd006af76838e6de43be6160b"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://models/weapons/assault_rifle/meshes/gun_gun_basecolor.png"
-dest_files=["res://.godot/imported/gun_gun_basecolor.png-db5b84ea531202c4e09fea67743e378e.s3tc.ctex"]
+dest_files=["res://.godot/imported/gun_gun_basecolor.png-db5b84ea531202c4e09fea67743e378e.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

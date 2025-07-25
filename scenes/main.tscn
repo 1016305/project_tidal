@@ -1,24 +1,33 @@
-[gd_scene load_steps=7 format=3 uid="uid://jwb2jhicd4uh"]
+[gd_scene load_steps=8 format=3 uid="uid://jwb2jhicd4uh"]
 
+[ext_resource type="Texture2D" uid="uid://dkd8bff5lu385" path="res://textures/spruit_sunrise.jpg" id="1_jyhfs"]
 [ext_resource type="Material" uid="uid://ciyptmi6h3qlq" path="res://materials/devtexture_grey.tres" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://dsb1mn22d220l" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="Material" uid="uid://cmf6w8b83cusu" path="res://materials/devtexture_orange.tres" id="2_sugp2"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
-sun_angle_max = 52.22
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tbgi4"]
+panorama = ExtResource("1_jyhfs")
 
-[sub_resource type="Sky" id="Sky_sugp2"]
-sky_material = SubResource("ProceduralSkyMaterial_0wfyh")
+[sub_resource type="Sky" id="Sky_tefeu"]
+sky_material = SubResource("PanoramaSkyMaterial_tbgi4")
 
 [sub_resource type="Environment" id="Environment_jyhfs"]
 background_mode = 2
-sky = SubResource("Sky_sugp2")
+sky = SubResource("Sky_tefeu")
+tonemap_mode = 3
+ssr_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_length = 256.0
+volumetric_fog_sky_affect = 0.0
 
 [node name="world" type="Node3D"]
 transform = Transform3D(1.00023, 0, 0, 0, 1.00023, 0, 0, 0, 1.00023, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(0.939088, 0.0287565, -0.342471, 0.124444, 0.90042, 0.416843, 0.320355, -0.434071, 0.841995, 0, 0, 0)
+light_color = Color(0.943107, 0.815274, 0.784618, 1)
+light_bake_mode = 1
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -27,10 +36,10 @@ environment = SubResource("Environment_jyhfs")
 [node name="stage" type="Node3D" parent="."]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.5, 7)
 material_override = ExtResource("1_o5qli")
 use_collision = true
-size = Vector3(20, 1, 20)
+size = Vector3(32, 1, 34)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="stage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0.5, -5.5)
@@ -44,6 +53,125 @@ material_override = ExtResource("2_sugp2")
 use_collision = true
 size = Vector3(1, 2, 4)
 material = ExtResource("2_sugp2")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 4.5, 13.9975)
+material_override = ExtResource("2_sugp2")
+use_collision = true
+size = Vector3(1, 9, 18)
+material = ExtResource("2_sugp2")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.49701, 4.5, 13.9975)
+material_override = ExtResource("2_sugp2")
+use_collision = true
+size = Vector3(1, 9, 18)
+material = ExtResource("2_sugp2")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="stage"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.5, 2.5, 23.5)
+material_override = ExtResource("2_sugp2")
+use_collision = true
+size = Vector3(1, 5, 13)
+material = ExtResource("2_sugp2")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="stage"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 4.5, 23.5)
+material_override = ExtResource("2_sugp2")
+use_collision = true
+size = Vector3(1, 9, 14)
+material = ExtResource("2_sugp2")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="stage"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.5, 4.5, 5.50414)
+material_override = ExtResource("2_sugp2")
+use_collision = true
+size = Vector3(1, 9, 5)
+material = ExtResource("2_sugp2")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="stage"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5, 6.5, 5.50414)
+material_override = ExtResource("2_sugp2")
+use_collision = true
+size = Vector3(1, 5, 8)
+material = ExtResource("2_sugp2")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="stage"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.5, 2, 5.50414)
+material_override = ExtResource("2_sugp2")
+use_collision = true
+size = Vector3(1, 4, 5)
+material = ExtResource("2_sugp2")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.00046, 8.49816, 13.9989)
+material_override = ExtResource("2_sugp2")
+size = Vector3(12, 1, 18)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="stage"]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -2.95271, 4.16229, 14.7337)
+size = Vector3(14.9581, 10.7124, 19.487)
+box_projection = true
+interior = true
+enable_shadows = true
+mesh_lod_threshold = 0.0
+ambient_mode = 2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="stage"]
+transform = Transform3D(0.99977, 0, 0, 0, -4.37013e-08, 0.99977, 0, -0.99977, -4.37013e-08, 0, 5.2087, 20.8705)
+light_color = Color(0.995358, 0.917911, 0.747598, 1)
+light_energy = 32.0
+light_volumetric_fog_energy = 2.067
+spot_range = 14.003
+spot_attenuation = 2.0
+spot_angle = 17.57
+spot_angle_attenuation = 1.31951
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="stage"]
+transform = Transform3D(0.99977, 0, 0, 0, -4.37013e-08, 0.99977, 0, -0.99977, -4.37013e-08, 0, 5.2087, 17.6566)
+light_color = Color(0.996078, 0.917647, 0.74902, 1)
+light_energy = 32.0
+light_volumetric_fog_energy = 2.067
+spot_range = 14.003
+spot_attenuation = 2.0
+spot_angle = 17.57
+spot_angle_attenuation = 1.31951
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="stage"]
+transform = Transform3D(0.99977, 0, 0, 0, -4.37013e-08, 0.99977, 0, -0.99977, -4.37013e-08, 0, 5.2087, 14.2488)
+light_color = Color(0.874, 0.939867, 0.95, 1)
+light_energy = 32.0
+light_volumetric_fog_energy = 2.067
+spot_range = 14.003
+spot_attenuation = 2.0
+spot_angle = 17.57
+spot_angle_attenuation = 1.31951
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="stage"]
+transform = Transform3D(0.99977, 0, 0, 0, -4.37013e-08, 0.99977, 0, -0.99977, -4.37013e-08, 0, 5.2087, 10.843)
+light_color = Color(0.874, 0.939867, 0.95, 1)
+light_energy = 32.0
+light_volumetric_fog_energy = 2.067
+spot_range = 14.003
+spot_attenuation = 2.0
+spot_angle = 17.57
+spot_angle_attenuation = 1.31951
+
+[node name="OmniLight3D" type="OmniLight3D" parent="stage"]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -6.82961, 3.00528, 19.8359)
+light_color = Color(1, 0.738455, 0.750613, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="stage"]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -6.82961, 1.63347, 9.47467)
+light_color = Color(0.912562, 0.794975, 0.661978, 1)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="stage"]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -6.82962, 1.63347, 12.0706)
+light_color = Color(0.629178, 0.865983, 0.889504, 1)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="stage"]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -6.82802, 1.92586, 13.9433)
+light_color = Color(0.556821, 0.00034452, 0.589941, 1)
 
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72631, 0)
