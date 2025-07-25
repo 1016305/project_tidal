@@ -1,14 +1,14 @@
 [gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://ckc5mic00mn45"]
 
-[ext_resource type="Texture2D" uid="uid://bobhrehaydur0" path="res://models/weapons/assault_rifle/meshes/gun_gun_basecolor.png" id="1_g5wmv"]
-[ext_resource type="Texture2D" uid="uid://b634epv015ryg" path="res://models/weapons/assault_rifle/meshes/gun_gun_metallic-gun_rough.png" id="2_jbdqp"]
-[ext_resource type="Texture2D" uid="uid://cahkmdu4d4y0e" path="res://models/weapons/assault_rifle/meshes/gun_gun_normal.png" id="3_r5a38"]
+[ext_resource type="Texture2D" uid="uid://bobhrehaydur0" path="res://models/weapons/assault_rifle/meshes/gun_gun_basecolor.png" id="1_8if8e"]
+[ext_resource type="Texture2D" uid="uid://b634epv015ryg" path="res://models/weapons/assault_rifle/meshes/gun_gun_metallic-gun_rough.png" id="2_xsv67"]
+[ext_resource type="Texture2D" uid="uid://cahkmdu4d4y0e" path="res://models/weapons/assault_rifle/meshes/gun_gun_normal.png" id="3_aysbv"]
 
 [sub_resource type="Shader" id="Shader_g5wmv"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.4.1.stable's StandardMaterial3D.
 
 shader_type spatial;
-render_mode blend_mix, depth_draw_opaque, cull_disabled, diffuse_burley, specular_schlick_ggx;
+render_mode blend_mix, depth_draw_opaque, cull_disabled, diffuse_burley, specular_schlick_ggx, depth_prepass_alpha;
 
 uniform vec4 albedo : source_color;
 uniform sampler2D texture_albedo : source_color, filter_nearest_mipmap, repeat_enable;
@@ -60,6 +60,7 @@ void fragment() {
 	// Normal Map: Enabled
 	NORMAL_MAP = texture(texture_normal, base_uv).rgb;
 	NORMAL_MAP_DEPTH = normal_scale;
+	ALPHA *= albedo.a * albedo_tex.a;
 }
 "
 
@@ -67,17 +68,17 @@ void fragment() {
 resource_name = "Material.001"
 render_priority = 0
 shader = SubResource("Shader_g5wmv")
-shader_parameter/albedo = Color(1, 1, 1, 1)
-shader_parameter/texture_albedo = ExtResource("1_g5wmv")
+shader_parameter/albedo = Color(0.76, 0.76, 0.76, 1)
+shader_parameter/texture_albedo = ExtResource("1_8if8e")
 shader_parameter/albedo_texture_size = Vector2i(512, 512)
-shader_parameter/point_size = 1.0
+shader_parameter/point_size = 0.1
 shader_parameter/roughness = 1.0
-shader_parameter/texture_metallic = ExtResource("2_jbdqp")
+shader_parameter/texture_metallic = ExtResource("2_xsv67")
 shader_parameter/metallic_texture_channel = Vector4(0, 0, 1, 0)
-shader_parameter/texture_roughness = ExtResource("2_jbdqp")
-shader_parameter/specular = 0.5
-shader_parameter/metallic = 1.0
-shader_parameter/texture_normal = ExtResource("3_r5a38")
+shader_parameter/texture_roughness = ExtResource("2_xsv67")
+shader_parameter/specular = 0.25
+shader_parameter/metallic = 0.25
+shader_parameter/texture_normal = ExtResource("3_aysbv")
 shader_parameter/normal_scale = 1.0
 shader_parameter/uv1_scale = Vector3(1, 1, 1)
 shader_parameter/uv1_offset = Vector3(0, 0, 0)

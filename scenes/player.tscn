@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsb1mn22d220l"]
+[gd_scene load_steps=6 format=3 uid="uid://dsb1mn22d220l"]
 
 [ext_resource type="Script" uid="uid://beis6e7q2vp36" path="res://scripts/player/player_controller.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://dlfk08xleb3kw" path="res://scenes/user_interface.tscn" id="2_g2els"]
 [ext_resource type="PackedScene" uid="uid://dv0fk3tgisqxa" path="res://scenes/weapons/assault_rifle.tscn" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://do4cecvgh7odd" path="res://scripts/weapons/test_deleteme.gd" id="3_dqkch"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3vyb7"]
 
@@ -17,11 +18,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 
 [node name="camera" type="Camera3D" parent="stand_collider/player_head"]
 fov = 90.0
+near = 0.001
 
 [node name="weapon_rig" type="Node3D" parent="stand_collider/player_head/camera"]
 
 [node name="assault_rifle" parent="stand_collider/player_head/camera/weapon_rig" instance=ExtResource("2_qhqgy")]
-transform = Transform3D(0.0996195, 0, -0.00871557, 0, 0.1, 0, 0.00871557, 0, 0.0996195, 0.31, -0.35, -0.64)
+transform = Transform3D(0.0996195, 0, -0.00871558, 0, 0.1, 0, 0.00871558, 0, 0.0996195, 0.31, -0.35, -0.64)
+script = ExtResource("3_dqkch")
+sway_min = Vector2(-50, -50)
+sway_max = Vector2(50, 50)
+drift_max = 10.0
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="stand_collider/player_head/camera"]
 update_mode = 1

@@ -102,6 +102,8 @@ func handle_jump():
 	#handles jumping
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = player_jump_height
+	if is_jumping and is_crouching:
+		_set_current_speed(CROUCH_SPEED)
 
 func check_jump_and_fall():
 	if velocity.y > 0:
