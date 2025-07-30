@@ -8,3 +8,4 @@ func _ready() -> void:
 	
 func _draw():
 	draw_circle(Vector2(0,0),dot_radius,dot_color)
+##whole thing to be rewritten. each weapon will have a custom reticle

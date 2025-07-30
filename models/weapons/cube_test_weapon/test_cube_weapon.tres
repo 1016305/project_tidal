@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="weapons" load_steps=3 format=3 uid="uid://b1wk7bpd1gpr1"]
+
+[ext_resource type="ArrayMesh" uid="uid://cu05q5m1ay6ch" path="res://models/weapons/cube_test_weapon/testcubeweapon_Cube_001.res" id="1_ed6ig"]
+[ext_resource type="Script" uid="uid://4ccqrj081s06" path="res://scripts/player/weapons.gd" id="1_vttsm"]
+
+[resource]
+script = ExtResource("1_vttsm")
+name = &"test_cube_weapon"
+position = Vector3(1.64, -1.32, -1.573)
+rotation = Vector3(0, -175.5, 0)
+scale = Vector3(0.5, 0.5, 0.5)
+mesh = Array[Mesh]([ExtResource("1_ed6ig")])
+weapon_damage = 0.0
+sway_min = Vector2(-20, -20)
+sway_max = Vector2(20, 20)
+sway_speed_position = 0.07
+sway_speed_rotation = 0.1
+sway_ammount_position = 0.1
+sway_ammount_rotation = 30.0
+drift_max = 0.5
+drift_speed = 0.1
+fov_slider = 75.0
+metadata/_custom_type_script = "uid://4ccqrj081s06"

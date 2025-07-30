@@ -1,3 +1,4 @@
+#controls the debug panel. singleton can be accessed globally to add more elements to the panel
 extends PanelContainer
 
 var property
@@ -8,8 +9,6 @@ func _ready() -> void:
 	#hide on load
 	visible = false
 	Global.debug = self
-	
-
 
 func _input(event):
 	#toggle panel
@@ -33,12 +32,9 @@ func add_property(title: String, value, order):
 	elif visible:
 		target.text = title + ": "  + str(value) #will update text if already found
 		property_container.move_child(target,order) #move elements around in the menu
-	#property = Label.new()
-	#property_container.add_child(property)
-	#property.name = title
-	#property.text = property.name + value
 
 func get_fps(delta):
+	#more reliable than the default method, as this updates every frame
 	var _fps
 	_fps = "%0.2f" % (1.0/delta) #get fps with 2 decimal points
 	if ProjectSettings.get_setting('display/window/vsync/vsync_mode') == 1:

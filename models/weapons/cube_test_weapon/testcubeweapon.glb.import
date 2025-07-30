@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://s2tub0gfhehg"
-path="res://.godot/imported/gun.glb-36f96f0e1253459475174e9c1f6c223c.scn"
+uid="uid://q83crhw2umei"
+path="res://.godot/imported/testcubeweapon.glb-8b13be09d2a9d2502dafedc2bc3c47d0.scn"
 
 [deps]
 
-source_file="res://models/weapons/assault_rifle/meshes/materials/gun.glb"
-dest_files=["res://.godot/imported/gun.glb-36f96f0e1253459475174e9c1f6c223c.scn"]
+source_file="res://models/weapons/cube_test_weapon/testcubeweapon.glb"
+dest_files=["res://.godot/imported/testcubeweapon.glb-8b13be09d2a9d2502dafedc2bc3c47d0.scn"]
 
 [params]
 
@@ -32,6 +32,17 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"testcubeweapon_Cube_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://models/weapons/cube_test_weapon/testcubeweapon_Cube_001.res"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

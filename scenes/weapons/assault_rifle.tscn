@@ -139,25 +139,26 @@ shadow_mesh = SubResource("ArrayMesh_qfg2x")
 
 [node name="assault_rifle" type="Node3D"]
 
-[node name="gun" type="Node3D" parent="."]
+[node name="uv_body_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
-
-[node name="uv_body_001" type="MeshInstance3D" parent="gun"]
 material_override = ExtResource("1_e1nc6")
 mesh = SubResource("ArrayMesh_5gefu")
 skeleton = NodePath("")
 
-[node name="uv_magazine_001" type="MeshInstance3D" parent="gun"]
+[node name="uv_magazine_001" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 material_override = ExtResource("1_e1nc6")
 mesh = SubResource("ArrayMesh_2vfc5")
 skeleton = NodePath("")
 
-[node name="uv_trigger_001" type="MeshInstance3D" parent="gun"]
+[node name="uv_trigger_001" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 material_override = ExtResource("1_e1nc6")
 mesh = SubResource("ArrayMesh_a70w3")
 skeleton = NodePath("")
 
-[node name="uv_sight_001" type="MeshInstance3D" parent="gun"]
+[node name="uv_sight_001" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 material_override = ExtResource("4_6ychj")
 mesh = SubResource("ArrayMesh_i2h8f")
 skeleton = NodePath("")

@@ -19,6 +19,7 @@ var current_fov = FOV_MIN
 const FOV_MIN = 90.0
 const FOV_MAX = 110.0
 const FOV_LERP_SPEED = 5.0
+@export var uspeed = 0.0000
 
 #player speed modifiers
 const _WALK_SPEED = 6.0 #static but put here for clarity
@@ -46,13 +47,21 @@ var is_mouse_hidden: bool = false
 var is_running: bool = false
 var is_falling: bool = false
 
+#player weapon states
+var weapon_a: bool = true
+var weapon_b: bool = false
+var wep_a = preload("res://models/weapons/assault_rifle/assault_rifle_weapon.tres")
+var wep_b = preload("res://models/weapons/cube_test_weapon/test_cube_weapon.tres")
+@onready var main_weapon_node: Node3D = $stand_collider/player_head/camera/weapon_rig/weapon
+signal swap_weapons(wep)
+
 func _ready() -> void:
 	camera.fov = FOV_MIN
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 #unhandled input process
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and !is_mouse_hidden:
 		rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
 		player_head.rotate_x(deg_to_rad(-event.relative.y * mouse_sens))
 		player_head.rotation.x = clamp(player_head.rotation.x, deg_to_rad(MIN_LOOK_X), deg_to_rad(MAX_LOOK_X))
@@ -69,8 +78,19 @@ func _physics_process(delta: float) -> void:
 	handle_head_roll(input_dir, delta)
 	handle_crouch(delta)
 	check_jump_and_fall()
+	test_change_weapon()
 	move_and_slide()
 	
+	#I cannot fathom why this only works here. Probably part of some insidious component of move_and_slide
+	#If you move this ANYWHERE it will fuck up the checks for moving. I will not put this into its own
+	#method. It is a monument to all our sins.
+	if velocity.length() < 0.01:
+		is_moving = false
+	elif !input_dir:
+		is_moving = false
+	else:
+		is_moving = true
+		
 	player_debug()
 
 func handle_gravity(delta):
@@ -85,15 +105,12 @@ func handle_move(delta):
 	#direction = lerp(direction,(transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta * move_drag_speed) # includes move drag/dampening. Use if no edge friciton
 	
 	if direction:
-		is_moving = true
 		velocity.x = lerp(velocity.x, direction.x * _get_current_speed(), 3 * delta)
 		velocity.z = lerp(velocity.z, direction.z * _get_current_speed(), 3 * delta)
 	else:
-		is_moving = false
 		if !is_on_floor():
 			velocity = lerp(velocity, Vector3.ZERO, 0.005)
-			#velocity.z = lerp(velocity.z, 0.0, move_drag/2)
-			
+			#velocity.z = lerp(velocity.z, 0.0, move_drag/2)	
 		else:
 			velocity = lerp(velocity, Vector3.ZERO, 0.1)
 			#velocity.z = lerp(velocity.z, 0.0, move_drag)
@@ -106,6 +123,7 @@ func handle_jump():
 		_set_current_speed(CROUCH_SPEED)
 
 func check_jump_and_fall():
+	#controls the state machine. currently not used but could be good to differentiate between jumping and falling
 	if velocity.y > 0:
 		is_jumping = true
 		is_falling = false
@@ -115,7 +133,7 @@ func check_jump_and_fall():
 	else:
 		is_jumping = false
 		is_falling = false
-
+	
 func handle_crouch(delta):
 	# Handle crouch. Player speed is reduced. Source-like crouch jumping behaviour from https://www.youtube.com/@MajikayoGames
 	var was_crouched_last_frame = is_crouching
@@ -162,7 +180,7 @@ func toggle_mouse():
 			
 func handle_sprint(delta):
 	fov_change(delta, FOV_MIN, FOV_MAX)
-	if Input.is_action_pressed("sprint") and !is_crouching:
+	if Input.is_action_pressed("sprint") and !is_crouching and is_moving:
 		is_running = true
 		_set_current_speed(RUN_SPEED)
 	else:
@@ -180,6 +198,24 @@ func fov_change(delta, minfov, maxfov):
 			camera.fov = lerp(camera.fov, minfov, (FOV_LERP_SPEED * 3) *delta)
 			camera.position.z = lerp(camera.position.z, 0.0, (FOV_LERP_SPEED * 3) * delta)
 
+func test_change_weapon():
+	if Input.is_action_pressed("test_swap_to_weapon_a"):
+		if weapon_a:
+			return
+		if !weapon_a:
+			weapon_a = !weapon_a
+			weapon_b = !weapon_b
+			emit_signal('swap_weapons',wep_a)
+			print('swapped to a')
+	if Input.is_action_pressed("test_swap_to_weapon_b"):
+		if weapon_b:
+			return
+		if !weapon_b:
+			weapon_a = !weapon_a
+			weapon_b = !weapon_b
+			emit_signal('swap_weapons',wep_b)
+			print('swapped to b')
+	
 ##Getters and Setters
 
 #External function to adjust/call player speed from multiple fucntions. Adds edge friction modifier.
@@ -196,4 +232,5 @@ func player_debug():
 	Global.debug.add_property('Is Jumping',is_jumping,1)
 	Global.debug.add_property('Is Falling', is_falling, 1)
 	Global.debug.add_property('Is Running',is_running,1)
-	Global.debug.add_property('Current Speed', velocity.snappedf(0.01), 1)
+	Global.debug.add_property('Current Velocity ABS', velocity.abs().snappedf(0.01), 1)
+	Global.debug.add_property('Current Velocity', velocity.snappedf(0.01), 1)

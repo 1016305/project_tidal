@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://jwb2jhicd4uh"]
+[gd_scene load_steps=10 format=3 uid="uid://jwb2jhicd4uh"]
 
 [ext_resource type="Texture2D" uid="uid://dkd8bff5lu385" path="res://textures/spruit_sunrise.jpg" id="1_jyhfs"]
 [ext_resource type="Material" uid="uid://ciyptmi6h3qlq" path="res://materials/devtexture_grey.tres" id="1_o5qli"]
@@ -15,11 +15,15 @@ sky_material = SubResource("PanoramaSkyMaterial_tbgi4")
 background_mode = 2
 sky = SubResource("Sky_tefeu")
 tonemap_mode = 3
-ssr_enabled = true
+ssao_enabled = true
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.01
 volumetric_fog_length = 256.0
 volumetric_fog_sky_affect = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jyhfs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tbgi4"]
 
 [node name="world" type="Node3D"]
 transform = Transform3D(1.00023, 0, 0, 0, 1.00023, 0, 0, 0, 1.00023, 0, 0, 0)
@@ -172,6 +176,16 @@ light_color = Color(0.629178, 0.865983, 0.889504, 1)
 [node name="OmniLight3D4" type="OmniLight3D" parent="stage"]
 transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -6.82802, 1.92586, 13.9433)
 light_color = Color(0.556821, 0.00034452, 0.589941, 1)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="stage"]
+transform = Transform3D(1.605, 0, 0, 0, 1.605, 0, 0, 0, 1.605, 0.717264, 11.2849, -5.00656)
+mass = 0.035
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/RigidBody3D"]
+shape = SubResource("BoxShape3D_jyhfs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage/RigidBody3D"]
+mesh = SubResource("BoxMesh_tbgi4")
 
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72631, 0)

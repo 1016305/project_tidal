@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="weapons" load_steps=6 format=3 uid="uid://3jn5gl2dw4q2"]
+
+[ext_resource type="Script" uid="uid://4ccqrj081s06" path="res://scripts/player/weapons.gd" id="1_r8rce"]
+[ext_resource type="ArrayMesh" uid="uid://dfluikeg8syi0" path="res://models/weapons/assault_rifle/meshes/gun_Cube_034.res" id="1_sjit1"]
+[ext_resource type="ArrayMesh" uid="uid://b3incus7tmf5f" path="res://models/weapons/assault_rifle/meshes/gun_Cylinder_012.res" id="2_uf5nn"]
+[ext_resource type="ArrayMesh" uid="uid://imbq165i7uom" path="res://models/weapons/assault_rifle/meshes/gun_Cube_035.res" id="3_4e8od"]
+[ext_resource type="ArrayMesh" uid="uid://ds3ge47kk86en" path="res://models/weapons/assault_rifle/meshes/gun_Plane.res" id="4_hh3ml"]
+
+[resource]
+script = ExtResource("1_r8rce")
+name = &"Assault Rifle"
+position = Vector3(0.31, -0.35, -0.64)
+rotation = Vector3(0, -90, 0)
+scale = Vector3(0.1, 0.1, 0.1)
+mesh = Array[Mesh]([ExtResource("1_sjit1"), ExtResource("2_uf5nn"), ExtResource("3_4e8od"), ExtResource("4_hh3ml")])
+weapon_damage = 0.0
+sway_min = Vector2(-20, -20)
+sway_max = Vector2(20, 20)
+sway_speed_position = 0.07
+sway_speed_rotation = 0.1
+sway_ammount_position = 0.1
+sway_ammount_rotation = 30.0
+drift_max = 0.5
+drift_speed = 0.1
+fov_slider = 75.0
+metadata/_custom_type_script = "uid://4ccqrj081s06"
