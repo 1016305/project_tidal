@@ -22,4 +22,5 @@ class_name weapons extends Resource
 @export_range(0,50,0.1) var drift_max: float = 0.5
 @export_range(0,0.5,0.01) var drift_speed: float = 0.1
 @export_category("Viewmodel FOV")
+@export var uses_shader: bool = false
 @export_range(0,150,0.1) var fov_slider = 75.0

@@ -1,10 +1,11 @@
 extends Node3D
 
+#weapon instantion
+#handles weapon swapping and meshinstance generation
 @export var weapon_type : weapons:
 	set(value):
 		weapon_type = value
-var additional_meshes: Array[MeshInstance3D]
-
+#temporary bool -> remove in future
 var isshadered: bool = true
 
 var start_pos : Vector3
@@ -14,19 +15,24 @@ var mouse_movement: Vector2
 
 
 func _input(event):
+	#get mouse input for the weapon sway
 	if event is InputEventMouseMotion:
 		mouse_movement = event.relative
 
 func _ready() -> void:
+	#idk man sometimes it shits itself and this stops the initialisation before its not ready
 	if not is_node_ready():
 		await ready
 	load_weapon()
 
 func _physics_process(delta: float) -> void:
 	sway_weapon(delta)
+	Global.debug.add_property("Current Weapon", weapon_type.name, 1)
 	Global.debug.add_property("Weapon Position", position, 1)
 	Global.debug.add_property("Mouse Movement", mouse_movement, 1)
-	change_weapon_fov(weapon_type.fov_slider)
+	if get_child(0):
+		print(get_child(0))
+		change_weapon_fov(weapon_type.fov_slider)
 	
 func sway_weapon(delta):
 	#clamp mouse movement
@@ -46,7 +52,9 @@ func sway_weapon(delta):
 	
 	
 func change_weapon_fov(fov):
-	if get_child(0) is MeshInstance3D and isshadered:
+	#adjust the weapon fov at runtime
+	#gets the shader variable and adjusts it realtime
+	if get_child(0) is MeshInstance3D and weapon_type.uses_shader:
 		var a = get_child(0)
 		if a.get_active_material(0).get_shader_parameter('viewmodel_fov') != fov:
 			var shader_material : ShaderMaterial
@@ -72,11 +80,11 @@ func load_weapon():
 			print("mesh loaded")
 	position = weapon_type.position
 	rotation_degrees = weapon_type.rotation
+	loaded = true
 	
 func unload_weapon():
 	for child in get_children():
 		child.queue_free()
-			
 
 
 func _on_player_swap_weapons(wep: Variant) -> void:

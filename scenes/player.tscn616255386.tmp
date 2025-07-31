@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsb1mn22d220l"]
+
+[ext_resource type="Script" uid="uid://beis6e7q2vp36" path="res://scripts/player/player_controller.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://dlfk08xleb3kw" path="res://scenes/user_interface.tscn" id="2_g2els"]
+[ext_resource type="Resource" uid="uid://3jn5gl2dw4q2" path="res://models/weapons/assault_rifle/assault_rifle_weapon.tres" id="3_dqkch"]
+[ext_resource type="Script" uid="uid://8us8hykaf3pu" path="res://scripts/player/init_weapon.gd" id="4_qlg0r"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3vyb7"]
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_3vyb7")
+
+[node name="stand_collider" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_3vyb7")
+
+[node name="player_head" type="Node3D" parent="stand_collider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+
+[node name="camera" type="Camera3D" parent="stand_collider/player_head"]
+fov = 90.0
+near = 0.001
+
+[node name="weapon_rig" type="Node3D" parent="stand_collider/player_head/camera"]
+
+[node name="weapon" type="Node3D" parent="stand_collider/player_head/camera/weapon_rig"]
+script = ExtResource("4_qlg0r")
+weapon_type = ExtResource("3_dqkch")
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="stand_collider/player_head/camera"]
+update_mode = 1
+enable_shadows = true
+
+[node name="user_interface" parent="." instance=ExtResource("2_g2els")]
+
+[connection signal="swap_weapons" from="." to="stand_collider/player_head/camera/weapon_rig/weapon" method="_on_player_swap_weapons"]
