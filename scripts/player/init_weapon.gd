@@ -80,7 +80,7 @@ func load_weapon():
 			print("mesh loaded")
 	position = weapon_type.position
 	rotation_degrees = weapon_type.rotation
-	loaded = true
+	#loaded = true
 	
 func unload_weapon():
 	for child in get_children():

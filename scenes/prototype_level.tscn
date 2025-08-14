@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnusfr72w43fn"]
+
+[ext_resource type="Texture2D" uid="uid://dkd8bff5lu385" path="res://textures/spruit_sunrise.jpg" id="1_kvexg"]
+[ext_resource type="PackedScene" uid="uid://syg6p23f6rge" path="res://models/Structures/TidalTri1Floor.glb" id="2_061g7"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tbgi4"]
+panorama = ExtResource("1_kvexg")
+
+[sub_resource type="Sky" id="Sky_tefeu"]
+sky_material = SubResource("PanoramaSkyMaterial_tbgi4")
+
+[sub_resource type="Environment" id="Environment_jyhfs"]
+background_mode = 2
+sky = SubResource("Sky_tefeu")
+tonemap_mode = 3
+ssao_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_length = 256.0
+volumetric_fog_sky_affect = 0.0
+
+[node name="PrototypeLevel" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jyhfs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1.5336, 1.60137, 0, -1.68818, -1.45474, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="TidalTri1Floor" parent="Node3D" instance=ExtResource("2_061g7")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.0267771, -0.100709, -0.0216472)
