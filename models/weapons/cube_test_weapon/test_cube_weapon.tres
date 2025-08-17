@@ -19,6 +19,6 @@ sway_ammount_position = 0.1
 sway_ammount_rotation = 30.0
 drift_max = 0.5
 drift_speed = 0.1
-uses_shader = false
+uses_shader = true
 fov_slider = 75.0
 metadata/_custom_type_script = "uid://4ccqrj081s06"

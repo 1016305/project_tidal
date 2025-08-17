@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 	Global.debug.add_property("Weapon Position", position, 1)
 	Global.debug.add_property("Mouse Movement", mouse_movement, 1)
 	if get_child(0):
-		print(get_child(0))
+		#print(get_child(0))
 		change_weapon_fov(weapon_type.fov_slider)
 	
 func sway_weapon(delta):
@@ -80,7 +80,6 @@ func load_weapon():
 			print("mesh loaded")
 	position = weapon_type.position
 	rotation_degrees = weapon_type.rotation
-	loaded = true
 	
 func unload_weapon():
 	for child in get_children():
