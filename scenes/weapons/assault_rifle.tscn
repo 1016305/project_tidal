@@ -160,6 +160,3 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 
 material_override = ExtResource("4_6ychj")
 mesh = SubResource("ArrayMesh_i2h8f")
 skeleton = NodePath("")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14158, 2.53592, 5.28841)
