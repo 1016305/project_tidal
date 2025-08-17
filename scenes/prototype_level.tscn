@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnusfr72w43fn"]
+[gd_scene load_steps=7 format=3 uid="uid://dnusfr72w43fn"]
 
 [ext_resource type="Texture2D" uid="uid://dkd8bff5lu385" path="res://textures/spruit_sunrise.jpg" id="1_kvexg"]
 [ext_resource type="PackedScene" uid="uid://syg6p23f6rge" path="res://models/Structures/TidalTri1Floor.glb" id="2_061g7"]
+[ext_resource type="PackedScene" uid="uid://dltrf5jcnhnob" path="res://models/Structures/TidalTri1LongWall.glb" id="3_061g7"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tbgi4"]
 panorama = ExtResource("1_kvexg")
@@ -25,9 +26,105 @@ volumetric_fog_sky_affect = 0.0
 environment = SubResource("Environment_jyhfs")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -1.5336, 1.60137, 0, -1.68818, -1.45474, 0, 0, 0)
+transform = Transform3D(0.998585, -0.0393574, -0.0357536, 0.0162873, -0.413681, 0.910276, -0.0506166, -0.909571, -0.412454, 0, 14.8434, 0)
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="LevelGeometry" type="Node3D" parent="."]
 
-[node name="TidalTri1Floor" parent="Node3D" instance=ExtResource("2_061g7")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.0267771, -0.100709, -0.0216472)
+[node name="TidalTri1Floor" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(14.3807, 0, 0, 0, 10, 0, 0, 0, 14.3807, 3.02799, 0, 1.32919)
+
+[node name="TidalTri1Floor4" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(-6.28602e-07, 0, -14.3807, 0, 10, 0, 14.3807, 0, -6.28602e-07, 17.5223, 0, 1.32919)
+
+[node name="TidalTri1Floor5" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(-6.28602e-07, 0, -14.3807, 0, 10, 0, 14.3807, 0, -6.28602e-07, -11.4348, 0, 1.32919)
+
+[node name="TidalTri1Floor2" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(14.3807, 0, 0, 0, 10, 0, 0, 0, 14.3807, 3.02799, 0, -8.5487)
+
+[node name="TidalTri1Floor3" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(14.3807, 0, 0, 0, 10, 0, 0, 0, 14.3807, 3.02799, 0, 11.1764)
+
+[node name="TidalTri1Floor7" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(-6.28602e-07, 0, -14.3807, 0, 10, 0, 14.3807, 0, -6.28602e-07, 17.5223, 5.51145, 1.32919)
+
+[node name="TidalTri1Floor8" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(-6.28602e-07, 0, -14.3807, 0, 10, 0, 14.3807, 0, -6.28602e-07, -11.4348, 5.51145, 1.32919)
+
+[node name="TidalTri1Floor9" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(14.3807, 0, 0, 0, 10, 0, 0, 0, 14.3807, 3.02799, 5.51145, -8.5487)
+
+[node name="TidalTri1Floor11" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(1.1749, 3.66327, 0, -2.74985, 1.56516, 0, 0, 0, 2.99033, -2.48426, 1.9824, 3.78474)
+
+[node name="TidalTri1Floor12" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(1.1749, 3.66327, 0, -2.74985, 1.56516, 0, 0, 0, 2.99033, -2.46551, 1.99544, -1.24816)
+
+[node name="TidalTri1Floor13" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(-1.1749, -3.66327, -2.61423e-07, -2.74985, 1.56516, 0, 1.02713e-07, 3.20253e-07, -2.99033, 7.1509, 1.9824, -1.4132)
+
+[node name="TidalTri1Floor14" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(-1.1749, -3.66327, -2.61423e-07, -2.74985, 1.56516, 0, 1.02713e-07, 3.20253e-07, -2.99033, 7.13215, 1.99544, 3.6197)
+
+[node name="TidalTri1Floor10" parent="LevelGeometry" instance=ExtResource("2_061g7")]
+transform = Transform3D(14.3807, 0, 0, 0, 10, 0, 0, 0, 14.3807, 3.02799, 5.51145, 11.1764)
+
+[node name="TidalTri1LongWall" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51216, 2.71259, -3.87829)
+
+[node name="TidalTri1LongWall5" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12993, 2.71259, -7.36466)
+
+[node name="TidalTri1LongWall10" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61801, 2.71259, -7.36466)
+
+[node name="TidalTri1LongWall11" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3359, 2.71259, -7.36466)
+
+[node name="TidalTri1LongWall12" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0552, 2.71259, -7.36466)
+
+[node name="TidalTri1LongWall13" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12993, 2.71259, 10.598)
+
+[node name="TidalTri1LongWall14" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61801, 2.71259, 10.598)
+
+[node name="TidalTri1LongWall15" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3359, 2.71259, 10.598)
+
+[node name="TidalTri1LongWall16" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0552, 2.71259, 10.598)
+
+[node name="TidalTri1LongWall17" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.0552, 2.71259, 5.91777)
+
+[node name="TidalTri1LongWall18" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.0552, 2.71259, -2.85227)
+
+[node name="TidalTri1LongWall19" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.4618, 2.71259, 5.91777)
+
+[node name="TidalTri1LongWall20" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.4618, 2.71259, -2.85227)
+
+[node name="TidalTri1LongWall2" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2354, 2.71259, -3.87829)
+
+[node name="TidalTri1LongWall3" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51216, 2.71259, 6.48904)
+
+[node name="TidalTri1LongWall6" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(-1.86392e-08, 0, -1, 0, 1, 0, 0.426415, 0, -4.37114e-08, -6.79575, 2.7126, 4.33252)
+
+[node name="TidalTri1LongWall7" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(-1.86392e-08, 0, -1, 0, 1, 0, 0.426415, 0, -4.37114e-08, -6.79575, 2.7126, -1.73893)
+
+[node name="TidalTri1LongWall8" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(-1.86392e-08, 0, -1, 0, 1, 0, 0.426415, 0, -4.37114e-08, 12.6448, 2.7126, 4.33315)
+
+[node name="TidalTri1LongWall9" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(-1.86392e-08, 0, -1, 0, 1, 0, 0.426415, 0, -4.37114e-08, 12.6448, 2.7126, -1.47676)
+
+[node name="TidalTri1LongWall4" parent="LevelGeometry" instance=ExtResource("3_061g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2354, 2.71259, 6.48904)

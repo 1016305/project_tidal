@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buhfw2mhsenpx"
-path.s3tc="res://.godot/imported/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png-d8e55a02d6b3b2d12a75d2917cadf176.s3tc.ctex"
+uid="uid://dbyyybeya22vi"
+path.s3tc="res://.godot/imported/TidalTri1Floor_TidalTri1Floornormalscaled.png-dab48683cfea16024dd630781d6463cd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "c602b02df3ac0c9ddc06c221b5bf50e6"
+"md5": "c86292738caf43440afed8b948ffbcd3"
 }
 
 [deps]
 
-source_file="res://models/Structures/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png"
-dest_files=["res://.godot/imported/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png-d8e55a02d6b3b2d12a75d2917cadf176.s3tc.ctex"]
+source_file="res://textures/TidalTri1Floor_TidalTri1Floornormalscaled.png"
+dest_files=["res://.godot/imported/TidalTri1Floor_TidalTri1Floornormalscaled.png-dab48683cfea16024dd630781d6463cd.s3tc.ctex"]
 
 [params]
 
@@ -23,12 +23,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://models/Structures/TidalTri1Floor_TidalTri1Floornormalscaled.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

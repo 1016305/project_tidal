@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buhfw2mhsenpx"
-path.s3tc="res://.godot/imported/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png-d8e55a02d6b3b2d12a75d2917cadf176.s3tc.ctex"
+uid="uid://vt2gy7ly43yd"
+path.s3tc="res://.godot/imported/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png-5dfa99ed366d1803a32a1aab5ab5d73f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://models/Structures/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png"
-dest_files=["res://.godot/imported/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png-d8e55a02d6b3b2d12a75d2917cadf176.s3tc.ctex"]
+source_file="res://textures/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png"
+dest_files=["res://.godot/imported/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png-5dfa99ed366d1803a32a1aab5ab5d73f.s3tc.ctex"]
 
 [params]
 

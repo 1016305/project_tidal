@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buhfw2mhsenpx"
-path.s3tc="res://.godot/imported/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png-d8e55a02d6b3b2d12a75d2917cadf176.s3tc.ctex"
+uid="uid://k5nced7djvsq"
+path.s3tc="res://.godot/imported/TidalTri1LongWall_TidalTri1WallMetallicScaled-TidalTri1WallRoughnessScaled.png-942bbf8807ec60b39c4498cc67c6d5de.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "c602b02df3ac0c9ddc06c221b5bf50e6"
+"md5": "aba80360665170096df0f0d49a2b56df"
 }
 
 [deps]
 
-source_file="res://models/Structures/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png"
-dest_files=["res://.godot/imported/TidalTri1Floor_TidalTri1Floorbasecolorscaled.png-d8e55a02d6b3b2d12a75d2917cadf176.s3tc.ctex"]
+source_file="res://models/Structures/TidalTri1LongWall_TidalTri1WallMetallicScaled-TidalTri1WallRoughnessScaled.png"
+dest_files=["res://.godot/imported/TidalTri1LongWall_TidalTri1WallMetallicScaled-TidalTri1WallRoughnessScaled.png-942bbf8807ec60b39c4498cc67c6d5de.s3tc.ctex"]
 
 [params]
 
