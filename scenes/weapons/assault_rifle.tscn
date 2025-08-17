@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dv0fk3tgisqxa"]
+[gd_scene load_steps=14 format=4 uid="uid://dv0fk3tgisqxa"]
 
 [ext_resource type="Material" uid="uid://ckc5mic00mn45" path="res://models/weapons/assault_rifle/meshes/materials/assault_rifle.tres" id="1_e1nc6"]
 [ext_resource type="Material" uid="uid://dc4lexep2d5r3" path="res://models/weapons/assault_rifle/meshes/materials/assault_rifle_sight.tres" id="4_6ychj"]
@@ -105,8 +105,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0ji7k")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4kfv"]
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_qfg2x"]
 _surfaces = [{
 "aabb": AABB(2.25387, 2.53486, -0.366988, 0.479567, 0.655416, 0.727252),
@@ -128,7 +126,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 30,
 "index_data": PackedByteArray("AAABAAIAAwAEAAUAAwAGAAQABwAGAAMABwAIAAYACQAIAAcACQAKAAgACAALAAwADQAOAA8ADQAQAA4A"),
-"material": SubResource("StandardMaterial3D_g4kfv"),
+"material": ExtResource("4_6ychj"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 17,
