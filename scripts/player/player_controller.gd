@@ -57,6 +57,7 @@ signal swap_weapons(wep)
 
 func _ready() -> void:
 	camera.fov = FOV_MIN
+	Global.main_camera = camera
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 #unhandled input process
@@ -80,6 +81,7 @@ func _physics_process(delta: float) -> void:
 	check_jump_and_fall()
 	test_change_weapon()
 	move_and_slide()
+	shoot(delta)
 	
 	#I cannot fathom why this only works here. Probably part of some insidious component of move_and_slide
 	#If you move this ANYWHERE it will fuck up the checks for moving. I will not put this into its own
@@ -198,6 +200,7 @@ func fov_change(delta, minfov, maxfov):
 			camera.fov = lerp(camera.fov, minfov, (FOV_LERP_SPEED * 3) *delta)
 			camera.position.z = lerp(camera.position.z, 0.0, (FOV_LERP_SPEED * 3) * delta)
 
+##Weapon stuff. Move to another script when convenient
 func test_change_weapon():
 	if Input.is_action_pressed("test_swap_to_weapon_a"):
 		if weapon_a:
@@ -215,7 +218,10 @@ func test_change_weapon():
 			weapon_b = !weapon_b
 			emit_signal('swap_weapons',wep_b)
 			print('swapped to b')
-	
+
+func shoot(delta):
+	if Input.is_action_pressed("attack_1"):
+		Global.player_weapon.shoot(delta)
 ##Getters and Setters
 
 #External function to adjust/call player speed from multiple fucntions. Adds edge friction modifier.

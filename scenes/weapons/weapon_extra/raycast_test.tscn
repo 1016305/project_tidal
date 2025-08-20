@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvilte7kie7wx"]
+
+[ext_resource type="Texture2D" uid="uid://c1rpinwbe6otj" path="res://textures/decal/bullet_hole/decal_test_basecolor.png" id="1_u72lc"]
+[ext_resource type="Texture2D" uid="uid://bnvao10jnsa32" path="res://textures/decal/bullet_hole/decal_test_norm.png" id="2_6pa8o"]
+
+[node name="Decal" type="Decal"]
+size = Vector3(1, 1, 1)
+texture_albedo = ExtResource("1_u72lc")
+texture_normal = ExtResource("2_6pa8o")

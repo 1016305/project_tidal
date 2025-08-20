@@ -8,9 +8,15 @@ class_name weapons extends Resource
 @export var scale: Vector3
 @export_category('Visual Settings')
 @export var mesh: Array[Mesh]
+## Adjustable position for the weapon's muzzle flare
+@export var muzzle_flare_pos: Vector3
 
 @export_category("Weapon Stats")
+## Measured in seconds between shots
+@export var weapon_rate_of_fire: float
 @export var weapon_damage: float
+## Adjustable decal size to better fit the weapons.
+@export var weapon_decal_size: float
 
 @export_category("Weapon Sway")
 @export var sway_min: Vector2 = Vector2(-20.0,-20.0)
@@ -24,3 +30,7 @@ class_name weapons extends Resource
 @export_category("Viewmodel FOV")
 @export var uses_shader: bool = false
 @export_range(0,150,0.1) var fov_slider = 75.0
+
+@export_category("Weapon Recoil")
+@export var recoil_max: Vector3
+@export var recoil_speed: float
