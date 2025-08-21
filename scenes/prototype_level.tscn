@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnusfr72w43fn"]
+[gd_scene load_steps=8 format=3 uid="uid://dnusfr72w43fn"]
 
 [ext_resource type="Texture2D" uid="uid://dkd8bff5lu385" path="res://textures/spruit_sunrise.jpg" id="1_kvexg"]
 [ext_resource type="PackedScene" uid="uid://syg6p23f6rge" path="res://models/Structures/TidalTri1Floor.glb" id="2_061g7"]
 [ext_resource type="PackedScene" uid="uid://dltrf5jcnhnob" path="res://models/Structures/TidalTri1LongWall.glb" id="3_061g7"]
+[ext_resource type="PackedScene" uid="uid://dsb1mn22d220l" path="res://scenes/player.tscn" id="4_7s42t"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tbgi4"]
 panorama = ExtResource("1_kvexg")
@@ -128,3 +129,6 @@ transform = Transform3D(-1.86392e-08, 0, -1, 0, 1, 0, 0.426415, 0, -4.37114e-08,
 
 [node name="TidalTri1LongWall4" parent="LevelGeometry" instance=ExtResource("3_061g7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2354, 2.71259, 6.48904)
+
+[node name="player" parent="." instance=ExtResource("4_7s42t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.52862, 0)

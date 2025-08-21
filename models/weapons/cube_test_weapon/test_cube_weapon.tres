@@ -26,4 +26,5 @@ uses_shader = true
 fov_slider = 75.0
 recoil_max = Vector3(0, 0, 0)
 recoil_speed = 0.0
+shoot_sounds = Array[AudioStream]([])
 metadata/_custom_type_script = "uid://4ccqrj081s06"
