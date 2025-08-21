@@ -132,3 +132,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2354, 2.71259, 6.48904)
 
 [node name="player" parent="." instance=ExtResource("4_7s42t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.52862, 0)
+
+[node name="Node3D" type="Node3D" parent="."]
