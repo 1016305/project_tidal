@@ -88,3 +88,5 @@ update_mode = 1
 enable_shadows = true
 
 [node name="user_interface" parent="." instance=ExtResource("2_g2els")]
+
+[connection signal="swap_weapons" from="." to="stand_collider/player_head/camera/weapon_rig/weapon" method="_on_player_swap_weapons"]

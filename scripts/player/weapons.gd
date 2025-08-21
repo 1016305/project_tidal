@@ -1,14 +1,21 @@
 class_name weapons extends Resource
 
-##custom resource for weapons; imported from the testfile
+#custom resource for weapons; imported from the testfile
+## Weapon's referenced name
 @export var name: StringName
+## Position,scale,orientation of the weapon
 @export_category("Weapon Orientation")
+## Position on screen
 @export var position: Vector3
+## Rotation on screen (usually rotated inward a tiny bit (Y AXIS))
 @export var rotation: Vector3
+## Visual scale of weapon on the screen
 @export var scale: Vector3
+## Meshes and materials
 @export_category('Visual Settings')
+## All meshes used to render the weapon
 @export var mesh: Array[Mesh]
-## Adjustable position for the weapon's muzzle flare
+## Adjustable position for the weapon's muzzle flare. Note: this is slightly broken sue to the weapon shader's behaviour. Need to fix.
 @export var muzzle_flare_pos: Vector3
 
 @export_category("Weapon Stats")
@@ -18,6 +25,7 @@ class_name weapons extends Resource
 ## Adjustable decal size to better fit the weapons.
 @export var weapon_decal_size: float
 
+## Variables for the procedural weapon sway
 @export_category("Weapon Sway")
 @export var sway_min: Vector2 = Vector2(-20.0,-20.0)
 @export var sway_max: Vector2 = Vector2(20.0,20.0)
@@ -31,6 +39,11 @@ class_name weapons extends Resource
 @export var uses_shader: bool = false
 @export_range(0,150,0.1) var fov_slider = 75.0
 
+## Variables for the procedural weapon recoil
 @export_category("Weapon Recoil")
 @export var recoil_max: Vector3
 @export var recoil_speed: float
+
+## Variables for the weapon's sound effects
+@export_category("Weapon Sounds")
+@export var shoot_sounds: Array[AudioStream]

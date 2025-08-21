@@ -1,6 +1,7 @@
 extends Node3D
 
 signal weapon_fired
+signal weapon_sound
 #weapon instantion
 #handles weapon swapping and meshinstance generation
 @export var weapon_type : weapons:
@@ -46,7 +47,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("attack_1"):
 		is_firing = true
 	else: is_firing = false
-	position = weapon_type.position
+	return_weapon_to_start_pos(delta)
+	#commented this bitch out for the recoil stuff. not sure if it's importante
+	#position = weapon_type.position
 
 func sway_weapon(delta):
 	#clamp mouse movement
@@ -110,6 +113,7 @@ func _on_player_swap_weapons(wep: Variant) -> void:
 func shoot(delta):
 	if fire_delay.is_stopped():
 		emit_signal('weapon_fired')
+		shoot_sounds()
 		fire_delay.start()
 		var camera = Global.main_camera
 		var space_state = camera.get_world_3d().direct_space_state
@@ -138,9 +142,28 @@ func test_raycast(ray_pos,ray_nrm):
 	instance.queue_free()
 
 func weapon_recoil(delta):
-	var desired_position = lerp(start_pos,weapon_type.recoil_max,weapon_type.recoil_speed * delta)
-	#have a maximum position that you want the gun to go to when firing i.e. max recoil position
-	#while firing, the gun will jump towards this position (perhaps elastic)
-	#when not firing, the gun will attempt to return to its original position
-	pass
+	print('weapon_recoil')
+	#position = Vector3.UP
+	#retunr to pos lerp
+	var target_position = lerp(weapon_type.recoil_max, start_pos, 0.5 *delta)
+	#recoil lerp
+	var current_position = lerp(position, weapon_type.recoil_max, weapon_type.recoil_speed*delta)
+	#randomise recoil a bit. maybe add the ranges to the weapon script
+	target_position = start_pos+(Vector3(0,0,0.1)+Vector3(randf_range(-0.01,0.01),randf_range(-0.01,0.01),randf_range(-0.02,0.03)))
+	position = lerp(position,target_position, weapon_type.recoil_speed*delta)
+
+func return_weapon_to_start_pos(delta):
+	position = lerp(position,start_pos, 0.7*delta)
+
+func shoot_sounds():
+	var current_sound = weapon_type.shoot_sounds[randf_range(0,len(weapon_type.shoot_sounds))]
+	var newplayer = AudioStreamPlayer3D.new()
+	newplayer.stream = current_sound
+	newplayer.pitch_scale = randf_range(0.9,1.1)
+	add_child(newplayer)
+	newplayer.play(0.0)
+	await newplayer.finished
+	newplayer.queue_free()
+	
+	
 	
