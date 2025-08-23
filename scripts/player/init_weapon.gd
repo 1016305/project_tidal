@@ -93,7 +93,6 @@ func load_weapon():
 			newmesh.scale = Vector3.ONE
 			newmesh.scale = weapon_type.scale
 			add_child(newmesh)
-			print("mesh loaded")
 	position = weapon_type.position
 	rotation_degrees = weapon_type.rotation
 	fire_delay.wait_time = weapon_type.weapon_rate_of_fire
@@ -126,11 +125,14 @@ func shoot(delta):
 		var result = space_state.intersect_ray(query)
 		weapon_recoil(delta)
 		if result: 
-			test_raycast(result.get("position"),result.get("normal"))
+			test_raycast(result.get("position"),result.get("normal"),result.get("collider"))
+			if get_node(result.get("collider").get_path()) is Enemy:
+				var guy_you_shot = get_node(result.get("collider").get_path())
+				damage_enemy(guy_you_shot)
 	
-func test_raycast(ray_pos,ray_nrm):
+func test_raycast(ray_pos,ray_nrm,ray_col):
 	var instance = raycast_test.instantiate()
-	get_tree().root.add_child(instance)
+	get_node(ray_col.get_path()).add_child(instance)
 	instance.size = Vector3(decal_size,decal_size,decal_size)
 	instance.global_position = ray_pos
 	instance.look_at(instance.global_transform.origin + ray_nrm,Vector3.UP)
@@ -140,6 +142,9 @@ func test_raycast(ray_pos,ray_nrm):
 	fade.tween_property(instance, "modulate:a", 0, 1.5)
 	await get_tree().create_timer(1.5).timeout
 	instance.queue_free()
+	
+func damage_enemy(enemy):
+	enemy.take_damage(weapon_type.weapon_damage)
 
 func weapon_recoil(delta):
 	print('weapon_recoil')

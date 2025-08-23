@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://lhfgl6lg8224"]
+
+[ext_resource type="Script" uid="uid://v6iquh8ra64y" path="res://scripts/enemy/test_enemy.gd" id="1_pnhpx"]
+[ext_resource type="PackedScene" uid="uid://6rs2qsnetgea" path="res://scenes/enemies/beehave_test_enemy.tscn" id="2_kmxma"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kmxma"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kmxma"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_o4mit"]
+material = SubResource("StandardMaterial3D_kmxma")
+
+[node name="TestEnemy" type="CharacterBody3D"]
+script = ExtResource("1_pnhpx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_kmxma")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_o4mit")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="BeehaveTree" parent="." node_paths=PackedStringArray("blackboard") instance=ExtResource("2_kmxma")]
+blackboard = NodePath("@Node@41094")

@@ -56,6 +56,7 @@ var wep_b = preload("res://models/weapons/cube_test_weapon/test_cube_weapon.tres
 signal swap_weapons(wep)
 
 func _ready() -> void:
+	Global.player = self
 	camera.fov = FOV_MIN
 	Global.main_camera = camera
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
