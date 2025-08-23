@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://g33pnf3nwx83"]
+
+[sub_resource type="Gradient" id="Gradient_cur4t"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1)
+colors = PackedColorArray(0.125, 0.125, 0.125, 1, 0.142578, 0.142578, 0.142578, 1, 0.160156, 0.160156, 0.160156, 1, 0.177734, 0.177734, 0.177734, 1, 0.195313, 0.195313, 0.195313, 1, 0.212891, 0.212891, 0.212891, 1, 0.230469, 0.230469, 0.230469, 1, 0.248047, 0.248047, 0.248047, 1, 0.265625, 0.265625, 0.265625, 1, 0.283203, 0.283203, 0.283203, 1, 0.300781, 0.300781, 0.300781, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_24oxn"]
+gradient = SubResource("Gradient_cur4t")
+fill = 2
+fill_from = Vector2(0.482906, 0.495726)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2e2gu"]
+albedo_texture = SubResource("GradientTexture2D_24oxn")
+uv1_offset = Vector3(0.03, -0.055, -0.04)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.757858
+
+[sub_resource type="BoxMesh" id="BoxMesh_ky1i4"]
+material = SubResource("StandardMaterial3D_2e2gu")
+size = Vector3(1, 1, 2.19)
+
+[node name="Light Body" type="MeshInstance3D"]
+transform = Transform3D(0.14858, 0, 0, 0, 0.161417, 0, 0, 0, 0.180101, 0, 0, 0)
+mesh = SubResource("BoxMesh_ky1i4")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(6.7304, 0, 0, 0, 6.19513, 0, 0, 0, 2.39729, 0, 0.888527, 0)
+light_color = Color(0.67451, 0.835294, 0.819608, 1)
+light_energy = 0.273
+shadow_enabled = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(6.7304, 0, 0, 0, -2.70798e-07, -6.19513, 0, 2.39729, -1.04789e-07, 0, 0.912036, 0)
+light_color = Color(0.675934, 0.835938, 0.820937, 1)
+light_energy = 1.566
+shadow_enabled = true
+spot_range = 23.658
+spot_attenuation = 0.0
+spot_angle = 58.63

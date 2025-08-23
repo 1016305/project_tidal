@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcge160cfhmh7"]
+
+[ext_resource type="PackedScene" uid="uid://dltrf5jcnhnob" path="res://models/Structures/TidalTri1LongWall.glb" id="1_1oxpf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6lnm"]
+size = Vector3(1.42699, 0.104889, 1.68161)
+
+[node name="TidalTri1LongWall" instance=ExtResource("1_1oxpf")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(6.15827, 0, 0, 0, 0, -3.10035, 0, 6.15827, 0, 7.04688e-05, 0.000141937, 0.000657678)
+shape = SubResource("BoxShape3D_c6lnm")

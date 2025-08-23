@@ -92,6 +92,7 @@ func load_weapon():
 			newmesh.rotation_degrees = Vector3.ZERO
 			newmesh.scale = Vector3.ONE
 			newmesh.scale = weapon_type.scale
+			newmesh.cast_shadow = 0
 			add_child(newmesh)
 	position = weapon_type.position
 	rotation_degrees = weapon_type.rotation
@@ -137,11 +138,13 @@ func test_raycast(ray_pos,ray_nrm,ray_col):
 	instance.global_position = ray_pos
 	instance.look_at(instance.global_transform.origin + ray_nrm,Vector3.UP)
 	instance.rotate_object_local(Vector3(1,0,0), 90)
-	await get_tree().create_timer(5).timeout
-	var fade = get_tree().create_tween()
-	fade.tween_property(instance, "modulate:a", 0, 1.5)
+	if instance != null:
+		await get_tree().create_timer(5).timeout
+		var fade = get_tree().create_tween()
+		fade.tween_property(instance, "modulate:a", 0, 1.5)
 	await get_tree().create_timer(1.5).timeout
-	instance.queue_free()
+	if instance != null:
+		instance.queue_free()
 	
 func damage_enemy(enemy):
 	enemy.take_damage(weapon_type.weapon_damage)

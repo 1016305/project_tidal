@@ -55,6 +55,9 @@ var wep_b = preload("res://models/weapons/cube_test_weapon/test_cube_weapon.tres
 @onready var main_weapon_node: Node3D = $stand_collider/player_head/camera/weapon_rig/weapon
 signal swap_weapons(wep)
 
+##temporary remove me pls
+@onready var enemyscene = preload("res://scenes/enemies/test_enemy.tscn")
+
 func _ready() -> void:
 	Global.player = self
 	camera.fov = FOV_MIN
@@ -95,6 +98,7 @@ func _physics_process(delta: float) -> void:
 		is_moving = true
 		
 	player_debug()
+	spawn_test_enemy()
 
 func handle_gravity(delta):
 	#gravities the player so they're always goin down down
@@ -241,3 +245,10 @@ func player_debug():
 	Global.debug.add_property('Is Running',is_running,1)
 	Global.debug.add_property('Current Velocity ABS', velocity.abs().snappedf(0.01), 1)
 	Global.debug.add_property('Current Velocity', velocity.snappedf(0.01), 1)
+
+func spawn_test_enemy():
+	if Input.is_action_just_pressed("spawn_test_enemy"):
+		var new_enemy = enemyscene.instantiate()
+		new_enemy.position = Vector3(3.4,1.5,1.2)
+		get_tree().root.add_child(new_enemy)
+		
