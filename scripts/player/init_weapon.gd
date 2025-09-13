@@ -1,7 +1,6 @@
 extends Node3D
 
 signal weapon_fired
-signal weapon_sound
 #weapon instantion
 #handles weapon swapping and meshinstance generation
 @export var weapon_type : weapons:
@@ -9,10 +8,12 @@ signal weapon_sound
 		weapon_type = value
 #temporary bool -> remove in future
 var is_firing: bool = false
+var is_reloading: bool = false
 
 var start_pos : Vector3
 var start_rot : Vector3
 var mouse_movement: Vector2
+var current_ammo: int
 
 
 
@@ -36,6 +37,8 @@ func _ready() -> void:
 	if not is_node_ready():
 		await ready
 	load_weapon()
+	await get_tree().process_frame
+	Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
 
 func _physics_process(delta: float) -> void:
 	sway_weapon(delta)
@@ -98,7 +101,10 @@ func load_weapon():
 	rotation_degrees = weapon_type.rotation
 	fire_delay.wait_time = weapon_type.weapon_rate_of_fire
 	decal_size = weapon_type.weapon_decal_size
-	muzzle_flare.position = weapon_type.muzzle_flare_pos	
+	muzzle_flare.position = weapon_type.muzzle_flare_pos
+	current_ammo = weapon_type.weapon_current_ammo
+	Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_max_ammo)
+	
 func unload_weapon():
 	for child in get_children():
 		if child is MeshInstance3D:
@@ -111,25 +117,21 @@ func _on_player_swap_weapons(wep: Variant) -> void:
 	load_weapon()
 
 func shoot(delta):
-	if fire_delay.is_stopped():
+	if fire_delay.is_stopped() and weapon_type.weapon_current_ammo != 0:
 		emit_signal('weapon_fired')
 		shoot_sounds()
 		fire_delay.start()
-		var camera = Global.main_camera
-		var space_state = camera.get_world_3d().direct_space_state
-		var screen_center = get_viewport().size /2
-		screen_center.y = get_viewport().size.y/3 * 1.6
-		var origin = camera.project_ray_origin(screen_center)
-		var end = origin + camera.project_ray_normal(screen_center) * 1000
-		var query = PhysicsRayQueryParameters3D.create(origin,end)
-		query.collide_with_bodies = true
-		var result = space_state.intersect_ray(query)
+		weapon_type.weapon_current_ammo -= weapon_type.ammo_per_shot
+		Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
+		var result = weapon_spread()
 		weapon_recoil(delta)
 		if result: 
 			test_raycast(result.get("position"),result.get("normal"),result.get("collider"))
 			if get_node(result.get("collider").get_path()) is Enemy:
 				var guy_you_shot = get_node(result.get("collider").get_path())
 				damage_enemy(guy_you_shot)
+	if weapon_type.weapon_current_ammo <= 0:
+		reload()
 	
 func test_raycast(ray_pos,ray_nrm,ray_col):
 	var instance = raycast_test.instantiate()
@@ -150,7 +152,6 @@ func damage_enemy(enemy):
 	enemy.take_damage(weapon_type.weapon_damage)
 
 func weapon_recoil(delta):
-	print('weapon_recoil')
 	#position = Vector3.UP
 	#retunr to pos lerp
 	var target_position = lerp(weapon_type.recoil_max, start_pos, 0.5 *delta)
@@ -173,5 +174,35 @@ func shoot_sounds():
 	await newplayer.finished
 	newplayer.queue_free()
 	
+func reload():
+	if weapon_type.weapon_reserve_ammo != 0 and !is_reloading:
+		is_reloading = !is_reloading
+		Global.player_is_reloading.emit()
+		await get_tree().create_timer(3).timeout
+		if weapon_type.weapon_reserve_ammo >= weapon_type.weapon_max_ammo:
+			weapon_type.weapon_reserve_ammo -= (weapon_type.weapon_max_ammo - weapon_type.weapon_current_ammo) 
+			weapon_type.weapon_current_ammo = weapon_type.weapon_max_ammo
+		else:
+			weapon_type.weapon_current_ammo = weapon_type.weapon_reserve_ammo
+			weapon_type.weapon_reserve_ammo = 0
+		Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
+		is_reloading = !is_reloading
+
+func weapon_spread():
+	var camera = Global.main_camera
+	var space_state = camera.get_world_3d().direct_space_state
 	
+	var _screen_center = get_viewport().size /2 # vector 2 of 1/2 the screen resolution (center of screen)
+	var screen_center = Vector2(_screen_center) # converts pervious from vector2i to vector2
+	var screen_y_half = screen_center.y
+	screen_center.y = get_viewport().size.y/3 * 1.6 # offset to account for the croshair not being centered
+	#here is where you do the bloom calculations
+	var screen_space_bloom = screen_y_half * weapon_type.bloom #ensures that weapon accuracy isnt dependant on window resolution.
+	screen_center += Vector2(randf_range(-screen_space_bloom,screen_space_bloom),randf_range(-screen_space_bloom,screen_space_bloom))
 	
+	var origin = camera.project_ray_origin(screen_center)
+	var end = origin + camera.project_ray_normal(screen_center) * 1000
+	var query = PhysicsRayQueryParameters3D.create(origin,end)
+	query.collide_with_bodies = true
+	var result = space_state.intersect_ray(query)
+	return result

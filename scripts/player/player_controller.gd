@@ -63,6 +63,7 @@ func _ready() -> void:
 	camera.fov = FOV_MIN
 	Global.main_camera = camera
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 
 #unhandled input process
 func _unhandled_input(event: InputEvent) -> void:
@@ -86,6 +87,7 @@ func _physics_process(delta: float) -> void:
 	test_change_weapon()
 	move_and_slide()
 	shoot(delta)
+	reload()
 	
 	#I cannot fathom why this only works here. Probably part of some insidious component of move_and_slide
 	#If you move this ANYWHERE it will fuck up the checks for moving. I will not put this into its own
@@ -227,6 +229,9 @@ func test_change_weapon():
 func shoot(delta):
 	if Input.is_action_pressed("attack_1"):
 		Global.player_weapon.shoot(delta)
+func reload():
+	if Input.is_action_pressed("reload"):
+		Global.player_weapon.reload()
 ##Getters and Setters
 
 #External function to adjust/call player speed from multiple fucntions. Adds edge friction modifier.

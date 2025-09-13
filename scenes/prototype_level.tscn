@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dnusfr72w43fn"]
 
-[ext_resource type="Texture2D" uid="uid://djnt13g4ohxhp" path="res://textures/file-676545809.jpg" id="1_7s42t"]
+[ext_resource type="Texture2D" uid="uid://djnt13g4ohxhp" path="res://textures/file-676545809.jpg" id="1_pet5k"]
 [ext_resource type="PackedScene" uid="uid://syg6p23f6rge" path="res://models/Structures/TidalTri1Floor.glb" id="2_061g7"]
 [ext_resource type="PackedScene" uid="uid://dltrf5jcnhnob" path="res://models/Structures/TidalTri1LongWall.glb" id="3_061g7"]
 [ext_resource type="PackedScene" uid="uid://dsb1mn22d220l" path="res://scenes/player.tscn" id="4_7s42t"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cft5qrgllf8sf" path="res://scenes/light2.tscn" id="5_pet5k"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tbgi4"]
-panorama = ExtResource("1_7s42t")
+panorama = ExtResource("1_pet5k")
 filter = false
 
 [sub_resource type="Sky" id="Sky_tefeu"]
@@ -17,12 +17,13 @@ sky_material = SubResource("PanoramaSkyMaterial_tbgi4")
 
 [sub_resource type="Environment" id="Environment_jyhfs"]
 background_mode = 2
-background_energy_multiplier = 0.34
+background_energy_multiplier = 0.5
 sky = SubResource("Sky_tefeu")
 tonemap_mode = 3
+tonemap_exposure = 0.59
 ssao_enabled = true
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
+volumetric_fog_density = 0.02
 volumetric_fog_length = 256.0
 volumetric_fog_sky_affect = 0.0
 
@@ -38,7 +39,7 @@ environment = SubResource("Environment_jyhfs")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998585, -0.0393574, -0.0357536, 0.0162873, -0.413681, 0.910276, -0.0506166, -0.909571, -0.412454, 0, 14.8434, 0)
-light_color = Color(0.432, 0.4458, 0.45, 1)
+light_color = Color(0.585938, 0.585938, 0.585938, 1)
 light_specular = 0.25
 light_bake_mode = 1
 shadow_enabled = true
@@ -83,16 +84,16 @@ transform = Transform3D(-6.28602e-07, 0, -14.3807, 0, 10, 0, 14.3807, 0, -6.2860
 transform = Transform3D(14.3807, 0, 0, 0, 10, 0, 0, 0, 14.3807, 1.80258, 4.16539, -8.5487)
 
 [node name="TidalTri1Floor11" parent="LevelGeometry/NavigationRegion3D" instance=ExtResource("2_061g7")]
-transform = Transform3D(1.1749, 3.66327, 0, -2.74985, 1.56516, 0, 0, 0, 2.99033, -3.70967, 0.636345, 3.78474)
+transform = Transform3D(1.1749, 3.66327, 0, -2.74985, 1.56516, 0, 0, 0, 2.99033, -3.70967, 0.63635, 3.78474)
 
 [node name="TidalTri1Floor12" parent="LevelGeometry/NavigationRegion3D" instance=ExtResource("2_061g7")]
-transform = Transform3D(1.1749, 3.66327, 0, -2.74985, 1.56516, 0, 0, 0, 2.99033, -3.69092, 0.649385, -1.24816)
+transform = Transform3D(1.1749, 3.66327, 0, -2.74985, 1.56516, 0, 0, 0, 2.99033, -3.69092, 0.64939, -1.24816)
 
 [node name="TidalTri1Floor13" parent="LevelGeometry/NavigationRegion3D" instance=ExtResource("2_061g7")]
-transform = Transform3D(-1.1749, -3.66327, -2.61423e-07, -2.74985, 1.56516, 0, 1.02713e-07, 3.20253e-07, -2.99033, 5.92549, 0.636345, -1.4132)
+transform = Transform3D(-1.1749, -3.66327, -2.61423e-07, -2.74985, 1.56516, 0, 1.02713e-07, 3.20253e-07, -2.99033, 5.92549, 0.63635, -1.4132)
 
 [node name="TidalTri1Floor14" parent="LevelGeometry/NavigationRegion3D" instance=ExtResource("2_061g7")]
-transform = Transform3D(-1.1749, -3.66327, -2.61423e-07, -2.74985, 1.56516, 0, 1.02713e-07, 3.20253e-07, -2.99033, 5.90674, 0.649385, 3.6197)
+transform = Transform3D(-1.1749, -3.66327, -2.61423e-07, -2.74985, 1.56516, 0, 1.02713e-07, 3.20253e-07, -2.99033, 5.90674, 0.64939, 3.6197)
 
 [node name="TidalTri1Floor10" parent="LevelGeometry/NavigationRegion3D" instance=ExtResource("2_061g7")]
 transform = Transform3D(14.3807, 0, 0, 0, 10, 0, 0, 0, 14.3807, 1.80258, 4.16539, 11.1764)

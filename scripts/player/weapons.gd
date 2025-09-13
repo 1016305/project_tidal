@@ -43,7 +43,22 @@ class_name weapons extends Resource
 @export_category("Weapon Recoil")
 @export var recoil_max: Vector3
 @export var recoil_speed: float
+## How accurate the weapon is, relative to the center of the screen. Best suited for low values. AR default is 0.04
+@export var bloom: float
 
 ## Variables for the weapon's sound effects
 @export_category("Weapon Sounds")
 @export var shoot_sounds: Array[AudioStream]
+
+##Variables for the weapon's ammo counter
+@export_category("Ammo")
+##Maximum in weapon's magazine
+@export var weapon_max_ammo: int
+##Current in weapon's magazine
+@export var weapon_current_ammo: int
+##Ammo consumed per shot
+@export var ammo_per_shot: int
+##Current reserve ammo the weapon contains
+@export var weapon_reserve_ammo: int
+##Maximum reserve ammo the weapon can hold. Should be a multiple of the weapon's magazine maximum.
+@export var weapon_max_reserve: int
