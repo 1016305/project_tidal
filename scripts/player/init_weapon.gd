@@ -183,8 +183,15 @@ func reload():
 			weapon_type.weapon_reserve_ammo -= (weapon_type.weapon_max_ammo - weapon_type.weapon_current_ammo) 
 			weapon_type.weapon_current_ammo = weapon_type.weapon_max_ammo
 		else:
-			weapon_type.weapon_current_ammo = weapon_type.weapon_reserve_ammo
-			weapon_type.weapon_reserve_ammo = 0
+			##math is better but still bad. you suck at math. THIS IS STILL BROKEN
+			var to_add = weapon_type.weapon_max_ammo - weapon_type.weapon_current_ammo
+			if to_add > weapon_type.weapon_reserve_ammo:
+				weapon_type.weapon_current_ammo += weapon_type.weapon_reserve_ammo
+				weapon_type.weapon_reserve_ammo -= to_add
+			else:
+				weapon_type.weapon_current_ammo += to_add
+				weapon_type.weapon_reserve_ammo -= to_add
+				weapon_type.weapon_reserve_ammo = 0
 		Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
 		is_reloading = !is_reloading
 
