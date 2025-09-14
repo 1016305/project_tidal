@@ -24,8 +24,8 @@ WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=480
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [editor_plugins]
 

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://br5okftpu1yh5"]
+
+[ext_resource type="PackedScene" uid="uid://cc5jlgpv17o7c" path="res://scenes/ProjectTidalLevel-1Blockout.glb" id="1_004kc"]
+[ext_resource type="ArrayMesh" uid="uid://dm0j4uyw8dtxm" path="res://materials/lower poly planeglb_Plane_001.res" id="2_72abf"]
+[ext_resource type="Material" uid="uid://bhu2cakm12e4y" path="res://materials/terrainhightmaplvl1.tres" id="3_ykv7w"]
+
+[node name="ProjectTidalLevel-1Blockout" instance=ExtResource("1_004kc")]
+
+[node name="Cube" parent="." index="0"]
+visible = false
+
+[node name="BézierCurve_001" parent="." index="1"]
+visible = false
+
+[node name="BézierCurve_002" parent="." index="2"]
+visible = false
+
+[node name="Cube_001" parent="." index="3"]
+visible = false
+
+[node name="Cylinder" parent="." index="4"]
+visible = false
+
+[node name="Plane" parent="." index="5"]
+transform = Transform3D(1.48732e-07, 0.55512, 0.83177, -9.92632e-08, 0.83177, -0.55512, -1, 0, 1.78814e-07, -18.2112, 0.185892, -35.5256)
+mesh = ExtResource("2_72abf")
+surface_material_override/0 = ExtResource("3_ykv7w")
