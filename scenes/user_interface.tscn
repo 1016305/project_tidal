@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlfk08xleb3kw"]
+[gd_scene load_steps=9 format=3 uid="uid://dlfk08xleb3kw"]
 
 [ext_resource type="Script" uid="uid://cbbsm2eihvi53" path="res://scripts/player/reticle.gd" id="1_syvep"]
 [ext_resource type="Theme" uid="uid://c7kwjwrfwnkj" path="res://ui_themes/debug_panel.tres" id="2_y1h3b"]
 [ext_resource type="Script" uid="uid://dn8ud3onrum6d" path="res://scripts/utility/debug.gd" id="3_jbsfc"]
 [ext_resource type="Script" uid="uid://chgovpaerwhie" path="res://scripts/player/ammo_counter.gd" id="4_jbsfc"]
 [ext_resource type="Script" uid="uid://yyqllrxyedqa" path="res://scripts/player/reload_anim.gd" id="5_cufge"]
+[ext_resource type="Script" uid="uid://c0mxcid7e1pd" path="res://scripts/player/health_counter.gd" id="5_lmgon"]
 
 [sub_resource type="Theme" id="Theme_jbsfc"]
 default_font_size = 36
@@ -67,7 +68,7 @@ layout_mode = 2
 layout_mode = 2
 text = "DEBUG"
 
-[node name="ammo counter" type="CenterContainer" parent="."]
+[node name="ammo counter" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -75,13 +76,42 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -188.0
-offset_top = -82.0
+offset_top = -104.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = SubResource("Theme_jbsfc")
 script = ExtResource("4_jbsfc")
 
+[node name="ammo_label" type="Label" parent="ammo counter"]
+layout_mode = 2
+text = "Ammo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ammo" type="Label" parent="ammo counter"]
+layout_mode = 2
+text = "-- | --"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="health counter" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -104.0
+offset_right = 188.0
+grow_vertical = 0
+theme = SubResource("Theme_jbsfc")
+script = ExtResource("5_lmgon")
+
+[node name="health_label" type="Label" parent="health counter"]
+layout_mode = 2
+text = "Health"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="health" type="Label" parent="health counter"]
 layout_mode = 2
 text = "-- | --"
 horizontal_alignment = 1

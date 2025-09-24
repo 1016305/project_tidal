@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="weapons" load_steps=7 format=3 uid="uid://3jn5gl2dw4q2"]
+[gd_resource type="Resource" script_class="weapons" load_steps=8 format=3 uid="uid://3jn5gl2dw4q2"]
 
 [ext_resource type="Script" uid="uid://4ccqrj081s06" path="res://scripts/player/weapons.gd" id="1_r8rce"]
 [ext_resource type="ArrayMesh" uid="uid://dfluikeg8syi0" path="res://models/weapons/assault_rifle/meshes/gun_Cube_034.res" id="1_sjit1"]
@@ -6,6 +6,8 @@
 [ext_resource type="ArrayMesh" uid="uid://imbq165i7uom" path="res://models/weapons/assault_rifle/meshes/gun_Cube_035.res" id="3_4e8od"]
 [ext_resource type="ArrayMesh" uid="uid://ds3ge47kk86en" path="res://models/weapons/assault_rifle/meshes/gun_Plane.res" id="4_hh3ml"]
 [ext_resource type="AudioStream" uid="uid://bceolxi7m2lkl" path="res://sound/sfx/weapons/assault_rifle/ar_shoot_01.wav" id="6_hh3ml"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uf5nn"]
 
 [resource]
 script = ExtResource("1_r8rce")
@@ -15,6 +17,7 @@ rotation = Vector3(0, -90, 0)
 scale = Vector3(0.1, 0.1, 0.1)
 mesh = Array[Mesh]([ExtResource("1_sjit1"), ExtResource("2_uf5nn"), ExtResource("3_4e8od"), ExtResource("4_hh3ml")])
 muzzle_flare_pos = Vector3(-0.685, 0.08, -0.08)
+crosshair = SubResource("CompressedTexture2D_uf5nn")
 weapon_rate_of_fire = 0.1
 weapon_damage = 7.0
 weapon_decal_size = 0.1
@@ -25,7 +28,13 @@ sway_speed_rotation = 0.11
 sway_ammount_position = 0.1
 sway_ammount_rotation = 30.0
 drift_max = 3.0
-drift_speed = 0.1
+drift_speed = 0.07
+push_in_ammount = 5.0
+do_weapon_bob = true
+horizontal_bob_amplitude = 0.01
+vertical_bob_amplitude = 0.02
+horizontal_bob_frequency = 3.6
+vertical_bob_frequency = 7.2
 uses_shader = true
 fov_slider = 75.0
 recoil_max = Vector3(0, 0, 0)

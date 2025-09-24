@@ -6,6 +6,7 @@ extends CharacterBody3D
 #player nodes
 @onready var player_head: Node3D = $stand_collider/player_head
 @onready var camera: Camera3D = $stand_collider/player_head/camera
+@onready var flashlight: SpotLight3D = $stand_collider/player_head/camera/flashlight
 
 @onready var stand_collider: CollisionShape3D = $stand_collider
 @onready var _original_capsule_height = $stand_collider.shape.height
@@ -27,6 +28,9 @@ const WALK_SPEED = 1
 const CROUCH_SPEED = 0.2
 const RUN_SPEED = 1.5
 
+#player health variables
+var current_health: int = 100
+var max_health: int = 100
 
 #player movement internal variables
 var current_speed = 6.0: set = _set_current_speed, get = _get_current_speed
@@ -63,9 +67,11 @@ func _ready() -> void:
 	camera.fov = FOV_MIN
 	Global.main_camera = camera
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Global.player_health.emit(current_health,max_health)
 	
 
 #unhandled input process
+#uses mouse to handle rotation
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and !is_mouse_hidden:
 		rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
@@ -88,6 +94,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	shoot(delta)
 	reload()
+	toggle_flashlight()
 	
 	#I cannot fathom why this only works here. Probably part of some insidious component of move_and_slide
 	#If you move this ANYWHERE it will fuck up the checks for moving. I will not put this into its own
@@ -232,6 +239,11 @@ func shoot(delta):
 func reload():
 	if Input.is_action_pressed("reload"):
 		Global.player_weapon.reload()
+
+func toggle_flashlight():
+	if Input.is_action_just_pressed("toggle_flashlight"):
+		flashlight.visible = !flashlight.visible
+
 ##Getters and Setters
 
 #External function to adjust/call player speed from multiple fucntions. Adds edge friction modifier.
@@ -250,6 +262,7 @@ func player_debug():
 	Global.debug.add_property('Is Running',is_running,1)
 	Global.debug.add_property('Current Velocity ABS', velocity.abs().snappedf(0.01), 1)
 	Global.debug.add_property('Current Velocity', velocity.snappedf(0.01), 1)
+	Global.debug.add_property('Player Head Pitch', player_head.rotation.x, 1)
 
 func spawn_test_enemy():
 	if Input.is_action_just_pressed("spawn_test_enemy"):

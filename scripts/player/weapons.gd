@@ -18,6 +18,9 @@ class_name weapons extends Resource
 ## Adjustable position for the weapon's muzzle flare. Note: this is slightly broken sue to the weapon shader's behaviour. Need to fix.
 @export var muzzle_flare_pos: Vector3
 
+@export_category("Crosshair")
+@export var crosshair: Texture2D
+
 @export_category("Weapon Stats")
 ## Measured in seconds between shots
 @export var weapon_rate_of_fire: float
@@ -35,6 +38,16 @@ class_name weapons extends Resource
 @export_range(0,50,0.1) var sway_ammount_rotation: float = 30.0
 @export_range(0,50,0.1) var drift_max: float = 0.5
 @export_range(0,0.5,0.01) var drift_speed: float = 0.1
+@export_range(0,5,0.1) var push_in_ammount: float = 0.1
+
+@export_category("Weapon Bob")
+@export var do_weapon_bob: bool = true
+@export_range(-50,50,0.01) var horizontal_bob_amplitude: float = 0.0
+@export_range(-50,50,0.01) var vertical_bob_amplitude: float = 0.0
+@export_range(-50,50,0.01) var horizontal_bob_frequency: float = 0.0
+@export_range(-50,50,0.01) var vertical_bob_frequency: float = 0.0
+
+##Variables speak to the shader to get the FOV
 @export_category("Viewmodel FOV")
 @export var uses_shader: bool = false
 @export_range(0,150,0.1) var fov_slider = 75.0

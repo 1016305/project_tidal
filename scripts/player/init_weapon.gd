@@ -15,7 +15,7 @@ var start_rot : Vector3
 var mouse_movement: Vector2
 var current_ammo: int
 
-
+var time: float = 0.0
 
 var raycast_test = preload("res://scenes/weapons/weapon_extra/raycast_test.tscn")
 @onready var fire_delay: Timer = $fire_delay
@@ -42,6 +42,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	sway_weapon(delta)
+	bob_weapon(delta)
 	Global.debug.add_property("Current Weapon", weapon_type.name, 1)
 	Global.debug.add_property("Weapon Position", position, 1)
 	Global.debug.add_property("Mouse Movement", mouse_movement, 1)
@@ -58,9 +59,11 @@ func sway_weapon(delta):
 	#clamp mouse movement
 	mouse_movement = mouse_movement.clamp(weapon_type.sway_min, weapon_type.sway_max)
 	#lerp weapon pos based on mouse movement
-	position.x = lerp(position.x, start_pos.x - (mouse_movement.x * weapon_type.sway_ammount_position) * delta, weapon_type.sway_speed_position)
-	position.y = lerp(position.y, start_pos.y + (mouse_movement.y * weapon_type.sway_ammount_position) * delta, weapon_type.sway_speed_position)
 	#lerp weapon pos based on movement input
+	if Input.is_action_pressed("forward"):
+		position.z = lerp(position.z, start_pos.z - -weapon_type.push_in_ammount * delta, weapon_type.drift_speed * 0.5)
+	elif Input.is_action_pressed("backward"):
+		position.z = lerp(position.z, start_pos.z - weapon_type.push_in_ammount * delta, weapon_type.drift_speed)
 	if Input.is_action_pressed("left"):
 		position.x = lerp(position.x, start_pos.x - weapon_type.drift_max * delta, weapon_type.drift_speed)
 	elif Input.is_action_pressed("right"):
@@ -69,6 +72,20 @@ func sway_weapon(delta):
 	rotation_degrees.y = lerp(rotation_degrees.y, start_rot.y + (mouse_movement.x * weapon_type.sway_ammount_rotation) * delta, weapon_type.sway_speed_rotation)
 	rotation_degrees.x = lerp(rotation_degrees.x, start_rot.x + (mouse_movement.y * weapon_type.sway_ammount_rotation * 0.5) * delta, weapon_type.sway_speed_rotation)
 	mouse_movement = lerp(mouse_movement, Vector2.ZERO, delta * 0.8)
+	
+	#hold weapon closer/further depending on player's head pitch
+	position.z += (-Global.player.player_head.rotation.x*0.008)
+
+func bob_weapon(delta):
+	# sin(time * frequency)*amplitude
+	if Global.player.is_moving:
+		time += delta
+		var vertical_bob = sin(time*(weapon_type.vertical_bob_frequency*2 if Global.player.is_running else weapon_type.vertical_bob_frequency)) * weapon_type.vertical_bob_amplitude
+		var horizontal_bob = sin(time*(weapon_type.horizontal_bob_frequency*2 if Global.player.is_running else weapon_type.horizontal_bob_frequency)) * weapon_type.horizontal_bob_amplitude
+		position.y += vertical_bob / 10
+		position.x += horizontal_bob /10
+	else:
+		time = 0.0
 
 func change_weapon_fov(fov):
 	#adjust the weapon fov at runtime
@@ -96,6 +113,8 @@ func load_weapon():
 			newmesh.scale = Vector3.ONE
 			newmesh.scale = weapon_type.scale
 			newmesh.cast_shadow = 0
+			newmesh.set_layer_mask_value(2,true)
+			newmesh.set_layer_mask_value(1,false)
 			add_child(newmesh)
 	position = weapon_type.position
 	rotation_degrees = weapon_type.rotation
@@ -140,8 +159,8 @@ func test_raycast(ray_pos,ray_nrm,ray_col):
 	instance.global_position = ray_pos
 	instance.look_at(instance.global_transform.origin + ray_nrm,Vector3.UP)
 	instance.rotate_object_local(Vector3(1,0,0), 90)
+	await get_tree().create_timer(5).timeout
 	if instance != null:
-		await get_tree().create_timer(5).timeout
 		var fade = get_tree().create_tween()
 		fade.tween_property(instance, "modulate:a", 0, 1.5)
 	await get_tree().create_timer(1.5).timeout
@@ -162,7 +181,9 @@ func weapon_recoil(delta):
 	position = lerp(position,target_position, weapon_type.recoil_speed*delta)
 
 func return_weapon_to_start_pos(delta):
-	position = lerp(position,start_pos, 0.7*delta)
+	position.x = lerp(position.x, start_pos.x - (mouse_movement.x * weapon_type.sway_ammount_position) * delta, weapon_type.sway_speed_position)
+	position.y = lerp(position.y, start_pos.y + (mouse_movement.y * weapon_type.sway_ammount_position) * delta, weapon_type.sway_speed_position)
+	position.z = lerp(position.z, start_pos.z + (mouse_movement.y * weapon_type.sway_ammount_position) * delta, weapon_type.sway_speed_position)
 
 func shoot_sounds():
 	var current_sound = weapon_type.shoot_sounds[randf_range(0,len(weapon_type.shoot_sounds))]
