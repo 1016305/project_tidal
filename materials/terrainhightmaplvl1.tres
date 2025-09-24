@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bhu2cakm12e4y"]
+
+[ext_resource type="Shader" uid="uid://dlsdscvw558t3" path="res://materials/new_shader.gdshader" id="1_l2k07"]
+[ext_resource type="Texture2D" uid="uid://b48xbs4yjsqxa" path="res://materials/Displacement.001.png" id="1_u73sp"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_l2k07")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/texture_albedo = ExtResource("1_u73sp")
+shader_parameter/ao_light_affect = 0.0
+shader_parameter/material_specular = 0.0
+shader_parameter/roughness = 0.1
+shader_parameter/texture_height = ExtResource("1_u73sp")
+shader_parameter/normal_scale = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(1, 1, 1)
+shader_parameter/hmUV_scale = Vector3(1, 1, -0.325)
+shader_parameter/hmUV_offset = Vector3(1, 1, 6.585)
