@@ -26,6 +26,7 @@ uses_shader = true
 fov_slider = 75.0
 recoil_max = Vector3(0, 0, 0)
 recoil_speed = 0.0
+bloom = 0.0
 shoot_sounds = Array[AudioStream]([])
 weapon_max_ammo = 0
 weapon_current_ammo = 0

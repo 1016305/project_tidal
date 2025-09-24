@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://jwb2jhicd4uh"]
+[gd_scene load_steps=15 format=3 uid="uid://jwb2jhicd4uh"]
 
 [ext_resource type="Texture2D" uid="uid://dkd8bff5lu385" path="res://textures/spruit_sunrise.jpg" id="1_jyhfs"]
 [ext_resource type="Material" uid="uid://ciyptmi6h3qlq" path="res://materials/devtexture_grey.tres" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://dsb1mn22d220l" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="Material" uid="uid://cmf6w8b83cusu" path="res://materials/devtexture_orange.tres" id="2_sugp2"]
+[ext_resource type="Material" uid="uid://cwk7dbr73duwi" path="res://materials/grass_test.tres" id="3_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://lhfgl6lg8224" path="res://scenes/enemies/test_enemy.tscn" id="4_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://ckqv21db3yqkp" path="res://materials/target.png" id="4_tefeu"]
 
@@ -60,6 +61,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.46741, -1.52018, 7)
 material_override = ExtResource("1_o5qli")
 use_collision = true
 size = Vector3(32, 1, 34)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="stage/NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5326, -1.52018, 18)
+material_override = ExtResource("3_o6xl0")
+use_collision = true
+size = Vector3(12, 1, 12)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="stage/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4774, -0.520176, -5.5)
