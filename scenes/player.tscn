@@ -91,6 +91,7 @@ enable_shadows = true
 
 [node name="flashlight" type="SpotLight3D" parent="stand_collider/player_head/camera"]
 transform = Transform3D(0.999795, -0.000397483, 0.0202231, 0, 0.999807, 0.0196511, -0.020227, -0.0196471, 0.999602, -0.156827, -0.0870875, -0.391297)
+visible = false
 light_color = Color(1, 0.949585, 0.890625, 1)
 light_energy = 10.0
 light_projector = ExtResource("5_tuyoq")
@@ -102,10 +103,11 @@ spot_angle = 42.71
 spot_angle_attenuation = 1.23114
 
 [node name="OmniLight3D" type="OmniLight3D" parent="stand_collider/player_head/camera/flashlight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0432957, -0.0542911)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055, -0.043, -0.544)
 layers = 2
-light_color = Color(0.960938, 0.896187, 0.87085, 1)
+light_color = Color(0.89, 0.832595, 0.8099, 1)
 light_energy = 0.608
+light_cull_mask = 4294967294
 omni_range = 1.843
 
 [node name="user_interface" parent="." instance=ExtResource("2_g2els")]

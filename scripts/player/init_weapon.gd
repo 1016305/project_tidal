@@ -16,6 +16,7 @@ var mouse_movement: Vector2
 var current_ammo: int
 
 var time: float = 0.0
+var bloom_variance: float = 0.0
 
 var raycast_test = preload("res://scenes/weapons/weapon_extra/raycast_test.tscn")
 @onready var fire_delay: Timer = $fire_delay
@@ -52,6 +53,7 @@ func _physics_process(delta: float) -> void:
 		is_firing = true
 	else: is_firing = false
 	return_weapon_to_start_pos(delta)
+	bloom(delta)
 	#commented this bitch out for the recoil stuff. not sure if it's importante
 	#position = weapon_type.position
 
@@ -142,7 +144,7 @@ func shoot(delta):
 		fire_delay.start()
 		weapon_type.weapon_current_ammo -= weapon_type.ammo_per_shot
 		Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
-		var result = weapon_spread()
+		var result = weapon_spread(delta)
 		weapon_recoil(delta)
 		if result: 
 			test_raycast(result.get("position"),result.get("normal"),result.get("collider"))
@@ -199,24 +201,19 @@ func reload():
 	if weapon_type.weapon_reserve_ammo != 0 and !is_reloading:
 		is_reloading = !is_reloading
 		Global.player_is_reloading.emit()
-		await get_tree().create_timer(3).timeout
-		if weapon_type.weapon_reserve_ammo >= weapon_type.weapon_max_ammo:
-			weapon_type.weapon_reserve_ammo -= (weapon_type.weapon_max_ammo - weapon_type.weapon_current_ammo) 
+		await get_tree().create_timer(weapon_type.weapon_reload_time).timeout
+		var pending_ammo = weapon_type.weapon_max_ammo - weapon_type.weapon_current_ammo
+		
+		if pending_ammo < weapon_type.weapon_reserve_ammo:
+			weapon_type.weapon_reserve_ammo -= pending_ammo
 			weapon_type.weapon_current_ammo = weapon_type.weapon_max_ammo
 		else:
-			##math is better but still bad. you suck at math. THIS IS STILL BROKEN
-			var to_add = weapon_type.weapon_max_ammo - weapon_type.weapon_current_ammo
-			if to_add > weapon_type.weapon_reserve_ammo:
-				weapon_type.weapon_current_ammo += weapon_type.weapon_reserve_ammo
-				weapon_type.weapon_reserve_ammo -= to_add
-			else:
-				weapon_type.weapon_current_ammo += to_add
-				weapon_type.weapon_reserve_ammo -= to_add
-				weapon_type.weapon_reserve_ammo = 0
+			weapon_type.weapon_current_ammo += weapon_type.weapon_reserve_ammo
+			weapon_type.weapon_reserve_ammo = 0
 		Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
 		is_reloading = !is_reloading
 
-func weapon_spread():
+func weapon_spread(delta):
 	var camera = Global.main_camera
 	var space_state = camera.get_world_3d().direct_space_state
 	
@@ -225,7 +222,7 @@ func weapon_spread():
 	var screen_y_half = screen_center.y
 	screen_center.y = get_viewport().size.y/3 * 1.6 # offset to account for the croshair not being centered
 	#here is where you do the bloom calculations
-	var screen_space_bloom = screen_y_half * weapon_type.bloom #ensures that weapon accuracy isnt dependant on window resolution.
+	var screen_space_bloom = screen_y_half * (weapon_type.accuracy + bloom(delta)) #ensures that weapon accuracy isnt dependant on window resolution.
 	screen_center += Vector2(randf_range(-screen_space_bloom,screen_space_bloom),randf_range(-screen_space_bloom,screen_space_bloom))
 	
 	var origin = camera.project_ray_origin(screen_center)
@@ -234,3 +231,19 @@ func weapon_spread():
 	query.collide_with_bodies = true
 	var result = space_state.intersect_ray(query)
 	return result
+
+func bloom(delta):
+	if is_firing:
+		bloom_variance = lerp(bloom_variance,weapon_type.bloom, weapon_type.bloom_time * delta)
+		return bloom_variance
+	else:
+		bloom_variance = lerp(bloom_variance,0.0,(weapon_type.bloom_time*3)*delta)
+		return bloom_variance
+	if Global.player.is_moving:
+		if Global.player.is_running:
+			return bloom_variance + (weapon_type.move_accuracy_loss*2)
+		else:
+			return bloom_variance + weapon_type.move_accuracy_loss
+
+#func add_ammo(ammo_to_add):
+	#weapon_type.

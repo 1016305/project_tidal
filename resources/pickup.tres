@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pickups" load_steps=2 format=3 uid="uid://dki2em35v7rgf"]
+
+[ext_resource type="Script" uid="uid://c57piq234h5iw" path="res://scripts/player/pickups.gd" id="1_fppom"]
+
+[resource]
+script = ExtResource("1_fppom")
+pickup_type = "Ammo"
+weapon_type = "Assault Rifle"
+value = 30

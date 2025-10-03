@@ -1,5 +1,5 @@
-extends ConditionLeaf
+extends ActionLeaf
 
 func tick(actor:Node, _blackboard:Blackboard) -> int:
-	actor.toggle_navigation(false)
+	actor.toggle_navigation(true)
 	return SUCCESS

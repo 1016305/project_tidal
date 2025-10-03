@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db0coiq6ohagi"
-path.s3tc="res://.godot/imported/flashlight.png-e285ec18c3ab307244f5d2097b2245c7.s3tc.ctex"
+uid="uid://082ro44i2sf4"
+path.s3tc="res://.godot/imported/devtex.png-1b38d56792b9454159f5415622e2f984.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/flashlight.png"
-dest_files=["res://.godot/imported/flashlight.png-e285ec18c3ab307244f5d2097b2245c7.s3tc.ctex"]
+source_file="res://models/enemies/devtex.png"
+dest_files=["res://.godot/imported/devtex.png-1b38d56792b9454159f5415622e2f984.s3tc.ctex"]
 
 [params]
 

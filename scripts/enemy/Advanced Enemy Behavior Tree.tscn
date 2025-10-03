@@ -1,0 +1,134 @@
+[gd_scene load_steps=16 format=3 uid="uid://1aw12257t060"]
+
+[ext_resource type="Script" uid="uid://bb0t2ovl7wifo" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_kamsy"]
+[ext_resource type="Script" uid="uid://cw22yurt5l74k" path="res://addons/beehave/nodes/composites/selector_reactive.gd" id="2_l0oy4"]
+[ext_resource type="Script" uid="uid://cg016dbe7gs1x" path="res://addons/beehave/nodes/composites/sequence.gd" id="3_1vj6f"]
+[ext_resource type="Script" uid="uid://cib1nfdrrgden" path="res://scripts/enemy/advanced enemy/is_random_patrol.gd" id="3_4beu0"]
+[ext_resource type="Script" uid="uid://cl47e50c5cuio" path="res://scripts/enemy/advanced enemy/is_sequence_patrol.gd" id="5_e7xo6"]
+[ext_resource type="Script" uid="uid://ydvqf7eq7yc6" path="res://scripts/enemy/advanced enemy/custom_delay_decorator.gd" id="5_ra2sa"]
+[ext_resource type="Script" uid="uid://bo60ikvmwdo4h" path="res://scripts/enemy/advanced enemy/move_to_target.gd" id="6_87e7t"]
+[ext_resource type="Script" uid="uid://hm6qyfnotjqs" path="res://scripts/enemy/advanced enemy/is_random_sequence_patrol.gd" id="6_e7xo6"]
+[ext_resource type="Script" uid="uid://cd17ggl0aqmtg" path="res://scripts/enemy/advanced enemy/new_patrol_target.gd" id="6_ra2sa"]
+[ext_resource type="Script" uid="uid://we22430vcb44" path="res://addons/beehave/nodes/decorators/time_limiter.gd" id="7_nq4rd"]
+[ext_resource type="Script" uid="uid://d11ssohtnpww5" path="res://scripts/enemy/advanced enemy/wait_for_destination.gd" id="8_t7p2f"]
+[ext_resource type="Script" uid="uid://bj0ldgn1bktk8" path="res://scripts/enemy/advanced enemy/stop_moving.gd" id="9_nq4rd"]
+[ext_resource type="Script" uid="uid://c64a7hmy4i52" path="res://scripts/enemy/advanced enemy/set_target_to_next_node.gd" id="12_ra2sa"]
+[ext_resource type="Script" uid="uid://cktyqjegljl61" path="res://scripts/enemy/advanced enemy/pick_random_node_in_sequence.gd" id="14_6s2a5"]
+[ext_resource type="Script" uid="uid://cv74jjdrwevpr" path="res://addons/beehave/nodes/leaves/action.gd" id="14_d1iki"]
+
+[node name="AdvancedEnemyBehaviorTree" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
+script = ExtResource("1_kamsy")
+blackboard = NodePath("@Node@21798")
+actor = NodePath("")
+metadata/_custom_type_script = "uid://bb0t2ovl7wifo"
+
+[node name="Main Behavior SEL" type="Node" parent="."]
+script = ExtResource("2_l0oy4")
+metadata/_custom_type_script = "uid://cw22yurt5l74k"
+
+[node name="Idle Behaviours" type="Node" parent="Main Behavior SEL"]
+script = ExtResource("5_ra2sa")
+metadata/_custom_type_script = "uid://dorri1tul8gfx"
+
+[node name="Idle Behaviors SEL" type="Node" parent="Main Behavior SEL/Idle Behaviours"]
+script = ExtResource("2_l0oy4")
+metadata/_custom_type_script = "uid://cw22yurt5l74k"
+
+[node name="Random Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Is Random Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
+script = ExtResource("3_4beu0")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Select Random Spot as Target" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
+script = ExtResource("6_ra2sa")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Move To Target" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
+script = ExtResource("6_87e7t")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
+script = ExtResource("7_nq4rd")
+wait_time = 6.0
+metadata/_custom_type_script = "uid://we22430vcb44"
+
+[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol/TimeLimiterDecorator"]
+script = ExtResource("8_t7p2f")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
+script = ExtResource("9_nq4rd")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Sequence Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Is Sequence Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
+script = ExtResource("5_e7xo6")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Set Target To Next Node" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
+script = ExtResource("12_ra2sa")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Move To Target" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
+script = ExtResource("6_87e7t")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
+script = ExtResource("7_nq4rd")
+wait_time = 6.0
+metadata/_custom_type_script = "uid://we22430vcb44"
+
+[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol/TimeLimiterDecorator"]
+script = ExtResource("8_t7p2f")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
+script = ExtResource("9_nq4rd")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Random Sequence SEQ" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Is Random Sequence" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
+script = ExtResource("6_e7xo6")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Pick Random Node In Sequence" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
+script = ExtResource("14_6s2a5")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Move To Target" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
+script = ExtResource("6_87e7t")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
+script = ExtResource("7_nq4rd")
+wait_time = 6.0
+metadata/_custom_type_script = "uid://we22430vcb44"
+
+[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ/TimeLimiterDecorator"]
+script = ExtResource("8_t7p2f")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
+script = ExtResource("9_nq4rd")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="SequenceComposite" type="Node" parent="Main Behavior SEL"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="ActionLeaf" type="Node" parent="Main Behavior SEL/SequenceComposite"]
+script = ExtResource("14_d1iki")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="ActionLeaf2" type="Node" parent="Main Behavior SEL/SequenceComposite"]
+script = ExtResource("14_d1iki")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"

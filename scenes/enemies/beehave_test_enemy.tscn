@@ -20,110 +20,109 @@
 
 [node name="BeehaveTree" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
 script = ExtResource("1_jgoiu")
-blackboard = NodePath("@Node@21917")
+blackboard = NodePath("@Node@21800")
 actor = NodePath("")
 metadata/_custom_type_script = "uid://bb0t2ovl7wifo"
 
-[node name="SelectorReactiveComposite" type="Node" parent="."]
+[node name="Main State Selector" type="Node" parent="."]
 script = ExtResource("2_ahg7u")
 metadata/_custom_type_script = "uid://cw22yurt5l74k"
 
-[node name="Dead Dehaviour" type="Node" parent="SelectorReactiveComposite"]
+[node name="Dead Behaviour" type="Node" parent="Main State Selector"]
 script = ExtResource("4_ahiqs")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 
-[node name="IsDead" type="Node" parent="SelectorReactiveComposite/Dead Dehaviour"]
+[node name="IsDead" type="Node" parent="Main State Selector/Dead Behaviour"]
 script = ExtResource("3_ahrl7")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="DeathAnimation" type="Node" parent="SelectorReactiveComposite/Dead Dehaviour"]
+[node name="DeathAnimation" type="Node" parent="Main State Selector/Dead Behaviour"]
 script = ExtResource("5_bbpse")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="Combat Behaviour" type="Node" parent="SelectorReactiveComposite"]
+[node name="Combat Behaviour" type="Node" parent="Main State Selector"]
 script = ExtResource("4_ahiqs")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 
-[node name="GetEnemy" type="Node" parent="SelectorReactiveComposite/Combat Behaviour"]
+[node name="GetPlayer" type="Node" parent="Main State Selector/Combat Behaviour"]
 script = ExtResource("10_d0ngx")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="AlwaysSucceedDecorator" type="Node" parent="SelectorReactiveComposite/Combat Behaviour"]
+[node name="AlwaysSucceedDecorator" type="Node" parent="Main State Selector/Combat Behaviour"]
 script = ExtResource("11_0x1xx")
 metadata/_custom_type_script = "uid://dsf3a8vlolhx8"
 
-[node name="SelectorComposite" type="Node" parent="SelectorReactiveComposite/Combat Behaviour/AlwaysSucceedDecorator"]
+[node name="PlayerInRange" type="Node" parent="Main State Selector/Combat Behaviour/AlwaysSucceedDecorator"]
 script = ExtResource("12_vfvlo")
 metadata/_custom_type_script = "uid://8hn4kne15ac5"
 
-[node name="player is in range" type="Node" parent="SelectorReactiveComposite/Combat Behaviour/AlwaysSucceedDecorator/SelectorComposite"]
+[node name="player is in range" type="Node" parent="Main State Selector/Combat Behaviour/AlwaysSucceedDecorator/PlayerInRange"]
 script = ExtResource("4_ahiqs")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 
-[node name="InAttackRange" type="Node" parent="SelectorReactiveComposite/Combat Behaviour/AlwaysSucceedDecorator/SelectorComposite/player is in range"]
+[node name="InAttackRange" type="Node" parent="Main State Selector/Combat Behaviour/AlwaysSucceedDecorator/PlayerInRange/player is in range"]
 script = ExtResource("13_vfvlo")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="TimeLimiterDecorator" type="Node" parent="SelectorReactiveComposite/Combat Behaviour/AlwaysSucceedDecorator/SelectorComposite/player is in range"]
+[node name="TimeLimiterDecorator" type="Node" parent="Main State Selector/Combat Behaviour/AlwaysSucceedDecorator/PlayerInRange/player is in range"]
 script = ExtResource("7_7qcfv")
 wait_time = 0.5
 metadata/_custom_type_script = "uid://we22430vcb44"
 
-[node name="AttackPlayer" type="Node" parent="SelectorReactiveComposite/Combat Behaviour/AlwaysSucceedDecorator/SelectorComposite/player is in range/TimeLimiterDecorator"]
+[node name="AttackPlayer" type="Node" parent="Main State Selector/Combat Behaviour/AlwaysSucceedDecorator/PlayerInRange/player is in range/TimeLimiterDecorator"]
 script = ExtResource("14_r88eg")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="player is not in range" type="Node" parent="SelectorReactiveComposite/Combat Behaviour/AlwaysSucceedDecorator/SelectorComposite"]
+[node name="player is not in range" type="Node" parent="Main State Selector/Combat Behaviour/AlwaysSucceedDecorator/PlayerInRange"]
 script = ExtResource("4_ahiqs")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 
-[node name="GetEnemy" type="Node" parent="SelectorReactiveComposite/Combat Behaviour/AlwaysSucceedDecorator/SelectorComposite/player is not in range"]
+[node name="GetPlayer" type="Node" parent="Main State Selector/Combat Behaviour/AlwaysSucceedDecorator/PlayerInRange/player is not in range"]
 script = ExtResource("10_d0ngx")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="SetPlayerAsTarget" type="Node" parent="SelectorReactiveComposite/Combat Behaviour/AlwaysSucceedDecorator/SelectorComposite/player is not in range"]
+[node name="SetPlayerAsTarget" type="Node" parent="Main State Selector/Combat Behaviour/AlwaysSucceedDecorator/PlayerInRange/player is not in range"]
 script = ExtResource("11_lhfv6")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="StartMoving" type="Node" parent="SelectorReactiveComposite/Combat Behaviour/AlwaysSucceedDecorator/SelectorComposite/player is not in range"]
+[node name="StartMoving" type="Node" parent="Main State Selector/Combat Behaviour/AlwaysSucceedDecorator/PlayerInRange/player is not in range"]
 script = ExtResource("6_n2yi1")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="TimeLimiterDecorator" type="Node" parent="SelectorReactiveComposite/Combat Behaviour/AlwaysSucceedDecorator/SelectorComposite/player is not in range"]
+[node name="TimeLimiterDecorator" type="Node" parent="Main State Selector/Combat Behaviour/AlwaysSucceedDecorator/PlayerInRange/player is not in range"]
 script = ExtResource("7_7qcfv")
 wait_time = 0.2
 metadata/_custom_type_script = "uid://we22430vcb44"
 
-[node name="InAttackRange" type="Node" parent="SelectorReactiveComposite/Combat Behaviour/AlwaysSucceedDecorator/SelectorComposite/player is not in range/TimeLimiterDecorator"]
+[node name="InAttackRange" type="Node" parent="Main State Selector/Combat Behaviour/AlwaysSucceedDecorator/PlayerInRange/player is not in range/TimeLimiterDecorator"]
 script = ExtResource("13_vfvlo")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Idle Behaviour" type="Node" parent="SelectorReactiveComposite"]
+[node name="Idle Behaviour" type="Node" parent="Main State Selector"]
 script = ExtResource("3_n2yi1")
-wait_time = 3.0
 metadata/_custom_type_script = "uid://dorri1tul8gfx"
 
-[node name="SequenceComposite" type="Node" parent="SelectorReactiveComposite/Idle Behaviour"]
+[node name="Idle Behavior Sequence" type="Node" parent="Main State Selector/Idle Behaviour"]
 script = ExtResource("4_ahiqs")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 
-[node name="NewPatrolTarget" type="Node" parent="SelectorReactiveComposite/Idle Behaviour/SequenceComposite"]
+[node name="NewPatrolTarget" type="Node" parent="Main State Selector/Idle Behaviour/Idle Behavior Sequence"]
 script = ExtResource("5_7qcfv")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="StartMoving" type="Node" parent="SelectorReactiveComposite/Idle Behaviour/SequenceComposite"]
+[node name="StartMoving" type="Node" parent="Main State Selector/Idle Behaviour/Idle Behavior Sequence"]
 script = ExtResource("6_n2yi1")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="TimeLimiterDecorator" type="Node" parent="SelectorReactiveComposite/Idle Behaviour/SequenceComposite"]
+[node name="TimeLimiterDecorator" type="Node" parent="Main State Selector/Idle Behaviour/Idle Behavior Sequence"]
 script = ExtResource("7_7qcfv")
-wait_time = 6.0
+wait_time = 3.0
 metadata/_custom_type_script = "uid://we22430vcb44"
 
-[node name="WaitForDestination" type="Node" parent="SelectorReactiveComposite/Idle Behaviour/SequenceComposite/TimeLimiterDecorator"]
+[node name="WaitForDestination" type="Node" parent="Main State Selector/Idle Behaviour/Idle Behavior Sequence/TimeLimiterDecorator"]
 script = ExtResource("8_ke6gf")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="StopMoving" type="Node" parent="SelectorReactiveComposite/Idle Behaviour/SequenceComposite"]
+[node name="StopMoving" type="Node" parent="Main State Selector/Idle Behaviour/Idle Behavior Sequence"]
 script = ExtResource("9_ke6gf")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"

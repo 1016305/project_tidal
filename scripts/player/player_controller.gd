@@ -96,6 +96,7 @@ func _physics_process(delta: float) -> void:
 	reload()
 	toggle_flashlight()
 	
+	take_damage_test()
 	#I cannot fathom why this only works here. Probably part of some insidious component of move_and_slide
 	#If you move this ANYWHERE it will fuck up the checks for moving. I will not put this into its own
 	#method. It is a monument to all our sins.
@@ -245,6 +246,22 @@ func toggle_flashlight():
 		flashlight.visible = !flashlight.visible
 
 ##Getters and Setters
+#Player damage and health
+func damage(damage):
+	current_health -= damage
+	if current_health < 0:
+		current_health = 0
+	Global.player_health.emit(current_health,max_health)
+	print("Took ", damage, " damage")
+	death_check()
+	
+func heal(health):
+	current_health += health
+	
+func death_check():
+	if current_health <= 0:
+		print("player is dead")
+
 
 #External function to adjust/call player speed from multiple fucntions. Adds edge friction modifier.
 func _set_current_speed(speedmod):
@@ -270,3 +287,6 @@ func spawn_test_enemy():
 		new_enemy.position = Vector3(3.4,1.5,1.2)
 		get_tree().root.add_child(new_enemy)
 		
+func take_damage_test():
+	if Input.is_action_just_pressed("test_damage"):
+		damage(randi_range(6,8))

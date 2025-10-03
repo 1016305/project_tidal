@@ -17,7 +17,6 @@ func add_muzzle_flash():
 	var light_color = Color.from_rgba8(randf_range(250,255),randf_range(181,186),randf_range(39,43))
 	light.light_energy = brightness
 	light.light_color = light_color
-	print(light.light_color)
 	
 	
 	light.visible = true

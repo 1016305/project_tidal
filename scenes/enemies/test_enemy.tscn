@@ -22,5 +22,5 @@ mesh = SubResource("CapsuleMesh_o4mit")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
 [node name="BeehaveTree" parent="." node_paths=PackedStringArray("blackboard", "actor") instance=ExtResource("2_kmxma")]
-blackboard = NodePath("@Node@30809")
+blackboard = NodePath("@Node@34589")
 actor = NodePath("..")

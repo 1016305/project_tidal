@@ -40,6 +40,7 @@ class_name weapons extends Resource
 @export_range(0,0.5,0.01) var drift_speed: float = 0.1
 @export_range(0,5,0.1) var push_in_ammount: float = 0.1
 
+## Weapon bobbing settings. For optimal view, horizontal bob values whould be exactly one HALF of vertical values.
 @export_category("Weapon Bob")
 @export var do_weapon_bob: bool = true
 @export_range(-50,50,0.01) var horizontal_bob_amplitude: float = 0.0
@@ -56,8 +57,16 @@ class_name weapons extends Resource
 @export_category("Weapon Recoil")
 @export var recoil_max: Vector3
 @export var recoil_speed: float
+
+@export_category("Accuracy and Bloom")
 ## How accurate the weapon is, relative to the center of the screen. Best suited for low values. AR default is 0.04
+@export var accuracy: float
+## How much accuracy is lost during bloom. Same as above; low values better. AR defualt is 0.08
 @export var bloom: float
+## How long it takes to reach the maximum bloom
+@export var bloom_time: float
+## How much accuracy is lost when the player is moving while firing
+@export var move_accuracy_loss: float
 
 ## Variables for the weapon's sound effects
 @export_category("Weapon Sounds")
@@ -71,7 +80,9 @@ class_name weapons extends Resource
 @export var weapon_current_ammo: int
 ##Ammo consumed per shot
 @export var ammo_per_shot: int
-##Current reserve ammo the weapon contains
-@export var weapon_reserve_ammo: int
 ##Maximum reserve ammo the weapon can hold. Should be a multiple of the weapon's magazine maximum.
 @export var weapon_max_reserve: int
+##Current reserve ammo the weapon contains
+@export var weapon_reserve_ammo: int
+##Weapon reload time in seconds
+@export var weapon_reload_time: int
