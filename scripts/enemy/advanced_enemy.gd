@@ -1,11 +1,17 @@
 class_name Advanced_Enemy extends CharacterBody3D
 
 @onready var agent: NavigationAgent3D = $NavigationAgent3D
+#DELETEME
+@onready var debug_raycast_a: RayCast3D = $"debug raycast A"
+@onready var debug_raycast_b: RayCast3D = $"debug raycast B"
+@onready var debug_raycast_c: RayCast3D = $"debug raycast C"
 
+#END DELETEME
 @export var enemy_type: advanced_test_enemy
 
 var origin: Vector3
 var target = Vector3.ZERO
+var player
 
 var look_target_location: Vector3
 var look_target_rotation: Basis
@@ -23,6 +29,7 @@ func _ready() -> void:
 	set_physics_process(false)
 	call_deferred("dump_first_physics_frame")
 	speed = enemy_type.move_speed
+	Global.player_is_assigned.connect(assign_player)
 
 	if enemy_type == null:
 		print('Please assign an enemy type, or create a new one.')
@@ -30,14 +37,21 @@ func _ready() -> void:
 		print('Invalid or none patrol type selected.')
 	store_origin()
 	set_target_from_first_node()
+	debug_raycast_c.target_position = Vector3.FORWARD * 3
 
 func _physics_process(delta: float) -> void:
 	move_to_point()
 	move_and_slide()
 	handle_gravity(delta)
 	face_target(delta)
+	can_see_player()
+	
+	#DELETEME
+	show_view_range_debug()
 
 #----------------------------------------------------------------------#
+func assign_player():
+	player = Global.player
 
 #godot hates beehave when it falls the process too fast
 func dump_first_physics_frame():
@@ -51,6 +65,10 @@ func force_map():
 
 func store_origin():
 	origin = global_position
+	
+func get_player():
+	if player == null:
+		player = Global.player
 
 #----------------------------------------------------------------------#
 
@@ -93,7 +111,7 @@ func set_target_from_first_node():
 #gets a random spot within the range of the navmesh -> within the set patrol range
 func get_random_spot() -> Vector3:
 	if await_frame:
-		var random_pos = Vector3(randf_range(-enemy_type.random_patrol_range,enemy_type.random_patrol_range),0,randf_range(-enemy_type.random_patrol_range,enemy_type.random_patrol_range))
+		var random_pos = Vector3(randf_range(-enemy_type.random_patrol_range,enemy_type.random_patrol_range),randf_range(0,10),randf_range(-enemy_type.random_patrol_range,enemy_type.random_patrol_range))
 		var map = agent.get_navigation_map()
 		var here = NavigationServer3D.map_get_closest_point(map, random_pos)
 		print(here)
@@ -146,3 +164,40 @@ func update_target_location(target):
 #returns distance to target
 func get_distance_to_target() -> float:
 	return agent.distance_to_target()
+
+func get_direction_from_angle(angle_in_degrees: float) -> Vector3:
+	var angle_in_rad = deg_to_rad(angle_in_degrees)
+	var dir = Vector3(0,sin(angle_in_rad),cos(angle_in_rad))
+	return dir
+
+func is_player_in_view_range() -> bool:
+	if position.distance_to(player.position) < enemy_type.view_radius:
+		return true
+	else:
+		return false
+
+func can_see_player() -> bool:
+		#var direction_to_player: Vector3 = (player.position - position).normalized()
+		#var angle = position.signed_angle_to(direction_to_player,transform.basis.z)
+		#var angle = transform.basis.z.angle_to(direction_to_player)
+	var dir: Vector3 = global_position.direction_to(player.global_position)
+	var angle: float = global_transform.basis.z.signed_angle_to(dir, Vector3.UP)
+	angle = abs(rad_to_deg(angle))
+	#directly in front of the enemy is 180. directly behind them is 0. L and R both sign 90
+	if angle > 180 - enemy_type.view_angle_degrees/2 and is_player_in_view_range():
+		return true
+	else:
+		return false
+
+func player_too_close() -> bool:
+	if position.distance_to(player.position) < enemy_type.alert_proximity_range:
+		return true
+	else:
+		return false
+
+#DELETEME
+func show_view_range_debug():
+	debug_raycast_a.rotation = get_direction_from_angle(-enemy_type.view_angle_degrees/2)
+	debug_raycast_b.rotation = get_direction_from_angle(enemy_type.view_angle_degrees/2)
+	debug_raycast_a.target_position.z = -enemy_type.view_radius
+	debug_raycast_b.target_position.z = -enemy_type.view_radius

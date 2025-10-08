@@ -317,7 +317,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.2068, 0, 13.5966)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0109, 0, 7.54185)
 
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72631, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.214, 1.05005, -4.497)
 
 [node name="pausable" type="Node3D" parent="."]
 process_mode = 3

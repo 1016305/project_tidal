@@ -7,6 +7,7 @@ var main_camera
 var player_weapon
 #player
 var player
+signal player_is_assigned
 
 signal ammo_update(current_ammo:int, max_ammo:int)
 signal player_is_reloading

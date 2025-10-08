@@ -64,6 +64,7 @@ signal swap_weapons(wep)
 
 func _ready() -> void:
 	Global.player = self
+	Global.player_is_assigned.emit()
 	camera.fov = FOV_MIN
 	Global.main_camera = camera
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
