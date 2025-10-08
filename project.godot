@@ -29,11 +29,14 @@ window/size/always_on_top=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/beehave/plugin.cfg")
+enabled=PackedStringArray("res://addons/beehave/plugin.cfg", "res://addons/blender_godot_pipeline/plugin.cfg")
 
 [importer_defaults]
 
 scene={
+&"import_script/path": "uid://bxeeun84xc0py"
+}
+animation_library={
 &"import_script/path": "uid://bxeeun84xc0py"
 }
 
