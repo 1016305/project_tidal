@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://jwb2jhicd4uh"]
+[gd_scene load_steps=19 format=3 uid="uid://jwb2jhicd4uh"]
 
 [ext_resource type="Texture2D" uid="uid://dkd8bff5lu385" path="res://textures/spruit_sunrise.jpg" id="1_jyhfs"]
 [ext_resource type="Material" uid="uid://ciyptmi6h3qlq" path="res://materials/devtexture_grey.tres" id="1_o5qli"]
@@ -8,6 +8,8 @@
 [ext_resource type="Material" uid="uid://cwk7dbr73duwi" path="res://materials/grass_test.tres" id="3_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://ckqv21db3yqkp" path="res://materials/target.png" id="4_tefeu"]
 [ext_resource type="PackedScene" uid="uid://bxhc2q41ugobs" path="res://scenes/enemies/advanced_test_enemy.tscn" id="6_o6xl0"]
+[ext_resource type="Script" uid="uid://dy32np5le4ruw" path="res://scripts/audio/wwise_test_script.gd" id="7_85g3d"]
+[ext_resource type="WwiseEvent" uid="uid://bbls23h8hnjm1" path="res://Wwise/resources/Event/{42D6CCEC-9A24-44EB-BADA-9F0E9207E8B5}.tres" id="8_choun"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tbgi4"]
 panorama = ExtResource("1_jyhfs")
@@ -37,6 +39,8 @@ agent_radius = 0.8
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6xl0"]
 albedo_texture = ExtResource("4_tefeu")
 texture_filter = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_choun"]
 
 [node name="world" type="Node3D"]
 transform = Transform3D(1.00023, 0, 0, 0, 1.00023, 0, 0, 0, 1.00023, 0, 0, 0)
@@ -316,9 +320,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.2068, 0, 13.5966)
 [node name="5" type="Node3D" parent="stage/Enemy Patrol Nodes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0109, 0, 7.54185)
 
+[node name="Area3D" type="Area3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4421, 0.681329, 3.32972)
+script = ExtResource("7_85g3d")
+event = ExtResource("8_choun")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/Area3D"]
+shape = SubResource("BoxShape3D_choun")
+
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.214, 1.05005, -4.497)
 
 [node name="pausable" type="Node3D" parent="."]
 process_mode = 3
 script = ExtResource("1_tipki")
+
+[node name="AkListener3D" type="AkListener3D" parent="."]

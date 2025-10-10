@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}" SchemaVersion="132">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Test Sounds" ID="{0073F6B3-FDDF-410E-93C5-394CB98DD32A}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

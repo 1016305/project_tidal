@@ -13,6 +13,7 @@ patrol_type = "Random Patrol"
 patrol_wait_time = 10.0
 random_patrol_range = 19.96
 patrol_points = Array[NodePath]([NodePath("../../Enemy Patrol Nodes/1"), NodePath("../../Enemy Patrol Nodes/2"), NodePath("../../Enemy Patrol Nodes/3"), NodePath("../../Enemy Patrol Nodes/4"), NodePath("../../Enemy Patrol Nodes/5")])
+alert_proximity_range = 0.0
 view_angle_degrees = 45.0
 view_radius = 10.0
 metadata/_custom_type_script = "uid://dmerclk04fu3p"

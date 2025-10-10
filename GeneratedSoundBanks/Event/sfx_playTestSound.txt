@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2888769156	sfx_playTestSound			\Default Work Unit\sfx_playTestSound	
+

@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Global="*res://scripts/utility/global.gd"
 BeehaveGlobalMetrics="*res://addons/beehave/metrics/beehave_global_metrics.gd"
 BeehaveGlobalDebugger="*res://addons/beehave/debug/global_debugger.gd"
+WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 
 [display]
 
@@ -29,7 +30,7 @@ window/size/always_on_top=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/beehave/plugin.cfg")
+enabled=PackedStringArray("res://addons/beehave/plugin.cfg", "res://addons/blender_godot_pipeline/plugin.cfg")
 
 [importer_defaults]
 
@@ -146,3 +147,4 @@ anti_aliasing/quality/screen_space_aa=1
 [wwise]
 
 common_user_settings/root_output_path="res://GeneratedSoundBanks"
+project_settings/windows_platform_info="res://Wwise/resources/Windows.tres"
