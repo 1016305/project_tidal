@@ -37,6 +37,9 @@ enabled=PackedStringArray("res://addons/beehave/plugin.cfg", "res://addons/blend
 scene={
 &"import_script/path": "uid://bxeeun84xc0py"
 }
+animation_library={
+&"import_script/path": "uid://bxeeun84xc0py"
+}
 
 [input]
 
