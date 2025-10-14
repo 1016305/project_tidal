@@ -70,7 +70,7 @@ class_name weapons extends Resource
 
 ## Variables for the weapon's sound effects
 @export_category("Weapon Sounds")
-@export var shoot_sounds: Array[AudioStream]
+@export var shoot_sounds: WwiseEvent
 
 ##Variables for the weapon's ammo counter
 @export_category("Ammo")

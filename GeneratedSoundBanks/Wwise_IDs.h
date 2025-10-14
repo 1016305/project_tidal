@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID SFX_PLAYTESTSOUND = 2888769156U;
         static const AkUniqueID TEST_EVENT_01 = 1336498786U;
+        static const AkUniqueID WEAPON_ASSAULTRIFLE_PLAY_FIRING = 619672820U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

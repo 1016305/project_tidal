@@ -21,6 +21,7 @@ var bloom_variance: float = 0.0
 var raycast_test = preload("res://scenes/weapons/weapon_extra/raycast_test.tscn")
 @onready var fire_delay: Timer = $fire_delay
 @onready var muzzle_flare: Node3D = $muzzle_flare
+@onready var fire_sounds: AkEvent3D = $fire_sounds
 
 
 var decal_size
@@ -125,6 +126,7 @@ func load_weapon():
 	muzzle_flare.position = weapon_type.muzzle_flare_pos
 	current_ammo = weapon_type.weapon_current_ammo
 	Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_max_ammo)
+	fire_sounds.event = weapon_type.shoot_sounds
 	
 func unload_weapon():
 	for child in get_children():
@@ -188,14 +190,8 @@ func return_weapon_to_start_pos(delta):
 	position.z = lerp(position.z, start_pos.z + (mouse_movement.y * weapon_type.sway_ammount_position) * delta, weapon_type.sway_speed_position)
 
 func shoot_sounds():
-	var current_sound = weapon_type.shoot_sounds[randf_range(0,len(weapon_type.shoot_sounds))]
-	var newplayer = AudioStreamPlayer3D.new()
-	newplayer.stream = current_sound
-	newplayer.pitch_scale = randf_range(0.9,1.1)
-	add_child(newplayer)
-	newplayer.play(0.0)
-	await newplayer.finished
-	newplayer.queue_free()
+	
+	fire_sounds.post_event()
 	
 func reload():
 	if weapon_type.weapon_reserve_ammo != 0 and !is_reloading:

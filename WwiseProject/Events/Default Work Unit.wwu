@@ -25,6 +25,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="weapon_assaultRifle_Play_Firing" ID="{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}">
+					<ChildrenList>
+						<Action Name="" ID="{B81E5190-5B64-4C9A-909D-4454A9D4CAAF}" ShortID="423538181">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Firing" ID="{F204CAC5-5168-49AF-A8E3-BB2AFD0A51FC}" WorkUnitID="{4CA4E494-3BAD-4EE9-954B-B872B640ABA7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

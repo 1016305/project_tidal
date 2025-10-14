@@ -6,11 +6,11 @@
    "Generator": "2025.1.2.8976"
   },
   "RootPaths": {
-   "ProjectRoot": "../../../../wwise projects/project_tidal_wwise",
-   "SourceFilesRoot": "../../../../wwise projects/project_tidal_wwise/.cache",
+   "ProjectRoot": "../WwiseProject",
+   "SourceFilesRoot": "../WwiseProject/.cache",
    "SoundBanksRoot": ".",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "../../../../wwise projects/project_tidal_wwise/GeneratedSoundBanks/Windows"
+   "ExternalSourcesOutputRoot": "../WwiseProject/GeneratedSoundBanks/Windows"
   },
   "DefaultAlign": "16",
   "Settings": {
@@ -33,6 +33,6 @@
    "PrintObjectPath": "true",
    "PrintObjectColor": "true"
   },
-  "FileHash": "{AF382C79-BC0D-84F6-35EA-0B05D15090A3}"
+  "FileHash": "{A1F67969-C7BD-AA38-8B21-F942F17BC458}"
  }
 }

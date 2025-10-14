@@ -1,0 +1,7 @@
+[gd_resource type="WwiseAuxBus" format=3 uid="uid://cq8ryk8ijpcnn"]
+
+[resource]
+name = "Indoor_Reverb"
+id = 3891222523
+guid = "{305811BF-1AA5-4C04-8C85-66B0026F9289}"
+dummy = true

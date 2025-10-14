@@ -5,7 +5,7 @@
 [ext_resource type="ArrayMesh" uid="uid://b3incus7tmf5f" path="res://models/weapons/assault_rifle/meshes/gun_Cylinder_012.res" id="2_uf5nn"]
 [ext_resource type="ArrayMesh" uid="uid://imbq165i7uom" path="res://models/weapons/assault_rifle/meshes/gun_Cube_035.res" id="3_4e8od"]
 [ext_resource type="ArrayMesh" uid="uid://ds3ge47kk86en" path="res://models/weapons/assault_rifle/meshes/gun_Plane.res" id="4_hh3ml"]
-[ext_resource type="AudioStream" uid="uid://bceolxi7m2lkl" path="res://sound/sfx/weapons/assault_rifle/ar_shoot_01.wav" id="6_hh3ml"]
+[ext_resource type="WwiseEvent" uid="uid://b58dm3wq2xbl0" path="res://Wwise/resources/Event/{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}.tres" id="6_uf5nn"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uf5nn"]
 
@@ -43,7 +43,7 @@ accuracy = 0.04
 bloom = 0.08
 bloom_time = 0.5
 move_accuracy_loss = 0.02
-shoot_sounds = Array[AudioStream]([ExtResource("6_hh3ml")])
+shoot_sounds = ExtResource("6_uf5nn")
 weapon_max_ammo = 30
 weapon_current_ammo = 30
 ammo_per_shot = 1

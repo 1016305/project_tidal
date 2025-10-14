@@ -36,7 +36,6 @@ accuracy = 0.0
 bloom = 0.0
 bloom_time = 0.0
 move_accuracy_loss = 0.0
-shoot_sounds = Array[AudioStream]([])
 weapon_max_ammo = 0
 weapon_current_ammo = 0
 ammo_per_shot = 0

@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}" PersistMode="Standalone">
 			<ChildrenList>
 				<WorkUnit Name="Test Sounds" ID="{0073F6B3-FDDF-410E-93C5-394CB98DD32A}" PersistMode="Reference"/>
+				<WorkUnit Name="Weapon Sounds" ID="{4CA4E494-3BAD-4EE9-954B-B872B640ABA7}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
