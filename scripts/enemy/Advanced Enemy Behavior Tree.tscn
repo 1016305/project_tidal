@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://1aw12257t060"]
+[gd_scene load_steps=17 format=3 uid="uid://1aw12257t060"]
 
 [ext_resource type="Script" uid="uid://bb0t2ovl7wifo" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_kamsy"]
 [ext_resource type="Script" uid="uid://cw22yurt5l74k" path="res://addons/beehave/nodes/composites/selector_reactive.gd" id="2_l0oy4"]
@@ -15,11 +15,12 @@
 [ext_resource type="Script" uid="uid://c64a7hmy4i52" path="res://scripts/enemy/advanced enemy/set_target_to_next_node.gd" id="12_ra2sa"]
 [ext_resource type="Script" uid="uid://cktyqjegljl61" path="res://scripts/enemy/advanced enemy/pick_random_node_in_sequence.gd" id="14_6s2a5"]
 [ext_resource type="Script" uid="uid://cv74jjdrwevpr" path="res://addons/beehave/nodes/leaves/action.gd" id="14_d1iki"]
+[ext_resource type="Script" uid="uid://dorri1tul8gfx" path="res://addons/beehave/nodes/decorators/delayer.gd" id="16_q4cb5"]
 
 [node name="AdvancedEnemyBehaviorTree" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
 script = ExtResource("1_kamsy")
-blackboard = NodePath("@Node@21928")
-actor = NodePath("")
+blackboard = NodePath("@Node@21902")
+actor = NodePath("..")
 metadata/_custom_type_script = "uid://bb0t2ovl7wifo"
 
 [node name="Main Behavior SEL" type="Node" parent="."]
@@ -132,3 +133,7 @@ metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 [node name="ActionLeaf2" type="Node" parent="Main Behavior SEL/SequenceComposite"]
 script = ExtResource("14_d1iki")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="DelayDecorator" type="Node" parent="Main Behavior SEL/SequenceComposite"]
+script = ExtResource("16_q4cb5")
+metadata/_custom_type_script = "uid://dorri1tul8gfx"
