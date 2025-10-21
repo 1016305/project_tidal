@@ -150,7 +150,7 @@ func shoot(delta):
 		weapon_recoil(delta)
 		if result: 
 			test_raycast(result.get("position"),result.get("normal"),result.get("collider"))
-			if get_node(result.get("collider").get_path()) is Enemy:
+			if get_node(result.get("collider").get_path()) is Advanced_Enemy or get_node(result.get("collider").get_path()) is Enemy:
 				var guy_you_shot = get_node(result.get("collider").get_path())
 				damage_enemy(guy_you_shot)
 	if weapon_type.weapon_current_ammo <= 0:
@@ -173,6 +173,7 @@ func test_raycast(ray_pos,ray_nrm,ray_col):
 	
 func damage_enemy(enemy):
 	enemy.take_damage(weapon_type.weapon_damage)
+	print("Damaged enemy for ", weapon_type.weapon_damage, " damage")
 
 func weapon_recoil(delta):
 	#position = Vector3.UP

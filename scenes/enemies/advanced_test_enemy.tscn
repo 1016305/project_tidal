@@ -68,20 +68,9 @@ debug_path_custom_color = Color(1, 0, 0.9375, 1)
 debug_path_custom_point_size = 10.34
 
 [node name="AdvancedEnemyBehaviorTree" parent="." node_paths=PackedStringArray("blackboard", "actor") instance=ExtResource("4_q5sj8")]
-blackboard = NodePath("@Node@21904")
+blackboard = NodePath("@Node@46319")
 actor = NodePath("..")
 
-[node name="debug raycast A" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18843, 0)
-target_position = Vector3(0, 0, -5)
-debug_shape_custom_color = Color(1, 0, 0, 1)
-
-[node name="debug raycast B" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18843, 0)
-target_position = Vector3(0, 0, -5)
-debug_shape_custom_color = Color(1, 0, 0, 1)
-
-[node name="debug raycast C" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.29593, 0)
-debug_shape_custom_color = Color(1, 0, 0.773438, 1)
-debug_shape_thickness = 3
+[node name="MeleeRaycast" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18082, 0)
+target_position = Vector3(0, 0, -1)

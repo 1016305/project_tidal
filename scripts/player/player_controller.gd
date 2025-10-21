@@ -26,7 +26,7 @@ const FOV_LERP_SPEED = 5.0
 const _WALK_SPEED = 6.0 #static but put here for clarity
 const WALK_SPEED = 1
 const CROUCH_SPEED = 0.2
-const RUN_SPEED = 1.5
+const RUN_SPEED = 1.5 #RETURN TO 1.5
 
 #player health variables
 var current_health: int = 100

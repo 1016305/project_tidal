@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="project_tidal"
-run/main_scene="uid://dnusfr72w43fn"
+run/main_scene="uid://jwb2jhicd4uh"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,25 +1,44 @@
-[gd_scene load_steps=17 format=3 uid="uid://1aw12257t060"]
+[gd_scene load_steps=36 format=3 uid="uid://1aw12257t060"]
 
 [ext_resource type="Script" uid="uid://bb0t2ovl7wifo" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_kamsy"]
 [ext_resource type="Script" uid="uid://cw22yurt5l74k" path="res://addons/beehave/nodes/composites/selector_reactive.gd" id="2_l0oy4"]
 [ext_resource type="Script" uid="uid://cg016dbe7gs1x" path="res://addons/beehave/nodes/composites/sequence.gd" id="3_1vj6f"]
 [ext_resource type="Script" uid="uid://cib1nfdrrgden" path="res://scripts/enemy/advanced enemy/is_random_patrol.gd" id="3_4beu0"]
+[ext_resource type="Script" uid="uid://cnsri0exal8bv" path="res://scripts/enemy/is_enemy_hp_0.gd" id="4_3rvj5"]
 [ext_resource type="Script" uid="uid://cl47e50c5cuio" path="res://scripts/enemy/advanced enemy/is_sequence_patrol.gd" id="5_e7xo6"]
 [ext_resource type="Script" uid="uid://ydvqf7eq7yc6" path="res://scripts/enemy/advanced enemy/custom_delay_decorator.gd" id="5_ra2sa"]
 [ext_resource type="Script" uid="uid://bo60ikvmwdo4h" path="res://scripts/enemy/advanced enemy/move_to_target.gd" id="6_87e7t"]
 [ext_resource type="Script" uid="uid://hm6qyfnotjqs" path="res://scripts/enemy/advanced enemy/is_random_sequence_patrol.gd" id="6_e7xo6"]
 [ext_resource type="Script" uid="uid://cd17ggl0aqmtg" path="res://scripts/enemy/advanced enemy/new_patrol_target.gd" id="6_ra2sa"]
 [ext_resource type="Script" uid="uid://we22430vcb44" path="res://addons/beehave/nodes/decorators/time_limiter.gd" id="7_nq4rd"]
+[ext_resource type="Script" uid="uid://b0honmfdeq8ie" path="res://scripts/enemy/check_if_idle.gd" id="7_pp02s"]
+[ext_resource type="Script" uid="uid://byq5j1kplph4p" path="res://scripts/enemy/check_if_combat.gd" id="7_s14yx"]
+[ext_resource type="Script" uid="uid://cwyyhun0ksvwt" path="res://scripts/enemy/check_if_melee.gd" id="8_hdu3y"]
+[ext_resource type="Script" uid="uid://d3bn474wju272" path="res://scripts/enemy/is_player_in_melee_distance.gd" id="8_rjmgr"]
 [ext_resource type="Script" uid="uid://d11ssohtnpww5" path="res://scripts/enemy/advanced enemy/wait_for_destination.gd" id="8_t7p2f"]
+[ext_resource type="Script" uid="uid://d271cmolaovxk" path="res://scripts/enemy/set_player_as_target.gd" id="9_hgwvb"]
 [ext_resource type="Script" uid="uid://bj0ldgn1bktk8" path="res://scripts/enemy/advanced enemy/stop_moving.gd" id="9_nq4rd"]
 [ext_resource type="Script" uid="uid://c64a7hmy4i52" path="res://scripts/enemy/advanced enemy/set_target_to_next_node.gd" id="12_ra2sa"]
 [ext_resource type="Script" uid="uid://cktyqjegljl61" path="res://scripts/enemy/advanced enemy/pick_random_node_in_sequence.gd" id="14_6s2a5"]
 [ext_resource type="Script" uid="uid://cv74jjdrwevpr" path="res://addons/beehave/nodes/leaves/action.gd" id="14_d1iki"]
+[ext_resource type="Script" uid="uid://csyoxdn6xhr3i" path="res://scripts/enemy/melee_attack_player.gd" id="15_xxhxb"]
+[ext_resource type="Script" uid="uid://6565vv7uogg5" path="res://scripts/enemy/check_if_cover.gd" id="16_f78l6"]
 [ext_resource type="Script" uid="uid://dorri1tul8gfx" path="res://addons/beehave/nodes/decorators/delayer.gd" id="16_q4cb5"]
+[ext_resource type="Script" uid="uid://8hn4kne15ac5" path="res://addons/beehave/nodes/composites/selector.gd" id="17_3rvj5"]
+[ext_resource type="Script" uid="uid://dwfdg523bk776" path="res://addons/beehave/nodes/decorators/failer.gd" id="17_7tljg"]
+[ext_resource type="Script" uid="uid://c02bbo7a5yh61" path="res://scripts/enemy/check_if_enemy_has_a_cover_position.gd" id="18_nrg6k"]
+[ext_resource type="Script" uid="uid://doh6x6jf3f0l1" path="res://scripts/enemy/dice_roll_new_cover_or_old_cover.gd" id="19_utkm4"]
+[ext_resource type="Script" uid="uid://bahrm4x7ne2cl" path="res://scripts/enemy/is_cover_still_good.gd" id="20_nrg6k"]
+[ext_resource type="Script" uid="uid://5q02wmjsx0in" path="res://scripts/enemy/set_cover_as_target.gd" id="21_utkm4"]
+[ext_resource type="Script" uid="uid://dsf3a8vlolhx8" path="res://addons/beehave/nodes/decorators/succeeder.gd" id="23_0dasr"]
+[ext_resource type="Script" uid="uid://msdtldp2i17g" path="res://scripts/enemy/find_and_test_cover.gd" id="23_06gim"]
+[ext_resource type="Script" uid="uid://by6w7vprac1se" path="res://scripts/enemy/run_test_script.gd" id="23_hdu3y"]
+[ext_resource type="Script" uid="uid://dxyjcg7aayvwp" path="res://scripts/enemy/find_and_test_cover_exp.gd" id="24_8uf1a"]
+[ext_resource type="Script" uid="uid://1oomcpk6xlhk" path="res://scripts/enemy/change_state_to_enrage.gd" id="25_icqc3"]
 
 [node name="AdvancedEnemyBehaviorTree" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
 script = ExtResource("1_kamsy")
-blackboard = NodePath("@Node@21902")
+blackboard = NodePath("@Node@21899")
 actor = NodePath("..")
 metadata/_custom_type_script = "uid://bb0t2ovl7wifo"
 
@@ -27,113 +46,360 @@ metadata/_custom_type_script = "uid://bb0t2ovl7wifo"
 script = ExtResource("2_l0oy4")
 metadata/_custom_type_script = "uid://cw22yurt5l74k"
 
-[node name="Idle Behaviours" type="Node" parent="Main Behavior SEL"]
+[node name="Death Check" type="Node" parent="Main Behavior SEL"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Is Dead" type="Node" parent="Main Behavior SEL/Death Check"]
+script = ExtResource("4_3rvj5")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Death Behavior" type="Node" parent="Main Behavior SEL/Death Check"]
+script = ExtResource("14_d1iki")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Combat Behaviors SEQ" type="Node" parent="Main Behavior SEL"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Check if Combat" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ"]
+script = ExtResource("7_s14yx")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Combat Behaviors" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ"]
+script = ExtResource("17_3rvj5")
+metadata/_custom_type_script = "uid://8hn4kne15ac5"
+
+[node name="Melee Behaviors" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Check if Melee" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors"]
+script = ExtResource("8_hdu3y")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="is player in range" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="is player in melee distance" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors/is player in range"]
+script = ExtResource("8_rjmgr")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Set Player as target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors/is player in range"]
+script = ExtResource("9_hgwvb")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Melee Delay" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors/is player in range"]
+script = ExtResource("16_q4cb5")
+wait_time = 0.7
+metadata/_custom_type_script = "uid://dorri1tul8gfx"
+
+[node name="Melee attack player" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors/is player in range/Melee Delay"]
+script = ExtResource("15_xxhxb")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="go to player" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Set Player as target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors/go to player"]
+script = ExtResource("9_hgwvb")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Move To Target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors/go to player"]
+script = ExtResource("6_87e7t")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors/go to player"]
+script = ExtResource("7_nq4rd")
+wait_time = 6.0
+metadata/_custom_type_script = "uid://we22430vcb44"
+
+[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors/go to player/TimeLimiterDecorator"]
+script = ExtResource("8_t7p2f")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors/go to player"]
+script = ExtResource("9_nq4rd")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Cover Behaviors" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Check if Cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors"]
+script = ExtResource("16_f78l6")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Test move check" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors"]
+script = ExtResource("17_3rvj5")
+metadata/_custom_type_script = "uid://8hn4kne15ac5"
+
+[node name="check cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check"]
+script = ExtResource("17_7tljg")
+metadata/_custom_type_script = "uid://dwfdg523bk776"
+
+[node name="Does enemy go to old cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover"]
+script = ExtResource("17_3rvj5")
+metadata/_custom_type_script = "uid://8hn4kne15ac5"
+
+[node name="check for old cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Check if enemy has a cover position" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/check for old cover"]
+script = ExtResource("18_nrg6k")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="DiceRoll_NewCover or OldCover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/check for old cover"]
+script = ExtResource("19_utkm4")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Is cover still good" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/check for old cover"]
+script = ExtResource("20_nrg6k")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Set cover as target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/check for old cover"]
+script = ExtResource("21_utkm4")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="find new cover and shit" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover"]
+script = ExtResource("17_3rvj5")
+metadata/_custom_type_script = "uid://8hn4kne15ac5"
+
+[node name="attempt1" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="set cover as target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1"]
+script = ExtResource("21_utkm4")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="AlwaysSucceedDecorator" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1"]
+script = ExtResource("23_0dasr")
+metadata/_custom_type_script = "uid://dsf3a8vlolhx8"
+
+[node name="SequenceComposite" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator"]
+script = ExtResource("17_3rvj5")
+metadata/_custom_type_script = "uid://8hn4kne15ac5"
+
+[node name="Find and test cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+script = ExtResource("23_06gim")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Find and test cover2" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+script = ExtResource("23_06gim")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Find and test cover3" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+script = ExtResource("23_06gim")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Find and test cover4" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+script = ExtResource("23_06gim")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Find and test cover5" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+script = ExtResource("23_06gim")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Find and test cover6" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+script = ExtResource("23_06gim")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Find and test cover7" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+script = ExtResource("23_06gim")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Find and test cover8" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+script = ExtResource("23_06gim")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Find and test cover9" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+script = ExtResource("23_06gim")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="attempt2" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="set cover as target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2"]
+script = ExtResource("21_utkm4")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="AlwaysSucceedDecorator2" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2"]
+script = ExtResource("23_0dasr")
+metadata/_custom_type_script = "uid://dsf3a8vlolhx8"
+
+[node name="SequenceComposite" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2"]
+script = ExtResource("17_3rvj5")
+metadata/_custom_type_script = "uid://8hn4kne15ac5"
+
+[node name="Find and test cover exp" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+script = ExtResource("24_8uf1a")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Find and test cover exp2" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+script = ExtResource("24_8uf1a")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Find and test cover exp3" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+script = ExtResource("24_8uf1a")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Find and test cover exp4" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+script = ExtResource("24_8uf1a")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Find and test cover exp5" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+script = ExtResource("24_8uf1a")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Find and test cover exp6" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+script = ExtResource("24_8uf1a")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Find and test cover exp7" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+script = ExtResource("24_8uf1a")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Find and test cover exp8" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+script = ExtResource("24_8uf1a")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Find and test cover exp9" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+script = ExtResource("24_8uf1a")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="change to enrage" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit"]
+script = ExtResource("25_icqc3")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="SequenceComposite" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Run test script" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/SequenceComposite"]
+script = ExtResource("23_hdu3y")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Move To Target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/SequenceComposite"]
+script = ExtResource("6_87e7t")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/SequenceComposite"]
+script = ExtResource("7_nq4rd")
+wait_time = 6.0
+metadata/_custom_type_script = "uid://we22430vcb44"
+
+[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/SequenceComposite/TimeLimiterDecorator"]
+script = ExtResource("8_t7p2f")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/SequenceComposite"]
+script = ExtResource("9_nq4rd")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Idle Behaviours SEQ" type="Node" parent="Main Behavior SEL"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Check if Idle" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ"]
+script = ExtResource("7_pp02s")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Idle Behaviours" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ"]
 script = ExtResource("5_ra2sa")
 metadata/_custom_type_script = "uid://dorri1tul8gfx"
 
-[node name="Idle Behaviors SEL" type="Node" parent="Main Behavior SEL/Idle Behaviours"]
+[node name="Idle Behaviors SEL" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours"]
 script = ExtResource("2_l0oy4")
 metadata/_custom_type_script = "uid://cw22yurt5l74k"
 
-[node name="Random Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL"]
+[node name="Random Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL"]
 script = ExtResource("3_1vj6f")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 
-[node name="Is Random Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
+[node name="Is Random Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
 script = ExtResource("3_4beu0")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Select Random Spot as Target" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
+[node name="Select Random Spot as Target" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
 script = ExtResource("6_ra2sa")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="Move To Target" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
+[node name="Move To Target" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
 script = ExtResource("6_87e7t")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
+[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
 script = ExtResource("7_nq4rd")
 wait_time = 6.0
 metadata/_custom_type_script = "uid://we22430vcb44"
 
-[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol/TimeLimiterDecorator"]
+[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Patrol/TimeLimiterDecorator"]
 script = ExtResource("8_t7p2f")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
+[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Patrol"]
 script = ExtResource("9_nq4rd")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="Sequence Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL"]
+[node name="Sequence Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL"]
 script = ExtResource("3_1vj6f")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 
-[node name="Is Sequence Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
+[node name="Is Sequence Patrol" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
 script = ExtResource("5_e7xo6")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Set Target To Next Node" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
+[node name="Set Target To Next Node" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
 script = ExtResource("12_ra2sa")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="Move To Target" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
+[node name="Move To Target" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
 script = ExtResource("6_87e7t")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
+[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
 script = ExtResource("7_nq4rd")
 wait_time = 6.0
 metadata/_custom_type_script = "uid://we22430vcb44"
 
-[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol/TimeLimiterDecorator"]
+[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol/TimeLimiterDecorator"]
 script = ExtResource("8_t7p2f")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
+[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Sequence Patrol"]
 script = ExtResource("9_nq4rd")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="Random Sequence SEQ" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL"]
+[node name="Random Sequence SEQ" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL"]
 script = ExtResource("3_1vj6f")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 
-[node name="Is Random Sequence" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
+[node name="Is Random Sequence" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
 script = ExtResource("6_e7xo6")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Pick Random Node In Sequence" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
+[node name="Pick Random Node In Sequence" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
 script = ExtResource("14_6s2a5")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="Move To Target" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
+[node name="Move To Target" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
 script = ExtResource("6_87e7t")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
+[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
 script = ExtResource("7_nq4rd")
 wait_time = 6.0
 metadata/_custom_type_script = "uid://we22430vcb44"
 
-[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ/TimeLimiterDecorator"]
+[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ/TimeLimiterDecorator"]
 script = ExtResource("8_t7p2f")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
+[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Idle Behaviours SEQ/Idle Behaviours/Idle Behaviors SEL/Random Sequence SEQ"]
 script = ExtResource("9_nq4rd")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
-
-[node name="SequenceComposite" type="Node" parent="Main Behavior SEL"]
-script = ExtResource("3_1vj6f")
-metadata/_custom_type_script = "uid://cg016dbe7gs1x"
-
-[node name="ActionLeaf" type="Node" parent="Main Behavior SEL/SequenceComposite"]
-script = ExtResource("14_d1iki")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
-
-[node name="ActionLeaf2" type="Node" parent="Main Behavior SEL/SequenceComposite"]
-script = ExtResource("14_d1iki")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
-
-[node name="DelayDecorator" type="Node" parent="Main Behavior SEL/SequenceComposite"]
-script = ExtResource("16_q4cb5")
-metadata/_custom_type_script = "uid://dorri1tul8gfx"
