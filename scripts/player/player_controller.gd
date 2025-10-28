@@ -281,6 +281,7 @@ func player_debug():
 	Global.debug.add_property('Current Velocity ABS', velocity.abs().snappedf(0.01), 1)
 	Global.debug.add_property('Current Velocity', velocity.snappedf(0.01), 1)
 	Global.debug.add_property('Player Head Pitch', player_head.rotation.x, 1)
+	Global.debug.add_property('Player Location', position, 1)
 
 func spawn_test_enemy():
 	if Input.is_action_just_pressed("spawn_test_enemy"):

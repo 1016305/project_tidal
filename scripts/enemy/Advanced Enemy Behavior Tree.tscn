@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://1aw12257t060"]
+[gd_scene load_steps=43 format=3 uid="uid://1aw12257t060"]
 
 [ext_resource type="Script" uid="uid://bb0t2ovl7wifo" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_kamsy"]
 [ext_resource type="Script" uid="uid://cw22yurt5l74k" path="res://addons/beehave/nodes/composites/selector_reactive.gd" id="2_l0oy4"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://b0honmfdeq8ie" path="res://scripts/enemy/check_if_idle.gd" id="7_pp02s"]
 [ext_resource type="Script" uid="uid://byq5j1kplph4p" path="res://scripts/enemy/check_if_combat.gd" id="7_s14yx"]
 [ext_resource type="Script" uid="uid://cwyyhun0ksvwt" path="res://scripts/enemy/check_if_melee.gd" id="8_hdu3y"]
+[ext_resource type="Script" uid="uid://0dc7y4mimso7" path="res://scripts/enemy/change_to_melee_if_player_is_close.gd" id="8_ld8f2"]
 [ext_resource type="Script" uid="uid://d3bn474wju272" path="res://scripts/enemy/is_player_in_melee_distance.gd" id="8_rjmgr"]
 [ext_resource type="Script" uid="uid://d11ssohtnpww5" path="res://scripts/enemy/advanced enemy/wait_for_destination.gd" id="8_t7p2f"]
 [ext_resource type="Script" uid="uid://d271cmolaovxk" path="res://scripts/enemy/set_player_as_target.gd" id="9_hgwvb"]
@@ -25,20 +26,26 @@
 [ext_resource type="Script" uid="uid://6565vv7uogg5" path="res://scripts/enemy/check_if_cover.gd" id="16_f78l6"]
 [ext_resource type="Script" uid="uid://dorri1tul8gfx" path="res://addons/beehave/nodes/decorators/delayer.gd" id="16_q4cb5"]
 [ext_resource type="Script" uid="uid://8hn4kne15ac5" path="res://addons/beehave/nodes/composites/selector.gd" id="17_3rvj5"]
-[ext_resource type="Script" uid="uid://dwfdg523bk776" path="res://addons/beehave/nodes/decorators/failer.gd" id="17_7tljg"]
 [ext_resource type="Script" uid="uid://c02bbo7a5yh61" path="res://scripts/enemy/check_if_enemy_has_a_cover_position.gd" id="18_nrg6k"]
+[ext_resource type="Script" uid="uid://ds44snrjrlq1x" path="res://scripts/enemy/is_state_not_in_cover.gd" id="19_ld8f2"]
 [ext_resource type="Script" uid="uid://doh6x6jf3f0l1" path="res://scripts/enemy/dice_roll_new_cover_or_old_cover.gd" id="19_utkm4"]
 [ext_resource type="Script" uid="uid://bahrm4x7ne2cl" path="res://scripts/enemy/is_cover_still_good.gd" id="20_nrg6k"]
-[ext_resource type="Script" uid="uid://5q02wmjsx0in" path="res://scripts/enemy/set_cover_as_target.gd" id="21_utkm4"]
-[ext_resource type="Script" uid="uid://dsf3a8vlolhx8" path="res://addons/beehave/nodes/decorators/succeeder.gd" id="23_0dasr"]
 [ext_resource type="Script" uid="uid://msdtldp2i17g" path="res://scripts/enemy/find_and_test_cover.gd" id="23_06gim"]
-[ext_resource type="Script" uid="uid://by6w7vprac1se" path="res://scripts/enemy/run_test_script.gd" id="23_hdu3y"]
 [ext_resource type="Script" uid="uid://dxyjcg7aayvwp" path="res://scripts/enemy/find_and_test_cover_exp.gd" id="24_8uf1a"]
-[ext_resource type="Script" uid="uid://1oomcpk6xlhk" path="res://scripts/enemy/change_state_to_enrage.gd" id="25_icqc3"]
+[ext_resource type="Script" uid="uid://bkr7qj44253ue" path="res://addons/beehave/nodes/composites/simple_parallel.gd" id="25_df1s2"]
+[ext_resource type="Script" uid="uid://1oomcpk6xlhk" path="res://scripts/enemy/change_state_to_enrage.gd" id="25_hdu3y"]
+[ext_resource type="Script" uid="uid://cv5edoflnw6ow" path="res://scripts/enemy/change_to_movingtocover.gd" id="26_aeyd2"]
+[ext_resource type="Script" uid="uid://5q02wmjsx0in" path="res://scripts/enemy/set_cover_as_target.gd" id="26_hdu3y"]
+[ext_resource type="Script" uid="uid://cmr6vi6f0prdd" path="res://scripts/enemy/has_ammo.gd" id="27_0dasr"]
+[ext_resource type="Script" uid="uid://cxfbi6miljbj8" path="res://scripts/enemy/is_state_moving_to_cover.gd" id="27_q5p1w"]
+[ext_resource type="Script" uid="uid://bq84ca4y4nvs3" path="res://scripts/enemy/is_cooldown_done.gd" id="28_yen6l"]
+[ext_resource type="Script" uid="uid://dd4xte5qa7usx" path="res://scripts/enemy/shoot_the_player.gd" id="29_0jqqu"]
+[ext_resource type="Script" uid="uid://by3cgwu3qrerx" path="res://scripts/enemy/change_state_to_in_cover.gd" id="29_aeyd2"]
+[ext_resource type="Script" uid="uid://blanyp2nejqyo" path="res://scripts/enemy/if_state_is_cover_and_enemy_is_in_cover,_change_to_attack_mode.gd" id="31_onsyv"]
 
 [node name="AdvancedEnemyBehaviorTree" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
 script = ExtResource("1_kamsy")
-blackboard = NodePath("@Node@21899")
+blackboard = NodePath("@Node@21900")
 actor = NodePath("..")
 metadata/_custom_type_script = "uid://bb0t2ovl7wifo"
 
@@ -73,6 +80,10 @@ metadata/_custom_type_script = "uid://8hn4kne15ac5"
 [node name="Melee Behaviors" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors"]
 script = ExtResource("3_1vj6f")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="change to melee if player is close" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors"]
+script = ExtResource("8_ld8f2")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
 [node name="Check if Melee" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors"]
 script = ExtResource("8_hdu3y")
@@ -132,173 +143,189 @@ metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 script = ExtResource("16_f78l6")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Test move check" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors"]
-script = ExtResource("17_3rvj5")
-metadata/_custom_type_script = "uid://8hn4kne15ac5"
-
-[node name="check cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check"]
-script = ExtResource("17_7tljg")
-metadata/_custom_type_script = "uid://dwfdg523bk776"
-
-[node name="Does enemy go to old cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover"]
-script = ExtResource("17_3rvj5")
-metadata/_custom_type_script = "uid://8hn4kne15ac5"
-
-[node name="check for old cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover"]
+[node name="Cover Behaviors" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors"]
 script = ExtResource("3_1vj6f")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 
-[node name="Check if enemy has a cover position" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/check for old cover"]
+[node name="Sel" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors"]
+script = ExtResource("17_3rvj5")
+metadata/_custom_type_script = "uid://8hn4kne15ac5"
+
+[node name="if enemy is NOT in cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel"]
+script = ExtResource("19_ld8f2")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Test move check" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Does enemy have a stored cover position?" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Test move check"]
 script = ExtResource("18_nrg6k")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="DiceRoll_NewCover or OldCover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/check for old cover"]
-script = ExtResource("19_utkm4")
-metadata/_custom_type_script = "uid://cbnbvj8prv63i"
-
-[node name="Is cover still good" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/check for old cover"]
+[node name="Is the stored cover still valid?" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Test move check"]
 script = ExtResource("20_nrg6k")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Set cover as target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/check for old cover"]
-script = ExtResource("21_utkm4")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+[node name="RAND_ Go to old cover, or pick new?" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Test move check"]
+script = ExtResource("19_utkm4")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="find new cover and shit" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover"]
+[node name="Find a new cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel"]
 script = ExtResource("17_3rvj5")
 metadata/_custom_type_script = "uid://8hn4kne15ac5"
 
-[node name="attempt1" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit"]
-script = ExtResource("3_1vj6f")
-metadata/_custom_type_script = "uid://cg016dbe7gs1x"
-
-[node name="set cover as target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1"]
-script = ExtResource("21_utkm4")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
-
-[node name="AlwaysSucceedDecorator" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1"]
-script = ExtResource("23_0dasr")
-metadata/_custom_type_script = "uid://dsf3a8vlolhx8"
-
-[node name="SequenceComposite" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator"]
+[node name="Selector" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover"]
 script = ExtResource("17_3rvj5")
 metadata/_custom_type_script = "uid://8hn4kne15ac5"
 
-[node name="Find and test cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+[node name="Find and test cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector"]
 script = ExtResource("23_06gim")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover2" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+[node name="Find and test cover2" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector"]
 script = ExtResource("23_06gim")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover3" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+[node name="Find and test cover3" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector"]
 script = ExtResource("23_06gim")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover4" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+[node name="Find and test cover4" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector"]
 script = ExtResource("23_06gim")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover5" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+[node name="Find and test cover5" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector"]
 script = ExtResource("23_06gim")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover6" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+[node name="Find and test cover6" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector"]
 script = ExtResource("23_06gim")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover7" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+[node name="Find and test cover7" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector"]
 script = ExtResource("23_06gim")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover8" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+[node name="Find and test cover8" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector"]
 script = ExtResource("23_06gim")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover9" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt1/AlwaysSucceedDecorator/SequenceComposite"]
+[node name="Find and test cover9" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector"]
 script = ExtResource("23_06gim")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="attempt2" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit"]
-script = ExtResource("3_1vj6f")
-metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+[node name="Find and test cover10" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector"]
+script = ExtResource("23_06gim")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="set cover as target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2"]
-script = ExtResource("21_utkm4")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
-
-[node name="AlwaysSucceedDecorator2" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2"]
-script = ExtResource("23_0dasr")
-metadata/_custom_type_script = "uid://dsf3a8vlolhx8"
-
-[node name="SequenceComposite" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2"]
+[node name="Selector2" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover"]
 script = ExtResource("17_3rvj5")
 metadata/_custom_type_script = "uid://8hn4kne15ac5"
 
-[node name="Find and test cover exp" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+[node name="Find and test cover exp" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector2"]
 script = ExtResource("24_8uf1a")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover exp2" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+[node name="Find and test cover exp2" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector2"]
 script = ExtResource("24_8uf1a")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover exp3" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+[node name="Find and test cover exp3" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector2"]
 script = ExtResource("24_8uf1a")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover exp4" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+[node name="Find and test cover exp4" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector2"]
 script = ExtResource("24_8uf1a")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover exp5" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+[node name="Find and test cover exp5" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector2"]
 script = ExtResource("24_8uf1a")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover exp6" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+[node name="Find and test cover exp6" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector2"]
 script = ExtResource("24_8uf1a")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover exp7" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+[node name="Find and test cover exp7" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector2"]
 script = ExtResource("24_8uf1a")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover exp8" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+[node name="Find and test cover exp8" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector2"]
 script = ExtResource("24_8uf1a")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Find and test cover exp9" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit/attempt2/AlwaysSucceedDecorator2/SequenceComposite"]
+[node name="Find and test cover exp9" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector2"]
 script = ExtResource("24_8uf1a")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Find and test cover exp10" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover/Selector2"]
+script = ExtResource("24_8uf1a")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Change to Enrage" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover"]
+script = ExtResource("25_hdu3y")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="change to enrage" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/check cover/Does enemy go to old cover/find new cover and shit"]
-script = ExtResource("25_icqc3")
+[node name="set state to moving" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors"]
+script = ExtResource("26_aeyd2")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="SequenceComposite" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check"]
+[node name="Move and Shoot" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors"]
+script = ExtResource("25_df1s2")
+metadata/_custom_type_script = "uid://bkr7qj44253ue"
+
+[node name="Move" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot"]
 script = ExtResource("3_1vj6f")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 
-[node name="Run test script" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/SequenceComposite"]
-script = ExtResource("23_hdu3y")
+[node name="is state moving to cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot/Move"]
+script = ExtResource("27_q5p1w")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Set Cover as Target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot/Move"]
+script = ExtResource("26_hdu3y")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="Move To Target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/SequenceComposite"]
+[node name="Move To Target" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot/Move"]
 script = ExtResource("6_87e7t")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
-[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/SequenceComposite"]
+[node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot/Move"]
 script = ExtResource("7_nq4rd")
 wait_time = 6.0
 metadata/_custom_type_script = "uid://we22430vcb44"
 
-[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/SequenceComposite/TimeLimiterDecorator"]
+[node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot/Move/TimeLimiterDecorator"]
 script = ExtResource("8_t7p2f")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
-[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Test move check/SequenceComposite"]
+[node name="Stop Moving" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot/Move"]
 script = ExtResource("9_nq4rd")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="set state to in cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot/Move"]
+script = ExtResource("29_aeyd2")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="if state is cover and enemy is in cover, change to attack mode" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot/Move"]
+script = ExtResource("31_onsyv")
+metadata/_custom_type_script = "uid://cv74jjdrwevpr"
+
+[node name="Shoot" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot"]
+script = ExtResource("3_1vj6f")
+metadata/_custom_type_script = "uid://cg016dbe7gs1x"
+
+[node name="Is ammo > 0" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot/Shoot"]
+script = ExtResource("27_0dasr")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="Is cooldown done" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot/Shoot"]
+script = ExtResource("28_yen6l")
+metadata/_custom_type_script = "uid://cbnbvj8prv63i"
+
+[node name="shoot the player" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Move and Shoot/Shoot"]
+script = ExtResource("29_0jqqu")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
 [node name="Idle Behaviours SEQ" type="Node" parent="Main Behavior SEL"]
