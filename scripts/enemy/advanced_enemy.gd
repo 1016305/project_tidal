@@ -5,6 +5,8 @@ class_name Advanced_Enemy extends CharacterBody3D
 @onready var melee_raycast: RayCast3D = $MeleeRaycast
 @onready var collider: CollisionShape3D = $CollisionShape3D
 @onready var shoot_cooldown: Timer = $"Shoot Cooldown"
+var last_state
+var flip_state: bool = false
 
 var origin: Vector3
 var target = Vector3.ZERO
@@ -43,7 +45,7 @@ func _physics_process(delta: float) -> void:
 	handle_gravity(delta)
 	face_target(delta)
 	combat_check()
-	#melee_check()
+	melee_check()
 	test_damage()
 	debug()
 	#print(enemy_type.enemy_state)
@@ -206,7 +208,8 @@ func combat_check():
 
 func melee_check():
 	if get_distance_to_player() <= enemy_type.melee_distance:
-		enemy_type.enemy_state = "Melee"
+		if enemy_type.enemy_state != "Melee":
+			enemy_type.enemy_state = "Melee"
 
 func enemy_alert():
 	var randy = randi_range(0,2)

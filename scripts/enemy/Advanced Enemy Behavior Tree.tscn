@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://1aw12257t060"]
+[gd_scene load_steps=41 format=3 uid="uid://1aw12257t060"]
 
 [ext_resource type="Script" uid="uid://bb0t2ovl7wifo" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_kamsy"]
 [ext_resource type="Script" uid="uid://cw22yurt5l74k" path="res://addons/beehave/nodes/composites/selector_reactive.gd" id="2_l0oy4"]
@@ -14,7 +14,6 @@
 [ext_resource type="Script" uid="uid://b0honmfdeq8ie" path="res://scripts/enemy/check_if_idle.gd" id="7_pp02s"]
 [ext_resource type="Script" uid="uid://byq5j1kplph4p" path="res://scripts/enemy/check_if_combat.gd" id="7_s14yx"]
 [ext_resource type="Script" uid="uid://cwyyhun0ksvwt" path="res://scripts/enemy/check_if_melee.gd" id="8_hdu3y"]
-[ext_resource type="Script" uid="uid://0dc7y4mimso7" path="res://scripts/enemy/change_to_melee_if_player_is_close.gd" id="8_ld8f2"]
 [ext_resource type="Script" uid="uid://d3bn474wju272" path="res://scripts/enemy/is_player_in_melee_distance.gd" id="8_rjmgr"]
 [ext_resource type="Script" uid="uid://d11ssohtnpww5" path="res://scripts/enemy/advanced enemy/wait_for_destination.gd" id="8_t7p2f"]
 [ext_resource type="Script" uid="uid://d271cmolaovxk" path="res://scripts/enemy/set_player_as_target.gd" id="9_hgwvb"]
@@ -34,7 +33,6 @@
 [ext_resource type="Script" uid="uid://dxyjcg7aayvwp" path="res://scripts/enemy/find_and_test_cover_exp.gd" id="24_8uf1a"]
 [ext_resource type="Script" uid="uid://bkr7qj44253ue" path="res://addons/beehave/nodes/composites/simple_parallel.gd" id="25_df1s2"]
 [ext_resource type="Script" uid="uid://1oomcpk6xlhk" path="res://scripts/enemy/change_state_to_enrage.gd" id="25_hdu3y"]
-[ext_resource type="Script" uid="uid://cv5edoflnw6ow" path="res://scripts/enemy/change_to_movingtocover.gd" id="26_aeyd2"]
 [ext_resource type="Script" uid="uid://5q02wmjsx0in" path="res://scripts/enemy/set_cover_as_target.gd" id="26_hdu3y"]
 [ext_resource type="Script" uid="uid://cmr6vi6f0prdd" path="res://scripts/enemy/has_ammo.gd" id="27_0dasr"]
 [ext_resource type="Script" uid="uid://cxfbi6miljbj8" path="res://scripts/enemy/is_state_moving_to_cover.gd" id="27_q5p1w"]
@@ -45,8 +43,8 @@
 
 [node name="AdvancedEnemyBehaviorTree" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
 script = ExtResource("1_kamsy")
-blackboard = NodePath("@Node@21900")
-actor = NodePath("..")
+blackboard = NodePath("@Node@21903")
+actor = NodePath("")
 metadata/_custom_type_script = "uid://bb0t2ovl7wifo"
 
 [node name="Main Behavior SEL" type="Node" parent="."]
@@ -80,10 +78,6 @@ metadata/_custom_type_script = "uid://8hn4kne15ac5"
 [node name="Melee Behaviors" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors"]
 script = ExtResource("3_1vj6f")
 metadata/_custom_type_script = "uid://cg016dbe7gs1x"
-
-[node name="change to melee if player is close" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors"]
-script = ExtResource("8_ld8f2")
-metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
 [node name="Check if Melee" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors"]
 script = ExtResource("8_hdu3y")
@@ -124,7 +118,7 @@ metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
 [node name="TimeLimiterDecorator" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors/go to player"]
 script = ExtResource("7_nq4rd")
-wait_time = 6.0
+wait_time = 3.0
 metadata/_custom_type_script = "uid://we22430vcb44"
 
 [node name="Wait For Destination" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Melee Behaviors/go to player/TimeLimiterDecorator"]
@@ -151,7 +145,7 @@ metadata/_custom_type_script = "uid://cg016dbe7gs1x"
 script = ExtResource("17_3rvj5")
 metadata/_custom_type_script = "uid://8hn4kne15ac5"
 
-[node name="if enemy is NOT in cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel"]
+[node name="if enemy is moving to cover" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel"]
 script = ExtResource("19_ld8f2")
 metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
@@ -265,10 +259,6 @@ metadata/_custom_type_script = "uid://cbnbvj8prv63i"
 
 [node name="Change to Enrage" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors/Sel/Find a new cover"]
 script = ExtResource("25_hdu3y")
-metadata/_custom_type_script = "uid://cv74jjdrwevpr"
-
-[node name="set state to moving" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors"]
-script = ExtResource("26_aeyd2")
 metadata/_custom_type_script = "uid://cv74jjdrwevpr"
 
 [node name="Move and Shoot" type="Node" parent="Main Behavior SEL/Combat Behaviors SEQ/Combat Behaviors/Cover Behaviors/Cover Behaviors"]
