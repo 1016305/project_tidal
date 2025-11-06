@@ -67,5 +67,9 @@ class_name advanced_test_enemy extends Resource
 @export var weapon_current_ammo: int = 0
 ##The time (seconds) between the enemy's shots.
 @export var weapon_rate_of_fire: float = 0
+##The rate of fire penalty to the enemy's weapon when moving. Multiplied by the rate of fire.
+@export var moving_rof_penalty: float = 0
 ##How accurate the weapon is when shooting at the player
 @export var weapon_accuracy: float = 0
+##The accuracy penalty to the enemy's weapon when moving. Multiplied by the accuracy.
+@export var moving_acc_penalty: float = 0

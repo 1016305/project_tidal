@@ -68,10 +68,17 @@ debug_path_custom_color = Color(1, 0, 0.9375, 1)
 debug_path_custom_point_size = 10.34
 
 [node name="AdvancedEnemyBehaviorTree" parent="." node_paths=PackedStringArray("blackboard") instance=ExtResource("4_q5sj8")]
-blackboard = NodePath("@Node@48127")
+blackboard = NodePath("@Node@67286")
 
 [node name="MeleeRaycast" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18082, 0)
 target_position = Vector3(0, 0, -1)
 
 [node name="Shoot Cooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="Melee reset" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="Shoot Cooldown" to="." method="_on_shoot_cooldown_timeout"]
+[connection signal="timeout" from="Melee reset" to="." method="_on_melee_reset_timeout"]

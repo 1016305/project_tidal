@@ -5,6 +5,8 @@ class_name Advanced_Enemy extends CharacterBody3D
 @onready var melee_raycast: RayCast3D = $MeleeRaycast
 @onready var collider: CollisionShape3D = $CollisionShape3D
 @onready var shoot_cooldown: Timer = $"Shoot Cooldown"
+@onready var melee_reset: Timer = $"Melee reset"
+
 var last_state
 var flip_state: bool = false
 
@@ -210,6 +212,7 @@ func melee_check():
 	if get_distance_to_player() <= enemy_type.melee_distance:
 		if enemy_type.enemy_state != "Melee":
 			enemy_type.enemy_state = "Melee"
+			melee_reset_time()
 
 func enemy_alert():
 	var randy = randi_range(0,2)
@@ -262,15 +265,20 @@ func test_found_cover(where_cover, should_see_player, expanded_parameters):
 		print(collision.collider)
 		if collision.collider == player and should_see_player:
 			if targeting_parameters(expanded_parameters) and can_reach:
+				print("i should see the player, and this position is valid")
 				return true
 			else:
+				print("I should see the player, and this position is invalid")
 				return false
 		elif collision.collider != player and !should_see_player:
 			if targeting_parameters(expanded_parameters) and can_reach:
+				print("i shouldn't see the player, and this position is valid")
 				return true
 			else:
+				print("i shouldn't see the player, and this position is invalid")
 				return false
 		else:
+			print("Targeting failed")
 			return false
 
 func targeting_parameters(expanded_parameters) -> bool:
@@ -297,21 +305,22 @@ func targeting_parameters(expanded_parameters) -> bool:
 		return false
 	#check if other enemies are too close
 
-func shoot():
-	#var target = player.position
-	shoot_cooldown.start()
-	await get_tree().create_timer(0.1).timeout
-	var origin = position + Vector3(0,1,0)
-	var end = player.player_head.global_position
-	end += Vector3(randf_range(-enemy_type.weapon_accuracy,enemy_type.weapon_accuracy),randf_range(-enemy_type.weapon_accuracy,enemy_type.weapon_accuracy),randf_range(-enemy_type.weapon_accuracy,enemy_type.weapon_accuracy))
-	var query = PhysicsRayQueryParameters3D.create(origin,end)
-	query.collide_with_bodies = true
-	query.exclude = [self]
-	var collision = get_world_3d().direct_space_state.intersect_ray(query)
-	test_draw_ray(collision)
-	if collision:
-		if collision.collider == player:
-			print("shot the player")
+func shoot(rate,accuracy):
+	if shoot_cooldown.is_stopped():
+		shoot_cooldown.start()
+		await get_tree().create_timer(randf_range(0,0.3)).timeout
+		var origin = position + Vector3(0,1,0)
+		var end = player.player_head.global_position
+		end += Vector3(randf_range(-accuracy,accuracy),randf_range(-accuracy,accuracy),randf_range(-accuracy,accuracy))
+		var query = PhysicsRayQueryParameters3D.create(origin,end)
+		query.collide_with_bodies = true
+		query.exclude = [self]
+		var collision = get_world_3d().direct_space_state.intersect_ray(query)
+		test_draw_ray(collision)
+		print("shot was fired")
+		if collision:
+			if collision.collider == player:
+				print("shot hit the player")
 	#get player position from player
 	#add random variance to position via enemy accuracy
 	#shoot raycast at player
@@ -320,13 +329,18 @@ func test_draw_ray(collision):
 	#trying to use this to visualise the fuckass raycast
 	var poly = CSGPolygon3D.new() #poly needs path
 	var mat = StandardMaterial3D.new()
+	var mat2 = StandardMaterial3D.new()
 	mat.albedo_color = Color.RED
+	mat2.albedo_color = Color.GREEN
 	poly.position += Vector3.UP
 	poly.scale = Vector3(0.2,0.2,1)
 	poly.mode = CSGPolygon3D.MODE_DEPTH
 	poly.depth = get_distance_to_player()
-	if collision.collider == player:
-		poly.material = mat
+	if collision:
+		if collision.collider == player:
+			poly.material = mat
+		else:
+			poly.material = mat2
 	add_child(poly)
 	poly.look_at(player.player_head.global_position)
 	await get_tree().create_timer(1).timeout
@@ -342,11 +356,23 @@ func random_vector(min,max) -> Vector3:
 	return newvec
 
 func test_damage():
-	if Input.is_action_just_pressed("test_damage"):
-		#shoot()
+	if Input.is_action_pressed("test_damage"):
+		shoot(enemy_type.weapon_rate_of_fire, enemy_type.weapon_accuracy)
 		#find_cover(false,false)
 		#agent.target_position = enemy_type.current_cover
 		pass
 func debug():
 	Global.debug.add_property('Enemy Main State', enemy_type.enemy_state, 1)
 	Global.debug.add_property('Enemy Cover State', enemy_type.cover_state, 1)
+
+
+func _on_shoot_cooldown_timeout() -> void:
+	shoot_cooldown.start()
+	
+func melee_reset_time():
+	if melee_reset.is_stopped():
+		melee_reset.start()
+
+func _on_melee_reset_timeout() -> void:
+	if enemy_type.enemy_state == "Melee":
+		enemy_type.enemy_state = "Cover"
