@@ -357,7 +357,7 @@ func random_vector(min,max) -> Vector3:
 
 func test_damage():
 	if Input.is_action_pressed("test_damage"):
-		shoot(enemy_type.weapon_rate_of_fire, enemy_type.weapon_accuracy)
+		#shoot(enemy_type.weapon_rate_of_fire, enemy_type.weapon_accuracy)
 		#find_cover(false,false)
 		#agent.target_position = enemy_type.current_cover
 		pass

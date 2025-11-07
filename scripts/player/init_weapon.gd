@@ -55,6 +55,7 @@ func _physics_process(delta: float) -> void:
 	else: is_firing = false
 	return_weapon_to_start_pos(delta)
 	bloom(delta)
+	#refresh_weapon()
 	#commented this bitch out for the recoil stuff. not sure if it's importante
 	#position = weapon_type.position
 
@@ -108,17 +109,39 @@ func load_weapon():
 	start_pos = weapon_type.position
 	start_rot = weapon_type.rotation
 	#check if the weapon has multiple meshes
-	for i in weapon_type.mesh:
-			var newmesh = MeshInstance3D.new()
-			newmesh.mesh = i
-			newmesh.position = Vector3.ZERO
-			newmesh.rotation_degrees = Vector3.ZERO
-			newmesh.scale = Vector3.ONE
-			newmesh.scale = weapon_type.scale
-			newmesh.cast_shadow = 0
-			newmesh.set_layer_mask_value(2,true)
-			newmesh.set_layer_mask_value(1,false)
-			add_child(newmesh)
+	if weapon_type.mesh != null:
+		for i in weapon_type.mesh:
+				var newmesh = MeshInstance3D.new()
+				newmesh.mesh = i
+				newmesh.position = Vector3.ZERO
+				newmesh.rotation_degrees = Vector3.ZERO
+				newmesh.scale = Vector3.ONE
+				newmesh.scale = weapon_type.scale
+				newmesh.cast_shadow = 0
+				newmesh.set_layer_mask_value(2,true)
+				newmesh.set_layer_mask_value(1,false)
+				add_child(newmesh)
+	if weapon_type.lhand != null:
+		var l_hand_model = MeshInstance3D.new()
+		l_hand_model.mesh = weapon_type.lhand
+		l_hand_model.scale = weapon_type.lhand_scl
+		l_hand_model.position = weapon_type.lhand_pos
+		l_hand_model.rotation = weapon_type.lhand_rot
+		l_hand_model.cast_shadow = 0
+		l_hand_model.set_layer_mask_value(2,true)
+		l_hand_model.set_layer_mask_value(1,false)
+		add_child(l_hand_model)
+	if weapon_type.rhand != null:
+		var r_hand_model = MeshInstance3D.new()
+		r_hand_model.mesh = weapon_type.rhand
+		r_hand_model.scale = weapon_type.rhand_scl
+		r_hand_model.position = weapon_type.rhand_pos
+		r_hand_model.rotation = weapon_type.rhand_rot
+		r_hand_model.cast_shadow = 0
+		r_hand_model.set_layer_mask_value(2,true)
+		r_hand_model.set_layer_mask_value(1,false)
+		add_child(r_hand_model)
+	
 	position = weapon_type.position
 	rotation_degrees = weapon_type.rotation
 	fire_delay.wait_time = weapon_type.weapon_rate_of_fire
@@ -244,3 +267,7 @@ func bloom(delta):
 
 #func add_ammo(ammo_to_add):
 	#weapon_type.
+
+func refresh_weapon():
+	unload_weapon()
+	load_weapon()
