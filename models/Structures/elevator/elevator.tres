@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://dhbb0ciomtms4"]
+
+[ext_resource type="Texture2D" uid="uid://ctrkmjfmlguum" path="res://models/Structures/elevator/elevator_basecolor.png" id="1_lxik2"]
+[ext_resource type="Texture2D" uid="uid://q65dtlkxlgtu" path="res://models/Structures/elevator/elevator_emissionmask.png" id="2_fugkc"]
+[ext_resource type="Texture2D" uid="uid://bipfa8pqanj7g" path="res://models/Structures/elevator/elevator_metallic-elevator_rough.png" id="2_mlb55"]
+[ext_resource type="Texture2D" uid="uid://ckhjf1mxqvin7" path="res://models/Structures/elevator/elevator_normal.png" id="3_voe4e"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_lxik2")
+metallic = 1.0
+metallic_texture = ExtResource("2_mlb55")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_mlb55")
+roughness_texture_channel = 1
+emission_enabled = true
+emission_texture = ExtResource("2_fugkc")
+normal_enabled = true
+normal_texture = ExtResource("3_voe4e")
+texture_filter = 2

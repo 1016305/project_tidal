@@ -10,6 +10,8 @@ extends CharacterBody3D
 
 @onready var stand_collider: CollisionShape3D = $stand_collider
 @onready var _original_capsule_height = $stand_collider.shape.height
+@export var interact_distance : float = 2
+var interact_result
 
 #player movement adjustable variables
 var mouse_sens = 0.3
@@ -20,13 +22,12 @@ var current_fov = FOV_MIN
 const FOV_MIN = 90.0
 const FOV_MAX = 110.0
 const FOV_LERP_SPEED = 5.0
-@export var uspeed = 0.0000
 
 #player speed modifiers
-const _WALK_SPEED = 6.0 #static but put here for clarity
+const _WALK_SPEED = 50.0 #static but put here for clarity
 const WALK_SPEED = 1
 const CROUCH_SPEED = 0.2
-const RUN_SPEED = 1.5
+const RUN_SPEED = 1.5 #RETURN TO 1.5
 
 #player health variables
 var current_health: int = 100
@@ -96,6 +97,9 @@ func _physics_process(delta: float) -> void:
 	shoot(delta)
 	reload()
 	toggle_flashlight()
+	interact_cast()
+	if Input.is_action_just_pressed("interact"):
+		interact()
 	
 	take_damage_test()
 	#I cannot fathom why this only works here. Probably part of some insidious component of move_and_slide
@@ -216,6 +220,27 @@ func fov_change(delta, minfov, maxfov):
 			camera.fov = lerp(camera.fov, minfov, (FOV_LERP_SPEED * 3) *delta)
 			camera.position.z = lerp(camera.position.z, 0.0, (FOV_LERP_SPEED * 3) * delta)
 
+func interact_cast():
+	var space_state = camera.get_world_3d().direct_space_state
+	var screen_center = get_viewport().get_visible_rect().size / 2
+	screen_center.y = screen_center.y/3 * 1.6
+	var origin = camera.project_ray_origin(screen_center)
+	var end = origin + camera.project_ray_normal(screen_center) * interact_distance
+	var query = PhysicsRayQueryParameters3D.create(origin,end)
+	query.collide_with_bodies = true
+	var result = space_state.intersect_ray(query)
+	var current_cast_result = result.get("collider")
+	if current_cast_result != interact_result:
+		if interact_result and interact_result.has_user_signal("unfocused"):
+			interact_result.emit_signal("unfocused")
+		interact_result = current_cast_result
+		if interact_result and interact_result.has_user_signal("focused"):
+			interact_result.emit_signal("focused")
+
+func interact():
+	if interact_result != null and interact_result.has_user_signal("interact"):
+		interact_result.emit_signal("interact")
+
 ##Weapon stuff. Move to another script when convenient
 func test_change_weapon():
 	if Input.is_action_pressed("test_swap_to_weapon_a"):
@@ -281,6 +306,7 @@ func player_debug():
 	Global.debug.add_property('Current Velocity ABS', velocity.abs().snappedf(0.01), 1)
 	Global.debug.add_property('Current Velocity', velocity.snappedf(0.01), 1)
 	Global.debug.add_property('Player Head Pitch', player_head.rotation.x, 1)
+	Global.debug.add_property('Player Location', position, 1)
 
 func spawn_test_enemy():
 	if Input.is_action_just_pressed("spawn_test_enemy"):

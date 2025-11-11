@@ -15,6 +15,15 @@ class_name weapons extends Resource
 @export_category('Visual Settings')
 ## All meshes used to render the weapon
 @export var mesh: Array[Mesh]
+## Both meshes used for the hands
+@export var lhand: Mesh
+@export var rhand: Mesh
+@export var lhand_pos: Vector3
+@export var lhand_scl: Vector3
+@export var lhand_rot: Vector3
+@export var rhand_pos: Vector3
+@export var rhand_scl: Vector3
+@export var rhand_rot: Vector3
 ## Adjustable position for the weapon's muzzle flare. Note: this is slightly broken sue to the weapon shader's behaviour. Need to fix.
 @export var muzzle_flare_pos: Vector3
 

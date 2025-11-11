@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://g0bywnaeumhq"]
+
+[ext_resource type="Script" uid="uid://dldgvknok5djk" path="res://scenes/effects/fire_options.gd" id="1_08243"]
+[ext_resource type="Shader" uid="uid://ofwx4p0xtt1k" path="res://shaders/fire_shader.tres" id="1_rt0mn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_08243"]
+render_priority = 0
+shader = ExtResource("1_rt0mn")
+shader_parameter/Texture_Pixelate_Scale = 128
+shader_parameter/Flame_Layer_2_Distort = Vector2(0.4, 0.9)
+shader_parameter/FireColor1 = Vector3(0.385, 0.2, 0.01)
+shader_parameter/Flame_Layer_1_Distort = Vector2(0.205, 0.85)
+shader_parameter/FireColor2 = Vector3(1.655, 0.3, 0)
+shader_parameter/Fire_Layer_Blend = 0.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_lv8hs"]
+
+[node name="Fire" type="Node3D"]
+script = ExtResource("1_08243")
+fx_scale = 1.0
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.613309, 0)
+material_override = SubResource("ShaderMaterial_08243")
+amount = 1
+mesh = SubResource("QuadMesh_lv8hs")
+gravity = Vector3(0, 0, 0)

@@ -89,10 +89,6 @@ transform_align = 3
 process_material = SubResource("ParticleProcessMaterial_qlg0r")
 draw_pass_1 = SubResource("QuadMesh_ur7pv")
 
-[node name="ReflectionProbe" type="ReflectionProbe" parent="stand_collider/player_head/camera"]
-update_mode = 1
-enable_shadows = true
-
 [node name="flashlight" type="SpotLight3D" parent="stand_collider/player_head/camera"]
 transform = Transform3D(0.999795, -0.000397483, 0.0202231, 0, 0.999807, 0.0196511, -0.020227, -0.0196471, 0.999602, -0.156827, -0.0870875, -0.391297)
 visible = false
@@ -115,3 +111,5 @@ light_cull_mask = 4294967294
 omni_range = 1.843
 
 [node name="user_interface" parent="." instance=ExtResource("2_g2els")]
+
+[node name="AkListener3D" type="AkListener3D" parent="."]

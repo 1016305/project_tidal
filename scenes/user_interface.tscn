@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dlfk08xleb3kw"]
+[gd_scene load_steps=11 format=3 uid="uid://dlfk08xleb3kw"]
 
 [ext_resource type="Script" uid="uid://cbbsm2eihvi53" path="res://scripts/player/reticle.gd" id="1_syvep"]
 [ext_resource type="Theme" uid="uid://c7kwjwrfwnkj" path="res://ui_themes/debug_panel.tres" id="2_y1h3b"]
@@ -6,12 +6,17 @@
 [ext_resource type="Script" uid="uid://chgovpaerwhie" path="res://scripts/player/ammo_counter.gd" id="4_jbsfc"]
 [ext_resource type="Script" uid="uid://yyqllrxyedqa" path="res://scripts/player/reload_anim.gd" id="5_cufge"]
 [ext_resource type="Script" uid="uid://c0mxcid7e1pd" path="res://scripts/player/health_counter.gd" id="5_lmgon"]
+[ext_resource type="Script" uid="uid://dr1wf5e32otvb" path="res://scripts/utility/interact_label.gd" id="7_xsrv6"]
 
 [sub_resource type="Theme" id="Theme_jbsfc"]
 default_font_size = 36
 
 [sub_resource type="Theme" id="Theme_cufge"]
 default_font_size = 22
+
+[sub_resource type="Curve" id="Curve_xsrv6"]
+_data = [Vector2(0.251969, 0.675541), 0.0, 0.0, 0, 0]
+point_count = 1
 
 [node name="user_interface" type="Control"]
 layout_mode = 3
@@ -68,6 +73,29 @@ layout_mode = 2
 layout_mode = 2
 text = "DEBUG"
 
+[node name="health counter" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -104.0
+offset_right = 188.0
+grow_vertical = 0
+theme = SubResource("Theme_jbsfc")
+script = ExtResource("5_lmgon")
+
+[node name="health_label" type="Label" parent="health counter"]
+layout_mode = 2
+text = "Health"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="health" type="Label" parent="health counter"]
+layout_mode = 2
+text = "-- | --"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ammo counter" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 3
@@ -94,29 +122,6 @@ text = "-- | --"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="health counter" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -104.0
-offset_right = 188.0
-grow_vertical = 0
-theme = SubResource("Theme_jbsfc")
-script = ExtResource("5_lmgon")
-
-[node name="health_label" type="Label" parent="health counter"]
-layout_mode = 2
-text = "Health"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="health" type="Label" parent="health counter"]
-layout_mode = 2
-text = "-- | --"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="reload_container" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -132,3 +137,35 @@ script = ExtResource("5_cufge")
 visible = false
 layout_mode = 2
 text = "RELOADING"
+
+[node name="Interact Label" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_xsrv6")
+
+[node name="Line2D" type="Line2D" parent="Interact Label"]
+visible = false
+position = Vector2(0, 384)
+scale = Vector2(0.185, 0.185)
+points = PackedVector2Array(-200, 80, -200, -80, -80, -200, 80, -200, 200, -80, 200, 80)
+width = 25.0
+width_curve = SubResource("Curve_xsrv6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 592.0
+offset_top = 348.0
+offset_right = 687.0
+offset_bottom = 371.0
+alignment = 1
+
+[node name="Interact Notification" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Default Text"
+vertical_alignment = 1
