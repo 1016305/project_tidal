@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2888769156",
+    "Type": "Event",
+    "GUID": "{42D6CCEC-9A24-44EB-BADA-9F0E9207E8B5}",
+    "Language": "SFX",
+    "Hash": "{6F52390E-708D-7CE9-450E-4AEF7D3C4949}",
+    "ObjectPath": "sfx_playTestSound",
+    "ShortName": "sfx_playTestSound",
+    "Path": "Event/sfx_playTestSound.bnk",
+    "Media": [
+     {
+      "Id": "368928642",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "wahwah.wav",
+      "Path": "Media/368928642.wem",
+      "CachePath": "DC/{DC704B78-0CA9-E139-2CA7-A213ABA6F521}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2888769156",
+      "Name": "sfx_playTestSound",
+      "ObjectPath": "\\Events\\Default Work Unit\\sfx_playTestSound",
+      "GUID": "{42D6CCEC-9A24-44EB-BADA-9F0E9207E8B5}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.496",
+      "DurationMax": "2.496",
+      "MediaRefs": [
+       {
+        "Id": "368928642"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A204F2C5-1855-B207-1B70-C86D98D8CE32}"
+ }
+}

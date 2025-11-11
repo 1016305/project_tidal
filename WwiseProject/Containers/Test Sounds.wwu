@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0073F6B3-FDDF-410E-93C5-394CB98DD32A}" SchemaVersion="132" RootDocumentID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}" ParentDocumentID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}">
+	<Containers>
+		<WorkUnit Name="Test Sounds" ID="{0073F6B3-FDDF-410E-93C5-394CB98DD32A}" OwnerID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}" PersistMode="Nested">
+			<ChildrenList>
+				<Sound Name="new-notification-027-383749" ID="{F534EC4E-1CE2-41A0-AD4C-F4BEC3DE6932}" ShortID="775824404">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="new-notification-027-383749" ID="{8E329B72-4129-4965-B024-E543645DBF29}">
+							<Language>SFX</Language>
+							<AudioFile>new-notification-027-383749.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="126714041"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="new-notification-027-383749" ID="{8E329B72-4129-4965-B024-E543645DBF29}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="wahwah" ID="{791ADE14-0854-423A-9139-6003EF47FCC5}" ShortID="877369078">
+					<PropertyList>
+						<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="wahwah" ID="{F769DEDD-9476-4394-AC7F-133D71BF7A6A}">
+							<Language>SFX</Language>
+							<AudioFile>wahwah.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="368928642"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="wahwah" ID="{F769DEDD-9476-4394-AC7F-133D71BF7A6A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

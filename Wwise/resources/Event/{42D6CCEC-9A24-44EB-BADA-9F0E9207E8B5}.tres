@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://bbls23h8hnjm1"]
+
+[resource]
+name = "sfx_playTestSound"
+id = 2888769156
+guid = "{42D6CCEC-9A24-44EB-BADA-9F0E9207E8B5}"
+dummy = true

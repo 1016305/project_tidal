@@ -1,0 +1,60 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "619672820",
+    "Type": "Event",
+    "GUID": "{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}",
+    "Language": "SFX",
+    "Hash": "{7C92B983-C24D-EC6C-3728-B84B67EA0C7D}",
+    "ObjectPath": "weapon_assaultRifle_Play_Firing",
+    "ShortName": "weapon_assaultRifle_Play_Firing",
+    "Path": "Event/weapon_assaultRifle_Play_Firing.bnk",
+    "Media": [
+     {
+      "Id": "78295681",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "assault_rifle\\assault_rifle_03.wav",
+      "Path": "Media/78295681.wem",
+      "CachePath": "C8/{C8FFC878-6438-FB32-A140-D39E001F3958}.wem"
+     },
+     {
+      "Id": "986971179",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "assault_rifle\\assault_rifle_01.wav",
+      "Path": "Media/986971179.wem",
+      "CachePath": "BF/{BFEE872A-426F-E654-2C09-276FB7DF02E6}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "619672820",
+      "Name": "weapon_assaultRifle_Play_Firing",
+      "ObjectPath": "\\Events\\Default Work Unit\\weapon_assaultRifle_Play_Firing",
+      "GUID": "{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.97304195",
+      "DurationMax": "0.9741667",
+      "MediaRefs": [
+       {
+        "Id": "78295681"
+       },
+       {
+        "Id": "986971179"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{EDD0192A-F3EE-5E67-5815-BAC03C584BAD}"
+ }
+}
