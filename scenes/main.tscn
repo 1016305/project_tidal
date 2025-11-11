@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://jwb2jhicd4uh"]
+[gd_scene load_steps=22 format=3 uid="uid://jwb2jhicd4uh"]
 
 [ext_resource type="Texture2D" uid="uid://dkd8bff5lu385" path="res://textures/spruit_sunrise.jpg" id="1_jyhfs"]
 [ext_resource type="Material" uid="uid://ciyptmi6h3qlq" path="res://materials/devtexture_grey.tres" id="1_o5qli"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bxhc2q41ugobs" path="res://scenes/enemies/advanced_test_enemy.tscn" id="6_o6xl0"]
 [ext_resource type="Script" uid="uid://dy32np5le4ruw" path="res://scripts/audio/wwise_test_script.gd" id="7_85g3d"]
 [ext_resource type="WwiseEvent" uid="uid://bbls23h8hnjm1" path="res://Wwise/resources/Event/{42D6CCEC-9A24-44EB-BADA-9F0E9207E8B5}.tres" id="8_choun"]
+[ext_resource type="Script" uid="uid://bsi2g51x7iawi" path="res://scripts/utility/interaction_component.gd" id="9_ya4ey"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tbgi4"]
 panorama = ExtResource("1_jyhfs")
@@ -41,6 +42,10 @@ albedo_texture = ExtResource("4_tefeu")
 texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_choun"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eb6dy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_trceg"]
 
 [node name="world" type="Node3D"]
 transform = Transform3D(1.00023, 0, 0, 0, 1.00023, 0, 0, 0, 1.00023, 0, 0, 0)
@@ -415,8 +420,22 @@ shape = SubResource("BoxShape3D_choun")
 [node name="CSGBox3D2" type="CSGBox3D" parent="stage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.468, 0)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="stage"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.2352, 0.714329, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/StaticBody3D"]
+shape = SubResource("BoxShape3D_eb6dy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage/StaticBody3D"]
+mesh = SubResource("BoxMesh_trceg")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="InteractComponent" type="Node" parent="stage/StaticBody3D"]
+script = ExtResource("9_ya4ey")
+
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4334, 1.47578, 12.3289)
+interact_distance = 3.0
 
 [node name="pausable" type="Node3D" parent="."]
 process_mode = 3

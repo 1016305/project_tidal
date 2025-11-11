@@ -13,3 +13,6 @@ signal ammo_update(current_ammo:int, max_ammo:int)
 signal player_is_reloading
 
 signal player_health(current_health:int, max_health:int)
+
+signal interact_focus(message)
+signal interact_unfocus
