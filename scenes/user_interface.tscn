@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://dlfk08xleb3kw"]
+[gd_scene load_steps=12 format=3 uid="uid://dlfk08xleb3kw"]
 
+[ext_resource type="Theme" uid="uid://dt57x1ox0ea6o" path="res://resources/themes/main_menu.tres" id="1_sdud1"]
 [ext_resource type="Script" uid="uid://cbbsm2eihvi53" path="res://scripts/player/reticle.gd" id="1_syvep"]
 [ext_resource type="Theme" uid="uid://c7kwjwrfwnkj" path="res://ui_themes/debug_panel.tres" id="2_y1h3b"]
 [ext_resource type="Script" uid="uid://dn8ud3onrum6d" path="res://scripts/utility/debug.gd" id="3_jbsfc"]
@@ -26,6 +27,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme = ExtResource("1_sdud1")
 
 [node name="reticle" type="CenterContainer" parent="."]
 layout_mode = 1
