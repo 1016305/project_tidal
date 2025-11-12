@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlfk08xleb3kw"]
+[gd_scene load_steps=13 format=3 uid="uid://dlfk08xleb3kw"]
 
 [ext_resource type="Theme" uid="uid://dt57x1ox0ea6o" path="res://resources/themes/main_menu.tres" id="1_sdud1"]
 [ext_resource type="Script" uid="uid://cbbsm2eihvi53" path="res://scripts/player/reticle.gd" id="1_syvep"]
+[ext_resource type="Script" uid="uid://bf3olr76v00r3" path="res://scripts/utility/user_interface.gd" id="2_aisij"]
 [ext_resource type="Theme" uid="uid://c7kwjwrfwnkj" path="res://ui_themes/debug_panel.tres" id="2_y1h3b"]
 [ext_resource type="Script" uid="uid://dn8ud3onrum6d" path="res://scripts/utility/debug.gd" id="3_jbsfc"]
 [ext_resource type="Script" uid="uid://chgovpaerwhie" path="res://scripts/player/ammo_counter.gd" id="4_jbsfc"]
@@ -20,6 +21,7 @@ _data = [Vector2(0.251969, 0.675541), 0.0, 0.0, 0, 0]
 point_count = 1
 
 [node name="user_interface" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,6 +30,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("1_sdud1")
+script = ExtResource("2_aisij")
 
 [node name="reticle" type="CenterContainer" parent="."]
 layout_mode = 1

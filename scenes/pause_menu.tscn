@@ -1,0 +1,219 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt786q7f1v78"]
+
+[ext_resource type="Theme" uid="uid://dt57x1ox0ea6o" path="res://resources/themes/main_menu.tres" id="1_kukqi"]
+[ext_resource type="Script" uid="uid://d0cia0ftvggh8" path="res://scripts/utility/pause_menu.gd" id="2_5d2l8"]
+[ext_resource type="Texture2D" uid="uid://dxyhd55iw6s2j" path="res://textures/title.png" id="3_7l7mv"]
+[ext_resource type="Script" uid="uid://bluqpsiuyuckb" path="res://scripts/utility/menu_update_value.gd" id="4_5d2l8"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_kukqi")
+script = ExtResource("2_5d2l8")
+
+[node name="pause_main" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.5
+offset_top = -72.5
+offset_right = 164.5
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="pause_main"]
+layout_mode = 2
+texture = ExtResource("3_7l7mv")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="pause_main"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "P A U S E D"
+horizontal_alignment = 1
+
+[node name="resume" type="Button" parent="pause_main"]
+layout_mode = 2
+text = "RESUME"
+
+[node name="options" type="Button" parent="pause_main"]
+layout_mode = 2
+text = "OPTIONS AND CONTROLS"
+
+[node name="exit" type="Button" parent="pause_main"]
+layout_mode = 2
+text = "EXIT"
+
+[node name="Options" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.239063
+anchor_right = 0.760156
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_kukqi")
+theme_override_constants/separation = 20
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.480469, 0.480469, 0.480469, 1)
+theme_override_font_sizes/font_size = 30
+text = "Options"
+
+[node name="Volume" type="HBoxContainer" parent="Options"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Label" type="Label" parent="Options/Volume"]
+layout_mode = 2
+text = "Volume"
+
+[node name="HSlider" type="HSlider" parent="Options/Volume"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+
+[node name="Label2" type="Label" parent="Options/Volume" node_paths=PackedStringArray("master_value")]
+layout_mode = 2
+script = ExtResource("4_5d2l8")
+master_value = NodePath("../HSlider")
+
+[node name="Sensitivity" type="HBoxContainer" parent="Options"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Label" type="Label" parent="Options/Sensitivity"]
+layout_mode = 2
+text = "Mouse Sensitivity
+"
+
+[node name="HSlider2" type="HSlider" parent="Options/Sensitivity"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="Label3" type="Label" parent="Options/Sensitivity" node_paths=PackedStringArray("master_value")]
+layout_mode = 2
+script = ExtResource("4_5d2l8")
+master_value = NodePath("../HSlider2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.496094, 0.496094, 0.496094, 1)
+theme_override_font_sizes/font_size = 30
+text = "Controls"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+
+[node name="Label" type="Label" parent="Options/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Walk "
+
+[node name="Label2" type="Label" parent="Options/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "W A S D"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 63
+
+[node name="Label" type="Label" parent="Options/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Sprint"
+
+[node name="Label2" type="Label" parent="Options/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "LShift"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 65
+
+[node name="Label" type="Label" parent="Options/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "Jump"
+
+[node name="Label2" type="Label" parent="Options/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "Space"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 65
+
+[node name="Label" type="Label" parent="Options/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Shoot"
+
+[node name="Label2" type="Label" parent="Options/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "LeftMouse"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 53
+
+[node name="Label" type="Label" parent="Options/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "Reload"
+
+[node name="Label2" type="Label" parent="Options/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "R"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 89
+
+[node name="Label" type="Label" parent="Options/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+text = "Use"
+
+[node name="Label2" type="Label" parent="Options/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+text = "E"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Options/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Flashlight"
+
+[node name="Label2" type="Label" parent="Options/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "F"
+
+[node name="PanelContainer" type="VBoxContainer" parent="Options"]
+layout_mode = 2
+alignment = 1
+
+[node name="Back" type="Button" parent="Options/PanelContainer"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="pause_main/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="pause_main/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Options/PanelContainer/Back" to="." method="_on_back_pressed"]

@@ -1,11 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://dsb1mn22d220l"]
+[gd_scene load_steps=16 format=3 uid="uid://dsb1mn22d220l"]
 
 [ext_resource type="Script" uid="uid://beis6e7q2vp36" path="res://scripts/player/player_controller.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://dlfk08xleb3kw" path="res://scenes/user_interface.tscn" id="2_g2els"]
+[ext_resource type="CameraAttributesPractical" uid="uid://b3nasx2od2mkl" path="res://scripts/animation/woozy_head_camera_attrib.tres" id="2_smehm"]
 [ext_resource type="Resource" uid="uid://3jn5gl2dw4q2" path="res://models/weapons/assault_rifle/assault_rifle_weapon.tres" id="3_dqkch"]
+[ext_resource type="Script" uid="uid://d2bahvleqkygw" path="res://scripts/animation/camera_effect_woozy_head.gd" id="3_ur7pv"]
 [ext_resource type="Script" uid="uid://8us8hykaf3pu" path="res://scripts/player/init_weapon.gd" id="4_qlg0r"]
 [ext_resource type="Script" uid="uid://copckorednjko" path="res://scripts/weapons/muzzle_flare.gd" id="4_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://db0coiq6ohagi" path="res://textures/flashlight.png" id="5_tuyoq"]
+[ext_resource type="PackedScene" uid="uid://bt786q7f1v78" path="res://scenes/pause_menu.tscn" id="9_ur7pv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3vyb7"]
 
@@ -52,8 +55,10 @@ shape = SubResource("CapsuleShape3D_3vyb7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 
 [node name="camera" type="Camera3D" parent="stand_collider/player_head"]
+attributes = ExtResource("2_smehm")
 fov = 90.0
 near = 0.001
+script = ExtResource("3_ur7pv")
 
 [node name="weapon_rig" type="Node3D" parent="stand_collider/player_head/camera"]
 
@@ -111,5 +116,7 @@ light_cull_mask = 4294967294
 omni_range = 1.843
 
 [node name="user_interface" parent="." instance=ExtResource("2_g2els")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("9_ur7pv")]
 
 [node name="AkListener3D" type="AkListener3D" parent="."]

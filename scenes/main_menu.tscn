@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cms3r4506n828"]
+[gd_scene load_steps=5 format=3 uid="uid://cms3r4506n828"]
 
 [ext_resource type="Script" uid="uid://dt0ge805altn7" path="res://scripts/utility/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://dxyhd55iw6s2j" path="res://textures/title.png" id="1_l6cm7"]
 [ext_resource type="Theme" uid="uid://dt57x1ox0ea6o" path="res://resources/themes/main_menu.tres" id="2_bqqt6"]
+[ext_resource type="Script" uid="uid://bluqpsiuyuckb" path="res://scripts/utility/menu_update_value.gd" id="4_wu84c"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -88,6 +89,12 @@ text = "Volume"
 [node name="HSlider" type="HSlider" parent="Options/Volume"]
 layout_mode = 2
 size_flags_horizontal = 3
+value = 50.0
+
+[node name="Label2" type="Label" parent="Options/Volume" node_paths=PackedStringArray("master_value")]
+layout_mode = 2
+script = ExtResource("4_wu84c")
+master_value = NodePath("../HSlider")
 
 [node name="Sensitivity" type="HBoxContainer" parent="Options"]
 layout_mode = 2
@@ -101,6 +108,14 @@ text = "Mouse Sensitivity
 [node name="HSlider2" type="HSlider" parent="Options/Sensitivity"]
 layout_mode = 2
 size_flags_horizontal = 3
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="Label3" type="Label" parent="Options/Sensitivity" node_paths=PackedStringArray("master_value")]
+layout_mode = 2
+script = ExtResource("4_wu84c")
+master_value = NodePath("../HSlider2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Options"]
 layout_mode = 2
@@ -206,4 +221,6 @@ text = "Back"
 [connection signal="pressed" from="Main/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Main/Button2" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Main/Button3" to="." method="_on_exit_pressed"]
+[connection signal="value_changed" from="Options/Volume/HSlider" to="." method="_on_volume_changed"]
+[connection signal="value_changed" from="Options/Sensitivity/HSlider2" to="." method="_on_mouse_sensitivity"]
 [connection signal="pressed" from="Options/PanelContainer/Back" to="." method="_on_back_pressed"]

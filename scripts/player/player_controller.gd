@@ -15,6 +15,7 @@ var interact_result
 
 #player movement adjustable variables
 var mouse_sens = 0.3
+var mouse_sens_multiplier: float = 1
 var player_jump_height = 5
 var player_crouch_height = 0.8
 var crouch_jump_add = player_crouch_height * 0.1 
@@ -70,14 +71,14 @@ func _ready() -> void:
 	Global.main_camera = camera
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	Global.player_health.emit(current_health,max_health)
-	
+	Global.set_mouse_sens.connect(update_sensitivity)
 
 #unhandled input process
 #uses mouse to handle rotation
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and !is_mouse_hidden:
-		rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
-		player_head.rotate_x(deg_to_rad(-event.relative.y * mouse_sens))
+		rotate_y(deg_to_rad(-event.relative.x * (mouse_sens * mouse_sens_multiplier)))
+		player_head.rotate_x(deg_to_rad(-event.relative.y * (mouse_sens * mouse_sens_multiplier)))
 		player_head.rotation.x = clamp(player_head.rotation.x, deg_to_rad(MIN_LOOK_X), deg_to_rad(MAX_LOOK_X))
 		player_head.rotation.y = 0 # clamp rotation of head to 0 otherwise overreach causes control inversion during lean
 
@@ -288,6 +289,8 @@ func death_check():
 	if current_health <= 0:
 		print("player is dead")
 
+func update_sensitivity(val):
+	mouse_sens_multiplier = val 
 
 #External function to adjust/call player speed from multiple fucntions. Adds edge friction modifier.
 func _set_current_speed(speedmod):
