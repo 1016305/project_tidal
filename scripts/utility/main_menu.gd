@@ -28,6 +28,5 @@ func _on_back_pressed() -> void:
 func _on_volume_changed(value: float) -> void:
 	Global.emit_signal("volume", value)
 
-
 func _on_mouse_sensitivity(value: float) -> void:
 	Global.emit_signal("get_mouse_sens", value)

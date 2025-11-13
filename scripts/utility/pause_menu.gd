@@ -6,7 +6,6 @@ var toggle_menu: bool = false
 @onready var vol_slider: HSlider = $Options/Volume/HSlider
 @onready var sen_slider: HSlider = $Options/Sensitivity/HSlider2
 
-
 func _ready() -> void:
 	pass
 
@@ -49,3 +48,6 @@ func _on_volume_slider_value_changed(value: float) -> void:
 	
 func _on_sens_slider_value_changed(value: float) -> void:
 	Global.emit_signal("get_mouse_sens", value)
+
+func _on_exit_pressed() -> void:
+	get_tree().quit()

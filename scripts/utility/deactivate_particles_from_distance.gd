@@ -15,6 +15,8 @@ func disable_when_player_is_far():
 		if position.distance_to(Global.player.position) > max_distance:
 			if self.emitting:
 				self.emitting = false
+				self.visible = false
 		else:
 			if !self.emitting:
 				self.emitting = true
+				self.visible = true
