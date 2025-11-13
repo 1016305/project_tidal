@@ -3,6 +3,8 @@ extends Control
 var toggle_menu: bool = false
 @onready var pause_main: VBoxContainer = $pause_main
 @onready var options: VBoxContainer = $Options
+@onready var vol_slider: HSlider = $Options/Volume/HSlider
+@onready var sen_slider: HSlider = $Options/Sensitivity/HSlider2
 
 
 func _ready() -> void:
@@ -13,6 +15,7 @@ func _physics_process(delta: float) -> void:
 		pause()
 
 func pause():
+	pull_data_from_global_singleton()
 	get_tree().paused = !get_tree().paused
 	visible = !visible
 	Global.pause_toggle.emit()
@@ -33,3 +36,16 @@ func _on_options_pressed() -> void:
 func _on_back_pressed() -> void:
 	pause_main.visible = !pause_main.visible
 	options.visible = !options.visible
+
+func pull_data_from_global_singleton():
+	if Global._volume != null:
+		vol_slider.value = Global._volume
+	if Global._mouse_sens != null:
+		sen_slider.value = Global._mouse_sens
+
+
+func _on_volume_slider_value_changed(value: float) -> void:
+	Global.emit_signal("volume", value)
+	
+func _on_sens_slider_value_changed(value: float) -> void:
+	Global.emit_signal("get_mouse_sens", value)

@@ -7,6 +7,7 @@
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -216,4 +217,6 @@ text = "Back"
 
 [connection signal="pressed" from="pause_main/resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="pause_main/options" to="." method="_on_options_pressed"]
+[connection signal="value_changed" from="Options/Volume/HSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="value_changed" from="Options/Sensitivity/HSlider2" to="." method="_on_sens_slider_value_changed"]
 [connection signal="pressed" from="Options/PanelContainer/Back" to="." method="_on_back_pressed"]

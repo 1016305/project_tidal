@@ -24,6 +24,7 @@ signal get_mouse_sens(sens:float)
 signal set_mouse_sens(sens:float)
 
 var _mouse_sens
+var _volume
 signal volume(vol:float)
 
 
