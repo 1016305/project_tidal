@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://jwb2jhicd4uh"]
+[gd_scene load_steps=32 format=3 uid="uid://jwb2jhicd4uh"]
 
 [ext_resource type="Texture2D" uid="uid://dkd8bff5lu385" path="res://textures/spruit_sunrise.jpg" id="1_jyhfs"]
 [ext_resource type="Material" uid="uid://ciyptmi6h3qlq" path="res://materials/devtexture_grey.tres" id="1_o5qli"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://dy32np5le4ruw" path="res://scripts/audio/wwise_test_script.gd" id="7_85g3d"]
 [ext_resource type="WwiseEvent" uid="uid://bbls23h8hnjm1" path="res://Wwise/resources/Event/{42D6CCEC-9A24-44EB-BADA-9F0E9207E8B5}.tres" id="8_choun"]
 [ext_resource type="Script" uid="uid://bsi2g51x7iawi" path="res://scripts/utility/interaction_component.gd" id="9_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://qfl1t3u1b88" path="res://textures/dust.png" id="12_eb6dy"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tbgi4"]
 panorama = ExtResource("1_jyhfs")
@@ -46,6 +47,73 @@ texture_filter = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_eb6dy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_trceg"]
+
+[sub_resource type="Gradient" id="Gradient_ya4ey"]
+offsets = PackedFloat32Array(0, 0.460227, 1)
+colors = PackedColorArray(0.279236, 0.390625, 0.288808, 1, 0.625, 0.596046, 0.288086, 1, 0.343185, 0.514655, 0.574219, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_eb6dy"]
+gradient = SubResource("Gradient_ya4ey")
+
+[sub_resource type="Curve" id="Curve_ya4ey"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.594059, 0.617978), -0.0276788, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_eb6dy"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.534653, 0.393258), 0.660265, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_trceg"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_trceg"]
+curve_x = SubResource("Curve_ya4ey")
+curve_y = SubResource("Curve_eb6dy")
+curve_z = SubResource("Curve_trceg")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_muem4"]
+lifetime_randomness = 0.25
+emission_shape_scale = Vector3(6.515, 3.885, 9.13)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+inherit_velocity_ratio = 0.221
+direction = Vector3(1, 1, 1)
+spread = 4.821
+initial_velocity_min = 0.1
+initial_velocity_max = 0.5
+gravity = Vector3(0, 0, 0)
+damping_min = 0.05
+damping_max = 0.05
+scale_min = 0.1
+scale_max = 0.3
+scale_curve = SubResource("CurveXYZTexture_trceg")
+color_ramp = SubResource("GradientTexture1D_eb6dy")
+turbulence_enabled = true
+turbulence_noise_strength = 0.1
+turbulence_noise_scale = 2.22
+turbulence_initial_displacement_min = -0.0999985
+turbulence_initial_displacement_max = 0.100001
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a8y0u"]
+transparency = 1
+blend_mode = 1
+specular_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("12_eb6dy")
+metallic = 0.65
+metallic_specular = 0.0
+rim = 0.0
+texture_filter = 4
+texture_repeat = false
+billboard_mode = 2
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_yc10j"]
+material = SubResource("StandardMaterial3D_a8y0u")
 
 [node name="world" type="Node3D"]
 transform = Transform3D(1.00023, 0, 0, 0, 1.00023, 0, 0, 0, 1.00023, 0, 0, 0)
@@ -442,3 +510,16 @@ process_mode = 3
 script = ExtResource("1_tipki")
 
 [node name="AkListener3D" type="AkListener3D" parent="."]
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.53433, -0.561266, -22.5976)
+size = Vector3(50.5991, 1.38843, 30.3683)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.33477, 4.46918, 14.1302)
+amount = 250
+lifetime = 30.0
+preprocess = 5.0
+trail_lifetime = 15.0
+process_material = SubResource("ParticleProcessMaterial_muem4")
+draw_pass_1 = SubResource("QuadMesh_yc10j")
