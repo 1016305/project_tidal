@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://c18jtyf1jqmhg"]
+
+[ext_resource type="Texture2D" uid="uid://bdvn8xfegmoyj" path="res://models/Structures/big window/window_basecolor.png" id="1_l8ocm"]
+[ext_resource type="Texture2D" uid="uid://cjv2sgwaq7m4t" path="res://models/Structures/big window/window_metallic-window_rough.png" id="2_x0jym"]
+[ext_resource type="Texture2D" uid="uid://c153kxie4phsc" path="res://models/Structures/big window/window_normal.png" id="3_8ndry"]
+
+[resource]
+resource_name = "Material.002"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_l8ocm")
+metallic = 1.0
+metallic_texture = ExtResource("2_x0jym")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_x0jym")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_8ndry")
+texture_filter = 2

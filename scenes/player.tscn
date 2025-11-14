@@ -99,6 +99,7 @@ transform = Transform3D(0.999795, -0.000397483, 0.0202231, 0, 0.999807, 0.019651
 visible = false
 light_color = Color(1, 0.949585, 0.890625, 1)
 light_energy = 10.0
+light_volumetric_fog_energy = 0.01
 light_projector = ExtResource("5_tuyoq")
 light_cull_mask = 4293918721
 shadow_enabled = true

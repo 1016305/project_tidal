@@ -1,6 +1,6 @@
-[gd_resource type="VisualShader" load_steps=11 format=3 uid="uid://2voxq4as7r0b"]
+[gd_resource type="VisualShader" load_steps=11 format=3 uid="uid://bfqvyheg85tfw"]
 
-[ext_resource type="Texture2D" path="res://textures/fire/smoke.png" id="1_24exv"]
+[ext_resource type="Texture2D" uid="uid://dujd8h8o4stv3" path="res://textures/fire/smoke.png" id="1_24exv"]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_1m64g"]
 output_port_for_preview = 0

@@ -464,6 +464,7 @@ void fragment() {
 
 }
 "
+graph_offset = Vector2(-696.772, 315.902)
 modes/cull = 2
 nodes/vertex/0/position = Vector2(80, 220)
 nodes/vertex/4/node = SubResource("VisualShaderNodeBooleanParameter_tbm74")

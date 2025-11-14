@@ -18,7 +18,6 @@ func turn_on_all_lights(light_array):
 	for u in light_array:
 		await get_tree().create_timer(1).timeout
 		for i in u.get_children():
-			print("turned off light " + str(i))
 			i.visible = true
 
 
