@@ -82,22 +82,22 @@ linked_parent_graph_frame = 27
 texture = ExtResource("2_nwexq")
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_gd4ww"]
-size = Vector2(1004, 579)
+size = Vector2(1004, 402)
 title = "Pixelate"
 attached_nodes = PackedInt32Array(14, 18, 17, 15, 52)
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_ic2uh"]
-size = Vector2(1504, 932)
+size = Vector2(1504, 562)
 title = "Flame Layer 1 Distort"
 attached_nodes = PackedInt32Array(12, 20, 11, 21, 19, 13, 9, 2, 53)
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_g6fub"]
-size = Vector2(1084, 562)
+size = Vector2(1084, 382)
 title = "Flame Layer 1"
 attached_nodes = PackedInt32Array(3, 10, 8, 4, 6, 51)
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_sspyx"]
-size = Vector2(1024, 648)
+size = Vector2(1024, 522)
 title = "Flame Layer 2"
 attached_nodes = PackedInt32Array(50, 23, 30, 31, 32, 33)
 
@@ -126,7 +126,7 @@ op_type = 2
 operator = 2
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_nq4cq"]
-size = Vector2(1504, 932)
+size = Vector2(1504, 562)
 title = "Flame Layer 2 Distort"
 attached_nodes = PackedInt32Array(37, 40, 42, 41, 39, 38, 36, 35, 54)
 
@@ -464,7 +464,6 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-696.772, 315.902)
 modes/cull = 2
 nodes/vertex/0/position = Vector2(80, 220)
 nodes/vertex/4/node = SubResource("VisualShaderNodeBooleanParameter_tbm74")

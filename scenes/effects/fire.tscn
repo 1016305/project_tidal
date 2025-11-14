@@ -49,6 +49,7 @@ point_count = 3
 curve = SubResource("Curve_0obw5")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0obw5"]
+resource_local_to_scene = true
 emission_shape = 1
 emission_sphere_radius = 0.18
 angle_min = -120.0
@@ -63,17 +64,15 @@ anim_speed_min = 2.3
 anim_speed_max = 8.6
 turbulence_noise_strength = 0.1
 turbulence_noise_scale = 7.98
-collision_mode = 1
-collision_friction = 0.0
-collision_bounce = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d73pc"]
 render_priority = 0
 shader = ExtResource("3_lv8hs")
 shader_parameter/tex_frg_3 = ExtResource("4_0obw5")
-shader_parameter/billboard = true
+shader_parameter/billboard = false
 
 [sub_resource type="QuadMesh" id="QuadMesh_d73pc"]
+resource_local_to_scene = true
 material = SubResource("ShaderMaterial_d73pc")
 
 [node name="Fire" type="Node3D"]

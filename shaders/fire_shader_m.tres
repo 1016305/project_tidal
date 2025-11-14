@@ -1,6 +1,7 @@
 [gd_resource type="Shader" format=3 uid="uid://l4v8pwbdrq57"]
 
 [resource]
+resource_local_to_scene = true
 code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_disabled, diffuse_lambert, specular_schlick_ggx;
 
