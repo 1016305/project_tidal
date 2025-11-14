@@ -6,7 +6,8 @@ var color_transparent: Color = Color(0,0,0,0)
 @export var lerp_speed: float = 0.1
 
 func _ready() -> void:
-	wait_a_bit()
+	if visible:
+		wait_a_bit()
 	
 
 func _physics_process(delta: float) -> void:
