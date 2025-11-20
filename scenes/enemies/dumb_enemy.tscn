@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctui55budl18a"]
+
+[ext_resource type="Script" uid="uid://b0kjwp2j62s63" path="res://scripts/enemy/dumb enemy/dumb_enemy.gd" id="1_6ixqb"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8v64s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ixqb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6ixqb"]
+size = Vector3(0.045, 0.105, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2x3kc"]
+
+[node name="dumb enemy" type="CharacterBody3D"]
+script = ExtResource("1_6ixqb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_8v64s")
+surface_material_override/0 = SubResource("StandardMaterial3D_6ixqb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.514867, -0.897655)
+mesh = SubResource("BoxMesh_6ixqb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_2x3kc")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[node name="shoot_delay" type="Timer" parent="."]
+
+[node name="cover_timer" type="Timer" parent="."]
+
+[node name="melee_raycast" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -2)

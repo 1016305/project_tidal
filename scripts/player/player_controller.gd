@@ -3,6 +3,8 @@ extends CharacterBody3D
 #player controller
 #contains all camera and movement script
 
+##DELETEME
+const BULLET = preload("res://scenes/enemies/bullet.tscn")
 #player nodes
 @onready var player_head: Node3D = $stand_collider/player_head
 @onready var camera: Camera3D = $stand_collider/player_head/camera
@@ -279,6 +281,7 @@ func damage(damage):
 	if current_health < 0:
 		current_health = 0
 	Global.player_health.emit(current_health,max_health)
+	Global.player_was_hit.emit()
 	print("Took ", damage, " damage")
 	death_check()
 	
@@ -319,4 +322,7 @@ func spawn_test_enemy():
 		
 func take_damage_test():
 	if Input.is_action_just_pressed("test_damage"):
-		damage(randi_range(6,8))
+		var active_bullet = BULLET.instantiate()
+		get_tree().root.add_child(active_bullet)
+		active_bullet.position = position
+		active_bullet.rotation = rotation

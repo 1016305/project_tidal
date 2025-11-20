@@ -7,7 +7,7 @@
 [ext_resource type="Material" uid="uid://cmf6w8b83cusu" path="res://materials/devtexture_orange.tres" id="2_sugp2"]
 [ext_resource type="Material" uid="uid://cwk7dbr73duwi" path="res://materials/grass_test.tres" id="3_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://ckqv21db3yqkp" path="res://materials/target.png" id="4_tefeu"]
-[ext_resource type="PackedScene" uid="uid://bxhc2q41ugobs" path="res://scenes/enemies/advanced_test_enemy.tscn" id="6_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://ctui55budl18a" path="res://scenes/enemies/dumb_enemy.tscn" id="6_eb6dy"]
 [ext_resource type="Script" uid="uid://dy32np5le4ruw" path="res://scripts/audio/wwise_test_script.gd" id="7_85g3d"]
 [ext_resource type="WwiseEvent" uid="uid://bbls23h8hnjm1" path="res://Wwise/resources/Event/{42D6CCEC-9A24-44EB-BADA-9F0E9207E8B5}.tres" id="8_choun"]
 [ext_resource type="Script" uid="uid://bsi2g51x7iawi" path="res://scripts/utility/interaction_component.gd" id="9_ya4ey"]
@@ -457,8 +457,14 @@ size = Vector3(0.0957031, 2, 2)
 
 [node name="actors" type="Node3D" parent="stage"]
 
-[node name="advanced_test_enemy" parent="stage/actors" instance=ExtResource("6_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8436, 0.33072, -4.24387)
+[node name="dumb enemy" parent="stage/actors" instance=ExtResource("6_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6273, 1.24435, 0.812614)
+current_state = 1
+abs_alert_distance = 2.0
+random_patrol_min_dist = 25.0
+patrol_points = Array[NodePath]([NodePath("../../Enemy Patrol Nodes/1"), NodePath("../../Enemy Patrol Nodes/2"), NodePath("../../Enemy Patrol Nodes/3"), NodePath("../../Enemy Patrol Nodes/4"), NodePath("../../Enemy Patrol Nodes/5")])
+accuracy = 0.0
+min_cover_search = 25.0
 
 [node name="Enemy Patrol Nodes" type="Node3D" parent="stage"]
 
@@ -502,7 +508,7 @@ skeleton = NodePath("../CollisionShape3D")
 script = ExtResource("9_ya4ey")
 
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4334, 1.47578, 12.3289)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.64, 1.47578, 3.61951)
 interact_distance = 3.0
 
 [node name="pausable" type="Node3D" parent="."]

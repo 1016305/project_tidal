@@ -87,7 +87,7 @@ title = "Pixelate"
 attached_nodes = PackedInt32Array(14, 18, 17, 15, 52)
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_ic2uh"]
-size = Vector2(1504, 562)
+size = Vector2(1584, 562)
 title = "Flame Layer 1 Distort"
 attached_nodes = PackedInt32Array(12, 20, 11, 21, 19, 13, 9, 2, 53)
 
@@ -97,7 +97,7 @@ title = "Flame Layer 1"
 attached_nodes = PackedInt32Array(3, 10, 8, 4, 6, 51)
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_sspyx"]
-size = Vector2(1024, 522)
+size = Vector2(1064, 522)
 title = "Flame Layer 2"
 attached_nodes = PackedInt32Array(50, 23, 30, 31, 32, 33)
 
@@ -128,7 +128,7 @@ operator = 2
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_nq4cq"]
 size = Vector2(1504, 562)
 title = "Flame Layer 2 Distort"
-attached_nodes = PackedInt32Array(37, 40, 42, 41, 39, 38, 36, 35, 54)
+attached_nodes = PackedInt32Array(37, 40, 42, 41, 39, 38, 36, 35, 54, 55)
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_5udqh"]
 expanded_output_ports = [0]
@@ -512,7 +512,7 @@ nodes/fragment/18/position = Vector2(-2940, 340)
 nodes/fragment/19/node = SubResource("VisualShaderNodeTexture_t022a")
 nodes/fragment/19/position = Vector2(-1720, 1260)
 nodes/fragment/20/node = SubResource("VisualShaderNodeVectorOp_mpj55")
-nodes/fragment/20/position = Vector2(-1120, 940)
+nodes/fragment/20/position = Vector2(-1040, 940)
 nodes/fragment/21/node = SubResource("VisualShaderNodeVectorDecompose_5fvit")
 nodes/fragment/21/position = Vector2(-1460, 1300)
 nodes/fragment/23/node = SubResource("VisualShaderNodeTexture_nm0hh")
@@ -526,7 +526,7 @@ nodes/fragment/26/position = Vector2(-680, 559)
 nodes/fragment/27/node = SubResource("VisualShaderNodeFrame_sspyx")
 nodes/fragment/27/position = Vector2(-720, -140)
 nodes/fragment/30/node = SubResource("VisualShaderNodeFloatOp_uxflw")
-nodes/fragment/30/position = Vector2(-680, 200)
+nodes/fragment/30/position = Vector2(-720, 200)
 nodes/fragment/31/node = SubResource("VisualShaderNodeVectorOp_aw1os")
 nodes/fragment/31/position = Vector2(-460, 120)
 nodes/fragment/32/node = SubResource("VisualShaderNodeVectorDecompose_32tqp")
@@ -536,9 +536,9 @@ nodes/fragment/33/position = Vector2(80, -200)
 nodes/fragment/34/node = SubResource("VisualShaderNodeFrame_nq4cq")
 nodes/fragment/34/position = Vector2(-2400, -381)
 nodes/fragment/35/node = SubResource("VisualShaderNodeTexture_5udqh")
-nodes/fragment/35/position = Vector2(-1560, -340)
+nodes/fragment/35/position = Vector2(-1600, -340)
 nodes/fragment/36/node = SubResource("VisualShaderNodeVectorDecompose_pa0el")
-nodes/fragment/36/position = Vector2(-1280, -260)
+nodes/fragment/36/position = Vector2(-1340, -260)
 nodes/fragment/37/node = SubResource("VisualShaderNodeVectorOp_qv8ct")
 nodes/fragment/37/position = Vector2(-2060, -320)
 nodes/fragment/38/node = SubResource("VisualShaderNodeTexture_mu5r1")

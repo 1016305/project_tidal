@@ -1,6 +1,5 @@
 extends Node3D
 
-signal weapon_fired
 #weapon instantion
 #handles weapon swapping and meshinstance generation
 @export var weapon_type : weapons:
@@ -164,7 +163,7 @@ func _on_player_swap_weapons(wep: Variant) -> void:
 
 func shoot(delta):
 	if fire_delay.is_stopped() and weapon_type.weapon_current_ammo != 0:
-		emit_signal('weapon_fired')
+		Global.weapon_fired.emit()
 		shoot_sounds()
 		fire_delay.start()
 		weapon_type.weapon_current_ammo -= weapon_type.ammo_per_shot
@@ -173,7 +172,7 @@ func shoot(delta):
 		weapon_recoil(delta)
 		if result: 
 			test_raycast(result.get("position"),result.get("normal"),result.get("collider"))
-			if get_node(result.get("collider").get_path()) is Advanced_Enemy or get_node(result.get("collider").get_path()) is Enemy:
+			if get_node(result.get("collider").get_path()) is DumbEnemy or get_node(result.get("collider").get_path()) is Enemy:
 				var guy_you_shot = get_node(result.get("collider").get_path())
 				damage_enemy(guy_you_shot)
 	if weapon_type.weapon_current_ammo <= 0:
