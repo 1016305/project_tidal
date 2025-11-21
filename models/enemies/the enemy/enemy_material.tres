@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://d34c4yhjr3qps"]
+
+[ext_resource type="Texture2D" uid="uid://coolin742vrob" path="res://models/enemies/the enemy/enemy_basecolor.png" id="1_yeng7"]
+[ext_resource type="Texture2D" uid="uid://d2gj0jmokbqyg" path="res://models/enemies/the enemy/enemy_emission_mask.png" id="2_hdp52"]
+[ext_resource type="Texture2D" uid="uid://bcmmhikg5qqht" path="res://models/enemies/the enemy/enemy_metallic-enemy_rough.png" id="3_1ltk0"]
+[ext_resource type="Texture2D" uid="uid://sutvux7aala1" path="res://models/enemies/the enemy/enemy_normal.png" id="4_koi7q"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_yeng7")
+metallic = 1.0
+metallic_texture = ExtResource("3_1ltk0")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3_1ltk0")
+roughness_texture_channel = 1
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_operator = 1
+emission_texture = ExtResource("2_hdp52")
+normal_enabled = true
+normal_texture = ExtResource("4_koi7q")
+texture_filter = 2

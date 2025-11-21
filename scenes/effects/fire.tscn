@@ -69,7 +69,7 @@ turbulence_noise_scale = 7.98
 render_priority = 0
 shader = ExtResource("3_lv8hs")
 shader_parameter/tex_frg_3 = ExtResource("4_0obw5")
-shader_parameter/billboard = false
+shader_parameter/billboard = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_d73pc"]
 resource_local_to_scene = true

@@ -5,13 +5,14 @@ class_name DumbEnemy extends CharacterBody3D
 @onready var shoot_delay_timer: Timer = $shoot_delay
 @onready var melee_raycast: RayCast3D = $melee_raycast
 @onready var cover_timer: Timer = $cover_timer
+@onready var mesh: MeshInstance3D = $MeshInstance3D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var origin: Vector3
 var await_frame: bool
 var player
 const BULLET = preload("res://scenes/enemies/bullet.tscn")
 signal shooting_done
-@onready var mesh: MeshInstance3D = $MeshInstance3D
 
 @export_category("Primary Logic")
 enum States{None,Idle,Alert,Attack,MoveToCover,Cover,MoveFromCover,Melee,Dead}
@@ -102,7 +103,7 @@ var move_to_ground_bool = false
 ## The maximum melee damage the enemy deals
 @export var max_melee_damage: float = 15
 ## How long after the enemy stop moving until it melees the player (seconds)
-@export var melee_delay: float = 1
+@export var melee_delay: float = 0.3
 ## How long after the melee until the enemy moves again #maybe this is replaced with an animation?
 @export var melee_cooldown: float = 1
 var melee_bool: bool = false
@@ -124,6 +125,7 @@ func _ready() -> void:
 	shoot_delay_timer.wait_time = 60/rate_of_fire
 	melee_raycast.target_position = Vector3(0,0,-melee_range)
 	current_hp = max_hp
+	animation_player.play("idle_animation")
 
 func _physics_process(delta: float) -> void:
 	main_behaviour()
@@ -259,6 +261,7 @@ func alert():
 		#face the player
 		do_look_at_target = false
 		#play a little animation
+		##This is where you call the alert animation
 		var mat = mesh.get_surface_override_material(0)
 		var tween = get_tree().create_tween()
 		tween.tween_property(mat, "albedo_color", Color.YELLOW, 2)
@@ -489,10 +492,10 @@ func dead():
 	if !dead_bool:
 		dead_bool = !dead_bool
 		agent.target_position = position
-		var mat = mesh.get_surface_override_material(0)
-		var tween = get_tree().create_tween()
-		tween.tween_property(mat, "albedo_color", Color.RED, 2)
-		await tween.finished
+			#var mat = mesh.get_surface_override_material(0)
+			#var tween = get_tree().create_tween()
+			#tween.tween_property(mat, "albedo_color", Color.RED, 2)
+			#await tween.finished
 		queue_free()
 ##additional functions
 #------------STOLEN FROM VICTORKARP.COM--------------------------------#
