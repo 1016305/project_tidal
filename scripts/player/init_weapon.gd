@@ -17,6 +17,8 @@ var current_ammo: int
 var time: float = 0.0
 var bloom_variance: float = 0.0
 
+var is_dead: bool = false
+
 var raycast_test = preload("res://scenes/weapons/weapon_extra/raycast_test.tscn")
 @onready var fire_delay: Timer = $fire_delay
 @onready var muzzle_flare: Node3D = $muzzle_flare
@@ -34,6 +36,9 @@ func _input(event):
 
 func _ready() -> void:
 	Global.player_weapon = self
+	Global.player_died.connect(player_dead)
+	Global.player_respawned.connect(player_dead)
+	is_dead = false
 	#idk man sometimes it shits itself and this stops the initialisation before its not ready
 	if not is_node_ready():
 		await ready
@@ -42,18 +47,19 @@ func _ready() -> void:
 	Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
 
 func _physics_process(delta: float) -> void:
-	sway_weapon(delta)
-	bob_weapon(delta)
-	Global.debug.add_property("Current Weapon", weapon_type.name, 1)
-	Global.debug.add_property("Weapon Position", position, 1)
-	Global.debug.add_property("Mouse Movement", mouse_movement, 1)
-	if get_child(0):
-		change_weapon_fov(weapon_type.fov_slider)
+	if !is_dead:
+		sway_weapon(delta)
+		bob_weapon(delta)
+		Global.debug.add_property("Current Weapon", weapon_type.name, 1)
+		Global.debug.add_property("Weapon Position", position, 1)
+		Global.debug.add_property("Mouse Movement", mouse_movement, 1)
+		if get_child(0):
+			change_weapon_fov(weapon_type.fov_slider)
+		return_weapon_to_start_pos(delta)
+		bloom(delta)
 	if Input.is_action_pressed("attack_1"):
 		is_firing = true
 	else: is_firing = false
-	return_weapon_to_start_pos(delta)
-	bloom(delta)
 	#refresh_weapon()
 	#commented this bitch out for the recoil stuff. not sure if it's importante
 	#position = weapon_type.position
@@ -266,6 +272,10 @@ func bloom(delta):
 
 #func add_ammo(ammo_to_add):
 	#weapon_type.
+
+func player_dead():
+	is_dead = !is_dead
+
 
 func refresh_weapon():
 	unload_weapon()

@@ -3,6 +3,7 @@ class_name Bullet extends Node3D
 @onready var area_3d: Area3D = $StaticBody3D/Area3D
 var direction
 var speed = 20
+var damage = 0
 
 func _ready() -> void:
 	destroy_me()
@@ -21,6 +22,6 @@ func rotate_to_target(target):
 	look_at(target)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body:
-		Global.enemy_hit_something.emit(body)
+	if body == Global.player:
+		Global.player.damage(damage)
 		queue_free()
