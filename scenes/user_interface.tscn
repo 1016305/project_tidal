@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dlfk08xleb3kw"]
+[gd_scene load_steps=17 format=3 uid="uid://dlfk08xleb3kw"]
 
 [ext_resource type="Theme" uid="uid://dt57x1ox0ea6o" path="res://resources/themes/main_menu.tres" id="1_sdud1"]
 [ext_resource type="Script" uid="uid://cbbsm2eihvi53" path="res://scripts/player/reticle.gd" id="1_syvep"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://c0mxcid7e1pd" path="res://scripts/player/health_counter.gd" id="5_lmgon"]
 [ext_resource type="Script" uid="uid://dr1wf5e32otvb" path="res://scripts/utility/interact_label.gd" id="7_xsrv6"]
 [ext_resource type="Script" uid="uid://c0xpxnptxn888" path="res://scripts/utility/damage_indicator.gd" id="10_prbuy"]
+[ext_resource type="Script" uid="uid://dnvlwc7ugsvou" path="res://scripts/player/death_mask.gd" id="11_5kqoc"]
 
 [sub_resource type="Theme" id="Theme_jbsfc"]
 default_font_size = 36
@@ -196,3 +197,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_prbuy")
 script = ExtResource("10_prbuy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+script = ExtResource("11_5kqoc")

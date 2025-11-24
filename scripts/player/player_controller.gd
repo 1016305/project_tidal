@@ -3,8 +3,6 @@ extends CharacterBody3D
 #player controller
 #contains all camera and movement script
 
-##DELETEME
-const BULLET = preload("res://scenes/enemies/bullet.tscn")
 #player nodes
 @onready var player_head: Node3D = $stand_collider/player_head
 @onready var camera: Camera3D = $stand_collider/player_head/camera
@@ -54,13 +52,13 @@ var is_crouching: bool = false
 var is_mouse_hidden: bool = false
 var is_running: bool = false
 var is_falling: bool = false
-
+var is_dead: bool = false
 #player weapon states
 var weapon_a: bool = true
 var weapon_b: bool = false
 var wep_a = preload("res://models/weapons/assault_rifle/assault_rifle_weapon.tres")
 var wep_b = preload("res://models/weapons/cube_test_weapon/test_cube_weapon.tres")
-@onready var main_weapon_node: Node3D = $stand_collider/player_head/camera/weapon_rig/weapon
+@onready var main_weapon_node: Node3D = $stand_collider/player_head/camera/weapon_rig
 signal swap_weapons(wep)
 
 ##temporary remove me pls
@@ -74,35 +72,40 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	Global.player_health.emit(current_health,max_health)
 	Global.set_mouse_sens.connect(update_sensitivity)
+	Global.player_respawned.connect(player_respawned)
 
 #unhandled input process
 #uses mouse to handle rotation
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion and !is_mouse_hidden:
-		rotate_y(deg_to_rad(-event.relative.x * (mouse_sens * mouse_sens_multiplier)))
-		player_head.rotate_x(deg_to_rad(-event.relative.y * (mouse_sens * mouse_sens_multiplier)))
-		player_head.rotation.x = clamp(player_head.rotation.x, deg_to_rad(MIN_LOOK_X), deg_to_rad(MAX_LOOK_X))
-		player_head.rotation.y = 0 # clamp rotation of head to 0 otherwise overreach causes control inversion during lean
+	if !is_dead:
+		if event is InputEventMouseMotion and !is_mouse_hidden:
+			rotate_y(deg_to_rad(-event.relative.x * (mouse_sens * mouse_sens_multiplier)))
+			player_head.rotate_x(deg_to_rad(-event.relative.y * (mouse_sens * mouse_sens_multiplier)))
+			player_head.rotation.x = clamp(player_head.rotation.x, deg_to_rad(MIN_LOOK_X), deg_to_rad(MAX_LOOK_X))
+			player_head.rotation.y = 0 # clamp rotation of head to 0 otherwise overreach causes control inversion during lean
 
 #main physics process
 #contains all movement related functions
 func _physics_process(delta: float) -> void:
 	handle_gravity(delta)
-	handle_move(delta)
-	handle_sprint(delta)
-	handle_jump()
+	if !is_dead:
+		handle_move(delta)
+		handle_sprint(delta)
+		handle_jump()
 	toggle_mouse()
-	handle_head_roll(input_dir, delta)
-	handle_crouch(delta)
+	if !is_dead:
+		handle_head_roll(input_dir, delta)
+		handle_crouch(delta)
 	check_jump_and_fall()
-	test_change_weapon()
-	move_and_slide()
-	shoot(delta)
-	reload()
-	toggle_flashlight()
-	interact_cast()
-	if Input.is_action_just_pressed("interact"):
-		interact()
+	if !is_dead:
+		test_change_weapon()
+		move_and_slide()
+		shoot(delta)
+		reload()
+		toggle_flashlight()
+		interact_cast()
+		if Input.is_action_just_pressed("interact"):
+			interact()
 	
 	take_damage_test()
 	#I cannot fathom why this only works here. Probably part of some insidious component of move_and_slide
@@ -277,20 +280,38 @@ func toggle_flashlight():
 ##Getters and Setters
 #Player damage and health
 func damage(damage):
-	current_health -= damage
-	if current_health < 0:
-		current_health = 0
-	Global.player_health.emit(current_health,max_health)
-	Global.player_was_hit.emit()
-	print("Took ", damage, " damage")
-	death_check()
+	if !is_dead:
+		current_health -= damage
+		if current_health < 0:
+			current_health = 0
+		Global.player_health.emit(current_health,max_health)
+		Global.player_was_hit.emit()
+		print("Took ", damage, " damage")
+		death_check()
 	
 func heal(health):
 	current_health += health
 	
 func death_check():
 	if current_health <= 0:
+		is_dead = true
 		print("player is dead")
+		death_anim()
+		
+func death_anim():
+	if is_dead:
+		var dir = 1
+		dir = lerp_angle(player_head.rotation.z, dir, 1)
+		Global.player_died.emit()
+		var tween = create_tween()
+		var tween2 = create_tween()
+		var tween3 = create_tween()
+		tween.set_parallel(true)
+		tween2.set_parallel(true)
+		tween3.set_parallel(true)
+		tween.tween_property(player_head, "position", Vector3(0,-0.543,0), 1)
+		tween2.tween_property(player_head,"rotation",Vector3(0,0,dir), 1)
+		tween3.tween_property(main_weapon_node,"position", Vector3(0,-3,0), 2)
 
 func update_sensitivity(val):
 	mouse_sens_multiplier = val 
@@ -301,6 +322,12 @@ func _set_current_speed(speedmod):
 func _get_current_speed():
 	return current_speed
 	
+func kill_player():
+	current_health = 0
+	death_check()
+	
+func player_respawned():
+	is_dead = false
 ##Debug Info
 func player_debug():
 
@@ -312,7 +339,7 @@ func player_debug():
 	Global.debug.add_property('Current Velocity ABS', velocity.abs().snappedf(0.01), 1)
 	Global.debug.add_property('Current Velocity', velocity.snappedf(0.01), 1)
 	Global.debug.add_property('Player Head Pitch', player_head.rotation.x, 1)
-	Global.debug.add_property('Player Location', position, 1)
+	Global.debug.add_property('Player Head Rotation', player_head.rotation, 1)
 
 func spawn_test_enemy():
 	if Input.is_action_just_pressed("spawn_test_enemy"):
@@ -322,7 +349,4 @@ func spawn_test_enemy():
 		
 func take_damage_test():
 	if Input.is_action_just_pressed("test_damage"):
-		var active_bullet = BULLET.instantiate()
-		get_tree().root.add_child(active_bullet)
-		active_bullet.position = position
-		active_bullet.rotation = rotation
+		pass

@@ -6,6 +6,7 @@ class_name DumbEnemy extends CharacterBody3D
 @onready var melee_raycast: RayCast3D = $melee_raycast
 @onready var cover_timer: Timer = $cover_timer
 @onready var mesh: MeshInstance3D = $MeshInstance3D
+@onready var bullet_spawn_point: Node3D = $enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped/bullet_spawn_point
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var origin: Vector3
@@ -69,6 +70,8 @@ var has_shot: bool = false
 @export var min_damage: float = 5
 ## Max damage range dealt by this enemy
 @export var max_damage: float = 10
+## How fast the bullets move. Default = 20
+@export var projectile_speed: float = 20
 var shots_taken: int = 0
 
 @export_category("Secondary Logic | Find Cover")
@@ -112,20 +115,30 @@ var last_state: States
 @export_category("Secondary Logic | Death and Damage")
 var dead_bool: bool = false
 
+## Respawn Stuff
+var stored_current_position
+var stored_current_rotation
+var stored_current_state
+var stored_current_hp
+
+
 var debug_bool: bool = false
 
 func _ready() -> void:
 	Global.player_is_assigned.connect(assign_player)
 	Global.enemy_hit_something.connect(enemy_hit_something)
 	Global.weapon_fired.connect(alert_from_weapon_fire)
+	Global.checkpoint_reached.connect(store_data)
+	Global.player_respawned.connect(load_data)
 	force_map()
 	set_physics_process(false)
 	call_deferred("dump_first_physics_frame")
-	origin = global_position
+	origin = position
 	shoot_delay_timer.wait_time = 60/rate_of_fire
 	melee_raycast.target_position = Vector3(0,0,-melee_range)
 	current_hp = max_hp
 	animation_player.play("idle_animation")
+	print(name," ",origin)
 
 func _physics_process(delta: float) -> void:
 	main_behaviour()
@@ -195,6 +208,7 @@ func get_random_spot() -> Vector3:
 	var random_pos = origin + random_vector(random_patrol_min_dist, random_patrol_max_dist)
 	var map = agent.get_navigation_map()
 	var here = NavigationServer3D.map_get_closest_point(map, random_pos)
+	print(name," ", here)
 	return here
 
 #cycles through the array of patrol nodes
@@ -262,6 +276,7 @@ func alert():
 		do_look_at_target = false
 		#play a little animation
 		##This is where you call the alert animation
+		Global.alert_encounter.emit()
 		var mat = mesh.get_surface_override_material(0)
 		var tween = get_tree().create_tween()
 		tween.tween_property(mat, "albedo_color", Color.YELLOW, 2)
@@ -302,20 +317,20 @@ func shoot_loop(i,rate):
 		has_shot = !has_shot
 		for u in range(i):
 			alternate_shoot()
-			print(u, "/", i)
 			await shoot_delay_timer.timeout
-		print("shooting done. changing to cover")
 		current_state = States.MoveToCover
 		has_shot = !has_shot
 		shoot_delay_timer.stop()
 
 func alternate_shoot():
 	var active_bullet = BULLET.instantiate()
+	active_bullet.damage = randi_range(min_damage,max_damage)
+	active_bullet.speed = projectile_speed
 	get_tree().root.add_child(active_bullet)
 	var end = Vector3(randf_range(-accuracy,accuracy),randf_range(-accuracy,accuracy),randf_range(-accuracy,accuracy))
 	var rotaty: Vector3 = Vector3(rotation.x, rotation.y + end.y, rotation.z + end.z)
 	active_bullet.rotation = rotaty
-	active_bullet.position = global_position
+	active_bullet.position = bullet_spawn_point.global_position
 	active_bullet.position += Vector3(-sin(deg_to_rad(rotation_degrees.y)),0 , -cos(deg_to_rad(rotation_degrees.y))) * 2
 
 func shoot(accuracy):
@@ -375,9 +390,7 @@ func move_to_cover(attempts,see_player):
 
 func find_cover_loop(i,see_player):
 	for u in range(i):
-		print("performing search ",u," for cover")
 		if find_cover(see_player):
-			print("Found cover on search number ",u)
 			break
 	agent.set_target_position(current_cover)
 	#do_look_at_target = true
@@ -403,23 +416,17 @@ func test_cover(where, should_see_player) -> bool:
 	if collision:
 		if collision.collider == player:
 			if should_see_player:
-				print("I should see the player, and I can see the player.")
 				return true
 			else:
-				print("I should not see the player, but I can.")
 				return false
 		elif collision.collider != player:
 			if should_see_player:
-				print("I should see the player, but I cannot.")
 				return false
 			else:
-				print("I should not see the player, and a cannot.")
 				return true
 		else:
-			print("Collision did not hit a player or anything else.")
 			return false
 	else:
-		print("Collision did not hit anything.")
 		return false
 
 ## Cover Behaviours
@@ -492,11 +499,13 @@ func dead():
 	if !dead_bool:
 		dead_bool = !dead_bool
 		agent.target_position = position
+		animation_player.stop()
 			#var mat = mesh.get_surface_override_material(0)
 			#var tween = get_tree().create_tween()
 			#tween.tween_property(mat, "albedo_color", Color.RED, 2)
 			#await tween.finished
-		queue_free()
+		Global.enemy_died.emit(self)
+		#queue_free()
 ##additional functions
 #------------STOLEN FROM VICTORKARP.COM--------------------------------#
 #https://victorkarp.com/godot-engine-rotating-a-character-with-transform-basis-slerp/
@@ -561,5 +570,21 @@ func move_to_point():
 	var new_vel = (next_pos - cur_pos).normalized() * speed
 	velocity = new_vel
 
+func global_alert():
+	current_state = States.Alert
+	
+## Checkpoint stuff
+func store_data():
+	stored_current_position = position
+	stored_current_rotation = rotation
+	stored_current_state = current_state
+	stored_current_hp = current_hp
+	
+func load_data():
+	position = stored_current_position
+	rotation = stored_current_rotation
+	current_state = stored_current_state
+	current_hp = stored_current_hp
+	
 func debug():
 	Global.debug.add_property('Enemy Main State', States.keys()[current_state], 1)
