@@ -263,6 +263,10 @@ func weapon_spread(delta,mask):
 	var result = space_state.intersect_ray(query)
 	return result
 
+func add_ammo(ammo):
+	weapon_type.weapon_reserve_ammo += ammo
+	Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
+
 func bloom(delta):
 	if is_firing:
 		bloom_variance = lerp(bloom_variance,weapon_type.bloom, weapon_type.bloom_time * delta)

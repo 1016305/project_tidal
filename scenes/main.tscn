@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://jwb2jhicd4uh"]
+[gd_scene load_steps=42 format=3 uid="uid://jwb2jhicd4uh"]
 
 [ext_resource type="PackedScene" uid="uid://dk7fm3g1nj0t1" path="res://scenes/utility/checkpointmanager.tscn" id="1_jkv2x"]
 [ext_resource type="Texture2D" uid="uid://dkd8bff5lu385" path="res://textures/spruit_sunrise.jpg" id="1_jyhfs"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://qfl1t3u1b88" path="res://textures/dust.png" id="12_eb6dy"]
 [ext_resource type="Script" uid="uid://cw1p844w0bhug" path="res://scripts/utility/deathplane.gd" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://bmuwd8paqpi11" path="res://scenes/pickups/health_pickup.tscn" id="17_muem4"]
+[ext_resource type="PackedScene" uid="uid://bx86f1sxx3ka7" path="res://scenes/pickups/ammo_pickup.tscn" id="18_dp3eg"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tbgi4"]
 panorama = ExtResource("1_jyhfs")
@@ -810,6 +811,9 @@ shape = SubResource("BoxShape3D_dp3eg")
 
 [node name="HealthPickup" parent="." instance=ExtResource("17_muem4")]
 transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -14.4292, 0.31863, 20.7955)
+
+[node name="AmmoPickup" parent="." instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -16.754, 0.630024, 20.8264)
 
 [connection signal="body_entered" from="stage/Checkpoint" to="stage/Checkpoint" method="_on_body_entered"]
 [connection signal="body_entered" from="stage/Checkpoint2" to="stage/Checkpoint2" method="_on_body_entered"]
