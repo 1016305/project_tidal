@@ -151,3 +151,4 @@ anti_aliasing/quality/screen_space_aa=1
 
 common_user_settings/root_output_path="res://GeneratedSoundBanks"
 project_settings/windows_platform_info="res://Wwise/resources/Windows.tres"
+project_settings/mac_platform_info="res://Wwise/resources/Mac.tres"

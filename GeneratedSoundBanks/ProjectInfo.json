@@ -8,6 +8,13 @@
   "CacheRoot": "../WwiseProject/.cache",
   "Platforms": [
    {
+    "Name": "Mac",
+    "GUID": "{9FDC3D24-4F05-42D5-BC6C-32B161FB5433}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "../WwiseProject/GeneratedSoundBanks/Mac"
+   },
+   {
     "Name": "Windows",
     "GUID": "{648AE1A2-E266-467D-B48B-35DFA97E8440}",
     "BasePlatform": "Windows",
@@ -24,6 +31,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{EE84DC5B-30AB-8B55-CFBC-D26091081FE7}"
+  "FileHash": "{A2A05D2A-186F-5309-0725-DCE43F5E1514}"
  }
 }

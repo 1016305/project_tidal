@@ -7,12 +7,17 @@ extends CharacterBody3D
 @onready var player_head: Node3D = $stand_collider/player_head
 @onready var camera: Camera3D = $stand_collider/player_head/camera
 @onready var flashlight: SpotLight3D = $stand_collider/player_head/camera/flashlight
+@onready var regen_timer: Timer = $regen_timer
+var regen_bool: bool = false
 
 @onready var stand_collider: CollisionShape3D = $stand_collider
 @onready var _original_capsule_height = $stand_collider.shape.height
+@export var interact_distance : float = 2
+var interact_result
 
 #player movement adjustable variables
 var mouse_sens = 0.3
+var mouse_sens_multiplier: float = 1
 var player_jump_height = 5
 var player_crouch_height = 0.8
 var crouch_jump_add = player_crouch_height * 0.1 
@@ -20,7 +25,6 @@ var current_fov = FOV_MIN
 const FOV_MIN = 90.0
 const FOV_MAX = 110.0
 const FOV_LERP_SPEED = 5.0
-@export var uspeed = 0.0000
 
 #player speed modifiers
 const _WALK_SPEED = 6.0 #static but put here for clarity
@@ -50,13 +54,13 @@ var is_crouching: bool = false
 var is_mouse_hidden: bool = false
 var is_running: bool = false
 var is_falling: bool = false
-
+var is_dead: bool = false
 #player weapon states
 var weapon_a: bool = true
 var weapon_b: bool = false
 var wep_a = preload("res://models/weapons/assault_rifle/assault_rifle_weapon.tres")
 var wep_b = preload("res://models/weapons/cube_test_weapon/test_cube_weapon.tres")
-@onready var main_weapon_node: Node3D = $stand_collider/player_head/camera/weapon_rig/weapon
+@onready var main_weapon_node: Node3D = $stand_collider/player_head/camera/weapon_rig
 signal swap_weapons(wep)
 
 ##temporary remove me pls
@@ -69,33 +73,42 @@ func _ready() -> void:
 	Global.main_camera = camera
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	Global.player_health.emit(current_health,max_health)
-	
+	Global.set_mouse_sens.connect(update_sensitivity)
+	Global.player_respawned.connect(player_respawned)
 
 #unhandled input process
 #uses mouse to handle rotation
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion and !is_mouse_hidden:
-		rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
-		player_head.rotate_x(deg_to_rad(-event.relative.y * mouse_sens))
-		player_head.rotation.x = clamp(player_head.rotation.x, deg_to_rad(MIN_LOOK_X), deg_to_rad(MAX_LOOK_X))
-		player_head.rotation.y = 0 # clamp rotation of head to 0 otherwise overreach causes control inversion during lean
+	if !is_dead:
+		if event is InputEventMouseMotion and !is_mouse_hidden:
+			rotate_y(deg_to_rad(-event.relative.x * (mouse_sens * mouse_sens_multiplier)))
+			player_head.rotate_x(deg_to_rad(-event.relative.y * (mouse_sens * mouse_sens_multiplier)))
+			player_head.rotation.x = clamp(player_head.rotation.x, deg_to_rad(MIN_LOOK_X), deg_to_rad(MAX_LOOK_X))
+			player_head.rotation.y = 0 # clamp rotation of head to 0 otherwise overreach causes control inversion during lean
 
 #main physics process
 #contains all movement related functions
 func _physics_process(delta: float) -> void:
 	handle_gravity(delta)
-	handle_move(delta)
-	handle_sprint(delta)
-	handle_jump()
+	if !is_dead:
+		handle_move(delta)
+		handle_sprint(delta)
+		handle_jump()
 	toggle_mouse()
-	handle_head_roll(input_dir, delta)
-	handle_crouch(delta)
+	if !is_dead:
+		handle_head_roll(input_dir, delta)
+		handle_crouch(delta)
 	check_jump_and_fall()
-	test_change_weapon()
-	move_and_slide()
-	shoot(delta)
-	reload()
-	toggle_flashlight()
+	if !is_dead:
+		test_change_weapon()
+		move_and_slide()
+		shoot(delta)
+		reload()
+		toggle_flashlight()
+		interact_cast()
+		regen_health(delta)
+		if Input.is_action_just_pressed("interact"):
+			interact()
 	
 	take_damage_test()
 	#I cannot fathom why this only works here. Probably part of some insidious component of move_and_slide
@@ -216,6 +229,27 @@ func fov_change(delta, minfov, maxfov):
 			camera.fov = lerp(camera.fov, minfov, (FOV_LERP_SPEED * 3) *delta)
 			camera.position.z = lerp(camera.position.z, 0.0, (FOV_LERP_SPEED * 3) * delta)
 
+func interact_cast():
+	var space_state = camera.get_world_3d().direct_space_state
+	var screen_center = get_viewport().get_visible_rect().size / 2
+	screen_center.y = screen_center.y/3 * 1.6
+	var origin = camera.project_ray_origin(screen_center)
+	var end = origin + camera.project_ray_normal(screen_center) * interact_distance
+	var query = PhysicsRayQueryParameters3D.create(origin,end)
+	query.collide_with_bodies = true
+	var result = space_state.intersect_ray(query)
+	var current_cast_result = result.get("collider")
+	if current_cast_result != interact_result:
+		if interact_result and interact_result.has_user_signal("unfocused"):
+			interact_result.emit_signal("unfocused")
+		interact_result = current_cast_result
+		if interact_result and interact_result.has_user_signal("focused"):
+			interact_result.emit_signal("focused")
+
+func interact():
+	if interact_result != null and interact_result.has_user_signal("interact"):
+		interact_result.emit_signal("interact")
+
 ##Weapon stuff. Move to another script when convenient
 func test_change_weapon():
 	if Input.is_action_pressed("test_swap_to_weapon_a"):
@@ -249,26 +283,73 @@ func toggle_flashlight():
 ##Getters and Setters
 #Player damage and health
 func damage(damage):
-	current_health -= damage
-	if current_health < 0:
-		current_health = 0
-	Global.player_health.emit(current_health,max_health)
-	print("Took ", damage, " damage")
-	death_check()
+	if !is_dead:
+		current_health -= damage
+		regen_bool = false
+		if current_health < 0:
+			current_health = 0
+		Global.player_health.emit(current_health,max_health)
+		Global.player_was_hit.emit()
+		print("Took ", damage, " damage")
+		death_check()
 	
-func heal(health):
-	current_health += health
+func heal(heal_amt):
+	if !is_dead:
+		current_health += heal_amt
+		Global.player_was_healed.emit()
+		if current_health >= 100:
+			current_health = 100
+		Global.player_health.emit(current_health,max_health)
 	
 func death_check():
 	if current_health <= 0:
+		is_dead = true
 		print("player is dead")
+		death_anim()
+		
+func death_anim():
+	if is_dead:
+		var dir = 1
+		dir = lerp_angle(player_head.rotation.z, dir, 1)
+		Global.player_died.emit()
+		var tween = create_tween()
+		var tween2 = create_tween()
+		var tween3 = create_tween()
+		tween.set_parallel(true)
+		tween2.set_parallel(true)
+		tween3.set_parallel(true)
+		tween.tween_property(player_head, "position", Vector3(0,-0.543,0), 1)
+		tween2.tween_property(player_head,"rotation",Vector3(0,0,dir), 1)
+		tween3.tween_property(main_weapon_node,"position", Vector3(0,-3,0), 2)
 
+func update_sensitivity(val):
+	mouse_sens_multiplier = val 
 
 #External function to adjust/call player speed from multiple fucntions. Adds edge friction modifier.
 func _set_current_speed(speedmod):
 	current_speed = _WALK_SPEED * speedmod
 func _get_current_speed():
 	return current_speed
+	
+func kill_player():
+	current_health = 0
+	death_check()
+
+func player_respawned():
+	is_dead = false
+	
+func regen_health(delta):
+	if current_health <= 20:
+		Global.player_health.emit(current_health,max_health)
+		if !regen_bool:
+			regen_bool = true
+			regen_timer.start()
+			await regen_timer.timeout
+			var tween = create_tween()
+			tween.tween_property(self,"current_health",20,3)
+	if current_health >= 20:
+		regen_timer.stop()
+		regen_bool = false
 	
 ##Debug Info
 func player_debug():
@@ -281,6 +362,8 @@ func player_debug():
 	Global.debug.add_property('Current Velocity ABS', velocity.abs().snappedf(0.01), 1)
 	Global.debug.add_property('Current Velocity', velocity.snappedf(0.01), 1)
 	Global.debug.add_property('Player Head Pitch', player_head.rotation.x, 1)
+	Global.debug.add_property('Player Head Rotation', player_head.rotation, 1)
+	Global.debug.add_property('Regen Timer', regen_timer.time_left, 1)
 
 func spawn_test_enemy():
 	if Input.is_action_just_pressed("spawn_test_enemy"):
@@ -290,4 +373,4 @@ func spawn_test_enemy():
 		
 func take_damage_test():
 	if Input.is_action_just_pressed("test_damage"):
-		damage(randi_range(6,8))
+		damage(5)

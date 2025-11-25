@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://yypvo7ntgpwj"
+path="res://.godot/imported/._Auditorium.wav-b580606b53e9430c06ce192505cc37c2.sample"
+
+[deps]
+
+source_file="res://WwiseProject/Originals/Plugins/iZotope Hybrid Reverb/._Auditorium.wav"
+dest_files=["res://.godot/imported/._Auditorium.wav-b580606b53e9430c06ce192505cc37c2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

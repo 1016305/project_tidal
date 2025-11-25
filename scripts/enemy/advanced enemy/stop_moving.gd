@@ -2,4 +2,5 @@ extends ConditionLeaf
 
 func tick(actor:Node, _blackboard:Blackboard) -> int:
 	actor.toggle_navigation(false)
+	print("Stop Moving")
 	return SUCCESS
