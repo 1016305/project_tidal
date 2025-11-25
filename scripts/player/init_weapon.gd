@@ -174,13 +174,18 @@ func shoot(delta):
 		fire_delay.start()
 		weapon_type.weapon_current_ammo -= weapon_type.ammo_per_shot
 		Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
-		var result = weapon_spread(delta)
+		var result_enemy = weapon_spread(delta,2)
+		var result_world = weapon_spread(delta,1)
 		weapon_recoil(delta)
-		if result: 
-			test_raycast(result.get("position"),result.get("normal"),result.get("collider"))
-			if get_node(result.get("collider").get_path()) is DumbEnemy or get_node(result.get("collider").get_path()) is Enemy:
-				var guy_you_shot = get_node(result.get("collider").get_path())
-				damage_enemy(guy_you_shot)
+		if result_enemy: 
+			test_raycast(result_enemy.get("position"),result_enemy.get("normal"),result_enemy.get("collider"))
+			if get_node(result_enemy.get("collider").get_path()) is GenericHitbox:
+				var part_shot = get_node(result_enemy.get("collider").get_path()) 
+				part_shot.on_hit(weapon_type.weapon_damage)
+		if result_world: 
+			test_raycast(result_world.get("position"),result_world.get("normal"),result_world.get("collider"))
+				#var guy_you_shot = get_node(result.get("collider").get_path())
+				#guy_you_shot.on_hit()
 	if weapon_type.weapon_current_ammo <= 0:
 		reload()
 	
@@ -238,7 +243,7 @@ func reload():
 		Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
 		is_reloading = !is_reloading
 
-func weapon_spread(delta):
+func weapon_spread(delta,mask):
 	var camera = Global.main_camera
 	var space_state = camera.get_world_3d().direct_space_state
 	
@@ -253,6 +258,7 @@ func weapon_spread(delta):
 	var origin = camera.project_ray_origin(screen_center)
 	var end = origin + camera.project_ray_normal(screen_center) * 1000
 	var query = PhysicsRayQueryParameters3D.create(origin,end)
+	query.collision_mask = mask
 	query.collide_with_bodies = true
 	var result = space_state.intersect_ray(query)
 	return result

@@ -8,6 +8,9 @@ class_name DumbEnemy extends CharacterBody3D
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 @onready var bullet_spawn_point: Node3D = $enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped/bullet_spawn_point
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+##DELETEME
+@export var monitor: bool = false
+
 
 var origin: Vector3
 var await_frame: bool
@@ -18,7 +21,7 @@ signal shooting_done
 @export_category("Primary Logic")
 enum States{None,Idle,Alert,Attack,MoveToCover,Cover,MoveFromCover,Melee,Dead}
 @export var current_state: States
-@export var max_hp: int = 50
+@export var max_hp: int = 100
 @export var current_hp: int
 @export var speed: float = 5
 @export var rotation_speed  = 4
@@ -113,6 +116,7 @@ var melee_bool: bool = false
 var last_state: States
 
 @export_category("Secondary Logic | Death and Damage")
+@export var hitboxes: Array[CollisionShape3D]
 var dead_bool: bool = false
 
 ## Respawn Stuff
@@ -370,7 +374,8 @@ func test_draw_ray(collision):
 	poly.look_at(player.player_head.global_position)
 	await get_tree().create_timer(1).timeout
 	poly.queue_free()
-	
+
+
 func enemy_hit_something(body):
 	if body == player:
 		player.damage(randi_range(min_damage,max_damage))
@@ -384,7 +389,7 @@ func move_to_cover(attempts,see_player):
 		move_to_cover_bool = !move_to_cover_bool
 		#here we need to run "find cover" x number of times until it returns true. if it still returns false, get the position of the last cover and move there anyway
 		find_cover_loop(attempts,see_player)
-		await agent.target_reached
+		await agent.navigation_finished
 		current_state = States.Cover
 		move_to_cover_bool = !move_to_cover_bool
 
@@ -487,6 +492,15 @@ func melee():
 			melee_bool = !melee_bool
 ## Death and damage functions
 
+func check_body_part(bodypart,damage):
+	if !dead_bool:
+		if bodypart == "Head":
+			take_damage(damage * 1.2)
+		elif bodypart == "Body":
+			take_damage(damage)
+		elif bodypart == "Arm":
+			take_damage(damage * 0.8)
+
 func take_damage(damage):
 	current_hp-=damage
 	if current_state == States.Idle:
@@ -587,4 +601,5 @@ func load_data():
 	current_hp = stored_current_hp
 	
 func debug():
-	Global.debug.add_property('Enemy Main State', States.keys()[current_state], 1)
+	if monitor:
+		Global.debug.add_property('Enemy_State', States.keys()[current_state], 1)

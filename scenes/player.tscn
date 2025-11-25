@@ -121,3 +121,8 @@ omni_range = 1.843
 [node name="PauseMenu" parent="." instance=ExtResource("9_ur7pv")]
 
 [node name="AkListener3D" type="AkListener3D" parent="."]
+
+[node name="regen_timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true

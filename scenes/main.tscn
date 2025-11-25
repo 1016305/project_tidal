@@ -722,6 +722,7 @@ shape = SubResource("BoxShape3D_jbj1t")
 
 [node name="dumb enemy2" parent="." instance=ExtResource("6_eb6dy")]
 transform = Transform3D(0.39261, 0, -0.919705, 0, 1, 0, 0.919705, 0, 0.39261, -11.967, 1.24435, -16.0484)
+monitor = true
 current_state = 1
 abs_alert_distance = 2.0
 random_patrol_min_dist = 25.0

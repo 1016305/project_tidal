@@ -3,6 +3,7 @@ class_name EnemyEncounter extends Node3D
 var is_done: bool = false
 @export var wave: Array[DumbEnemy]
 var enemies_killed: int = 0
+var enemies_alerted: bool = false
 enum WhatNext{DoThing1,DoThing2,DoThing3,DoThing4}
 @export var end_encounter_action: WhatNext
 
@@ -27,5 +28,7 @@ func enemy_died(enemy):
 		enemies_killed +=1
 
 func alert_all_enemies_in_encounter():
-	for fella in wave:
-		fella.global_alert()
+	if !enemies_alerted:
+		for fella in wave:
+			fella.global_alert()
+		enemies_alerted = true
