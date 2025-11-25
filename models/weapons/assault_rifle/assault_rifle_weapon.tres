@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="weapons" load_steps=8 format=3 uid="uid://3jn5gl2dw4q2"]
+[gd_resource type="Resource" script_class="weapons" load_steps=10 format=3 uid="uid://3jn5gl2dw4q2"]
 
+[ext_resource type="ArrayMesh" uid="uid://dwgm1aoe467g5" path="res://models/weapons/hands/ar_hands_Cube_008.res" id="1_hh3ml"]
 [ext_resource type="Script" uid="uid://4ccqrj081s06" path="res://scripts/player/weapons.gd" id="1_r8rce"]
 [ext_resource type="ArrayMesh" uid="uid://dfluikeg8syi0" path="res://models/weapons/assault_rifle/meshes/gun_Cube_034.res" id="1_sjit1"]
 [ext_resource type="ArrayMesh" uid="uid://b3incus7tmf5f" path="res://models/weapons/assault_rifle/meshes/gun_Cylinder_012.res" id="2_uf5nn"]
 [ext_resource type="ArrayMesh" uid="uid://imbq165i7uom" path="res://models/weapons/assault_rifle/meshes/gun_Cube_035.res" id="3_4e8od"]
 [ext_resource type="ArrayMesh" uid="uid://ds3ge47kk86en" path="res://models/weapons/assault_rifle/meshes/gun_Plane.res" id="4_hh3ml"]
+[ext_resource type="ArrayMesh" uid="uid://k76i53jdklgm" path="res://models/weapons/hands/ar_hands_Cube_009.res" id="6_68sj0"]
 [ext_resource type="WwiseEvent" uid="uid://b58dm3wq2xbl0" path="res://Wwise/resources/Event/{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}.tres" id="6_uf5nn"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uf5nn"]
@@ -16,10 +18,18 @@ position = Vector3(0.31, -0.35, -0.64)
 rotation = Vector3(0, -90, 0)
 scale = Vector3(0.1, 0.1, 0.1)
 mesh = Array[Mesh]([ExtResource("1_sjit1"), ExtResource("2_uf5nn"), ExtResource("3_4e8od"), ExtResource("4_hh3ml")])
-muzzle_flare_pos = Vector3(-0.685, 0.08, -0.08)
+lhand = ExtResource("1_hh3ml")
+rhand = ExtResource("6_68sj0")
+lhand_pos = Vector3(-0.085, 0.025, 0.085)
+lhand_scl = Vector3(0.05, 0.05, 0.05)
+lhand_rot = Vector3(0.02, 89.37, 89.97)
+rhand_pos = Vector3(0.415, -0.05, -0.215)
+rhand_scl = Vector3(0.05, -0.05, 0.05)
+rhand_rot = Vector3(0.115, 90.13, 89.33)
+muzzle_flare_pos = Vector3(-0.635, 0.08, -0.08)
 crosshair = SubResource("CompressedTexture2D_uf5nn")
 weapon_rate_of_fire = 0.1
-weapon_damage = 7.0
+weapon_damage = 12.0
 weapon_decal_size = 0.1
 sway_min = Vector2(-20, -20)
 sway_max = Vector2(20, 20)

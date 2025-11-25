@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://ceemi68m7bf8k"]
+
+[ext_resource type="Texture2D" uid="uid://cgsbddhubvqu7" path="res://models/Structures/light/light_basecolor.png.png" id="1_65jlp"]
+[ext_resource type="Texture2D" uid="uid://capv4w1du620x" path="res://models/Structures/light/light_metallic.png-light_rough.png.png" id="2_h8rok"]
+[ext_resource type="Texture2D" uid="uid://b14x0snd5i70y" path="res://models/Structures/light/light_emissionmask.png" id="2_nottc"]
+[ext_resource type="Texture2D" uid="uid://cdmtticgm8ykh" path="res://models/Structures/light/light_normal.png.png" id="3_twvt5"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_65jlp")
+metallic = 1.0
+metallic_texture = ExtResource("2_h8rok")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_h8rok")
+roughness_texture_channel = 1
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+emission_operator = 1
+emission_texture = ExtResource("2_nottc")
+normal_enabled = true
+normal_texture = ExtResource("3_twvt5")
+texture_filter = 2

@@ -1,6 +1,5 @@
 extends Node3D
 
-signal weapon_fired
 #weapon instantion
 #handles weapon swapping and meshinstance generation
 @export var weapon_type : weapons:
@@ -17,6 +16,8 @@ var current_ammo: int
 
 var time: float = 0.0
 var bloom_variance: float = 0.0
+
+var is_dead: bool = false
 
 var raycast_test = preload("res://scenes/weapons/weapon_extra/raycast_test.tscn")
 @onready var fire_delay: Timer = $fire_delay
@@ -35,6 +36,9 @@ func _input(event):
 
 func _ready() -> void:
 	Global.player_weapon = self
+	Global.player_died.connect(player_dead)
+	Global.player_respawned.connect(player_dead)
+	is_dead = false
 	#idk man sometimes it shits itself and this stops the initialisation before its not ready
 	if not is_node_ready():
 		await ready
@@ -43,18 +47,20 @@ func _ready() -> void:
 	Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
 
 func _physics_process(delta: float) -> void:
-	sway_weapon(delta)
-	bob_weapon(delta)
-	Global.debug.add_property("Current Weapon", weapon_type.name, 1)
-	Global.debug.add_property("Weapon Position", position, 1)
-	Global.debug.add_property("Mouse Movement", mouse_movement, 1)
-	if get_child(0):
-		change_weapon_fov(weapon_type.fov_slider)
+	if !is_dead:
+		sway_weapon(delta)
+		bob_weapon(delta)
+		Global.debug.add_property("Current Weapon", weapon_type.name, 1)
+		Global.debug.add_property("Weapon Position", position, 1)
+		Global.debug.add_property("Mouse Movement", mouse_movement, 1)
+		if get_child(0):
+			change_weapon_fov(weapon_type.fov_slider)
+		return_weapon_to_start_pos(delta)
+		bloom(delta)
 	if Input.is_action_pressed("attack_1"):
 		is_firing = true
 	else: is_firing = false
-	return_weapon_to_start_pos(delta)
-	bloom(delta)
+	#refresh_weapon()
 	#commented this bitch out for the recoil stuff. not sure if it's importante
 	#position = weapon_type.position
 
@@ -108,17 +114,39 @@ func load_weapon():
 	start_pos = weapon_type.position
 	start_rot = weapon_type.rotation
 	#check if the weapon has multiple meshes
-	for i in weapon_type.mesh:
-			var newmesh = MeshInstance3D.new()
-			newmesh.mesh = i
-			newmesh.position = Vector3.ZERO
-			newmesh.rotation_degrees = Vector3.ZERO
-			newmesh.scale = Vector3.ONE
-			newmesh.scale = weapon_type.scale
-			newmesh.cast_shadow = 0
-			newmesh.set_layer_mask_value(2,true)
-			newmesh.set_layer_mask_value(1,false)
-			add_child(newmesh)
+	if weapon_type.mesh != null:
+		for i in weapon_type.mesh:
+				var newmesh = MeshInstance3D.new()
+				newmesh.mesh = i
+				newmesh.position = Vector3.ZERO
+				newmesh.rotation_degrees = Vector3.ZERO
+				newmesh.scale = Vector3.ONE
+				newmesh.scale = weapon_type.scale
+				newmesh.cast_shadow = 0
+				newmesh.set_layer_mask_value(2,true)
+				newmesh.set_layer_mask_value(1,false)
+				add_child(newmesh)
+	if weapon_type.lhand != null:
+		var l_hand_model = MeshInstance3D.new()
+		l_hand_model.mesh = weapon_type.lhand
+		l_hand_model.scale = weapon_type.lhand_scl
+		l_hand_model.position = weapon_type.lhand_pos
+		l_hand_model.rotation = weapon_type.lhand_rot
+		l_hand_model.cast_shadow = 0
+		l_hand_model.set_layer_mask_value(2,true)
+		l_hand_model.set_layer_mask_value(1,false)
+		add_child(l_hand_model)
+	if weapon_type.rhand != null:
+		var r_hand_model = MeshInstance3D.new()
+		r_hand_model.mesh = weapon_type.rhand
+		r_hand_model.scale = weapon_type.rhand_scl
+		r_hand_model.position = weapon_type.rhand_pos
+		r_hand_model.rotation = weapon_type.rhand_rot
+		r_hand_model.cast_shadow = 0
+		r_hand_model.set_layer_mask_value(2,true)
+		r_hand_model.set_layer_mask_value(1,false)
+		add_child(r_hand_model)
+	
 	position = weapon_type.position
 	rotation_degrees = weapon_type.rotation
 	fire_delay.wait_time = weapon_type.weapon_rate_of_fire
@@ -141,18 +169,23 @@ func _on_player_swap_weapons(wep: Variant) -> void:
 
 func shoot(delta):
 	if fire_delay.is_stopped() and weapon_type.weapon_current_ammo != 0:
-		emit_signal('weapon_fired')
+		Global.weapon_fired.emit()
 		shoot_sounds()
 		fire_delay.start()
 		weapon_type.weapon_current_ammo -= weapon_type.ammo_per_shot
 		Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
-		var result = weapon_spread(delta)
+		var result_enemy = weapon_spread(delta,2)
+		var result_world = weapon_spread(delta,1)
 		weapon_recoil(delta)
-		if result: 
-			test_raycast(result.get("position"),result.get("normal"),result.get("collider"))
-			if get_node(result.get("collider").get_path()) is Advanced_Enemy or get_node(result.get("collider").get_path()) is Enemy:
-				var guy_you_shot = get_node(result.get("collider").get_path())
-				damage_enemy(guy_you_shot)
+		if result_enemy: 
+			test_raycast(result_enemy.get("position"),result_enemy.get("normal"),result_enemy.get("collider"))
+			if get_node(result_enemy.get("collider").get_path()) is GenericHitbox:
+				var part_shot = get_node(result_enemy.get("collider").get_path()) 
+				part_shot.on_hit(weapon_type.weapon_damage)
+		if result_world: 
+			test_raycast(result_world.get("position"),result_world.get("normal"),result_world.get("collider"))
+				#var guy_you_shot = get_node(result.get("collider").get_path())
+				#guy_you_shot.on_hit()
 	if weapon_type.weapon_current_ammo <= 0:
 		reload()
 	
@@ -210,7 +243,7 @@ func reload():
 		Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
 		is_reloading = !is_reloading
 
-func weapon_spread(delta):
+func weapon_spread(delta,mask):
 	var camera = Global.main_camera
 	var space_state = camera.get_world_3d().direct_space_state
 	
@@ -225,9 +258,14 @@ func weapon_spread(delta):
 	var origin = camera.project_ray_origin(screen_center)
 	var end = origin + camera.project_ray_normal(screen_center) * 1000
 	var query = PhysicsRayQueryParameters3D.create(origin,end)
+	query.collision_mask = mask
 	query.collide_with_bodies = true
 	var result = space_state.intersect_ray(query)
 	return result
+
+func add_ammo(ammo):
+	weapon_type.weapon_reserve_ammo += ammo
+	Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
 
 func bloom(delta):
 	if is_firing:
@@ -244,3 +282,11 @@ func bloom(delta):
 
 #func add_ammo(ammo_to_add):
 	#weapon_type.
+
+func player_dead():
+	is_dead = !is_dead
+
+
+func refresh_weapon():
+	unload_weapon()
+	load_weapon()

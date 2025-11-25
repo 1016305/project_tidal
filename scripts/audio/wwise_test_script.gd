@@ -7,5 +7,5 @@ func _ready() -> void:
 	body_entered.connect(self.on_body_entered)
 	
 func on_body_entered(no):
-	print("test")
+	#print("test")
 	event.post(self)
