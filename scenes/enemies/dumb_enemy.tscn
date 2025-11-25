@@ -1100,7 +1100,6 @@ metadata/TT_CM_Scale = "1.0"
 metadata/vs = "{  }"
 
 [node name="larm1_hitbox" type="StaticBody3D" parent="enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped" node_paths=PackedStringArray("parent")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("3_cbrdg")
@@ -1153,7 +1152,6 @@ metadata/extras = {
 metadata/vs = "{  }"
 
 [node name="rarm1_hitbox" type="StaticBody3D" parent="enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped" node_paths=PackedStringArray("parent")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("3_cbrdg")

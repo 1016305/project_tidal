@@ -17,6 +17,7 @@ signal ammo_update(current_ammo:int, max_ammo:int)
 signal player_is_reloading
 signal weapon_fired
 signal player_was_hit
+signal player_was_healed
 signal player_died
 signal checkpoint_reached
 signal player_respawned

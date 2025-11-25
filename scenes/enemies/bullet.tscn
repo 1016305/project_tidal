@@ -82,6 +82,7 @@ transform = Transform3D(-0.587291, -5.13426e-08, 3.82137e-15, 0, -2.56713e-08, -
 mesh = SubResource("PlaneMesh_ncsv3")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+visible = false
 amount = 50
 lifetime = 2.0
 process_material = SubResource("ParticleProcessMaterial_5f5ym")

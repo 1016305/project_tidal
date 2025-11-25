@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dlfk08xleb3kw"]
+[gd_scene load_steps=20 format=3 uid="uid://dlfk08xleb3kw"]
 
 [ext_resource type="Theme" uid="uid://dt57x1ox0ea6o" path="res://resources/themes/main_menu.tres" id="1_sdud1"]
 [ext_resource type="Script" uid="uid://cbbsm2eihvi53" path="res://scripts/player/reticle.gd" id="1_syvep"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://dr1wf5e32otvb" path="res://scripts/utility/interact_label.gd" id="7_xsrv6"]
 [ext_resource type="Script" uid="uid://c0xpxnptxn888" path="res://scripts/utility/damage_indicator.gd" id="10_prbuy"]
 [ext_resource type="Script" uid="uid://dnvlwc7ugsvou" path="res://scripts/player/death_mask.gd" id="11_5kqoc"]
+[ext_resource type="Script" uid="uid://cqmei8p2pxnkn" path="res://scripts/utility/heal_indicator.gd" id="11_rwqes"]
 
 [sub_resource type="Theme" id="Theme_jbsfc"]
 default_font_size = 36
@@ -22,16 +23,27 @@ default_font_size = 22
 _data = [Vector2(0.251969, 0.675541), 0.0, 0.0, 0, 0]
 point_count = 1
 
-[sub_resource type="Gradient" id="Gradient_aisij"]
-offsets = PackedFloat32Array(0.568182, 1)
-colors = PackedColorArray(0, 0, 0, 0, 0.601563, 0.0587463, 0.0587463, 1)
+[sub_resource type="Gradient" id="Gradient_rwqes"]
+offsets = PackedFloat32Array(0.631818, 1)
+colors = PackedColorArray(0.722, 0, 0, 0, 0.722656, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_prbuy"]
-gradient = SubResource("Gradient_aisij")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vdd1l"]
+gradient = SubResource("Gradient_rwqes")
 width = 1280
 height = 720
 fill = 1
 fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_vdd1l"]
+offsets = PackedFloat32Array(0.659091, 0.909091, 1)
+colors = PackedColorArray(0.075, 0.431, 0.718, 0, 0.0745878, 0.431313, 0.717703, 0.840909, 0.075, 0.431, 0.718, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_prbuy"]
+gradient = SubResource("Gradient_vdd1l")
+width = 1280
+height = 720
+fill = 2
+fill_from = Vector2(0.503521, 0.532081)
 
 [node name="user_interface" type="Control"]
 process_mode = 3
@@ -46,6 +58,7 @@ theme = ExtResource("1_sdud1")
 script = ExtResource("2_aisij")
 
 [node name="reticle" type="CenterContainer" parent="."]
+z_index = 2
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -73,6 +86,7 @@ points = PackedVector2Array(0, 5, 0, 15)
 width = 2.0
 
 [node name="debug_menu" type="PanelContainer" parent="."]
+z_index = 2
 layout_mode = 0
 offset_left = 10.0
 offset_top = 10.0
@@ -92,6 +106,7 @@ layout_mode = 2
 text = "DEBUG"
 
 [node name="health counter" type="VBoxContainer" parent="."]
+z_index = 2
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -115,6 +130,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ammo counter" type="VBoxContainer" parent="."]
+z_index = 2
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -141,6 +157,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="reload_container" type="CenterContainer" parent="."]
+z_index = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -157,6 +174,7 @@ layout_mode = 2
 text = "RELOADING"
 
 [node name="Interact Label" type="CenterContainer" parent="."]
+z_index = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -175,6 +193,7 @@ width_curve = SubResource("Curve_xsrv6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 visible = false
+z_index = 2
 layout_mode = 2
 offset_left = 592.0
 offset_top = 348.0
@@ -195,8 +214,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_prbuy")
+texture = SubResource("GradientTexture2D_vdd1l")
 script = ExtResource("10_prbuy")
+
+[node name="HealIndicator" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_prbuy")
+script = ExtResource("11_rwqes")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

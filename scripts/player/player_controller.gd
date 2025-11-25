@@ -296,6 +296,7 @@ func damage(damage):
 func heal(heal_amt):
 	if !is_dead:
 		current_health += heal_amt
+		Global.player_was_healed.emit()
 		if current_health >= 100:
 			current_health = 100
 		Global.player_health.emit(current_health,max_health)
@@ -347,6 +348,7 @@ func regen_health(delta):
 			var tween = create_tween()
 			tween.tween_property(self,"current_health",20,3)
 	if current_health >= 20:
+		regen_timer.stop()
 		regen_bool = false
 	
 ##Debug Info
