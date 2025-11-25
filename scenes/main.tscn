@@ -798,7 +798,7 @@ process_material = SubResource("ParticleProcessMaterial_muem4")
 draw_pass_1 = SubResource("QuadMesh_yc10j")
 
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.64, 1.47578, 3.61951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.64, 1.47578, 23.0533)
 interact_distance = 3.0
 
 [node name="Deathplane" type="Area3D" parent="."]

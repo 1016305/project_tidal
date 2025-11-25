@@ -8,6 +8,7 @@ class_name DumbEnemy extends CharacterBody3D
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 @onready var bullet_spawn_point: Node3D = $enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped/bullet_spawn_point
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 ##DELETEME
 @export var monitor: bool = false
 
@@ -281,10 +282,11 @@ func alert():
 		#play a little animation
 		##This is where you call the alert animation
 		Global.alert_encounter.emit()
-		var mat = mesh.get_surface_override_material(0)
-		var tween = get_tree().create_tween()
-		tween.tween_property(mat, "albedo_color", Color.YELLOW, 2)
-		await tween.finished
+		await get_tree().create_timer(randf_range(0.2,0.5)).timeout
+		animation_player.stop()
+		animation_player.play("alert")
+		await get_tree().create_timer(randf_range(3.08,3.5)).timeout
+		animation_player.play("idle_animation")
 		var shoot_or_cover = randi_range(1,20)
 		if shoot_or_cover % 2 == 0:
 			current_state = States.Attack
@@ -520,6 +522,7 @@ func dead():
 			#await tween.finished
 		Global.enemy_died.emit(self)
 		#queue_free()
+		
 ##additional functions
 #------------STOLEN FROM VICTORKARP.COM--------------------------------#
 #https://victorkarp.com/godot-engine-rotating-a-character-with-transform-basis-slerp/
@@ -599,6 +602,10 @@ func load_data():
 	rotation = stored_current_rotation
 	current_state = stored_current_state
 	current_hp = stored_current_hp
+	
+func change_state(state:States):
+	last_state = current_state
+	current_state = state
 	
 func debug():
 	if monitor:
