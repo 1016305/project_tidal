@@ -18,6 +18,7 @@ var await_frame: bool
 var player
 const BULLET = preload("res://scenes/enemies/bullet.tscn")
 signal shooting_done
+var rotate_at_all: bool = true
 
 @export_category("Primary Logic")
 enum States{None,Idle,Alert,Attack,MoveToCover,Cover,MoveFromCover,Melee,Dead}
@@ -153,6 +154,9 @@ func _physics_process(delta: float) -> void:
 	handle_gravity(delta)
 	death_check()
 	debug()
+	if dead_bool:
+		if current_state != States.Dead:
+			current_state = States.Dead
 
 func main_behaviour():
 	if await_frame:
@@ -163,23 +167,29 @@ func main_behaviour():
 				idle_behavior()
 				the_big_alert_check()
 			States.Alert:
-				alert()
+				if !dead_bool:
+					alert()
 			States.Attack:
-				attack()
-				melee_check()
+				if !dead_bool:
+					attack()
+					melee_check()
 			States.MoveToCover:
-				move_to_cover(find_cover_attempts,false)
-				melee_check()
+				if !dead_bool:
+					move_to_cover(find_cover_attempts,false)
+					melee_check()
 			States.Cover:
-				cover()
-				see_player()
-				melee_check()
+				if !dead_bool:
+					cover()
+					see_player()
+					melee_check()
 			States.MoveFromCover:
-				move_from_cover(find_ground_attempts,true)
-				melee_check()
+				if !dead_bool:
+					move_from_cover(find_ground_attempts,true)
+					melee_check()
 			States.Melee:
-				melee()
-				melee_check()
+				if !dead_bool:
+					melee()
+					melee_check()
 			States.Dead:
 				dead()
 
@@ -303,6 +313,8 @@ func attack():
 	#stand still
 	agent.target_position = position
 	#shoot at player rand(x) number of times
+	animation_player.stop()
+	animation_player.play("shoot")
 	shoot_loop(randi_range(shots_fired_min,shots_fired_max),(60/rate_of_fire))
 	#change to MovingToCover
 
@@ -324,6 +336,8 @@ func shoot_loop(i,rate):
 		for u in range(i):
 			alternate_shoot()
 			await shoot_delay_timer.timeout
+		animation_player.stop()
+		animation_player.play("idle_animation")
 		current_state = States.MoveToCover
 		has_shot = !has_shot
 		shoot_delay_timer.stop()
@@ -515,7 +529,15 @@ func dead():
 	if !dead_bool:
 		dead_bool = !dead_bool
 		agent.target_position = position
+		speed = 0
+		rotate_at_all = false
 		animation_player.stop()
+		animation_player.play("death")
+		await get_tree().create_timer(1.9).timeout
+		animation_player.pause()
+		
+		await get_tree().create_timer(2).timeout
+		self.collision_mask = 0
 			#var mat = mesh.get_surface_override_material(0)
 			#var tween = get_tree().create_tween()
 			#tween.tween_property(mat, "albedo_color", Color.RED, 2)
@@ -549,10 +571,11 @@ func rotate_enemy(delta):
 	transform.basis = transform.basis.slerp(look_target_rotation, rotation_lerp).orthonormalized()
 	
 func face_target(delta):
-	look_target_location.y = transform.origin.y
-	if look_target_location != transform.origin:
-		look_target_rotation = transform.looking_at(look_target_location,Vector3.UP).basis
-		rotate_enemy(delta)
+	if rotate_at_all:
+		look_target_location.y = transform.origin.y
+		if look_target_location != transform.origin:
+			look_target_rotation = transform.looking_at(look_target_location,Vector3.UP).basis
+			rotate_enemy(delta)
 
 #----------------------END STOLEN FROM VICTORKARP.COM------------------#
 
