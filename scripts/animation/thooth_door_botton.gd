@@ -3,6 +3,7 @@ class_name BigDoor extends Node
 @onready var animation_player2: AnimationPlayer = $"../../../control_panel_Imported/StaticBody3D_buttonLP/AnimationPlayer"
 @onready var interact_component: InteractionComponent = $"../InteractComponent"
 @onready var omni_light_3d: OmniLight3D = $"../../../control_panel_Imported/StaticBody3D_buttonLP/OmniLight3D"
+@export var event : WwiseEvent
 signal turn_lights_on
 
 var parent
@@ -20,6 +21,7 @@ func connect_parent():
 	
 func door_animation():
 	if !has_played:
+		event.post(self)
 		interact_component.is_used = true
 		animation_player.play("top_door_move")
 		animation_player2.play("button_push")
