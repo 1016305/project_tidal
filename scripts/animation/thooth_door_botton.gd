@@ -21,7 +21,7 @@ func connect_parent():
 	
 func door_animation():
 	if !has_played:
-		event.post(self)
+		#event.post(self)
 		interact_component.is_used = true
 		animation_player.play("top_door_move")
 		animation_player2.play("button_push")

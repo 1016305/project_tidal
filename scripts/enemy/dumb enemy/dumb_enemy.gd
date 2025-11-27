@@ -8,6 +8,7 @@ class_name DumbEnemy extends CharacterBody3D
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 @onready var bullet_spawn_point: Node3D = $enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped/bullet_spawn_point
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var saw_spin: AnimationPlayer = $SawSpin
 
 ##DELETEME
 @export var monitor: bool = false
@@ -111,7 +112,7 @@ var move_to_ground_bool = false
 ## The maximum melee damage the enemy deals
 @export var max_melee_damage: float = 15
 ## How long after the enemy stop moving until it melees the player (seconds)
-@export var melee_delay: float = 0.3
+@export var melee_delay: float = 1.4
 ## How long after the melee until the enemy moves again #maybe this is replaced with an animation?
 @export var melee_cooldown: float = 1
 var melee_bool: bool = false
@@ -144,6 +145,8 @@ func _ready() -> void:
 	melee_raycast.target_position = Vector3(0,0,-melee_range)
 	current_hp = max_hp
 	animation_player.play("idle_animation")
+	saw_spin.play("saw_spin")
+	saw_spin.speed_scale = 2
 	print(name," ",origin)
 
 func _physics_process(delta: float) -> void:
@@ -497,12 +500,16 @@ func melee():
 		agent.target_position = player.position
 		if position.distance_to(player.position) <= melee_range:
 			agent.target_position = position
+			animation_player.stop()
+			animation_player.play("melee")
+			animation_player.queue("idle_animation")
 			await get_tree().create_timer(melee_delay).timeout
 			if melee_raycast.get_collider() == player:
 				player.damage(randi_range(min_melee_damage,max_melee_damage))
 				await get_tree().create_timer(melee_cooldown).timeout
 				melee_bool = !melee_bool
 			else:
+				await get_tree().create_timer(melee_cooldown).timeout
 				melee_bool = !melee_bool
 		else:
 			melee_bool = !melee_bool
@@ -533,6 +540,7 @@ func dead():
 		rotate_at_all = false
 		animation_player.stop()
 		animation_player.play("death")
+		saw_spin.stop()
 		await get_tree().create_timer(1.9).timeout
 		animation_player.pause()
 		
