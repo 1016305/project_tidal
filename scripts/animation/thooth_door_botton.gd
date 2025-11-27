@@ -3,8 +3,10 @@ class_name BigDoor extends Node
 @onready var animation_player2: AnimationPlayer = $"../../../control_panel_Imported/StaticBody3D_buttonLP/AnimationPlayer"
 @onready var interact_component: InteractionComponent = $"../InteractComponent"
 @onready var omni_light_3d: OmniLight3D = $"../../../control_panel_Imported/StaticBody3D_buttonLP/OmniLight3D"
-@export var event : WwiseEvent
+@export var door_sound : WwiseEvent
+@export var button_sound: WwiseEvent
 signal turn_lights_on
+
 
 var parent
 var has_played: bool = false
@@ -21,12 +23,14 @@ func connect_parent():
 	
 func door_animation():
 	if !has_played:
-		#event.post(self)
+		button_sound.post(self)
+		door_sound.post(self)
 		interact_component.is_used = true
 		animation_player.play("top_door_move")
 		animation_player2.play("button_push")
 		has_played = true
 		emit_signal("turn_lights_on")
+
 		
 func light_lerp(delta):
 	omni_light_3d.light_energy = lerp(omni_light_3d.light_energy, 0.0, 3.0 * delta)

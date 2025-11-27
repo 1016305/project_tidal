@@ -1352,110 +1352,6 @@ tracks/15/keys = {
 "times": PackedFloat32Array(0, 1.23333, 1.4, 2.3, 2.43333, 3)
 }
 
-[sub_resource type="Animation" id="Animation_67dsm"]
-resource_name = "shoot"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped:rotation:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.00820454, -0.25, 0, 0.25, 0, 0.00687544, -0.25, 0, 0.25, 0, 0.00820454, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.133333, 0.3)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped:rotation:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(-1.56148, -0.25, 0, 0.25, 0, -1.56046, -0.25, 0, 0.25, 0, -1.56148, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.133333, 0.3)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped:rotation:z")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(-3.12692, -0.25, 0, 0.25, 0, -2.99187, -0.25, 0, 0.25, 0, -3.12692, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.133333, 0.3)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:position:x")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(1.14845, -0.25, 0, 0.25, 0, 0.972609, -0.25, 0, 0.25, 0, 1.14845, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.113333, 0.3)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:position:y")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(-0.0110867, -0.25, 0, 0.25, 0, 0.0153675, -0.25, 0, 0.25, 0, -0.0110867, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.113333, 0.3)
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:position:z")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(1.19209e-07, -0.25, 0, 0.25, 0, 0.00183773, -0.25, 0, 0.25, 0, 1.19209e-07, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.113333, 0.3)
-}
-tracks/6/type = "bezier"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:rotation:x")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.000297627, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.113333, 0.3)
-}
-tracks/7/type = "bezier"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:rotation:y")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.000279, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.113333, 0.3)
-}
-tracks/8/type = "bezier"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:rotation:z")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.032862, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.113333, 0.3)
-}
-
 [sub_resource type="Animation" id="Animation_mkiqx"]
 resource_name = "melee"
 length = 1.68
@@ -1625,6 +1521,110 @@ tracks/14/keys = {
 "times": PackedFloat32Array(0, 0.869804, 1.30005, 1.67216)
 }
 
+[sub_resource type="Animation" id="Animation_67dsm"]
+resource_name = "shoot"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.00820454, -0.25, 0, 0.25, 0, 0.00687544, -0.25, 0, 0.25, 0, 0.00820454, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.133333, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-1.56148, -0.25, 0, 0.25, 0, -1.56046, -0.25, 0, 0.25, 0, -1.56148, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.133333, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-3.12692, -0.25, 0, 0.25, 0, -2.99187, -0.25, 0, 0.25, 0, -3.12692, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.133333, 0.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1.14845, -0.25, 0, 0.25, 0, 0.972609, -0.25, 0, 0.25, 0, 1.14845, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.113333, 0.3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-0.0110867, -0.25, 0, 0.25, 0, 0.0153675, -0.25, 0, 0.25, 0, -0.0110867, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.113333, 0.3)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1.19209e-07, -0.25, 0, 0.25, 0, 0.00183773, -0.25, 0, 0.25, 0, 1.19209e-07, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.113333, 0.3)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:rotation:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.000297627, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.113333, 0.3)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:rotation:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.000279, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.113333, 0.3)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped:rotation:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.032862, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.113333, 0.3)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cbrdg"]
 _data = {
 &"RESET": SubResource("Animation_2x3kc"),
@@ -1633,6 +1633,42 @@ _data = {
 &"idle_animation": SubResource("Animation_8v64s"),
 &"melee": SubResource("Animation_mkiqx"),
 &"shoot": SubResource("Animation_67dsm")
+}
+
+[sub_resource type="Animation" id="Animation_fastd"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.11759e-08, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(4.09782e-08, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-2.38419e-07, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="Animation" id="Animation_57l2t"]
@@ -1671,42 +1707,6 @@ tracks/2/keys = {
 "handle_modes": PackedInt32Array(1, 0),
 "points": PackedFloat32Array(-2.38419e-07, 0, 0, 0, 0, 6.25306, 0, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.5)
-}
-
-[sub_resource type="Animation" id="Animation_fastd"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1.11759e-08, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(4.09782e-08, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:z")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-2.38419e-07, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mkiqx"]
