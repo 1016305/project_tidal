@@ -699,7 +699,7 @@ script = ExtResource("9_ya4ey")
 [node name="Encounter" type="Node3D" parent="stage" node_paths=PackedStringArray("wave")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.910763, -23.1609)
 script = ExtResource("10_trceg")
-wave = [NodePath("../../dumb enemy2"), NodePath("../../dumb enemy3"), NodePath("../../dumb enemy4"), NodePath("../../dumb enemy5"), NodePath("../../dumb enemy6")]
+wave = [NodePath("../../dumb enemy2")]
 
 [node name="Area3D" type="Area3D" parent="stage/Encounter"]
 
@@ -734,50 +734,6 @@ min_damage = 1.0
 max_damage = 1.0
 min_cover_search = 25.0
 
-[node name="dumb enemy3" parent="." instance=ExtResource("6_eb6dy")]
-transform = Transform3D(-0.950228, 0, -0.311556, 0, 1, 0, 0.311556, 0, -0.950228, -0.624197, 1.24435, -21.5677)
-current_state = 1
-abs_alert_distance = 2.0
-random_patrol_min_dist = 25.0
-patrol_points = Array[NodePath]([NodePath("../stage/Enemy Patrol Nodes/1"), NodePath("../stage/Enemy Patrol Nodes/2"), NodePath("../stage/Enemy Patrol Nodes/3"), NodePath("../stage/Enemy Patrol Nodes/4"), NodePath("../stage/Enemy Patrol Nodes/5")])
-accuracy = 0.0
-min_damage = 1.0
-max_damage = 1.0
-min_cover_search = 25.0
-
-[node name="dumb enemy4" parent="." instance=ExtResource("6_eb6dy")]
-transform = Transform3D(-0.434932, 0, 0.900463, 0, 1, 0, -0.900463, 0, -0.434932, 4.43623, 1.24435, -24.3013)
-current_state = 1
-abs_alert_distance = 2.0
-random_patrol_min_dist = 25.0
-patrol_points = Array[NodePath]([NodePath("../stage/Enemy Patrol Nodes/1"), NodePath("../stage/Enemy Patrol Nodes/2"), NodePath("../stage/Enemy Patrol Nodes/3"), NodePath("../stage/Enemy Patrol Nodes/4"), NodePath("../stage/Enemy Patrol Nodes/5")])
-accuracy = 0.0
-min_damage = 1.0
-max_damage = 1.0
-min_cover_search = 25.0
-
-[node name="dumb enemy5" parent="." instance=ExtResource("6_eb6dy")]
-transform = Transform3D(-0.549285, 0, 0.835635, 0, 1, 0, -0.835635, 0, -0.549285, 13.9245, 1.24435, -29.0119)
-current_state = 1
-abs_alert_distance = 2.0
-random_patrol_min_dist = 25.0
-patrol_points = Array[NodePath]([NodePath("../stage/Enemy Patrol Nodes/1"), NodePath("../stage/Enemy Patrol Nodes/2"), NodePath("../stage/Enemy Patrol Nodes/3"), NodePath("../stage/Enemy Patrol Nodes/4"), NodePath("../stage/Enemy Patrol Nodes/5")])
-accuracy = 0.0
-min_damage = 1.0
-max_damage = 1.0
-min_cover_search = 25.0
-
-[node name="dumb enemy6" parent="." instance=ExtResource("6_eb6dy")]
-transform = Transform3D(0.814369, 0, 0.580348, 0, 1, 0, -0.580348, 0, 0.814369, 16.581, 1.24435, -16.0484)
-current_state = 1
-abs_alert_distance = 2.0
-random_patrol_min_dist = 25.0
-patrol_points = Array[NodePath]([NodePath("../stage/Enemy Patrol Nodes/1"), NodePath("../stage/Enemy Patrol Nodes/2"), NodePath("../stage/Enemy Patrol Nodes/3"), NodePath("../stage/Enemy Patrol Nodes/4"), NodePath("../stage/Enemy Patrol Nodes/5")])
-accuracy = 0.0
-min_damage = 1.0
-max_damage = 1.0
-min_cover_search = 25.0
-
 [node name="pausable" type="Node3D" parent="."]
 process_mode = 3
 script = ExtResource("1_tipki")
@@ -798,7 +754,7 @@ process_material = SubResource("ParticleProcessMaterial_muem4")
 draw_pass_1 = SubResource("QuadMesh_yc10j")
 
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.64, 1.47578, 3.61951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.64, 1.47578, 23.0533)
 interact_distance = 3.0
 
 [node name="Deathplane" type="Area3D" parent="."]

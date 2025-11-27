@@ -8,6 +8,8 @@ class_name DumbEnemy extends CharacterBody3D
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 @onready var bullet_spawn_point: Node3D = $enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped/bullet_spawn_point
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var saw_spin: AnimationPlayer = $SawSpin
+
 ##DELETEME
 @export var monitor: bool = false
 
@@ -17,6 +19,7 @@ var await_frame: bool
 var player
 const BULLET = preload("res://scenes/enemies/bullet.tscn")
 signal shooting_done
+var rotate_at_all: bool = true
 
 @export_category("Primary Logic")
 enum States{None,Idle,Alert,Attack,MoveToCover,Cover,MoveFromCover,Melee,Dead}
@@ -109,7 +112,7 @@ var move_to_ground_bool = false
 ## The maximum melee damage the enemy deals
 @export var max_melee_damage: float = 15
 ## How long after the enemy stop moving until it melees the player (seconds)
-@export var melee_delay: float = 0.3
+@export var melee_delay: float = 1.4
 ## How long after the melee until the enemy moves again #maybe this is replaced with an animation?
 @export var melee_cooldown: float = 1
 var melee_bool: bool = false
@@ -142,6 +145,8 @@ func _ready() -> void:
 	melee_raycast.target_position = Vector3(0,0,-melee_range)
 	current_hp = max_hp
 	animation_player.play("idle_animation")
+	saw_spin.play("saw_spin")
+	saw_spin.speed_scale = 2
 	print(name," ",origin)
 
 func _physics_process(delta: float) -> void:
@@ -152,6 +157,9 @@ func _physics_process(delta: float) -> void:
 	handle_gravity(delta)
 	death_check()
 	debug()
+	if dead_bool:
+		if current_state != States.Dead:
+			current_state = States.Dead
 
 func main_behaviour():
 	if await_frame:
@@ -162,23 +170,29 @@ func main_behaviour():
 				idle_behavior()
 				the_big_alert_check()
 			States.Alert:
-				alert()
+				if !dead_bool:
+					alert()
 			States.Attack:
-				attack()
-				melee_check()
+				if !dead_bool:
+					attack()
+					melee_check()
 			States.MoveToCover:
-				move_to_cover(find_cover_attempts,false)
-				melee_check()
+				if !dead_bool:
+					move_to_cover(find_cover_attempts,false)
+					melee_check()
 			States.Cover:
-				cover()
-				see_player()
-				melee_check()
+				if !dead_bool:
+					cover()
+					see_player()
+					melee_check()
 			States.MoveFromCover:
-				move_from_cover(find_ground_attempts,true)
-				melee_check()
+				if !dead_bool:
+					move_from_cover(find_ground_attempts,true)
+					melee_check()
 			States.Melee:
-				melee()
-				melee_check()
+				if !dead_bool:
+					melee()
+					melee_check()
 			States.Dead:
 				dead()
 
@@ -281,10 +295,11 @@ func alert():
 		#play a little animation
 		##This is where you call the alert animation
 		Global.alert_encounter.emit()
-		var mat = mesh.get_surface_override_material(0)
-		var tween = get_tree().create_tween()
-		tween.tween_property(mat, "albedo_color", Color.YELLOW, 2)
-		await tween.finished
+		await get_tree().create_timer(randf_range(0.2,0.5)).timeout
+		animation_player.stop()
+		animation_player.play("alert")
+		await get_tree().create_timer(randf_range(3.08,3.5)).timeout
+		animation_player.play("idle_animation")
 		var shoot_or_cover = randi_range(1,20)
 		if shoot_or_cover % 2 == 0:
 			current_state = States.Attack
@@ -301,6 +316,8 @@ func attack():
 	#stand still
 	agent.target_position = position
 	#shoot at player rand(x) number of times
+	animation_player.stop()
+	animation_player.play("shoot")
 	shoot_loop(randi_range(shots_fired_min,shots_fired_max),(60/rate_of_fire))
 	#change to MovingToCover
 
@@ -322,6 +339,8 @@ func shoot_loop(i,rate):
 		for u in range(i):
 			alternate_shoot()
 			await shoot_delay_timer.timeout
+		animation_player.stop()
+		animation_player.play("idle_animation")
 		current_state = States.MoveToCover
 		has_shot = !has_shot
 		shoot_delay_timer.stop()
@@ -481,12 +500,16 @@ func melee():
 		agent.target_position = player.position
 		if position.distance_to(player.position) <= melee_range:
 			agent.target_position = position
+			animation_player.stop()
+			animation_player.play("melee")
+			animation_player.queue("idle_animation")
 			await get_tree().create_timer(melee_delay).timeout
 			if melee_raycast.get_collider() == player:
 				player.damage(randi_range(min_melee_damage,max_melee_damage))
 				await get_tree().create_timer(melee_cooldown).timeout
 				melee_bool = !melee_bool
 			else:
+				await get_tree().create_timer(melee_cooldown).timeout
 				melee_bool = !melee_bool
 		else:
 			melee_bool = !melee_bool
@@ -513,13 +536,23 @@ func dead():
 	if !dead_bool:
 		dead_bool = !dead_bool
 		agent.target_position = position
+		speed = 0
+		rotate_at_all = false
 		animation_player.stop()
+		animation_player.play("death")
+		saw_spin.stop()
+		await get_tree().create_timer(1.9).timeout
+		animation_player.pause()
+		
+		await get_tree().create_timer(2).timeout
+		self.collision_mask = 0
 			#var mat = mesh.get_surface_override_material(0)
 			#var tween = get_tree().create_tween()
 			#tween.tween_property(mat, "albedo_color", Color.RED, 2)
 			#await tween.finished
 		Global.enemy_died.emit(self)
 		#queue_free()
+		
 ##additional functions
 #------------STOLEN FROM VICTORKARP.COM--------------------------------#
 #https://victorkarp.com/godot-engine-rotating-a-character-with-transform-basis-slerp/
@@ -546,10 +579,11 @@ func rotate_enemy(delta):
 	transform.basis = transform.basis.slerp(look_target_rotation, rotation_lerp).orthonormalized()
 	
 func face_target(delta):
-	look_target_location.y = transform.origin.y
-	if look_target_location != transform.origin:
-		look_target_rotation = transform.looking_at(look_target_location,Vector3.UP).basis
-		rotate_enemy(delta)
+	if rotate_at_all:
+		look_target_location.y = transform.origin.y
+		if look_target_location != transform.origin:
+			look_target_rotation = transform.looking_at(look_target_location,Vector3.UP).basis
+			rotate_enemy(delta)
 
 #----------------------END STOLEN FROM VICTORKARP.COM------------------#
 
@@ -599,6 +633,10 @@ func load_data():
 	rotation = stored_current_rotation
 	current_state = stored_current_state
 	current_hp = stored_current_hp
+	
+func change_state(state:States):
+	last_state = current_state
+	current_state = state
 	
 func debug():
 	if monitor:
