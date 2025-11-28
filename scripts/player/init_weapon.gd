@@ -182,6 +182,10 @@ func shoot(delta):
 			if get_node(result_enemy.get("collider").get_path()) is GenericHitbox:
 				var part_shot = get_node(result_enemy.get("collider").get_path()) 
 				part_shot.on_hit(weapon_type.weapon_damage)
+				#print(result_enemy)
+			if get_node(result_enemy.get("collider").get_path()) is Heatsink:
+				var part_shot = get_node(result_enemy.get("collider").get_path()) 
+				part_shot.take_damage(weapon_type.weapon_damage)
 		if result_world: 
 			test_raycast(result_world.get("position"),result_world.get("normal"),result_world.get("collider"))
 				#var guy_you_shot = get_node(result.get("collider").get_path())

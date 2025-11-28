@@ -1,0 +1,135 @@
+[gd_scene load_steps=15 format=3 uid="uid://u2b7kpev443n"]
+
+[ext_resource type="Script" uid="uid://maw2qv78umun" path="res://scripts/enemy/boss/boss_main.gd" id="1_1ex25"]
+[ext_resource type="Shader" uid="uid://vaftn7c11vak" path="res://materials/shaders/boss_eye_test.tres" id="2_3uc6t"]
+[ext_resource type="Material" uid="uid://ciyptmi6h3qlq" path="res://materials/devtexture_grey.tres" id="3_ian0n"]
+[ext_resource type="Material" uid="uid://cmf6w8b83cusu" path="res://shaders/devtexture_orange.tres" id="4_yye4w"]
+[ext_resource type="Script" uid="uid://bk3j1adt4vsnw" path="res://scripts/enemy/boss/heatsink_hp.gd" id="5_yye4w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ub7yk"]
+render_priority = 0
+shader = ExtResource("2_3uc6t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ian0n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yye4w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvo7g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uq4kr"]
+
+[sub_resource type="Animation" id="Animation_rvo7g"]
+resource_name = "expose_heatsink"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("heatsink1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.514404, 0, 0), Vector3(2.73377, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uq4kr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("heatsink1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.514404, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ian0n"]
+resource_name = "retract_heatsink"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("heatsink1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(2.73377, 0, 0), Vector3(0.514404, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7dnpc"]
+_data = {
+&"RESET": SubResource("Animation_uq4kr"),
+&"expose_heatsink": SubResource("Animation_rvo7g"),
+&"retract_heatsink": SubResource("Animation_ian0n")
+}
+
+[node name="Boss" type="Node3D"]
+script = ExtResource("1_1ex25")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.45239, 10.9052)
+radius = 1.0
+radial_segments = 24
+rings = 12
+material = SubResource("ShaderMaterial_ub7yk")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.127422, 0.509521, 0.0110691)
+use_collision = true
+collision_layer = 3
+size = Vector3(3.37643, 2.01904, 3.24207)
+material = ExtResource("3_ian0n")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11972, 1.49829, 0.101257)
+size = Vector3(2.4483, 1, 2.45447)
+material = ExtResource("3_ian0n")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44388, 0)
+size = Vector3(1, 2.50732, 1)
+material = ExtResource("3_ian0n")
+
+[node name="Rotate Me" type="CSGSphere3D" parent="CSGBox3D/CSGBox3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75109, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D/CSGBox3D/CSGBox3D/Rotate Me"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.10205)
+size = Vector3(1, 1, 5.2041)
+material = ExtResource("4_yye4w")
+
+[node name="heatsink1" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.514404, 0, 0)
+size = Vector3(2.02881, 1, 1)
+material = SubResource("StandardMaterial3D_ian0n")
+script = ExtResource("5_yye4w")
+
+[node name="heatsink2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.519531)
+size = Vector3(1, 1, 2.03906)
+material = SubResource("StandardMaterial3D_yye4w")
+script = ExtResource("5_yye4w")
+
+[node name="heatsink3" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.589355, 0, 0)
+size = Vector3(2.17871, 1, 1)
+material = SubResource("StandardMaterial3D_rvo7g")
+script = ExtResource("5_yye4w")
+
+[node name="heatsink4" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.508362)
+size = Vector3(1, 1, 2.01672)
+material = SubResource("StandardMaterial3D_uq4kr")
+script = ExtResource("5_yye4w")
+
+[node name="HeatsinksAnimator" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7dnpc")
+}

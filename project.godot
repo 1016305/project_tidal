@@ -142,6 +142,7 @@ interact={
 
 3d_render/layer_1="Default"
 3d_render/layer_2="Weapon"
+3d_physics/layer_2="Player shoot enemy"
 
 [rendering]
 

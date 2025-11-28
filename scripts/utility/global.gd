@@ -33,6 +33,7 @@ signal enemy_hit_something(body)
 signal enemy_died(enemy)
 signal alert_encounter
 
+signal begin_boss
 ##Settings that can be adjusted
 signal get_mouse_sens(sens:float)
 signal set_mouse_sens(sens:float)

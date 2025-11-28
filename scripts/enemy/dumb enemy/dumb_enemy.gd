@@ -132,6 +132,7 @@ var stored_current_hp
 var debug_bool: bool = false
 
 func _ready() -> void:
+	current_state = States.Idle
 	Global.player_is_assigned.connect(assign_player)
 	Global.enemy_hit_something.connect(enemy_hit_something)
 	Global.weapon_fired.connect(alert_from_weapon_fire)
@@ -351,8 +352,10 @@ func alternate_shoot():
 	active_bullet.speed = projectile_speed
 	get_tree().root.add_child(active_bullet)
 	var end = Vector3(randf_range(-accuracy,accuracy),randf_range(-accuracy,accuracy),randf_range(-accuracy,accuracy))
-	var rotaty: Vector3 = Vector3(rotation.x, rotation.y + end.y, rotation.z + end.z)
+	var rotaty: Vector3 = Vector3(rotation.x, rotation.y + end.y, rotation.z + end.z) 
 	active_bullet.rotation = rotaty
+	#active_bullet.look_at(Global.player.player_head.position)
+	#active_bullet.rotate(Vector3(1,0,0),90)
 	active_bullet.position = bullet_spawn_point.global_position
 	active_bullet.position += Vector3(-sin(deg_to_rad(rotation_degrees.y)),0 , -cos(deg_to_rad(rotation_degrees.y))) * 2
 
@@ -554,14 +557,13 @@ func dead():
 		#queue_free()
 		
 ##additional functions
-#------------STOLEN FROM VICTORKARP.COM--------------------------------#
-#https://victorkarp.com/godot-engine-rotating-a-character-with-transform-basis-slerp/
-#i still suck at rotating shit. this was the best solution i could find
-
 func alert_from_weapon_fire():
 	if current_state == States.Idle:
 		if position.distance_to(player.position) <= gunshot_alert_dist:
 			current_state = States.Alert
+#------------STOLEN FROM VICTORKARP.COM--------------------------------#
+#https://victorkarp.com/godot-engine-rotating-a-character-with-transform-basis-slerp/
+#i still suck at rotating shit. this was the best solution i could find
 
 func set_look_target_location(new_target: Vector3):
 	look_target_location = new_target
