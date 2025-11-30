@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4FB8DF76-11ED-401D-AE79-AF08CAB33840}",
     "Language": "SFX",
-    "Hash": "{9B72CC19-9E06-E103-9F02-F48D61DB3739}",
+    "Hash": "{5D50F349-5AC6-101A-192B-BD6F1AA45263}",
     "ObjectPath": "Test_Event_01",
     "ShortName": "Test_Event_01",
     "Path": "Event/Test_Event_01.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "new-notification-027-383749.wav",
       "Path": "Media/126714041.wem",
-      "CachePath": "CB/{CB58F663-55C9-4375-5016-10CB950A0659}.wem"
+      "CachePath": "40/{4025D89A-4B2E-7068-9E92-638DC3FBA72C}.wem"
      }
     ],
     "Events": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{E00AD1B3-BCD6-1E7B-E20E-D4FFA4E1CA6B}"
+  "FileHash": "{F9F7A186-C734-D225-FCCC-A4C5ACC9983A}"
  }
 }

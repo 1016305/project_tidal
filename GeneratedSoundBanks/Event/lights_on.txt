@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1063352154	lights_on			\Default Work Unit\First Tower\lights_on	
+
+Effect plug-ins	ID	Name	Type				Notes
+	10176546	Parametric EQ (Custom)	Wwise Parametric EQ			
+

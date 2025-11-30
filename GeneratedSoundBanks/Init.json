@@ -10,11 +10,21 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{2A605B49-8343-41F9-6839-6CCE4FB60278}",
+    "Hash": "{CA68A759-1888-6F65-5FC8-09DD6F4A783E}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3900114836",
+       "Name": "Metal_Hangar",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Metal_Hangar",
+       "GUID": "{C4A4605C-42EF-476A-B53C-E31C7A442C24}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ],
      "AudioDevices": [
       {
        "Id": "2317455096",
@@ -39,7 +49,8 @@
       "Id": "393239870",
       "Name": "SFX",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX",
-      "GUID": "{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}"
+      "GUID": "{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}",
+      "Color": "7"
      },
      {
       "Id": "2246998526",
@@ -48,16 +59,40 @@
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
      },
      {
+      "Id": "3545700988",
+      "Name": "Reverbs",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs",
+      "GUID": "{9DD65F07-E8FB-45DE-B393-D2C7EC9793A5}"
+     },
+     {
       "Id": "3930136735",
       "Name": "Dialogue",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Dialogue",
-      "GUID": "{E6BB215E-5D2B-4BBE-9076-C532FE503298}"
+      "GUID": "{E6BB215E-5D2B-4BBE-9076-C532FE503298}",
+      "Color": "4"
      },
      {
       "Id": "3991942870",
       "Name": "Music",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music",
-      "GUID": "{4CBD492C-1D58-43B4-93E0-92CE7475D46A}"
+      "GUID": "{4CBD492C-1D58-43B4-93E0-92CE7475D46A}",
+      "Color": "24"
+     }
+    ],
+    "AuxBusses": [
+     {
+      "Id": "2540843761",
+      "Name": "First_Tower_Verb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\First_Tower_Verb",
+      "GUID": "{1332E2DC-853C-42B6-A659-92C90F2675EC}",
+      "Color": "4",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3900114836"
+        }
+       ]
+      }
      }
     ],
     "GameParameters": [
@@ -601,6 +636,6 @@
     ]
    }
   ],
-  "FileHash": "{17E95347-188B-0660-A2A4-1C8BF91FBC00}"
+  "FileHash": "{446DDFD2-2A0A-A05D-8C35-D9ED386864F8}"
  }
 }
