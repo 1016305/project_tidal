@@ -1,4 +1,4 @@
-class_name Boss extends Node3D
+class_name Boss_fake extends Node3D
 
 enum Phases{Dormant,Start,Phase1,Phase2,Phase3,Phase4,Dead}
 @export var current_phase = Phases
@@ -8,8 +8,6 @@ signal heatsinks_done
 @onready var rotatebitch: Node3D = $rotatebitch
 @onready var eye: CSGSphere3D = $CSGSphere3D
 @onready var rotate_me: CSGSphere3D = $"CSGBox3D/CSGBox3D/CSGBox3D/Rotate Me"
-##Heatsinks
-
 
 
 @export_category("Primary Logic")
@@ -49,7 +47,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	main_behaviour()
 	slow_rotate(delta)
-	eye_look_at_player()
+	#eye_look_at_player()
 	debug()
 	
 func main_behaviour():

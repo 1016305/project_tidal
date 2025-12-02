@@ -1,13 +1,17 @@
-class_name Heatsinky extends StaticBody3D
+class_name Heatsink extends StaticBody3D
 
 var heatsink_hp
 var heatsink_max_hp
 var is_dead: bool = false
 var stop: bool = false
 signal heatsink_finished
-@onready var csg_box_3d: CSGBox3D = $CSGBox3D
-@onready var heatsink_anim: AnimationPlayer = $Heatsink_anim
-@onready var timer: Timer = $Timer
+@export var model: MeshInstance3D
+@onready var heatsink_anim: AnimationPlayer = $"../Heatsink_Anim"
+@onready var timer: Timer = $"../Timer"
+@export var broken_var: MeshInstance3D
+@export var lights: Array[OmniLight3D]
+@export var explosion_pos: Node3D
+const VFX_EXPLOSION = preload("res://scenes/effects/vfx_explosion.tscn")
 
 func take_damage(damage):
 	if !is_dead:
@@ -20,10 +24,12 @@ func take_damage(damage):
 
 func heatsink_hp_color():
 	#current color is 1,1,1. max hp is 100, so we want to make the G and B values = 100-currenthp
-	var mat = StandardMaterial3D.new()
+	var mat = model.get_surface_override_material(0)
 	var new_val = heatsink_hp/heatsink_max_hp
-	mat.albedo_color = Color(1,new_val,new_val) #1-(heatsink_hp/heatsink_max_hp)
-	csg_box_3d.material_override = mat
+	mat.emission = Color(1,new_val,new_val) #1-(heatsink_hp/heatsink_max_hp)
+	model.material_override = mat
+	for light in lights:
+		light.light_color = Color(1,new_val,new_val)
 
 func heatsink_expose(time):
 	heatsink_anim.play("expose_heatsink")
@@ -33,17 +39,22 @@ func heatsink_expose(time):
 	heatsink_anim.play("retract_heatsink")
 	timer.wait_time = 1
 	await timer.timeout
-	get_parent().heatsinks_done.emit()
+	get_parent().get_parent().get_parent().heatsinks_done.emit()
 
 func death_behaviour():
 	if !stop:
 		stop = !stop
+		var explosion = VFX_EXPLOSION.instantiate()
+		get_parent().get_parent().add_child(explosion)
+		explosion.global_position = explosion_pos.global_position
 		print("Kaboom! Heatsink destroyed")
-		get_parent().heatsink_destroyed(self)
-		queue_free()
+		get_parent().get_parent().get_parent().heatsink_destroyed(self)
+		broken_var.visible = true
+		get_parent().queue_free()
 		#this should be an explosion, and a replacement of the heatsink model with the destroyed variant (maybe smoke too?)
 		#but for now queue_free is sufficient
 		#this should also pass a value to the boss parent to indicate taht this heatsink is no longer functional
 func other_heatsink_died():
-	timer.stop()
-	heatsink_anim.play("retract_heatsink")
+	if !is_dead:
+		timer.stop()
+		heatsink_anim.play("retract_heatsink")

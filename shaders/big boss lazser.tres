@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dkm3ge8jdtpda"]
+
+[ext_resource type="Shader" uid="uid://dsm2lbl7l7o4k" path="res://shaders/big boss lazser_shader.tres" id="1_cv8h0"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_cv8h0")

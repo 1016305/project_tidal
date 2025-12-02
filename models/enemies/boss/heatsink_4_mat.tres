@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://bglr2hsrfkdgx"]
+
+[ext_resource type="Texture2D" uid="uid://yngu3pofs0c" path="res://models/enemies/boss/boss_basecolor.png" id="1_d628l"]
+[ext_resource type="Texture2D" uid="uid://cpo23h4605bgk" path="res://models/enemies/boss/boss_emission_mask.png" id="2_kb12j"]
+[ext_resource type="Texture2D" uid="uid://bje75tm1dkqvr" path="res://models/enemies/boss/boss_metallic-boss_rough.png" id="3_d780i"]
+[ext_resource type="Texture2D" uid="uid://dmevweiph0ngd" path="res://models/enemies/boss/boss_normal.png" id="4_qplvs"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_d628l")
+metallic = 1.0
+metallic_specular = 0.68
+metallic_texture = ExtResource("3_d780i")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3_d780i")
+roughness_texture_channel = 1
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("2_kb12j")
+normal_enabled = true
+normal_texture = ExtResource("4_qplvs")
+texture_filter = 2

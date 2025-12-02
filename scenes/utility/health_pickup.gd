@@ -5,9 +5,10 @@ extends Node3D
 func heal_player():
 	if Global.player.current_health < Global.player.max_health:
 		Global.player.heal(health_ammount)
+		queue_free()
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body == Global.player:
 		heal_player()
-		queue_free()
+		

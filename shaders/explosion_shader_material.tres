@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b86041blqrr72"]
+
+[ext_resource type="Shader" uid="uid://coi1o5w33duum" path="res://shaders/explosion.tres" id="1_76her"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_76her")
+shader_parameter/Texture_Pixelate_Scale = 128
+shader_parameter/ExplosionColor = Color(1, 0.515625, 0, 1)
