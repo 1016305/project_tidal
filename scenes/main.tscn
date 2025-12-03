@@ -18,7 +18,7 @@
 [ext_resource type="Script" uid="uid://cw1p844w0bhug" path="res://scripts/utility/deathplane.gd" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://bmuwd8paqpi11" path="res://scenes/pickups/health_pickup.tscn" id="17_muem4"]
 [ext_resource type="PackedScene" uid="uid://bx86f1sxx3ka7" path="res://scenes/pickups/ammo_pickup.tscn" id="18_dp3eg"]
-[ext_resource type="PackedScene" uid="uid://3gtwd2weqttt" path="res://scenes/enemies/boss_but_real.tscn" id="19_yc10j"]
+[ext_resource type="PackedScene" uid="uid://ctui55budl18a" path="res://scenes/enemies/dumb_enemy.tscn" id="20_gqmmt"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tbgi4"]
 panorama = ExtResource("1_jyhfs")
@@ -743,7 +743,7 @@ script = ExtResource("9_ya4ey")
 [node name="Encounter" type="Node3D" parent="stage" node_paths=PackedStringArray("wave")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.910763, -23.1609)
 script = ExtResource("10_trceg")
-wave = [null]
+wave = [NodePath("../../dumb enemy"), NodePath("../../dumb enemy2"), NodePath("../../dumb enemy3"), NodePath("../../dumb enemy4")]
 
 [node name="Area3D" type="Area3D" parent="stage/Encounter"]
 
@@ -813,14 +813,25 @@ script = ExtResource("16_jbj1t")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2239, 0, -2.45907)
 shape = SubResource("BoxShape3D_dp3eg")
 
+[node name="dumb enemy" parent="." instance=ExtResource("20_gqmmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.01121, 0.530696, -4.43527)
+monitor = true
+accuracy = 0.0
+
+[node name="dumb enemy2" parent="." instance=ExtResource("20_gqmmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0419, 0.547632, -13.8953)
+
+[node name="dumb enemy3" parent="." instance=ExtResource("20_gqmmt")]
+transform = Transform3D(0.900865, 0, 0.434099, 0, 1, 0, -0.434099, 0, 0.900865, 15.3676, 0.547632, -8.60763)
+
+[node name="dumb enemy4" parent="." instance=ExtResource("20_gqmmt")]
+transform = Transform3D(-0.454737, 0, -0.890626, 0, 1, 0, 0.890626, 0, -0.454737, 1.87338, 0.547632, -13.8953)
+
 [node name="HealthPickup" parent="." instance=ExtResource("17_muem4")]
 transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -14.4292, 0.31863, 20.7955)
 
 [node name="AmmoPickup" parent="." instance=ExtResource("18_dp3eg")]
 transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -15.8092, 0.0266764, 20.8264)
-
-[node name="BossBut Real" parent="." instance=ExtResource("19_yc10j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.4374, -0.161713, 0)
 
 [connection signal="body_entered" from="stage/NavigationRegion3D/BossArena/Triggers/Area3D" to="stage/NavigationRegion3D/BossArena/Triggers/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="stage/Checkpoint" to="stage/Checkpoint" method="_on_body_entered"]

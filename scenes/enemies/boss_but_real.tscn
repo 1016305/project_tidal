@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://3gtwd2weqttt"]
+[gd_scene load_steps=57 format=4 uid="uid://3gtwd2weqttt"]
 
 [ext_resource type="Script" uid="uid://c56j7okj58yeu" path="res://scripts/enemy/boss/boss_true.gd" id="1_ae8oe"]
 [ext_resource type="Material" uid="uid://cg8m1dntsh1fr" path="res://models/enemies/boss/boss_material.tres" id="2_38w4d"]
@@ -541,10 +541,134 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ud63i")
 
-[node name="BossBut Real" type="Node3D" node_paths=PackedStringArray("left_lights", "right_lights", "heatsinks_array")]
+[sub_resource type="Animation" id="Animation_38w4d"]
+resource_name = "rear_recoil"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Icosphere/Main gun/Gun back part:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.195008, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-5.61489, 4.44259, 1.41791e-06), Vector3(-6.91984, 4.44259, 1.3737e-06), Vector3(-6.91984, 4.44259, 1.3737e-06), Vector3(-5.61489, 4.44259, 1.41791e-06)]
+}
+
+[sub_resource type="Animation" id="Animation_snqy2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Icosphere/Main gun/Gun back part:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-5.61489, 4.44259, 1.41791e-06)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w4qw4"]
+_data = {
+&"RESET": SubResource("Animation_snqy2"),
+&"rear_recoil": SubResource("Animation_38w4d")
+}
+
+[sub_resource type="Animation" id="Animation_w4qw4"]
+resource_name = "startup"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stem:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.833887, 1.83153, 2.23389, 3.23389, 3.63389, 4.63389, 5.03389, 6.03389, 6.43389, 7.43389),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.00703137, -4.66268, 0), Vector3(-0.007, -2.258, 0), Vector3(-0.007, -2.258, 0), Vector3(-0.007, 0.466768, 0), Vector3(-0.007, 0.466768, 0), Vector3(-0.007, 3.02708, 0), Vector3(-0.007, 3.02708, 0), Vector3(-0.007, 5.883, 0), Vector3(-0.007, 5.883, 0), Vector3(-0.007, 7.922, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icosphere:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.833887, 1.83389, 2.23389, 3.23389, 3.63389, 4.63389, 5.03389, 6.03389, 6.43389, 7.43389),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.00703137, 8.61982, 0), Vector3(-0.00703137, 10.9198, 0), Vector3(-0.00703137, 10.9198, 0), Vector3(-0.00703137, 13.6488, 0), Vector3(-0.00703137, 13.6488, 0), Vector3(-0.00703137, 15.6488, 0), Vector3(-0.00703137, 15.6488, 0), Vector3(-0.00703137, 19.0634, 0), Vector3(-0.00703137, 19.0634, 0), Vector3(-0.007, 22.616, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icosphere:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.833887, 7.42799, 8.84595, 9.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.513807, -1.5708, 0), Vector3(-0.513807, -1.5708, 0), Vector3(-0.111893, -1.5708, 0), Vector3(-0.111701, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ajr1p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stem:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.00703137, -4.66268, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icosphere:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.00703137, 8.61982, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icosphere:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.513807, -1.5708, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kfh3s"]
+_data = {
+&"RESET": SubResource("Animation_ajr1p"),
+&"startup": SubResource("Animation_w4qw4")
+}
+
+[node name="BossBut Real" type="Node3D" node_paths=PackedStringArray("left_lights", "right_lights", "startup_lights_l", "startup_lights_r", "heatsinks_array")]
 script = ExtResource("1_ae8oe")
 left_lights = [NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D2"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D3"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D4"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D5")]
 right_lights = [NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D2"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D3"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D4"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D5")]
+startup_lights_l = [NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D2"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D3"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D4"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D5"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D6"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D7")]
+startup_lights_r = [NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D8"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D9"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D10"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D11"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D12"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D13"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D14")]
 heatsinks_array = [NodePath("Turret_Base/Heatsink1/HeatsinkCollision"), NodePath("Turret_Base/Heatsink2/HeatsinkCollision"), NodePath("Turret_Base/Heatsink3/HeatsinkCollision"), NodePath("Turret_Base/Heatsink4/HeatsinkCollision")]
 
 [node name="Turret_Base" type="MeshInstance3D" parent="."]
@@ -789,7 +913,7 @@ shadow_normal_bias = 6.0
 transform = Transform3D(1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, -0.0122116, 0, -2.41674)
 
 [node name="Stem" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.74446, 0, 0, 0, 1.74446, 0, 0, 0, 1.74446, -0.00703137, 7.92225, 0)
+transform = Transform3D(1.74446, 0, 0, 0, 1.74446, 0, 0, 0, 1.74446, -0.00703137, -4.66268, 0)
 material_override = ExtResource("2_38w4d")
 mesh = SubResource("ArrayMesh_0xwk0")
 skeleton = NodePath("")
@@ -799,8 +923,48 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Stem/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_5q0nq")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Stem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27682, 0.693124, -1.06511)
+light_color = Color(0.6875, 0.562328, 0.265869, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Stem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17369, 0.693124, 1.22972)
+light_color = Color(0.6875, 0.562328, 0.265869, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Stem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24671, 0.693124, 1.22972)
+light_color = Color(0.6875, 0.562328, 0.265869, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Stem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24671, 0.693124, -0.834434)
+light_color = Color(0.6875, 0.562328, 0.265869, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Stem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27682, 3.71734, -1.06511)
+light_color = Color(0.6875, 0.562328, 0.265869, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Stem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17369, 3.71734, 1.22972)
+light_color = Color(0.6875, 0.562328, 0.265869, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Stem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24671, 3.71734, 1.22972)
+light_color = Color(0.6875, 0.562328, 0.265869, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Stem"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24671, 3.71734, -0.834434)
+light_color = Color(0.6875, 0.562328, 0.265869, 1)
+shadow_enabled = true
+
 [node name="Icosphere" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00703137, 22.6156, 0)
+transform = Transform3D(-4.37114e-08, 0.491497, -0.870879, 0, 0.870879, 0.491497, 1, 2.1484e-08, -3.80674e-08, -0.00703137, 8.61982, 0)
 material_override = ExtResource("2_38w4d")
 mesh = SubResource("ArrayMesh_ptnsa")
 skeleton = NodePath("")
@@ -811,6 +975,125 @@ material_override = ExtResource("2_38w4d")
 mesh = SubResource("ArrayMesh_kb71c")
 skeleton = NodePath("")
 
+[node name="GunLights" type="Node3D" parent="Icosphere/Main gun"]
+transform = Transform3D(1, -2.98023e-08, 4.44089e-16, 2.98023e-08, 1, -1.77636e-15, -8.88178e-16, 1.77636e-15, 1, 0, 0, 0)
+
+[node name="L" type="Node3D" parent="Icosphere/Main gun/GunLights"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/L"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 10.8077, 4.93132, -1.19766)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/L"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 9.89687, 4.93132, -1.19766)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/L"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 9.0011, 4.93133, -1.19766)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/L"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 7.36609, 4.93132, -1.19766)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/L"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 6.53342, 4.93132, -1.19766)
+visible = false
+light_color = Color(0.871094, 1, 0.996979, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/L"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 5.65011, 4.93132, -1.19766)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/L"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 4.73616, 4.93132, -1.19766)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="R" type="Node3D" parent="Icosphere/Main gun/GunLights"]
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/R"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 10.8077, 4.93132, 1.19154)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/R"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 9.89687, 4.93132, 1.19154)
+visible = false
+light_color = Color(0.176239, 0.432098, 0.601563, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/R"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 9.0011, 4.93133, 1.19154)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/R"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 7.36609, 4.93132, 1.19154)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/R"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 6.53342, 4.93132, 1.19154)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/R"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 5.65011, 4.93132, 1.19154)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Icosphere/Main gun/GunLights/R"]
+transform = Transform3D(1.14445, -5.96046e-08, -8.4821e-14, 2.98023e-08, 1.14445, 3.55271e-15, -8.88178e-16, 0, 0.896837, 4.73616, 4.93132, 1.19154)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+shadow_enabled = true
+omni_range = 0.274
+
 [node name="Gun back part" type="MeshInstance3D" parent="Icosphere/Main gun"]
 transform = Transform3D(1.62862, 0, 0, 0, 1.62862, 0, 0, 0, 0.833569, -5.61489, 4.44259, 1.41791e-06)
 material_override = ExtResource("2_38w4d")
@@ -818,13 +1101,10 @@ mesh = SubResource("ArrayMesh_fj0oy")
 skeleton = NodePath("")
 
 [node name="Laser Tube" type="MeshInstance3D" parent="Icosphere/Main gun"]
-transform = Transform3D(-3.82697e-08, -0.0171668, 3.82696e-08, 0, -7.50385e-10, -0.875507, 0.68608, -5.8803e-10, 1.31088e-15, 4.01633, 2.7203, 0.0193517)
+transform = Transform3D(-3.82697e-08, -0.0171668, 3.82696e-08, 0, -7.50385e-10, -0.875507, 0.68608, -5.8803e-10, 1.31088e-15, 4.016, 2.72, 0)
 visible = false
 mesh = SubResource("ArrayMesh_jpmhf")
 skeleton = NodePath("")
-
-[node name="DrawToHere" type="Node3D" parent="Icosphere/Main gun"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6308, 2.7203, 0.0193517)
 
 [node name="Lights" type="Node3D" parent="Icosphere/Main gun"]
 
@@ -924,8 +1204,14 @@ shadow_bias = 3.381
 shadow_reverse_cull_face = true
 omni_range = 3.238
 
+[node name="DrawFromHere" type="Node3D" parent="Icosphere/Main gun"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 7.10543e-15, 0, 1, 3.78887, 2.72, -2.78931e-07)
+
+[node name="ToHere" type="Node3D" parent="Icosphere/Main gun"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 7.10543e-15, 0, 1, 14.9698, 2.72, 1.21538e-07)
+
 [node name="RotateBitch" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.927, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00703137, 22.6156, 0)
 
 [node name="player_damage_tick" type="Timer" parent="."]
 one_shot = true
@@ -958,3 +1244,14 @@ visible = false
 material_override = ExtResource("2_38w4d")
 mesh = ExtResource("12_38w4d")
 skeleton = NodePath("../..")
+
+[node name="FiringThing" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Turret_Base")
+libraries = {
+&"": SubResource("AnimationLibrary_w4qw4")
+}
+
+[node name="startup sequence" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_kfh3s")
+}

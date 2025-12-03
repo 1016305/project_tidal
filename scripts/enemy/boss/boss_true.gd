@@ -7,17 +7,21 @@ signal heatsinks_done
 const VFXDAMAGE = preload("res://scenes/effects/vfx_damage.tscn")
 var vfx
 @onready var rotatebitch: Node3D = $RotateBitch
+@onready var firing_thing: AnimationPlayer = $FiringThing
+@onready var startup_sequence: AnimationPlayer = $"startup sequence"
 
 #@onready var eye: CSGSphere3D = $CSGSphere3D
-@onready var rotate_me: MeshInstance3D = $Icosphere
+@onready var rotate_me: MeshInstance3D = $"Icosphere"
 @onready var laser_tube: MeshInstance3D = $"Icosphere/Main gun/Laser Tube"
-@onready var draw_to_here: Node3D = $"Icosphere/Main gun/DrawToHere"
+@onready var draw_from_here: Node3D = $"Icosphere/Main gun/DrawFromHere"
+@onready var draw_to_here: Node3D = $"Icosphere/Main gun/ToHere"
 @onready var player_damage_tick: Timer = $player_damage_tick
-
 
 @export_category("Flare")
 @export var left_lights: Array[OmniLight3D]
 @export var right_lights: Array[OmniLight3D]
+@export var startup_lights_l: Array[OmniLight3D]
+@export var startup_lights_r: Array[OmniLight3D]
 
 @export_category("Primary Logic")
 @export var heatsinks_array: Array[Heatsink]
@@ -46,7 +50,7 @@ var ph1_bool: bool = false
 ## How long after locking in/stopping rotation the gun will wait before firing
 @export var ph1_shoot_wait = 2
 ## How long the gun will fire for
-@export var ph1_shoot_time = 2
+@export var ph1_shoot_time = 5
 ## How long after firing before the heatsinks open
 @export var ph1_heatsink_delay = 2
 ## How long the heatsinks will remain open for
@@ -54,8 +58,15 @@ var ph1_bool: bool = false
 
 @export_category("Secondary Logic | Phase 2")
 var ph2_bool: bool = false
+## How long the gun will aim at the player before initating firing sequence
 @export var ph2_aim_time: float = 3
-@export var wait = 5
+## How long after locking in/stopping rotation the gun will wait before firing
+@export var ph2_shoot_wait = 2
+## How long the gun will fire for
+@export var ph2_shoot_time = 5
+## How long after firing before the heatsinks open
+@export var ph2_heatsink_delay = 2
+## How long the heatsinks will remain open for
 @export var ph2_damage_phase_time = 5
 
 
@@ -102,13 +113,10 @@ func switch_phase(new_phase:String):
 func startup_animation():
 	if !start_bool:
 		start_bool = true
-		#lets do some animation
-		print("Rarrgh here is the boss he's so threatening isnt he")
-		await get_tree().create_timer(3).timeout
-		print("The animation is complete, and the boss is goign to start attacking now.")
-		#this has all the animation for the boss's startup
-		await get_tree().create_timer(1).timeout
-		print("Starting phase 1")
+		startup_sequence.play("startup")
+		startup_lights(startup_lights_l)
+		startup_lights(startup_lights_r)
+		await startup_sequence.animation_finished
 		switch_phase("Phase1")
 
 func phase_1():
@@ -125,8 +133,9 @@ func phase_1():
 		#play sound effect (early?) charge up sound effect warns player that shooting will happen soon
 		# maybe use an animated cylinder whose scale extends forwards to shoot? and just check collisions?
 		print("Shooting! KaBLAM")
+		firing_thing.play("rear_recoil")
 		shoot(ph1_shoot_time)
-		await get_tree().create_timer(3).timeout
+		await get_tree().create_timer(ph1_shoot_time).timeout
 		lights_off(left_lights)
 		lights_off(right_lights)
 		await get_tree().create_timer(ph1_heatsink_delay).timeout
@@ -141,19 +150,24 @@ func phase_1():
 		
 func phase_2():
 	if !ph2_bool:
-		print("Congratulations, the phase advancement works!")
-		print("begin phase 2")
+		print("begin phase 1")
 		ph2_bool = true
 		aim_at_player = true
-		await get_tree().create_timer(ph1_aim_time).timeout
-		shoot_location = Global.player.player_head.position
+		await get_tree().create_timer(ph2_aim_time).timeout
+		shoot_location = Global.player.position
 		aim_at_player = false
-		
-		#play sound effect (early?) charge up sound effect warns player that shooting will happen soon
-		# maybe use an animated cylinder whose scale extends forwards to shoot? and just check collisions?
+		lights(left_lights,ph2_shoot_wait)
+		lights(right_lights,ph2_shoot_wait)
+		await get_tree().create_timer(ph2_shoot_wait).timeout
+
 		print("Shooting! KaBLAM")
-		await get_tree().create_timer(2).timeout
-		open_all_heatsinks(ph1_damage_phase_time)
+		firing_thing.play("rear_recoil")
+		shoot(ph2_shoot_time)
+		await get_tree().create_timer(ph2_shoot_time).timeout
+		lights_off(left_lights)
+		lights_off(right_lights)
+		await get_tree().create_timer(ph2_heatsink_delay).timeout
+		open_all_heatsinks(ph2_damage_phase_time)
 		await self.heatsinks_done
 		print("phase complete, restarting")
 		ph1_bool = false
@@ -177,8 +191,8 @@ func shoot(time):
 	#do lights and charge up sound effect
 	#unhide cylinder with cool effect on it
 	#animate cylinder to stretch to cast point
-	
-	var origin = laser_tube.global_position
+	draw_to_here.position.x = draw_from_here.position.distance_to(Global.player.position)
+	var origin = draw_from_here.global_position
 	var end = (draw_to_here.global_position - origin) * 1000
 	var query = PhysicsRayQueryParameters3D.create(origin,end)
 	query.collide_with_bodies = true
@@ -186,7 +200,7 @@ func shoot(time):
 	query.collision_mask = 1
 	var result = get_world_3d().direct_space_state.intersect_ray(query)
 	var pos = result.get("position")
-	var stretch_distance = laser_tube.position.distance_to(pos)
+	var stretch_distance = laser_tube.global_position.distance_to(pos)
 	laser_tube.visible = true
 	var tween = create_tween()
 	tween.tween_property(laser_tube,"scale",Vector3(laser_tube.scale.x,stretch_distance,laser_tube.scale.z),0.8)
@@ -216,10 +230,9 @@ func sphere_cast():
 		box.radius = 4.0
 		box.use_collision = false
 		add_child(box)
-		box.global_position = target_pos + Vector3.UP
+		box.global_position = target_pos# + Vector3.UP
 		
 		vfx.global_position = box.global_position
-		
 		var shape_rid = PhysicsServer3D.sphere_shape_create()
 		var radius = 4.0
 		var mask = 1
@@ -291,6 +304,11 @@ func heatsink_destroyed(heatsink:Heatsink):
 	heatsinks_array.erase(heatsink)
 	heatsinks_remaining -= 1
 	change_state()
+
+func startup_lights(lightsarray):
+	for i in lightsarray:
+		await get_tree().create_timer(1).timeout
+		i.visible = true
 
 func lights(lightsarray,aimtime):
 	var interval = aimtime/lightsarray.size()

@@ -1,7 +1,8 @@
 class_name Elevator extends Node
 
-@onready var animation_player: AnimationPlayer = $"../../Elevator_lights/AnimationPlayer"
+@export var animation_player: AnimationPlayer
 @onready var interaction_component: InteractionComponent = $"../Interaction Component"
+@export var button_noise: WwiseEvent
 var active: bool = false
 
 
@@ -23,7 +24,8 @@ func elevator_animation():
 	if active:
 		if !has_played:
 			animation_player.play("button_press")
-			animation_player.play("elevator_move_down")
+			button_noise.post(self)
+			animation_player.queue("elevator_move_down")
 			has_played = true
 			Global.player.reparent(self, true)
 			interaction_component.is_used = true
