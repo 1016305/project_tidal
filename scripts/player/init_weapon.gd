@@ -200,6 +200,7 @@ func test_raycast(ray_pos,ray_nrm,ray_col):
 	instance.global_position = ray_pos
 	instance.look_at(instance.global_transform.origin + ray_nrm,Vector3.UP)
 	instance.rotate_object_local(Vector3(1,0,0), 90)
+	instance.get_child(0).emitting = true
 	await get_tree().create_timer(5).timeout
 	if instance != null:
 		var fade = get_tree().create_tween()

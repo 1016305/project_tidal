@@ -59,7 +59,7 @@ shader_parameter/Texture_Pixelate_Scale = 128
 _data = [Vector2(0.0445545, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_ourh5"]
+[sub_resource type="CurveTexture" id="CurveTexture_g5eyn"]
 texture_mode = 1
 curve = SubResource("Curve_cnn1n")
 
@@ -67,7 +67,7 @@ curve = SubResource("Curve_cnn1n")
 _data = [Vector2(0, 0.47191), 0.0, 1.52686, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_0ax4x"]
+[sub_resource type="CurveTexture" id="CurveTexture_kryo8"]
 curve = SubResource("Curve_yhy1l")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u266h"]
@@ -79,8 +79,8 @@ initial_velocity_max = 1.0
 gravity = Vector3(0, 0, 0)
 scale_min = 5.0
 scale_max = 7.0
-scale_curve = SubResource("CurveTexture_0ax4x")
-alpha_curve = SubResource("CurveTexture_ourh5")
+scale_curve = SubResource("CurveTexture_kryo8")
+alpha_curve = SubResource("CurveTexture_g5eyn")
 hue_variation_min = -1.0
 hue_variation_max = 1.0
 

@@ -1,0 +1,171 @@
+[gd_scene load_steps=17 format=3 uid="uid://gtqt7jf5gebs"]
+
+[ext_resource type="Script" uid="uid://ccqv2f543qbtt" path="res://scripts/animation/vfx_damage.gd" id="1_lsvuq"]
+[ext_resource type="Shader" uid="uid://bgbqwq58l31ty" path="res://shaders/hitzone.tres" id="2_ug6u7"]
+[ext_resource type="Shader" uid="uid://d3jewacfouamu" path="res://shaders/sparks_streaks.tres" id="3_8lk3o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pn33h"]
+render_priority = 0
+shader = ExtResource("2_ug6u7")
+shader_parameter/Texture_Pixelate_Scale = 128
+shader_parameter/Alpha = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_y6wvo"]
+material = SubResource("ShaderMaterial_pn33h")
+top_radius = 1.255
+bottom_radius = 0.0
+height = 1.5
+cap_top = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cs2av"]
+render_priority = -1
+shader = ExtResource("3_8lk3o")
+shader_parameter/StreaksColor = Color(4, 0.9, 0.2, 1)
+shader_parameter/Texture_Pixelate_Scale = 128
+
+[sub_resource type="Curve" id="Curve_vo6fr"]
+_data = [Vector2(0.0445545, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ourh5"]
+texture_mode = 1
+curve = SubResource("Curve_vo6fr")
+
+[sub_resource type="Curve" id="Curve_1rdft"]
+_data = [Vector2(0, 0.47191), 0.0, 1.52686, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_0ax4x"]
+curve = SubResource("Curve_1rdft")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5r5le"]
+particle_flag_align_y = true
+direction = Vector3(0, 1, 0)
+spread = 90.0
+initial_velocity_min = 0.5
+initial_velocity_max = 1.0
+gravity = Vector3(0, 0, 0)
+scale_min = 4.0
+scale_max = 6.0
+scale_curve = SubResource("CurveTexture_0ax4x")
+alpha_curve = SubResource("CurveTexture_ourh5")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_l416f"]
+size = Vector2(0.25, 1)
+center_offset = Vector3(0, 0.4, 0)
+
+[sub_resource type="Animation" id="Animation_jfj4f"]
+resource_name = "start"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:mesh:material:shader_parameter/Alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sparks Particles:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_kptfk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:mesh:material:shader_parameter/Alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sparks Particles:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ws6ag"]
+resource_name = "end"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:mesh:material:shader_parameter/Alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.58),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sparks Particles:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.266667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vs4ox"]
+_data = {
+&"RESET": SubResource("Animation_kptfk"),
+&"end": SubResource("Animation_ws6ag"),
+&"start": SubResource("Animation_jfj4f")
+}
+
+[node name="VFX_Damage" type="Node3D"]
+script = ExtResource("1_lsvuq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.014665, 0)
+mesh = SubResource("CylinderMesh_y6wvo")
+
+[node name="Sparks Particles" type="GPUParticles3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.08348, -0.716376, 0)
+material_override = SubResource("ShaderMaterial_cs2av")
+emitting = false
+amount = 13
+lifetime = 0.4
+explosiveness = 0.9
+randomness = 1.0
+fixed_fps = 15
+process_material = SubResource("ParticleProcessMaterial_5r5le")
+draw_pass_1 = SubResource("QuadMesh_l416f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vs4ox")
+}
+autoplay = "RESET"

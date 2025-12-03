@@ -4,7 +4,8 @@ enum Phases{Dormant,Start,Phase1,Phase2,Phase3,Phase4,Dead}
 @export var current_phase = Phases
 var previous_phase
 signal heatsinks_done
-
+const VFXDAMAGE = preload("res://scenes/effects/vfx_damage.tscn")
+var vfx
 @onready var rotatebitch: Node3D = $RotateBitch
 
 #@onready var eye: CSGSphere3D = $CSGSphere3D
@@ -63,6 +64,8 @@ func _ready() -> void:
 	current_phase = Phases.Dormant
 	set_heatsink_hp()
 	player_damage_tick.wait_time = damage_tick
+	vfx = VFXDAMAGE.instantiate()
+	add_child(vfx)
 
 func _physics_process(delta: float) -> void:
 	main_behaviour()
@@ -191,7 +194,9 @@ func shoot(time):
 	#spherecast will constantly fire while the player is inside it
 	target_pos = pos
 	doing_damage = true
+	vfx.on_start()
 	await get_tree().create_timer(time).timeout
+	vfx.on_end()
 	doing_damage = false
 	laser_tube.scale = Vector3(laser_tube.scale.x,0.01,laser_tube.scale.z)
 	laser_tube.visible = false
@@ -205,11 +210,15 @@ func sphere_cast():
 	#its transfrom is used to target the shapecast.
 	#the sphere is also used to visualise the sgapecast
 	if doing_damage:
+		# CSGSphere used to copy the translation because i fucking hate shapecasts
 		var box = CSGSphere3D.new()
+		box.visible = false
 		box.radius = 4.0
 		box.use_collision = false
 		add_child(box)
 		box.global_position = target_pos + Vector3.UP
+		
+		vfx.global_position = box.global_position
 		
 		var shape_rid = PhysicsServer3D.sphere_shape_create()
 		var radius = 4.0
@@ -287,7 +296,7 @@ func lights(lightsarray,aimtime):
 	var interval = aimtime/lightsarray.size()
 	# time needs to be phase's charge up time divided by number of lights (5)
 	for i:OmniLight3D in lightsarray:
-		await get_tree().create_timer(aimtime/5).timeout
+		await get_tree().create_timer(interval).timeout
 		i.visible = true
 		
 func lights_off(lightsarray):

@@ -12,7 +12,7 @@ signal heatsink_finished
 @export var lights: Array[OmniLight3D]
 @export var explosion_pos: Node3D
 const VFX_EXPLOSION = preload("res://scenes/effects/vfx_explosion.tscn")
-
+const FIRE_BILL = preload("res://scenes/effects/fire_bill.tscn")
 func take_damage(damage):
 	if !is_dead:
 		heatsink_hp -= damage
@@ -45,7 +45,11 @@ func death_behaviour():
 	if !stop:
 		stop = !stop
 		var explosion = VFX_EXPLOSION.instantiate()
+		var smoke = FIRE_BILL.instantiate()
 		get_parent().get_parent().add_child(explosion)
+		get_parent().get_parent().add_child(smoke)
+		smoke.global_position = explosion_pos.global_position
+		smoke.global_position += Vector3.DOWN
 		explosion.global_position = explosion_pos.global_position
 		print("Kaboom! Heatsink destroyed")
 		get_parent().get_parent().get_parent().heatsink_destroyed(self)
