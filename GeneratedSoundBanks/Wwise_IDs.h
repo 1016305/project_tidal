@@ -13,8 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BUTTON = 977454165U;
+        static const AkUniqueID LIGHTS_ON = 1063352154U;
         static const AkUniqueID SFX_PLAYTESTSOUND = 2888769156U;
         static const AkUniqueID TEST_EVENT_01 = 1336498786U;
+        static const AkUniqueID TOOTHDOOR_OPENING = 3417972020U;
         static const AkUniqueID WEAPON_ASSAULTRIFLE_PLAY_FIRING = 619672820U;
     } // namespace EVENTS
 
@@ -37,8 +40,14 @@ namespace AK
         static const AkUniqueID DIALOGUE = 3930136735U;
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID REVERBS = 3545700988U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID FIRST_TOWER_VERB = 2540843761U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

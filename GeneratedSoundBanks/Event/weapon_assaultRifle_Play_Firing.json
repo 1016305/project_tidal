@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}",
     "Language": "SFX",
-    "Hash": "{7C92B983-C24D-EC6C-3728-B84B67EA0C7D}",
+    "Hash": "{2AE35FDF-DCA2-2C8E-CD8F-0628C8C56C67}",
     "ObjectPath": "weapon_assaultRifle_Play_Firing",
     "ShortName": "weapon_assaultRifle_Play_Firing",
     "Path": "Event/weapon_assaultRifle_Play_Firing.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "assault_rifle\\assault_rifle_03.wav",
       "Path": "Media/78295681.wem",
-      "CachePath": "C8/{C8FFC878-6438-FB32-A140-D39E001F3958}.wem"
+      "CachePath": "9A/{9A336EA6-DFF7-C0ED-5D16-177ED6EA4387}.wem"
      },
      {
       "Id": "986971179",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "assault_rifle\\assault_rifle_01.wav",
       "Path": "Media/986971179.wem",
-      "CachePath": "BF/{BFEE872A-426F-E654-2C09-276FB7DF02E6}.wem"
+      "CachePath": "0D/{0D4A0867-6479-7313-B043-41E0CEC37455}.wem"
      }
     ],
     "Events": [
@@ -55,6 +55,6 @@
     ]
    }
   ],
-  "FileHash": "{EDD0192A-F3EE-5E67-5815-BAC03C584BAD}"
+  "FileHash": "{B0DEEA4E-32BD-D0B7-10CF-D51BC3798344}"
  }
 }

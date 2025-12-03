@@ -601,11 +601,12 @@
 							<ChildrenList>
 								<Effect Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 									<PropertyList>
-										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+										<Property Name="FilterTypeBand1" Type="int32" Value="8"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="78.59727"/>
 										<Property Name="FrequencyBand3" Type="Real32" Value="20000"/>
-										<Property Name="OnOffBand1" Type="bool" Value="False"/>
 										<Property Name="OnOffBand2" Type="bool" Value="False"/>
+										<Property Name="QFactorBand1" Type="Real32" Value="0.8806521"/>
 									</PropertyList>
 								</Effect>
 							</ChildrenList>
@@ -1417,7 +1418,7 @@
 								</Effect>
 								<Effect Name="Metal_Hangar" ID="{C4A4605C-42EF-476A-B53C-E31C7A442C24}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>
-										<Property Name="DecayTime" Type="Real32" Value="6.2"/>
+										<Property Name="DecayTime" Type="Real32" Value="4.8"/>
 										<Property Name="Density" Type="Real32" Value="94"/>
 										<Property Name="Diffusion" Type="Real32" Value="53"/>
 										<Property Name="ERLevel" Type="Real32" Value="-22"/>
@@ -1432,7 +1433,7 @@
 										<Property Name="HFDamping" Type="Real32" Value="5.65"/>
 										<Property Name="PreDelay" Type="Real32" Value="125"/>
 										<Property Name="Quality" Type="int32" Value="12"/>
-										<Property Name="RoomShape" Type="Real32" Value="0"/>
+										<Property Name="RoomShape" Type="Real32" Value="60"/>
 										<Property Name="RoomSize" Type="Real32" Value="71"/>
 										<Property Name="StereoWidth" Type="Real32" Value="140"/>
 									</PropertyList>

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{42D6CCEC-9A24-44EB-BADA-9F0E9207E8B5}",
     "Language": "SFX",
-    "Hash": "{6F52390E-708D-7CE9-450E-4AEF7D3C4949}",
+    "Hash": "{90DD7F75-41FE-C4DE-E073-1441D9D649E2}",
     "ObjectPath": "sfx_playTestSound",
     "ShortName": "sfx_playTestSound",
     "Path": "Event/sfx_playTestSound.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "wahwah.wav",
       "Path": "Media/368928642.wem",
-      "CachePath": "DC/{DC704B78-0CA9-E139-2CA7-A213ABA6F521}.wem"
+      "CachePath": "DD/{DD2AE040-3444-86F4-343A-5DE76F64E60E}.wem"
      }
     ],
     "Events": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{A204F2C5-1855-B207-1B70-C86D98D8CE32}"
+  "FileHash": "{2F088F22-8D3C-137F-10F9-6A2F0FB46ACB}"
  }
 }
