@@ -436,6 +436,50 @@
 										<ActiveSource Name="crashed_ship" ID="{9D208CAB-A0EB-40A6-8945-52424B96BC3C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="door_console_hum" ID="{15950C95-FA7C-4D13-9C33-B9FE38EEA4BE}" ShortID="846411641">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="door_console_hum" ID="{4425C108-83D1-48B6-9EAA-88CB1F4A5AB7}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>door_console_hum.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="188656083"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{29E3126B-D9BE-4B72-98E3-8E85630B83BE}" ShortID="229495554">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="High_Pass_60Hz" ID="{F9627628-0B10-4272-BC30-D4C20423CB38}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="door_console_hum" ID="{4425C108-83D1-48B6-9EAA-88CB1F4A5AB7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Second Tower" ID="{2FACBBAD-E104-4577-AA98-0FC1B8B196D5}" ShortID="5742838"/>
@@ -665,10 +709,127 @@
 								</PropertyContainer>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="Fourth Tower" ID="{FC28B61A-CCA6-4978-9797-398CD847D726}" ShortID="700120771"/>
+						<Folder Name="Boss Arena" ID="{FC28B61A-CCA6-4978-9797-398CD847D726}" ShortID="700120771"/>
+						<Folder Name="Canyon" ID="{FF8E5EA4-8A1B-4C00-90EE-089A8AC1EBB6}" ShortID="686778576">
+							<ChildrenList>
+								<BlendContainer Name="Canyon AMB" ID="{B3EDDA32-5D24-4BDB-8FED-237E0FDD9339}" ShortID="1067712563">
+									<PropertyList>
+										<Property Name="BlendBehavior" Type="int16" Value="1"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="canyon_undergroundmachine_amb" ID="{6036C724-7114-44EF-ADB4-BE81B4A0B8A9}" ShortID="301110011">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="canyon_undergroundmachine_amb" ID="{C74DD61D-6BF5-46C9-9175-0DC6FEE86ABA}">
+													<Language>SFX</Language>
+													<AudioFile>canyon_undergroundmachine_amb.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="654365428"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{CBAB20B2-6981-4992-B61B-7DC8125DDD2F}" ShortID="910080154">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<ObjectRef Name="Club_Music_Distant_01" ID="{972799F5-C6E5-4E4F-83E3-95AA307CDFD1}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+													<EffectSlot Name="" ID="{CC54DED0-3D0F-4908-9925-D4BEE24ECE96}" ShortID="962525936">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Space_Dreaming" ID="{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="canyon_undergroundmachine_amb" ID="{C74DD61D-6BF5-46C9-9175-0DC6FEE86ABA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="soft_wind_amb" ID="{F245B395-4BA0-4D59-B4FC-56133B73118C}" ShortID="954254484">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="soft_wind_amb" ID="{3B3D18AA-E35C-4520-9099-289F17C311E1}">
+													<Language>SFX</Language>
+													<AudioFile>soft_wind_amb.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="472452353"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{D2879C14-D5D9-4429-8325-0FAB2E3D84FB}" ShortID="960991568">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom>
+																	<Effect Name="Parametric EQ (Custom)" ID="{59DBFBC8-3156-460D-9B6F-62EF198A5BA7}" ShortID="961645553" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																		<PropertyList>
+																			<Property Name="FilterTypeBand1" Type="int32" Value="8"/>
+																			<Property Name="FrequencyBand1" Type="Real32" Value="115.8997"/>
+																			<Property Name="GainBand1" Type="Real32" Value="-2.782609"/>
+																			<Property Name="QFactorBand1" Type="Real32" Value="0.7102258"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="soft_wind_amb" ID="{3B3D18AA-E35C-4520-9099-289F17C311E1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Character" ID="{00C1D1BC-062E-45DE-ABFA-8C9A33908155}" ShortID="284881841">
+				<Folder Name="Player" ID="{00C1D1BC-062E-45DE-ABFA-8C9A33908155}" ShortID="284881841">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="2"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -1042,6 +1203,36 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</PropertyContainer>
+						<Sound Name="low_health_heartbeat" ID="{38ACD54B-D2BC-4AB2-8E26-086E2A653643}" ShortID="265796234">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="low_health_heartbeat" ID="{D68030EA-5B31-4B91-98A2-C7B4DD8B1487}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0165757045267521"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.79010599290053"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>low_health_heartbeat.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="233836470"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="low_health_heartbeat" ID="{D68030EA-5B31-4B91-98A2-C7B4DD8B1487}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemy" ID="{A0126A04-2E2E-4E83-AA27-34F980DC61EE}" ShortID="246987110">
@@ -1470,6 +1661,11 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="Enemy Combat Bark" ID="{2D32388D-11FA-4E1C-8E7D-280D895A2588}" ShortID="263110270">
 											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>5.5</Value>
+													</ValueList>
+												</Property>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
@@ -2497,7 +2693,7 @@
 								</Sound>
 							</ChildrenList>
 						</PropertyContainer>
-						<PropertyContainer Name="Bullet Pings" ID="{17AEA2C4-6735-4D38-9B32-98EB8C15B478}" ShortID="276374905">
+						<PropertyContainer Name="Bullet Pings" ID="{2C073DED-377C-4CC5-AF9A-BF2665530A22}" ShortID="485319070">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
@@ -2507,7 +2703,29 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Basic Ricochets - v01" ID="{7CDB50F5-7871-4F40-B49F-D84E07591708}" ShortID="605928685">
+								<RandomSequenceContainer Name="Player" ID="{51D431AF-49C8-4239-B6CC-E6FDDFF1F31C}" ShortID="692712833">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Enemy Boss" ID="{911BF7E4-C141-4E57-9D98-871AD0D40CAE}" ShortID="956278560">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-550</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{276126C5-C9CE-4E08-BCBC-9B26736BC8BB}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
@@ -2517,19 +2735,254 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Basic Ricochets - v01" ID="{6A715513-1255-4BCA-BA3C-CE58BD928785}">
-											<Language>SFX</Language>
-											<AudioFile>Weapons\Bullet Pings\Basic Ricochets - v01.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="707228252"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="enemy_bullet_ping_05" ID="{74BA069D-8048-4335-A0E4-0EAED8E9B0CC}" ShortID="803717365">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_05" ID="{FCAD10A6-6377-42CE-B0FD-7F25AF34B9A0}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0286484864387551"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.118031764127671"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0378160020991568"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.64172615503803"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="212138637"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_05" ID="{FCAD10A6-6377-42CE-B0FD-7F25AF34B9A0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_07" ID="{CA29D454-5B01-47A7-AED9-A4E9F228CE2C}" ShortID="111316335">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_07" ID="{64D569C7-EB64-44E4-9AA3-3A4EF9AA44F7}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0264345475536117"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.104721476847"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0386351079629709"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.534791251145129"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="471978831"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_07" ID="{64D569C7-EB64-44E4-9AA3-3A4EF9AA44F7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_06" ID="{44D1410B-46B0-48A1-8DC9-B425FEA98C41}" ShortID="285104216">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_06" ID="{6C7F38BF-57D8-4520-9288-4395BAF56C87}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0206269124232301"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.150902148780473"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0260550472714485"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.67960242577649"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="196751130"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_06" ID="{6C7F38BF-57D8-4520-9288-4395BAF56C87}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_02" ID="{47973805-F964-46CA-8943-EBC627A21ADF}" ShortID="400702709">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_02" ID="{AFC1EDED-3403-4638-9058-C4C16103CE95}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0302427369155651"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.123995221353817"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0292346456850462"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.602838558711287"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="333253904"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_02" ID="{AFC1EDED-3403-4638-9058-C4C16103CE95}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_04" ID="{728C4DD8-02BF-4F35-A397-4F541BCE5C65}" ShortID="501440243">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_04" ID="{E740C3EC-382F-4347-9367-5DEAF09F0EE1}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0301823386358559"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.148964445525353"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0691272917143796"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.576385331311357"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="279385734"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_04" ID="{E740C3EC-382F-4347-9367-5DEAF09F0EE1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_08" ID="{9657C552-02C9-4ACC-91B6-48D7E6E8D878}" ShortID="1009556010">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_08" ID="{2C6A6605-DEE3-4204-8FCB-2CFEE25A0402}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0288123089239138"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.114491017039763"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0272958716121289"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.512555809952797"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_08.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="714744341"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_08" ID="{2C6A6605-DEE3-4204-8FCB-2CFEE25A0402}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_03" ID="{3EC88DA0-1FA9-4116-B508-A479FB48B7B6}" ShortID="637404088">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_03" ID="{7E54CDB8-FEEE-4EB0-B474-7009DE308352}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0255037374817268"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.15684798551262"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0369804193485039"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.711554285594812"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="402255042"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_03" ID="{7E54CDB8-FEEE-4EB0-B474-7009DE308352}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_01" ID="{9E8426DE-69B0-4EDB-9C3D-EFA6606B028A}" ShortID="663755376">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_01" ID="{F8DE9918-D6DE-466A-8B4F-8CA8687C7782}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.145888083207133"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.412177769465548"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="667197684"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_01" ID="{F8DE9918-D6DE-466A-8B4F-8CA8687C7782}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Basic Ricochets - v01" ID="{6A715513-1255-4BCA-BA3C-CE58BD928785}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Basic Ricochets - v02" ID="{4841674D-04F5-46EE-AA99-5F6ABF0B2128}" ShortID="31074230">
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Enemy" ID="{DCD08C8A-58FF-4F34-8DEB-44D0B546E4A8}" ShortID="397138176">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C7CA89D5-B17E-493E-AC1D-DE13BC115617}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="225"/>
+															<Property Name="Min" Type="Real64" Value="-400"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
@@ -2539,40 +2992,612 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Basic Ricochets - v02" ID="{A39F9DE8-09BA-48DB-B599-F3C4F8CDDD8A}">
-											<Language>SFX</Language>
-											<AudioFile>Weapons\Bullet Pings\Basic Ricochets - v02.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="348643218"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="enemy_bullet_ping_05" ID="{EF1AFF62-2342-487F-A867-C8B6C1D04ACF}" ShortID="97971603">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_05" ID="{B4A3B37E-AC61-42B9-ADF5-B0A873DF1981}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0286484864387551"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.118031764127671"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0378160020991568"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.64172615503803"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="212138637"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_05" ID="{B4A3B37E-AC61-42B9-ADF5-B0A873DF1981}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_07" ID="{88D6810C-4C47-4F51-B52E-FF1AA8109E85}" ShortID="566023411">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_07" ID="{DB9AAD5A-C300-480C-B1F0-C067D5C26401}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0264345475536117"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.104721476847"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0386351079629709"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.534791251145129"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="471978831"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_07" ID="{DB9AAD5A-C300-480C-B1F0-C067D5C26401}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_06" ID="{3B8662E2-4D44-4831-BB78-C0D9DDDA92DE}" ShortID="650987053">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_06" ID="{A73CA9D2-2895-4636-9CB3-77045B0C929D}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0206269124232301"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.150902148780473"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0260550472714485"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.67960242577649"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="196751130"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_06" ID="{A73CA9D2-2895-4636-9CB3-77045B0C929D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_02" ID="{DBF1C3D2-B293-4829-B473-46BE64F06A97}" ShortID="415456971">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_02" ID="{5AA5D3D2-551B-448D-93D9-23DDC8A839CF}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0302427369155651"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.123995221353817"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0292346456850462"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.602838558711287"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="333253904"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_02" ID="{5AA5D3D2-551B-448D-93D9-23DDC8A839CF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_04" ID="{947255AA-42AE-44F5-867A-032AC643FDB5}" ShortID="256555924">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_04" ID="{53E1E207-8104-4FE8-ABC7-1BF346C700A8}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0301823386358559"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.148964445525353"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0691272917143796"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.576385331311357"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="279385734"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_04" ID="{53E1E207-8104-4FE8-ABC7-1BF346C700A8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_08" ID="{A7AFD582-66F5-4D0F-BE80-24A92299A3E4}" ShortID="563163677">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_08" ID="{CDE8F1C3-379C-4F83-8EBA-204828A2E602}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0288123089239138"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.114491017039763"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0272958716121289"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.512555809952797"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_08.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="714744341"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_08" ID="{CDE8F1C3-379C-4F83-8EBA-204828A2E602}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_03" ID="{BC5B3E49-E477-472E-8B33-DDD761871480}" ShortID="801864652">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_03" ID="{1CBC4A27-5BEF-4C4B-8AA8-E5670FB341F7}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0255037374817268"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.15684798551262"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0369804193485039"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.711554285594812"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="402255042"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_03" ID="{1CBC4A27-5BEF-4C4B-8AA8-E5670FB341F7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="enemy_bullet_ping_01" ID="{7BB4E20C-8ACC-471F-A08C-3862F98619F6}" ShortID="498544029">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_bullet_ping_01" ID="{019F26C4-A7A6-4E08-8475-D08F3F47D1DA}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.145888083207133"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.412177769465548"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>enemy_bullet_ping_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="667197684"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_bullet_ping_01" ID="{019F26C4-A7A6-4E08-8475-D08F3F47D1DA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Basic Ricochets - v02" ID="{A39F9DE8-09BA-48DB-B599-F3C4F8CDDD8A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Designed Ricochets - v01" ID="{F42EBFC9-7660-4920-A0E5-F28DA25FE1F6}" ShortID="793304532">
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Rock" ID="{325AEBB6-87E9-4F0E-9D6C-3D0D3EED771D}" ShortID="722680525">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{63BDA811-79FD-42C4-80F8-E7AFE24A1077}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="275"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Designed Ricochets - v01" ID="{0B4EB0B6-DE79-454D-8061-E9EF82343289}">
-											<Language>SFX</Language>
-											<AudioFile>Weapons\Bullet Pings\Designed Ricochets - v01.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="696293679"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="rock_bullet_ping_01" ID="{7C532D0E-FAC1-4769-A4DE-FB6834998B73}" ShortID="405007514">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="rock_bullet_ping_01" ID="{F8F75FA8-2C00-448A-974C-0F05A0B87BBC}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0132721708090663"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.103522932310717"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.376044868677278"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>rock_bullet_ping_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="38044229"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="rock_bullet_ping_01" ID="{F8F75FA8-2C00-448A-974C-0F05A0B87BBC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="rock_bullet_ping_02" ID="{269F71FA-0C5A-46FF-B426-69F8B9CC79D6}" ShortID="987300087">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="rock_bullet_ping_02" ID="{86FA4770-0CBA-4B37-BD95-B3812CE0C6EF}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0455231907170847"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0639492441025714"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.126814602711879"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.459567446918662"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>rock_bullet_ping_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="122689272"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="rock_bullet_ping_02" ID="{86FA4770-0CBA-4B37-BD95-B3812CE0C6EF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="rock_bullet_ping_03" ID="{C7FA5EC5-F35C-45C2-9A75-DAC834AA242F}" ShortID="127692105">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="rock_bullet_ping_03" ID="{279515CA-EE0E-4F86-9E15-58134B898E1F}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0294419601787485"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0910024223706773"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0847571580903367"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.393451636468963"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>rock_bullet_ping_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="61613521"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="rock_bullet_ping_03" ID="{279515CA-EE0E-4F86-9E15-58134B898E1F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="rock_bullet_ping_04" ID="{C644225D-4F3A-415E-A0C8-0106F9C6A6BC}" ShortID="74731504">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="rock_bullet_ping_04" ID="{7E8FAD0C-286B-4EB8-AFD4-3A9EA7148EBD}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0313817966239533"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0470726949359299"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0272526128576436"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.317947128389225"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>rock_bullet_ping_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1009516407"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="rock_bullet_ping_04" ID="{7E8FAD0C-286B-4EB8-AFD4-3A9EA7148EBD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="rock_bullet_ping_05" ID="{AD389A03-3E03-43BE-A023-D607FD077088}" ShortID="437714838">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="rock_bullet_ping_05" ID="{2A177C1A-5F46-4B23-853F-8AEF41773B4B}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0286975023578795"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0676441127007161"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.10966545543904"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.443786382424358"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>rock_bullet_ping_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="596806294"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="rock_bullet_ping_05" ID="{2A177C1A-5F46-4B23-853F-8AEF41773B4B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="rock_bullet_ping_06" ID="{CF68AE25-BE62-461E-A72A-F3DA7387A828}" ShortID="153963193">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="rock_bullet_ping_06" ID="{1C077EE0-3205-4DCF-9F23-46C12250158C}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0453316137938932"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.134284214446061"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0872419737165492"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.467001141502952"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>rock_bullet_ping_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="983353706"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="rock_bullet_ping_06" ID="{1C077EE0-3205-4DCF-9F23-46C12250158C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="rock_bullet_ping_07" ID="{4C57D71A-15E8-4452-BF06-A96D0D495043}" ShortID="130952711">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="rock_bullet_ping_07" ID="{1145DEAF-C6C1-4B76-831A-62D6587D5591}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0324653622814882"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0947637601729927"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0921314335015207"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.414152741406914"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>rock_bullet_ping_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="229104501"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="rock_bullet_ping_07" ID="{1145DEAF-C6C1-4B76-831A-62D6587D5591}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="rock_bullet_ping_08" ID="{99FFFF9C-CA3D-455A-B9D0-5D231113E352}" ShortID="769206936">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="rock_bullet_ping_08" ID="{4CF7F74C-06A0-4700-851E-118B017EB541}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0319340596626779"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0539214450041939"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0848084863172759"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.364885894357368"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>rock_bullet_ping_08.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="337845362"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="rock_bullet_ping_08" ID="{4CF7F74C-06A0-4700-851E-118B017EB541}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Designed Ricochets - v01" ID="{0B4EB0B6-DE79-454D-8061-E9EF82343289}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Metal" ID="{E5A62178-6C1A-45BC-ACCA-47A6CE45109E}" ShortID="810035681">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{287A3017-AEF9-4BD3-83C7-3B329067ACCC}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="175"/>
+															<Property Name="Min" Type="Real64" Value="-375"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="metal_bullet_ping01" ID="{94F2FAB4-E838-4940-A019-649FFE2C9AB7}" ShortID="418389186">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal_bullet_ping01" ID="{2BCE3068-7DEE-41E8-AE5D-9C326185ED32}">
+													<Language>SFX</Language>
+													<AudioFile>metal_bullet_ping01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="284797051"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal_bullet_ping01" ID="{2BCE3068-7DEE-41E8-AE5D-9C326185ED32}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal_bullet_ping02" ID="{464F5E29-2C91-42A0-9C35-615B3FF3D6B3}" ShortID="467800741">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal_bullet_ping02" ID="{911BCB82-9646-4E25-9EB1-8E659DBB9D7A}">
+													<Language>SFX</Language>
+													<AudioFile>metal_bullet_ping02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="284252044"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal_bullet_ping02" ID="{911BCB82-9646-4E25-9EB1-8E659DBB9D7A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal_bullet_ping03" ID="{A9514215-20FE-49BB-A343-A693654CAA66}" ShortID="239609238">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal_bullet_ping03" ID="{7A082C50-AE6E-4358-A60D-DB67CE6E5803}">
+													<Language>SFX</Language>
+													<AudioFile>metal_bullet_ping03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="43590827"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal_bullet_ping03" ID="{7A082C50-AE6E-4358-A60D-DB67CE6E5803}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="metal_bullet_ping04" ID="{1FCCAFE6-1386-415E-BB46-5AD0EDCC34D7}" ShortID="388760257">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="metal_bullet_ping04" ID="{F9F4428A-660C-4F1A-A94C-551BC6F34CA3}">
+													<Language>SFX</Language>
+													<AudioFile>metal_bullet_ping04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="795721697"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="metal_bullet_ping04" ID="{F9F4428A-660C-4F1A-A94C-551BC6F34CA3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</PropertyContainer>
 					</ChildrenList>

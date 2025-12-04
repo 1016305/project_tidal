@@ -91,6 +91,15 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Enemy" ID="{ABDF2E26-92DA-4C95-B576-9567F202BE3F}" ShortID="1364444">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="combat_barks" ID="{D69E7259-D6F4-4333-937A-A808AD223C7F}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
