@@ -32,6 +32,7 @@ var do_bark: bool = false
 @export var hovering_sounds: WwiseEvent
 @export var alert_sounds: WwiseEvent
 @export var melee_sounds: WwiseEvent
+@export var death_sounds: WwiseEvent
 
 @export_category("Primary Logic")
 enum States{None,Idle,Alert,Attack,MoveToCover,Cover,MoveFromCover,Melee,Dead}
@@ -583,6 +584,7 @@ func dead():
 		animation_player.play("death")
 		print("play death 7")
 		saw_spin.stop()
+		playsound(death_sounds)
 		stopsound(hovering_sounds)
 		await get_tree().create_timer(1.9).timeout
 		animation_player.pause()

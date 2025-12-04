@@ -9,6 +9,8 @@ var player_weapon
 var player
 
 var current_checkpoint_manager
+var sound_manager
+signal sound_manager_assigned
 
 var current_encounter
 signal player_is_assigned

@@ -130,8 +130,11 @@ guid = "{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}"
 id = 393239870
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_geu6g"]
+path = "\\Busses\\Default Work Unit\\Main Audio Bus"
 children = [SubResource("WwiseTreeObject_mqnyt"), SubResource("WwiseTreeObject_v560u"), SubResource("WwiseTreeObject_yyrou")]
+type = 2
 name = "Main Audio Bus"
+guid = "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
 id = 2246998526
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_5n8hf"]
@@ -142,8 +145,11 @@ guid = "{1332E2DC-853C-42B6-A659-92C90F2675EC}"
 id = 2540843761
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_tnib1"]
+path = "\\Busses\\Default Work Unit\\Reverbs"
 children = [SubResource("WwiseTreeObject_5n8hf")]
+type = 2
 name = "Reverbs"
+guid = "{9DD65F07-E8FB-45DE-B393-D2C7EC9793A5}"
 id = 3545700988
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_o7sea"]
