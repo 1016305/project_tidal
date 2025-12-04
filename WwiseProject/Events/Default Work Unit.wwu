@@ -25,18 +25,11 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="weapon_assaultRifle_Play_Firing" ID="{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}">
-					<ChildrenList>
-						<Action Name="" ID="{B81E5190-5B64-4C9A-909D-4454A9D4CAAF}" ShortID="423538181">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Firing" ID="{F204CAC5-5168-49AF-A8E3-BB2AFD0A51FC}" WorkUnitID="{4CA4E494-3BAD-4EE9-954B-B872B640ABA7}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Folder Name="Interactables" ID="{DB27675D-5D56-48D7-BA29-971158CE0BF7}" ShortID="13465690">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="button" ID="{A1FEA889-5899-4FEA-8BFE-31E347E96E1D}">
 							<ChildrenList>
@@ -68,7 +61,7 @@
 								</Action>
 								<Action Name="" ID="{BD7C2E95-24F2-453C-BCE2-221CF9A1FA10}" ShortID="268456714">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="1.5"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -89,6 +82,9 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="crashed_ship" ID="{DA56627C-D39E-4E24-A266-621C8B978AB1}"/>
+						<Event Name="door_console" ID="{1C18790D-4652-45F0-B402-E12F5FCFE49B}"/>
+						<Event Name="elevator" ID="{68A19D79-B2C2-4F98-93DB-26BB86587B30}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemy" ID="{ABDF2E26-92DA-4C95-B576-9567F202BE3F}" ShortID="1364444">
@@ -97,7 +93,147 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="combat_barks" ID="{D69E7259-D6F4-4333-937A-A808AD223C7F}"/>
+						<Event Name="combat_barks" ID="{D69E7259-D6F4-4333-937A-A808AD223C7F}">
+							<PropertyList>
+								<Property Name="InstanceLimit" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{23DABF85-9CD4-431F-B289-FB521BB5DE0D}" ShortID="199796853">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="4.5">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{81B0FEF6-CEF4-46A9-8FA2-6910AF46EB99}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-4"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Probability" Type="Real64" Value="50"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Combat Bark" ID="{2D32388D-11FA-4E1C-8E7D-280D895A2588}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="hit_barks" ID="{6A549BA7-1316-4482-9C73-C8A236DB9AF1}">
+							<PropertyList>
+								<Property Name="InstanceLimit" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{32479875-03CF-4A45-B42F-05616F6721B9}" ShortID="16778069">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Hit Bark" ID="{6FD402FF-AC95-49DC-8BE9-DC67A1EAAE23}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{80F7384D-E4CB-45CA-A380-A09592EAF59E}" ShortID="741502134">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Combat Bark" ID="{2D32388D-11FA-4E1C-8E7D-280D895A2588}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="enemy_death" ID="{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}">
+							<PropertyList>
+								<Property Name="InstanceLimit" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{35BB5959-AB45-4BFA-9A05-500A102D7948}" ShortID="272700604">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Death Bark" ID="{67638A37-C912-4861-B290-7B80EC4BF85B}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{17946677-8C02-473C-8E6A-4B285F01A3E4}" ShortID="956847344">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Combat Bark" ID="{2D32388D-11FA-4E1C-8E7D-280D895A2588}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1713C561-540F-4EB8-BD37-EFFDA4ACB398}" ShortID="41767151">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Hit Bark" ID="{6FD402FF-AC95-49DC-8BE9-DC67A1EAAE23}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="idle_barks" ID="{1FA8C10E-718A-46AB-B604-4D02BA976176}">
+							<ChildrenList>
+								<Action Name="" ID="{DFF4180E-BCD2-45EA-96C4-A79295C4E457}" ShortID="470797665"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="enemy_movement" ID="{C11A5FAA-D601-48A5-8892-7869C8301D6B}"/>
+						<Event Name="enemy_fire" ID="{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Weapons" ID="{2EE7421E-BB6F-4C36-8793-B9D3606086BC}" ShortID="543150394">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="8"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="assault_rifle_fire" ID="{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}">
+							<ChildrenList>
+								<Action Name="" ID="{B81E5190-5B64-4C9A-909D-4454A9D4CAAF}" ShortID="423538181">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gun Fire" ID="{975BB9C1-8AA5-4D40-A325-CC788602EFA5}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="assault_rifle_reload" ID="{AF325875-E58B-4D25-84F3-764AF865CF79}"/>
+						<Event Name="assault_rifle_empty_clip" ID="{A5412561-BC37-4B86-AF19-36223CDD0755}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemy Boss" ID="{6BFEEC23-7573-497B-BD71-167B876C76E6}" ShortID="723647789">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="23"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="boss_intro_animation" ID="{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}"/>
+						<Event Name="boss_combat_barks" ID="{71599AD0-8564-4A70-8B5A-220F348FB2FB}"/>
+						<Event Name="boss_hit_barks" ID="{1C5E639C-224A-4297-9074-6C2B0D55F58A}"/>
+						<Event Name="boss_death" ID="{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}"/>
+						<Event Name="boss_movement" ID="{9A0CEEB0-7F1E-4248-A797-C84ECF701575}"/>
+						<Event Name="boss_weapon_fire" ID="{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

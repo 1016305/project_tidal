@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	143989192	hit_barks			\Default Work Unit\Enemy\hit_barks	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+

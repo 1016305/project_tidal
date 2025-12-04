@@ -1631,6 +1631,7 @@
 							<ChildrenList>
 								<PropertyContainer Name="Barks" ID="{984BE441-FB59-4144-8C91-220988FC511B}" ShortID="891603180">
 									<PropertyList>
+										<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.4"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -1651,6 +1652,184 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<Custom>
+												<Attenuation Name="Enemy Attenuation" ID="{7CF8E867-3335-464C-9342-C17B076BADA3}" ShortID="555763802">
+													<PropertyList>
+														<Property Name="Color" Type="int16" Value="10"/>
+														<Property Name="OverrideColor" Type="bool" Value="True"/>
+													</PropertyList>
+													<CurveUsageInfoList>
+														<VolumeDryUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="VolumeDry" ID="{7FF0799F-C712-4B3E-BC6B-8091813F54B2}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																			<SegmentShape>Log3</SegmentShape>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>-200</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</VolumeDryUsage>
+														<VolumeWetGameUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetGameUsage>
+														<VolumeWetUserUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetUserUsage>
+														<LowPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None">
+																<Curve Name="LowPassFilter" ID="{D5F80AC3-0C29-4003-8E7B-51A42307B521}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="65537"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>100</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</LowPassFilterUsage>
+														<HighPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="HighPassFilter" ID="{157BC32C-A483-471C-96E0-D1F5E1361C9F}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="65537"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																			<SegmentShape>Exp3</SegmentShape>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>60</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</HighPassFilterUsage>
+														<HighShelfUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</HighShelfUsage>
+														<SpreadUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</SpreadUsage>
+														<FocusUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</FocusUsage>
+														<ObstructionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="ObstructionVolume" ID="{39402C58-753A-47C4-A394-9C769F3EDABB}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																			<SegmentShape>Log2</SegmentShape>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>-2.28691</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</ObstructionVolumeUsage>
+														<ObstructionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="ObstructionLPF" ID="{74929040-2E79-4325-87BA-0606F33A23AE}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="65537"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																			<SegmentShape>Exp3</SegmentShape>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>100</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</ObstructionLPFUsage>
+														<ObstructionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionHPFUsage>
+														<ObstructionHSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionHSFUsage>
+														<OcclusionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionVolumeUsage>
+														<OcclusionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionLPFUsage>
+														<OcclusionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionHPFUsage>
+														<OcclusionHSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionHSFUsage>
+														<DiffractionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionVolumeUsage>
+														<DiffractionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionLPFUsage>
+														<DiffractionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionHPFUsage>
+														<DiffractionHSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionHSFUsage>
+														<TransmissionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionVolumeUsage>
+														<TransmissionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionLPFUsage>
+														<TransmissionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionHPFUsage>
+														<TransmissionHSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionHSFUsage>
+													</CurveUsageInfoList>
+												</Attenuation>
+											</Custom>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -1661,12 +1840,24 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="Enemy Combat Bark" ID="{2D32388D-11FA-4E1C-8E7D-280D895A2588}" ShortID="263110270">
 											<PropertyList>
-												<Property Name="InitialDelay" Type="Real64">
-													<ValueList>
-														<Value>5.5</Value>
-													</ValueList>
-												</Property>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="5">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{769A1BC8-B042-4A00-940D-25FD0F35A317}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="4"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2027,6 +2218,7 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Enemy Hit Bark" ID="{6FD402FF-AC95-49DC-8BE9-DC67A1EAAE23}" ShortID="247319530">
 											<PropertyList>
+												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -2040,6 +2232,9 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2537,138 +2732,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="assault_rifle_empty_clip" ID="{65E975C9-F262-46C8-859A-749D8A5EB376}" ShortID="659202231">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="assault_rifle_empty_clip" ID="{C3401E3F-F4B6-4BD6-BF50-F69B1ACEB207}">
-											<Language>SFX</Language>
-											<AudioFile>Weapons\Assault Rifle\assault_rifle_empty_clip.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="969641868"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="assault_rifle_empty_clip" ID="{C3401E3F-F4B6-4BD6-BF50-F69B1ACEB207}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="assault_rifle_fire_withtail" ID="{B9965EB9-E88D-4686-B368-70F0215B0611}" ShortID="522205084">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="assault_rifle_fire_withtail" ID="{DD8C546A-FFCB-4524-BAD0-98308981EA5D}">
-											<Language>SFX</Language>
-											<AudioFile>Weapons\Assault Rifle\assault_rifle_fire_withtail.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="444093844"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="assault_rifle_fire_withtail" ID="{DD8C546A-FFCB-4524-BAD0-98308981EA5D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="assault_rifle_fire_withtail_(s)" ID="{6F3E1A45-90CB-4B5D-B500-30193AC4C755}" ShortID="729849635">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="assault_rifle_fire_withtail_(s)" ID="{ED2DAD30-0393-48E2-8ED7-50306DF64F43}">
-											<Language>SFX</Language>
-											<AudioFile>Weapons\Assault Rifle\assault_rifle_fire_withtail_(s).wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="693917548"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="assault_rifle_fire_withtail_(s)" ID="{ED2DAD30-0393-48E2-8ED7-50306DF64F43}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="assault_rifle_gunfire (s)" ID="{3E84B32E-0AAF-4787-937C-4BABCC3E8E15}" ShortID="68651304">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="assault_rifle_gunfire (s)" ID="{F94B1701-1B65-40D9-865A-E0598CB56B2B}">
-											<Language>SFX</Language>
-											<AudioFile>Weapons\Assault Rifle\assault_rifle_gunfire (s).wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="123718909"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="assault_rifle_gunfire (s)" ID="{F94B1701-1B65-40D9-865A-E0598CB56B2B}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="assault_rifle_gunfire" ID="{12D32153-E266-48CE-8BB8-D9674822401B}" ShortID="841503023">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="assault_rifle_gunfire" ID="{29D256F4-DD07-4515-A023-D96B5CE47EAA}">
-											<Language>SFX</Language>
-											<AudioFile>Weapons\Assault Rifle\assault_rifle_gunfire.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="659218500"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="assault_rifle_gunfire" ID="{29D256F4-DD07-4515-A023-D96B5CE47EAA}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="assault_rifle_reload" ID="{90AEBAB1-D869-4FE9-BDAC-6DC6CF2EFBF8}" ShortID="466702816">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="assault_rifle_reload" ID="{02F9EC54-58C6-4A4C-A0CE-2DC09295F01B}">
-											<Language>SFX</Language>
-											<AudioFile>Weapons\Assault Rifle\assault_rifle_reload.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1039305653"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="assault_rifle_reload" ID="{02F9EC54-58C6-4A4C-A0CE-2DC09295F01B}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="mech, click" ID="{1B913B09-C1F6-42C7-81B9-B6C161C5BF35}" ShortID="132194104">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -2689,6 +2752,143 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="mech, click" ID="{3D6DCA42-917C-412F-BDD4-5B8448F7C914}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="Gun Fire" ID="{975BB9C1-8AA5-4D40-A325-CC788602EFA5}" ShortID="68988298">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="assault_rifle_gunfire01" ID="{2ACA4EF1-F5AF-4690-9A92-9B6FF8228DF8}" ShortID="771710049">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="assault_rifle_gunfire01" ID="{55ACC209-35CC-4165-9515-31D287760AF9}">
+													<Language>SFX</Language>
+													<AudioFile>assault_rifle_gunfire01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="445722309"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="assault_rifle_gunfire01" ID="{55ACC209-35CC-4165-9515-31D287760AF9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="assault_rifle_gunfire02" ID="{F8AF5ECB-FB00-4D92-91BF-5F6C8006DA60}" ShortID="722200152">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="assault_rifle_gunfire02" ID="{A9C89705-2BF5-41E5-95F5-391AE6D7A0A2}">
+													<Language>SFX</Language>
+													<AudioFile>assault_rifle_gunfire02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="743935165"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="assault_rifle_gunfire02" ID="{A9C89705-2BF5-41E5-95F5-391AE6D7A0A2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="assault_rifle_gunfire03" ID="{68F9AA54-AFF4-4A74-A119-690E9E7C2E5D}" ShortID="547721405">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="assault_rifle_gunfire03" ID="{802A3725-F243-4CC8-B155-EB32763A7255}">
+													<Language>SFX</Language>
+													<AudioFile>assault_rifle_gunfire03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="483902979"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="assault_rifle_gunfire03" ID="{802A3725-F243-4CC8-B155-EB32763A7255}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="assault_rifle_gunfire04" ID="{B84681B2-4349-42F0-9E6D-F8E582442A4A}" ShortID="499089211">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="assault_rifle_gunfire04" ID="{79BBCE1D-EE85-443E-A7DF-1FC5297C40EC}">
+													<Language>SFX</Language>
+													<AudioFile>assault_rifle_gunfire04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="478542978"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="assault_rifle_gunfire04" ID="{79BBCE1D-EE85-443E-A7DF-1FC5297C40EC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{9980040F-B4B4-4E3C-8DC6-9DBF494B8029}" ShortID="119035406">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="Boost_3dB_10KHz" ID="{59632554-9396-4E15-889E-7A2F5458DEC3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<Sound Name="assault_rifle_reload" ID="{38BD2BF0-8B8F-427C-93A6-50FC9CBDE6B0}" ShortID="203924354">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="assault_rifle_reload" ID="{674FF716-71D0-4655-BAA8-4EA932591B5D}">
+											<Language>SFX</Language>
+											<AudioFile>assault_rifle_reload.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="318863317"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="assault_rifle_reload" ID="{674FF716-71D0-4655-BAA8-4EA932591B5D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -3610,7 +3810,7 @@
 					<ChildrenList>
 						<MusicSegment Name="canyon_reveal" ID="{C822397E-BD0C-4A27-94FE-CEDC11CE825C}" ShortID="784202355">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="55652.1768707483"/>
+								<Property Name="EndPosition" Type="Real64" Value="57182.1335966128"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>9</Value>
@@ -3658,11 +3858,72 @@
 													<ObjectList Name="Clips">
 														<MusicClip Name="canyon_reveal" ID="{09C7B946-1EFC-4559-AC13-1C7E8F7F78C1}">
 															<PropertyList>
+																<Property Name="BeginTrimOffset" Type="Real64" Value="701.230166021216"/>
 																<Property Name="EndTrimOffset" Type="Real64" Value="55652.1768707483"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="1211.21574130938"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="PlayAt" Type="Real64" Value="-701.230166021216"/>
 															</PropertyList>
 															<AudioSourceRef Name="canyon_reveal" ID="{CC423730-D1D2-47C4-A170-E2E872D34F20}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Highpass">
+																	<Curve Name="" ID="{2774CF19-C754-437C-AEA7-1FF399F56036}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0.70123</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>55.6521768707483</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Lowpass">
+																	<Curve Name="" ID="{B561EF66-B898-4844-9D4C-1503DCE63F4E}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0.70123</XPos>
+																				<YPos>4.35278</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>55.6521768707483</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{D628EF5B-1E35-4343-AAFF-6B9A92F00DDC}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0.70123</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>55.6521768707483</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
 														</MusicClip>
 													</ObjectList>
 												</ObjectLists>

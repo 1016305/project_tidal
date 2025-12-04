@@ -541,6 +541,21 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ud63i")
 
+[sub_resource type="Animation" id="Animation_snqy2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Icosphere/Main gun/Gun back part:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-5.61489, 4.44259, 1.41791e-06)]
+}
+
 [sub_resource type="Animation" id="Animation_38w4d"]
 resource_name = "rear_recoil"
 length = 2.0
@@ -557,25 +572,49 @@ tracks/0/keys = {
 "values": [Vector3(-5.61489, 4.44259, 1.41791e-06), Vector3(-6.91984, 4.44259, 1.3737e-06), Vector3(-6.91984, 4.44259, 1.3737e-06), Vector3(-5.61489, 4.44259, 1.41791e-06)]
 }
 
-[sub_resource type="Animation" id="Animation_snqy2"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w4qw4"]
+_data = {
+&"RESET": SubResource("Animation_snqy2"),
+&"rear_recoil": SubResource("Animation_38w4d")
+}
+
+[sub_resource type="Animation" id="Animation_ajr1p"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Icosphere/Main gun/Gun back part:position")
+tracks/0/path = NodePath("Stem:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-5.61489, 4.44259, 1.41791e-06)]
+"values": [Vector3(-0.00703137, -4.66268, 0)]
 }
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_w4qw4"]
-_data = {
-&"RESET": SubResource("Animation_snqy2"),
-&"rear_recoil": SubResource("Animation_38w4d")
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icosphere:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.00703137, 8.61982, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icosphere:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.513807, -1.5708, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_w4qw4"]
@@ -616,45 +655,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(-0.513807, -1.5708, 0), Vector3(-0.513807, -1.5708, 0), Vector3(-0.111893, -1.5708, 0), Vector3(-0.111701, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_ajr1p"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Stem:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.00703137, -4.66268, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Icosphere:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.00703137, 8.61982, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Icosphere:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.513807, -1.5708, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kfh3s"]
@@ -964,7 +964,7 @@ light_color = Color(0.6875, 0.562328, 0.265869, 1)
 shadow_enabled = true
 
 [node name="Icosphere" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0.491497, -0.870879, 0, 0.870879, 0.491497, 1, 2.1484e-08, -3.80674e-08, -0.00703137, 8.61982, 0)
+transform = Transform3D(-3.61999e-06, 0.491496, -0.87088, 0, 0.87088, 0.491496, 1, 1.77921e-06, -3.15258e-06, -0.00703137, 8.61982, 0)
 material_override = ExtResource("2_38w4d")
 mesh = SubResource("ArrayMesh_ptnsa")
 skeleton = NodePath("")

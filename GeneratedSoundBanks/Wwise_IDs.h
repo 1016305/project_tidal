@@ -13,12 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ASSAULT_RIDLE_FIRE = 2374648574U;
         static const AkUniqueID BUTTON = 977454165U;
+        static const AkUniqueID COMBAT_BARKS = 2313023713U;
+        static const AkUniqueID DEATH_BARKS = 1932895357U;
+        static const AkUniqueID HIT_BARKS = 143989192U;
         static const AkUniqueID LIGHTS_ON = 1063352154U;
         static const AkUniqueID SFX_PLAYTESTSOUND = 2888769156U;
         static const AkUniqueID TEST_EVENT_01 = 1336498786U;
         static const AkUniqueID TOOTHDOOR_OPENING = 3417972020U;
-        static const AkUniqueID WEAPON_ASSAULTRIFLE_PLAY_FIRING = 619672820U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

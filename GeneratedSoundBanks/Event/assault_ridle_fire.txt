@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2374648574	assault_ridle_fire			\Default Work Unit\Weapons\assault_ridle_fire	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2998002419	Boost_3dB_10KHz	Wwise Parametric EQ			
+

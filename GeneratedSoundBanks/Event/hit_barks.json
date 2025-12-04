@@ -1,0 +1,117 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "143989192",
+    "Type": "Event",
+    "GUID": "{6A549BA7-1316-4482-9C73-C8A236DB9AF1}",
+    "Language": "SFX",
+    "Hash": "{3A7F52B1-4335-C23A-BA8C-5A0AB5329400}",
+    "ObjectPath": "hit_barks",
+    "ShortName": "hit_barks",
+    "Path": "Event/hit_barks.bnk",
+    "Media": [
+     {
+      "Id": "92867497",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/92867497.wem",
+      "CachePath": "3C/{3C2C14CE-4DAC-4AB9-6F70-811B4B429DD6}.wem"
+     },
+     {
+      "Id": "134533631",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/134533631.wem",
+      "CachePath": "D1/{D1EB9E40-321F-EFA7-D76C-3BC6ED96DAB9}.wem"
+     },
+     {
+      "Id": "253060480",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/253060480.wem",
+      "CachePath": "17/{17AE406D-C90F-2D74-E26D-D0C014129F5C}.wem"
+     },
+     {
+      "Id": "261362267",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/261362267.wem",
+      "CachePath": "E1/{E1A335D7-8511-B9C4-5AD3-C60AA60AB7DF}.wem"
+     },
+     {
+      "Id": "619156272",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/619156272.wem",
+      "CachePath": "50/{5079DCEB-5E79-861E-87AF-C8DAFE402D32}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "143989192",
+      "Name": "hit_barks",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\hit_barks",
+      "GUID": "{6A549BA7-1316-4482-9C73-C8A236DB9AF1}",
+      "Color": "10",
+      "MaxAttenuation": "40",
+      "DurationType": "OneShot",
+      "DurationMin": "0.51023334",
+      "DurationMax": "1.3734646",
+      "MediaRefs": [
+       {
+        "Id": "92867497"
+       },
+       {
+        "Id": "134533631"
+       },
+       {
+        "Id": "253060480"
+       },
+       {
+        "Id": "261362267"
+       },
+       {
+        "Id": "619156272"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E7BFF54B-5D6A-12C2-3118-6EBBFAE1E113}"
+ }
+}

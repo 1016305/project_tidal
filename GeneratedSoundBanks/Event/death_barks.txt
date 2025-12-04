@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1932895357	death_barks			\Default Work Unit\Enemy\death_barks	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+
