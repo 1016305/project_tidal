@@ -23,6 +23,7 @@ var rotate_at_all: bool = true
 
 @export_category("Sound Effects")
 var do_bark: bool = false
+var do_idle_bark: bool = false
 ## Combat barks will pick a random number of seconds before playing. This is the lower bound.
 @export var combat_bark_min_interval: float = 3
 ## Combat barks will pick a random number of seconds before playing. This is the upper bound.
@@ -33,6 +34,11 @@ var do_bark: bool = false
 @export var alert_sounds: WwiseEvent
 @export var melee_sounds: WwiseEvent
 @export var death_sounds: WwiseEvent
+## Idle barks will pick a random number of seconds before playing. This is the lower bound.
+@export var idle_bark_min_interval: float = 3
+## Idle barks will pick a random number of seconds before playing. This is the upper bound.
+@export var idle_bark_max_interval: float = 5
+@export var idle_sounds: WwiseEvent
 
 @export_category("Primary Logic")
 enum States{None,Idle,Alert,Attack,MoveToCover,Cover,MoveFromCover,Melee,Dead}
@@ -177,6 +183,7 @@ func _physics_process(delta: float) -> void:
 		if current_state != States.Dead:
 			current_state = States.Dead
 	do_combat_barks()
+	do_idle_barks()
 
 func main_behaviour():
 	if await_frame:
@@ -701,6 +708,13 @@ func do_combat_barks():
 			playsound(combat_barks)
 			await get_tree().create_timer(randf_range(combat_bark_min_interval,combat_bark_max_interval)).timeout
 			do_bark = false
+			
+func do_idle_barks():
+	if current_state == States.Idle:
+		if !do_idle_bark:
+			do_idle_bark = true
+			playsound(idle_sounds)
+			await get_tree().create_timer(randf_range(idle_bark_min_interval,idle_bark_max_interval)).timeout
 
 func _on_stop_trying_timeout() -> void:
 	current_state = States.Attack
