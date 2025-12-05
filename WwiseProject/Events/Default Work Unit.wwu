@@ -85,6 +85,7 @@
 						<Event Name="crashed_ship" ID="{DA56627C-D39E-4E24-A266-621C8B978AB1}"/>
 						<Event Name="door_console" ID="{1C18790D-4652-45F0-B402-E12F5FCFE49B}"/>
 						<Event Name="elevator" ID="{68A19D79-B2C2-4F98-93DB-26BB86587B30}"/>
+						<Event Name="first_tower_amb" ID="{0A7549B4-58E1-4FB8-B992-B28C5770A0A3}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemy" ID="{ABDF2E26-92DA-4C95-B576-9567F202BE3F}" ShortID="1364444">
@@ -224,7 +225,7 @@
 				</Folder>
 				<Folder Name="Enemy Boss" ID="{6BFEEC23-7573-497B-BD71-167B876C76E6}" ShortID="723647789">
 					<PropertyList>
-						<Property Name="Color" Type="int16" Value="23"/>
+						<Property Name="Color" Type="int16" Value="10"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
@@ -234,6 +235,61 @@
 						<Event Name="boss_death" ID="{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}"/>
 						<Event Name="boss_movement" ID="{9A0CEEB0-7F1E-4248-A797-C84ECF701575}"/>
 						<Event Name="boss_weapon_fire" ID="{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Second Tower" ID="{4D78BF6E-6CA4-407D-A316-99D2E3FAF8F2}" ShortID="958894495">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="second_tower_amb" ID="{0680BB3C-6F96-4BBA-AA89-908140A2DF2E}"/>
+						<Event Name="second_tower_converyorbelt" ID="{5265D1D1-E44C-4096-856D-5885F6B536CB}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Third Tower" ID="{6998538F-4A40-4947-A391-2A8289337198}" ShortID="702691969">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="alarm" ID="{F813228F-7B1C-4629-95C9-DB3F537C3764}"/>
+						<Event Name="speaker" ID="{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}"/>
+						<Event Name="third_tower_conveyorbelt" ID="{BA9FE5AD-7631-4FA0-984B-293B17A93785}"/>
+						<Event Name="third_tower_amb" ID="{1FB55A85-BA2B-476C-B981-7CF7B6A9F445}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Canyon" ID="{50E025C6-79E4-4265-B59F-91E79EA4A3F4}" ShortID="103175608">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="canyon_amb" ID="{B949D462-D727-4E77-A282-E1465394076D}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Bullet Pings" ID="{0444B75D-6FC6-494B-9DC2-937AE8617596}" ShortID="216561502">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="enemy" ID="{EBA2F312-5FB1-4C0D-B46B-436888974182}"/>
+						<Event Name="player" ID="{295BFF33-04A9-48E5-B18A-536E8128CD09}"/>
+						<Event Name="metal" ID="{18273E7B-63FF-4436-9E82-C529AFBA5CC8}"/>
+						<Event Name="dirt_grass" ID="{F38718AC-1CC8-4493-ABC9-82387EC5816C}"/>
+						<Event Name="boss" ID="{203BF74C-3EC5-49CD-8C05-64EE16CAE55A}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player" ID="{4B01063A-24D0-4FCF-91F1-6E47CD04ABAC}" ShortID="23859266">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="footsteps" ID="{D6E1E6FD-B377-4DFC-BC2F-BFF458CB7496}"/>
+						<Event Name="low_health" ID="{7EC976F9-DACF-499D-983D-A3EF6EB13861}"/>
+						<Event Name="movement" ID="{F6890812-9B8F-4E90-BC0E-7EEF93E59808}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
