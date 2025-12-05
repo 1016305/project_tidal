@@ -16,6 +16,12 @@ var overcharge_bool: bool = false
 @export var interact_distance : float = 2
 var interact_result
 
+@export_category("Footsteps")
+@export var footsteps: WwiseEvent
+@export var standard_interval: float = 0.8
+@export var sprinting_interval: float = 0.8
+@onready var footsteps_timer: Timer = $footsteps_timer
+
 #player movement adjustable variables
 var mouse_sens = 0.3
 var mouse_sens_multiplier: float = 1
@@ -76,6 +82,7 @@ func _ready() -> void:
 	Global.player_health.emit(current_health,max_health)
 	Global.set_mouse_sens.connect(update_sensitivity)
 	Global.player_respawned.connect(player_respawned)
+	footsteps_timer.wait_time = standard_interval
 
 #unhandled input process
 #uses mouse to handle rotation
@@ -95,6 +102,7 @@ func _physics_process(delta: float) -> void:
 		handle_move(delta)
 		handle_sprint(delta)
 		handle_jump()
+		footstep_sounds()
 	toggle_mouse()
 	if !is_dead:
 		handle_head_roll(input_dir, delta)
@@ -281,6 +289,17 @@ func reload():
 func toggle_flashlight():
 	if Input.is_action_just_pressed("toggle_flashlight"):
 		flashlight.visible = !flashlight.visible
+		
+func footstep_sounds():
+	if is_moving:
+		if is_running:
+			footsteps_timer.wait_time = sprinting_interval
+		else:
+			footsteps_timer.wait_time = standard_interval
+		if footsteps != null:
+			if footsteps_timer.is_stopped():
+				footsteps.post(self)
+				footsteps_timer.start()
 
 ##Getters and Setters
 #Player damage and health

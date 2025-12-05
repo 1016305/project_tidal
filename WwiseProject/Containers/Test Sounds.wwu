@@ -4,12 +4,18 @@
 		<WorkUnit Name="Test Sounds" ID="{0073F6B3-FDDF-410E-93C5-394CB98DD32A}" OwnerID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}" PersistMode="Nested">
 			<ChildrenList>
 				<Sound Name="new-notification-027-383749" ID="{F534EC4E-1CE2-41A0-AD4C-F4BEC3DE6932}" ShortID="775824404">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Physically_Based" ID="{7AF96D5E-B0A7-4524-B96B-04F53DEAEC94}" WorkUnitID="{E312AA2F-7D32-49AE-9B3F-853E8C0370AC}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+							<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -27,6 +33,7 @@
 				</Sound>
 				<Sound Name="wahwah" ID="{791ADE14-0854-423A-9139-6003EF47FCC5}" ShortID="877369078">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
 					</PropertyList>
 					<ReferenceList>

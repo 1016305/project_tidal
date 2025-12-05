@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A1FEA889-5899-4FEA-8BFE-31E347E96E1D}",
     "Language": "SFX",
-    "Hash": "{913E013A-BAF2-165B-230E-EC28295881C4}",
+    "Hash": "{A3592676-8301-BF68-6FA6-9B94E1853474}",
     "ObjectPath": "button",
     "ShortName": "button",
     "Path": "Event/button.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "scifi_button.wav",
       "Path": "Media/1039733746.wem",
-      "CachePath": "1E/{1ECEEA82-DD8A-5A67-FA76-0EA794E6B49F}.wem"
+      "CachePath": "D4/{D445FDB2-AF35-9366-7AD7-5A3EA711EDA2}.wem"
      }
     ],
     "Events": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{AB640DE9-F752-3156-BFA4-DE95BEC57D58}"
+  "FileHash": "{69286843-9211-5ADB-3835-9026CC1FE6F3}"
  }
 }

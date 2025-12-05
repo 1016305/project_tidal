@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4FB8DF76-11ED-401D-AE79-AF08CAB33840}",
     "Language": "SFX",
-    "Hash": "{5D50F349-5AC6-101A-192B-BD6F1AA45263}",
+    "Hash": "{0C974284-7174-6B45-D28F-4EF8918511E7}",
     "ObjectPath": "Test_Event_01",
     "ShortName": "Test_Event_01",
     "Path": "Event/Test_Event_01.bnk",
@@ -31,6 +31,7 @@
       "Name": "Test_Event_01",
       "ObjectPath": "\\Events\\Default Work Unit\\Test_Event_01",
       "GUID": "{4FB8DF76-11ED-401D-AE79-AF08CAB33840}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "2.496",
       "DurationMax": "2.496",
@@ -43,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{F9F7A186-C734-D225-FCCC-A4C5ACC9983A}"
+  "FileHash": "{0B91C994-DB8C-F994-483A-1E712274E41A}"
  }
 }

@@ -3,7 +3,6 @@ class_name GenericSoundScript extends Node3D
 var SOUNDS_TABLE = preload("res://scripts/utility/sounds_table.tres")
 var global_sound_controller: Node3D
 @onready var ak_event_3d: AkEvent3D = $AkEvent3D
-
 @export var event: StringName
 var active_event: WwiseEvent
 
@@ -20,6 +19,8 @@ func play():
 	ak_event_3d.event = active_event
 	if active_event != null:
 		active_event.post(self)
+		ak_event_3d
+		print("playing sounds")
 
 func _ready() -> void:
 	await get_tree().create_timer(1).timeout

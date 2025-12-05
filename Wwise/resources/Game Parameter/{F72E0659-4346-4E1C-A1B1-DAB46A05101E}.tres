@@ -1,0 +1,7 @@
+[gd_resource type="WwiseRTPC" format=3 uid="uid://uen2wuqrch2m"]
+
+[resource]
+name = "SS_Air_Fear"
+id = 1351367891
+guid = "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
+dummy = true

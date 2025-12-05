@@ -1,0 +1,116 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1063352154",
+    "Type": "Event",
+    "GUID": "{857D5D76-7D63-43C3-878D-B8A113A7E4BC}",
+    "Language": "SFX",
+    "Hash": "{D1A82DA1-D329-170C-2E70-9993B599881F}",
+    "ObjectPath": "lights_on",
+    "ShortName": "lights_on",
+    "Path": "Event/lights_on.bnk",
+    "Media": [
+     {
+      "Id": "56906530",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "light_on_01.wav",
+      "Path": "Media/56906530.wem",
+      "CachePath": "55/{55DB0A70-3ACC-AC29-735E-BC42A4AE910D}.wem"
+     },
+     {
+      "Id": "88461833",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "light_on_02.wav",
+      "Path": "Media/88461833.wem",
+      "CachePath": "F0/{F06BFD77-61A1-9D6C-0F4E-7FD44AD0BC2F}.wem"
+     },
+     {
+      "Id": "133753980",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "light_on_04.wav",
+      "Path": "Media/133753980.wem",
+      "CachePath": "9C/{9C0B3CC6-ECD9-FD43-868B-E130C609ED76}.wem"
+     },
+     {
+      "Id": "760863978",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "light_on_05.wav",
+      "Path": "Media/760863978.wem",
+      "CachePath": "86/{86C50F38-429A-E6D6-EC63-345814F52265}.wem"
+     },
+     {
+      "Id": "853712018",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "light_on_03.wav",
+      "Path": "Media/853712018.wem",
+      "CachePath": "72/{72F9CF1D-86CA-114D-8048-B399F1BBB455}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "10176546",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Containers\\Default Work Unit\\World, Enviroment\\First Tower\\Lights\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{76ABB772-A360-4218-9581-7F5FE3EC4014}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "1063352154",
+      "Name": "lights_on",
+      "ObjectPath": "\\Events\\Default Work Unit\\First Tower\\lights_on",
+      "GUID": "{857D5D76-7D63-43C3-878D-B8A113A7E4BC}",
+      "Color": "4",
+      "DurationType": "OneShot",
+      "DurationMin": "0.34110466",
+      "DurationMax": "1.1102494",
+      "MediaRefs": [
+       {
+        "Id": "56906530"
+       },
+       {
+        "Id": "88461833"
+       },
+       {
+        "Id": "133753980"
+       },
+       {
+        "Id": "760863978"
+       },
+       {
+        "Id": "853712018"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "10176546"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D14934B2-F909-F828-05CB-8B48FF15667C}"
+ }
+}

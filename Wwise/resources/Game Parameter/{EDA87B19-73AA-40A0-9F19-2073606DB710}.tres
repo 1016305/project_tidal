@@ -1,0 +1,7 @@
+[gd_resource type="WwiseRTPC" format=3 uid="uid://b27evg5hcacrx"]
+
+[resource]
+name = "SS_Air_Turbulence"
+id = 4160247818
+guid = "{EDA87B19-73AA-40A0-9F19-2073606DB710}"
+dummy = true
