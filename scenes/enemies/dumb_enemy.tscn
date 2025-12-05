@@ -1,9 +1,12 @@
-[gd_scene load_steps=45 format=4 uid="uid://ctui55budl18a"]
+[gd_scene load_steps=48 format=4 uid="uid://ctui55budl18a"]
 
 [ext_resource type="Script" uid="uid://b0kjwp2j62s63" path="res://scripts/enemy/dumb enemy/dumb_enemy.gd" id="1_6ixqb"]
 [ext_resource type="Material" uid="uid://d34c4yhjr3qps" path="res://models/enemies/the enemy/enemy_material.tres" id="2_8v64s"]
+[ext_resource type="WwiseEvent" uid="uid://1w04q3kn7r23" path="res://Wwise/resources/Event/{D69E7259-D6F4-4333-937A-A808AD223C7F}.tres" id="2_67dsm"]
 [ext_resource type="Shader" uid="uid://d0fnqb3cf58ru" path="res://materials/shaders/enemy_thruster.tres" id="3_2x3kc"]
 [ext_resource type="Script" uid="uid://qyokm0db7eaq" path="res://scenes/enemies/generic_hitbox.gd" id="3_cbrdg"]
+[ext_resource type="WwiseEvent" uid="uid://dh7o1y6xbe6tk" path="res://Wwise/resources/Event/{6A549BA7-1316-4482-9C73-C8A236DB9AF1}.tres" id="3_tknad"]
+[ext_resource type="WwiseEvent" uid="uid://dm7awsho7qc82" path="res://Wwise/resources/Event/{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}.tres" id="4_57l2t"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8v64s"]
 
@@ -1717,6 +1720,9 @@ _data = {
 
 [node name="dumb enemy" type="CharacterBody3D"]
 script = ExtResource("1_6ixqb")
+combat_barks = ExtResource("2_67dsm")
+shooting_sounds = ExtResource("3_tknad")
+death_sounds = ExtResource("4_57l2t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 visible = false

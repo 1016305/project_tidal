@@ -182,8 +182,9 @@ func _physics_process(delta: float) -> void:
 	if dead_bool:
 		if current_state != States.Dead:
 			current_state = States.Dead
-	do_combat_barks()
-	do_idle_barks()
+	if !dead_bool:
+		do_combat_barks()
+		do_idle_barks()
 
 func main_behaviour():
 	if await_frame:

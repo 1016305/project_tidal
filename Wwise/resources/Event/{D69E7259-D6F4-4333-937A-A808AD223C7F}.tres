@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://1w04q3kn7r23"]
+
+[resource]
+name = "combat_barks"
+id = 2313023713
+guid = "{D69E7259-D6F4-4333-937A-A808AD223C7F}"
+dummy = true
