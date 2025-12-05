@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dteor51h74gq6"
-path="res://.godot/imported/level1_scene_test1.gltf-ad313183caa6f9a17540d4361cb6a3be.scn"
+uid="uid://d2h7d3k0a6vx2"
+path="res://.godot/imported/Level1FirstTowerCollision.gltf-fd4fa62fca49dae3745ae7d8e7e5e363.scn"
 
 [deps]
 
-source_file="res://scenes/level1_scene_test1.gltf"
-dest_files=["res://.godot/imported/level1_scene_test1.gltf-ad313183caa6f9a17540d4361cb6a3be.scn"]
+source_file="res://scenes/Level1FirstTowerCollision.gltf"
+dest_files=["res://.godot/imported/Level1FirstTowerCollision.gltf-fd4fa62fca49dae3745ae7d8e7e5e363.scn"]
 
 [params]
 

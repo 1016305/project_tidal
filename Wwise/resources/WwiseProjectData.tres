@@ -142,11 +142,8 @@ guid = "{1332E2DC-853C-42B6-A659-92C90F2675EC}"
 id = 2540843761
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_tnib1"]
-path = "\\Busses\\Default Work Unit\\Reverbs"
 children = [SubResource("WwiseTreeObject_5n8hf")]
-type = 2
 name = "Reverbs"
-guid = "{9DD65F07-E8FB-45DE-B393-D2C7EC9793A5}"
 id = 3545700988
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_o7sea"]
@@ -241,6 +238,7 @@ name = "Weapons"
 id = 1467963052
 
 [sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_63ewg"]
+max_attenuation = 100.0
 max_duration = 2.496
 min_duration = 2.496
 path = "\\Events\\Default Work Unit\\Test_Event_01"
