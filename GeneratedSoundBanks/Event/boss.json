@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1560169506",
+    "Type": "Event",
+    "GUID": "{203BF74C-3EC5-49CD-8C05-64EE16CAE55A}",
+    "Language": "SFX",
+    "Hash": "{5E64F025-440A-E5F0-57CE-D6EDAAFD48E8}",
+    "ObjectPath": "boss",
+    "ShortName": "boss",
+    "Path": "Event/boss.bnk",
+    "Events": [
+     {
+      "Id": "1560169506",
+      "Name": "boss",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\boss",
+      "GUID": "{203BF74C-3EC5-49CD-8C05-64EE16CAE55A}",
+      "Color": "12",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6CA46E7F-8FF0-4D5E-C44F-4744AB56010E}"
+ }
+}

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3786392610	boss_intro_animation			\Default Work Unit\Enemy Boss\boss_intro_animation	
+

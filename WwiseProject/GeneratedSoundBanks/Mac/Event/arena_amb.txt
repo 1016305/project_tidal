@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	521672771	arena_amb			\Default Work Unit\Boss Arena\arena_amb	
+

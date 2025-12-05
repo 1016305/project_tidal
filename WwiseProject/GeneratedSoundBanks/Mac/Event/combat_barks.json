@@ -1,0 +1,96 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2313023713",
+    "Type": "Event",
+    "GUID": "{D69E7259-D6F4-4333-937A-A808AD223C7F}",
+    "Language": "SFX",
+    "Hash": "{0BACDB68-337F-F5BA-B31F-D66F32509A3C}",
+    "ObjectPath": "combat_barks",
+    "ShortName": "combat_barks",
+    "Path": "Event/combat_barks.bnk",
+    "Media": [
+     {
+      "Id": "58604364",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_combatbark.wav",
+      "Path": "Media/58604364.wem",
+      "CachePath": "55/{55827C65-3FEA-DAD5-784C-24B5297B8F1A}.wem"
+     },
+     {
+      "Id": "140344306",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_combatbark.wav",
+      "Path": "Media/140344306.wem",
+      "CachePath": "9B/{9B0C76D2-FBA6-DBC9-4BB7-6DA7E07CD60D}.wem"
+     },
+     {
+      "Id": "302041538",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_combatbark.wav",
+      "Path": "Media/302041538.wem",
+      "CachePath": "FF/{FFFCE89B-FF78-51EF-771B-238E68762F06}.wem"
+     },
+     {
+      "Id": "372022351",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_combatbark.wav",
+      "Path": "Media/372022351.wem",
+      "CachePath": "1B/{1B59F386-AFD7-AE01-06EE-667E8AD65BF5}.wem"
+     },
+     {
+      "Id": "709355210",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_combatbark.wav",
+      "Path": "Media/709355210.wem",
+      "CachePath": "BF/{BFC18787-1128-AC57-3E94-3AF64D7511D8}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2313023713",
+      "Name": "combat_barks",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\combat_barks",
+      "GUID": "{D69E7259-D6F4-4333-937A-A808AD223C7F}",
+      "Color": "10",
+      "MaxAttenuation": "50",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "58604364"
+       },
+       {
+        "Id": "140344306"
+       },
+       {
+        "Id": "302041538"
+       },
+       {
+        "Id": "372022351"
+       },
+       {
+        "Id": "709355210"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A4A69E37-FD52-A491-38D0-07193964B4B8}"
+ }
+}

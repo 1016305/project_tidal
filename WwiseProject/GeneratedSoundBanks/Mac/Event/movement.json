@@ -1,0 +1,97 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2129636626",
+    "Type": "Event",
+    "GUID": "{F6890812-9B8F-4E90-BC0E-7EEF93E59808}",
+    "Language": "SFX",
+    "Hash": "{3DBF41BA-D1A6-5569-6D5E-4B8CC4569E41}",
+    "ObjectPath": "movement",
+    "ShortName": "movement",
+    "Path": "Event/movement.bnk",
+    "Media": [
+     {
+      "Id": "20452153",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_01.wav",
+      "Path": "Media/20452153.wem",
+      "CachePath": "F9/{F9ABCC00-F7B8-3F62-4F02-A8F0E177AF28}.wem"
+     },
+     {
+      "Id": "220202397",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_02.wav",
+      "Path": "Media/220202397.wem",
+      "CachePath": "D1/{D168AD15-4D91-7CED-5E06-029F721A1256}.wem"
+     },
+     {
+      "Id": "468160147",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_03.wav",
+      "Path": "Media/468160147.wem",
+      "CachePath": "F4/{F4DDAF72-243F-5430-F310-2A126D3A5351}.wem"
+     },
+     {
+      "Id": "529294884",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_05.wav",
+      "Path": "Media/529294884.wem",
+      "CachePath": "3C/{3CBACD75-CEC0-22F6-6070-B4B73BDEAB15}.wem"
+     },
+     {
+      "Id": "534996132",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_04.wav",
+      "Path": "Media/534996132.wem",
+      "CachePath": "EC/{EC72DF0D-BC3E-C944-C27D-EBA14C6DA3C0}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2129636626",
+      "Name": "movement",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\movement",
+      "GUID": "{F6890812-9B8F-4E90-BC0E-7EEF93E59808}",
+      "Color": "1",
+      "DurationType": "OneShot",
+      "DurationMin": "0.26279444",
+      "DurationMax": "0.52028483",
+      "MediaRefs": [
+       {
+        "Id": "20452153"
+       },
+       {
+        "Id": "220202397"
+       },
+       {
+        "Id": "468160147"
+       },
+       {
+        "Id": "529294884"
+       },
+       {
+        "Id": "534996132"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{836CB2FA-7CAC-0B19-D350-7B3EDB35A060}"
+ }
+}

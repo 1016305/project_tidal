@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	62399725	enemy_movement			\Default Work Unit\Enemy\enemy_movement	
+

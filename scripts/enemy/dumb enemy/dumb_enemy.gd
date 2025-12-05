@@ -40,6 +40,9 @@ var do_idle_bark: bool = false
 @export var idle_bark_max_interval: float = 5
 @export var idle_sounds: WwiseEvent
 
+@onready var soundhole: AkEvent3D = $soundhole
+
+
 @export_category("Primary Logic")
 enum States{None,Idle,Alert,Attack,MoveToCover,Cover,MoveFromCover,Melee,Dead}
 @export var current_state: States = States.Idle
@@ -592,8 +595,7 @@ func dead():
 		animation_player.play("death")
 		print("play death 7")
 		saw_spin.stop()
-		playsound(death_sounds)
-		stopsound(hovering_sounds)
+		kill_all_sounds()
 		await get_tree().create_timer(1.9).timeout
 		animation_player.pause()
 		
@@ -605,7 +607,16 @@ func dead():
 			#await tween.finished
 		Global.enemy_died.emit(self)
 		#queue_free()
-		
+func kill_all_sounds():
+	#idle sounds hovering sounds combat barks
+	soundhole.event = idle_sounds
+	soundhole.stop_event()
+	soundhole.event = hovering_sounds
+	soundhole.stop_event()
+	soundhole.event = combat_barks
+	soundhole.stop_event()
+	soundhole.event = death_sounds
+	soundhole.post_event()
 ##additional functions
 func alert_from_weapon_fire():
 	if current_state == States.Idle:
@@ -692,11 +703,12 @@ func change_state(state:States):
 	
 func playsound(sound:WwiseEvent):
 	if sound != null:
-		sound.post(self)
+		soundhole.event = sound
+		soundhole.post_event()
 		
 func stopsound(sound:WwiseEvent):
 	if sound != null:
-		sound.stop(self)
+		soundhole.stop_event()
 		
 func debug():
 	if monitor:

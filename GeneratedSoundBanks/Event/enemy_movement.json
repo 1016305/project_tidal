@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "62399725",
+    "Type": "Event",
+    "GUID": "{C11A5FAA-D601-48A5-8892-7869C8301D6B}",
+    "Language": "SFX",
+    "Hash": "{0772761A-6D0C-59AF-28E0-BEA50295EABF}",
+    "ObjectPath": "enemy_movement",
+    "ShortName": "enemy_movement",
+    "Path": "Event/enemy_movement.bnk",
+    "Media": [
+     {
+      "Id": "278877721",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Movement\\Enemy - Floating Movement v02.wav",
+      "Path": "Media/278877721.wem",
+      "CachePath": "99/{99B824D5-007D-FAE8-A551-0042AFFB08C1}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "62399725",
+      "Name": "enemy_movement",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_movement",
+      "GUID": "{C11A5FAA-D601-48A5-8892-7869C8301D6B}",
+      "Color": "10",
+      "MaxAttenuation": "50",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "278877721"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{368AC1CE-EA47-4311-F090-479BE0F07EFD}"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2663270342",
+    "Type": "Event",
+    "GUID": "{9A0CEEB0-7F1E-4248-A797-C84ECF701575}",
+    "Language": "SFX",
+    "Hash": "{EA82B680-4D8F-F81A-5B34-5CD5021FB79D}",
+    "ObjectPath": "boss_movement",
+    "ShortName": "boss_movement",
+    "Path": "Event/boss_movement.bnk",
+    "Events": [
+     {
+      "Id": "2663270342",
+      "Name": "boss_movement",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_movement",
+      "GUID": "{9A0CEEB0-7F1E-4248-A797-C84ECF701575}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6BD19BDA-843C-FDFA-FCDF-CB502FCB6B6B}"
+ }
+}

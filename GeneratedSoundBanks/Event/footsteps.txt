@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2385628198	footsteps			\Default Work Unit\Player\footsteps	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	665703777	FootstepsTerrain			\Default Work Unit\FootstepsTerrain	
+
+Switch	ID	Name	Switch Group			Notes
+	2473969246	Metal	FootstepsTerrain			
+	4248645337	Grass	FootstepsTerrain			
+
+Effect plug-ins	ID	Name	Type				Notes
+	3948262040	Octave_Down	Wwise Pitch Shifter			
+

@@ -198,14 +198,41 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{08149E52-B631-4B18-904A-818BF1877C14}" ShortID="917857714">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy - Floating Movement v02" ID="{23EBB8B0-CF35-42B5-9C54-3BF2D3E730B8}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="idle_barks" ID="{1FA8C10E-718A-46AB-B604-4D02BA976176}">
 							<ChildrenList>
-								<Action Name="" ID="{DFF4180E-BCD2-45EA-96C4-A79295C4E457}" ShortID="470797665"/>
+								<Action Name="" ID="{DFF4180E-BCD2-45EA-96C4-A79295C4E457}" ShortID="470797665">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Idle Bark" ID="{C42FA56F-376C-4706-992D-C946FEF967B8}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="enemy_movement" ID="{C11A5FAA-D601-48A5-8892-7869C8301D6B}"/>
+						<Event Name="enemy_movement" ID="{C11A5FAA-D601-48A5-8892-7869C8301D6B}">
+							<ChildrenList>
+								<Action Name="" ID="{757FE331-9EEE-4DAD-83BA-9573149F6D6E}" ShortID="960619734">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy - Floating Movement v02" ID="{23EBB8B0-CF35-42B5-9C54-3BF2D3E730B8}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="enemy_fire" ID="{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}"/>
 						<Event Name="enemy_alert" ID="{CD7BF1D8-49A3-453C-8289-1BC072862E93}"/>
 					</ChildrenList>
@@ -287,9 +314,30 @@
 					<ChildrenList>
 						<Event Name="enemy" ID="{EBA2F312-5FB1-4C0D-B46B-436888974182}"/>
 						<Event Name="player" ID="{295BFF33-04A9-48E5-B18A-536E8128CD09}"/>
-						<Event Name="metal" ID="{18273E7B-63FF-4436-9E82-C529AFBA5CC8}"/>
+						<Event Name="metal" ID="{18273E7B-63FF-4436-9E82-C529AFBA5CC8}">
+							<ChildrenList>
+								<Action Name="" ID="{C5D00D89-94A9-4835-B6C8-E99043311EF5}" ShortID="438203452">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Metal" ID="{E5A62178-6C1A-45BC-ACCA-47A6CE45109E}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="dirt_grass" ID="{F38718AC-1CC8-4493-ABC9-82387EC5816C}"/>
 						<Event Name="boss" ID="{203BF74C-3EC5-49CD-8C05-64EE16CAE55A}"/>
+						<Event Name="assorted_pings" ID="{70E8D780-CEB4-421D-BF51-8F23F81B2DA1}">
+							<ChildrenList>
+								<Action Name="" ID="{7724F520-0ED7-4197-9EE0-9EC36C60FDF9}" ShortID="816507481">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AssortedPings" ID="{B190190D-F135-4106-A29E-B15A839007B1}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{4B01063A-24D0-4FCF-91F1-6E47CD04ABAC}" ShortID="23859266">
@@ -298,9 +346,57 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="footsteps" ID="{D6E1E6FD-B377-4DFC-BC2F-BFF458CB7496}"/>
-						<Event Name="low_health" ID="{7EC976F9-DACF-499D-983D-A3EF6EB13861}"/>
-						<Event Name="movement" ID="{F6890812-9B8F-4E90-BC0E-7EEF93E59808}"/>
+						<Event Name="footsteps" ID="{D6E1E6FD-B377-4DFC-BC2F-BFF458CB7496}">
+							<ChildrenList>
+								<Action Name="" ID="{2864BA51-2AA3-42F4-9465-9948DE4B7F91}" ShortID="769227406">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footsteps" ID="{05FB081F-5619-43AA-9130-21BB2BC9C429}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="low_health" ID="{7EC976F9-DACF-499D-983D-A3EF6EB13861}">
+							<ChildrenList>
+								<Action Name="" ID="{041CFF4C-493D-4AA5-87B6-22296BE52366}" ShortID="408296686">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="low_health_heartbeat" ID="{38ACD54B-D2BC-4AB2-8E26-086E2A653643}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="movement" ID="{F6890812-9B8F-4E90-BC0E-7EEF93E59808}">
+							<ChildrenList>
+								<Action Name="" ID="{CB66BBA7-2597-4B03-8480-D25B6E4D1744}" ShortID="938200200">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Movement" ID="{00C41F13-4394-4370-8EB7-E401A4EF0654}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="low_health_stop" ID="{1DCA8750-2190-4A49-BC5C-5AA5789839DB}">
+							<ChildrenList>
+								<Action Name="" ID="{742C5AD8-CF0B-40F6-9946-C5C221C53474}" ShortID="259719649">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="low_health_heartbeat" ID="{38ACD54B-D2BC-4AB2-8E26-086E2A653643}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Boss Arena" ID="{A5389D28-2E28-4B05-870C-87BAC8E4AC07}" ShortID="730454828">

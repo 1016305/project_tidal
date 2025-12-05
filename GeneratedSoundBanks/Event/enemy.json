@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2299321487",
+    "Type": "Event",
+    "GUID": "{EBA2F312-5FB1-4C0D-B46B-436888974182}",
+    "Language": "SFX",
+    "Hash": "{AA55E4AE-3812-58E4-57E3-06D290CB02EC}",
+    "ObjectPath": "enemy",
+    "ShortName": "enemy",
+    "Path": "Event/enemy.bnk",
+    "Events": [
+     {
+      "Id": "2299321487",
+      "Name": "enemy",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\enemy",
+      "GUID": "{EBA2F312-5FB1-4C0D-B46B-436888974182}",
+      "Color": "12",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F29B13E1-9014-2CC5-9C84-529DBCE10484}"
+ }
+}

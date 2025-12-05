@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1510202224",
+    "Type": "Event",
+    "GUID": "{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}",
+    "Language": "SFX",
+    "Hash": "{9D0EB78A-2F2A-E1FF-17D1-FA5D67D17E7B}",
+    "ObjectPath": "boss_weapon_fire",
+    "ShortName": "boss_weapon_fire",
+    "Path": "Event/boss_weapon_fire.bnk",
+    "Events": [
+     {
+      "Id": "1510202224",
+      "Name": "boss_weapon_fire",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_weapon_fire",
+      "GUID": "{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5D94E933-609E-8115-55AB-C3984536352C}"
+ }
+}

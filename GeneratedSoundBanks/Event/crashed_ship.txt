@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	547033482	crashed_ship			\Default Work Unit\First Tower\crashed_ship	
+

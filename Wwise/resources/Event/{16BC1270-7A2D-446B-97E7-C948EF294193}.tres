@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://bbqxvfcewp8mm"]
+
+[resource]
+name = "floating_movement"
+id = 3052554301
+guid = "{16BC1270-7A2D-446B-97E7-C948EF294193}"
+dummy = true

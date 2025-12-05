@@ -1,15 +1,8 @@
-[gd_resource type="Resource" script_class="WwiseEventCollection" load_steps=5 format=3 uid="uid://c475tgmbig5ow"]
+[gd_resource type="Resource" script_class="WwiseEventCollection" load_steps=2 format=3 uid="uid://c475tgmbig5ow"]
 
 [ext_resource type="Script" uid="uid://dsxtt57x7fvhw" path="res://scripts/utility/sounds_manager.gd" id="1_8xcmf"]
-[ext_resource type="WwiseEvent" uid="uid://cx10tch3bcwyf" path="res://Wwise/resources/Event/{4FB8DF76-11ED-401D-AE79-AF08CAB33840}.tres" id="1_wj0jb"]
-[ext_resource type="WwiseEvent" uid="uid://bbls23h8hnjm1" path="res://Wwise/resources/Event/{42D6CCEC-9A24-44EB-BADA-9F0E9207E8B5}.tres" id="2_xda6g"]
-[ext_resource type="WwiseEvent" uid="uid://b58dm3wq2xbl0" path="res://Wwise/resources/Event/{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}.tres" id="3_2xfyq"]
 
 [resource]
 script = ExtResource("1_8xcmf")
-data = Dictionary[StringName, WwiseEvent]({
-&"FireSounds": ExtResource("1_wj0jb"),
-&"GlassSounds": ExtResource("2_xda6g"),
-&"OtherSounds": ExtResource("3_2xfyq")
-})
+data = Dictionary[StringName, WwiseEvent]({})
 metadata/_custom_type_script = "uid://dsxtt57x7fvhw"

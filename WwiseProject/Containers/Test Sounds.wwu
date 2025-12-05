@@ -6,6 +6,7 @@
 				<Sound Name="new-notification-027-383749" ID="{F534EC4E-1CE2-41A0-AD4C-F4BEC3DE6932}" ShortID="775824404">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">

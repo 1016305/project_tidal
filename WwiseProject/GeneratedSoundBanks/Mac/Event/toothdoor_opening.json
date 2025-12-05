@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E0808C22-AE4B-4D00-851C-6AA8B1BB976B}",
     "Language": "SFX",
-    "Hash": "{F5C26C5A-8FCA-A616-4F85-E683509AB7C3}",
+    "Hash": "{DE25B4F9-E621-C56F-D298-B7B478FAA7B5}",
     "ObjectPath": "toothdoor_opening",
     "ShortName": "toothdoor_opening",
     "Path": "Event/toothdoor_opening.bnk",
@@ -42,8 +42,8 @@
       "GUID": "{E0808C22-AE4B-4D00-851C-6AA8B1BB976B}",
       "Color": "4",
       "DurationType": "OneShot",
-      "DurationMin": "57.152176",
-      "DurationMax": "57.152176",
+      "DurationMin": "56.652176",
+      "DurationMax": "56.652176",
       "MediaRefs": [
        {
         "Id": "383057084"
@@ -56,6 +56,6 @@
     ]
    }
   ],
-  "FileHash": "{E5889F19-F9BF-CBAC-8E73-CD2B1C4BF2C4}"
+  "FileHash": "{10B3C88A-31F3-8B89-1FCC-5525AC9CC075}"
  }
 }

@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "72790338",
+    "Type": "Event",
+    "GUID": "{7EC976F9-DACF-499D-983D-A3EF6EB13861}",
+    "Language": "SFX",
+    "Hash": "{E33B2887-B13C-811E-1361-E6DAF0057250}",
+    "ObjectPath": "low_health",
+    "ShortName": "low_health",
+    "Path": "Event/low_health.bnk",
+    "Media": [
+     {
+      "Id": "233836470",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "low_health_heartbeat.wav",
+      "Path": "Media/233836470.wem",
+      "CachePath": "27/{270EE691-321B-6F49-4C40-F269999154A6}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "72790338",
+      "Name": "low_health",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\low_health",
+      "GUID": "{7EC976F9-DACF-499D-983D-A3EF6EB13861}",
+      "Color": "1",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "233836470"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A8B89DCA-2844-D8BB-5520-4D012FC7E832}"
+ }
+}

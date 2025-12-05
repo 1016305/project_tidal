@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D69E7259-D6F4-4333-937A-A808AD223C7F}",
     "Language": "SFX",
-    "Hash": "{69EB7A8E-9F88-DDDC-ACAF-FF40A38074FC}",
+    "Hash": "{B50B1D8D-F287-B709-7A5B-2CC52BBB5C90}",
     "ObjectPath": "combat_barks",
     "ShortName": "combat_barks",
     "Path": "Event/combat_barks.bnk",
@@ -61,18 +61,6 @@
       "CachePath": "EE/{EE718A7D-5EF4-3BF4-2985-D0C2968C9091}.wem"
      }
     ],
-    "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "1008402193",
-       "Name": "Low_Pass_20KHz",
-       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
-       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      }
-     ]
-    },
     "Events": [
      {
       "Id": "2313023713",
@@ -80,7 +68,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\combat_barks",
       "GUID": "{D69E7259-D6F4-4333-937A-A808AD223C7F}",
       "Color": "10",
-      "MaxAttenuation": "40",
+      "MaxAttenuation": "50",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -98,18 +86,11 @@
        {
         "Id": "709355210"
        }
-      ],
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "1008402193"
-        }
-       ]
-      }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{4514C9DD-0714-7748-2605-6AC7A43B3F29}"
+  "FileHash": "{5D969298-82E6-672C-8340-03459C16416F}"
  }
 }

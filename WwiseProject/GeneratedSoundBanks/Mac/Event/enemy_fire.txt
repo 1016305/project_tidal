@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4240339038	enemy_fire			\Default Work Unit\Enemy\enemy_fire	
+

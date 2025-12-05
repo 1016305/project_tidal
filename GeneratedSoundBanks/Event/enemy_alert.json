@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "493036092",
+    "Type": "Event",
+    "GUID": "{CD7BF1D8-49A3-453C-8289-1BC072862E93}",
+    "Language": "SFX",
+    "Hash": "{22307142-3467-9868-8202-A90F459283D6}",
+    "ObjectPath": "enemy_alert",
+    "ShortName": "enemy_alert",
+    "Path": "Event/enemy_alert.bnk",
+    "Events": [
+     {
+      "Id": "493036092",
+      "Name": "enemy_alert",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_alert",
+      "GUID": "{CD7BF1D8-49A3-453C-8289-1BC072862E93}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BB677CD1-430F-9A09-293F-190CCEB67DDB}"
+ }
+}

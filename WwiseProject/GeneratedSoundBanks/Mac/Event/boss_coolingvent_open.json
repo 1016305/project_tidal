@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "536492462",
+    "Type": "Event",
+    "GUID": "{CB456DD8-D658-4FE0-BDE8-9D9CD2619EB3}",
+    "Language": "SFX",
+    "Hash": "{AEB2F2DA-F081-1590-C0D2-54261CCD63F6}",
+    "ObjectPath": "boss_coolingvent_open",
+    "ShortName": "boss_coolingvent_open",
+    "Path": "Event/boss_coolingvent_open.bnk",
+    "Events": [
+     {
+      "Id": "536492462",
+      "Name": "boss_coolingvent_open",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_coolingvent_open",
+      "GUID": "{CB456DD8-D658-4FE0-BDE8-9D9CD2619EB3}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{02EAC3D7-0382-FAF2-50CA-270AA48CC263}"
+ }
+}

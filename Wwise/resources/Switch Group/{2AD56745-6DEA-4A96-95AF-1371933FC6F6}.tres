@@ -1,0 +1,7 @@
+[gd_resource type="WwiseSwitchGroup" format=3 uid="uid://di4s8i47plekp"]
+
+[resource]
+name = "FootstepsTerrain"
+id = 665703777
+guid = "{2AD56745-6DEA-4A96-95AF-1371933FC6F6}"
+dummy = true

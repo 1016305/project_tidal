@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2748973500	speaker			\Default Work Unit\Third Tower\speaker	
+

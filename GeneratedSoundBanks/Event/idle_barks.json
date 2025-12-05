@@ -1,0 +1,98 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "825403295",
+    "Type": "Event",
+    "GUID": "{1FA8C10E-718A-46AB-B604-4D02BA976176}",
+    "Language": "SFX",
+    "Hash": "{F66B6EC5-7D77-331C-D83E-2EC75383FBD2}",
+    "ObjectPath": "idle_barks",
+    "ShortName": "idle_barks",
+    "Path": "Event/idle_barks.bnk",
+    "Media": [
+     {
+      "Id": "195666167",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
+      "Path": "Media/195666167.wem",
+      "CachePath": "9F/{9F9140E2-CD7C-B02C-5CE3-179C903C4C83}.wem"
+     },
+     {
+      "Id": "199980290",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
+      "Path": "Media/199980290.wem",
+      "CachePath": "00/{007D3932-F3BD-8DC4-F68F-549827CCCB99}.wem"
+     },
+     {
+      "Id": "363213464",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
+      "Path": "Media/363213464.wem",
+      "CachePath": "DD/{DD8B84BD-DEF4-385F-E196-9ECE6EAA3A5F}.wem"
+     },
+     {
+      "Id": "478178618",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
+      "Path": "Media/478178618.wem",
+      "CachePath": "7C/{7C695EF8-2E11-3074-2E75-50067B81F0F0}.wem"
+     },
+     {
+      "Id": "770351086",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
+      "Path": "Media/770351086.wem",
+      "CachePath": "02/{02C2272B-4C6D-9648-1F4A-A20B7A52FCF8}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "825403295",
+      "Name": "idle_barks",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\idle_barks",
+      "GUID": "{1FA8C10E-718A-46AB-B604-4D02BA976176}",
+      "Color": "10",
+      "MaxAttenuation": "25",
+      "DurationType": "OneShot",
+      "DurationMin": "2.3577118",
+      "DurationMax": "3.9434845",
+      "MediaRefs": [
+       {
+        "Id": "195666167"
+       },
+       {
+        "Id": "199980290"
+       },
+       {
+        "Id": "363213464"
+       },
+       {
+        "Id": "478178618"
+       },
+       {
+        "Id": "770351086"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5B149A2D-0C77-A46E-9740-0269B51F547E}"
+ }
+}

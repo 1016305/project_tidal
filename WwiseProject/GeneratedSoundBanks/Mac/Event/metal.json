@@ -1,0 +1,85 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2473969246",
+    "Type": "Event",
+    "GUID": "{18273E7B-63FF-4436-9E82-C529AFBA5CC8}",
+    "Language": "SFX",
+    "Hash": "{A4CFBEA5-29E5-B4AB-16B5-49509F35BC46}",
+    "ObjectPath": "metal",
+    "ShortName": "metal",
+    "Path": "Event/metal.bnk",
+    "Media": [
+     {
+      "Id": "43590827",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_bullet_ping03.wav",
+      "Path": "Media/43590827.wem",
+      "CachePath": "CD/{CD303D14-D956-0118-5529-439490BEF437}.wem"
+     },
+     {
+      "Id": "284252044",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_bullet_ping02.wav",
+      "Path": "Media/284252044.wem",
+      "CachePath": "6F/{6F1B98CD-DA4F-DD8F-19CB-D634F10B6113}.wem"
+     },
+     {
+      "Id": "284797051",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_bullet_ping01.wav",
+      "Path": "Media/284797051.wem",
+      "CachePath": "4F/{4FF46283-2D90-3F74-256F-FFD938D5034E}.wem"
+     },
+     {
+      "Id": "795721697",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "metal_bullet_ping04.wav",
+      "Path": "Media/795721697.wem",
+      "CachePath": "EC/{EC39883B-DE4B-B8BF-2C0B-E1F2AE132028}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2473969246",
+      "Name": "metal",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\metal",
+      "GUID": "{18273E7B-63FF-4436-9E82-C529AFBA5CC8}",
+      "Color": "12",
+      "DurationType": "OneShot",
+      "DurationMin": "0.19345823",
+      "DurationMax": "1.7516274",
+      "MediaRefs": [
+       {
+        "Id": "43590827"
+       },
+       {
+        "Id": "284252044"
+       },
+       {
+        "Id": "284797051"
+       },
+       {
+        "Id": "795721697"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2D30BF66-4648-D07E-BD69-7F1DAF20A1C7}"
+ }
+}

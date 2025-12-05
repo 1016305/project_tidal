@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{B1B9E6FF-D65E-EC95-E013-5281E2770E5E}",
+    "Hash": "{E248D006-EAF5-69E2-FE6A-D61195F4BB8D}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -155,6 +155,28 @@
       "Name": "SS_Air_Turbulence",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Turbulence",
       "GUID": "{EDA87B19-73AA-40A0-9F19-2073606DB710}"
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "665703777",
+      "Name": "FootstepsTerrain",
+      "ObjectPath": "\\Switches\\Default Work Unit\\FootstepsTerrain",
+      "GUID": "{2AD56745-6DEA-4A96-95AF-1371933FC6F6}",
+      "Switches": [
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\FootstepsTerrain\\Metal",
+        "GUID": "{4B2EA4B0-716D-4917-8F3B-3271B1831240}"
+       },
+       {
+        "Id": "4248645337",
+        "Name": "Grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\FootstepsTerrain\\Grass",
+        "GUID": "{34EED15F-8FB6-4421-AC85-35C039526FCF}"
+       }
+      ]
      }
     ],
     "AcousticTextures": [
@@ -636,6 +658,6 @@
     ]
    }
   ],
-  "FileHash": "{B75D1B82-B540-EA25-E6E9-A8A25E7CDC2E}"
+  "FileHash": "{533891F5-A186-B4A7-1D08-8A44B57A9D4D}"
  }
 }

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1984278272	canyon_amb			\Default Work Unit\Canyon\canyon_amb	
+

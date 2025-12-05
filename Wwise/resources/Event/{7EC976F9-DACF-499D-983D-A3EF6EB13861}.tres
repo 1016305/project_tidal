@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://2n448fq53bus"]
+
+[resource]
+name = "low_health"
+id = 72790338
+guid = "{7EC976F9-DACF-499D-983D-A3EF6EB13861}"
+dummy = true

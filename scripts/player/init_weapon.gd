@@ -23,6 +23,7 @@ var raycast_test = preload("res://scenes/weapons/weapon_extra/raycast_test.tscn"
 @onready var fire_delay: Timer = $fire_delay
 @onready var muzzle_flare: Node3D = $muzzle_flare
 @onready var fire_sounds: AkEvent3D = $fire_sounds
+@export var ricochet_sound: WwiseEvent
 
 
 var decal_size

@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1010747703",
+    "Type": "Event",
+    "GUID": "{AF325875-E58B-4D25-84F3-764AF865CF79}",
+    "Language": "SFX",
+    "Hash": "{8080C749-16D2-994E-3AB8-21F0F76CF313}",
+    "ObjectPath": "assault_rifle_reload",
+    "ShortName": "assault_rifle_reload",
+    "Path": "Event/assault_rifle_reload.bnk",
+    "Events": [
+     {
+      "Id": "1010747703",
+      "Name": "assault_rifle_reload",
+      "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\assault_rifle_reload",
+      "GUID": "{AF325875-E58B-4D25-84F3-764AF865CF79}",
+      "Color": "8",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{8D9FD7B5-F7ED-C809-FECF-0965A63AB998}"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2049160996",
+    "Type": "Event",
+    "GUID": "{A5412561-BC37-4B86-AF19-36223CDD0755}",
+    "Language": "SFX",
+    "Hash": "{2C6F2288-6305-4060-C9A3-FCF4A2C09A72}",
+    "ObjectPath": "assault_rifle_empty_clip",
+    "ShortName": "assault_rifle_empty_clip",
+    "Path": "Event/assault_rifle_empty_clip.bnk",
+    "Events": [
+     {
+      "Id": "2049160996",
+      "Name": "assault_rifle_empty_clip",
+      "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\assault_rifle_empty_clip",
+      "GUID": "{A5412561-BC37-4B86-AF19-36223CDD0755}",
+      "Color": "8",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{EC68CD83-E599-9B8A-29E1-F0A7C55BBC2C}"
+ }
+}

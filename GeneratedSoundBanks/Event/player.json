@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1069431850",
+    "Type": "Event",
+    "GUID": "{295BFF33-04A9-48E5-B18A-536E8128CD09}",
+    "Language": "SFX",
+    "Hash": "{2C443536-CF14-B8B1-B636-C1525502DEBC}",
+    "ObjectPath": "player",
+    "ShortName": "player",
+    "Path": "Event/player.bnk",
+    "Events": [
+     {
+      "Id": "1069431850",
+      "Name": "player",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\player",
+      "GUID": "{295BFF33-04A9-48E5-B18A-536E8128CD09}",
+      "Color": "12",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{35ED4308-02C5-F325-C24E-1C6BD56EE2BE}"
+ }
+}

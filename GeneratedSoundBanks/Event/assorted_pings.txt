@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1417418280	assorted_pings			\Default Work Unit\Bullet Pings\assorted_pings	
+

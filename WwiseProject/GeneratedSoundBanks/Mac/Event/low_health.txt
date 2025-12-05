@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	72790338	low_health			\Default Work Unit\Player\low_health	
+

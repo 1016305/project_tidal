@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://bnp5s0o8kx7ju"]
+
+[resource]
+name = "movement"
+id = 2129636626
+guid = "{F6890812-9B8F-4E90-BC0E-7EEF93E59808}"
+dummy = true

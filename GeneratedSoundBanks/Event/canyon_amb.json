@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1984278272",
+    "Type": "Event",
+    "GUID": "{B949D462-D727-4E77-A282-E1465394076D}",
+    "Language": "SFX",
+    "Hash": "{583909C5-0C74-93AC-0374-8F2A054D3223}",
+    "ObjectPath": "canyon_amb",
+    "ShortName": "canyon_amb",
+    "Path": "Event/canyon_amb.bnk",
+    "Events": [
+     {
+      "Id": "1984278272",
+      "Name": "canyon_amb",
+      "ObjectPath": "\\Events\\Default Work Unit\\Canyon\\canyon_amb",
+      "GUID": "{B949D462-D727-4E77-A282-E1465394076D}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F2937A10-12AE-3A5A-2B65-D6EA946C0EC0}"
+ }
+}

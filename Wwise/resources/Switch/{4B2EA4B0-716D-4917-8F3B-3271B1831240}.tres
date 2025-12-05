@@ -1,0 +1,11 @@
+[gd_resource type="WwiseSwitch" load_steps=2 format=3 uid="uid://ce3yhr0uv4xlf"]
+
+[ext_resource type="WwiseSwitchGroup" uid="uid://di4s8i47plekp" path="res://Wwise/resources/Switch Group/{2AD56745-6DEA-4A96-95AF-1371933FC6F6}.tres" id="1_h5ypm"]
+
+[resource]
+group_ref = ExtResource("1_h5ypm")
+group_id = 665703777
+name = "Metal"
+id = 2473969246
+guid = "{4B2EA4B0-716D-4917-8F3B-3271B1831240}"
+dummy = true

@@ -17,10 +17,19 @@ var overcharge_bool: bool = false
 var interact_result
 
 @export_category("Footsteps")
-@export var footsteps: WwiseEvent
 @export var standard_interval: float = 0.8
 @export var sprinting_interval: float = 0.8
+@export var crouching_interval: float = 0.8
 @onready var footsteps_timer: Timer = $footsteps_timer
+@onready var foley_timer: Timer = $foley_timer
+@onready var ak_foley: AkEvent3D = $foley
+@onready var ak_footsteps: AkEvent3D = $footsteps
+
+
+@onready var heartbeat: AkEvent3D = $heartbeat
+@export var heartbeat_out: WwiseEvent
+@export var heartbeat_in: WwiseEvent
+var heartbeat_playing: bool = false
 
 #player movement adjustable variables
 var mouse_sens = 0.3
@@ -103,6 +112,8 @@ func _physics_process(delta: float) -> void:
 		handle_sprint(delta)
 		handle_jump()
 		footstep_sounds()
+		movement_foley()
+		heartbeat_noise()
 	toggle_mouse()
 	if !is_dead:
 		handle_head_roll(input_dir, delta)
@@ -291,15 +302,23 @@ func toggle_flashlight():
 		flashlight.visible = !flashlight.visible
 		
 func footstep_sounds():
-	if is_moving:
+	if is_moving and !is_falling:
 		if is_running:
 			footsteps_timer.wait_time = sprinting_interval
+		elif is_crouching:
+			footsteps_timer.wait_time = crouching_interval
 		else:
 			footsteps_timer.wait_time = standard_interval
-		if footsteps != null:
-			if footsteps_timer.is_stopped():
-				footsteps.post(self)
-				footsteps_timer.start()
+		if footsteps_timer.is_stopped():
+			ak_footsteps.post_event()
+			footsteps_timer.start()
+
+func movement_foley():
+	if is_moving and !is_falling:
+		if foley_timer.is_stopped():
+			ak_foley.post_event()
+			foley_timer.start()
+		
 
 ##Getters and Setters
 #Player damage and health
@@ -369,6 +388,18 @@ func regen_health(delta):
 	if current_health >= 20:
 		regen_timer.stop()
 		regen_bool = false
+			
+func heartbeat_noise():
+	if current_health < 20:
+		if !heartbeat_playing:
+			heartbeat_playing = true
+			heartbeat.event = heartbeat_in
+			heartbeat.post_event()
+	elif current_health >= 20:
+		heartbeat.event = heartbeat_out
+		heartbeat.post_event()
+		heartbeat_playing = false
+
 
 func overcharge_health():
 	if current_health >= 100:

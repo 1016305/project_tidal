@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1347192966",
+    "Type": "Event",
+    "GUID": "{0A7549B4-58E1-4FB8-B992-B28C5770A0A3}",
+    "Language": "SFX",
+    "Hash": "{83E94A91-80F4-66E1-9E1D-74882162DA55}",
+    "ObjectPath": "first_tower_amb",
+    "ShortName": "first_tower_amb",
+    "Path": "Event/first_tower_amb.bnk",
+    "Events": [
+     {
+      "Id": "1347192966",
+      "Name": "first_tower_amb",
+      "ObjectPath": "\\Events\\Default Work Unit\\First Tower\\first_tower_amb",
+      "GUID": "{0A7549B4-58E1-4FB8-B992-B28C5770A0A3}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5D905B63-6948-63F7-666D-9FD32FA9303A}"
+ }
+}

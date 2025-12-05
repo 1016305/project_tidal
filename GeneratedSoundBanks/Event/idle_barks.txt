@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	825403295	idle_barks			\Default Work Unit\Enemy\idle_barks	
+

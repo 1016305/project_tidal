@@ -1,0 +1,98 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "143989192",
+    "Type": "Event",
+    "GUID": "{6A549BA7-1316-4482-9C73-C8A236DB9AF1}",
+    "Language": "SFX",
+    "Hash": "{32F993AD-75F9-2C1F-B187-2CD9E307A1EE}",
+    "ObjectPath": "hit_barks",
+    "ShortName": "hit_barks",
+    "Path": "Event/hit_barks.bnk",
+    "Media": [
+     {
+      "Id": "92867497",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/92867497.wem",
+      "CachePath": "75/{75DF64D7-C2C2-5762-E839-6C7C2980AB41}.wem"
+     },
+     {
+      "Id": "134533631",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/134533631.wem",
+      "CachePath": "92/{92C0D5F6-CABC-CB14-9AB6-18A2418543FA}.wem"
+     },
+     {
+      "Id": "253060480",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/253060480.wem",
+      "CachePath": "5D/{5D99A753-C07D-A600-C966-F39529491173}.wem"
+     },
+     {
+      "Id": "261362267",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/261362267.wem",
+      "CachePath": "1B/{1B2F5033-D847-03F5-5E20-7BDE4AEE1843}.wem"
+     },
+     {
+      "Id": "619156272",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/619156272.wem",
+      "CachePath": "DF/{DF273083-2675-A396-43AB-07BCA8F0F27D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "143989192",
+      "Name": "hit_barks",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\hit_barks",
+      "GUID": "{6A549BA7-1316-4482-9C73-C8A236DB9AF1}",
+      "Color": "10",
+      "MaxAttenuation": "25",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5484362",
+      "DurationMax": "1.3343647",
+      "MediaRefs": [
+       {
+        "Id": "92867497"
+       },
+       {
+        "Id": "134533631"
+       },
+       {
+        "Id": "253060480"
+       },
+       {
+        "Id": "261362267"
+       },
+       {
+        "Id": "619156272"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{642344B1-7DB8-8B14-0180-6C9F63627C63}"
+ }
+}

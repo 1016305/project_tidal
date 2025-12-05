@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "4151049751",
+    "Type": "Event",
+    "GUID": "{1E815BA4-01BB-4C77-9539-03FAA272089E}",
+    "Language": "SFX",
+    "Hash": "{FE219DF4-4C36-FA66-D568-DA7BB1C941D0}",
+    "ObjectPath": "alarm_alert",
+    "ShortName": "alarm_alert",
+    "Path": "Event/alarm_alert.bnk",
+    "Events": [
+     {
+      "Id": "4151049751",
+      "Name": "alarm_alert",
+      "ObjectPath": "\\Events\\Default Work Unit\\Boss Arena\\alarm_alert",
+      "GUID": "{1E815BA4-01BB-4C77-9539-03FAA272089E}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{93087199-328E-2A05-B7C1-4C9DAD3C327E}"
+ }
+}

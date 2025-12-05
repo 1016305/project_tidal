@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "4240339038",
+    "Type": "Event",
+    "GUID": "{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}",
+    "Language": "SFX",
+    "Hash": "{88673F90-2E7B-F2D8-A5B4-CB5975F4DE7B}",
+    "ObjectPath": "enemy_fire",
+    "ShortName": "enemy_fire",
+    "Path": "Event/enemy_fire.bnk",
+    "Events": [
+     {
+      "Id": "4240339038",
+      "Name": "enemy_fire",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_fire",
+      "GUID": "{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F70944A9-44DC-3096-5769-644C8DD21106}"
+ }
+}

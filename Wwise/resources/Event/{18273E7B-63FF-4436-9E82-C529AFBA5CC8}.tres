@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://hwk16my7n3tn"]
+
+[resource]
+name = "metal"
+id = 2473969246
+guid = "{18273E7B-63FF-4436-9E82-C529AFBA5CC8}"
+dummy = true

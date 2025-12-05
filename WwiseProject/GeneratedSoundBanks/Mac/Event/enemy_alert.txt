@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	493036092	enemy_alert			\Default Work Unit\Enemy\enemy_alert	
+

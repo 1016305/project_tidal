@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "3802256100",
+    "Type": "Event",
+    "GUID": "{7D91000F-DC0F-4DF7-A397-494476201105}",
+    "Language": "SFX",
+    "Hash": "{0A2D209B-6ECB-FEA2-D42F-529BF12E50BD}",
+    "ObjectPath": "boss_coolingvent_destroy",
+    "ShortName": "boss_coolingvent_destroy",
+    "Path": "Event/boss_coolingvent_destroy.bnk",
+    "Events": [
+     {
+      "Id": "3802256100",
+      "Name": "boss_coolingvent_destroy",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_coolingvent_destroy",
+      "GUID": "{7D91000F-DC0F-4DF7-A397-494476201105}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0C199C50-3F2E-268E-3657-6BF31A786E61}"
+ }
+}

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1560169506	boss			\Default Work Unit\Bullet Pings\boss	
+

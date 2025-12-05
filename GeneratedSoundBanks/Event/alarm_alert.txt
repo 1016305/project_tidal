@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4151049751	alarm_alert			\Default Work Unit\Boss Arena\alarm_alert	
+

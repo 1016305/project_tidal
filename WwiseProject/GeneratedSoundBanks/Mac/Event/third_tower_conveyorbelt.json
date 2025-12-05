@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "3430197945",
+    "Type": "Event",
+    "GUID": "{BA9FE5AD-7631-4FA0-984B-293B17A93785}",
+    "Language": "SFX",
+    "Hash": "{234F9481-D4A9-09A0-F441-A856BB15263A}",
+    "ObjectPath": "third_tower_conveyorbelt",
+    "ShortName": "third_tower_conveyorbelt",
+    "Path": "Event/third_tower_conveyorbelt.bnk",
+    "Events": [
+     {
+      "Id": "3430197945",
+      "Name": "third_tower_conveyorbelt",
+      "ObjectPath": "\\Events\\Default Work Unit\\Third Tower\\third_tower_conveyorbelt",
+      "GUID": "{BA9FE5AD-7631-4FA0-984B-293B17A93785}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A548570D-ACD9-DB71-D6C4-525F1EE9E2C0}"
+ }
+}

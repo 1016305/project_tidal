@@ -1,7 +1,7 @@
 [gd_resource type="WwiseEvent" format=3 uid="uid://dm7awsho7qc82"]
 
 [resource]
-name = "death_barks"
-id = 1932895357
+name = "enemy_death"
+id = 1205999388
 guid = "{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}"
 dummy = true

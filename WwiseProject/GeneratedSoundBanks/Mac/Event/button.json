@@ -31,6 +31,7 @@
       "Name": "button",
       "ObjectPath": "\\Events\\Default Work Unit\\Interactables\\button",
       "GUID": "{A1FEA889-5899-4FEA-8BFE-31E347E96E1D}",
+      "Color": "19",
       "DurationType": "OneShot",
       "DurationMin": "0.30783698",
       "DurationMax": "0.30783698",
@@ -43,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{69286843-9211-5ADB-3835-9026CC1FE6F3}"
+  "FileHash": "{5BF31530-3F89-FADA-50CE-B61CBA6CD6F3}"
  }
 }

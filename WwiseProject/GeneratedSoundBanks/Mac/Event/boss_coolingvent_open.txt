@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	536492462	boss_coolingvent_open			\Default Work Unit\Enemy Boss\boss_coolingvent_open	
+

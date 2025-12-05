@@ -1,15 +1,18 @@
-[gd_scene load_steps=18 format=3 uid="uid://dsb1mn22d220l"]
+[gd_scene load_steps=20 format=3 uid="uid://dsb1mn22d220l"]
 
 [ext_resource type="Script" uid="uid://beis6e7q2vp36" path="res://scripts/player/player_controller.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://dlfk08xleb3kw" path="res://scenes/user_interface.tscn" id="2_g2els"]
+[ext_resource type="WwiseEvent" uid="uid://rw2jou0iac60" path="res://Wwise/resources/Event/{1DCA8750-2190-4A49-BC5C-5AA5789839DB}.tres" id="2_jej6c"]
 [ext_resource type="CameraAttributesPractical" uid="uid://b3nasx2od2mkl" path="res://scripts/animation/woozy_head_camera_attrib.tres" id="2_smehm"]
-[ext_resource type="WwiseEvent" uid="uid://b58dm3wq2xbl0" path="res://Wwise/resources/Event/{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}.tres" id="2_y4r1p"]
+[ext_resource type="WwiseEvent" uid="uid://ewaumy83uou" path="res://Wwise/resources/Event/{D6E1E6FD-B377-4DFC-BC2F-BFF458CB7496}.tres" id="2_y4r1p"]
+[ext_resource type="WwiseEvent" uid="uid://bnp5s0o8kx7ju" path="res://Wwise/resources/Event/{F6890812-9B8F-4E90-BC0E-7EEF93E59808}.tres" id="3_d2wvv"]
 [ext_resource type="Resource" uid="uid://3jn5gl2dw4q2" path="res://models/weapons/assault_rifle/assault_rifle_weapon.tres" id="3_dqkch"]
 [ext_resource type="Script" uid="uid://d2bahvleqkygw" path="res://scripts/animation/camera_effect_woozy_head.gd" id="3_ur7pv"]
 [ext_resource type="Script" uid="uid://8us8hykaf3pu" path="res://scripts/player/init_weapon.gd" id="4_qlg0r"]
 [ext_resource type="Script" uid="uid://copckorednjko" path="res://scripts/weapons/muzzle_flare.gd" id="4_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://db0coiq6ohagi" path="res://textures/flashlight.png" id="5_tuyoq"]
 [ext_resource type="PackedScene" uid="uid://bt786q7f1v78" path="res://scenes/pause_menu.tscn" id="9_ur7pv"]
+[ext_resource type="WwiseEvent" uid="uid://2n448fq53bus" path="res://Wwise/resources/Event/{7EC976F9-DACF-499D-983D-A3EF6EB13861}.tres" id="12_3v2ag"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3vyb7"]
 
@@ -46,12 +49,13 @@ emission_texture = SubResource("GradientTexture2D_fjrip")
 material = SubResource("StandardMaterial3D_smehm")
 size = Vector2(0.18, 0.18)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_y4r1p"]
-
 [node name="player" type="CharacterBody3D"]
 script = ExtResource("1_3vyb7")
-footsteps = ExtResource("2_y4r1p")
-sprinting_interval = 0.3
+standard_interval = 0.45
+sprinting_interval = 0.2
+crouching_interval = 0.65
+heartbeat_out = ExtResource("2_jej6c")
+heartbeat_in = ExtResource("12_3v2ag")
 
 [node name="stand_collider" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_3vyb7")
@@ -121,9 +125,6 @@ light_energy = 0.608
 light_cull_mask = 4294967294
 omni_range = 1.843
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="stand_collider"]
-mesh = SubResource("CapsuleMesh_y4r1p")
-
 [node name="user_interface" parent="." instance=ExtResource("2_g2els")]
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_ur7pv")]
@@ -137,3 +138,20 @@ autostart = true
 
 [node name="footsteps_timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="foley_timer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+autostart = true
+
+[node name="footsteps" type="AkEvent3D" parent="."]
+event = ExtResource("2_y4r1p")
+is_environment_aware = true
+
+[node name="foley" type="AkEvent3D" parent="."]
+event = ExtResource("3_d2wvv")
+is_environment_aware = true
+
+[node name="heartbeat" type="AkEvent3D" parent="."]
+event = ExtResource("12_3v2ag")
+is_environment_aware = true

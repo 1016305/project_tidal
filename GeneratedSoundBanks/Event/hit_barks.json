@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{6A549BA7-1316-4482-9C73-C8A236DB9AF1}",
     "Language": "SFX",
-    "Hash": "{3A7F52B1-4335-C23A-BA8C-5A0AB5329400}",
+    "Hash": "{5925269E-63A0-D950-A5FF-75CB7F51201D}",
     "ObjectPath": "hit_barks",
     "ShortName": "hit_barks",
     "Path": "Event/hit_barks.bnk",
@@ -61,18 +61,6 @@
       "CachePath": "50/{5079DCEB-5E79-861E-87AF-C8DAFE402D32}.wem"
      }
     ],
-    "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "1008402193",
-       "Name": "Low_Pass_20KHz",
-       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
-       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      }
-     ]
-    },
     "Events": [
      {
       "Id": "143989192",
@@ -80,10 +68,10 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\hit_barks",
       "GUID": "{6A549BA7-1316-4482-9C73-C8A236DB9AF1}",
       "Color": "10",
-      "MaxAttenuation": "40",
+      "MaxAttenuation": "25",
       "DurationType": "OneShot",
-      "DurationMin": "0.51023334",
-      "DurationMax": "1.3734646",
+      "DurationMin": "0.5484362",
+      "DurationMax": "1.3343647",
       "MediaRefs": [
        {
         "Id": "92867497"
@@ -100,18 +88,11 @@
        {
         "Id": "619156272"
        }
-      ],
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "1008402193"
-        }
-       ]
-      }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{E7BFF54B-5D6A-12C2-3118-6EBBFAE1E113}"
+  "FileHash": "{CD87F19E-808D-37F1-F0EA-45F214EA6EFC}"
  }
 }

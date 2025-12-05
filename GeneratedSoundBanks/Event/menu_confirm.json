@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "4046753069",
+    "Type": "Event",
+    "GUID": "{3F529DF2-03BD-44FD-85B6-639C953D7E23}",
+    "Language": "SFX",
+    "Hash": "{C104399C-A660-3139-5439-B5EF32B28141}",
+    "ObjectPath": "menu_confirm",
+    "ShortName": "menu_confirm",
+    "Path": "Event/menu_confirm.bnk",
+    "Events": [
+     {
+      "Id": "4046753069",
+      "Name": "menu_confirm",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\menu_confirm",
+      "GUID": "{3F529DF2-03BD-44FD-85B6-639C953D7E23}",
+      "Color": "13",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{629B76D5-E553-EC53-AABF-0704DBE40D95}"
+ }
+}

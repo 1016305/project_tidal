@@ -1,0 +1,110 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1205999388",
+    "Type": "Event",
+    "GUID": "{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}",
+    "Language": "SFX",
+    "Hash": "{9E1D451D-47E8-1336-506D-75B8F8090D18}",
+    "ObjectPath": "enemy_death",
+    "ShortName": "enemy_death",
+    "Path": "Event/enemy_death.bnk",
+    "Media": [
+     {
+      "Id": "23971810",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
+      "Path": "Media/23971810.wem",
+      "CachePath": "4D/{4D171A3A-8D62-F22B-CB2E-872B9B487E4D}.wem"
+     },
+     {
+      "Id": "413017173",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
+      "Path": "Media/413017173.wem",
+      "CachePath": "23/{23FDE5D2-6677-7AB2-79F7-088EAEF3E91D}.wem"
+     },
+     {
+      "Id": "429256383",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
+      "Path": "Media/429256383.wem",
+      "CachePath": "6D/{6D1537E3-C61F-D51B-3EC9-B1B898D5A46C}.wem"
+     },
+     {
+      "Id": "535790677",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
+      "Path": "Media/535790677.wem",
+      "CachePath": "67/{67205345-1208-2F4D-4A4E-B260156B32B7}.wem"
+     },
+     {
+      "Id": "670430667",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
+      "Path": "Media/670430667.wem",
+      "CachePath": "00/{003D0607-EA12-1E8F-E354-1DFA81DF6453}.wem"
+     },
+     {
+      "Id": "763644950",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
+      "Path": "Media/763644950.wem",
+      "CachePath": "73/{7320D683-491E-8F31-D04D-D25EC5EF92E6}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1205999388",
+      "Name": "enemy_death",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_death",
+      "GUID": "{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}",
+      "Color": "10",
+      "MaxAttenuation": "25",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6760628",
+      "DurationMax": "2.919239",
+      "MediaRefs": [
+       {
+        "Id": "23971810"
+       },
+       {
+        "Id": "413017173"
+       },
+       {
+        "Id": "429256383"
+       },
+       {
+        "Id": "535790677"
+       },
+       {
+        "Id": "670430667"
+       },
+       {
+        "Id": "763644950"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{52F8ECBF-263B-63EC-21E6-A97495ACF85E}"
+ }
+}

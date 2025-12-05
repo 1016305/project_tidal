@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1347192966	first_tower_amb			\Default Work Unit\First Tower\first_tower_amb	
+

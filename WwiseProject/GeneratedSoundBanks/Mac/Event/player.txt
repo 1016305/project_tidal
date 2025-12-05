@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1069431850	player			\Default Work Unit\Bullet Pings\player	
+

@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "3971991686",
+    "Type": "Event",
+    "GUID": "{5265D1D1-E44C-4096-856D-5885F6B536CB}",
+    "Language": "SFX",
+    "Hash": "{12DDA002-98E7-97EA-25FF-0DA6ABA7B76D}",
+    "ObjectPath": "second_tower_converyorbelt",
+    "ShortName": "second_tower_converyorbelt",
+    "Path": "Event/second_tower_converyorbelt.bnk",
+    "Events": [
+     {
+      "Id": "3971991686",
+      "Name": "second_tower_converyorbelt",
+      "ObjectPath": "\\Events\\Default Work Unit\\Second Tower\\second_tower_converyorbelt",
+      "GUID": "{5265D1D1-E44C-4096-856D-5885F6B536CB}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A6C4983A-0F9C-D8D7-F5FC-8F579232FA4E}"
+ }
+}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://jwb2jhicd4uh"]
+[gd_scene load_steps=47 format=3 uid="uid://jwb2jhicd4uh"]
 
 [ext_resource type="PackedScene" uid="uid://dk7fm3g1nj0t1" path="res://scenes/utility/checkpointmanager.tscn" id="1_jkv2x"]
 [ext_resource type="Texture2D" uid="uid://dkd8bff5lu385" path="res://textures/spruit_sunrise.jpg" id="1_jyhfs"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://c3a3fid2bbhro" path="res://scripts/utility/encounter.gd" id="10_trceg"]
 [ext_resource type="Script" uid="uid://dhxa4cyl8uwa" path="res://scripts/utility/checkpoint.gd" id="11_jbj1t"]
 [ext_resource type="Texture2D" uid="uid://qfl1t3u1b88" path="res://textures/dust.png" id="12_eb6dy"]
+[ext_resource type="Script" uid="uid://dglncfcadiwov" path="res://scripts/audio/switch_steps_container.gd" id="13_gqmmt"]
 [ext_resource type="Script" uid="uid://cw1p844w0bhug" path="res://scripts/utility/deathplane.gd" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://bmuwd8paqpi11" path="res://scenes/pickups/health_pickup.tscn" id="17_muem4"]
 [ext_resource type="PackedScene" uid="uid://bx86f1sxx3ka7" path="res://scenes/pickups/ammo_pickup.tscn" id="18_dp3eg"]
@@ -68,8 +69,11 @@ size = Vector3(1, 5.45416, 8.13619)
 [sub_resource type="BoxShape3D" id="BoxShape3D_jbj1t"]
 size = Vector3(1, 3.79779, 3.81238)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_yq6so"]
-size = Vector3(16.8168, 1, 6.00281)
+[sub_resource type="BoxShape3D" id="BoxShape3D_pm3ni"]
+size = Vector3(1, 1, 37.1012)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6deb"]
+size = Vector3(1, 1, 37.0371)
 
 [sub_resource type="Gradient" id="Gradient_ya4ey"]
 offsets = PackedFloat32Array(0, 0.460227, 1)
@@ -743,7 +747,7 @@ script = ExtResource("9_ya4ey")
 [node name="Encounter" type="Node3D" parent="stage" node_paths=PackedStringArray("wave")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.910763, -23.1609)
 script = ExtResource("10_trceg")
-wave = [NodePath("../../dumb enemy"), NodePath("../../dumb enemy2"), NodePath("../../dumb enemy3"), NodePath("../../dumb enemy4")]
+wave = [NodePath("../../dumb enemy")]
 
 [node name="Area3D" type="Area3D" parent="stage/Encounter"]
 
@@ -771,22 +775,25 @@ shape = SubResource("BoxShape3D_jbj1t")
 transform = Transform3D(0.490356, 0, -0.871522, 0, 1, 0, 0.871522, 0, 0.490356, -51.0936, 1.77078, 12.9967)
 size = Vector3(6.09082, 3.7666, 1)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.6903, 0, 18.1136)
+[node name="SwitchStepsContainer" type="Node3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.419, 0, 0)
+script = ExtResource("13_gqmmt")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.90839, 0, 2.50141)
-shape = SubResource("BoxShape3D_yq6so")
+[node name="Area3D" type="Area3D" parent="stage/SwitchStepsContainer"]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="stage/StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.86084, 0, 0)
-size = Vector3(16.7217, 1, 1)
+[node name="ToGrass" type="CollisionShape3D" parent="stage/SwitchStepsContainer/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.145102, 0, 5.42706)
+shape = SubResource("BoxShape3D_pm3ni")
+
+[node name="Area3D2" type="Area3D" parent="stage/SwitchStepsContainer"]
+
+[node name="ToMetal" type="CollisionShape3D" parent="stage/SwitchStepsContainer/Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.877666, 0, 5.43506)
+shape = SubResource("BoxShape3D_y6deb")
 
 [node name="pausable" type="Node3D" parent="."]
 process_mode = 3
 script = ExtResource("1_tipki")
-
-[node name="AkListener3D" type="AkListener3D" parent="."]
 
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.53433, -0.561266, -22.5976)
@@ -818,15 +825,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.01121, 0.530696, -4.43527)
 monitor = true
 accuracy = 0.0
 
-[node name="dumb enemy2" parent="." instance=ExtResource("20_gqmmt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0419, 0.547632, -13.8953)
-
-[node name="dumb enemy3" parent="." instance=ExtResource("20_gqmmt")]
-transform = Transform3D(0.900865, 0, 0.434099, 0, 1, 0, -0.434099, 0, 0.900865, 15.3676, 0.547632, -8.60763)
-
-[node name="dumb enemy4" parent="." instance=ExtResource("20_gqmmt")]
-transform = Transform3D(-0.454737, 0, -0.890626, 0, 1, 0, 0.890626, 0, -0.454737, 1.87338, 0.547632, -13.8953)
-
 [node name="HealthPickup" parent="." instance=ExtResource("17_muem4")]
 transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -14.4292, 0.31863, 20.7955)
 
@@ -836,4 +834,6 @@ transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -15.8092, 0
 [connection signal="body_entered" from="stage/NavigationRegion3D/BossArena/Triggers/Area3D" to="stage/NavigationRegion3D/BossArena/Triggers/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="stage/Checkpoint" to="stage/Checkpoint" method="_on_body_entered"]
 [connection signal="body_entered" from="stage/Checkpoint2" to="stage/Checkpoint2" method="_on_body_entered"]
+[connection signal="body_entered" from="stage/SwitchStepsContainer/Area3D" to="stage/SwitchStepsContainer" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="stage/SwitchStepsContainer/Area3D2" to="stage/SwitchStepsContainer" method="_on_area_3d_2_body_entered"]
 [connection signal="body_entered" from="Deathplane" to="Deathplane" method="_on_body_entered"]

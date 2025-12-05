@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2771423855",
+    "Type": "Event",
+    "GUID": "{1FB55A85-BA2B-476C-B981-7CF7B6A9F445}",
+    "Language": "SFX",
+    "Hash": "{1202C9EE-A813-82D3-E935-158293237694}",
+    "ObjectPath": "third_tower_amb",
+    "ShortName": "third_tower_amb",
+    "Path": "Event/third_tower_amb.bnk",
+    "Events": [
+     {
+      "Id": "2771423855",
+      "Name": "third_tower_amb",
+      "ObjectPath": "\\Events\\Default Work Unit\\Third Tower\\third_tower_amb",
+      "GUID": "{1FB55A85-BA2B-476C-B981-7CF7B6A9F445}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{23E46D41-301A-64F8-762E-472A73BB4D2C}"
+ }
+}

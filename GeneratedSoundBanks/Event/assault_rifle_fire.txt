@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3448658748	assault_rifle_fire			\Default Work Unit\Weapons\assault_rifle_fire	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2998002419	Boost_3dB_10KHz	Wwise Parametric EQ			
+

@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://rw2jou0iac60"]
+
+[resource]
+name = "low_health_stop"
+id = 2143495873
+guid = "{1DCA8750-2190-4A49-BC5C-5AA5789839DB}"
+dummy = true

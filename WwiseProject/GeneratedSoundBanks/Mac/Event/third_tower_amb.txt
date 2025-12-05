@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2771423855	third_tower_amb			\Default Work Unit\Third Tower\third_tower_amb	
+

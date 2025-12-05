@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2143495873",
+    "Type": "Event",
+    "GUID": "{1DCA8750-2190-4A49-BC5C-5AA5789839DB}",
+    "Language": "SFX",
+    "Hash": "{177C4FEE-F0B0-9577-861D-4E1A79466AEE}",
+    "ObjectPath": "low_health_stop",
+    "ShortName": "low_health_stop",
+    "Path": "Event/low_health_stop.bnk",
+    "Events": [
+     {
+      "Id": "2143495873",
+      "Name": "low_health_stop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\low_health_stop",
+      "GUID": "{1DCA8750-2190-4A49-BC5C-5AA5789839DB}",
+      "Color": "1",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CF4F90DF-D09D-E819-DF4B-68151BAEABBE}"
+ }
+}

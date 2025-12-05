@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "855317084",
+    "Type": "Event",
+    "GUID": "{F813228F-7B1C-4629-95C9-DB3F537C3764}",
+    "Language": "SFX",
+    "Hash": "{07F9A3A1-AD17-AC3F-61AC-73ECF48388B5}",
+    "ObjectPath": "alarm",
+    "ShortName": "alarm",
+    "Path": "Event/alarm.bnk",
+    "Events": [
+     {
+      "Id": "855317084",
+      "Name": "alarm",
+      "ObjectPath": "\\Events\\Default Work Unit\\Third Tower\\alarm",
+      "GUID": "{F813228F-7B1C-4629-95C9-DB3F537C3764}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{354D839C-66CB-7C8B-B1B7-D0B184474818}"
+ }
+}
