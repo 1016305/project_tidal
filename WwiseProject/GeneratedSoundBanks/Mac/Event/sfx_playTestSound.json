@@ -10,7 +10,7 @@
 	"Type": "Event",
 	"GUID": "{42D6CCEC-9A24-44EB-BADA-9F0E9207E8B5}",
 	"Language": "SFX",
-	"Hash": "{3EFCF753-C17E-9E02-633B-E79FC6EF13BE}",
+	"Hash": "{6F52390E-708D-7CE9-450E-4AEF7D3C4949}",
 	"ObjectPath": "sfx_playTestSound",
 	"ShortName": "sfx_playTestSound",
 	"Path": "Event/sfx_playTestSound.bnk",
@@ -43,6 +43,6 @@
 	]
    }
   ],
-  "FileHash": "{8BCD79D3-B5F8-B91C-B97C-AD982F425EA4}"
+  "FileHash": "{686A306A-0DA9-01D3-75BF-A97B875F48CF}"
  }
 }
