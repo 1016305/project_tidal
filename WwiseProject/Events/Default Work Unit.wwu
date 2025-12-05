@@ -200,6 +200,7 @@
 						</Event>
 						<Event Name="enemy_movement" ID="{C11A5FAA-D601-48A5-8892-7869C8301D6B}"/>
 						<Event Name="enemy_fire" ID="{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}"/>
+						<Event Name="enemy_alert" ID="{CD7BF1D8-49A3-453C-8289-1BC072862E93}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Weapons" ID="{2EE7421E-BB6F-4C36-8793-B9D3606086BC}" ShortID="543150394">
@@ -235,6 +236,9 @@
 						<Event Name="boss_death" ID="{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}"/>
 						<Event Name="boss_movement" ID="{9A0CEEB0-7F1E-4248-A797-C84ECF701575}"/>
 						<Event Name="boss_weapon_fire" ID="{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}"/>
+						<Event Name="boss_coolingvent_open" ID="{CB456DD8-D658-4FE0-BDE8-9D9CD2619EB3}"/>
+						<Event Name="boss_coolingvent_close" ID="{5222F25B-473D-47B4-950D-946A83AADBA4}"/>
+						<Event Name="boss_coolingvent_destroy" ID="{7D91000F-DC0F-4DF7-A397-494476201105}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Second Tower" ID="{4D78BF6E-6CA4-407D-A316-99D2E3FAF8F2}" ShortID="958894495">
@@ -290,6 +294,27 @@
 						<Event Name="footsteps" ID="{D6E1E6FD-B377-4DFC-BC2F-BFF458CB7496}"/>
 						<Event Name="low_health" ID="{7EC976F9-DACF-499D-983D-A3EF6EB13861}"/>
 						<Event Name="movement" ID="{F6890812-9B8F-4E90-BC0E-7EEF93E59808}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Boss Arena" ID="{A5389D28-2E28-4B05-870C-87BAC8E4AC07}" ShortID="730454828">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="arena_amb" ID="{47CCD088-37D4-47D4-B51C-DB56FEDD6D72}"/>
+						<Event Name="alarm_alert" ID="{1E815BA4-01BB-4C77-9539-03FAA272089E}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{7870C054-905B-4908-93B7-8DF7177601C2}" ShortID="402821505">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="13"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="menu_click" ID="{3C8A4119-9658-4B45-A150-236263E3D0C3}"/>
+						<Event Name="menu_confirm" ID="{3F529DF2-03BD-44FD-85B6-639C953D7E23}"/>
+						<Event Name="menu_cancel" ID="{19A600E6-E371-463E-804C-B55E9891369F}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
