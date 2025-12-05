@@ -1,9 +1,62 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvilte7kie7wx"]
+[gd_scene load_steps=11 format=3 uid="uid://bvilte7kie7wx"]
 
 [ext_resource type="Texture2D" uid="uid://c1rpinwbe6otj" path="res://textures/decal/bullet_hole/decal_test_basecolor.png" id="1_u72lc"]
 [ext_resource type="Texture2D" uid="uid://bnvao10jnsa32" path="res://textures/decal/bullet_hole/decal_test_norm.png" id="2_6pa8o"]
+[ext_resource type="Shader" uid="uid://d3jewacfouamu" path="res://shaders/sparks_streaks.tres" id="3_u72lc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6pa8o"]
+render_priority = -1
+shader = ExtResource("3_u72lc")
+shader_parameter/StreaksColor = Color(4, 0.9, 0.2, 1)
+shader_parameter/Texture_Pixelate_Scale = 128
+
+[sub_resource type="Curve" id="Curve_3hi1u"]
+_data = [Vector2(0.0445545, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_g5eyn"]
+texture_mode = 1
+curve = SubResource("Curve_3hi1u")
+
+[sub_resource type="Curve" id="Curve_s82kf"]
+_data = [Vector2(0, 0.47191), 0.0, 1.52686, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_kryo8"]
+curve = SubResource("Curve_s82kf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2k3u5"]
+particle_flag_align_y = true
+direction = Vector3(0, 1, 0)
+spread = 90.0
+initial_velocity_min = 0.5
+initial_velocity_max = 1.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.3
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_kryo8")
+alpha_curve = SubResource("CurveTexture_g5eyn")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_hg7bl"]
+size = Vector2(0.25, 1)
+center_offset = Vector3(0, 0.4, 0)
 
 [node name="Decal" type="Decal"]
 size = Vector3(1, 1, 1)
 texture_albedo = ExtResource("1_u72lc")
 texture_normal = ExtResource("2_6pa8o")
+
+[node name="Sparks Particles" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0030674, -0.115709, 0)
+material_override = SubResource("ShaderMaterial_6pa8o")
+emitting = false
+lifetime = 0.4
+one_shot = true
+speed_scale = 3.0
+explosiveness = 0.9
+randomness = 1.0
+fixed_fps = 15
+process_material = SubResource("ParticleProcessMaterial_2k3u5")
+draw_pass_1 = SubResource("QuadMesh_hg7bl")

@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://crt73m03isrhi"]
+
+[resource]
+name = "toothdoor_opening"
+id = 3417972020
+guid = "{E0808C22-AE4B-4D00-851C-6AA8B1BB976B}"
+dummy = true

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bghr76kht2u2i"
+path="res://.godot/imported/Basic Ricochets - v02.wav-938e218ba41cd66a0a01d128438ecf0a.sample"
+
+[deps]
+
+source_file="res://WwiseProject/Originals/SFX/Weapons/Bullet Pings/Basic Ricochets - v02.wav"
+dest_files=["res://.godot/imported/Basic Ricochets - v02.wav-938e218ba41cd66a0a01d128438ecf0a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

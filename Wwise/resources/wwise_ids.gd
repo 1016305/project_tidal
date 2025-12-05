@@ -2,6 +2,9 @@ class_name AK
 
 class EVENTS:
 
+	const LIGHTS_ON : int = 1063352154
+	const TOOTHDOOR_OPENING : int = 3417972020
+	const BUTTON : int = 977454165
 	const TEST_EVENT_01 : int = 1336498786
 	const SFX_PLAYTESTSOUND : int = 2888769156
 	const WEAPON_ASSAULTRIFLE_PLAY_FIRING : int = 619672820
@@ -33,7 +36,7 @@ class BANKS:
 
 class AUX_BUSSES:
 
-	const INDOOR_REVERB : int = 3891222523
+	const FIRST_TOWER_VERB : int = 2540843761
 
 class ACOUSTIC_TEXTURES:
 

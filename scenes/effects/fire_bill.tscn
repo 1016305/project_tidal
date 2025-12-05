@@ -1,0 +1,99 @@
+[gd_scene load_steps=18 format=3 uid="uid://cukbhmusl7cie"]
+
+[ext_resource type="Shader" uid="uid://l4v8pwbdrq57" path="res://shaders/fire_shader_m.tres" id="2_0s1x8"]
+[ext_resource type="Texture2D" uid="uid://d3k0araysgvrn" path="res://textures/fire/distortion.png" id="3_ktx3w"]
+[ext_resource type="Texture2D" uid="uid://mrcb842xgyl3" path="res://textures/fire/fire2.png" id="4_cv7jo"]
+[ext_resource type="Texture2D" uid="uid://dff4vys77bt5o" path="res://textures/fire/fire.png" id="5_hx755"]
+[ext_resource type="Shader" uid="uid://c754cf68w0qsb" path="res://shaders/fire_smoke_shader_m.tres" id="6_18f72"]
+[ext_resource type="Texture2D" uid="uid://dujd8h8o4stv3" path="res://textures/fire/smoke.png" id="7_rc2mr"]
+
+[sub_resource type="Gradient" id="Gradient_8af37"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8psca"]
+gradient = SubResource("Gradient_8af37")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(1, 0.901709)
+
+[sub_resource type="Gradient" id="Gradient_ja45n"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7b3lw"]
+gradient = SubResource("Gradient_ja45n")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(1, 0.739316)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_08243"]
+render_priority = 0
+shader = ExtResource("2_0s1x8")
+shader_parameter/Texture_Pixelate_Scale = 128
+shader_parameter/Flame_Layer_2_Distort = Vector2(0.505, 0.9)
+shader_parameter/tex_frg_35 = ExtResource("3_ktx3w")
+shader_parameter/tex_frg_38 = SubResource("GradientTexture2D_7b3lw")
+shader_parameter/tex_frg_23 = ExtResource("4_cv7jo")
+shader_parameter/FireColor1 = Vector3(0.385, 0.2, 0.01)
+shader_parameter/Flame_Layer_1_Distort = Vector2(0.205, 0.85)
+shader_parameter/tex_frg_2 = ExtResource("3_ktx3w")
+shader_parameter/tex_frg_19 = SubResource("GradientTexture2D_8psca")
+shader_parameter/tex_frg_3 = ExtResource("5_hx755")
+shader_parameter/FireColor2 = Vector3(1.655, 0.3, 0)
+shader_parameter/Fire_Layer_Blend = 0.314
+shader_parameter/billboard = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_lv8hs"]
+
+[sub_resource type="Curve" id="Curve_0obw5"]
+_data = [Vector2(0, 0), 0.0, 8.77603, 0, 0, Vector2(0.173267, 0.932584), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_7ag7r"]
+curve = SubResource("Curve_0obw5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0obw5"]
+resource_local_to_scene = true
+emission_shape_scale = Vector3(5, 5, 5)
+emission_shape = 1
+emission_sphere_radius = 0.18
+angle_min = -120.0
+angle_max = 120.0
+spread = 61.011
+gravity = Vector3(0, 3, 0)
+damping_min = 1.5
+damping_max = 2.2
+scale_min = 2.0
+scale_max = 2.0
+color = Color(0.308594, 0.298941, 0.278458, 1)
+alpha_curve = SubResource("CurveTexture_7ag7r")
+anim_speed_min = 2.3
+anim_speed_max = 8.6
+turbulence_noise_strength = 0.1
+turbulence_noise_scale = 4.505
+turbulence_noise_speed = Vector3(0, 3, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_23uyj"]
+render_priority = 0
+shader = ExtResource("6_18f72")
+shader_parameter/tex_frg_3 = ExtResource("7_rc2mr")
+shader_parameter/billboard = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_d73pc"]
+resource_local_to_scene = true
+material = SubResource("ShaderMaterial_23uyj")
+
+[node name="Fire" type="Node3D"]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.613309, 0)
+visible = false
+sorting_offset = 2.0
+material_override = SubResource("ShaderMaterial_08243")
+amount = 1
+mesh = SubResource("QuadMesh_lv8hs")
+gravity = Vector3(0, 0, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.603967, 0)
+amount = 15
+lifetime = 3.0
+randomness = 1.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_0obw5")
+draw_pass_1 = SubResource("QuadMesh_d73pc")

@@ -1,0 +1,61 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "3417972020",
+    "Type": "Event",
+    "GUID": "{E0808C22-AE4B-4D00-851C-6AA8B1BB976B}",
+    "Language": "SFX",
+    "Hash": "{B72BC11E-18AE-A738-E066-C79ADF96973D}",
+    "ObjectPath": "toothdoor_opening",
+    "ShortName": "toothdoor_opening",
+    "Path": "Event/toothdoor_opening.bnk",
+    "Media": [
+     {
+      "Id": "383057084",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "toothdoor_opening_24_44khz.wav",
+      "Path": "Media/383057084.wem",
+      "CachePath": "B2/{B2CB82F5-8378-6A98-07F7-7AE792CA77D2}.wem"
+     },
+     {
+      "Id": "1009519512",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "MX\\canyon_reveal.wav",
+      "Path": "Media/1009519512.wem",
+      "CachePath": "08/{0883B14B-CCF1-2C56-614B-2C992B9AB93C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3417972020",
+      "Name": "toothdoor_opening",
+      "ObjectPath": "\\Events\\Default Work Unit\\First Tower\\toothdoor_opening",
+      "GUID": "{E0808C22-AE4B-4D00-851C-6AA8B1BB976B}",
+      "Color": "4",
+      "DurationType": "OneShot",
+      "DurationMin": "57.152176",
+      "DurationMax": "57.152176",
+      "MediaRefs": [
+       {
+        "Id": "383057084"
+       },
+       {
+        "Id": "1009519512"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{32D87DDD-ED1C-3927-2972-B6AB7A9BB5B7}"
+ }
+}

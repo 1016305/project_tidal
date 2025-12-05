@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "3417972020",
+    "Type": "Event",
+    "GUID": "{E0808C22-AE4B-4D00-851C-6AA8B1BB976B}",
+    "Language": "SFX",
+    "Hash": "{B52DC702-0A25-BAC3-69FA-D494813E0CE6}",
+    "ObjectPath": "toothdoor_opening",
+    "ShortName": "toothdoor_opening",
+    "Path": "Event/toothdoor_opening.bnk",
+    "Media": [
+     {
+      "Id": "383057084",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "toothdoor_opening_24_44khz.wav",
+      "Path": "Media/383057084.wem",
+      "CachePath": "4E/{4E6016F0-AD14-A86A-E495-8B1F491577F0}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3417972020",
+      "Name": "toothdoor_opening",
+      "ObjectPath": "\\Events\\Default Work Unit\\First Tower\\toothdoor_opening",
+      "GUID": "{E0808C22-AE4B-4D00-851C-6AA8B1BB976B}",
+      "DurationType": "OneShot",
+      "DurationMin": "14.306849",
+      "DurationMax": "14.306849",
+      "MediaRefs": [
+       {
+        "Id": "383057084"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{875D117D-C717-04D3-C14D-FEDEBF42E371}"
+ }
+}

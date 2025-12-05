@@ -14,7 +14,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if enemies_killed >= wave.size():
-		encounter_clear()
+		#encounter_clear()
+		pass
 		
 func encounter_clear():
 	if !is_done:

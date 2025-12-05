@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://i3wm8h0wqjxf"
+path="res://.godot/imported/assault_rifle_empty_clip.wav-8711e33041e6ddf982d62139d8d8861c.sample"
+
+[deps]
+
+source_file="res://WwiseProject/Originals/SFX/Weapons/Assault Rifle/assault_rifle_empty_clip.wav"
+dest_files=["res://.godot/imported/assault_rifle_empty_clip.wav-8711e33041e6ddf982d62139d8d8861c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

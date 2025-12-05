@@ -12,19 +12,51 @@
 					<ChildrenList>
 						<Bus Name="Music" ID="{4CBD492C-1D58-43B4-93E0-92CE7475D46A}">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="24"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
 						</Bus>
 						<Bus Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="7"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
 						</Bus>
 						<Bus Name="Dialogue" ID="{E6BB215E-5D2B-4BBE-9076-C532FE503298}">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
 						</Bus>
+					</ChildrenList>
+				</Bus>
+				<Bus Name="Reverbs" ID="{9DD65F07-E8FB-45DE-B393-D2C7EC9793A5}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{3228FFC8-0C4C-4D15-9232-394AE2918C88}" WorkUnitID="{FD1259EF-0D54-410D-8386-7056F02A8F18}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AuxBus Name="First_Tower_Verb" ID="{1332E2DC-853C-42B6-A659-92C90F2675EC}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{1895D751-F6CA-45C7-9D41-0BCBA77AF7D8}" ShortID="1029412910">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Metal_Hangar" ID="{C4A4605C-42EF-476A-B53C-E31C7A442C24}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

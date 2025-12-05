@@ -9,6 +9,7 @@ extends CharacterBody3D
 @onready var flashlight: SpotLight3D = $stand_collider/player_head/camera/flashlight
 @onready var regen_timer: Timer = $regen_timer
 var regen_bool: bool = false
+var overcharge_bool: bool = false
 
 @onready var stand_collider: CollisionShape3D = $stand_collider
 @onready var _original_capsule_height = $stand_collider.shape.height
@@ -107,6 +108,7 @@ func _physics_process(delta: float) -> void:
 		toggle_flashlight()
 		interact_cast()
 		regen_health(delta)
+		overcharge_health()
 		if Input.is_action_just_pressed("interact"):
 			interact()
 	
@@ -297,8 +299,6 @@ func heal(heal_amt):
 	if !is_dead:
 		current_health += heal_amt
 		Global.player_was_healed.emit()
-		if current_health >= 100:
-			current_health = 100
 		Global.player_health.emit(current_health,max_health)
 	
 func death_check():
@@ -350,6 +350,15 @@ func regen_health(delta):
 	if current_health >= 20:
 		regen_timer.stop()
 		regen_bool = false
+
+func overcharge_health():
+	if current_health >= 100:
+		Global.player_health.emit(current_health,max_health)
+		if !overcharge_bool:
+			overcharge_bool = true
+			current_health -= 1
+			await get_tree().create_timer(1).timeout
+			overcharge_bool = false
 	
 ##Debug Info
 func player_debug():
@@ -361,8 +370,7 @@ func player_debug():
 	Global.debug.add_property('Is Running',is_running,1)
 	Global.debug.add_property('Current Velocity ABS', velocity.abs().snappedf(0.01), 1)
 	Global.debug.add_property('Current Velocity', velocity.snappedf(0.01), 1)
-	Global.debug.add_property('Player Head Pitch', player_head.rotation.x, 1)
-	Global.debug.add_property('Player Head Rotation', player_head.rotation, 1)
+	Global.debug.add_property('Global Position', global_position,1)
 	Global.debug.add_property('Regen Timer', regen_timer.time_left, 1)
 
 func spawn_test_enemy():

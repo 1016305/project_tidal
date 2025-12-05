@@ -5,6 +5,2801 @@
 			<ChildrenList>
 				<WorkUnit Name="Test Sounds" ID="{0073F6B3-FDDF-410E-93C5-394CB98DD32A}" PersistMode="Reference"/>
 				<WorkUnit Name="Weapon Sounds" ID="{4CA4E494-3BAD-4EE9-954B-B872B640ABA7}" PersistMode="Reference"/>
+				<Folder Name="Interactables" ID="{F1635BBE-DD5A-42FA-86C1-176FBF470494}" ShortID="755526915">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Sound Name="button" ID="{1E772B87-6513-4B8C-AB14-66CB60C843AE}" ShortID="656546277">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8768EA1F-D6E2-4BEE-8FBC-65B3BDB24F60}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-25"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="scifi_button" ID="{5C2FD35F-A9E0-45FB-ACC6-E409B82B2A50}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.00900108107300692"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0522062702234402"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.307836971572323"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>scifi_button.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1039733746"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="scifi_button" ID="{5C2FD35F-A9E0-45FB-ACC6-E409B82B2A50}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="World, Enviroment" ID="{39F530C3-383B-4740-80FD-2926030C9D84}" ShortID="966409716">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Folder Name="First Tower" ID="{54809888-7645-4B1E-ACE1-9AC55193C993}" ShortID="995459602">
+							<ChildrenList>
+								<Sound Name="toothdoor_opening" ID="{B3107CB5-ACF6-4C60-BA51-EF53AE1B5237}" ShortID="151064007">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="toothdoor_opening_24_44khz" ID="{7FCF10B3-3E85-45F9-B10B-A367535C27C3}">
+											<PropertyList>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>3.9</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>toothdoor_opening_24_44khz.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="383057084"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="toothdoor_opening_24_44khz" ID="{7FCF10B3-3E85-45F9-B10B-A367535C27C3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="first_tower_amb" ID="{49558907-3CDC-406E-A5C7-76447F247DFA}" ShortID="967712415">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="first_tower_ambienceloop" ID="{0762D314-2ABF-4521-A3BF-BDF7F4EC5025}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="73.2326558191961"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>first_tower_ambienceloop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="750651976"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="first_tower_ambienceloop" ID="{0762D314-2ABF-4521-A3BF-BDF7F4EC5025}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="Lights" ID="{5607627B-4AFC-40C4-9E63-60F44098B550}" ShortID="764850368">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="light_on_01" ID="{23744709-FD9C-4BCF-A476-4DC8EEE98365}" ShortID="28404726">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="light_on_01" ID="{581BEB7E-612C-4306-8C03-80E7A735D03F}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00960286239600692"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0566568881364408"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00768228991680554"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.362027927607713"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>light_on_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="56906530"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="light_on_01" ID="{581BEB7E-612C-4306-8C03-80E7A735D03F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="light_on_02" ID="{5FCA3FB2-FA3F-45C6-A7BE-62BF7DDF7D23}" ShortID="644817557">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="light_on_02" ID="{B3D82C8D-EF64-4E31-BF89-BEE5B7F5E277}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.014155068893316"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.129573322946508"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0315766921466279"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.419207799120252"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>light_on_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="88461833"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="light_on_02" ID="{B3D82C8D-EF64-4E31-BF89-BEE5B7F5E277}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="light_on_03" ID="{B8C3439C-F995-4348-B2EF-754E7F1C4F71}" ShortID="407415157">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="light_on_03" ID="{171B35D3-C3B1-4369-BCD5-A43EB8EDC8E2}">
+													<Language>SFX</Language>
+													<AudioFile>light_on_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="853712018"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="light_on_03" ID="{171B35D3-C3B1-4369-BCD5-A43EB8EDC8E2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="light_on_04" ID="{129AA289-E272-49E5-9BEC-7CA927D2F90C}" ShortID="188629441">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="light_on_04" ID="{97AEFB68-1774-4DFD-8C55-0F07CBAB68D1}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00947512945997606"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0463228551376607"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0694842827064911"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.410588947774497"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>light_on_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="133753980"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="light_on_04" ID="{97AEFB68-1774-4DFD-8C55-0F07CBAB68D1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="light_on_05" ID="{5545E7EC-F7C2-427C-9EC9-5AB513EDB652}" ShortID="1003388462">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="light_on_05" ID="{65279D94-603D-4122-8C84-18F3C39F54DC}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0185466263515383"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0720045493647957"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.116734648212623"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.471302499753957"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>light_on_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="760863978"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="light_on_05" ID="{65279D94-603D-4122-8C84-18F3C39F54DC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{E3E9FE76-8C4E-4168-9118-1B6A68079566}" ShortID="67090941">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom>
+															<Effect Name="Parametric EQ (Custom)" ID="{76ABB772-A360-4218-9581-7F5FE3EC4014}" ShortID="10176546" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<PropertyList>
+																	<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+																	<Property Name="FrequencyBand1" Type="Real32" Value="34.83324"/>
+																	<Property Name="FrequencyBand2" Type="Real32" Value="93.69421"/>
+																	<Property Name="FrequencyBand3" Type="Real32" Value="2906"/>
+																	<Property Name="GainBand1" Type="Real32" Value="-17.56522"/>
+																	<Property Name="GainBand2" Type="Real32" Value="0.5217391"/>
+																	<Property Name="OnOffBand2" Type="bool" Value="False"/>
+																	<Property Name="OnOffBand3" Type="bool" Value="True"/>
+																	<Property Name="OutputLevel" Type="Real32" Value="2"/>
+																</PropertyList>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<Sound Name="crashed_ship" ID="{5CF266FB-FC32-4F70-A735-19885D42122F}" ShortID="830880967">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<Custom>
+												<Attenuation Name="First Tower Attenuation" ID="{B424D856-265C-4C7D-AF7A-5614F4D4E090}" ShortID="1013291911">
+													<CurveUsageInfoList>
+														<VolumeDryUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="VolumeDry" ID="{F6B05200-3C17-424A-81F2-0B3F91B2B283}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																			<SegmentShape>Log1</SegmentShape>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>-199.99999</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</VolumeDryUsage>
+														<VolumeWetGameUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetGameUsage>
+														<VolumeWetUserUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetUserUsage>
+														<LowPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</LowPassFilterUsage>
+														<HighPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</HighPassFilterUsage>
+														<HighShelfUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</HighShelfUsage>
+														<SpreadUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</SpreadUsage>
+														<FocusUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</FocusUsage>
+														<ObstructionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionVolumeUsage>
+														<ObstructionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionLPFUsage>
+														<ObstructionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionHPFUsage>
+														<ObstructionHSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionHSFUsage>
+														<OcclusionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionVolumeUsage>
+														<OcclusionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionLPFUsage>
+														<OcclusionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionHPFUsage>
+														<OcclusionHSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionHSFUsage>
+														<DiffractionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionVolumeUsage>
+														<DiffractionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionLPFUsage>
+														<DiffractionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionHPFUsage>
+														<DiffractionHSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionHSFUsage>
+														<TransmissionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionVolumeUsage>
+														<TransmissionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionLPFUsage>
+														<TransmissionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionHPFUsage>
+														<TransmissionHSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionHSFUsage>
+													</CurveUsageInfoList>
+												</Attenuation>
+											</Custom>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="crashed_ship" ID="{9D208CAB-A0EB-40A6-8945-52424B96BC3C}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.013359647411943"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00398618304967613"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.404512723835576"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>crashed_ship.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="811941973"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="crashed_ship" ID="{9D208CAB-A0EB-40A6-8945-52424B96BC3C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Second Tower" ID="{2FACBBAD-E104-4577-AA98-0FC1B8B196D5}" ShortID="5742838"/>
+						<Folder Name="Third Tower" ID="{46ACE991-0031-41A7-916A-88298227D1BD}" ShortID="626519348">
+							<ChildrenList>
+								<Sound Name="factory_ambienceloop" ID="{AA14E26D-9D61-4192-9FCE-A61641605090}" ShortID="1060422213">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="factory_ambienceloop" ID="{F1F3726F-7619-4612-B9F4-47E28D4300A3}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\factory_ambienceloop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="491444269"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="factory_ambienceloop" ID="{F1F3726F-7619-4612-B9F4-47E28D4300A3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="factory_conveyorbelt" ID="{78113758-3AC7-4961-8DC8-096A0446E44C}" ShortID="474636960">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="factory_conveyorbelt" ID="{74ACA86B-AEAA-4533-85F0-6703DF6FF046}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.367280919252915"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.19366298757197"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Ambience\factory_conveyorbelt.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="749723545"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="factory_conveyorbelt" ID="{74ACA86B-AEAA-4533-85F0-6703DF6FF046}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<PropertyContainer Name="Speaker" ID="{D7167638-BA65-4291-935E-B3DB452C9465}" ShortID="908283498">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="factory_speaker01" ID="{DFF2C001-D4A7-46DF-89F7-7D16FAB9FC70}" ShortID="538048692">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="factory_speaker01" ID="{6AB17271-F89E-42A7-A4E7-CC02F2E948C8}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0583361412771616"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.243067255321506"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.165285733618624"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.29742911651301"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Speaker\factory_speaker01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="704733505"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="factory_speaker01" ID="{6AB17271-F89E-42A7-A4E7-CC02F2E948C8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="factory_speaker02" ID="{FF82C643-5EAB-4438-B27E-F8D417E29427}" ShortID="796884444">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="factory_speaker02" ID="{B87255E5-1215-4ECC-99E5-623A0DA0B6F4}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.051854346505728"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.155563039517184"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.152322142860576"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.85198916557375"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Speaker\factory_speaker02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1051428755"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="factory_speaker02" ID="{B87255E5-1215-4ECC-99E5-623A0DA0B6F4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="factory_speaker03" ID="{53544AAF-9093-4099-9A17-12987BBC0084}" ShortID="1003507004">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="factory_speaker03" ID="{A0652332-0522-450F-B481-F58A254FE4EF}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0534747937403688"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.111405820292435"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.258461503078449"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.40010587290031"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Speaker\factory_speaker03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="924948417"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="factory_speaker03" ID="{A0652332-0522-450F-B481-F58A254FE4EF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</PropertyContainer>
+								<PropertyContainer Name="Alarm" ID="{3ECC0A5A-4498-4B62-900A-595C1FE0EE87}" ShortID="43198443">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="start_alarm" ID="{6FEC3086-4ECE-490F-90DF-675A8C23D0FF}" ShortID="117810175">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="start_alarm" ID="{C14A1642-0CBC-4C31-9384-193AABBB9B54}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00575897057398498"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.201006681930678"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.8441162087157"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Alarms\start_alarm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="513999759"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="start_alarm" ID="{C14A1642-0CBC-4C31-9384-193AABBB9B54}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="stop_alarm" ID="{3758AFAE-EF55-44A4-8D3C-F4F7ADB2AAA9}" ShortID="327455289">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="stop_alarm" ID="{32432081-AA66-4DC9-9DFB-E45A22BD2718}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00846376246275336"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.353054153215692"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.01960475381739"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Alarms\stop_alarm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="714078085"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="stop_alarm" ID="{32432081-AA66-4DC9-9DFB-E45A22BD2718}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</PropertyContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Fourth Tower" ID="{FC28B61A-CCA6-4978-9797-398CD847D726}" ShortID="700120771"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Character" ID="{00C1D1BC-062E-45DE-ABFA-8C9A33908155}" ShortID="284881841">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<PropertyContainer Name="Foley" ID="{265AB2DF-DEDC-4E2D-AA98-0E54DCBF6B13}" ShortID="890458542">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Movement" ID="{00C41F13-4394-4370-8EB7-E401A4EF0654}" ShortID="534610056">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="equipment_mvmnt_01" ID="{B07AA68F-6DBA-4F21-82FB-840DC933A36C}" ShortID="813210695">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="equipment_mvmnt_01" ID="{8A7F3020-AC2A-40BB-8055-7155686722B4}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Equipment Foley\equipment_mvmnt_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="20452153"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="equipment_mvmnt_01" ID="{8A7F3020-AC2A-40BB-8055-7155686722B4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="equipment_mvmnt_02" ID="{7D696611-36CD-49FB-9C2A-90B738CBEB4B}" ShortID="1013961585">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="equipment_mvmnt_02" ID="{2A41A44D-D9B7-4C15-8717-4670FBAFAD55}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Equipment Foley\equipment_mvmnt_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="220202397"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="equipment_mvmnt_02" ID="{2A41A44D-D9B7-4C15-8717-4670FBAFAD55}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="equipment_mvmnt_03" ID="{C920A58E-82D7-4706-AFBB-C3A20524561B}" ShortID="440811124">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="equipment_mvmnt_03" ID="{B8ED90F9-C22A-4F22-8ADD-6575405C4CFC}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Equipment Foley\equipment_mvmnt_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="468160147"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="equipment_mvmnt_03" ID="{B8ED90F9-C22A-4F22-8ADD-6575405C4CFC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="equipment_mvmnt_04" ID="{CDD5014A-F3E8-4097-BCEC-77A7ED4A7ADB}" ShortID="1033412058">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="equipment_mvmnt_04" ID="{FA1FB0B1-5171-42DF-BEB7-7F6AD4FBFAAC}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Equipment Foley\equipment_mvmnt_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="534996132"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="equipment_mvmnt_04" ID="{FA1FB0B1-5171-42DF-BEB7-7F6AD4FBFAAC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="equipment_mvmnt_05" ID="{ACAD3AA1-64B9-45F4-A93C-A2759F9D7F9E}" ShortID="258680540">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="equipment_mvmnt_05" ID="{F094F0EA-AC08-436C-8BC9-58D5AFB57591}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Equipment Foley\equipment_mvmnt_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="529294884"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="equipment_mvmnt_05" ID="{F094F0EA-AC08-436C-8BC9-58D5AFB57591}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</PropertyContainer>
+						<PropertyContainer Name="Footsteps" ID="{2220AAAF-5CFB-4475-8D34-0015DDCDF418}" ShortID="271828839">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Dirt &amp; Grass" ID="{F2207B47-8DD4-4EEA-940F-654D4BFBC65F}" ShortID="176679066">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="footsteps_walk_dirtgrass_01" ID="{C869EA27-C632-46EC-BAEE-FF795EE00541}" ShortID="349776090">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="footsteps_walk_dirtgrass_01" ID="{16BD1128-A72B-45BA-B422-3F6013442147}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Footsteps\Dirt &amp; Grass\footsteps_walk_dirtgrass_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="917219800"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="footsteps_walk_dirtgrass_01" ID="{16BD1128-A72B-45BA-B422-3F6013442147}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="footsteps_walk_dirtgrass_02" ID="{E18B81B3-7A92-4C4C-8F9F-534532A37548}" ShortID="636425956">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="footsteps_walk_dirtgrass_02" ID="{496CACC8-645C-41AD-B409-1A2F9A087E4B}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Footsteps\Dirt &amp; Grass\footsteps_walk_dirtgrass_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="838338871"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="footsteps_walk_dirtgrass_02" ID="{496CACC8-645C-41AD-B409-1A2F9A087E4B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="footsteps_walk_dirtgrass_03" ID="{A2FFD8BB-DBCB-454A-8FA2-B0E9CF778ED6}" ShortID="562084822">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="footsteps_walk_dirtgrass_03" ID="{0A1CDED9-E8DF-4BBC-A561-835C40ABF8B0}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Footsteps\Dirt &amp; Grass\footsteps_walk_dirtgrass_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="630855648"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="footsteps_walk_dirtgrass_03" ID="{0A1CDED9-E8DF-4BBC-A561-835C40ABF8B0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="footsteps_walk_dirtgrass_04" ID="{E35B91A4-63FF-4615-867C-28C2C4F29B0A}" ShortID="10540658">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="footsteps_walk_dirtgrass_04" ID="{2BBA23D0-D42B-431F-BCB2-009CDE0D2FA0}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Footsteps\Dirt &amp; Grass\footsteps_walk_dirtgrass_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="791158473"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="footsteps_walk_dirtgrass_04" ID="{2BBA23D0-D42B-431F-BCB2-009CDE0D2FA0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Metal" ID="{911211A7-C415-4451-823C-A125A5989DAF}" ShortID="33261813">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="footsteps_walk_metal_01" ID="{308BA71B-91C2-46A9-920B-CAB5BF239E26}" ShortID="1068740853">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="footsteps_walk_metal_01" ID="{04376256-E162-48C0-B4ED-257D6147E545}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Footsteps\Metal\footsteps_walk_metal_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="446086077"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="footsteps_walk_metal_01" ID="{04376256-E162-48C0-B4ED-257D6147E545}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="footsteps_walk_metal_02" ID="{10AF53B8-CE1D-43A5-99AC-168A93CADD55}" ShortID="592643845">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="footsteps_walk_metal_02" ID="{ECBCCCF4-2C74-48A8-A8D4-EC2D8F4507B9}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Footsteps\Metal\footsteps_walk_metal_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="9297660"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="footsteps_walk_metal_02" ID="{ECBCCCF4-2C74-48A8-A8D4-EC2D8F4507B9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="footsteps_walk_metal_03" ID="{65524EC5-AFFF-46A9-BD27-4E7B65983A37}" ShortID="920229149">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="footsteps_walk_metal_03" ID="{6F19193A-9591-44E5-A3AE-6467D89719B2}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Footsteps\Metal\footsteps_walk_metal_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="267152929"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="footsteps_walk_metal_03" ID="{6F19193A-9591-44E5-A3AE-6467D89719B2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="footsteps_walk_metal_04" ID="{D6AB7C69-2BE7-4827-8943-8056EFBCA09C}" ShortID="489421886">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="footsteps_walk_metal_04" ID="{5A7B7F51-1CF5-4802-9634-801E94FB1735}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Footsteps\Metal\footsteps_walk_metal_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="662012032"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="footsteps_walk_metal_04" ID="{5A7B7F51-1CF5-4802-9634-801E94FB1735}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="footsteps_walk_metal_05" ID="{C77FE284-578C-49C7-81BB-AEFE5C39995F}" ShortID="548675847">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="footsteps_walk_metal_05" ID="{5DB14CD5-D1E2-480B-BE48-A1B0A7E0E163}">
+													<Language>SFX</Language>
+													<AudioFile>Character\Footsteps\Metal\footsteps_walk_metal_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="673907237"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="footsteps_walk_metal_05" ID="{5DB14CD5-D1E2-480B-BE48-A1B0A7E0E163}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</PropertyContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemy" ID="{A0126A04-2E2E-4E83-AA27-34F980DC61EE}" ShortID="246987110">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Folder Name="Boss" ID="{A77B810A-7BEB-4658-89CE-27A387EEFBAA}" ShortID="333256582">
+							<ChildrenList>
+								<PropertyContainer Name="Barks" ID="{7B12C575-8D4B-4893-9A8C-A2BF0E0BA3A8}" ShortID="847845431">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Dialogue" ID="{E6BB215E-5D2B-4BBE-9076-C532FE503298}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Boss Combat Bark" ID="{F1DDCAF8-AF85-4265-B928-B4E41F2D7D99}" ShortID="1072364148">
+											<PropertyList>
+												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{8ABA7B13-FEE9-4D6D-8CB4-6E54456BD1A6}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="125"/>
+																	<Property Name="Min" Type="Real64" Value="-175"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="enemy_boss_combatbark_01" ID="{314AC145-D7BD-4AFB-AA43-48300AE31F2B}" ShortID="471712952">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_boss_combatbark" ID="{0DBAAA84-FE75-44DD-BCAC-3A5D11275B78}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0958366836507076"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0532426020281709"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.55472337676413"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Boss\Barks\enemy_boss_combatbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="51005466"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_boss_combatbark" ID="{0DBAAA84-FE75-44DD-BCAC-3A5D11275B78}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_boss_combatbark_02" ID="{83FB850E-DFBE-484F-8440-D789E9911F93}" ShortID="682435825">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_boss_combatbark" ID="{31B13085-20B5-43C9-A7F8-8868B759359D}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0277604735257047"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.144971361745339"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.10598655292049"/>
+																<Property Name="TrimEnd" Type="Real64" Value="7.61101375420088"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Boss\Barks\enemy_boss_combatbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="4616273"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_boss_combatbark" ID="{31B13085-20B5-43C9-A7F8-8868B759359D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_boss_combatbark_03" ID="{3301772D-CC63-4983-BBFA-1CC20294EBB6}" ShortID="67558538">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_boss_combatbark" ID="{BA6E163A-FE28-4824-ADEA-26805FB8E588}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0465362447598157"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.048402365480154"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="7.86342059959083"/>
+																<Property Name="TrimEnd" Type="Real64" Value="10.5307872984419"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Boss\Barks\enemy_boss_combatbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="458147463"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_boss_combatbark" ID="{BA6E163A-FE28-4824-ADEA-26805FB8E588}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_boss_combatbark_04" ID="{87B4FD73-BC76-48D3-BEFD-2298C0D84374}" ShortID="48838260">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_boss_combatbark" ID="{391B23DE-3CF8-44E4-B692-88820C0A0D14}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0774437847682492"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.110284741416745"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="12.1235578565065"/>
+																<Property Name="TrimEnd" Type="Real64" Value="16.5808145906713"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Boss\Barks\enemy_boss_combatbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="533788656"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_boss_combatbark" ID="{391B23DE-3CF8-44E4-B692-88820C0A0D14}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_boss_combatbark_05" ID="{39ED2371-4666-475A-B68A-F6EB09CE94EC}" ShortID="461664905">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_boss_combatbark" ID="{D94C432E-9C88-4E48-9552-C0BA5B3707ED}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0704034406984135"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.037662981154547"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="18.0407906301719"/>
+																<Property Name="TrimEnd" Type="Real64" Value="23.5840978593272"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Boss\Barks\enemy_boss_combatbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="476405923"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_boss_combatbark" ID="{D94C432E-9C88-4E48-9552-C0BA5B3707ED}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Boss Hit Bark" ID="{7C1B3B55-14F6-4B38-B354-075335696B22}" ShortID="938492238">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{BE75631F-4A40-4796-8602-1BAE6CD26E30}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-50"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="enemy_boss_hitbark_01" ID="{40BCE778-56F3-4D46-8A12-AADD1FAD445C}" ShortID="809255163">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_boss_hitbark" ID="{C8D2379C-D282-4D95-A9D7-CC449564C755}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0103035338487684"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0319409549311819"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.851712639805525"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Boss\Barks\enemy_boss_hitbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="356934565"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_boss_hitbark" ID="{C8D2379C-D282-4D95-A9D7-CC449564C755}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_boss_hitbark_02" ID="{0721A984-1E68-4A30-B154-5CAB9E6F160C}" ShortID="522118007">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_boss_hitbark" ID="{3B144C67-0803-4A4C-8C78-4C06DF72BA6E}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0228166734108224"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0767469923818576"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.98443576025729"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.97343800334943"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Boss\Barks\enemy_boss_hitbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="605996684"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_boss_hitbark" ID="{3B144C67-0803-4A4C-8C78-4C06DF72BA6E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_boss_hitbark_03" ID="{799C96BA-EC33-419E-A01D-CE82E9F67B71}" ShortID="800113093">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_boss_hitbark" ID="{F32A2102-D85F-44B7-8767-D41BEEC903E3}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0127506231378511"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0476868474286185"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="3.98806968240624"/>
+																<Property Name="TrimEnd" Type="Real64" Value="4.74887206638945"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Boss\Barks\enemy_boss_hitbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="359105828"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_boss_hitbark" ID="{F32A2102-D85F-44B7-8767-D41BEEC903E3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_boss_hitbark_04" ID="{4B19074B-DDC5-4F02-B37C-E23E76F9E928}" ShortID="956641981">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_boss_hitbark" ID="{99F78FD9-8CF8-43B1-97EA-A7B95E330424}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0180250296850932"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0274280071054207"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="6.02160039600451"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.6550878807362"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Boss\Barks\enemy_boss_hitbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="456268554"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_boss_hitbark" ID="{99F78FD9-8CF8-43B1-97EA-A7B95E330424}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_boss_hitbark_05" ID="{CC1B371D-A1A2-4E16-A2A1-E1C91AB1CCD1}" ShortID="578040427">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_boss_hitbark" ID="{F47A420A-C7EE-4247-BAAE-566669BDFA0A}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0095797318841857"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0327839713369897"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="7.71837251808326"/>
+																<Property Name="TrimEnd" Type="Real64" Value="8.40164515950139"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Boss\Barks\enemy_boss_hitbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="889691568"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_boss_hitbark" ID="{F47A420A-C7EE-4247-BAAE-566669BDFA0A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<Sound Name="enemy_boss_deathbark" ID="{ECADE2A4-3730-47F4-876B-79C7543F3F3D}" ShortID="334160097">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_boss_deathbark" ID="{00FA2C4D-A232-466B-A31A-730AE9028A37}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0407747196738023"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.379204892966361"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.02140672782875"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Enemy\Boss\Barks\enemy_boss_deathbark.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="593340090"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_boss_deathbark" ID="{00FA2C4D-A232-466B-A31A-730AE9028A37}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</PropertyContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Soldier" ID="{9E5C2817-9524-45BA-8606-327E7AD869AD}" ShortID="698963645">
+							<ChildrenList>
+								<PropertyContainer Name="Barks" ID="{984BE441-FB59-4144-8C91-220988FC511B}" ShortID="891603180">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6E8C5857-4DCB-4AA1-BD7F-10A017A2FB1A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="125"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Dialogue" ID="{E6BB215E-5D2B-4BBE-9076-C532FE503298}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Enemy Combat Bark" ID="{2D32388D-11FA-4E1C-8E7D-280D895A2588}" ShortID="263110270">
+											<PropertyList>
+												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Dialogue" ID="{E6BB215E-5D2B-4BBE-9076-C532FE503298}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="enemy_combatbark_01" ID="{FD27A85F-4E1E-4076-9C8D-5D52E349FB40}" ShortID="1014358696">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_combatbark" ID="{252A82A9-DF69-4FA7-A9CE-B256C729EA63}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.063891122433805"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.133106505070427"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.200009774711386"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.78593272171253"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_combatbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="58604364"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_combatbark" ID="{252A82A9-DF69-4FA7-A9CE-B256C729EA63}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_combatbark_02" ID="{E134ABCA-41B4-4AFB-B10A-1811C6488788}" ShortID="838056956">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_combatbark" ID="{A1CD0659-BA3A-409C-815D-25066D29D046}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0484023654801549"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.105605161047611"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="3.48164285527192"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.50429964115202"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_combatbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="302041538"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_combatbark" ID="{A1CD0659-BA3A-409C-815D-25066D29D046}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_combatbark_03" ID="{F1E154D5-3761-40CB-86E8-A2A431AC3EA8}" ShortID="21711427">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_combatbark" ID="{3B2BC171-5E0F-4E48-A96B-F335DDC1C5A1}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0363654135838871"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0800039098845531"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="8.18314531508326"/>
+																<Property Name="TrimEnd" Type="Real64" Value="9.91322075858247"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_combatbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="372022351"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_combatbark" ID="{3B2BC171-5E0F-4E48-A96B-F335DDC1C5A1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_combatbark_04" ID="{D849911A-EE4E-460C-8196-C91993E43EA3}" ShortID="280439929">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_combatbark" ID="{EB06D464-4B7C-471F-B4E5-080CF99C88DD}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0270960728593188"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0920044963672382"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="12.0451125489723"/>
+																<Property Name="TrimEnd" Type="Real64" Value="16.2105011939504"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_combatbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="709355210"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_combatbark" ID="{EB06D464-4B7C-471F-B4E5-080CF99C88DD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_combatbark_05" ID="{1F13CD43-A236-4ADE-841E-BFF7D1D0967E}" ShortID="296015730">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_combatbark" ID="{C2A5B2E4-2504-4529-903F-15E56117592E}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0200009774711418"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0356859491764965"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="18.5632434333826"/>
+																<Property Name="TrimEnd" Type="Real64" Value="22.6567525449591"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_combatbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="140344306"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_combatbark" ID="{C2A5B2E4-2504-4529-903F-15E56117592E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Enemy Death Bark" ID="{67638A37-C912-4861-B290-7B80EC4BF85B}" ShortID="288339384">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{50369D33-4DC1-4EA2-9048-885ADF81E22E}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="50"/>
+																	<Property Name="Min" Type="Real64" Value="-50"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Dialogue" ID="{E6BB215E-5D2B-4BBE-9076-C532FE503298}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="enemy_deathbark_01" ID="{49565C19-47FD-4AED-B06B-DD6AD9F4B414}" ShortID="1040903556">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_deathbark" ID="{00A357A4-3DE5-4A87-BD64-BE93CD1F792E}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0708659032994955"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.170078167918789"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.191337938908638"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.51211461680994"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_deathbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="535790677"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_deathbark" ID="{00A357A4-3DE5-4A87-BD64-BE93CD1F792E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_deathbark_02" ID="{1C57FDD5-9F59-48D7-A4A8-6012ACB003A0}" ShortID="882569222">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_deathbark" ID="{EA6874CB-7451-47BB-97AE-D06F6EA99F21}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0242595693644052"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0684591475676495"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.22911294434121"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.48688107181288"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_deathbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="429256383"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_deathbark" ID="{EA6874CB-7451-47BB-97AE-D06F6EA99F21}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_deathbark_03" ID="{26903CCC-5EE9-49ED-909C-810458BD86AB}" ShortID="1057287306">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_deathbark" ID="{B8EAA4DA-C83C-4384-9940-01F2A8EF4CB4}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0520025414249599"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.05600273691919"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="8.00214556013857"/>
+																<Property Name="TrimEnd" Type="Real64" Value="9.72732076581586"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_deathbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="413017173"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_deathbark" ID="{B8EAA4DA-C83C-4384-9940-01F2A8EF4CB4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_deathbark_04" ID="{D4F2D062-3A93-468C-9D28-9CB9FF60BCC9}" ShortID="626347924">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_deathbark" ID="{0926FDD3-3694-4A51-9E39-D329397D5D77}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0186612072033903"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0356259410246516"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="11.4871317632835"/>
+																<Property Name="TrimEnd" Type="Real64" Value="14.3232657902333"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_deathbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="23971810"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_deathbark" ID="{0926FDD3-3694-4A51-9E39-D329397D5D77}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_deathbark_05" ID="{694166C2-0A76-4424-BB61-9872A23B84AA}" ShortID="667034609">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_deathbark" ID="{248158F8-37E4-469D-82C5-356139581F0D}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0185069823504698"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0586054441098156"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="16.0250982657933"/>
+																<Property Name="TrimEnd" Type="Real64" Value="18.3296945815345"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_deathbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="763644950"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_deathbark" ID="{248158F8-37E4-469D-82C5-356139581F0D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_deathbark_06" ID="{6B773E71-7B00-4842-81AF-2F57C69B53CD}" ShortID="77140755">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_deathbark" ID="{9563412E-DDC6-47BD-8491-C7B5DFFB10E1}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0572027955674557"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.114405591134911"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="19.4504231466045"/>
+																<Property Name="TrimEnd" Type="Real64" Value="21.1974539651086"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_deathbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="670430667"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_deathbark" ID="{9563412E-DDC6-47BD-8491-C7B5DFFB10E1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Enemy Hit Bark" ID="{6FD402FF-AC95-49DC-8BE9-DC67A1EAAE23}" ShortID="247319530">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E70E59F2-8437-407D-8D69-C613B2A7E40B}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="125"/>
+																	<Property Name="Min" Type="Real64" Value="-50"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Dialogue" ID="{E6BB215E-5D2B-4BBE-9076-C532FE503298}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="enemy_hitbark_01" ID="{0893613F-FEF1-49D5-A6BE-3B640E11947C}" ShortID="812314087">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_hitbark" ID="{A478423F-EDB5-43C7-A391-7D89923CFBBE}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0181827067919441"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0409110902818743"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.156897818603855"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.817975574956447"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_hitbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="619156272"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_hitbark" ID="{A478423F-EDB5-43C7-A391-7D89923CFBBE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_hitbark_02" ID="{C0EF01AC-3CED-4B2A-9DCD-73A9DB23A747}" ShortID="124078944">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_hitbark" ID="{9C974B49-B640-4DEC-B5E8-DD390224F325}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0153954959427964"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0299356865554374"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="2.05940327970067"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.35578122404761"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_hitbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="92867497"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_hitbark" ID="{9C974B49-B640-4DEC-B5E8-DD390224F325}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_hitbark_03" ID="{49A0B5E6-5436-45F3-A3B4-87C9A697C5B2}" ShortID="923458799">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_hitbark" ID="{8939589D-5430-4F4F-AC9B-60B1B7C236ED}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0079661597582934"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0201809380543452"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.5212292107979"/>
+																<Property Name="TrimEnd" Type="Real64" Value="5.16860856221954"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_hitbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="253060480"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_hitbark" ID="{8939589D-5430-4F4F-AC9B-60B1B7C236ED}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_hitbark_04" ID="{2AB10B94-EBE4-421C-B53D-CC7EE306F486}" ShortID="533109968">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_hitbark" ID="{2B6A3775-BFE7-4595-99AD-61FB5EE581D5}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0162508012729514"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0235208965792726"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="6.55652673439767"/>
+																<Property Name="TrimEnd" Type="Real64" Value="7.34688176307405"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_hitbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="134533631"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_hitbark" ID="{2B6A3775-BFE7-4595-99AD-61FB5EE581D5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_hitbark_05" ID="{C460E882-4FB0-429B-AFE8-680C1B551796}" ShortID="508615462">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_hitbark" ID="{12657BF9-E8DC-4D86-8A65-26A7F7FE764B}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.00699795270126913"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0256591599046594"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="8.7544738452823"/>
+																<Property Name="TrimEnd" Type="Real64" Value="9.3439733117683"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_hitbark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="261362267"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_hitbark" ID="{12657BF9-E8DC-4D86-8A65-26A7F7FE764B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Enemy Idle Bark" ID="{C42FA56F-376C-4706-992D-C946FEF967B8}" ShortID="5612343">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Dialogue" ID="{E6BB215E-5D2B-4BBE-9076-C532FE503298}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="enemy_idlebark_01" ID="{92EF6D6D-220D-4158-9A58-4C56AC34301B}" ShortID="496764768">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_idlebark" ID="{3EB702ED-9110-4E3E-8DAB-9C28A8ED0317}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0754580138333028"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0943225172916287"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.302752293578"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_idlebark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="199980290"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_idlebark" ID="{3EB702ED-9110-4E3E-8DAB-9C28A8ED0317}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_idlebark_02" ID="{04957C01-4FFA-4494-A8FC-50EBAEA2BDE5}" ShortID="889441151">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_idlebark" ID="{7D52B45A-A1FB-4682-AF22-F46CD774847D}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0307909918855929"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0348964574703388"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.08407806363519"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.44178984887872"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_idlebark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="770351086"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_idlebark" ID="{7D52B45A-A1FB-4682-AF22-F46CD774847D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_idlebark_03" ID="{1DC72828-6646-4FCC-B8D8-45948A49CADA}" ShortID="81362206">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_idlebark" ID="{F8E14ED3-9745-471C-AE1D-97B38FB7AED1}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0293154679105214"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0242171256652135"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="7.71867246168376"/>
+																<Property Name="TrimEnd" Type="Real64" Value="11.2538226299694"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_idlebark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="478178618"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_idlebark" ID="{F8E14ED3-9745-471C-AE1D-97B38FB7AED1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_idlebark_04" ID="{720F9342-CB81-48D8-9307-EA542C5D25CE}" ShortID="478388729">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_idlebark" ID="{99D3FAD1-3C99-4070-8C13-D1C8AE9EC840}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0348964574703388"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0574765181864407"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="12.8429917346805"/>
+																<Property Name="TrimEnd" Type="Real64" Value="16.7864761982092"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_idlebark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="195666167"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_idlebark" ID="{99D3FAD1-3C99-4070-8C13-D1C8AE9EC840}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="enemy_idlebark_05" ID="{98A81882-9D41-4095-B186-B3B6124E8787}" ShortID="249731362">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="enemy_idlebark" ID="{07CE4224-7900-4FE2-8CFA-1C04479C2B44}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0297535202049986"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0429773069627757"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="18.0365292648892"/>
+																<Property Name="TrimEnd" Type="Real64" Value="21.5231037626338"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Enemy\Soldier\Barks\enemy_idlebark.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="363213464"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="enemy_idlebark" ID="{07CE4224-7900-4FE2-8CFA-1C04479C2B44}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{9074C301-FEDF-4D4D-B626-5CF6B57845D2}" ShortID="556602230">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+								</PropertyContainer>
+								<PropertyContainer Name="Movement" ID="{E51F1509-E4E9-4DBD-99CF-831678B8D9F4}" ShortID="696003687">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{7A9F6D01-05A4-47EB-BD7A-1139F3769BBA}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="150"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Enemy - Floating Movement v02" ID="{23EBB8B0-CF35-42B5-9C54-3BF2D3E730B8}" ShortID="500068937">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Enemy - Floating Movement v02" ID="{8CAB3DA8-21B3-4BAC-9B7C-C4B1E28EAF0C}">
+													<Language>SFX</Language>
+													<AudioFile>Enemy\Soldier\Movement\Enemy - Floating Movement v02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="278877721"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Enemy - Floating Movement v02" ID="{8CAB3DA8-21B3-4BAC-9B7C-C4B1E28EAF0C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</PropertyContainer>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{6A67C4E7-BD82-475C-9071-4CB985A7E7F6}" ShortID="618026844">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="13"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<PropertyContainer Name="Menu" ID="{D5E26F75-45A0-4742-8EDF-E64AC875DC77}" ShortID="1024477282">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ui_menu_click" ID="{6D635E25-17A7-4016-97D0-571D0DB4F1C3}" ShortID="1008426890">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ui_button_simple_click_05" ID="{BD8A3E6D-89E9-4240-9B8E-FD100B2D3E2B}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.000695548776943506"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0284305562575658"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0685115524229046"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UI\Menu\ui_button_simple_click_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="42449289"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ui_button_simple_click_05" ID="{BD8A3E6D-89E9-4240-9B8E-FD100B2D3E2B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ui_menu_cancel" ID="{0FAD98D4-58B9-4DA8-BC22-A069EDDAA961}" ShortID="531239441">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ui_menu_button_cancel_02" ID="{142DEC09-249A-4604-BF96-84637FECE7F6}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0163710503767754"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0883044535474553"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.374053683771878"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UI\Menu\ui_menu_button_cancel_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="364789122"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ui_menu_button_cancel_02" ID="{142DEC09-249A-4604-BF96-84637FECE7F6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ui_menu_confirm" ID="{F41FF927-6A0F-446A-BFF8-9467C3606574}" ShortID="1016077188">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ui_menu_button_confirm_17" ID="{68F5B202-F15D-400E-A5F2-408DBB9981AA}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00293577975089397"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00305810390718121"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UI\Menu\ui_menu_button_confirm_17.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="996050579"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ui_menu_button_confirm_17" ID="{68F5B202-F15D-400E-A5F2-408DBB9981AA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</PropertyContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Weapons" ID="{1C0A4BCB-9EC6-4B9A-BF38-314D41E96F29}" ShortID="425195080">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="8"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<PropertyContainer Name="Assault Rifle" ID="{0FB23DC0-2350-4459-8E0B-79A4E5E99751}" ShortID="6515883">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="assault_rifle_empty_clip" ID="{65E975C9-F262-46C8-859A-749D8A5EB376}" ShortID="659202231">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="assault_rifle_empty_clip" ID="{C3401E3F-F4B6-4BD6-BF50-F69B1ACEB207}">
+											<Language>SFX</Language>
+											<AudioFile>Weapons\Assault Rifle\assault_rifle_empty_clip.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="969641868"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="assault_rifle_empty_clip" ID="{C3401E3F-F4B6-4BD6-BF50-F69B1ACEB207}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="assault_rifle_fire_withtail" ID="{B9965EB9-E88D-4686-B368-70F0215B0611}" ShortID="522205084">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="assault_rifle_fire_withtail" ID="{DD8C546A-FFCB-4524-BAD0-98308981EA5D}">
+											<Language>SFX</Language>
+											<AudioFile>Weapons\Assault Rifle\assault_rifle_fire_withtail.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="444093844"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="assault_rifle_fire_withtail" ID="{DD8C546A-FFCB-4524-BAD0-98308981EA5D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="assault_rifle_fire_withtail_(s)" ID="{6F3E1A45-90CB-4B5D-B500-30193AC4C755}" ShortID="729849635">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="assault_rifle_fire_withtail_(s)" ID="{ED2DAD30-0393-48E2-8ED7-50306DF64F43}">
+											<Language>SFX</Language>
+											<AudioFile>Weapons\Assault Rifle\assault_rifle_fire_withtail_(s).wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="693917548"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="assault_rifle_fire_withtail_(s)" ID="{ED2DAD30-0393-48E2-8ED7-50306DF64F43}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="assault_rifle_gunfire (s)" ID="{3E84B32E-0AAF-4787-937C-4BABCC3E8E15}" ShortID="68651304">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="assault_rifle_gunfire (s)" ID="{F94B1701-1B65-40D9-865A-E0598CB56B2B}">
+											<Language>SFX</Language>
+											<AudioFile>Weapons\Assault Rifle\assault_rifle_gunfire (s).wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="123718909"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="assault_rifle_gunfire (s)" ID="{F94B1701-1B65-40D9-865A-E0598CB56B2B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="assault_rifle_gunfire" ID="{12D32153-E266-48CE-8BB8-D9674822401B}" ShortID="841503023">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="assault_rifle_gunfire" ID="{29D256F4-DD07-4515-A023-D96B5CE47EAA}">
+											<Language>SFX</Language>
+											<AudioFile>Weapons\Assault Rifle\assault_rifle_gunfire.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="659218500"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="assault_rifle_gunfire" ID="{29D256F4-DD07-4515-A023-D96B5CE47EAA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="assault_rifle_reload" ID="{90AEBAB1-D869-4FE9-BDAC-6DC6CF2EFBF8}" ShortID="466702816">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="assault_rifle_reload" ID="{02F9EC54-58C6-4A4C-A0CE-2DC09295F01B}">
+											<Language>SFX</Language>
+											<AudioFile>Weapons\Assault Rifle\assault_rifle_reload.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1039305653"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="assault_rifle_reload" ID="{02F9EC54-58C6-4A4C-A0CE-2DC09295F01B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mech, click" ID="{1B913B09-C1F6-42C7-81B9-B6C161C5BF35}" ShortID="132194104">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mech, click" ID="{3D6DCA42-917C-412F-BDD4-5B8448F7C914}">
+											<Language>SFX</Language>
+											<AudioFile>Weapons\Assault Rifle\mech, click.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1045961606"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mech, click" ID="{3D6DCA42-917C-412F-BDD4-5B8448F7C914}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</PropertyContainer>
+						<PropertyContainer Name="Bullet Pings" ID="{17AEA2C4-6735-4D38-9B32-98EB8C15B478}" ShortID="276374905">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Basic Ricochets - v01" ID="{7CDB50F5-7871-4F40-B49F-D84E07591708}" ShortID="605928685">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Basic Ricochets - v01" ID="{6A715513-1255-4BCA-BA3C-CE58BD928785}">
+											<Language>SFX</Language>
+											<AudioFile>Weapons\Bullet Pings\Basic Ricochets - v01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="707228252"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Basic Ricochets - v01" ID="{6A715513-1255-4BCA-BA3C-CE58BD928785}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Basic Ricochets - v02" ID="{4841674D-04F5-46EE-AA99-5F6ABF0B2128}" ShortID="31074230">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Basic Ricochets - v02" ID="{A39F9DE8-09BA-48DB-B599-F3C4F8CDDD8A}">
+											<Language>SFX</Language>
+											<AudioFile>Weapons\Bullet Pings\Basic Ricochets - v02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="348643218"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Basic Ricochets - v02" ID="{A39F9DE8-09BA-48DB-B599-F3C4F8CDDD8A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Designed Ricochets - v01" ID="{F42EBFC9-7660-4920-A0E5-F28DA25FE1F6}" ShortID="793304532">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Designed Ricochets - v01" ID="{0B4EB0B6-DE79-454D-8061-E9EF82343289}">
+											<Language>SFX</Language>
+											<AudioFile>Weapons\Bullet Pings\Designed Ricochets - v01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="696293679"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Designed Ricochets - v01" ID="{0B4EB0B6-DE79-454D-8061-E9EF82343289}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</PropertyContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="MX" ID="{74926C39-B5F3-445D-ACED-A49F141BA04C}" ShortID="582841176">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="24"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<MusicSegment Name="canyon_reveal" ID="{C822397E-BD0C-4A27-94FE-CEDC11CE825C}" ShortID="784202355">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="55652.1768707483"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Music" ID="{4CBD492C-1D58-43B4-93E0-92CE7475D46A}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="canyon_reveal" ID="{792E7261-CC6E-439C-B896-79CFBCF19F9F}" ShortID="191345417">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{5666247F-CDC3-4F9B-A1D0-399077DB2456}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="canyon_reveal" ID="{CC423730-D1D2-47C4-A170-E2E872D34F20}">
+											<Language>SFX</Language>
+											<AudioFile>MX\canyon_reveal.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1009519512"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{BC6233F1-467A-4EAD-8D5B-50B8F5532D9C}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="canyon_reveal" ID="{09C7B946-1EFC-4559-AC13-1C7E8F7F78C1}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="55652.1768707483"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="canyon_reveal" ID="{CC423730-D1D2-47C4-A170-E2E872D34F20}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{2A3A47F4-CA06-48E3-94F5-8E16A28E1268}"/>
+									<MusicCue Name="Exit Cue" ID="{3DEC58C4-6A18-4C29-A791-D096562C9C5D}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="55652.1768707483"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="combat_track01" ID="{6DFD7C5B-26D9-4C91-B1CD-B11D69273914}" ShortID="26089072">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="102353.375222025"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Music" ID="{4CBD492C-1D58-43B4-93E0-92CE7475D46A}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="combat_track01" ID="{0183A1F1-EDFD-4D9B-B718-7EDA41691531}" ShortID="968025093">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{36E57B8B-340B-49A5-99D3-D98CA1058324}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="combat_track01" ID="{0A917F42-389B-464A-9618-41AED8FD515B}">
+											<Language>SFX</Language>
+											<AudioFile>MX\combat_track01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="838726400"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{BFDF896C-67E8-44EA-AE46-87A270C114BE}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="combat_track01" ID="{35B9F0AF-F86F-44BE-8AE8-A44F8E50FE2D}">
+															<PropertyList>
+																<Property Name="BeginTrimOffset" Type="Real64" Value="1614.12500265587"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="100965.532879819"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="PlayAt" Type="Real64" Value="-1614.12500265587"/>
+															</PropertyList>
+															<AudioSourceRef Name="combat_track01" ID="{0A917F42-389B-464A-9618-41AED8FD515B}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Highpass">
+																	<Curve Name="" ID="{066E1FB4-16B8-4586-A222-B0094541A13F}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1.61413</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100.965532879819</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Lowpass">
+																	<Curve Name="" ID="{722D038F-5470-40D1-8909-8D2389C02663}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1.61413</XPos>
+																				<YPos>2.28299</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1.61513</XPos>
+																				<YPos>1.14026</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1.61613</XPos>
+																				<YPos>-1.14318</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100.965532879819</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{D5F471C7-3AED-43A9-836F-9C15AA162A64}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>1.61413</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100.965532879819</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{EA4AB0A8-A946-4B79-BBA9-F52F0A32CFF3}"/>
+									<MusicCue Name="Exit Cue" ID="{E0214D6E-7444-4DE6-BC20-21AB6A084EC8}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="100965.532879819"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

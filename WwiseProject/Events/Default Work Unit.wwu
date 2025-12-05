@@ -36,6 +36,61 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Interactables" ID="{DB27675D-5D56-48D7-BA29-971158CE0BF7}" ShortID="13465690">
+					<ChildrenList>
+						<Event Name="button" ID="{A1FEA889-5899-4FEA-8BFE-31E347E96E1D}">
+							<ChildrenList>
+								<Action Name="" ID="{A680869A-A052-4D65-934D-9E76B544F327}" ShortID="891569533">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="button" ID="{1E772B87-6513-4B8C-AB14-66CB60C843AE}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="First Tower" ID="{C090B57A-1879-49E2-BFAD-C449BA179B07}" ShortID="824683307">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="toothdoor_opening" ID="{E0808C22-AE4B-4D00-851C-6AA8B1BB976B}">
+							<ChildrenList>
+								<Action Name="" ID="{151AD29A-0B59-49C3-BC5F-7725B45A6DE9}" ShortID="1047570730">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="toothdoor_opening" ID="{B3107CB5-ACF6-4C60-BA51-EF53AE1B5237}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BD7C2E95-24F2-453C-BCE2-221CF9A1FA10}" ShortID="268456714">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="canyon_reveal" ID="{C822397E-BD0C-4A27-94FE-CEDC11CE825C}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="lights_on" ID="{857D5D76-7D63-43C3-878D-B8A113A7E4BC}">
+							<ChildrenList>
+								<Action Name="" ID="{4F5C9452-E70B-4B78-B8F9-40DD606D724A}" ShortID="1072686593">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lights" ID="{5607627B-4AFC-40C4-9E63-60F44098B550}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

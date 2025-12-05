@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://ctui55budl18a"]
+[gd_scene load_steps=45 format=4 uid="uid://ctui55budl18a"]
 
 [ext_resource type="Script" uid="uid://b0kjwp2j62s63" path="res://scripts/enemy/dumb enemy/dumb_enemy.gd" id="1_6ixqb"]
 [ext_resource type="Material" uid="uid://d34c4yhjr3qps" path="res://models/enemies/the enemy/enemy_material.tres" id="2_8v64s"]
@@ -1352,10 +1352,179 @@ tracks/15/keys = {
 "times": PackedFloat32Array(0, 1.23333, 1.4, 2.3, 2.43333, 3)
 }
 
+[sub_resource type="Animation" id="Animation_mkiqx"]
+resource_name = "melee"
+length = 1.68
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_body/body_unwrapped:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.803088, 0.97249, 1.30502, 1.44305, 1.66984)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("enemy_body/body_unwrapped:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 1, 1, 0),
+"points": PackedFloat32Array(4.54747e-13, -0.25, 0, 0.25, 0, 0.673662, -0.25, 0, 0.25, 0, 0.673662, -0.25, 0, 0.25, 0, -0.161835, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.54747e-13, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.803088, 0.97249, 1.30502, 1.44305, 1.66984)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("enemy_body/body_unwrapped:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.803088, 0.97249, 1.30502, 1.44305, 1.66984)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("enemy_body/body_unwrapped/head_unwrapped:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 0.976785, 1.30471, 1.44192, 1.66984)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("enemy_body/body_unwrapped/head_unwrapped:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 2, 2, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.266667, 0, -0.650449, -0.266667, 0, 0.0589285, 0, -0.650449, -0.0589285, 0, 0.109307, 0, 0.0930261, -0.109307, 0, 0.0457384, 0, 0, -0.0457384, 0, 0, 0, 0, 0, 0, 0.266667, 0),
+"times": PackedFloat32Array(0, 0.8, 0.976785, 1.30471, 1.44192, 1.66984)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("enemy_body/body_unwrapped/head_unwrapped:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 0.976785, 1.30471, 1.44192, 1.66984)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped:rotation:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 2, 0),
+"points": PackedFloat32Array(0.294604, 0, 0, 0.262802, 0, 1.296, -0.262802, 0, 0.0627934, 0, 1.296, -0.0627934, 0, 0.110857, 0, 1.26555, -0.110857, 0, 0, 0, 0.294604, 0, 0, 0.262802, 0),
+"times": PackedFloat32Array(0, 0.788405, 0.976785, 1.30936, 1.66984)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped:rotation:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 0, 0),
+"points": PackedFloat32Array(-1.02706, 0, 0, 0.262802, 0, 0.753453, -0.262802, 0, 0.0627934, 0, 0.753453, -0.0627934, 0, 0.110857, 0, -2.86231, -0.25, 0, 0.25, 0, -1.02706, 0, 0, 0.262802, 0),
+"times": PackedFloat32Array(0, 0.788405, 0.976785, 1.30936, 1.66984)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped:rotation:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 2, 0),
+"points": PackedFloat32Array(-1.1206, 0, 0, 0.262802, 0, 0.765719, -0.262802, 0, 0.0627934, 0, 0.765719, -0.0627934, 0, 0.110857, 0, -1.7419, -0.110857, 0, 0, 0, -1.1206, 0, 0, 0.262802, 0),
+"times": PackedFloat32Array(0, 0.788405, 0.976785, 1.30936, 1.66984)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped:rotation:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 2, 2, 2, 0),
+"points": PackedFloat32Array(0.323319, 0, 0, 0.265127, 0, 0.390346, -0.265127, 0, 0.0604677, 0, 0.390346, -0.0604677, 0, 0.0969033, 0, 0.390346, -0.0969033, 0, 0.0271329, 0, 0.390346, -0.0271329, 0, 0.00930274, 0, 0.390346, -0.00930274, 0, 0, 0, 0.323319, 0, 0, 0.265127, 0),
+"times": PackedFloat32Array(0, 0.795382, 0.976785, 1.2675, 1.34889, 1.3768, 1.66984)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped:rotation:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 2, 2, 2, 0),
+"points": PackedFloat32Array(-0.443618, 0, 0, 0.265127, 0, -0.0986543, -0.265127, 0, 0.0604677, 0, -0.0986543, -0.0604677, 0, 0.0969033, 0, -0.0986543, -0.0969033, 0, 0.0271329, 0, -0.0986543, -0.0271329, 0, 0.00930274, 0, -0.0986543, -0.00930274, 0, 0, 0, -0.443618, 0, 0, 0.265127, 0),
+"times": PackedFloat32Array(0, 0.795382, 0.976785, 1.2675, 1.34889, 1.3768, 1.66984)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped:rotation:z")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 2, 2, 2, 0),
+"points": PackedFloat32Array(0.436977, 0, 0, 0.265127, 0, -0.310449, -0.265127, 0, 0.0604677, 0, -0.310449, -0.0604677, 0, 0.0969033, 0, -0.310449, -0.0969033, 0, 0.0271329, 0, 0.816807, -0.0271329, 0, 0.00930274, 0, 0.65964, -0.00930274, 0, 0, 0, 0.436977, 0, 0, 0.265127, 0),
+"times": PackedFloat32Array(0, 0.795382, 0.976785, 1.2675, 1.34889, 1.3768, 1.66984)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped:rotation:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0.101125, -0.25, 0, 0.25, 0, -0.440025, -0.25, 0, 0.25, 0, -0.440025, -0.25, 0, 0.25, 0, 0.101125, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.869804, 1.30005, 1.67216)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped:rotation:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-2.08774, -0.25, 0, 0.25, 0, -2.33399, -0.25, 0, 0.25, 0, -2.33399, -0.25, 0, 0.25, 0, -2.08774, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.869804, 1.30005, 1.67216)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("enemy_body/body_unwrapped/Rarm0_unwrapped:rotation:z")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(2.55557, -0.25, 0, 0.25, 0, 2.02058, -0.25, 0, 0.25, 0, 2.02058, -0.25, 0, 0.25, 0, 2.55557, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.869804, 1.30005, 1.67216)
+}
+
 [sub_resource type="Animation" id="Animation_67dsm"]
 resource_name = "shoot"
 length = 0.3
-loop_mode = 1
+loop_mode = 2
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1462,7 +1631,88 @@ _data = {
 &"alert": SubResource("Animation_cbrdg"),
 &"death": SubResource("Animation_tknad"),
 &"idle_animation": SubResource("Animation_8v64s"),
+&"melee": SubResource("Animation_mkiqx"),
 &"shoot": SubResource("Animation_67dsm")
+}
+
+[sub_resource type="Animation" id="Animation_fastd"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.11759e-08, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(4.09782e-08, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-2.38419e-07, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_57l2t"]
+resource_name = "saw_spin"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1.11759e-08, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.500785)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(4.09782e-08, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.500785)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped/Larm2_unwrapped_002:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(1, 0),
+"points": PackedFloat32Array(-2.38419e-07, 0, 0, 0, 0, 6.25306, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mkiqx"]
+_data = {
+&"RESET": SubResource("Animation_fastd"),
+&"saw_spin": SubResource("Animation_57l2t")
 }
 
 [node name="dumb enemy" type="CharacterBody3D"]
@@ -1507,10 +1757,9 @@ metadata/vs = "{  }"
 
 [node name="body_hitbox" type="StaticBody3D" parent="enemy_body/body_unwrapped" node_paths=PackedStringArray("parent")]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("3_cbrdg")
 parent = NodePath("../../..")
-bodypart = null
 
 [node name="_body_hitbox" type="CollisionShape3D" parent="enemy_body/body_unwrapped/body_hitbox"]
 transform = Transform3D(1, 0, 6.82121e-13, 0, 1, 0, -6.82121e-13, 0, 1, 0.0925293, 0.152557, 0.169563)
@@ -1529,7 +1778,7 @@ metadata/TT_CM_Scale = "1.0"
 
 [node name="head_hitbox" type="StaticBody3D" parent="enemy_body/body_unwrapped/head_unwrapped" node_paths=PackedStringArray("parent")]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("3_cbrdg")
 parent = NodePath("../../../..")
 bodypart = "Head"
@@ -1551,7 +1800,7 @@ metadata/vs = "{  }"
 
 [node name="larm0_hitbox" type="StaticBody3D" parent="enemy_body/body_unwrapped/Larm0_unwrapped" node_paths=PackedStringArray("parent")]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("3_cbrdg")
 parent = NodePath("../../../..")
 bodypart = "Arm"
@@ -1573,7 +1822,7 @@ metadata/vs = "{  }"
 
 [node name="larm1_hitbox" type="StaticBody3D" parent="enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped" node_paths=PackedStringArray("parent")]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("3_cbrdg")
 parent = NodePath("../../../../..")
 bodypart = "Arm"
@@ -1583,7 +1832,7 @@ transform = Transform3D(1, 2.98023e-08, -7.07805e-08, -2.98023e-08, 1, -4.09782e
 shape = SubResource("BoxShape3D_57l2t")
 
 [node name="Larm2_unwrapped_002" type="MeshInstance3D" parent="enemy_body/body_unwrapped/Larm0_unwrapped/Larm1_unwrapped"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45625, 0.0385306, 0.0143307)
+transform = Transform3D(1, 2.38419e-07, 4.09782e-08, -2.38419e-07, 1, -1.11759e-08, -4.09782e-08, 1.11759e-08, 1, 1.45625, 0.0385311, 0.0143306)
 mesh = SubResource("ArrayMesh_nh6em")
 skeleton = NodePath("")
 metadata/extras = {
@@ -1605,7 +1854,7 @@ metadata/vs = "{  }"
 [node name="rarm0_hitbox" type="StaticBody3D" parent="enemy_body/body_unwrapped/Rarm0_unwrapped" node_paths=PackedStringArray("parent")]
 transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, 0, 0, 0)
 collision_layer = 2
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("3_cbrdg")
 parent = NodePath("../../../..")
 bodypart = "Arm"
@@ -1625,7 +1874,7 @@ metadata/vs = "{  }"
 
 [node name="rarm1_hitbox" type="StaticBody3D" parent="enemy_body/body_unwrapped/Rarm0_unwrapped/Rarm1_unwrapped" node_paths=PackedStringArray("parent")]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("3_cbrdg")
 parent = NodePath("../../../../..")
 bodypart = "Arm"
@@ -1664,3 +1913,12 @@ metadata/vs = "{  }"
 libraries = {
 &"": SubResource("AnimationLibrary_cbrdg")
 }
+
+[node name="SawSpin" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mkiqx")
+}
+
+[node name="stop_trying" type="Timer" parent="."]
+
+[connection signal="timeout" from="stop_trying" to="." method="_on_stop_trying_timeout"]

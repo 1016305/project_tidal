@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dohtel5bb7q07"
+path="res://.godot/imported/footsteps_walk_dirtgrass_03.wav-679439a7a36148dffa62eb0b65d9d430.sample"
+
+[deps]
+
+source_file="res://WwiseProject/Originals/SFX/Character/Footsteps/Dirt & Grass/footsteps_walk_dirtgrass_03.wav"
+dest_files=["res://.godot/imported/footsteps_walk_dirtgrass_03.wav-679439a7a36148dffa62eb0b65d9d430.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

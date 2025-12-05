@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "977454165",
+    "Type": "Event",
+    "GUID": "{A1FEA889-5899-4FEA-8BFE-31E347E96E1D}",
+    "Language": "SFX",
+    "Hash": "{1ED5BA3C-3316-0923-67B7-8321001401D9}",
+    "ObjectPath": "button",
+    "ShortName": "button",
+    "Path": "Event/button.bnk",
+    "Media": [
+     {
+      "Id": "1039733746",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "scifi_button.wav",
+      "Path": "Media/1039733746.wem",
+      "CachePath": "2D/{2DB944F6-C689-3615-CF0C-D2FDFFABB574}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "977454165",
+      "Name": "button",
+      "ObjectPath": "\\Events\\Default Work Unit\\Interactables\\button",
+      "GUID": "{A1FEA889-5899-4FEA-8BFE-31E347E96E1D}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.30783698",
+      "DurationMax": "0.30783698",
+      "MediaRefs": [
+       {
+        "Id": "1039733746"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5DB72B79-AB56-2C73-47D1-BE054E9EE02C}"
+ }
+}

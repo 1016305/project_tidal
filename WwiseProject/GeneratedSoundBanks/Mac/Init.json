@@ -39,7 +39,8 @@
       "Id": "393239870",
       "Name": "SFX",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX",
-      "GUID": "{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}"
+      "GUID": "{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}",
+      "Color": "10"
      },
      {
       "Id": "2246998526",
@@ -51,13 +52,15 @@
       "Id": "3930136735",
       "Name": "Dialogue",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Dialogue",
-      "GUID": "{E6BB215E-5D2B-4BBE-9076-C532FE503298}"
+      "GUID": "{E6BB215E-5D2B-4BBE-9076-C532FE503298}",
+      "Color": "4"
      },
      {
       "Id": "3991942870",
       "Name": "Music",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music",
-      "GUID": "{4CBD492C-1D58-43B4-93E0-92CE7475D46A}"
+      "GUID": "{4CBD492C-1D58-43B4-93E0-92CE7475D46A}",
+      "Color": "1"
      }
     ],
     "GameParameters": [
@@ -601,6 +604,6 @@
     ]
    }
   ],
-  "FileHash": "{630CEF21-575C-FD65-17A8-4691DCFC8E1D}"
+  "FileHash": "{80C7B4F9-7E55-6B5E-CAF6-CBE9399BC6D1}"
  }
 }
