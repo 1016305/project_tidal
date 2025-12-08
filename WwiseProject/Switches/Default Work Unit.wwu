@@ -9,6 +9,15 @@
 						<Switch Name="Metal" ID="{4B2EA4B0-716D-4917-8F3B-3271B1831240}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="AmbienceController" ID="{D5CBD5B1-8AB5-4FE4-9AEE-E582CD24DD42}">
+					<ChildrenList>
+						<Switch Name="FirstTower" ID="{E9BBBE8E-C88A-42BF-9C94-AE3E0527855A}"/>
+						<Switch Name="Canyon" ID="{CE29332F-2A5F-4D5C-9F85-BD016E0C1C7E}"/>
+						<Switch Name="ThirdTower" ID="{7E33F55D-8180-429E-B133-D0B0F62B6E09}"/>
+						<Switch Name="Arena" ID="{E6CB013C-D22A-4975-A82D-B4BD10B9EDF3}"/>
+						<Switch Name="SecondTower" ID="{2C7434C5-5C67-4BCE-B22A-0AB3CFA6B74B}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

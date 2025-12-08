@@ -23,6 +23,17 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="Atmosphere" ID="{36EB2E3C-21B9-42CA-A230-716620784CD3}">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-14</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+								</Bus>
+							</ChildrenList>
 						</Bus>
 						<Bus Name="Dialogue" ID="{E6BB215E-5D2B-4BBE-9076-C532FE503298}">
 							<PropertyList>

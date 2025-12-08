@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://d2pn7idgvojqw"]
+
+[resource]
+name = "StartAtmos"
+id = 782580947
+guid = "{D554D848-29E0-40AC-95C3-E352BC300ACC}"
+dummy = true

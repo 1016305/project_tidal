@@ -1,4 +1,4 @@
-[gd_scene load_steps=286 format=4 uid="uid://bxoyqom4nhatv"]
+[gd_scene load_steps=292 format=4 uid="uid://bxoyqom4nhatv"]
 
 [ext_resource type="Texture2D" uid="uid://epp7quit3shj" path="res://textures/skybox 2025-11-06-17-18-29.png" id="1_3sspo"]
 [ext_resource type="Script" uid="uid://bdj2elqxna58q" path="res://scripts/utility/global_sound_controller.gd" id="1_tib8e"]
@@ -56,7 +56,11 @@
 [ext_resource type="PackedScene" uid="uid://3gtwd2weqttt" path="res://scenes/enemies/boss_but_real.tscn" id="53_meay8"]
 [ext_resource type="Material" uid="uid://cmf6w8b83cusu" path="res://shaders/devtexture_orange.tres" id="56_skdyi"]
 [ext_resource type="Material" uid="uid://ciyptmi6h3qlq" path="res://materials/devtexture_grey.tres" id="57_0a3uo"]
+[ext_resource type="Script" uid="uid://s5hg0tpn3ae0" path="res://scripts/audio/switchatmos.gd" id="57_bvigl"]
 [ext_resource type="Script" uid="uid://dglncfcadiwov" path="res://scripts/audio/switch_steps_container.gd" id="57_skdyi"]
+[ext_resource type="WwiseEvent" uid="uid://onq4d3m5hs7u" path="res://Wwise/resources/Event/{DA56627C-D39E-4E24-A266-621C8B978AB1}.tres" id="58_8171t"]
+[ext_resource type="Script" uid="uid://cc2ok2j176ogo" path="res://scripts/audio/ambience.gd" id="59_oglse"]
+[ext_resource type="WwiseEvent" uid="uid://d2pn7idgvojqw" path="res://Wwise/resources/Event/{D554D848-29E0-40AC-95C3-E352BC300ACC}.tres" id="60_oglse"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hkwuu"]
 panorama = ExtResource("1_3sspo")
@@ -2592,6 +2596,7 @@ roughness_texture = ExtResource("34_hyhkd")
 roughness_texture_channel = 1
 normal_enabled = true
 normal_texture = ExtResource("35_8vgs7")
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_yfacf"]
 _surfaces = [{
@@ -2973,6 +2978,12 @@ size = Vector3(1, 7.94226, 52.1825)
 [sub_resource type="BoxShape3D" id="BoxShape3D_8171t"]
 size = Vector3(1, 7.36206, 54.2223)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_yttda"]
+size = Vector3(58.353, 9.3457, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2mbh4"]
+size = Vector3(64.9197, 9.40234, 1)
+
 [node name="Level 1 Test Scene" type="Node3D"]
 
 [node name="GlobalSoundController" type="Node3D" parent="."]
@@ -2996,7 +3007,7 @@ shadow_enabled = true
 directional_shadow_max_distance = 200.0
 
 [node name="player" parent="." instance=ExtResource("2_nix83")]
-transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 0.492754, -124.819, -176.029)
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 0.796915, -124.82, -173.31)
 interact_distance = 5.0
 
 [node name="intro_blur" parent="player" instance=ExtResource("3_orokw")]
@@ -4397,14 +4408,6 @@ collision_modes = "1"
 transform = Transform3D(1, 0, -1.49012e-08, 0, 1, 0, 1.49012e-08, 0, 1, 0.320656, 5.67442, -6.26813)
 size = Vector3(4.63965, 0.77832, 3.84717)
 
-[node name="Sounds" type="Node3D" parent="ship_segment_Imported"]
-script = ExtResource("32_jccmk")
-event = &"mcgee"
-
-[node name="AkEvent3D" type="AkEvent3D" parent="ship_segment_Imported/Sounds"]
-trigger_on = 2
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11951, 2.55516, -7.10843)
-
 [node name="control_panel_Imported" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 90.455, -185.941)
 metadata/run = false
@@ -5730,6 +5733,7 @@ shape = SubResource("ConcavePolygonShape3D_ggkwh")
 debug_fill = false
 
 [node name="SwitchSteps" type="Node3D" parent="."]
+visible = false
 
 [node name="SwitchSteps1" type="Node3D" parent="SwitchSteps"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.59183, -125.874, -192.043)
@@ -5859,6 +5863,116 @@ shape = SubResource("BoxShape3D_0a3uo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.877625, 0.99231, 5.23364)
 shape = SubResource("BoxShape3D_8171t")
 
+[node name="SwitchAtmos" type="Node3D" parent="."]
+
+[node name="ExitTower1" type="Node3D" parent="SwitchAtmos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.478505, -121.092, -189.537)
+script = ExtResource("57_bvigl")
+new_atmos = "Canyon"
+old_atmos = "FirstTower"
+
+[node name="AmbOld" type="Area3D" parent="SwitchAtmos/ExitTower1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchAtmos/ExitTower1/AmbOld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438752, -4.17285, 0.726273)
+shape = SubResource("BoxShape3D_yttda")
+
+[node name="AmbNew" type="Area3D" parent="SwitchAtmos/ExitTower1"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SwitchAtmos/ExitTower1/AmbNew"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.526733, -4.20117, -0.357986)
+shape = SubResource("BoxShape3D_2mbh4")
+
+[node name="EnterTower2" type="Node3D" parent="SwitchAtmos"]
+transform = Transform3D(0.787269, 0, 0.61661, 0, 1, 0, -0.61661, 0, 0.787269, -53.3152, -121.092, -407.791)
+script = ExtResource("57_bvigl")
+new_atmos = "SecondTower"
+old_atmos = "Canyon"
+
+[node name="AmbOld" type="Area3D" parent="SwitchAtmos/EnterTower2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchAtmos/EnterTower2/AmbOld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438752, -4.17285, 0.726273)
+shape = SubResource("BoxShape3D_yttda")
+
+[node name="AmbNew" type="Area3D" parent="SwitchAtmos/EnterTower2"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SwitchAtmos/EnterTower2/AmbNew"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.526733, -4.20117, -0.357986)
+shape = SubResource("BoxShape3D_2mbh4")
+
+[node name="ExitTower2" type="Node3D" parent="SwitchAtmos"]
+transform = Transform3D(0.787269, 0, 0.61661, 0, 1, 0, -0.61661, 0, 0.787269, -115.243, -121.092, -486.859)
+script = ExtResource("57_bvigl")
+new_atmos = "Canyon"
+old_atmos = "SecondTower"
+
+[node name="AmbOld" type="Area3D" parent="SwitchAtmos/ExitTower2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchAtmos/ExitTower2/AmbOld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438752, -4.17285, 0.726273)
+shape = SubResource("BoxShape3D_yttda")
+
+[node name="AmbNew" type="Area3D" parent="SwitchAtmos/ExitTower2"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SwitchAtmos/ExitTower2/AmbNew"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.526733, -4.20117, -0.357986)
+shape = SubResource("BoxShape3D_2mbh4")
+
+[node name="EnterTower3" type="Node3D" parent="SwitchAtmos"]
+transform = Transform3D(0.999713, 0, 0.0239437, 0, 1, 0, -0.0239437, 0, 0.999713, -392.143, -120.121, -634.704)
+script = ExtResource("57_bvigl")
+new_atmos = "ThirdTower"
+old_atmos = "Canyon"
+
+[node name="AmbOld" type="Area3D" parent="SwitchAtmos/EnterTower3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchAtmos/EnterTower3/AmbOld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438752, -4.17285, 0.726273)
+shape = SubResource("BoxShape3D_yttda")
+
+[node name="AmbNew" type="Area3D" parent="SwitchAtmos/EnterTower3"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SwitchAtmos/EnterTower3/AmbNew"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.526733, -4.20117, -0.357986)
+shape = SubResource("BoxShape3D_2mbh4")
+
+[node name="ExitTower3" type="Node3D" parent="SwitchAtmos"]
+transform = Transform3D(0.999713, 0, 0.0239437, 0, 1, 0, -0.0239437, 0, 0.999713, -394.566, -120.121, -735.87)
+script = ExtResource("57_bvigl")
+new_atmos = "Canyon"
+old_atmos = "ThirdTower"
+
+[node name="AmbOld" type="Area3D" parent="SwitchAtmos/ExitTower3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchAtmos/ExitTower3/AmbOld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438752, -4.17285, 0.726273)
+shape = SubResource("BoxShape3D_yttda")
+
+[node name="AmbNew" type="Area3D" parent="SwitchAtmos/ExitTower3"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SwitchAtmos/ExitTower3/AmbNew"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.526733, -4.20117, -0.357986)
+shape = SubResource("BoxShape3D_2mbh4")
+
+[node name="Sounds" type="Node3D" parent="."]
+
+[node name="Crashed Ship" type="Node3D" parent="Sounds"]
+transform = Transform3D(0.493912, 0, -0.0777863, 0, 0.5, 0, 0.0777863, 0, 0.493912, -19.2445, 53.3676, -3.27015)
+script = ExtResource("32_jccmk")
+event = &"Crashed_Ship_Fire"
+
+[node name="AkEvent3D" type="AkEvent3D" parent="Sounds/Crashed Ship"]
+event = ExtResource("58_8171t")
+trigger_on = 2
+
+[node name="Atmos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 105.421, 0)
+script = ExtResource("59_oglse")
+
+[node name="AkEvent3D" type="AkEvent3D" parent="Atmos"]
+event = ExtResource("60_oglse")
+
 [connection signal="turn_lights_on" from="tooth_door_Imported/StaticBody3D/BigDoor" to="elevator_Imported/StaticBody3D2/Elevator Component" method="_on_big_door_turn_lights_on"]
 [connection signal="turn_lights_on" from="tooth_door_Imported/StaticBody3D/BigDoor" to="elevator_Imported/Elevator_lights" method="_on_door_button_pressed"]
 [connection signal="turn_lights_on" from="tooth_door_Imported/StaticBody3D/BigDoor" to="LightEvent" method="_on_big_door_turn_lights_on"]
@@ -5881,3 +5995,13 @@ shape = SubResource("BoxShape3D_8171t")
 [connection signal="body_entered" from="SwitchSteps/SwitchSteps7/Area3D2" to="SwitchSteps/SwitchSteps7" method="_on_area_3d_2_body_entered"]
 [connection signal="body_entered" from="SwitchSteps/SwitchSteps8/Area3D" to="SwitchSteps/SwitchSteps8" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="SwitchSteps/SwitchSteps8/Area3D2" to="SwitchSteps/SwitchSteps8" method="_on_area_3d_2_body_entered"]
+[connection signal="body_entered" from="SwitchAtmos/ExitTower1/AmbOld" to="SwitchAtmos/ExitTower1" method="_on_amb_old_body_entered"]
+[connection signal="body_entered" from="SwitchAtmos/ExitTower1/AmbNew" to="SwitchAtmos/ExitTower1" method="_on_amb_new_body_entered"]
+[connection signal="body_entered" from="SwitchAtmos/EnterTower2/AmbOld" to="SwitchAtmos/EnterTower2" method="_on_amb_old_body_entered"]
+[connection signal="body_entered" from="SwitchAtmos/EnterTower2/AmbNew" to="SwitchAtmos/EnterTower2" method="_on_amb_new_body_entered"]
+[connection signal="body_entered" from="SwitchAtmos/ExitTower2/AmbOld" to="SwitchAtmos/ExitTower2" method="_on_amb_old_body_entered"]
+[connection signal="body_entered" from="SwitchAtmos/ExitTower2/AmbNew" to="SwitchAtmos/ExitTower2" method="_on_amb_new_body_entered"]
+[connection signal="body_entered" from="SwitchAtmos/EnterTower3/AmbOld" to="SwitchAtmos/EnterTower3" method="_on_amb_old_body_entered"]
+[connection signal="body_entered" from="SwitchAtmos/EnterTower3/AmbNew" to="SwitchAtmos/EnterTower3" method="_on_amb_new_body_entered"]
+[connection signal="body_entered" from="SwitchAtmos/ExitTower3/AmbOld" to="SwitchAtmos/ExitTower3" method="_on_amb_old_body_entered"]
+[connection signal="body_entered" from="SwitchAtmos/ExitTower3/AmbNew" to="SwitchAtmos/ExitTower3" method="_on_amb_new_body_entered"]

@@ -1,0 +1,18 @@
+Event	ID	Name			Wwise Object Path	Notes
+	782580947	StartAtmos			\Default Work Unit\StartAtmos	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	32875597	AmbienceController			\Default Work Unit\AmbienceController	
+
+Switch	ID	Name	Switch Group			Notes
+	606742876	SecondTower	AmbienceController			
+	680256650	Arena	AmbienceController			
+	2512621488	FirstTower	AmbienceController			
+	2927127661	Canyon	AmbienceController			
+	3019845671	ThirdTower	AmbienceController			
+
+Effect plug-ins	ID	Name	Type				Notes
+	961645553	Parametric EQ (Custom)	Wwise Parametric EQ			
+	3216246379	Space_Dreaming	Wwise RoomVerb			
+	3491912475	Club_Music_Distant_01	Wwise Parametric EQ			
+

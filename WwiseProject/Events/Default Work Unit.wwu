@@ -89,7 +89,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="crashed_ship" ID="{DA56627C-D39E-4E24-A266-621C8B978AB1}"/>
+						<Event Name="crashed_ship" ID="{DA56627C-D39E-4E24-A266-621C8B978AB1}">
+							<ChildrenList>
+								<Action Name="" ID="{CD7243F5-7488-4489-9AA6-E9B4400C34FC}" ShortID="885065820">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="crashed_ship" ID="{5CF266FB-FC32-4F70-A735-19885D42122F}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="door_console" ID="{1C18790D-4652-45F0-B402-E12F5FCFE49B}"/>
 						<Event Name="elevator" ID="{68A19D79-B2C2-4F98-93DB-26BB86587B30}"/>
 						<Event Name="first_tower_amb" ID="{0A7549B4-58E1-4FB8-B992-B28C5770A0A3}"/>
@@ -420,6 +433,20 @@
 						<Event Name="menu_cancel" ID="{19A600E6-E371-463E-804C-B55E9891369F}"/>
 					</ChildrenList>
 				</Folder>
+				<Event Name="StartAtmos" ID="{D554D848-29E0-40AC-95C3-E352BC300ACC}">
+					<ChildrenList>
+						<Action Name="" ID="{02433AEB-CDE9-4B2B-848D-65ABA5B651FA}" ShortID="870314180">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Atmos Switcher" ID="{166D8651-FE42-4A7B-8DC7-98ECED5AFBCC}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

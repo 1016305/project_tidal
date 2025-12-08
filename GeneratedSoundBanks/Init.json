@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{581E1655-2BB3-7D2E-ECEE-1139BD9D5F16}",
+    "Hash": "{9DA21A7C-75A7-DF64-F951-ACC626384463}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -50,6 +50,13 @@
       "Name": "SFX",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX",
       "GUID": "{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}",
+      "Color": "7"
+     },
+     {
+      "Id": "2145253833",
+      "Name": "Atmosphere",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Atmosphere",
+      "GUID": "{36EB2E3C-21B9-42CA-A230-716620784CD3}",
       "Color": "7"
      },
      {
@@ -158,6 +165,44 @@
      }
     ],
     "SwitchGroups": [
+     {
+      "Id": "32875597",
+      "Name": "AmbienceController",
+      "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController",
+      "GUID": "{D5CBD5B1-8AB5-4FE4-9AEE-E582CD24DD42}",
+      "Switches": [
+       {
+        "Id": "606742876",
+        "Name": "SecondTower",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\SecondTower",
+        "GUID": "{2C7434C5-5C67-4BCE-B22A-0AB3CFA6B74B}"
+       },
+       {
+        "Id": "680256650",
+        "Name": "Arena",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\Arena",
+        "GUID": "{E6CB013C-D22A-4975-A82D-B4BD10B9EDF3}"
+       },
+       {
+        "Id": "2512621488",
+        "Name": "FirstTower",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\FirstTower",
+        "GUID": "{E9BBBE8E-C88A-42BF-9C94-AE3E0527855A}"
+       },
+       {
+        "Id": "2927127661",
+        "Name": "Canyon",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\Canyon",
+        "GUID": "{CE29332F-2A5F-4D5C-9F85-BD016E0C1C7E}"
+       },
+       {
+        "Id": "3019845671",
+        "Name": "ThirdTower",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\ThirdTower",
+        "GUID": "{7E33F55D-8180-429E-B133-D0B0F62B6E09}"
+       }
+      ]
+     },
      {
       "Id": "665703777",
       "Name": "FootstepsTerrain",
@@ -658,6 +703,6 @@
     ]
    }
   ],
-  "FileHash": "{ABB45FBF-434A-A5EC-6B26-DA0DD70480AB}"
+  "FileHash": "{01AF7E83-20A9-C0CC-70D9-2C56319481CC}"
  }
 }

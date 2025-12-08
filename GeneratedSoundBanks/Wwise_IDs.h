@@ -59,6 +59,7 @@ namespace AK
         static const AkUniqueID SECOND_TOWER_CONVERYORBELT = 3971991686U;
         static const AkUniqueID SFX_PLAYTESTSOUND = 2888769156U;
         static const AkUniqueID SPEAKER = 2748973500U;
+        static const AkUniqueID STARTATMOS = 782580947U;
         static const AkUniqueID TEST_EVENT_01 = 1336498786U;
         static const AkUniqueID THIRD_TOWER_AMB = 2771423855U;
         static const AkUniqueID THIRD_TOWER_CONVEYORBELT = 3430197945U;
@@ -67,6 +68,20 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace AMBIENCECONTROLLER
+        {
+            static const AkUniqueID GROUP = 32875597U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID ARENA = 680256650U;
+                static const AkUniqueID CANYON = 2927127661U;
+                static const AkUniqueID FIRSTTOWER = 2512621488U;
+                static const AkUniqueID SECONDTOWER = 606742876U;
+                static const AkUniqueID THIRDTOWER = 3019845671U;
+            } // namespace SWITCH
+        } // namespace AMBIENCECONTROLLER
+
         namespace FOOTSTEPSTERRAIN
         {
             static const AkUniqueID GROUP = 665703777U;
@@ -96,6 +111,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID ATMOSPHERE = 2145253833U;
         static const AkUniqueID DIALOGUE = 3930136735U;
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
         static const AkUniqueID MUSIC = 3991942870U;

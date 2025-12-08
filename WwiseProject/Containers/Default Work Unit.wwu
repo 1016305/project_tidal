@@ -97,36 +97,6 @@
 										<ActiveSource Name="toothdoor_opening_24_44khz" ID="{7FCF10B3-3E85-45F9-B10B-A367535C27C3}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="first_tower_amb" ID="{49558907-3CDC-406E-A5C7-76447F247DFA}" ShortID="967712415">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="first_tower_ambienceloop" ID="{0762D314-2ABF-4521-A3BF-BDF7F4EC5025}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="73.2326558191961"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>first_tower_ambienceloop.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="750651976"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="first_tower_ambienceloop" ID="{0762D314-2ABF-4521-A3BF-BDF7F4EC5025}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<RandomSequenceContainer Name="Lights" ID="{5607627B-4AFC-40C4-9E63-60F44098B550}" ShortID="764850368">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -308,7 +278,14 @@
 								</RandomSequenceContainer>
 								<Sound Name="crashed_ship" ID="{5CF266FB-FC32-4F70-A735-19885D42122F}" ShortID="830880967">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-11</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -485,31 +462,6 @@
 						<Folder Name="Second Tower" ID="{2FACBBAD-E104-4577-AA98-0FC1B8B196D5}" ShortID="5742838"/>
 						<Folder Name="Third Tower" ID="{46ACE991-0031-41A7-916A-88298227D1BD}" ShortID="626519348">
 							<ChildrenList>
-								<Sound Name="factory_ambienceloop" ID="{AA14E26D-9D61-4192-9FCE-A61641605090}" ShortID="1060422213">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="factory_ambienceloop" ID="{F1F3726F-7619-4612-B9F4-47E28D4300A3}">
-											<Language>SFX</Language>
-											<AudioFile>Ambience\factory_ambienceloop.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="491444269"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="factory_ambienceloop" ID="{F1F3726F-7619-4612-B9F4-47E28D4300A3}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="factory_conveyorbelt" ID="{78113758-3AC7-4961-8DC8-096A0446E44C}" ShortID="474636960">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -710,8 +662,51 @@
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Boss Arena" ID="{FC28B61A-CCA6-4978-9797-398CD847D726}" ShortID="700120771"/>
-						<Folder Name="Canyon" ID="{FF8E5EA4-8A1B-4C00-90EE-089A8AC1EBB6}" ShortID="686778576">
+						<Folder Name="Canyon" ID="{FF8E5EA4-8A1B-4C00-90EE-089A8AC1EBB6}" ShortID="686778576"/>
+						<SwitchContainer Name="Atmos Switcher" ID="{166D8651-FE42-4A7B-8DC7-98ECED5AFBCC}" ShortID="747562240">
+							<PropertyList>
+								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="FirstTower" ID="{E9BBBE8E-C88A-42BF-9C94-AE3E0527855A}" WorkUnitID="{8FE69A88-06F4-43D8-A0CA-B5AE25B0E944}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Atmosphere" ID="{36EB2E3C-21B9-42CA-A230-716620784CD3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="AmbienceController" ID="{D5CBD5B1-8AB5-4FE4-9AEE-E582CD24DD42}" WorkUnitID="{8FE69A88-06F4-43D8-A0CA-B5AE25B0E944}"/>
+								</Reference>
+							</ReferenceList>
 							<ChildrenList>
+								<Sound Name="factory_ambienceloop" ID="{AA14E26D-9D61-4192-9FCE-A61641605090}" ShortID="1060422213">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="factory_ambienceloop" ID="{F1F3726F-7619-4612-B9F4-47E28D4300A3}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\factory_ambienceloop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="491444269"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="factory_ambienceloop" ID="{F1F3726F-7619-4612-B9F4-47E28D4300A3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 								<BlendContainer Name="Canyon AMB" ID="{B3EDDA32-5D24-4BDB-8FED-237E0FDD9339}" ShortID="1067712563">
 									<PropertyList>
 										<Property Name="BlendBehavior" Type="int16" Value="1"/>
@@ -825,8 +820,107 @@
 										</Sound>
 									</ChildrenList>
 								</BlendContainer>
+								<Sound Name="first_tower_amb" ID="{49558907-3CDC-406E-A5C7-76447F247DFA}" ShortID="967712415">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="first_tower_ambienceloop" ID="{0762D314-2ABF-4521-A3BF-BDF7F4EC5025}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="73.2326558191961"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>first_tower_ambienceloop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="750651976"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="first_tower_ambienceloop" ID="{0762D314-2ABF-4521-A3BF-BDF7F4EC5025}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-						</Folder>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="first_tower_amb" ID="{49558907-3CDC-406E-A5C7-76447F247DFA}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>2</Value>
+												</ValueList>
+											</Property>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>2</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Canyon AMB" ID="{B3EDDA32-5D24-4BDB-8FED-237E0FDD9339}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>2</Value>
+												</ValueList>
+											</Property>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>2</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="factory_ambienceloop" ID="{AA14E26D-9D61-4192-9FCE-A61641605090}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>2</Value>
+												</ValueList>
+											</Property>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>2</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Canyon" ID="{CE29332F-2A5F-4D5C-9F85-BD016E0C1C7E}"/>
+										<ItemList>
+											<ItemRef Name="Canyon AMB" ID="{B3EDDA32-5D24-4BDB-8FED-237E0FDD9339}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="ThirdTower" ID="{7E33F55D-8180-429E-B133-D0B0F62B6E09}"/>
+										<ItemList>
+											<ItemRef Name="factory_ambienceloop" ID="{AA14E26D-9D61-4192-9FCE-A61641605090}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="FirstTower" ID="{E9BBBE8E-C88A-42BF-9C94-AE3E0527855A}"/>
+										<ItemList>
+											<ItemRef Name="first_tower_amb" ID="{49558907-3CDC-406E-A5C7-76447F247DFA}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{00C1D1BC-062E-45DE-ABFA-8C9A33908155}" ShortID="284881841">
@@ -3558,7 +3652,7 @@
 																			<PointList>
 																				<Point>
 																					<XPos>0</XPos>
-																					<YPos>-0</YPos>
+																					<YPos>0</YPos>
 																					<Flags>5</Flags>
 																					<SegmentShape>Log2</SegmentShape>
 																				</Point>

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F6890812-9B8F-4E90-BC0E-7EEF93E59808}",
     "Language": "SFX",
-    "Hash": "{3DBF41BA-D1A6-5569-6D5E-4B8CC4569E41}",
+    "Hash": "{BE80FEB2-431C-6EDD-0F33-AA4204FB755C}",
     "ObjectPath": "movement",
     "ShortName": "movement",
     "Path": "Event/movement.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_01.wav",
       "Path": "Media/20452153.wem",
-      "CachePath": "F9/{F9ABCC00-F7B8-3F62-4F02-A8F0E177AF28}.wem"
+      "CachePath": "EA/{EA55E61F-7D4A-C317-C189-70B4B336FAE0}.wem"
      },
      {
       "Id": "220202397",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_02.wav",
       "Path": "Media/220202397.wem",
-      "CachePath": "D1/{D168AD15-4D91-7CED-5E06-029F721A1256}.wem"
+      "CachePath": "BC/{BC240B5B-B526-AE11-B309-B87BACBA64CD}.wem"
      },
      {
       "Id": "468160147",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_03.wav",
       "Path": "Media/468160147.wem",
-      "CachePath": "F4/{F4DDAF72-243F-5430-F310-2A126D3A5351}.wem"
+      "CachePath": "9A/{9A815113-C8CB-1198-47E9-5193C1B82696}.wem"
      },
      {
       "Id": "529294884",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_05.wav",
       "Path": "Media/529294884.wem",
-      "CachePath": "3C/{3CBACD75-CEC0-22F6-6070-B4B73BDEAB15}.wem"
+      "CachePath": "6C/{6CA7B7DE-767C-ACBD-4295-E1CDA395D426}.wem"
      },
      {
       "Id": "534996132",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_04.wav",
       "Path": "Media/534996132.wem",
-      "CachePath": "EC/{EC72DF0D-BC3E-C944-C27D-EBA14C6DA3C0}.wem"
+      "CachePath": "CF/{CF6DAEDB-300A-D9FA-7791-B5B272E75923}.wem"
      }
     ],
     "Events": [
@@ -92,6 +92,6 @@
     ]
    }
   ],
-  "FileHash": "{836CB2FA-7CAC-0B19-D350-7B3EDB35A060}"
+  "FileHash": "{4FB3CBA0-83CE-E5FD-D4EC-FE81EBB02DA6}"
  }
 }
