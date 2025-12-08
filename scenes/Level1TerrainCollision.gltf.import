@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dqvjj0rub5knt"
-path="res://.godot/imported/level1_greybox_rev1.gltf-4aa18027e5990abe157c722a8e187408.scn"
+uid="uid://byponvyxi3nnu"
+path="res://.godot/imported/Level1TerrainCollision.gltf-90739f9a59005f8fc4628322d62f4d26.scn"
 
 [deps]
 
-source_file="res://scenes/level1_greybox_rev1.gltf"
-dest_files=["res://.godot/imported/level1_greybox_rev1.gltf-4aa18027e5990abe157c722a8e187408.scn"]
+source_file="res://scenes/Level1TerrainCollision.gltf"
+dest_files=["res://.godot/imported/Level1TerrainCollision.gltf-90739f9a59005f8fc4628322d62f4d26.scn"]
 
 [params]
 
