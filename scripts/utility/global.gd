@@ -43,6 +43,10 @@ signal set_mouse_sens(sens:float)
 var _mouse_sens
 var _volume
 signal volume(vol:float)
+var sfx_volume = 100
+var dialogue_volume = 100
+var music_volume = 100
+var master_volume = 50
 
 
 func _ready() -> void:

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{A621C6DB-34F7-12C4-A682-41B4F6D1BC25}",
+    "Hash": "{6B4AFDB2-7A05-6E84-BCF9-324B4203D2AB}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -110,6 +110,12 @@
       "GUID": "{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"
      },
      {
+      "Id": "988953028",
+      "Name": "SFXVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume\\SFXVolume",
+      "GUID": "{652B1243-DB3A-445A-8297-A0047A3E0565}"
+     },
+     {
       "Id": "1029930033",
       "Name": "SS_Air_Fury",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fury",
@@ -122,10 +128,28 @@
       "GUID": "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
      },
      {
+      "Id": "1866264637",
+      "Name": "DialogueVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume\\DialogueVolume",
+      "GUID": "{CF637B99-1AFF-4C2C-9061-F2C48EB079D9}"
+     },
+     {
+      "Id": "2346531308",
+      "Name": "MusicVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume\\MusicVolume",
+      "GUID": "{717547FF-D188-4CE1-82A5-E55EB3EA2A69}"
+     },
+     {
       "Id": "2648548617",
       "Name": "SS_Air_Month",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Month",
       "GUID": "{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"
+     },
+     {
+      "Id": "2918011349",
+      "Name": "MasterVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume\\MasterVolume",
+      "GUID": "{29F0562D-6A8C-43BA-A0D2-ACA988EE759E}"
      },
      {
       "Id": "3002758120",
@@ -703,6 +727,6 @@
     ]
    }
   ],
-  "FileHash": "{729C7A95-02C1-EF43-6EE2-9D170776A146}"
+  "FileHash": "{7BFC3C20-8D38-97DC-3143-64E1014619AE}"
  }
 }
