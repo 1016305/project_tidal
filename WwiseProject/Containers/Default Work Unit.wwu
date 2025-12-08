@@ -58,6 +58,49 @@
 								<ActiveSource Name="scifi_button" ID="{5C2FD35F-A9E0-45FB-ACC6-E409B82B2A50}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="pick up ammo" ID="{FDFFED34-CBE6-4B62-95DD-6200B8E040EA}" ShortID="30707411">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{853C68D9-95B4-4E0E-A142-AF2E329B29AE}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="300"/>
+													<Property Name="Min" Type="Real64" Value="-300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="pick up ammo" ID="{A8B1B0B0-0549-4D70-8A78-86D6650B060F}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\pick up ammo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1052192619"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="pick up ammo" ID="{A8B1B0B0-0549-4D70-8A78-86D6650B060F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="World, Enviroment" ID="{39F530C3-383B-4740-80FD-2926030C9D84}" ShortID="966409716">

@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://c3d0l2nqrivjf"]
+
+[resource]
+name = "boss_coolingvent_open"
+id = 536492462
+guid = "{CB456DD8-D658-4FE0-BDE8-9D9CD2619EB3}"
+dummy = true

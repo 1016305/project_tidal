@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://g42h2r8gug48"]
+
+[resource]
+name = "boss_weapon_fire"
+id = 1510202224
+guid = "{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}"
+dummy = true

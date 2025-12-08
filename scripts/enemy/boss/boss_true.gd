@@ -23,6 +23,14 @@ var vfx
 @export var startup_lights_l: Array[OmniLight3D]
 @export var startup_lights_r: Array[OmniLight3D]
 
+@export_category("Sounds")
+@export var combat_barks: WwiseEvent
+@export var death: WwiseEvent
+@export var hit_barks: WwiseEvent
+@export var intro_sounds: WwiseEvent
+@export var movement: WwiseEvent
+@export var weapon_fire: WwiseEvent
+
 @export_category("Primary Logic")
 @export var heatsinks_array: Array[Heatsink]
 @export var heatsink_start_hp: float = 100
@@ -172,6 +180,9 @@ func phase_2():
 		print("phase complete, restarting")
 		ph1_bool = false
 
+func phase_3():
+	#wait for a bit, release a few enemies, then start shooting the player
+
 func open_all_heatsinks(time):
 	for h in heatsinks_array:
 		if h != null:
@@ -246,7 +257,7 @@ func sphere_cast():
 		var result = get_world_3d().direct_space_state.intersect_shape(shapecast)
 		for i in result:
 			if i.get("collider") == Global.player:
-				damage_player(2)
+				damage_player(damage)
 		PhysicsServer3D.free_rid(shape_rid)
 		box.queue_free()
 

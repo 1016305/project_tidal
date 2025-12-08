@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://cx4bapdxgxs74"]
+
+[resource]
+name = "boss_movement"
+id = 2663270342
+guid = "{9A0CEEB0-7F1E-4248-A797-C84ECF701575}"
+dummy = true

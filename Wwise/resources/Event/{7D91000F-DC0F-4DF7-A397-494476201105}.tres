@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://dgaedy08ufelx"]
+
+[resource]
+name = "boss_coolingvent_destroy"
+id = 3802256100
+guid = "{7D91000F-DC0F-4DF7-A397-494476201105}"
+dummy = true

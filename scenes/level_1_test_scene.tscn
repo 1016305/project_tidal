@@ -1,4 +1,4 @@
-[gd_scene load_steps=292 format=4 uid="uid://bxoyqom4nhatv"]
+[gd_scene load_steps=299 format=4 uid="uid://bxoyqom4nhatv"]
 
 [ext_resource type="Texture2D" uid="uid://epp7quit3shj" path="res://textures/skybox 2025-11-06-17-18-29.png" id="1_3sspo"]
 [ext_resource type="Script" uid="uid://bdj2elqxna58q" path="res://scripts/utility/global_sound_controller.gd" id="1_tib8e"]
@@ -52,8 +52,14 @@
 [ext_resource type="Texture2D" uid="uid://b11i5cywgi1hd" path="res://scenes/DefaultMaterial_Normal.png" id="35_8vgs7"]
 [ext_resource type="Texture2D" uid="uid://capv4w1du620x" path="res://models/Structures/light/light_metallic.png-light_rough.png.png" id="35_orokw"]
 [ext_resource type="Texture2D" uid="uid://cdmtticgm8ykh" path="res://models/Structures/light/light_normal.png.png" id="36_swbkm"]
+[ext_resource type="WwiseEvent" uid="uid://br4np7hn3w7kl" path="res://Wwise/resources/Event/{71599AD0-8564-4A70-8B5A-220F348FB2FB}.tres" id="51_t2e5d"]
+[ext_resource type="WwiseEvent" uid="uid://djhfytyr0gb4e" path="res://Wwise/resources/Event/{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}.tres" id="52_mo4vj"]
 [ext_resource type="Script" uid="uid://du71c2huax3ys" path="res://scripts/enemy/boss/start_boss.gd" id="53_0di2t"]
 [ext_resource type="PackedScene" uid="uid://3gtwd2weqttt" path="res://scenes/enemies/boss_but_real.tscn" id="53_meay8"]
+[ext_resource type="WwiseEvent" uid="uid://1ysf7o436tjh" path="res://Wwise/resources/Event/{1C5E639C-224A-4297-9074-6C2B0D55F58A}.tres" id="53_ottho"]
+[ext_resource type="WwiseEvent" uid="uid://g61wvvmsvm5t" path="res://Wwise/resources/Event/{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}.tres" id="54_pjiyn"]
+[ext_resource type="WwiseEvent" uid="uid://cx4bapdxgxs74" path="res://Wwise/resources/Event/{9A0CEEB0-7F1E-4248-A797-C84ECF701575}.tres" id="55_2mbh4"]
+[ext_resource type="WwiseEvent" uid="uid://g42h2r8gug48" path="res://Wwise/resources/Event/{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}.tres" id="56_7edxq"]
 [ext_resource type="Material" uid="uid://cmf6w8b83cusu" path="res://shaders/devtexture_orange.tres" id="56_skdyi"]
 [ext_resource type="Material" uid="uid://ciyptmi6h3qlq" path="res://materials/devtexture_grey.tres" id="57_0a3uo"]
 [ext_resource type="Script" uid="uid://s5hg0tpn3ae0" path="res://scripts/audio/switchatmos.gd" id="57_bvigl"]
@@ -61,6 +67,7 @@
 [ext_resource type="WwiseEvent" uid="uid://onq4d3m5hs7u" path="res://Wwise/resources/Event/{DA56627C-D39E-4E24-A266-621C8B978AB1}.tres" id="58_8171t"]
 [ext_resource type="Script" uid="uid://cc2ok2j176ogo" path="res://scripts/audio/ambience.gd" id="59_oglse"]
 [ext_resource type="WwiseEvent" uid="uid://d2pn7idgvojqw" path="res://Wwise/resources/Event/{D554D848-29E0-40AC-95C3-E352BC300ACC}.tres" id="60_oglse"]
+[ext_resource type="PackedScene" uid="uid://bx86f1sxx3ka7" path="res://scenes/pickups/ammo_pickup.tscn" id="62_5oqwq"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hkwuu"]
 panorama = ExtResource("1_3sspo")
@@ -3007,7 +3014,7 @@ shadow_enabled = true
 directional_shadow_max_distance = 200.0
 
 [node name="player" parent="." instance=ExtResource("2_nix83")]
-transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 0.796915, -124.82, -173.31)
+transform = Transform3D(0.987217, 0, -0.159382, 0, 1, 0, 0.159382, 0, 0.987217, -370.891, -127.262, -901.281)
 interact_distance = 5.0
 
 [node name="intro_blur" parent="player" instance=ExtResource("3_orokw")]
@@ -5500,7 +5507,7 @@ omni_range = 38.845
 [node name="Encounter Triggers" type="Node3D" parent="Encounters"]
 
 [node name="Boss_Trigger" type="Area3D" parent="Encounters/Encounter Triggers"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -370.591, -128.667, -960.84)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -370.591, -128.667, -905.106)
 script = ExtResource("53_0di2t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Encounters/Encounter Triggers/Boss_Trigger"]
@@ -5520,7 +5527,159 @@ transform = Transform3D(1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -4.37114e-08
 size = Vector3(1, 7.25577, 1)
 
 [node name="BossBut Real" parent="Encounters" instance=ExtResource("53_meay8")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -367.559, -129.373, -993.096)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -367.559, -129.373, -974.609)
+current_phase = null
+combat_barks = ExtResource("51_t2e5d")
+death = ExtResource("52_mo4vj")
+hit_barks = ExtResource("53_ottho")
+intro_sounds = ExtResource("54_pjiyn")
+movement = ExtResource("55_2mbh4")
+weapon_fire = ExtResource("56_7edxq")
+heatsink_start_hp = 500.0
+damage = 20.0
+damage_tick = null
+ph1_aim_time = null
+ph1_shoot_wait = null
+ph1_heatsink_delay = null
+ph1_damage_phase_time = null
+ph2_shoot_wait = null
+ph2_shoot_time = null
+ph2_heatsink_delay = null
+
+[node name="BossMisc" type="Node3D" parent="Encounters"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -354.911, -126.791, -958.404)
+
+[node name="MonsterCloset" type="Node3D" parent="Encounters/BossMisc"]
+transform = Transform3D(0.881015, 0, -0.473089, 0, 1, 0, 0.473089, 0, 0.881015, 30.2351, 0, 11.0701)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -0.251465)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -3.84216)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78186, -0.38324, -2.04285)
+size = Vector3(0.534195, 3.94055, 4.08325)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28381, 1.77543, -2.04285)
+size = Vector3(3.53028, 0.623062, 4.08325)
+
+[node name="SpawnHere" type="Node3D" parent="Encounters/BossMisc/MonsterCloset"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12701, 0, -1.93005)
+
+[node name="MonsterCloset2" type="Node3D" parent="Encounters/BossMisc"]
+transform = Transform3D(0.988589, 0, 0.15064, 0, 1, 0, -0.15064, 0, 0.988589, 39.9427, 0, -7.00794)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -0.251465)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -3.84216)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78186, -0.38324, -2.04285)
+size = Vector3(0.534195, 3.94055, 4.08325)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28381, 1.77543, -2.04285)
+size = Vector3(3.53028, 0.623062, 4.08325)
+
+[node name="SpawnHere" type="Node3D" parent="Encounters/BossMisc/MonsterCloset2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12701, 0, -1.93005)
+
+[node name="MonsterCloset3" type="Node3D" parent="Encounters/BossMisc"]
+transform = Transform3D(0.87118, 0, 0.490965, 0, 1, 0, -0.490965, 0, 0.87118, 36.3755, 0, -30.4179)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -0.251465)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -3.84216)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78186, -0.38324, -2.04285)
+size = Vector3(0.534195, 3.94055, 4.08325)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28381, 1.77543, -2.04285)
+size = Vector3(3.53028, 0.623062, 4.08325)
+
+[node name="SpawnHere" type="Node3D" parent="Encounters/BossMisc/MonsterCloset3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12701, 0, -1.93005)
+
+[node name="MonsterCloset4" type="Node3D" parent="Encounters/BossMisc"]
+transform = Transform3D(-0.729685, 0, -0.683783, 0, 1, 0, 0.683783, 0, -0.729685, -30.6276, 0, 13.8502)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -0.251465)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -3.84216)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78186, -0.38324, -2.04285)
+size = Vector3(0.534195, 3.94055, 4.08325)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28381, 1.77543, -2.04285)
+size = Vector3(3.53028, 0.623062, 4.08325)
+
+[node name="SpawnHere" type="Node3D" parent="Encounters/BossMisc/MonsterCloset4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12701, 0, -1.93005)
+
+[node name="MonsterCloset5" type="Node3D" parent="Encounters/BossMisc"]
+transform = Transform3D(-0.991395, 0, -0.130907, 0, 1, 0, 0.130907, 0, -0.991395, -48.1569, 0, -17.4511)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -0.251465)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -3.84216)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78186, -0.38324, -2.04285)
+size = Vector3(0.534195, 3.94055, 4.08325)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28381, 1.77543, -2.04285)
+size = Vector3(3.53028, 0.623062, 4.08325)
+
+[node name="SpawnHere" type="Node3D" parent="Encounters/BossMisc/MonsterCloset5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12701, 0, -1.93005)
+
+[node name="MonsterCloset6" type="Node3D" parent="Encounters/BossMisc"]
+transform = Transform3D(-0.959937, 0, 0.280214, 0, 1, 0, -0.280214, 0, -0.959937, -44.1028, 0, -55.4029)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -0.251465)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05127, -0.38324, -3.84216)
+size = Vector3(3.10254, 3.94055, 0.49707)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78186, -0.38324, -2.04285)
+size = Vector3(0.534195, 3.94055, 4.08325)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Encounters/BossMisc/MonsterCloset6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28381, 1.77543, -2.04285)
+size = Vector3(3.53028, 0.623062, 4.08325)
+
+[node name="SpawnHere" type="Node3D" parent="Encounters/BossMisc/MonsterCloset6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12701, 0, -1.93005)
 
 [node name="Level1_FINAL_Imported" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50.8894, 0)
@@ -5972,6 +6131,31 @@ script = ExtResource("59_oglse")
 
 [node name="AkEvent3D" type="AkEvent3D" parent="Atmos"]
 event = ExtResource("60_oglse")
+
+[node name="Pickups" type="Node3D" parent="."]
+
+[node name="Ammo" type="Node3D" parent="Pickups"]
+
+[node name="AmmoPickup" parent="Pickups/Ammo" instance=ExtResource("62_5oqwq")]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -356.182, -129.113, -949.842)
+
+[node name="AmmoPickup2" parent="Pickups/Ammo" instance=ExtResource("62_5oqwq")]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -354.995, -129.113, -949.842)
+
+[node name="AmmoPickup3" parent="Pickups/Ammo" instance=ExtResource("62_5oqwq")]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -353.838, -129.113, -949.842)
+
+[node name="AmmoPickup4" parent="Pickups/Ammo" instance=ExtResource("62_5oqwq")]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -352.816, -129.113, -949.842)
+
+[node name="AmmoPickup5" parent="Pickups/Ammo" instance=ExtResource("62_5oqwq")]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -351.588, -129.113, -949.842)
+
+[node name="AmmoPickup6" parent="Pickups/Ammo" instance=ExtResource("62_5oqwq")]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -350.545, -129.113, -949.842)
+
+[node name="AmmoPickup7" parent="Pickups/Ammo" instance=ExtResource("62_5oqwq")]
+transform = Transform3D(0.99977, 0, 0, 0, 0.99977, 0, 0, 0, 0.99977, -349.323, -129.113, -949.842)
 
 [connection signal="turn_lights_on" from="tooth_door_Imported/StaticBody3D/BigDoor" to="elevator_Imported/StaticBody3D2/Elevator Component" method="_on_big_door_turn_lights_on"]
 [connection signal="turn_lights_on" from="tooth_door_Imported/StaticBody3D/BigDoor" to="elevator_Imported/Elevator_lights" method="_on_door_button_pressed"]

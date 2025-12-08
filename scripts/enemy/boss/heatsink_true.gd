@@ -13,6 +13,13 @@ signal heatsink_finished
 @export var explosion_pos: Node3D
 const VFX_EXPLOSION = preload("res://scenes/effects/vfx_explosion.tscn")
 const FIRE_BILL = preload("res://scenes/effects/fire_bill.tscn")
+@export var soundplayer: AkEvent3D
+
+@export_category("Sounds")
+@export var heatsink_close: WwiseEvent
+@export var heatsink_open: WwiseEvent
+@export var heatsink_destroy: WwiseEvent
+
 func take_damage(damage):
 	if !is_dead:
 		heatsink_hp -= damage
@@ -32,11 +39,15 @@ func heatsink_hp_color():
 		light.light_color = Color(1,new_val,new_val)
 
 func heatsink_expose(time):
+	soundplayer.event = heatsink_open
+	soundplayer.post_event()
 	heatsink_anim.play("expose_heatsink")
 	timer.wait_time = time
 	timer.start()
 	await timer.timeout
 	heatsink_anim.play("retract_heatsink")
+	soundplayer.event = heatsink_close
+	soundplayer.post_event()
 	timer.wait_time = 1
 	await timer.timeout
 	get_parent().get_parent().get_parent().heatsinks_done.emit()
@@ -44,6 +55,8 @@ func heatsink_expose(time):
 func death_behaviour():
 	if !stop:
 		stop = !stop
+		soundplayer.event = heatsink_destroy
+		soundplayer.post_event()
 		var explosion = VFX_EXPLOSION.instantiate()
 		var smoke = FIRE_BILL.instantiate()
 		get_parent().get_parent().add_child(explosion)
@@ -61,4 +74,6 @@ func death_behaviour():
 func other_heatsink_died():
 	if !is_dead:
 		timer.stop()
+		soundplayer.event = heatsink_close
+		soundplayer.post_event()
 		heatsink_anim.play("retract_heatsink")

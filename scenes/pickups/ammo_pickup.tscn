@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://bx86f1sxx3ka7"]
+[gd_scene load_steps=10 format=4 uid="uid://bx86f1sxx3ka7"]
 
 [ext_resource type="Script" uid="uid://v7tpwoijk7fd" path="res://scripts/utility/ammo_pickup.gd" id="1_3raeh"]
 [ext_resource type="Texture2D" uid="uid://dlhag1lbfyd8v" path="res://models/pickups/ammobox_basecolor.png" id="2_jgu5d"]
 [ext_resource type="Texture2D" uid="uid://dftmjxrvc675j" path="res://models/pickups/ammobox_metallic-ammobox_rough.png" id="3_tu783"]
 [ext_resource type="Texture2D" uid="uid://rmgum52v0mew" path="res://models/pickups/ammobox_normal.png" id="4_6u71k"]
+[ext_resource type="WwiseEvent" uid="uid://bv6qfy5ictcwt" path="res://Wwise/resources/Event/{E34EE7D4-61AE-4129-8949-DD3FD338E6E7}.tres" id="5_tu783"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_lty2n"]
 radius = 1.01203
@@ -68,5 +69,8 @@ shape = SubResource("SphereShape3D_lty2n")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("ArrayMesh_0dt3j")
 skeleton = NodePath("")
+
+[node name="AkEvent3D" type="AkEvent3D" parent="."]
+event = ExtResource("5_tu783")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

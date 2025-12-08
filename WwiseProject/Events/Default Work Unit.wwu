@@ -49,6 +49,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="ammo_pickup" ID="{E34EE7D4-61AE-4129-8949-DD3FD338E6E7}">
+							<ChildrenList>
+								<Action Name="" ID="{24621CCC-CB6B-4224-BB5D-B9C85A7D67AF}" ShortID="277315773">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="pick up ammo" ID="{FDFFED34-CBE6-4B62-95DD-6200B8E040EA}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="First Tower" ID="{C090B57A-1879-49E2-BFAD-C449BA179B07}" ShortID="824683307">
@@ -284,7 +295,11 @@
 						<Event Name="boss_movement" ID="{9A0CEEB0-7F1E-4248-A797-C84ECF701575}"/>
 						<Event Name="boss_weapon_fire" ID="{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}"/>
 						<Event Name="boss_coolingvent_open" ID="{CB456DD8-D658-4FE0-BDE8-9D9CD2619EB3}"/>
-						<Event Name="boss_coolingvent_close" ID="{5222F25B-473D-47B4-950D-946A83AADBA4}"/>
+						<Event Name="boss_coolingvent_close" ID="{5222F25B-473D-47B4-950D-946A83AADBA4}">
+							<ChildrenList>
+								<Action Name="" ID="{0C71EC7E-7D32-4B31-B411-BAA84353C749}" ShortID="965898880"/>
+							</ChildrenList>
+						</Event>
 						<Event Name="boss_coolingvent_destroy" ID="{7D91000F-DC0F-4DF7-A397-494476201105}"/>
 					</ChildrenList>
 				</Folder>

@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://3gtwd2weqttt"]
+[gd_scene load_steps=60 format=4 uid="uid://3gtwd2weqttt"]
 
 [ext_resource type="Script" uid="uid://c56j7okj58yeu" path="res://scripts/enemy/boss/boss_true.gd" id="1_ae8oe"]
 [ext_resource type="Material" uid="uid://cg8m1dntsh1fr" path="res://models/enemies/boss/boss_material.tres" id="2_38w4d"]
@@ -7,9 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://dmevweiph0ngd" path="res://models/enemies/boss/boss_normal.png" id="5_ajr1p"]
 [ext_resource type="Material" uid="uid://dftislxwsj4ub" path="res://models/enemies/boss/heatsink_1_mat.tres" id="6_kfh3s"]
 [ext_resource type="Script" uid="uid://ogqptgvberoe" path="res://scripts/enemy/boss/heatsink_true.gd" id="7_cmpxh"]
+[ext_resource type="WwiseEvent" uid="uid://cr2u7ccg6i7fw" path="res://Wwise/resources/Event/{5222F25B-473D-47B4-950D-946A83AADBA4}.tres" id="8_ajr1p"]
 [ext_resource type="Material" uid="uid://fs7tbl16nlm" path="res://models/enemies/boss/heatsink_2_mat.tres" id="8_b8etm"]
 [ext_resource type="Material" uid="uid://dt2fdfnc0ndim" path="res://models/enemies/boss/heatsink_3_mat.tres" id="9_66uvb"]
+[ext_resource type="WwiseEvent" uid="uid://c3d0l2nqrivjf" path="res://Wwise/resources/Event/{CB456DD8-D658-4FE0-BDE8-9D9CD2619EB3}.tres" id="9_kfh3s"]
 [ext_resource type="Material" uid="uid://bglr2hsrfkdgx" path="res://models/enemies/boss/heatsink_4_mat.tres" id="10_45p6h"]
+[ext_resource type="WwiseEvent" uid="uid://dgaedy08ufelx" path="res://Wwise/resources/Event/{7D91000F-DC0F-4DF7-A397-494476201105}.tres" id="10_cmpxh"]
 [ext_resource type="Material" uid="uid://dkm3ge8jdtpda" path="res://shaders/big boss lazser.tres" id="11_yjtbe"]
 [ext_resource type="ArrayMesh" uid="uid://daewfq1ogqpct" path="res://models/enemies/boss/heatsink_destroyed.tres" id="12_38w4d"]
 
@@ -670,6 +673,9 @@ right_lights = [NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D"), NodeP
 startup_lights_l = [NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D2"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D3"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D4"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D5"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D6"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D7")]
 startup_lights_r = [NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D8"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D9"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D10"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D11"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D12"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D13"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D14")]
 heatsinks_array = [NodePath("Turret_Base/Heatsink1/HeatsinkCollision"), NodePath("Turret_Base/Heatsink2/HeatsinkCollision"), NodePath("Turret_Base/Heatsink3/HeatsinkCollision"), NodePath("Turret_Base/Heatsink4/HeatsinkCollision")]
+ph1_shoot_time = 3
+ph2_aim_time = 2.5
+ph2_damage_phase_time = 4
 
 [node name="Turret_Base" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00703137, 5.2489, -0.00191689)
@@ -696,7 +702,7 @@ surface_material_override/0 = ExtResource("6_kfh3s")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink1/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_2wyq8")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink1" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink1" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("7_cmpxh")
@@ -704,6 +710,10 @@ model = NodePath("..")
 broken_var = NodePath("../../../broken1")
 lights = [NodePath("../OmniLight3D"), NodePath("../OmniLight3D2"), NodePath("../OmniLight3D3")]
 explosion_pos = NodePath("../explosion_pos")
+soundplayer = NodePath("../AkEvent3D")
+heatsink_close = ExtResource("8_ajr1p")
+heatsink_open = ExtResource("9_kfh3s")
+heatsink_destroy = ExtResource("10_cmpxh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink1/HeatsinkCollision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0149689, 0.249436, -1.70343)
@@ -741,6 +751,8 @@ shadow_normal_bias = 6.0
 [node name="explosion_pos" type="Node3D" parent="Turret_Base/Heatsink1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.91452)
 
+[node name="AkEvent3D" type="AkEvent3D" parent="Turret_Base/Heatsink1"]
+
 [node name="Heatsink2" type="MeshInstance3D" parent="Turret_Base"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.00395203, -3.67126, -6.33911)
 material_override = ExtResource("2_38w4d")
@@ -753,7 +765,7 @@ surface_material_override/0 = ExtResource("8_b8etm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink2/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_2wyq8")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink2" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink2" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("7_cmpxh")
@@ -761,6 +773,10 @@ model = NodePath("..")
 broken_var = NodePath("../../../broken2")
 lights = [NodePath("../OmniLight3D10"), NodePath("../OmniLight3D11"), NodePath("../OmniLight3D12")]
 explosion_pos = NodePath("../explosion_pos2")
+soundplayer = NodePath("../AkEvent3D")
+heatsink_close = ExtResource("8_ajr1p")
+heatsink_open = ExtResource("9_kfh3s")
+heatsink_destroy = ExtResource("10_cmpxh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink2/HeatsinkCollision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0149689, 0.249436, -1.70343)
@@ -798,6 +814,8 @@ shadow_normal_bias = 6.0
 [node name="explosion_pos2" type="Node3D" parent="Turret_Base/Heatsink2"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.141957, 0, -2.39726)
 
+[node name="AkEvent3D" type="AkEvent3D" parent="Turret_Base/Heatsink2"]
+
 [node name="Heatsink3" type="MeshInstance3D" parent="Turret_Base"]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 6.40251, -3.67126, -0.0146562)
 material_override = ExtResource("2_38w4d")
@@ -810,7 +828,7 @@ surface_material_override/0 = ExtResource("9_66uvb")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink3/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_2wyq8")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink3" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink3" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("7_cmpxh")
@@ -818,6 +836,10 @@ model = NodePath("..")
 broken_var = NodePath("../../../broken3")
 lights = [NodePath("../OmniLight3D4"), NodePath("../OmniLight3D5"), NodePath("../OmniLight3D6")]
 explosion_pos = NodePath("../explosion_pos3")
+soundplayer = NodePath("../AkEvent3D")
+heatsink_close = ExtResource("8_ajr1p")
+heatsink_open = ExtResource("9_kfh3s")
+heatsink_destroy = ExtResource("10_cmpxh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink3/HeatsinkCollision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0149689, 0.249436, -1.70343)
@@ -855,6 +877,8 @@ shadow_normal_bias = 6.0
 [node name="explosion_pos3" type="Node3D" parent="Turret_Base/Heatsink3"]
 transform = Transform3D(-1, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -1, 0.0343125, 0, -1.63111)
 
+[node name="AkEvent3D" type="AkEvent3D" parent="Turret_Base/Heatsink3"]
+
 [node name="Heatsink4" type="MeshInstance3D" parent="Turret_Base"]
 transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 0.00395203, -3.67126, 6.34479)
 material_override = ExtResource("2_38w4d")
@@ -867,7 +891,7 @@ surface_material_override/0 = ExtResource("10_45p6h")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink4/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_2wyq8")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink4" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink4" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("7_cmpxh")
@@ -875,6 +899,10 @@ model = NodePath("..")
 broken_var = NodePath("../../../broken4")
 lights = [NodePath("../OmniLight3D7"), NodePath("../OmniLight3D8"), NodePath("../OmniLight3D9")]
 explosion_pos = NodePath("../explosion_pos4")
+soundplayer = NodePath("../AkEvent3D")
+heatsink_close = ExtResource("8_ajr1p")
+heatsink_open = ExtResource("9_kfh3s")
+heatsink_destroy = ExtResource("10_cmpxh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink4/HeatsinkCollision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0149689, 0.249436, -1.70343)
@@ -911,6 +939,8 @@ shadow_normal_bias = 6.0
 
 [node name="explosion_pos4" type="Node3D" parent="Turret_Base/Heatsink4"]
 transform = Transform3D(1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, -0.0122116, 0, -2.41674)
+
+[node name="AkEvent3D" type="AkEvent3D" parent="Turret_Base/Heatsink4"]
 
 [node name="Stem" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.74446, 0, 0, 0, 1.74446, 0, 0, 0, 1.74446, -0.00703137, -4.66268, 0)

@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID ALARM = 855317084U;
         static const AkUniqueID ALARM_ALERT = 4151049751U;
+        static const AkUniqueID AMMO_PICKUP = 4253579710U;
         static const AkUniqueID ARENA_AMB = 521672771U;
         static const AkUniqueID ASSAULT_RIFLE_EMPTY_CLIP = 2049160996U;
         static const AkUniqueID ASSAULT_RIFLE_FIRE = 3448658748U;
