@@ -5,10 +5,13 @@ enum Phases{Dormant,Start,Phase1,Phase2,Phase3,Phase4,Dead}
 var previous_phase
 signal heatsinks_done
 const VFXDAMAGE = preload("res://scenes/effects/vfx_damage.tscn")
+const VFX_EXPLOSION = preload("res://scenes/effects/vfx_explosion.tscn")
 var vfx
 @onready var rotatebitch: Node3D = $RotateBitch
 @onready var firing_thing: AnimationPlayer = $FiringThing
 @onready var startup_sequence: AnimationPlayer = $"startup sequence"
+@export var encounter: EnemyEncounter
+@export var spawn_enemies_here: Array[Node3D]
 
 #@onready var eye: CSGSphere3D = $CSGSphere3D
 @onready var rotate_me: MeshInstance3D = $"Icosphere"
@@ -77,6 +80,43 @@ var ph2_bool: bool = false
 ## How long the heatsinks will remain open for
 @export var ph2_damage_phase_time = 5
 
+@export_category("Secondary Logic | Phase 3")
+var ph3_bool: bool = false
+## How long the gun will aim at the player before initating firing sequence
+@export var ph3_aim_time: float = 3
+## How long after locking in/stopping rotation the gun will wait before firing
+@export var ph3_shoot_wait = 2
+## How long the gun will fire for
+@export var ph3_shoot_time = 5
+## How long after firing before the heatsinks open
+@export var ph3_heatsink_delay = 2
+## How long the heatsinks will remain open for
+@export var ph3_damage_phase_time = 5
+## How long to wait between shots
+@export var ph3_next_shot_wait: float = 1
+
+@export_category("Secondary Logic | Phase 4")
+var ph4_bool: bool = false
+## How long the gun will aim at the player before initating firing sequence
+@export var ph4_aim_time: float = 3
+## How long after locking in/stopping rotation the gun will wait before firing
+@export var ph4_shoot_wait = 2
+## How long the gun will fire for
+@export var ph4_shoot_time = 5
+## How long after firing before the heatsinks open
+@export var ph4_heatsink_delay = 2
+## How long the heatsinks will remain open for
+@export var ph4_damage_phase_time = 5
+## How long to wait between shots
+@export var ph4_next_shot_wait: float = 1
+
+@export_category("Secondary Logic | Death")
+var dead_bool: bool = false
+@onready var deathanimation: AnimationPlayer = $deathanimation
+@export var explode_point_1: Node3D
+@export var explode_point_2: Node3D
+@export var explode_point_3: Node3D
+
 
 func _ready() -> void:
 	Global.begin_boss.connect(boss_start)
@@ -104,11 +144,11 @@ func main_behaviour():
 		Phases.Phase2:
 			phase_2()
 		Phases.Phase3:
-			pass
+			phase_3()
 		Phases.Phase4:
-			pass
+			phase_4()
 		Phases.Dead:
-			pass
+			dead()
 
 func boss_start():
 	print("should change the phase")
@@ -158,7 +198,7 @@ func phase_1():
 		
 func phase_2():
 	if !ph2_bool:
-		print("begin phase 1")
+		print("begin phase 2")
 		ph2_bool = true
 		aim_at_player = true
 		await get_tree().create_timer(ph2_aim_time).timeout
@@ -178,10 +218,119 @@ func phase_2():
 		open_all_heatsinks(ph2_damage_phase_time)
 		await self.heatsinks_done
 		print("phase complete, restarting")
-		ph1_bool = false
+		ph2_bool = false
 
 func phase_3():
-	#wait for a bit, release a few enemies, then start shooting the player
+	if !ph3_bool:
+		ph3_bool = !ph3_bool
+		if encounter.check_alive_enemies(1):
+			encounter.spawn_enemy(spawn_enemies_here[0].global_position)
+			encounter.spawn_enemy(spawn_enemies_here[2].global_position)
+			encounter.spawn_enemy(spawn_enemies_here[3].global_position)
+			encounter.spawn_enemy(spawn_enemies_here[5].global_position)
+		aim_at_player = true
+		await get_tree().create_timer(ph3_aim_time).timeout
+		shoot_location = Global.player.position
+		aim_at_player = false
+		lights(left_lights,ph3_shoot_wait)
+		lights(right_lights,ph3_shoot_wait)
+		await get_tree().create_timer(ph3_shoot_wait).timeout
+		print("Shooting! KaBLAM")
+		firing_thing.play("rear_recoil")
+		shoot(ph3_shoot_time)
+		await get_tree().create_timer(ph3_shoot_time).timeout
+		lights_off(left_lights)
+		lights_off(right_lights)
+		await get_tree().create_timer(ph3_next_shot_wait).timeout
+		
+		aim_at_player = true
+		await get_tree().create_timer(ph3_aim_time).timeout
+		shoot_location = Global.player.position
+		aim_at_player = false
+		lights(left_lights,ph3_shoot_wait)
+		lights(right_lights,ph3_shoot_wait)
+		await get_tree().create_timer(ph3_shoot_wait).timeout
+		print("Shooting! KaBLAM")
+		firing_thing.play("rear_recoil")
+		shoot(ph3_shoot_time)
+		await get_tree().create_timer(ph3_shoot_time).timeout
+		lights_off(left_lights)
+		lights_off(right_lights)
+		
+		await get_tree().create_timer(ph3_heatsink_delay).timeout
+		open_all_heatsinks(ph3_damage_phase_time)
+		await self.heatsinks_done
+		print("phase complete, restarting")
+		ph3_bool = false
+
+func phase_4():
+	if !ph4_bool:
+		ph4_bool = !ph4_bool
+		if encounter.check_alive_enemies(2):
+			encounter.spawn_enemy(spawn_enemies_here[0].global_position)
+			encounter.spawn_enemy(spawn_enemies_here[1].global_position)
+			encounter.spawn_enemy(spawn_enemies_here[2].global_position)
+			encounter.spawn_enemy(spawn_enemies_here[3].global_position)
+			encounter.spawn_enemy(spawn_enemies_here[4].global_position)
+			encounter.spawn_enemy(spawn_enemies_here[5].global_position)
+
+		aim_at_player = true
+		await get_tree().create_timer(ph4_aim_time).timeout
+		shoot_location = Global.player.position
+		aim_at_player = false
+		lights(left_lights,ph4_shoot_wait)
+		lights(right_lights,ph4_shoot_wait)
+		await get_tree().create_timer(ph4_shoot_wait).timeout
+		print("Shooting! KaBLAM")
+		firing_thing.play("rear_recoil")
+		shoot(ph4_shoot_time)
+		await get_tree().create_timer(ph4_shoot_time).timeout
+		lights_off(left_lights)
+		lights_off(right_lights)
+		await get_tree().create_timer(ph4_next_shot_wait).timeout
+		
+		aim_at_player = true
+		await get_tree().create_timer(ph4_aim_time).timeout
+		shoot_location = Global.player.position
+		aim_at_player = false
+		lights(left_lights,ph4_shoot_wait)
+		lights(right_lights,ph4_shoot_wait)
+		await get_tree().create_timer(ph4_shoot_wait).timeout
+		print("Shooting! KaBLAM")
+		firing_thing.play("rear_recoil")
+		shoot(ph4_shoot_time)
+		await get_tree().create_timer(ph4_shoot_time).timeout
+		lights_off(left_lights)
+		lights_off(right_lights)
+		await get_tree().create_timer(ph4_next_shot_wait).timeout
+		
+		aim_at_player = true
+		await get_tree().create_timer(ph4_aim_time).timeout
+		shoot_location = Global.player.position
+		aim_at_player = false
+		lights(left_lights,ph4_shoot_wait)
+		lights(right_lights,ph4_shoot_wait)
+		await get_tree().create_timer(ph4_shoot_wait).timeout
+		print("Shooting! KaBLAM")
+		firing_thing.play("rear_recoil")
+		shoot(ph4_shoot_time)
+		await get_tree().create_timer(ph4_shoot_time).timeout
+		lights_off(left_lights)
+		lights_off(right_lights)
+		await get_tree().create_timer(ph4_next_shot_wait).timeout
+		
+		await get_tree().create_timer(ph4_heatsink_delay).timeout
+		open_all_heatsinks(ph3_damage_phase_time)
+		await self.heatsinks_done
+		print("phase complete, restarting")
+		ph4_bool = false
+
+func dead():
+	if !dead_bool:
+		dead_bool = true
+		encounter.kill_all_enemies()
+		await get_tree().create_timer(1).timeout
+		deathanimation.play("death_animation")
 
 func open_all_heatsinks(time):
 	for h in heatsinks_array:
@@ -336,3 +485,14 @@ func damage_player(damage):
 	if player_damage_tick.is_stopped():
 		player_damage_tick.start()
 		Global.player.damage(damage)
+		
+func death_explosions():
+	var exp1 = VFX_EXPLOSION.instantiate()
+	var exp2 = VFX_EXPLOSION.instantiate()
+	var exp3 = VFX_EXPLOSION.instantiate()
+	get_tree().root.add_child(exp1)
+	exp1.global_position = explode_point_1.global_position
+	get_tree().root.add_child(exp2)
+	exp2.global_position = explode_point_2.global_position
+	get_tree().root.add_child(exp3)
+	exp3.global_position = explode_point_3.global_position

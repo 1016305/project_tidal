@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://pqudb7uk0hoi"]
+
+[resource]
+name = "health_pickup"
+id = 3731941266
+guid = "{5ADFBE78-DFEE-45E7-8D95-899DFC96764D}"
+dummy = true

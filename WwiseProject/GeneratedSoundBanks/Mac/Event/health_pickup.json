@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "3731941266",
+    "Type": "Event",
+    "GUID": "{5ADFBE78-DFEE-45E7-8D95-899DFC96764D}",
+    "Language": "SFX",
+    "Hash": "{1E92C55B-EA73-FBAA-1706-AFA645D6D190}",
+    "ObjectPath": "health_pickup",
+    "ShortName": "health_pickup",
+    "Path": "Event/health_pickup.bnk",
+    "Media": [
+     {
+      "Id": "261928895",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX\\healthpickup.wav",
+      "Path": "Media/261928895.wem",
+      "CachePath": "DD/{DD2BB626-CDA6-9F10-27BE-5ACE00389DA8}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3731941266",
+      "Name": "health_pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Interactables\\health_pickup",
+      "GUID": "{5ADFBE78-DFEE-45E7-8D95-899DFC96764D}",
+      "Color": "19",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8791514",
+      "DurationMax": "0.93142855",
+      "MediaRefs": [
+       {
+        "Id": "261928895"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C24D4DDC-F019-2CFC-1C77-223CBC76A3D7}"
+ }
+}

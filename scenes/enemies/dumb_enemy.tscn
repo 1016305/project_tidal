@@ -1740,7 +1740,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.280617, 0)
 shape = SubResource("CapsuleShape3D_2x3kc")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-debug_enabled = true
 
 [node name="shoot_delay" type="Timer" parent="."]
 

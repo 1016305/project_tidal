@@ -60,6 +60,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="health_pickup" ID="{5ADFBE78-DFEE-45E7-8D95-899DFC96764D}">
+							<ChildrenList>
+								<Action Name="" ID="{02A992D1-D8CD-404C-9982-82CC63C500F3}" ShortID="551533419">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="healthpickup" ID="{CABADEBA-3A64-4569-A14C-3C2051D9AD03}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="First Tower" ID="{C090B57A-1879-49E2-BFAD-C449BA179B07}" ShortID="824683307">

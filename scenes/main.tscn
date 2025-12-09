@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://qfl1t3u1b88" path="res://textures/dust.png" id="12_eb6dy"]
 [ext_resource type="Script" uid="uid://dglncfcadiwov" path="res://scripts/audio/switch_steps_container.gd" id="13_gqmmt"]
 [ext_resource type="Script" uid="uid://cw1p844w0bhug" path="res://scripts/utility/deathplane.gd" id="16_jbj1t"]
-[ext_resource type="PackedScene" uid="uid://bmuwd8paqpi11" path="res://scenes/pickups/health_pickup.tscn" id="17_muem4"]
+[ext_resource type="PackedScene" uid="uid://bmuwd8paqpi11" path="res://scenes/utility/health_pickup.tscn" id="17_muem4"]
 [ext_resource type="PackedScene" uid="uid://bx86f1sxx3ka7" path="res://scenes/pickups/ammo_pickup.tscn" id="18_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://ctui55budl18a" path="res://scenes/enemies/dumb_enemy.tscn" id="20_gqmmt"]
 

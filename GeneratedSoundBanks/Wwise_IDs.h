@@ -45,6 +45,7 @@ namespace AK
         static const AkUniqueID ENEMY_MOVEMENT = 62399725U;
         static const AkUniqueID FIRST_TOWER_AMB = 1347192966U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
+        static const AkUniqueID HEALTH_PICKUP = 3731941266U;
         static const AkUniqueID HIT_BARKS = 143989192U;
         static const AkUniqueID IDLE_BARKS = 825403295U;
         static const AkUniqueID LIGHTS_ON = 1063352154U;
