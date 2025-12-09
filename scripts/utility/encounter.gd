@@ -24,10 +24,13 @@ func encounter_clear():
 		for enemy in wave:
 			enemy.queue_free()
 		print(end_encounter_action)
+		Global.current_encounter = null
 
 func enemy_died(enemy):
 	if wave.has(enemy):
 		enemies_killed +=1
+	print("Enemies in encounter: ", wave.size())
+	print("Enemies killed: ", enemies_killed)
 
 func alert_all_enemies_in_encounter():
 	if !enemies_alerted:

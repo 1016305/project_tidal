@@ -111,7 +111,7 @@ var shots_taken: int = 0
 ## Maximum distance in which to search for cover
 @export var max_cover_search: float = 50
 ## Number of attempts to find cover
-@export var find_cover_attempts: int = 10
+@export var find_cover_attempts: int = 20
 var current_cover: Vector3
 var move_to_cover_bool: bool = false
 
@@ -167,7 +167,10 @@ func _ready() -> void:
 	set_physics_process(false)
 	call_deferred("dump_first_physics_frame")
 	playsound(hovering_sounds)
-	origin = position
+	if origin_override:
+		origin = origin_override_coord
+	else:
+		origin = global_position
 	shoot_delay_timer.wait_time = 60/rate_of_fire
 	melee_raycast.target_position = Vector3(0,0,-melee_range)
 	current_hp = max_hp
@@ -254,12 +257,7 @@ func idle_behavior():
 
 #returns random position on unit circle scaled within the min/max range
 func get_random_spot() -> Vector3:
-	var _origin
-	if origin_override:
-		_origin = origin_override_coord
-	else:
-		_origin = origin
-	var random_pos = _origin + random_vector(random_patrol_min_dist, random_patrol_max_dist)
+	var random_pos = origin + random_vector(random_patrol_min_dist, random_patrol_max_dist)
 	var map = agent.get_navigation_map()
 	var here = NavigationServer3D.map_get_closest_point(map, random_pos)
 	print(name," ", here)
@@ -287,7 +285,8 @@ func random_target_in_sequence() -> Vector3:
 		rand_next = randi_range(0,number_of_points)
 	var node = get_node(patrol_points[rand_next])
 	var map = agent.get_navigation_map()
-	var here = NavigationServer3D.map_get_closest_point(map, node.position) #node.position when using the other nodes
+	var here = NavigationServer3D.map_get_closest_point(map, node.global_position) #node.position when using the other nodes
+	print(node.global_position)
 	return here
 
 ## Alert Detection Behaviours
@@ -484,9 +483,9 @@ func find_cover(see_player):
 	return test_cover(here, see_player)
 
 func test_cover(where, should_see_player) -> bool:
-	var origin = where
+	var _origin = where
 	var end = Global.player.player_head.global_position
-	var query = PhysicsRayQueryParameters3D.create(origin,end)
+	var query = PhysicsRayQueryParameters3D.create(_origin,end)
 	var can_reach = agent.is_target_reachable()
 	query.collide_with_bodies = true
 	query.exclude = [self]
