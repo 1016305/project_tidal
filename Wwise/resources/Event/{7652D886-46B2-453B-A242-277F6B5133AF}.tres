@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://c018dncwhqxha"]
+
+[resource]
+name = "event_test_wwaaa"
+id = 469884226
+guid = "{7652D886-46B2-453B-A242-277F6B5133AF}"
+dummy = true

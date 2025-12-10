@@ -1,0 +1,7 @@
+[gd_resource type="WwiseSwitchGroup" format=3 uid="uid://c1y3hg7fc1mw4"]
+
+[resource]
+name = "AmbienceController"
+id = 32875597
+guid = "{D5CBD5B1-8AB5-4FE4-9AEE-E582CD24DD42}"
+dummy = true

@@ -1,0 +1,220 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2280675495",
+    "Type": "Event",
+    "GUID": "{5E85989A-549C-4058-AD57-AC0D75A750E9}",
+    "Language": "SFX",
+    "Hash": "{0929248E-A173-69B8-0380-58646E3E849B}",
+    "ObjectPath": "StartAtmosphere",
+    "ShortName": "StartAtmosphere",
+    "Path": "Event/StartAtmosphere.bnk",
+    "Media": [
+     {
+      "Id": "183193438",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "toxic_waste_disposal_ambienceloop.wav",
+      "Path": "Media/183193438.wem",
+      "CachePath": "10/{102535F6-D1C6-8F76-2AFB-E7B9369F8426}.wem"
+     },
+     {
+      "Id": "472452353",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "soft_wind_amb.wav",
+      "Path": "Media/472452353.wem",
+      "CachePath": "8D/{8DBE0732-F9DB-53A7-EBC0-D8D0CD96A0E5}.wem"
+     },
+     {
+      "Id": "491444269",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambience\\factory_ambienceloop.wav",
+      "Path": "Media/491444269.wem",
+      "CachePath": "4B/{4BF4A901-800E-20C3-21CF-51BD92BC38D1}.wem"
+     },
+     {
+      "Id": "654365428",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "canyon_undergroundmachine_amb.wav",
+      "Path": "Media/654365428.wem",
+      "CachePath": "7B/{7B4D3EFC-0A77-BFBB-A8D7-F4E36D73D4BF}.wem"
+     },
+     {
+      "Id": "750651976",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "first_tower_ambienceloop.wav",
+      "Path": "Media/750651976.wem",
+      "CachePath": "65/{6580DE33-3870-A974-E434-5935BDF485E9}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "961645553",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Containers\\Default Work Unit\\World, Enviroment\\AtmosSwitch\\Canyon AMB\\soft_wind_amb\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{59DBFBC8-3156-460D-9B6F-62EF198A5BA7}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "3216246379",
+       "Name": "Space_Dreaming",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Space_Dreaming",
+       "GUID": "{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "3491912475",
+       "Name": "Club_Music_Distant_01",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Shelving EQ\\Creative EQ\\Club_Music_Distant_01",
+       "GUID": "{972799F5-C6E5-4E4F-83E3-95AA307CDFD1}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2280675495",
+      "Name": "StartAtmosphere",
+      "ObjectPath": "\\Events\\Default Work Unit\\Atmos\\StartAtmosphere",
+      "GUID": "{5E85989A-549C-4058-AD57-AC0D75A750E9}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "32875597",
+         "Id": "2927127661",
+         "GUID": "{CE29332F-2A5F-4D5C-9F85-BD016E0C1C7E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "472452353"
+         },
+         {
+          "Id": "654365428"
+         }
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "961645553"
+          }
+         ],
+         "ShareSets": [
+          {
+           "Id": "3216246379"
+          },
+          {
+           "Id": "3491912475"
+          }
+         ]
+        }
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "32875597",
+         "Id": "3019845671",
+         "GUID": "{7E33F55D-8180-429E-B133-D0B0F62B6E09}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "491444269"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "32875597",
+         "Id": "2512621488",
+         "GUID": "{E9BBBE8E-C88A-42BF-9C94-AE3E0527855A}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "750651976"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "32875597",
+         "Id": "606742876",
+         "GUID": "{2C7434C5-5C67-4BCE-B22A-0AB3CFA6B74B}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "183193438"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "32875597",
+      "Name": "AmbienceController",
+      "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController",
+      "GUID": "{D5CBD5B1-8AB5-4FE4-9AEE-E582CD24DD42}",
+      "Switches": [
+       {
+        "Id": "606742876",
+        "Name": "SecondTower",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\SecondTower",
+        "GUID": "{2C7434C5-5C67-4BCE-B22A-0AB3CFA6B74B}"
+       },
+       {
+        "Id": "680256650",
+        "Name": "Arena",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\Arena",
+        "GUID": "{E6CB013C-D22A-4975-A82D-B4BD10B9EDF3}"
+       },
+       {
+        "Id": "2512621488",
+        "Name": "FirstTower",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\FirstTower",
+        "GUID": "{E9BBBE8E-C88A-42BF-9C94-AE3E0527855A}"
+       },
+       {
+        "Id": "2927127661",
+        "Name": "Canyon",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\Canyon",
+        "GUID": "{CE29332F-2A5F-4D5C-9F85-BD016E0C1C7E}"
+       },
+       {
+        "Id": "3019845671",
+        "Name": "ThirdTower",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\ThirdTower",
+        "GUID": "{7E33F55D-8180-429E-B133-D0B0F62B6E09}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{66529DA8-AEA3-DCBB-C78E-8C6AE2184EBE}"
+ }
+}
