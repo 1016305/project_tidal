@@ -10,68 +10,10 @@
     "Type": "Event",
     "GUID": "{7D91000F-DC0F-4DF7-A397-494476201105}",
     "Language": "SFX",
-    "Hash": "{CDBD21A6-D11B-5A3E-98C4-368EF8ED6AAF}",
+    "Hash": "{0A2D209B-6ECB-FEA2-D42F-529BF12E50BD}",
     "ObjectPath": "boss_coolingvent_destroy",
     "ShortName": "boss_coolingvent_destroy",
     "Path": "Event/boss_coolingvent_destroy.bnk",
-    "Media": [
-     {
-      "Id": "425539614",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Cooling Vents\\cooling_vent_destroy_02.wav",
-      "Path": "Media/425539614.wem",
-      "CachePath": "14/{14A44F35-565E-85CF-C772-41DB064B902B}.wem"
-     },
-     {
-      "Id": "447929169",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Cooling Vents\\cooling_vent_destroy_03.wav",
-      "Path": "Media/447929169.wem",
-      "CachePath": "CA/{CA47B10F-9027-214C-45EF-ACB2CE2E512B}.wem"
-     },
-     {
-      "Id": "473271121",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Cooling Vents\\cooling_vent_destroy_04.wav",
-      "Path": "Media/473271121.wem",
-      "CachePath": "B5/{B500A7FF-9F67-2F26-0538-A5B9301B5B4A}.wem"
-     },
-     {
-      "Id": "935804055",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Cooling Vents\\cooling_vent_destroy_01.wav",
-      "Path": "Media/935804055.wem",
-      "CachePath": "63/{635F3AC2-7572-FCF2-B9CA-EBB7D3386E4F}.wem"
-     }
-    ],
-    "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "1008402193",
-       "Name": "Low_Pass_20KHz",
-       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
-       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      },
-      {
-       "Id": "2781261543",
-       "Name": "Brick_Wall_Minus_6dB_Peak_Slow_Release",
-       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Slow_Release",
-       "GUID": "{E0BA4DE6-A10C-49AF-A3E4-C5F71BA79EE6}",
-       "LibName": "Wwise Peak Limiter",
-       "LibId": "7208963"
-      }
-     ]
-    },
     "Events": [
      {
       "Id": "3802256100",
@@ -79,37 +21,14 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_coolingvent_destroy",
       "GUID": "{7D91000F-DC0F-4DF7-A397-494476201105}",
       "Color": "10",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "1.1311256",
-      "DurationMax": "1.7981651",
-      "MediaRefs": [
-       {
-        "Id": "425539614"
-       },
-       {
-        "Id": "447929169"
-       },
-       {
-        "Id": "473271121"
-       },
-       {
-        "Id": "935804055"
-       }
-      ],
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "1008402193"
-        },
-        {
-         "Id": "2781261543"
-        }
-       ]
-      }
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{70D8A043-AF0E-7039-08BF-2CD0600FA28C}"
+  "FileHash": "{0C199C50-3F2E-268E-3657-6BF31A786E61}"
  }
 }

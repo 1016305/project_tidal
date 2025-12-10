@@ -10,21 +10,10 @@
     "Type": "Event",
     "GUID": "{3F529DF2-03BD-44FD-85B6-639C953D7E23}",
     "Language": "SFX",
-    "Hash": "{3CE61A31-36B7-35E5-A5C0-BE4B20546C91}",
+    "Hash": "{C104399C-A660-3139-5439-B5EF32B28141}",
     "ObjectPath": "menu_confirm",
     "ShortName": "menu_confirm",
     "Path": "Event/menu_confirm.bnk",
-    "Media": [
-     {
-      "Id": "996050579",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "UI\\Menu\\ui_menu_button_confirm_17.wav",
-      "Path": "Media/996050579.wem",
-      "CachePath": "AB/{AB42CE02-2708-3E4B-5E05-49C25453B1CD}.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "4046753069",
@@ -32,18 +21,14 @@
       "ObjectPath": "\\Events\\Default Work Unit\\UI\\menu_confirm",
       "GUID": "{3F529DF2-03BD-44FD-85B6-639C953D7E23}",
       "Color": "13",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0.12",
-      "DurationMax": "0.12",
-      "MediaRefs": [
-       {
-        "Id": "996050579"
-       }
-      ]
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{34091C20-BB26-7D45-8509-E48F0BD70DAD}"
+  "FileHash": "{629B76D5-E553-EC53-AABF-0704DBE40D95}"
  }
 }

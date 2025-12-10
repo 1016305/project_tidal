@@ -1,8 +1,3 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1984278272	canyon_amb			\Default Work Unit\Canyon\canyon_amb	
 
-Effect plug-ins	ID	Name	Type				Notes
-	961645553	Parametric EQ (Custom)	Wwise Parametric EQ			
-	3216246379	Space_Dreaming	Wwise RoomVerb			
-	3491912475	Club_Music_Distant_01	Wwise Parametric EQ			
-

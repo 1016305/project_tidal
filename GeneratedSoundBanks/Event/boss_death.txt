@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4052139381	boss_death			\Default Work Unit\Enemy Boss\boss_death	
+

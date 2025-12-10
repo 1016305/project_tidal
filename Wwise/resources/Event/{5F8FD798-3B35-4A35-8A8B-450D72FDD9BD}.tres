@@ -1,7 +1,0 @@
-[gd_resource type="WwiseEvent" format=3 uid="uid://sspnlyhj1krt"]
-
-[resource]
-name = "alarm_stop"
-id = 380289835
-guid = "{5F8FD798-3B35-4A35-8A8B-450D72FDD9BD}"
-dummy = true

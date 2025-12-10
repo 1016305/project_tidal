@@ -10,39 +10,10 @@
     "Type": "Event",
     "GUID": "{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}",
     "Language": "SFX",
-    "Hash": "{19F0730D-C3F2-1942-8C5F-543D4DE878C7}",
+    "Hash": "{1A96271B-1ADE-DB6E-A368-78E48E2039A9}",
     "ObjectPath": "speaker",
     "ShortName": "speaker",
     "Path": "Event/speaker.bnk",
-    "Media": [
-     {
-      "Id": "704733505",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Speaker\\factory_speaker01.wav",
-      "Path": "Media/704733505.wem",
-      "CachePath": "60/{60181C1C-92DE-D586-3A92-212BF9CCD238}.wem"
-     },
-     {
-      "Id": "924948417",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Speaker\\factory_speaker03.wav",
-      "Path": "Media/924948417.wem",
-      "CachePath": "7B/{7B8015CF-7FF7-9E85-0F79-5FE40559A7E0}.wem"
-     },
-     {
-      "Id": "1051428755",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Speaker\\factory_speaker02.wav",
-      "Path": "Media/1051428755.wem",
-      "CachePath": "A0/{A00085C3-899E-5803-D061-4A305279D496}.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "2748973500",
@@ -50,22 +21,14 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Third Tower\\speaker",
       "GUID": "{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}",
       "Color": "4",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "704733505"
-       },
-       {
-        "Id": "924948417"
-       },
-       {
-        "Id": "1051428755"
-       }
-      ]
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{8F035F8A-F7D5-24FF-5ADF-9FADAB7B49BE}"
+  "FileHash": "{913E7795-FBC1-F4F6-5138-984527D3C8EE}"
  }
 }

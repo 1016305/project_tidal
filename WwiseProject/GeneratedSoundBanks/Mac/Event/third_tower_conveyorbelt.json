@@ -10,21 +10,10 @@
     "Type": "Event",
     "GUID": "{BA9FE5AD-7631-4FA0-984B-293B17A93785}",
     "Language": "SFX",
-    "Hash": "{A42BFF84-D38A-B248-BF54-95218547A6DF}",
+    "Hash": "{234F9481-D4A9-09A0-F441-A856BB15263A}",
     "ObjectPath": "third_tower_conveyorbelt",
     "ShortName": "third_tower_conveyorbelt",
     "Path": "Event/third_tower_conveyorbelt.bnk",
-    "Media": [
-     {
-      "Id": "749723545",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Ambience\\factory_conveyorbelt.wav",
-      "Path": "Media/749723545.wem",
-      "CachePath": "83/{83F4237A-C8CF-8C5F-0D77-90D0137842F1}.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "3430197945",
@@ -32,16 +21,14 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Third Tower\\third_tower_conveyorbelt",
       "GUID": "{BA9FE5AD-7631-4FA0-984B-293B17A93785}",
       "Color": "4",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "749723545"
-       }
-      ]
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{96305224-0A05-F063-5F3F-6691CC77BA02}"
+  "FileHash": "{A548570D-ACD9-DB71-D6C4-525F1EE9E2C0}"
  }
 }

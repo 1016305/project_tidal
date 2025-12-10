@@ -10,21 +10,10 @@
     "Type": "Event",
     "GUID": "{19A600E6-E371-463E-804C-B55E9891369F}",
     "Language": "SFX",
-    "Hash": "{C97CB588-20A8-D0C9-33F4-3C9626EC0357}",
+    "Hash": "{643C7447-8030-C0A8-0D9A-9AA97DA59C7B}",
     "ObjectPath": "menu_cancel",
     "ShortName": "menu_cancel",
     "Path": "Event/menu_cancel.bnk",
-    "Media": [
-     {
-      "Id": "364789122",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "UI\\Menu\\ui_menu_button_cancel_02.wav",
-      "Path": "Media/364789122.wem",
-      "CachePath": "DF/{DF30819D-3C24-55FC-8630-BD4D9AEE3093}.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "3180909377",
@@ -32,18 +21,14 @@
       "ObjectPath": "\\Events\\Default Work Unit\\UI\\menu_cancel",
       "GUID": "{19A600E6-E371-463E-804C-B55E9891369F}",
       "Color": "13",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0.3740537",
-      "DurationMax": "0.3740537",
-      "MediaRefs": [
-       {
-        "Id": "364789122"
-       }
-      ]
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{85E48801-A754-38C3-830A-F631F79AD2E9}"
+  "FileHash": "{FF3DA836-60FF-00CE-5E0E-41B047539968}"
  }
 }
