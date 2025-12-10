@@ -10,10 +10,60 @@
     "Type": "Event",
     "GUID": "{B949D462-D727-4E77-A282-E1465394076D}",
     "Language": "SFX",
-    "Hash": "{583909C5-0C74-93AC-0374-8F2A054D3223}",
+    "Hash": "{E319D2F4-A576-34D4-E8E1-554D35D1B149}",
     "ObjectPath": "canyon_amb",
     "ShortName": "canyon_amb",
     "Path": "Event/canyon_amb.bnk",
+    "Media": [
+     {
+      "Id": "472452353",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "soft_wind_amb.wav",
+      "Path": "Media/472452353.wem",
+      "CachePath": "E0/{E0641678-4EC1-AEEF-FE00-EF4AE10979EA}.wem"
+     },
+     {
+      "Id": "654365428",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "canyon_undergroundmachine_amb.wav",
+      "Path": "Media/654365428.wem",
+      "CachePath": "5A/{5A47C126-85DD-59FB-8EAE-61127F7EA181}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "961645553",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Containers\\Default Work Unit\\World, Enviroment\\Canyon\\Canyon AMB\\soft_wind_amb\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{59DBFBC8-3156-460D-9B6F-62EF198A5BA7}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "3216246379",
+       "Name": "Space_Dreaming",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Space_Dreaming",
+       "GUID": "{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "3491912475",
+       "Name": "Club_Music_Distant_01",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Shelving EQ\\Creative EQ\\Club_Music_Distant_01",
+       "GUID": "{972799F5-C6E5-4E4F-83E3-95AA307CDFD1}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1984278272",
@@ -21,14 +71,34 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Canyon\\canyon_amb",
       "GUID": "{B949D462-D727-4E77-A282-E1465394076D}",
       "Color": "4",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "472452353"
+       },
+       {
+        "Id": "654365428"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "961645553"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "3216246379"
+        },
+        {
+         "Id": "3491912475"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{F2937A10-12AE-3A5A-2B65-D6EA946C0EC0}"
+  "FileHash": "{A18FF97D-4AFF-77A2-0991-1AFAF8810D9A}"
  }
 }

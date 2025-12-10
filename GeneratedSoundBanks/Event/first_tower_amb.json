@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{0A7549B4-58E1-4FB8-B992-B28C5770A0A3}",
     "Language": "SFX",
-    "Hash": "{83E94A91-80F4-66E1-9E1D-74882162DA55}",
+    "Hash": "{8625978A-03A7-4970-3A1E-CFBB826F5788}",
     "ObjectPath": "first_tower_amb",
     "ShortName": "first_tower_amb",
     "Path": "Event/first_tower_amb.bnk",
+    "Media": [
+     {
+      "Id": "750651976",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "first_tower_ambienceloop.wav",
+      "Path": "Media/750651976.wem",
+      "CachePath": "03/{03B1C8BC-D9CD-C915-55F9-EC9C8E6375A3}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "1347192966",
@@ -21,14 +32,16 @@
       "ObjectPath": "\\Events\\Default Work Unit\\First Tower\\first_tower_amb",
       "GUID": "{0A7549B4-58E1-4FB8-B992-B28C5770A0A3}",
       "Color": "4",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "750651976"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{17179268-518B-C0F9-B118-48CDCEA10C40}"
+  "FileHash": "{DA69DB0E-A2AB-18AB-837A-D3D6D4105310}"
  }
 }

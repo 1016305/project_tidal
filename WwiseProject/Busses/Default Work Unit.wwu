@@ -26,9 +26,15 @@
 						</Bus>
 						<Bus Name="Dialogue" ID="{E6BB215E-5D2B-4BBE-9076-C532FE503298}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="Color" Type="int16" Value="2"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="Ambience" ID="{9A109A63-8D05-4AFA-8CA9-CE9F0CFA9A50}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 						</Bus>
 					</ChildrenList>

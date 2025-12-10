@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{DA56627C-D39E-4E24-A266-621C8B978AB1}",
     "Language": "SFX",
-    "Hash": "{3A55D829-1E7F-FB3F-4BB6-B4B187BC0BEC}",
+    "Hash": "{2BC7104E-971C-00F7-6FDF-48A977DA8862}",
     "ObjectPath": "crashed_ship",
     "ShortName": "crashed_ship",
     "Path": "Event/crashed_ship.bnk",
+    "Media": [
+     {
+      "Id": "811941973",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "crashed_ship.wav",
+      "Path": "Media/811941973.wem",
+      "CachePath": "AC/{AC2C3A8A-140E-D3D2-FEF5-C8AAF546A57C}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "547033482",
@@ -21,14 +32,17 @@
       "ObjectPath": "\\Events\\Default Work Unit\\First Tower\\crashed_ship",
       "GUID": "{DA56627C-D39E-4E24-A266-621C8B978AB1}",
       "Color": "4",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "MaxAttenuation": "25",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "811941973"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{C5BD14EC-47D5-60D8-C83D-2501EC15A16E}"
+  "FileHash": "{1319F713-6AAB-E0BD-808B-8EE20A3CE351}"
  }
 }

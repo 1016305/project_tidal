@@ -8,27 +8,43 @@
    {
     "Id": "855317084",
     "Type": "Event",
-    "GUID": "{F813228F-7B1C-4629-95C9-DB3F537C3764}",
+    "GUID": "{0FCD69BC-DFA3-48A9-B2F7-54313204D0F1}",
     "Language": "SFX",
-    "Hash": "{07F9A3A1-AD17-AC3F-61AC-73ECF48388B5}",
+    "Hash": "{BDD9FC2C-22DE-7F96-412A-D731D8FADB0A}",
     "ObjectPath": "alarm",
     "ShortName": "alarm",
     "Path": "Event/alarm.bnk",
+    "Media": [
+     {
+      "Id": "292160897",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "alarms.wav",
+      "Path": "Media/292160897.wem",
+      "CachePath": "E2/{E2153D43-D4AC-5C18-3AE9-3B8F32505F6C}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "855317084",
       "Name": "alarm",
       "ObjectPath": "\\Events\\Default Work Unit\\Third Tower\\alarm",
-      "GUID": "{F813228F-7B1C-4629-95C9-DB3F537C3764}",
+      "GUID": "{0FCD69BC-DFA3-48A9-B2F7-54313204D0F1}",
       "Color": "4",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "25",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "90.075645",
+      "DurationMax": "90.075645",
+      "MediaRefs": [
+       {
+        "Id": "292160897"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{354D839C-66CB-7C8B-B1B7-D0B184474818}"
+  "FileHash": "{93AE76AA-000E-D907-C177-A9D9691500E1}"
  }
 }

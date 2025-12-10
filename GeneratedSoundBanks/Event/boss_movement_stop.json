@@ -1,0 +1,85 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1925754261",
+    "Type": "Event",
+    "GUID": "{2A5146E9-D88A-44B8-8BA1-591D5D68CBC4}",
+    "Language": "SFX",
+    "Hash": "{37DD22D3-2403-8871-E4F9-50344835256A}",
+    "ObjectPath": "boss_movement_stop",
+    "ShortName": "boss_movement_stop",
+    "Path": "Event/boss_movement_stop.bnk",
+    "Media": [
+     {
+      "Id": "594370955",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "boss_movement_stop_04.wav",
+      "Path": "Media/594370955.wem",
+      "CachePath": "CF/{CF43C5B9-AE71-9153-432E-98768074EBD6}.wem"
+     },
+     {
+      "Id": "735710142",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "boss_movement_stop_02.wav",
+      "Path": "Media/735710142.wem",
+      "CachePath": "CF/{CF1736FE-4358-7A5A-8BFB-A1C681E9E69E}.wem"
+     },
+     {
+      "Id": "807645733",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "boss_movement_stop_01.wav",
+      "Path": "Media/807645733.wem",
+      "CachePath": "12/{12DE52D2-1872-8A15-3199-4868DF8F4FB2}.wem"
+     },
+     {
+      "Id": "1073647594",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "boss_movement_stop_03.wav",
+      "Path": "Media/1073647594.wem",
+      "CachePath": "5A/{5A481D98-BE16-6DCE-D89D-69603DEDC95C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1925754261",
+      "Name": "boss_movement_stop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_movement_stop",
+      "GUID": "{2A5146E9-D88A-44B8-8BA1-591D5D68CBC4}",
+      "Color": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3111173",
+      "DurationMax": "2.1540437",
+      "MediaRefs": [
+       {
+        "Id": "594370955"
+       },
+       {
+        "Id": "735710142"
+       },
+       {
+        "Id": "807645733"
+       },
+       {
+        "Id": "1073647594"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C5933CD2-E816-725D-764D-AB7F0E945AE8}"
+ }
+}

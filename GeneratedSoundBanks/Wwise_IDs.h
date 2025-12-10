@@ -25,16 +25,16 @@ namespace AK
         static const AkUniqueID BOSS_COOLINGVENT_CLOSE = 133455498U;
         static const AkUniqueID BOSS_COOLINGVENT_DESTROY = 3802256100U;
         static const AkUniqueID BOSS_COOLINGVENT_OPEN = 536492462U;
-        static const AkUniqueID BOSS_DEATH = 4052139381U;
+        static const AkUniqueID BOSS_DEATH_ANIMATION = 1112448842U;
         static const AkUniqueID BOSS_HIT_BARKS = 1644873300U;
         static const AkUniqueID BOSS_INTRO_ANIMATION = 3786392610U;
         static const AkUniqueID BOSS_MOVEMENT = 2663270342U;
+        static const AkUniqueID BOSS_MOVEMENT_STOP = 1925754261U;
         static const AkUniqueID BOSS_WEAPON_FIRE = 1510202224U;
         static const AkUniqueID BUTTON = 977454165U;
         static const AkUniqueID CANYON_AMB = 1984278272U;
         static const AkUniqueID COMBAT_BARKS = 2313023713U;
         static const AkUniqueID CRASHED_SHIP = 547033482U;
-        static const AkUniqueID DIRT_GRASS = 95152949U;
         static const AkUniqueID DOOR_CONSOLE = 2315757787U;
         static const AkUniqueID ELEVATOR = 3705378287U;
         static const AkUniqueID ENEMY = 2299321487U;
@@ -43,6 +43,7 @@ namespace AK
         static const AkUniqueID ENEMY_FIRE = 4240339038U;
         static const AkUniqueID ENEMY_MOVEMENT = 62399725U;
         static const AkUniqueID FIRST_TOWER_AMB = 1347192966U;
+        static const AkUniqueID FLASHLIGHT = 1167979795U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID HIT_BARKS = 143989192U;
         static const AkUniqueID IDLE_BARKS = 825403295U;
@@ -55,6 +56,8 @@ namespace AK
         static const AkUniqueID METAL = 2473969246U;
         static const AkUniqueID MOVEMENT = 2129636626U;
         static const AkUniqueID PLAYER = 1069431850U;
+        static const AkUniqueID PLAYER_DEAD = 2226114503U;
+        static const AkUniqueID ROCK = 2144363834U;
         static const AkUniqueID SECOND_TOWER_AMB = 3833734562U;
         static const AkUniqueID SECOND_TOWER_CONVERYORBELT = 3971991686U;
         static const AkUniqueID SFX_PLAYTESTSOUND = 2888769156U;
@@ -96,6 +99,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID DIALOGUE = 3930136735U;
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
         static const AkUniqueID MUSIC = 3991942870U;

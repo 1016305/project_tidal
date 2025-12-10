@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://b2tuhbt3pfdgl"]
+
+[resource]
+name = "second_tower_converyorbelt"
+id = 3971991686
+guid = "{5265D1D1-E44C-4096-856D-5885F6B536CB}"
+dummy = true
