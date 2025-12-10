@@ -125,6 +125,7 @@ func _ready() -> void:
 	player_damage_tick.wait_time = damage_tick
 	vfx = VFXDAMAGE.instantiate()
 	add_child(vfx)
+	startup_sequence.play("RESET")
 
 func _physics_process(delta: float) -> void:
 	main_behaviour()

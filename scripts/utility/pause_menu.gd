@@ -28,8 +28,10 @@ func pause():
 	toggle_menu = !toggle_menu
 	if toggle_menu:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		Wwise.suspend(false)
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		Wwise.wakeup_from_suspend()
 		
 
 func set_slider_values():
