@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1112448842",
+    "Type": "Event",
+    "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
+    "Language": "SFX",
+    "Hash": "{F0EEDE6E-6D4B-216E-B731-9DCFFC276763}",
+    "ObjectPath": "boss_death_animation",
+    "ShortName": "boss_death_animation",
+    "Path": "Event/boss_death_animation.bnk",
+    "Events": [
+     {
+      "Id": "1112448842",
+      "Name": "boss_death_animation",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_death_animation",
+      "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{517CECB1-171F-0A20-C21A-8E603C53C500}"
+ }
+}

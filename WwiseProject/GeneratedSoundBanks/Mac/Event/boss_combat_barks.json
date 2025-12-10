@@ -10,10 +10,57 @@
     "Type": "Event",
     "GUID": "{71599AD0-8564-4A70-8B5A-220F348FB2FB}",
     "Language": "SFX",
-    "Hash": "{A846A306-A310-47F2-0211-AD2C4DD9DB93}",
+    "Hash": "{D1376C29-040C-2F61-B555-1A56CDBC65CE}",
     "ObjectPath": "boss_combat_barks",
     "ShortName": "boss_combat_barks",
     "Path": "Event/boss_combat_barks.bnk",
+    "Media": [
+     {
+      "Id": "4616273",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Boss\\Barks\\enemy_boss_combatbark.wav",
+      "Path": "Media/4616273.wem",
+      "CachePath": "B3/{B3C6B363-92D4-A7E3-E558-3DB9B26E31EB}.wem"
+     },
+     {
+      "Id": "51005466",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Boss\\Barks\\enemy_boss_combatbark.wav",
+      "Path": "Media/51005466.wem",
+      "CachePath": "39/{39352000-299A-1A70-DA58-A4E68A81EB6A}.wem"
+     },
+     {
+      "Id": "458147463",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Boss\\Barks\\enemy_boss_combatbark.wav",
+      "Path": "Media/458147463.wem",
+      "CachePath": "A4/{A4123783-9CC4-A0DE-324F-77CF694FC0F3}.wem"
+     },
+     {
+      "Id": "476405923",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Boss\\Barks\\enemy_boss_combatbark.wav",
+      "Path": "Media/476405923.wem",
+      "CachePath": "42/{42582BFA-4528-B54C-4AD4-8B0A1CA92261}.wem"
+     },
+     {
+      "Id": "533788656",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Boss\\Barks\\enemy_boss_combatbark.wav",
+      "Path": "Media/533788656.wem",
+      "CachePath": "1F/{1FF8B37D-AFFA-34EB-400D-DD6E6AD5FEF4}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "1126987445",
@@ -21,14 +68,30 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_combat_barks",
       "GUID": "{71599AD0-8564-4A70-8B5A-220F348FB2FB}",
       "Color": "10",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "2.5547233",
+      "DurationMax": "5.5433073",
+      "MediaRefs": [
+       {
+        "Id": "4616273"
+       },
+       {
+        "Id": "51005466"
+       },
+       {
+        "Id": "458147463"
+       },
+       {
+        "Id": "476405923"
+       },
+       {
+        "Id": "533788656"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{F3A00283-E757-5B11-88C8-C58A8F4FF4E4}"
+  "FileHash": "{2348FA12-70D5-3625-C88A-106FDCAAF188}"
  }
 }

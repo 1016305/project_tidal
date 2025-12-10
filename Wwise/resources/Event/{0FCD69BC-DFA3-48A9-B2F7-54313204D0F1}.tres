@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://d1u2wklq7un25"]
+
+[resource]
+name = "alarm"
+id = 855317084
+guid = "{0FCD69BC-DFA3-48A9-B2F7-54313204D0F1}"
+dummy = true

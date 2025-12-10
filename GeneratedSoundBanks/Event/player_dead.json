@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2226114503",
+    "Type": "Event",
+    "GUID": "{23B9A9EB-5BA3-42F0-9897-5CAD05CD3394}",
+    "Language": "SFX",
+    "Hash": "{FFD5EEC9-B617-85D0-7316-AD07D46CC4A0}",
+    "ObjectPath": "player_dead",
+    "ShortName": "player_dead",
+    "Path": "Event/player_dead.bnk",
+    "Media": [
+     {
+      "Id": "1010984309",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "tinnitus.wav",
+      "Path": "Media/1010984309.wem",
+      "CachePath": "6E/{6E6D3EF6-7465-B567-9508-A97A1AAC4A1A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2226114503",
+      "Name": "player_dead",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\player_dead",
+      "GUID": "{23B9A9EB-5BA3-42F0-9897-5CAD05CD3394}",
+      "Color": "1",
+      "DurationType": "OneShot",
+      "DurationMin": "25.434263",
+      "DurationMax": "25.434263",
+      "MediaRefs": [
+       {
+        "Id": "1010984309"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{240029C9-6058-C186-BE9E-E2B288905867}"
+ }
+}

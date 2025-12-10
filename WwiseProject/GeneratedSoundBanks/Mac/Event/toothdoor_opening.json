@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E0808C22-AE4B-4D00-851C-6AA8B1BB976B}",
     "Language": "SFX",
-    "Hash": "{DE25B4F9-E621-C56F-D298-B7B478FAA7B5}",
+    "Hash": "{A045FAF2-CB14-CB63-71E6-41C4C9444A77}",
     "ObjectPath": "toothdoor_opening",
     "ShortName": "toothdoor_opening",
     "Path": "Event/toothdoor_opening.bnk",
@@ -56,6 +56,6 @@
     ]
    }
   ],
-  "FileHash": "{10B3C88A-31F3-8B89-1FCC-5525AC9CC075}"
+  "FileHash": "{1C8843E9-B7BC-BA86-34B1-2CB720F7CB26}"
  }
 }

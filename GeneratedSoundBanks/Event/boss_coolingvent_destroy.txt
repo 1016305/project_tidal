@@ -1,3 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3802256100	boss_coolingvent_destroy			\Default Work Unit\Enemy Boss\boss_coolingvent_destroy	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+	2781261543	Brick_Wall_Minus_6dB_Peak_Slow_Release	Wwise Peak Limiter			
+

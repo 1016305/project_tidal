@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://tefmcf7euain"
+path="res://.godot/imported/cooling_vent_destroy_02.wav-e6e38e09dc3142a613e513a24aa4b675.sample"
+
+[deps]
+
+source_file="res://WwiseProject/Originals/SFX/Cooling Vents/cooling_vent_destroy_02.wav"
+dest_files=["res://.godot/imported/cooling_vent_destroy_02.wav-e6e38e09dc3142a613e513a24aa4b675.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
