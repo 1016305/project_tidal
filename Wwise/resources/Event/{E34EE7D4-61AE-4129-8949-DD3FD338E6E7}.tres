@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://bv6qfy5ictcwt"]
+
+[resource]
+name = "ammo_pickup"
+id = 4253579710
+guid = "{E34EE7D4-61AE-4129-8949-DD3FD338E6E7}"
+dummy = true

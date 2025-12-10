@@ -1,6 +1,3 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3786392610	boss_intro_animation			\Default Work Unit\Enemy Boss\boss_intro_animation	
 
-Effect plug-ins	ID	Name	Type				Notes
-	2258521792	Brick_Wall_Minus_1dB_Peak_Slow_Release	Wwise Peak Limiter			
-

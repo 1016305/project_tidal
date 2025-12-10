@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://djhfytyr0gb4e"]
+
+[resource]
+name = "boss_death"
+id = 4052139381
+guid = "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}"
+dummy = true

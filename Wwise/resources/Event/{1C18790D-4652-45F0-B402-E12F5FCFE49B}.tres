@@ -1,7 +1,0 @@
-[gd_resource type="WwiseEvent" format=3 uid="uid://cw0ry1ofpwfv4"]
-
-[resource]
-name = "door_console"
-id = 2315757787
-guid = "{1C18790D-4652-45F0-B402-E12F5FCFE49B}"
-dummy = true

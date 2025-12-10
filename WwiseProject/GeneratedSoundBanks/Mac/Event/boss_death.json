@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "4052139381",
+    "Type": "Event",
+    "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
+    "Language": "SFX",
+    "Hash": "{0617082A-3149-B893-D931-71CAC95B94FA}",
+    "ObjectPath": "boss_death",
+    "ShortName": "boss_death",
+    "Path": "Event/boss_death.bnk",
+    "Events": [
+     {
+      "Id": "4052139381",
+      "Name": "boss_death",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_death",
+      "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0C4B8BD2-E9B6-02BF-3768-5982CFA588A8}"
+ }
+}

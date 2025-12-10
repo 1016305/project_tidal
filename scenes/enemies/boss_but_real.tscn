@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://3gtwd2weqttt"]
+[gd_scene load_steps=63 format=4 uid="uid://3gtwd2weqttt"]
 
 [ext_resource type="Script" uid="uid://c56j7okj58yeu" path="res://scripts/enemy/boss/boss_true.gd" id="1_ae8oe"]
 [ext_resource type="Material" uid="uid://cg8m1dntsh1fr" path="res://models/enemies/boss/boss_material.tres" id="2_38w4d"]
@@ -7,9 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://dmevweiph0ngd" path="res://models/enemies/boss/boss_normal.png" id="5_ajr1p"]
 [ext_resource type="Material" uid="uid://dftislxwsj4ub" path="res://models/enemies/boss/heatsink_1_mat.tres" id="6_kfh3s"]
 [ext_resource type="Script" uid="uid://ogqptgvberoe" path="res://scripts/enemy/boss/heatsink_true.gd" id="7_cmpxh"]
+[ext_resource type="WwiseEvent" uid="uid://cr2u7ccg6i7fw" path="res://Wwise/resources/Event/{5222F25B-473D-47B4-950D-946A83AADBA4}.tres" id="8_ajr1p"]
 [ext_resource type="Material" uid="uid://fs7tbl16nlm" path="res://models/enemies/boss/heatsink_2_mat.tres" id="8_b8etm"]
 [ext_resource type="Material" uid="uid://dt2fdfnc0ndim" path="res://models/enemies/boss/heatsink_3_mat.tres" id="9_66uvb"]
+[ext_resource type="WwiseEvent" uid="uid://c3d0l2nqrivjf" path="res://Wwise/resources/Event/{CB456DD8-D658-4FE0-BDE8-9D9CD2619EB3}.tres" id="9_kfh3s"]
 [ext_resource type="Material" uid="uid://bglr2hsrfkdgx" path="res://models/enemies/boss/heatsink_4_mat.tres" id="10_45p6h"]
+[ext_resource type="WwiseEvent" uid="uid://dgaedy08ufelx" path="res://Wwise/resources/Event/{7D91000F-DC0F-4DF7-A397-494476201105}.tres" id="10_cmpxh"]
 [ext_resource type="Material" uid="uid://dkm3ge8jdtpda" path="res://shaders/big boss lazser.tres" id="11_yjtbe"]
 [ext_resource type="ArrayMesh" uid="uid://daewfq1ogqpct" path="res://models/enemies/boss/heatsink_destroyed.tres" id="12_38w4d"]
 
@@ -663,13 +666,310 @@ _data = {
 &"startup": SubResource("Animation_w4qw4")
 }
 
-[node name="BossBut Real" type="Node3D" node_paths=PackedStringArray("left_lights", "right_lights", "startup_lights_l", "startup_lights_r", "heatsinks_array")]
+[sub_resource type="Animation" id="Animation_cmpxh"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stem:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.007, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stem:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(7.922, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Stem:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Icosphere:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.007, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Icosphere:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(22.616, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Icosphere:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Icosphere:rotation:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.111701, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Icosphere:rotation:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Icosphere:rotation:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Stem:rotation:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Stem:rotation:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Stem:rotation:z")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_kfh3s"]
+resource_name = "death_animation"
+length = 10.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stem:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.687037, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.34, 0.68, 1.08, 1.48, 1.82, 2.16, 2.56, 4.20329, 4.33836, 7.99721, 8.99579)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stem:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(7.922, -0.25, 0, 0.25, 0, 4.96042, -0.25, 0, 0.25, 0, 4.96042, -0.25, 0, 0.25, 0, 6.05586, -0.25, 0, 0.25, 0, 7.922, -0.25, 0, 0.25, 0, 4.96042, -0.25, 0, 0.25, 0, 4.96042, -0.25, 0, 0.25, 0, 6.05586, -0.25, 0, 0.25, 0, 6.05586, -0.25, 0, 0.25, 0, 5.28245, -0.25, 0, 0.25, 0, 5.28245, -0.25, 0, 0.930902, -0.000709057, 0.508682, -0.467682, 0.0226535, 0.25, 0),
+"times": PackedFloat32Array(0, 0.34, 0.68, 1.08, 1.48, 1.82, 2.16, 2.56, 4.20329, 4.33836, 7.99721, 8.99579)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Stem:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -0.537082, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.34, 0.68, 1.08, 1.48, 1.82, 2.16, 2.56, 4.20329, 4.33836, 7.99721, 8.99579)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Icosphere:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.333333, 0.68, 1.08, 1.48, 1.81333, 2.16, 2.56, 4.20161, 4.43333, 5.64534)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Icosphere:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(22.616, -0.25, 0, 0.25, 0, 19.37, -0.25, 0, 0.25, 0, 19.37, -0.25, 0, 0.25, 0, 20.7052, -0.25, 0, 0.25, 0, 22.616, -0.25, 0, 0.25, 0, 19.37, -0.25, 0, 0.25, 0, 19.37, -0.25, 0, 0.25, 0, 20.7052, -0.25, 0, 0.25, 0, 20.7052, -0.25, 0, 0.25, 0, 83.3227, -0.25, 0, 0.93133, 1.2808, -0.46444, -0.218394, 0.299346, 0.25, 0),
+"times": PackedFloat32Array(0, 0.333333, 0.68, 1.08, 1.48, 1.81333, 2.16, 2.56, 4.20161, 4.46667, 5.33333)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Icosphere:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -6.54998, -0.25, 0, 0.25, 0, -18.3344, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.333333, 0.68, 1.08, 1.48, 1.81333, 2.16, 2.56, 4.20161, 4.43333, 5.64534)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Icosphere:rotation:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-0.111701, -0.25, 0, 0.25, 0, -0.449427, -0.25, 0, 0.25, 0, -0.0697492, -0.25, 0, 0.25, 0, 0.29928, -0.25, 0, 0.25, 0, -0.111701, -0.25, 0, 0.25, 0, -0.111701, -0.25, 0, 0.25, 0, -0.111701, -0.25, 0, 0.25, 0, -0.099372, -0.25, 0, 0.25, 0, 0.0174285, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6, 1.5, 2.6, 3.23333, 3.97474, 4.20161, 4.46631, 5.6441)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Icosphere:rotation:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.967471, -0.25, 0, 0.25, 0, 2.59531, -0.25, 0, 0.25, 0, -1.25371, -0.25, 0, 0.25, 0, 6.28319, -0.25, 0, 0.25, 0, 6.28319, -0.25, 0, 0.25, 0, 6.28319, -0.25, 0, 0.25, 0, 3.02668, -0.25, 0, 0.25, 0, 2.51038, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6, 1.5, 2.6, 3.23333, 3.97474, 4.20161, 4.46631, 5.6441)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Icosphere:rotation:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.224122, -0.25, 0, 0.25, 0, 0.667295, -0.25, 0, 0.25, 0, 0.502439, -0.25, 0, 0.25, 0, 5.11272e-07, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -2.28082, -0.25, 0, 0.25, 0, -1.45659, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6, 1.5, 2.6, 3.97474, 3.975, 4.20161, 4.46631, 5.6441)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Stem:rotation:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.112778, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(4.20329, 4.33836)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Stem:rotation:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.0102019, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(4.20329, 4.33836)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Stem:rotation:z")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.090408, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(4.20329, 4.33836)
+}
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(4.26667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"death_explosions"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b8etm"]
+_data = {
+&"RESET": SubResource("Animation_cmpxh"),
+&"death_animation": SubResource("Animation_kfh3s")
+}
+
+[node name="BossBut Real" type="Node3D" node_paths=PackedStringArray("left_lights", "right_lights", "startup_lights_l", "startup_lights_r", "heatsinks_array", "explode_point_1", "explode_point_2", "explode_point_3")]
 script = ExtResource("1_ae8oe")
 left_lights = [NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D2"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D3"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D4"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D5")]
 right_lights = [NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D2"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D3"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D4"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D5")]
 startup_lights_l = [NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D2"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D3"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D4"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D5"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D6"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D7")]
 startup_lights_r = [NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D8"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D9"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D10"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D11"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D12"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D13"), NodePath("Icosphere/Main gun/GunLights/R/OmniLight3D14")]
 heatsinks_array = [NodePath("Turret_Base/Heatsink1/HeatsinkCollision"), NodePath("Turret_Base/Heatsink2/HeatsinkCollision"), NodePath("Turret_Base/Heatsink3/HeatsinkCollision"), NodePath("Turret_Base/Heatsink4/HeatsinkCollision")]
+ph1_shoot_time = 3
+ph2_aim_time = 2.5
+ph2_damage_phase_time = 4
+explode_point_1 = NodePath("explode here1")
+explode_point_2 = NodePath("explode here2")
+explode_point_3 = NodePath("explode here3")
 
 [node name="Turret_Base" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00703137, 5.2489, -0.00191689)
@@ -696,7 +996,7 @@ surface_material_override/0 = ExtResource("6_kfh3s")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink1/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_2wyq8")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink1" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink1" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("7_cmpxh")
@@ -704,6 +1004,10 @@ model = NodePath("..")
 broken_var = NodePath("../../../broken1")
 lights = [NodePath("../OmniLight3D"), NodePath("../OmniLight3D2"), NodePath("../OmniLight3D3")]
 explosion_pos = NodePath("../explosion_pos")
+soundplayer = NodePath("../AkEvent3D")
+heatsink_close = ExtResource("8_ajr1p")
+heatsink_open = ExtResource("9_kfh3s")
+heatsink_destroy = ExtResource("10_cmpxh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink1/HeatsinkCollision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0149689, 0.249436, -1.70343)
@@ -741,6 +1045,8 @@ shadow_normal_bias = 6.0
 [node name="explosion_pos" type="Node3D" parent="Turret_Base/Heatsink1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.91452)
 
+[node name="AkEvent3D" type="AkEvent3D" parent="Turret_Base/Heatsink1"]
+
 [node name="Heatsink2" type="MeshInstance3D" parent="Turret_Base"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.00395203, -3.67126, -6.33911)
 material_override = ExtResource("2_38w4d")
@@ -753,7 +1059,7 @@ surface_material_override/0 = ExtResource("8_b8etm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink2/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_2wyq8")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink2" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink2" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("7_cmpxh")
@@ -761,6 +1067,10 @@ model = NodePath("..")
 broken_var = NodePath("../../../broken2")
 lights = [NodePath("../OmniLight3D10"), NodePath("../OmniLight3D11"), NodePath("../OmniLight3D12")]
 explosion_pos = NodePath("../explosion_pos2")
+soundplayer = NodePath("../AkEvent3D")
+heatsink_close = ExtResource("8_ajr1p")
+heatsink_open = ExtResource("9_kfh3s")
+heatsink_destroy = ExtResource("10_cmpxh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink2/HeatsinkCollision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0149689, 0.249436, -1.70343)
@@ -798,6 +1108,8 @@ shadow_normal_bias = 6.0
 [node name="explosion_pos2" type="Node3D" parent="Turret_Base/Heatsink2"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.141957, 0, -2.39726)
 
+[node name="AkEvent3D" type="AkEvent3D" parent="Turret_Base/Heatsink2"]
+
 [node name="Heatsink3" type="MeshInstance3D" parent="Turret_Base"]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 6.40251, -3.67126, -0.0146562)
 material_override = ExtResource("2_38w4d")
@@ -810,7 +1122,7 @@ surface_material_override/0 = ExtResource("9_66uvb")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink3/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_2wyq8")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink3" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink3" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("7_cmpxh")
@@ -818,6 +1130,10 @@ model = NodePath("..")
 broken_var = NodePath("../../../broken3")
 lights = [NodePath("../OmniLight3D4"), NodePath("../OmniLight3D5"), NodePath("../OmniLight3D6")]
 explosion_pos = NodePath("../explosion_pos3")
+soundplayer = NodePath("../AkEvent3D")
+heatsink_close = ExtResource("8_ajr1p")
+heatsink_open = ExtResource("9_kfh3s")
+heatsink_destroy = ExtResource("10_cmpxh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink3/HeatsinkCollision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0149689, 0.249436, -1.70343)
@@ -855,6 +1171,8 @@ shadow_normal_bias = 6.0
 [node name="explosion_pos3" type="Node3D" parent="Turret_Base/Heatsink3"]
 transform = Transform3D(-1, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -1, 0.0343125, 0, -1.63111)
 
+[node name="AkEvent3D" type="AkEvent3D" parent="Turret_Base/Heatsink3"]
+
 [node name="Heatsink4" type="MeshInstance3D" parent="Turret_Base"]
 transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 0.00395203, -3.67126, 6.34479)
 material_override = ExtResource("2_38w4d")
@@ -867,7 +1185,7 @@ surface_material_override/0 = ExtResource("10_45p6h")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink4/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_2wyq8")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink4" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink4" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("7_cmpxh")
@@ -875,6 +1193,10 @@ model = NodePath("..")
 broken_var = NodePath("../../../broken4")
 lights = [NodePath("../OmniLight3D7"), NodePath("../OmniLight3D8"), NodePath("../OmniLight3D9")]
 explosion_pos = NodePath("../explosion_pos4")
+soundplayer = NodePath("../AkEvent3D")
+heatsink_close = ExtResource("8_ajr1p")
+heatsink_open = ExtResource("9_kfh3s")
+heatsink_destroy = ExtResource("10_cmpxh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink4/HeatsinkCollision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0149689, 0.249436, -1.70343)
@@ -912,8 +1234,10 @@ shadow_normal_bias = 6.0
 [node name="explosion_pos4" type="Node3D" parent="Turret_Base/Heatsink4"]
 transform = Transform3D(1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, -0.0122116, 0, -2.41674)
 
+[node name="AkEvent3D" type="AkEvent3D" parent="Turret_Base/Heatsink4"]
+
 [node name="Stem" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.74446, 0, 0, 0, 1.74446, 0, 0, 0, 1.74446, -0.00703137, -4.66268, 0)
+transform = Transform3D(1.74446, 0, 0, 0, 1.74446, 0, 0, 0, 1.74446, -0.007, 7.922, 0)
 material_override = ExtResource("2_38w4d")
 mesh = SubResource("ArrayMesh_0xwk0")
 skeleton = NodePath("")
@@ -964,7 +1288,7 @@ light_color = Color(0.6875, 0.562328, 0.265869, 1)
 shadow_enabled = true
 
 [node name="Icosphere" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0.491496, -0.87088, 0, 0.87088, 0.491496, 1, 1.77921e-06, -3.15258e-06, -0.00703137, 8.61982, 0)
+transform = Transform3D(1, 0, 0, 0, 0.993768, 0.111469, 0, -0.111469, 0.993768, -0.007, 22.616, 0)
 material_override = ExtResource("2_38w4d")
 mesh = SubResource("ArrayMesh_ptnsa")
 skeleton = NodePath("")
@@ -1255,3 +1579,17 @@ libraries = {
 libraries = {
 &"": SubResource("AnimationLibrary_kfh3s")
 }
+
+[node name="deathanimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_b8etm")
+}
+
+[node name="explode here1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.202906, 19.3436, -1.86597)
+
+[node name="explode here2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97461, 19.2244, 2.8317)
+
+[node name="explode here3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.71719, 17.0044, 2.73282)

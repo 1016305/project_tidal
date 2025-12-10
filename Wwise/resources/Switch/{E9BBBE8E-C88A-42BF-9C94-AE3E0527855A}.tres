@@ -1,0 +1,11 @@
+[gd_resource type="WwiseSwitch" load_steps=2 format=3 uid="uid://68tul5qvh0hi"]
+
+[ext_resource type="WwiseSwitchGroup" uid="uid://c1y3hg7fc1mw4" path="res://Wwise/resources/Switch Group/{D5CBD5B1-8AB5-4FE4-9AEE-E582CD24DD42}.tres" id="1_yvvqd"]
+
+[resource]
+group_ref = ExtResource("1_yvvqd")
+group_id = 32875597
+name = "FirstTower"
+id = 2512621488
+guid = "{E9BBBE8E-C88A-42BF-9C94-AE3E0527855A}"
+dummy = true

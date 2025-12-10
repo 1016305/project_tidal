@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "95152949",
+    "Type": "Event",
+    "GUID": "{F38718AC-1CC8-4493-ABC9-82387EC5816C}",
+    "Language": "SFX",
+    "Hash": "{ECEB4637-FB2B-C456-3430-6C2765AC9F05}",
+    "ObjectPath": "dirt_grass",
+    "ShortName": "dirt_grass",
+    "Path": "Event/dirt_grass.bnk",
+    "Events": [
+     {
+      "Id": "95152949",
+      "Name": "dirt_grass",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\dirt_grass",
+      "GUID": "{F38718AC-1CC8-4493-ABC9-82387EC5816C}",
+      "Color": "12",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F6AA29A3-A721-586C-8787-D7DD4DEA0F2C}"
+ }
+}

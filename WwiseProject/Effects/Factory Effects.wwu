@@ -609,10 +609,10 @@
 									<PropertyList>
 										<Property Name="FilterTypeBand1" Type="int32" Value="8"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-										<Property Name="FrequencyBand1" Type="Real32" Value="101.8257"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="78.59727"/>
 										<Property Name="FrequencyBand3" Type="Real32" Value="20000"/>
 										<Property Name="OnOffBand2" Type="bool" Value="False"/>
-										<Property Name="QFactorBand1" Type="Real32" Value="0.8636003"/>
+										<Property Name="QFactorBand1" Type="Real32" Value="0.8806521"/>
 									</PropertyList>
 								</Effect>
 							</ChildrenList>

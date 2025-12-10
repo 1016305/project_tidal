@@ -55,6 +55,8 @@ enum States{None,Idle,Alert,Attack,MoveToCover,Cover,MoveFromCover,Melee,Dead}
 var look_target_location: Vector3
 var look_target_rotation: Basis
 var rotation_lerp: float = 0.0
+@export var origin_override: bool = false
+@export var origin_override_coord: Vector3
 
 @export_category("Secondary Logic | Alert Conditions")
 ##How close the player can get to the enemy before the enemy is alerted, no matter where the enemy is looking.
@@ -252,7 +254,12 @@ func idle_behavior():
 
 #returns random position on unit circle scaled within the min/max range
 func get_random_spot() -> Vector3:
-	var random_pos = origin + random_vector(random_patrol_min_dist, random_patrol_max_dist)
+	var _origin
+	if origin_override:
+		_origin = origin_override_coord
+	else:
+		_origin = origin
+	var random_pos = _origin + random_vector(random_patrol_min_dist, random_patrol_max_dist)
 	var map = agent.get_navigation_map()
 	var here = NavigationServer3D.map_get_closest_point(map, random_pos)
 	print(name," ", here)
@@ -586,7 +593,7 @@ func death_check():
 		current_state = States.Dead
 func dead():
 	if !dead_bool:
-		dead_bool = !dead_bool
+		dead_bool = true
 		agent.target_position = position
 		speed = 0
 		rotate_at_all = false

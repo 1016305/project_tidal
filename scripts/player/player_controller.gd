@@ -49,7 +49,7 @@ const CROUCH_SPEED = 0.2
 const RUN_SPEED = 1.5 #RETURN TO 1.5
 
 #player health variables
-var current_health: int = 100
+var current_health: int = 55
 var max_health: int = 100
 
 #player movement internal variables

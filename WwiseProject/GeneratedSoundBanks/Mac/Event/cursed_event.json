@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2524549874",
+    "Type": "Event",
+    "GUID": "{A35A9A3C-096D-41F1-998B-EE869520930E}",
+    "Language": "SFX",
+    "Hash": "{FC644588-ACD3-491B-7810-ED05D0AE9B4D}",
+    "ObjectPath": "cursed_event",
+    "ShortName": "cursed_event",
+    "Path": "Event/cursed_event.bnk",
+    "Media": [
+     {
+      "Id": "42449289",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UI\\Menu\\ui_button_simple_click_05.wav",
+      "Path": "Media/42449289.wem",
+      "CachePath": "87/{87675F6A-C81E-8216-0D93-49D6F026000F}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2524549874",
+      "Name": "cursed_event",
+      "ObjectPath": "\\Events\\Default Work Unit\\Interactables\\cursed_event",
+      "GUID": "{A35A9A3C-096D-41F1-998B-EE869520930E}",
+      "Color": "19",
+      "DurationType": "OneShot",
+      "DurationMin": "0.06851155",
+      "DurationMax": "0.06851155",
+      "MediaRefs": [
+       {
+        "Id": "42449289"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{741F414E-B3AB-99EA-794E-BF042083CF4F}"
+ }
+}

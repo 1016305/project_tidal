@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "4253579710",
+    "Type": "Event",
+    "GUID": "{E34EE7D4-61AE-4129-8949-DD3FD338E6E7}",
+    "Language": "SFX",
+    "Hash": "{EA206480-AF88-4487-8B54-F94B1DA27487}",
+    "ObjectPath": "ammo_pickup",
+    "ShortName": "ammo_pickup",
+    "Path": "Event/ammo_pickup.bnk",
+    "Media": [
+     {
+      "Id": "1052192619",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX\\pick up ammo.wav",
+      "Path": "Media/1052192619.wem",
+      "CachePath": "4D/{4D76410B-5E28-3EFF-ABD1-C45213F442A4}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4253579710",
+      "Name": "ammo_pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Interactables\\ammo_pickup",
+      "GUID": "{E34EE7D4-61AE-4129-8949-DD3FD338E6E7}",
+      "Color": "19",
+      "DurationType": "OneShot",
+      "DurationMin": "0.71522623",
+      "DurationMax": "1.0114826",
+      "MediaRefs": [
+       {
+        "Id": "1052192619"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D00DA173-BA65-3469-F4E0-69D1C76BE25C}"
+ }
+}

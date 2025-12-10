@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://onq4d3m5hs7u"]
+
+[resource]
+name = "crashed_ship"
+id = 547033482
+guid = "{DA56627C-D39E-4E24-A266-621C8B978AB1}"
+dummy = true

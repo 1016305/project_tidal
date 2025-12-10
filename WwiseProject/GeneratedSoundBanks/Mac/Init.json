@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{623ABC01-55EA-9242-488C-24B3900F3208}",
+    "Hash": "{7F63D799-77B4-0BE7-4205-AD672CB7F0D9}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -46,17 +46,17 @@
     },
     "Busses": [
      {
-      "Id": "85412153",
-      "Name": "Ambience",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Ambience",
-      "GUID": "{9A109A63-8D05-4AFA-8CA9-CE9F0CFA9A50}",
-      "Color": "4"
-     },
-     {
       "Id": "393239870",
       "Name": "SFX",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX",
       "GUID": "{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}",
+      "Color": "7"
+     },
+     {
+      "Id": "2145253833",
+      "Name": "Atmosphere",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Atmosphere",
+      "GUID": "{36EB2E3C-21B9-42CA-A230-716620784CD3}",
       "Color": "7"
      },
      {
@@ -76,7 +76,7 @@
       "Name": "Dialogue",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Dialogue",
       "GUID": "{E6BB215E-5D2B-4BBE-9076-C532FE503298}",
-      "Color": "2"
+      "Color": "4"
      },
      {
       "Id": "3991942870",
@@ -110,6 +110,12 @@
       "GUID": "{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"
      },
      {
+      "Id": "988953028",
+      "Name": "SFXVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume\\SFXVolume",
+      "GUID": "{652B1243-DB3A-445A-8297-A0047A3E0565}"
+     },
+     {
       "Id": "1029930033",
       "Name": "SS_Air_Fury",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fury",
@@ -122,10 +128,28 @@
       "GUID": "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
      },
      {
+      "Id": "1866264637",
+      "Name": "DialogueVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume\\DialogueVolume",
+      "GUID": "{CF637B99-1AFF-4C2C-9061-F2C48EB079D9}"
+     },
+     {
+      "Id": "2346531308",
+      "Name": "MusicVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume\\MusicVolume",
+      "GUID": "{717547FF-D188-4CE1-82A5-E55EB3EA2A69}"
+     },
+     {
       "Id": "2648548617",
       "Name": "SS_Air_Month",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Month",
       "GUID": "{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"
+     },
+     {
+      "Id": "2918011349",
+      "Name": "MasterVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume\\MasterVolume",
+      "GUID": "{29F0562D-6A8C-43BA-A0D2-ACA988EE759E}"
      },
      {
       "Id": "3002758120",
@@ -165,6 +189,44 @@
      }
     ],
     "SwitchGroups": [
+     {
+      "Id": "32875597",
+      "Name": "AmbienceController",
+      "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController",
+      "GUID": "{D5CBD5B1-8AB5-4FE4-9AEE-E582CD24DD42}",
+      "Switches": [
+       {
+        "Id": "606742876",
+        "Name": "SecondTower",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\SecondTower",
+        "GUID": "{2C7434C5-5C67-4BCE-B22A-0AB3CFA6B74B}"
+       },
+       {
+        "Id": "680256650",
+        "Name": "Arena",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\Arena",
+        "GUID": "{E6CB013C-D22A-4975-A82D-B4BD10B9EDF3}"
+       },
+       {
+        "Id": "2512621488",
+        "Name": "FirstTower",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\FirstTower",
+        "GUID": "{E9BBBE8E-C88A-42BF-9C94-AE3E0527855A}"
+       },
+       {
+        "Id": "2927127661",
+        "Name": "Canyon",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\Canyon",
+        "GUID": "{CE29332F-2A5F-4D5C-9F85-BD016E0C1C7E}"
+       },
+       {
+        "Id": "3019845671",
+        "Name": "ThirdTower",
+        "ObjectPath": "\\Switches\\Default Work Unit\\AmbienceController\\ThirdTower",
+        "GUID": "{7E33F55D-8180-429E-B133-D0B0F62B6E09}"
+       }
+      ]
+     },
      {
       "Id": "665703777",
       "Name": "FootstepsTerrain",
@@ -665,6 +727,6 @@
     ]
    }
   ],
-  "FileHash": "{4FCA57E9-01D1-ACF4-AE34-F10A60B7162C}"
+  "FileHash": "{961CDB3F-0819-FE21-EE37-A08C2B37B2FA}"
  }
 }

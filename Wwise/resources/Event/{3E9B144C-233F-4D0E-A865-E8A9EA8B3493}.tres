@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://g61wvvmsvm5t"]
+
+[resource]
+name = "boss_intro_animation"
+id = 3786392610
+guid = "{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}"
+dummy = true

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4253579710	ammo_pickup			\Default Work Unit\Interactables\ammo_pickup	
+

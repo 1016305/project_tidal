@@ -10,21 +10,10 @@
     "Type": "Event",
     "GUID": "{0680BB3C-6F96-4BBA-AA89-908140A2DF2E}",
     "Language": "SFX",
-    "Hash": "{6E20F024-E22B-D91E-BF90-96B06B657599}",
+    "Hash": "{7BEFC9DF-D083-D971-07E7-7D1E47B7DD50}",
     "ObjectPath": "second_tower_amb",
     "ShortName": "second_tower_amb",
     "Path": "Event/second_tower_amb.bnk",
-    "Media": [
-     {
-      "Id": "183193438",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "toxic_waste_disposal_ambienceloop.wav",
-      "Path": "Media/183193438.wem",
-      "CachePath": "9F/{9F7667C8-C1DC-21EB-4150-BC60452CC708}.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "3833734562",
@@ -32,16 +21,14 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Second Tower\\second_tower_amb",
       "GUID": "{0680BB3C-6F96-4BBA-AA89-908140A2DF2E}",
       "Color": "4",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "183193438"
-       }
-      ]
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{A96BF1E9-B00F-1742-5B95-E5796E8B1F42}"
+  "FileHash": "{F8EC46F7-81EB-E046-B833-F6DA81EF4DC2}"
  }
 }

@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="WwiseEventCollection" load_steps=2 format=3 uid="uid://c475tgmbig5ow"]
+[gd_resource type="Resource" script_class="WwiseEventCollection" load_steps=3 format=3 uid="uid://c475tgmbig5ow"]
 
 [ext_resource type="Script" uid="uid://dsxtt57x7fvhw" path="res://scripts/utility/sounds_manager.gd" id="1_8xcmf"]
+[ext_resource type="WwiseEvent" uid="uid://onq4d3m5hs7u" path="res://Wwise/resources/Event/{DA56627C-D39E-4E24-A266-621C8B978AB1}.tres" id="1_wj0jb"]
 
 [resource]
 script = ExtResource("1_8xcmf")
-data = Dictionary[StringName, WwiseEvent]({})
+data = Dictionary[StringName, WwiseEvent]({
+&"Crashed_Ship_Fire": ExtResource("1_wj0jb")
+})
 metadata/_custom_type_script = "uid://dsxtt57x7fvhw"

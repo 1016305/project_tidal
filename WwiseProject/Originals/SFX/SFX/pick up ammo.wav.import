@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://m7nhjkfoinuf"
+path="res://.godot/imported/pick up ammo.wav-c6d4c8c62b7c17394f4281747b870b72.sample"
+
+[deps]
+
+source_file="res://WwiseProject/Originals/SFX/SFX/pick up ammo.wav"
+dest_files=["res://.godot/imported/pick up ammo.wav-c6d4c8c62b7c17394f4281747b870b72.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

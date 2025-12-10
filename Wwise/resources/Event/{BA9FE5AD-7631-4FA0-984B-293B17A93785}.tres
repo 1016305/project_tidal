@@ -1,7 +1,0 @@
-[gd_resource type="WwiseEvent" format=3 uid="uid://b4r06n0b3t0h5"]
-
-[resource]
-name = "third_tower_conveyorbelt"
-id = 3430197945
-guid = "{BA9FE5AD-7631-4FA0-984B-293B17A93785}"
-dummy = true

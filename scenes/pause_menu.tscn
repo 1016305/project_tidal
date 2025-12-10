@@ -67,7 +67,6 @@ grow_vertical = 2
 theme = ExtResource("1_kukqi")
 theme_override_constants/separation = 20
 alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Options"]
 layout_mode = 2
@@ -81,7 +80,7 @@ theme_override_constants/separation = 45
 
 [node name="Label" type="Label" parent="Options/Volume"]
 layout_mode = 2
-text = "Volume"
+text = "Master Volume"
 
 [node name="HSlider" type="HSlider" parent="Options/Volume"]
 layout_mode = 2
@@ -92,6 +91,48 @@ value = 50.0
 layout_mode = 2
 script = ExtResource("4_5d2l8")
 master_value = NodePath("../HSlider")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Options"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Options/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 79
+
+[node name="Music Volume" type="Label" parent="Options/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="HSlider" type="HSlider" parent="Options/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="SFX Volume" type="HBoxContainer" parent="Options/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 102
+
+[node name="SFX Volume" type="Label" parent="Options/VBoxContainer2/SFX Volume"]
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="HSlider2" type="HSlider" parent="Options/VBoxContainer2/SFX Volume"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="Dialogue Volume" type="HBoxContainer" parent="Options/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Dialogue Volume" type="Label" parent="Options/VBoxContainer2/Dialogue Volume"]
+layout_mode = 2
+text = "Dialogue Volume"
+
+[node name="HSlider3" type="HSlider" parent="Options/VBoxContainer2/Dialogue Volume"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
 
 [node name="Sensitivity" type="HBoxContainer" parent="Options"]
 layout_mode = 2
@@ -219,5 +260,8 @@ text = "Back"
 [connection signal="pressed" from="pause_main/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="pause_main/exit" to="." method="_on_exit_pressed"]
 [connection signal="value_changed" from="Options/Volume/HSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="value_changed" from="Options/VBoxContainer2/HBoxContainer/HSlider" to="." method="_on_musicvol_slider_value_changed"]
+[connection signal="value_changed" from="Options/VBoxContainer2/SFX Volume/HSlider2" to="." method="_on_sfxvol_slider_value_changed"]
+[connection signal="value_changed" from="Options/VBoxContainer2/Dialogue Volume/HSlider3" to="." method="_on_dialogue_slider_value_changed"]
 [connection signal="value_changed" from="Options/Sensitivity/HSlider2" to="." method="_on_sens_slider_value_changed"]
 [connection signal="pressed" from="Options/PanelContainer/Back" to="." method="_on_back_pressed"]

@@ -10,41 +10,10 @@
     "Type": "Event",
     "GUID": "{5222F25B-473D-47B4-950D-946A83AADBA4}",
     "Language": "SFX",
-    "Hash": "{E066ABC1-2192-3CA1-5537-6D66BB040D39}",
+    "Hash": "{5FB660E4-3A5A-03D6-C929-BD54B15D6973}",
     "ObjectPath": "boss_coolingvent_close",
     "ShortName": "boss_coolingvent_close",
     "Path": "Event/boss_coolingvent_close.bnk",
-    "Media": [
-     {
-      "Id": "197022158",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Cooling Vents\\cooling_vent_closed.wav",
-      "Path": "Media/197022158.wem",
-      "CachePath": "3B/{3B8BE753-B32F-0286-4743-2C193978C159}.wem"
-     }
-    ],
-    "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "1008402193",
-       "Name": "Low_Pass_20KHz",
-       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
-       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      },
-      {
-       "Id": "2781261543",
-       "Name": "Brick_Wall_Minus_6dB_Peak_Slow_Release",
-       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Slow_Release",
-       "GUID": "{E0BA4DE6-A10C-49AF-A3E4-C5F71BA79EE6}",
-       "LibName": "Wwise Peak Limiter",
-       "LibId": "7208963"
-      }
-     ]
-    },
     "Events": [
      {
       "Id": "133455498",
@@ -52,28 +21,14 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_coolingvent_close",
       "GUID": "{5222F25B-473D-47B4-950D-946A83AADBA4}",
       "Color": "10",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "2.8172784",
-      "DurationMax": "3.1169512",
-      "MediaRefs": [
-       {
-        "Id": "197022158"
-       }
-      ],
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "1008402193"
-        },
-        {
-         "Id": "2781261543"
-        }
-       ]
-      }
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{F5F39FA6-8E37-68B7-66B8-9205400FC61B}"
+  "FileHash": "{4CB3D973-2893-1E83-0A44-11C5F0608D1B}"
  }
 }

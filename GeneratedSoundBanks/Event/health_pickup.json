@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "3731941266",
+    "Type": "Event",
+    "GUID": "{5ADFBE78-DFEE-45E7-8D95-899DFC96764D}",
+    "Language": "SFX",
+    "Hash": "{CAC3A0DE-8FF6-4252-B76D-3DB03FF261D0}",
+    "ObjectPath": "health_pickup",
+    "ShortName": "health_pickup",
+    "Path": "Event/health_pickup.bnk",
+    "Media": [
+     {
+      "Id": "261928895",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX\\healthpickup.wav",
+      "Path": "Media/261928895.wem",
+      "CachePath": "A1/{A1F42A7A-16C9-FF82-368B-B5F5BB0AC13E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3731941266",
+      "Name": "health_pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Interactables\\health_pickup",
+      "GUID": "{5ADFBE78-DFEE-45E7-8D95-899DFC96764D}",
+      "Color": "19",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8791514",
+      "DurationMax": "0.93142855",
+      "MediaRefs": [
+       {
+        "Id": "261928895"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{99C5B80C-A6F4-4DB2-46C1-404B3C76FB6F}"
+ }
+}
