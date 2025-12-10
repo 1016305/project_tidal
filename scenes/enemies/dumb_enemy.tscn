@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://ctui55budl18a"]
+[gd_scene load_steps=49 format=4 uid="uid://ctui55budl18a"]
 
 [ext_resource type="Script" uid="uid://b0kjwp2j62s63" path="res://scripts/enemy/dumb enemy/dumb_enemy.gd" id="1_6ixqb"]
 [ext_resource type="Material" uid="uid://d34c4yhjr3qps" path="res://models/enemies/the enemy/enemy_material.tres" id="2_8v64s"]
@@ -8,7 +8,10 @@
 [ext_resource type="WwiseEvent" uid="uid://dh7o1y6xbe6tk" path="res://Wwise/resources/Event/{6A549BA7-1316-4482-9C73-C8A236DB9AF1}.tres" id="3_tknad"]
 [ext_resource type="WwiseEvent" uid="uid://dm7awsho7qc82" path="res://Wwise/resources/Event/{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}.tres" id="4_57l2t"]
 [ext_resource type="WwiseEvent" uid="uid://b81l34j8a1d36" path="res://Wwise/resources/Event/{C11A5FAA-D601-48A5-8892-7869C8301D6B}.tres" id="4_fastd"]
+<<<<<<< HEAD
 [ext_resource type="WwiseEvent" uid="uid://bud2f47lapw2a" path="res://Wwise/resources/Event/{CD7BF1D8-49A3-453C-8289-1BC072862E93}.tres" id="5_mkiqx"]
+=======
+>>>>>>> parent of b82f121 (added first encounter:)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8v64s"]
 
@@ -1725,7 +1728,6 @@ script = ExtResource("1_6ixqb")
 combat_barks = ExtResource("2_67dsm")
 shooting_sounds = ExtResource("3_tknad")
 hovering_sounds = ExtResource("4_fastd")
-alert_sounds = ExtResource("5_mkiqx")
 death_sounds = ExtResource("4_57l2t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -1742,7 +1744,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.280617, 0)
 shape = SubResource("CapsuleShape3D_2x3kc")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-debug_enabled = true
 
 [node name="shoot_delay" type="Timer" parent="."]
 
