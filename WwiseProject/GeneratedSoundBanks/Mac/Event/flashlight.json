@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1167979795",
+    "Type": "Event",
+    "GUID": "{69699675-4FDB-46D4-842D-6ECD8497F7F6}",
+    "Language": "SFX",
+    "Hash": "{69E4049A-DFA3-A802-362B-604A7520D420}",
+    "ObjectPath": "flashlight",
+    "ShortName": "flashlight",
+    "Path": "Event/flashlight.bnk",
+    "Media": [
+     {
+      "Id": "97699227",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashlight_click (1).wav",
+      "Path": "Media/97699227.wem",
+      "CachePath": "A3/{A310153B-33CE-7F1E-45D9-45D313656FF5}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1167979795",
+      "Name": "flashlight",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\flashlight",
+      "GUID": "{69699675-4FDB-46D4-842D-6ECD8497F7F6}",
+      "Color": "1",
+      "DurationType": "OneShot",
+      "DurationMin": "0.2525195",
+      "DurationMax": "0.3322405",
+      "MediaRefs": [
+       {
+        "Id": "97699227"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BF0C5639-FD0D-0BF0-68E0-6431E6DF90AC}"
+ }
+}

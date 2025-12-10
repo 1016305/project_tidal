@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{5265D1D1-E44C-4096-856D-5885F6B536CB}",
     "Language": "SFX",
-    "Hash": "{12DDA002-98E7-97EA-25FF-0DA6ABA7B76D}",
+    "Hash": "{972EA443-8A0A-3F67-C940-3D88FC4C24EF}",
     "ObjectPath": "second_tower_converyorbelt",
     "ShortName": "second_tower_converyorbelt",
     "Path": "Event/second_tower_converyorbelt.bnk",
+    "Media": [
+     {
+      "Id": "408647191",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "toxic_waste_disposal_conveyorbelt.wav",
+      "Path": "Media/408647191.wem",
+      "CachePath": "F3/{F393F5A3-42AF-D254-8A44-375F413AC940}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "3971991686",
@@ -21,14 +32,16 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Second Tower\\second_tower_converyorbelt",
       "GUID": "{5265D1D1-E44C-4096-856D-5885F6B536CB}",
       "Color": "4",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "408647191"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{82C56A56-F192-2548-AFF8-87B6EDC54885}"
+  "FileHash": "{ABA24A91-0A85-FBD1-0041-4B3C7898D13D}"
  }
 }

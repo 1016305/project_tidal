@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}",
     "Language": "SFX",
-    "Hash": "{9D0EB78A-2F2A-E1FF-17D1-FA5D67D17E7B}",
+    "Hash": "{C023D6C2-77F9-F68E-A292-86D0F0C71C77}",
     "ObjectPath": "boss_weapon_fire",
     "ShortName": "boss_weapon_fire",
     "Path": "Event/boss_weapon_fire.bnk",
+    "Media": [
+     {
+      "Id": "908284441",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy - Big Laser v01.wav",
+      "Path": "Media/908284441.wem",
+      "CachePath": "FC/{FCA0AAD6-F6F8-FF10-5F99-BAEC7D42109A}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "1510202224",
@@ -21,14 +32,18 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_weapon_fire",
       "GUID": "{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}",
       "Color": "10",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "10.602688",
+      "DurationMax": "10.602688",
+      "MediaRefs": [
+       {
+        "Id": "908284441"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{0FD18BAB-7232-DEC3-EECB-DFA063C3DBF0}"
+  "FileHash": "{0C1BFF80-5F3A-7DF4-7D47-99A10673E30D}"
  }
 }

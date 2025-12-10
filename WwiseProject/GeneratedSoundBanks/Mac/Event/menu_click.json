@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{3C8A4119-9658-4B45-A150-236263E3D0C3}",
     "Language": "SFX",
-    "Hash": "{47A38AD6-1D46-7353-8BDD-BBF4AB6EC8BB}",
+    "Hash": "{2A9CD887-FDDC-54FB-F81A-4F00C9F41544}",
     "ObjectPath": "menu_click",
     "ShortName": "menu_click",
     "Path": "Event/menu_click.bnk",
+    "Media": [
+     {
+      "Id": "42449289",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UI\\Menu\\ui_button_simple_click_05.wav",
+      "Path": "Media/42449289.wem",
+      "CachePath": "87/{87675F6A-C81E-8216-0D93-49D6F026000F}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "760777789",
@@ -21,14 +32,18 @@
       "ObjectPath": "\\Events\\Default Work Unit\\UI\\menu_click",
       "GUID": "{3C8A4119-9658-4B45-A150-236263E3D0C3}",
       "Color": "13",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.06851155",
+      "DurationMax": "0.06851155",
+      "MediaRefs": [
+       {
+        "Id": "42449289"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{DA6E7984-DFF8-C5EB-F75F-2F937AD7BF4B}"
+  "FileHash": "{3CF9C611-20D9-08A8-3B14-012F3569E07E}"
  }
 }

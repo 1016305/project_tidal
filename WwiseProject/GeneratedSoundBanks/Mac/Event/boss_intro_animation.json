@@ -10,10 +10,33 @@
     "Type": "Event",
     "GUID": "{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}",
     "Language": "SFX",
-    "Hash": "{61857DB5-8079-FD68-ED6A-855BF55A5074}",
+    "Hash": "{19670910-23E3-BE20-5000-8EDA0C2FC3CA}",
     "ObjectPath": "boss_intro_animation",
     "ShortName": "boss_intro_animation",
     "Path": "Event/boss_intro_animation.bnk",
+    "Media": [
+     {
+      "Id": "800197188",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "boss_intro_animation.wav",
+      "Path": "Media/800197188.wem",
+      "CachePath": "C6/{C69F537D-5D75-8E1F-1EAF-4712249FB4FF}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2258521792",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "GUID": "{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3786392610",
@@ -21,14 +44,25 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_intro_animation",
       "GUID": "{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}",
       "Color": "10",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "11.334014",
+      "DurationMax": "11.334014",
+      "MediaRefs": [
+       {
+        "Id": "800197188"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2258521792"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{8A07E340-5864-4F34-1051-601A1914024F}"
+  "FileHash": "{6F5B59C9-5526-3DD2-4971-643235C6F360}"
  }
 }

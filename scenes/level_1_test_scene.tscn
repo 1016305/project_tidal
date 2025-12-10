@@ -1,4 +1,4 @@
-[gd_scene load_steps=299 format=4 uid="uid://bxoyqom4nhatv"]
+[gd_scene load_steps=304 format=4 uid="uid://bxoyqom4nhatv"]
 
 [ext_resource type="Texture2D" uid="uid://epp7quit3shj" path="res://textures/skybox 2025-11-06-17-18-29.png" id="1_3sspo"]
 [ext_resource type="Script" uid="uid://bdj2elqxna58q" path="res://scripts/utility/global_sound_controller.gd" id="1_tib8e"]
@@ -60,12 +60,17 @@
 [ext_resource type="Material" uid="uid://ciyptmi6h3qlq" path="res://materials/devtexture_grey.tres" id="57_0a3uo"]
 [ext_resource type="Script" uid="uid://s5hg0tpn3ae0" path="res://scripts/audio/switchatmos.gd" id="57_bvigl"]
 [ext_resource type="Script" uid="uid://dglncfcadiwov" path="res://scripts/audio/switch_steps_container.gd" id="57_skdyi"]
-[ext_resource type="WwiseEvent" uid="uid://onq4d3m5hs7u" path="res://Wwise/resources/Event/{DA56627C-D39E-4E24-A266-621C8B978AB1}.tres" id="58_8171t"]
+[ext_resource type="WwiseEvent" uid="uid://bnwkl26qh17vb" path="res://Wwise/resources/Event/{DA56627C-D39E-4E24-A266-621C8B978AB1}.tres" id="58_8171t"]
 [ext_resource type="Script" uid="uid://cc2ok2j176ogo" path="res://scripts/audio/ambience.gd" id="59_oglse"]
 [ext_resource type="WwiseEvent" uid="uid://d2pn7idgvojqw" path="res://Wwise/resources/Event/{D554D848-29E0-40AC-95C3-E352BC300ACC}.tres" id="60_oglse"]
 [ext_resource type="PackedScene" uid="uid://bx86f1sxx3ka7" path="res://scenes/pickups/ammo_pickup.tscn" id="62_5oqwq"]
 [ext_resource type="PackedScene" uid="uid://bmuwd8paqpi11" path="res://scenes/utility/health_pickup.tscn" id="64_o3dxs"]
 [ext_resource type="PackedScene" uid="uid://ctui55budl18a" path="res://scenes/enemies/dumb_enemy.tscn" id="66_r6q24"]
+[ext_resource type="WwiseEvent" uid="uid://cw0ry1ofpwfv4" path="res://Wwise/resources/Event/{1C18790D-4652-45F0-B402-E12F5FCFE49B}.tres" id="67_pjiyn"]
+[ext_resource type="WwiseEvent" uid="uid://b2tuhbt3pfdgl" path="res://Wwise/resources/Event/{5265D1D1-E44C-4096-856D-5885F6B536CB}.tres" id="68_2mbh4"]
+[ext_resource type="WwiseEvent" uid="uid://c5o3e526ktvwb" path="res://Wwise/resources/Event/{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}.tres" id="69_7edxq"]
+[ext_resource type="WwiseEvent" uid="uid://d1u2wklq7un25" path="res://Wwise/resources/Event/{0FCD69BC-DFA3-48A9-B2F7-54313204D0F1}.tres" id="70_4480v"]
+[ext_resource type="WwiseEvent" uid="uid://b4r06n0b3t0h5" path="res://Wwise/resources/Event/{BA9FE5AD-7631-4FA0-984B-293B17A93785}.tres" id="71_a5yln"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hkwuu"]
 panorama = ExtResource("1_3sspo")
@@ -3023,7 +3028,7 @@ shadow_enabled = true
 directional_shadow_max_distance = 200.0
 
 [node name="player" parent="." instance=ExtResource("2_nix83")]
-transform = Transform3D(0.811013, 0, -0.585028, 0, 1, 0, 0.585028, 0, 0.811013, -17.3611, -124.107, -332.137)
+transform = Transform3D(0.811013, 0, -0.585028, 0, 1, 0, 0.585028, 0, 0.811013, -16.172, 53.0241, 2.54549)
 interact_distance = 5.0
 
 [node name="intro_blur" parent="player" instance=ExtResource("3_orokw")]
@@ -6237,7 +6242,6 @@ script = ExtResource("32_jccmk")
 event = &"Crashed_Ship_Fire"
 
 [node name="AkEvent3D" type="AkEvent3D" parent="Sounds/Crashed Ship"]
-event = ExtResource("58_8171t")
 trigger_on = 2
 
 [node name="Atmos" type="Node3D" parent="."]
@@ -6359,6 +6363,64 @@ patrol_points = Array[NodePath]([NodePath("../Encounters/Encounter 1/Patrol Node
 min_cover_search = 50.0
 max_cover_search = 75.0
 find_cover_attempts = 30
+
+[node name="AllSounds" type="Node3D" parent="."]
+
+[node name="crashed_ship" type="Node3D" parent="AllSounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0157281, -0.0053277, -0.0156274)
+script = ExtResource("32_jccmk")
+event = &"crashed_ship"
+metadata/_custom_type_script = "uid://drdetr80npo3y"
+
+[node name="AkEvent3D" type="AkEvent3D" parent="AllSounds/crashed_ship"]
+event = ExtResource("58_8171t")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.1527, 53.4952, 0.0726929)
+
+[node name="door_console" type="Node3D" parent="AllSounds"]
+transform = Transform3D(0.999995, -0.00310668, 0, 0.00310668, 0.999995, 0, 0, 0, 1, 0.160021, 90.6981, -186.051)
+script = ExtResource("32_jccmk")
+event = &"door_console"
+metadata/_custom_type_script = "uid://drdetr80npo3y"
+
+[node name="AkEvent3D" type="AkEvent3D" parent="AllSounds/door_console"]
+event = ExtResource("67_pjiyn")
+
+[node name="toxicwaste_conveyorbelt" type="Node3D" parent="AllSounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.1293, -120.574, -459.797)
+script = ExtResource("32_jccmk")
+event = &"toxicwaste_conveyorbelt"
+metadata/_custom_type_script = "uid://drdetr80npo3y"
+
+[node name="AkEvent3D" type="AkEvent3D" parent="AllSounds/toxicwaste_conveyorbelt"]
+event = ExtResource("68_2mbh4")
+
+[node name="speaker" type="Node3D" parent="AllSounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -420.749, -110.764, -687.868)
+script = ExtResource("32_jccmk")
+event = &"speaker"
+metadata/_custom_type_script = "uid://drdetr80npo3y"
+
+[node name="AkEvent3D" type="AkEvent3D" parent="AllSounds/speaker"]
+event = ExtResource("69_7edxq")
+
+[node name="factory_alarm" type="Node3D" parent="AllSounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -392.063, -110.765, -688.087)
+script = ExtResource("32_jccmk")
+event = &"factory_alarm"
+metadata/_custom_type_script = "uid://drdetr80npo3y"
+
+[node name="AkEvent3D" type="AkEvent3D" parent="AllSounds/factory_alarm"]
+event = ExtResource("70_4480v")
+
+[node name="factory_conveyorbelt" type="Node3D" parent="AllSounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1296.73, 0, -1501.34)
+script = ExtResource("32_jccmk")
+event = &"factory_conveyorbelt"
+metadata/_custom_type_script = "uid://drdetr80npo3y"
+
+[node name="AkEvent3D" type="AkEvent3D" parent="AllSounds/factory_conveyorbelt"]
+event = ExtResource("71_a5yln")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 930.255, -123.159, 828.114)
 
 [connection signal="turn_lights_on" from="tooth_door_Imported/StaticBody3D/BigDoor" to="elevator_Imported/StaticBody3D2/Elevator Component" method="_on_big_door_turn_lights_on"]
 [connection signal="turn_lights_on" from="tooth_door_Imported/StaticBody3D/BigDoor" to="elevator_Imported/Elevator_lights" method="_on_door_button_pressed"]
