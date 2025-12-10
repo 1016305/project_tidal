@@ -109,53 +109,90 @@ name = "Factory Acoustic Textures"
 id = 2954047558
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_mqnyt"]
-path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Atmosphere"
-type = 2
-name = "Atmosphere"
-guid = "{36EB2E3C-21B9-42CA-A230-716620784CD3}"
-id = 2145253833
-
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_v560u"]
-children = [SubResource("WwiseTreeObject_mqnyt")]
-name = "SFX"
-id = 393239870
-
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_yyrou"]
+<<<<<<< HEAD
 path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Dialogue"
 type = 2
 name = "Dialogue"
 guid = "{E6BB215E-5D2B-4BBE-9076-C532FE503298}"
 id = 3930136735
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_geu6g"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_v560u"]
 path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Music"
 type = 2
 name = "Music"
 guid = "{4CBD492C-1D58-43B4-93E0-92CE7475D46A}"
 id = 3991942870
 
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_yyrou"]
+path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Atmosphere"
+type = 2
+name = "Atmosphere"
+guid = "{36EB2E3C-21B9-42CA-A230-716620784CD3}"
+id = 2145253833
+
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_geu6g"]
+path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX"
+children = [SubResource("WwiseTreeObject_yyrou")]
+type = 2
+name = "SFX"
+guid = "{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}"
+id = 393239870
+
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_5n8hf"]
-children = [SubResource("WwiseTreeObject_v560u"), SubResource("WwiseTreeObject_yyrou"), SubResource("WwiseTreeObject_geu6g")]
+children = [SubResource("WwiseTreeObject_mqnyt"), SubResource("WwiseTreeObject_v560u"), SubResource("WwiseTreeObject_geu6g")]
 name = "Main Audio Bus"
 id = 2246998526
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_tnib1"]
+=======
+>>>>>>> nik
 path = "\\Busses\\Default Work Unit\\Reverbs\\First_Tower_Verb"
 type = 1
 name = "First_Tower_Verb"
 guid = "{1332E2DC-853C-42B6-A659-92C90F2675EC}"
 id = 2540843761
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_o7sea"]
-path = "\\Busses\\Default Work Unit\\Reverbs"
-children = [SubResource("WwiseTreeObject_tnib1")]
-type = 2
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_v560u"]
+children = [SubResource("WwiseTreeObject_mqnyt")]
 name = "Reverbs"
-guid = "{9DD65F07-E8FB-45DE-B393-D2C7EC9793A5}"
 id = 3545700988
 
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_yyrou"]
+path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Atmosphere"
+type = 2
+name = "Atmosphere"
+guid = "{36EB2E3C-21B9-42CA-A230-716620784CD3}"
+id = 2145253833
+
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_geu6g"]
+children = [SubResource("WwiseTreeObject_yyrou")]
+name = "SFX"
+id = 393239870
+
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_5n8hf"]
+path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Dialogue"
+type = 2
+name = "Dialogue"
+guid = "{E6BB215E-5D2B-4BBE-9076-C532FE503298}"
+id = 3930136735
+
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_tnib1"]
+path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Music"
+type = 2
+name = "Music"
+guid = "{4CBD492C-1D58-43B4-93E0-92CE7475D46A}"
+id = 3991942870
+
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_o7sea"]
+path = "\\Busses\\Default Work Unit\\Main Audio Bus"
+children = [SubResource("WwiseTreeObject_geu6g"), SubResource("WwiseTreeObject_5n8hf"), SubResource("WwiseTreeObject_tnib1")]
+type = 2
+name = "Main Audio Bus"
+guid = "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+id = 2246998526
+
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_lrto0"]
-children = [SubResource("WwiseTreeObject_5n8hf"), SubResource("WwiseTreeObject_o7sea")]
+children = [SubResource("WwiseTreeObject_v560u"), SubResource("WwiseTreeObject_o7sea")]
 name = "Default Work Unit"
 id = 125608783
 
