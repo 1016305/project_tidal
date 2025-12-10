@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://bxvxnqylpiiy5"]
+
+[resource]
+name = "StartAtmosphere"
+id = 2280675495
+guid = "{5E85989A-549C-4058-AD57-AC0D75A750E9}"
+dummy = true
