@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2226114503	player_dead			\Default Work Unit\Player\player_dead	
+

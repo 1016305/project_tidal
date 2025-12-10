@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{68A19D79-B2C2-4F98-93DB-26BB86587B30}",
     "Language": "SFX",
-    "Hash": "{C72DC711-C111-6DC1-A4A4-816FB486F91A}",
+    "Hash": "{238626E8-0023-F167-EA06-359B023C0AE3}",
     "ObjectPath": "elevator",
     "ShortName": "elevator",
     "Path": "Event/elevator.bnk",
+    "Media": [
+     {
+      "Id": "63206133",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "elevator_descend.wav",
+      "Path": "Media/63206133.wem",
+      "CachePath": "38/{388B80F7-61D9-BE7E-FFBC-18332C6D7CDF}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "3705378287",
@@ -21,14 +32,18 @@
       "ObjectPath": "\\Events\\Default Work Unit\\First Tower\\elevator",
       "GUID": "{68A19D79-B2C2-4F98-93DB-26BB86587B30}",
       "Color": "4",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "21.329218",
+      "DurationMax": "21.329218",
+      "MediaRefs": [
+       {
+        "Id": "63206133"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{9E3EB3D9-7604-3762-877E-A43564D0A6B2}"
+  "FileHash": "{BD34D2E3-8728-7D1D-C954-E6FC9410261B}"
  }
 }
