@@ -10,21 +10,10 @@
     "Type": "Event",
     "GUID": "{1E815BA4-01BB-4C77-9539-03FAA272089E}",
     "Language": "SFX",
-    "Hash": "{8DA9212D-9FF1-6FC9-93E2-F871BED665C6}",
+    "Hash": "{FE219DF4-4C36-FA66-D568-DA7BB1C941D0}",
     "ObjectPath": "alarm_alert",
     "ShortName": "alarm_alert",
     "Path": "Event/alarm_alert.bnk",
-    "Media": [
-     {
-      "Id": "390994109",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "boss_alarm_01.wav",
-      "Path": "Media/390994109.wem",
-      "CachePath": "8C/{8C3BB643-948F-B792-C641-FA8929BD57C2}.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "4151049751",
@@ -32,18 +21,14 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Boss Arena\\alarm_alert",
       "GUID": "{1E815BA4-01BB-4C77-9539-03FAA272089E}",
       "Color": "4",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0.87283385",
-      "DurationMax": "0.87283385",
-      "MediaRefs": [
-       {
-        "Id": "390994109"
-       }
-      ]
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{B7DDA4B6-CCFA-8965-68C7-0717F6E6D032}"
+  "FileHash": "{1CF4BE71-7C54-5366-1D5B-59CD1F65B3AE}"
  }
 }

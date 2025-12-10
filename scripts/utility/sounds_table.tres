@@ -1,21 +1,11 @@
-[gd_resource type="Resource" script_class="WwiseEventCollection" load_steps=8 format=3 uid="uid://c475tgmbig5ow"]
+[gd_resource type="Resource" script_class="WwiseEventCollection" load_steps=3 format=3 uid="uid://c475tgmbig5ow"]
 
 [ext_resource type="Script" uid="uid://dsxtt57x7fvhw" path="res://scripts/utility/sounds_manager.gd" id="1_8xcmf"]
-[ext_resource type="WwiseEvent" uid="uid://bnwkl26qh17vb" path="res://Wwise/resources/Event/{DA56627C-D39E-4E24-A266-621C8B978AB1}.tres" id="1_wj0jb"]
-[ext_resource type="WwiseEvent" uid="uid://cw0ry1ofpwfv4" path="res://Wwise/resources/Event/{1C18790D-4652-45F0-B402-E12F5FCFE49B}.tres" id="2_g1rlu"]
-[ext_resource type="WwiseEvent" uid="uid://b2tuhbt3pfdgl" path="res://Wwise/resources/Event/{5265D1D1-E44C-4096-856D-5885F6B536CB}.tres" id="3_lvy24"]
-[ext_resource type="WwiseEvent" uid="uid://c5o3e526ktvwb" path="res://Wwise/resources/Event/{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}.tres" id="4_g8gvh"]
-[ext_resource type="WwiseEvent" uid="uid://d1u2wklq7un25" path="res://Wwise/resources/Event/{0FCD69BC-DFA3-48A9-B2F7-54313204D0F1}.tres" id="6_nqb7y"]
-[ext_resource type="WwiseEvent" uid="uid://b4r06n0b3t0h5" path="res://Wwise/resources/Event/{BA9FE5AD-7631-4FA0-984B-293B17A93785}.tres" id="7_alxp3"]
+[ext_resource type="WwiseEvent" uid="uid://onq4d3m5hs7u" path="res://Wwise/resources/Event/{DA56627C-D39E-4E24-A266-621C8B978AB1}.tres" id="1_wj0jb"]
 
 [resource]
 script = ExtResource("1_8xcmf")
 data = Dictionary[StringName, WwiseEvent]({
-&"crashed_ship": ExtResource("1_wj0jb"),
-&"door_console": ExtResource("2_g1rlu"),
-&"factory_alarm": ExtResource("6_nqb7y"),
-&"factory_conveyorbelt": ExtResource("7_alxp3"),
-&"speaker": ExtResource("4_g8gvh"),
-&"toxicwaste_conveyorbelt": ExtResource("3_lvy24")
+&"Crashed_Ship_Fire": ExtResource("1_wj0jb")
 })
 metadata/_custom_type_script = "uid://dsxtt57x7fvhw"

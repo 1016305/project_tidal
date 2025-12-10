@@ -10,21 +10,10 @@
     "Type": "Event",
     "GUID": "{AF325875-E58B-4D25-84F3-764AF865CF79}",
     "Language": "SFX",
-    "Hash": "{BD8BA360-9E7D-F2C1-99B4-7DF9C52B8D21}",
+    "Hash": "{8080C749-16D2-994E-3AB8-21F0F76CF313}",
     "ObjectPath": "assault_rifle_reload",
     "ShortName": "assault_rifle_reload",
     "Path": "Event/assault_rifle_reload.bnk",
-    "Media": [
-     {
-      "Id": "318863317",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "assault_rifle_reload.wav",
-      "Path": "Media/318863317.wem",
-      "CachePath": "FD/{FD4F3123-C10E-3AC6-0ABF-2408C61879A7}.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "1010747703",
@@ -32,18 +21,14 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\assault_rifle_reload",
       "GUID": "{AF325875-E58B-4D25-84F3-764AF865CF79}",
       "Color": "8",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "2.068895",
-      "DurationMax": "2.068895",
-      "MediaRefs": [
-       {
-        "Id": "318863317"
-       }
-      ]
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{6C476858-D40B-88A3-5A83-6AD814F191E1}"
+  "FileHash": "{3DB514BC-A18C-77DD-2594-9BB3A21A4121}"
  }
 }

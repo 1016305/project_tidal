@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7EC976F9-DACF-499D-983D-A3EF6EB13861}",
     "Language": "SFX",
-    "Hash": "{DE7E3CF2-2BFF-2C2C-B82C-63CDBD98608D}",
+    "Hash": "{A486C19C-72BC-0B79-50EF-F27DCC400AAB}",
     "ObjectPath": "low_health",
     "ShortName": "low_health",
     "Path": "Event/low_health.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "low_health_heartbeat.wav",
       "Path": "Media/233836470.wem",
-      "CachePath": "A7/{A72E9661-3436-C6ED-2D8C-D692DDD9B840}.wem"
+      "CachePath": "A1/{A124561E-0CDA-3C8A-9320-4E8DF7F85004}.wem"
      }
     ],
     "Events": [
@@ -42,6 +42,6 @@
     ]
    }
   ],
-  "FileHash": "{C22F13AF-9850-FECC-B50C-DE39AC0E697D}"
+  "FileHash": "{C787D4F1-AEB9-824E-D4BB-8CE49EA97A82}"
  }
 }

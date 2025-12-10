@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID ALARM = 855317084U;
         static const AkUniqueID ALARM_ALERT = 4151049751U;
+        static const AkUniqueID AMMO_PICKUP = 4253579710U;
         static const AkUniqueID ARENA_AMB = 521672771U;
         static const AkUniqueID ASSAULT_RIFLE_EMPTY_CLIP = 2049160996U;
         static const AkUniqueID ASSAULT_RIFLE_FIRE = 3448658748U;
@@ -25,16 +26,16 @@ namespace AK
         static const AkUniqueID BOSS_COOLINGVENT_CLOSE = 133455498U;
         static const AkUniqueID BOSS_COOLINGVENT_DESTROY = 3802256100U;
         static const AkUniqueID BOSS_COOLINGVENT_OPEN = 536492462U;
-        static const AkUniqueID BOSS_DEATH_ANIMATION = 1112448842U;
+        static const AkUniqueID BOSS_DEATH = 4052139381U;
         static const AkUniqueID BOSS_HIT_BARKS = 1644873300U;
         static const AkUniqueID BOSS_INTRO_ANIMATION = 3786392610U;
         static const AkUniqueID BOSS_MOVEMENT = 2663270342U;
-        static const AkUniqueID BOSS_MOVEMENT_STOP = 1925754261U;
         static const AkUniqueID BOSS_WEAPON_FIRE = 1510202224U;
         static const AkUniqueID BUTTON = 977454165U;
         static const AkUniqueID CANYON_AMB = 1984278272U;
         static const AkUniqueID COMBAT_BARKS = 2313023713U;
         static const AkUniqueID CRASHED_SHIP = 547033482U;
+        static const AkUniqueID DIRT_GRASS = 95152949U;
         static const AkUniqueID DOOR_CONSOLE = 2315757787U;
         static const AkUniqueID ELEVATOR = 3705378287U;
         static const AkUniqueID ENEMY = 2299321487U;
@@ -43,8 +44,8 @@ namespace AK
         static const AkUniqueID ENEMY_FIRE = 4240339038U;
         static const AkUniqueID ENEMY_MOVEMENT = 62399725U;
         static const AkUniqueID FIRST_TOWER_AMB = 1347192966U;
-        static const AkUniqueID FLASHLIGHT = 1167979795U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
+        static const AkUniqueID HEALTH_PICKUP = 3731941266U;
         static const AkUniqueID HIT_BARKS = 143989192U;
         static const AkUniqueID IDLE_BARKS = 825403295U;
         static const AkUniqueID LIGHTS_ON = 1063352154U;
@@ -56,12 +57,11 @@ namespace AK
         static const AkUniqueID METAL = 2473969246U;
         static const AkUniqueID MOVEMENT = 2129636626U;
         static const AkUniqueID PLAYER = 1069431850U;
-        static const AkUniqueID PLAYER_DEAD = 2226114503U;
-        static const AkUniqueID ROCK = 2144363834U;
         static const AkUniqueID SECOND_TOWER_AMB = 3833734562U;
         static const AkUniqueID SECOND_TOWER_CONVERYORBELT = 3971991686U;
         static const AkUniqueID SFX_PLAYTESTSOUND = 2888769156U;
         static const AkUniqueID SPEAKER = 2748973500U;
+        static const AkUniqueID STARTATMOS = 782580947U;
         static const AkUniqueID TEST_EVENT_01 = 1336498786U;
         static const AkUniqueID THIRD_TOWER_AMB = 2771423855U;
         static const AkUniqueID THIRD_TOWER_CONVEYORBELT = 3430197945U;
@@ -70,6 +70,20 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace AMBIENCECONTROLLER
+        {
+            static const AkUniqueID GROUP = 32875597U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID ARENA = 680256650U;
+                static const AkUniqueID CANYON = 2927127661U;
+                static const AkUniqueID FIRSTTOWER = 2512621488U;
+                static const AkUniqueID SECONDTOWER = 606742876U;
+                static const AkUniqueID THIRDTOWER = 3019845671U;
+            } // namespace SWITCH
+        } // namespace AMBIENCECONTROLLER
+
         namespace FOOTSTEPSTERRAIN
         {
             static const AkUniqueID GROUP = 665703777U;
@@ -85,6 +99,10 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID DIALOGUEVOLUME = 1866264637U;
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
+        static const AkUniqueID SFXVOLUME = 988953028U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;
@@ -99,7 +117,7 @@ namespace AK
 
     namespace BUSSES
     {
-        static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID ATMOSPHERE = 2145253833U;
         static const AkUniqueID DIALOGUE = 3930136735U;
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
         static const AkUniqueID MUSIC = 3991942870U;

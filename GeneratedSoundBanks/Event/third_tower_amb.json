@@ -10,21 +10,10 @@
     "Type": "Event",
     "GUID": "{1FB55A85-BA2B-476C-B981-7CF7B6A9F445}",
     "Language": "SFX",
-    "Hash": "{DF429896-0327-FA36-3556-CCCE32DBADF5}",
+    "Hash": "{1202C9EE-A813-82D3-E935-158293237694}",
     "ObjectPath": "third_tower_amb",
     "ShortName": "third_tower_amb",
     "Path": "Event/third_tower_amb.bnk",
-    "Media": [
-     {
-      "Id": "491444269",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Ambience\\factory_ambienceloop.wav",
-      "Path": "Media/491444269.wem",
-      "CachePath": "E1/{E1CC858B-A039-E700-3D6C-F04E786D122C}.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "2771423855",
@@ -32,16 +21,14 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Third Tower\\third_tower_amb",
       "GUID": "{1FB55A85-BA2B-476C-B981-7CF7B6A9F445}",
       "Color": "4",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "491444269"
-       }
-      ]
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{25CDF386-87B7-7FDE-5C54-8EB5AC9F3FCE}"
+  "FileHash": "{F0337DB6-6031-6C05-30A6-28CB667C7A4D}"
  }
 }

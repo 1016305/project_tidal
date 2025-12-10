@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{DA56627C-D39E-4E24-A266-621C8B978AB1}",
     "Language": "SFX",
-    "Hash": "{2BC7104E-971C-00F7-6FDF-48A977DA8862}",
+    "Hash": "{B954E620-C5B4-34A6-6D97-272422D77D1D}",
     "ObjectPath": "crashed_ship",
     "ShortName": "crashed_ship",
     "Path": "Event/crashed_ship.bnk",
@@ -32,7 +32,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\First Tower\\crashed_ship",
       "GUID": "{DA56627C-D39E-4E24-A266-621C8B978AB1}",
       "Color": "4",
-      "MaxAttenuation": "25",
+      "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{1319F713-6AAB-E0BD-808B-8EE20A3CE351}"
+  "FileHash": "{5024B654-4D4F-AFCF-BFE4-B275C44E9A79}"
  }
 }

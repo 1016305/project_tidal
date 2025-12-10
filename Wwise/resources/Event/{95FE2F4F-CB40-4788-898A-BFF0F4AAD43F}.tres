@@ -1,7 +1,0 @@
-[gd_resource type="WwiseEvent" format=3 uid="uid://c5o3e526ktvwb"]
-
-[resource]
-name = "speaker"
-id = 2748973500
-guid = "{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}"
-dummy = true
