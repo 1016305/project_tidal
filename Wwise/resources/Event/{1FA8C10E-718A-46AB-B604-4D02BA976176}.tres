@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://dmdc044l4uekg"]
+
+[resource]
+name = "idle_barks"
+id = 825403295
+guid = "{1FA8C10E-718A-46AB-B604-4D02BA976176}"
+dummy = true

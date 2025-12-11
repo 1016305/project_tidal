@@ -15,7 +15,7 @@ func bullet_move(delta):
 	position += -global_transform.basis.z * (speed * delta)
 
 func destroy_me():
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(5).timeout
 	self.queue_free()
 
 func rotate_to_target(target):

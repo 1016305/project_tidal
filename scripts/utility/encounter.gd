@@ -23,6 +23,7 @@ func encounter_clear():
 		is_done = !is_done
 		for enemy in wave:
 			enemy.queue_free()
+			
 		print(end_encounter_action)
 
 func enemy_died(enemy):

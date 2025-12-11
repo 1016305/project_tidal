@@ -1,0 +1,111 @@
+[gd_resource type="VisualShader" load_steps=7 format=3 uid="uid://xrtvk2uhsi46"]
+
+[sub_resource type="VisualShaderNodeTextureParameterTriplanar" id="VisualShaderNodeTextureParameterTriplanar_pgkbd"]
+parameter_name = "Metal1_Albedo"
+texture_type = 1
+texture_filter = 3
+
+[sub_resource type="VisualShaderNodeTextureParameterTriplanar" id="VisualShaderNodeTextureParameterTriplanar_7k7ui"]
+parameter_name = "Metal1_Metallic"
+texture_filter = 3
+
+[sub_resource type="VisualShaderNodeTextureParameterTriplanar" id="VisualShaderNodeTextureParameterTriplanar_o06lc"]
+parameter_name = "Metal1_Normal"
+texture_filter = 3
+
+[sub_resource type="VisualShaderNodeTextureParameterTriplanar" id="VisualShaderNodeTextureParameterTriplanar_gntqv"]
+parameter_name = "Metal1_Rough"
+texture_filter = 3
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_ied5m"]
+default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(0, 0, 0, 0)]
+op_type = 2
+operator = 9
+
+[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_1t0q3"]
+constant = Color(0.423651, 0.423651, 0.423651, 1)
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+uniform sampler2D Metal1_Albedo : source_color, filter_nearest_mipmap;
+uniform sampler2D Metal1_Metallic : filter_nearest_mipmap;
+uniform sampler2D Metal1_Rough : filter_nearest_mipmap;
+uniform sampler2D Metal1_Normal : filter_nearest_mipmap;
+
+
+// TextureParameterTriplanar
+	vec4 triplanar_texture(sampler2D p_sampler, vec3 p_weights, vec3 p_triplanar_pos) {
+		vec4 samp = vec4(0.0);
+		samp += texture(p_sampler, p_triplanar_pos.xy) * p_weights.z;
+		samp += texture(p_sampler, p_triplanar_pos.xz) * p_weights.y;
+		samp += texture(p_sampler, p_triplanar_pos.zy * vec2(-1.0, 1.0)) * p_weights.x;
+		return samp;
+	}
+
+	uniform vec3 triplanar_scale = vec3(1.0, 1.0, 1.0);
+	uniform vec3 triplanar_offset;
+	uniform float triplanar_sharpness = 0.5;
+
+	varying vec3 triplanar_power_normal;
+	varying vec3 triplanar_pos;
+
+void vertex() {
+// TextureParameterTriplanar
+	{
+		triplanar_power_normal = pow(abs(NORMAL), vec3(triplanar_sharpness));
+		triplanar_power_normal /= dot(triplanar_power_normal, vec3(1.0));
+		triplanar_pos = VERTEX * triplanar_scale + triplanar_offset;
+		triplanar_pos *= vec3(1.0, -1.0, 1.0);
+	}
+}
+
+void fragment() {
+// TextureParameterTriplanar:2
+	vec4 n_out2p0 = triplanar_texture(Metal1_Albedo, triplanar_power_normal, triplanar_pos);
+
+
+// ColorConstant:7
+	vec4 n_out7p0 = vec4(0.423651, 0.423651, 0.423651, 1.000000);
+
+
+// VectorOp:6
+	vec4 n_out6p0 = atan(n_out2p0, n_out7p0);
+
+
+// TextureParameterTriplanar:3
+	vec4 n_out3p0 = triplanar_texture(Metal1_Metallic, triplanar_power_normal, triplanar_pos);
+
+
+// TextureParameterTriplanar:5
+	vec4 n_out5p0 = triplanar_texture(Metal1_Rough, triplanar_power_normal, triplanar_pos);
+
+
+// TextureParameterTriplanar:4
+	vec4 n_out4p0 = triplanar_texture(Metal1_Normal, triplanar_power_normal, triplanar_pos);
+
+
+// Output:0
+	ALBEDO = vec3(n_out6p0.xyz);
+	METALLIC = n_out3p0.x;
+	ROUGHNESS = n_out5p0.x;
+	NORMAL = vec3(n_out4p0.xyz);
+
+
+}
+"
+nodes/fragment/0/position = Vector2(720, 140)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTextureParameterTriplanar_pgkbd")
+nodes/fragment/2/position = Vector2(-340, -540)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTextureParameterTriplanar_7k7ui")
+nodes/fragment/3/position = Vector2(-340, 200)
+nodes/fragment/4/node = SubResource("VisualShaderNodeTextureParameterTriplanar_o06lc")
+nodes/fragment/4/position = Vector2(-340, -180)
+nodes/fragment/5/node = SubResource("VisualShaderNodeTextureParameterTriplanar_gntqv")
+nodes/fragment/5/position = Vector2(-340, 580)
+nodes/fragment/6/node = SubResource("VisualShaderNodeVectorOp_ied5m")
+nodes/fragment/6/position = Vector2(400, -280)
+nodes/fragment/7/node = SubResource("VisualShaderNodeColorConstant_1t0q3")
+nodes/fragment/7/position = Vector2(80, -140)
+nodes/fragment/connections = PackedInt32Array(4, 0, 0, 8, 3, 0, 0, 2, 5, 0, 0, 3, 2, 0, 6, 0, 6, 0, 0, 0, 7, 0, 6, 1)

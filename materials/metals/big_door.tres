@@ -1,0 +1,26 @@
+[gd_resource type="ShaderMaterial" load_steps=10 format=3 uid="uid://c0vmd7gvi3h04"]
+
+[ext_resource type="Shader" uid="uid://b206kts4ude7y" path="res://materials/shaders/big_door_shader.tres" id="1_scp0s"]
+[ext_resource type="Texture2D" uid="uid://33pr4a25tcvq" path="res://materials/metals/metal1_basecolor.png" id="2_spvto"]
+[ext_resource type="Texture2D" uid="uid://rlem7y7abl5" path="res://materials/metals/metal1_metallic.png" id="3_uj0e3"]
+[ext_resource type="Texture2D" uid="uid://cptof837smli0" path="res://materials/metals/metal1_normal.png" id="4_d7d6n"]
+[ext_resource type="Texture2D" uid="uid://cpjdnefxlojng" path="res://materials/metals/metal1_rough.png" id="5_s1mk0"]
+[ext_resource type="Texture2D" uid="uid://bu0xjquthw7vu" path="res://materials/metals/metal2_basecolor.png" id="6_eqrdp"]
+[ext_resource type="Texture2D" uid="uid://7l7ehcl7iyam" path="res://materials/metals/metal2_metallic.png" id="7_o6aag"]
+[ext_resource type="Texture2D" uid="uid://bo4kawcle57jv" path="res://materials/metals/metal2_normal.png" id="8_8aty4"]
+[ext_resource type="Texture2D" uid="uid://nt46484ljrtm" path="res://materials/metals/metal2_rough.png" id="9_33e0x"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_scp0s")
+shader_parameter/Metal1_Albedo = ExtResource("2_spvto")
+shader_parameter/Metal2_Albedo = ExtResource("6_eqrdp")
+shader_parameter/Metal1_Metallic = ExtResource("3_uj0e3")
+shader_parameter/Metal2_Metallic = ExtResource("7_o6aag")
+shader_parameter/Metal1_Rough = ExtResource("5_s1mk0")
+shader_parameter/Metal2_Rough = ExtResource("9_33e0x")
+shader_parameter/Metal1_Normal = ExtResource("4_d7d6n")
+shader_parameter/Metal2_Normal = ExtResource("8_8aty4")
+shader_parameter/triplanar_scale = Vector3(0.1, 0.1, 0.1)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5
