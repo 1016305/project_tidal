@@ -13,9 +13,17 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3991942870	Music			\Default Work Unit\Main Audio Bus\Music	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	518384578	Third_Tower_Verb			\Default Work Unit\Reverbs\Third_Tower_Verb	
 	2540843761	First_Tower_Verb			\Default Work Unit\Reverbs\First_Tower_Verb	
+	2862970847	Canyon_Verb			\Default Work Unit\Reverbs\Canyon_Verb	
+	2870411437	Second_Tower_Verb			\Default Work Unit\Reverbs\Second_Tower_Verb	
+	4068741826	Boss_Arena_Verb			\Default Work Unit\Reverbs\Boss_Arena_Verb	
 
 Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	415841907	Space_Garage	Wwise RoomVerb			
+	3216246379	Space_Dreaming	Wwise RoomVerb			
+	3290519051	Aluminium_Tank	Wwise RoomVerb			
 	3900114836	Metal_Hangar	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes

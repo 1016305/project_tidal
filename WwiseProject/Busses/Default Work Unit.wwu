@@ -63,7 +63,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-14</Value>
+												<Value>-8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -193,7 +193,7 @@
 					<ChildrenList>
 						<AuxBus Name="First_Tower_Verb" ID="{1332E2DC-853C-42B6-A659-92C90F2675EC}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="Color" Type="int16" Value="15"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ObjectLists>
@@ -202,6 +202,74 @@
 										<ReferenceList>
 											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 												<ObjectRef Name="Metal_Hangar" ID="{C4A4605C-42EF-476A-B53C-E31C7A442C24}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="Second_Tower_Verb" ID="{DE5B648F-E157-41E2-AE09-466F3E32B8D3}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{3B3CDFE8-60F2-44B4-86F2-94F0B34A0607}" ShortID="170139277">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Space_Garage" ID="{1AF92D84-49DD-4BBC-8F29-6C6D10082B6E}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="Third_Tower_Verb" ID="{5594FFD1-A5C6-4E32-9C9A-3B430EFB420B}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="25"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{7BF2540B-6D8C-4F48-9E02-114D4A5292E7}" ShortID="623948335">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Aluminium_Tank" ID="{0D20C91A-F750-47E0-AE32-00E5F2AA1272}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="Canyon_Verb" ID="{23D9D23A-DF6F-4EAF-9312-283C9E53E7AE}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="21"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{4642CD3E-2CDC-489A-AB24-757503643A04}" ShortID="760194123">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="Boss_Arena_Verb" ID="{D7325445-39E7-4F5B-95E3-CF9FC47AC191}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="23"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{A582911E-F6F9-475E-B24F-07AAB45D7655}" ShortID="591947274">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Space_Dreaming" ID="{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 											</Reference>
 										</ReferenceList>
 									</EffectSlot>

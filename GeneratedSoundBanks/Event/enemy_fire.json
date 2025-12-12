@@ -10,10 +10,86 @@
     "Type": "Event",
     "GUID": "{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}",
     "Language": "SFX",
-    "Hash": "{88673F90-2E7B-F2D8-A5B4-CB5975F4DE7B}",
+    "Hash": "{C1DE92B2-6182-EA19-7658-88C903438CDA}",
     "ObjectPath": "enemy_fire",
     "ShortName": "enemy_fire",
     "Path": "Event/enemy_fire.bnk",
+    "Media": [
+     {
+      "Id": "70116733",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_gunfire.wav",
+      "Path": "Media/70116733.wem",
+      "CachePath": "4B/{4B296045-17D6-3CC2-B85B-A50CBC6520E8}.wem"
+     },
+     {
+      "Id": "523095064",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_gunfire.wav",
+      "Path": "Media/523095064.wem",
+      "CachePath": "73/{7313FD94-567C-750D-1C88-5D0D5245BDF0}.wem"
+     },
+     {
+      "Id": "643151873",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_gunfire.wav",
+      "Path": "Media/643151873.wem",
+      "CachePath": "E2/{E204AE4B-32A3-FD0B-34B9-78C57710F595}.wem"
+     },
+     {
+      "Id": "806977981",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_gunfire.wav",
+      "Path": "Media/806977981.wem",
+      "CachePath": "69/{69677A00-C90B-8B0C-F143-47928663D919}.wem"
+     },
+     {
+      "Id": "843919648",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_gunfire.wav",
+      "Path": "Media/843919648.wem",
+      "CachePath": "73/{739176DE-2C81-779E-A09F-89251400A025}.wem"
+     },
+     {
+      "Id": "933300372",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_gunfire.wav",
+      "Path": "Media/933300372.wem",
+      "CachePath": "F2/{F2A8B34A-8299-53C6-FB99-3624F1A0F2B4}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "1459522457",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "GUID": "{2144284E-7ADD-4341-86A4-4E468BEC9A2D}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "4240339038",
@@ -21,14 +97,43 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_fire",
       "GUID": "{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}",
       "Color": "10",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.79940724",
+      "DurationMax": "1.4350256",
+      "MediaRefs": [
+       {
+        "Id": "70116733"
+       },
+       {
+        "Id": "523095064"
+       },
+       {
+        "Id": "643151873"
+       },
+       {
+        "Id": "806977981"
+       },
+       {
+        "Id": "843919648"
+       },
+       {
+        "Id": "933300372"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "1459522457"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{F70944A9-44DC-3096-5769-644C8DD21106}"
+  "FileHash": "{31DF1668-FA89-A1D2-6CA4-5937BE52D0F3}"
  }
 }

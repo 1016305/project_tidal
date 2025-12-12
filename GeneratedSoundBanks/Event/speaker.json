@@ -10,10 +10,39 @@
     "Type": "Event",
     "GUID": "{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}",
     "Language": "SFX",
-    "Hash": "{1A96271B-1ADE-DB6E-A368-78E48E2039A9}",
+    "Hash": "{B6C9A796-9472-4502-0C66-B42D5491724C}",
     "ObjectPath": "speaker",
     "ShortName": "speaker",
     "Path": "Event/speaker.bnk",
+    "Media": [
+     {
+      "Id": "704733505",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Speaker\\factory_speaker01.wav",
+      "Path": "Media/704733505.wem",
+      "CachePath": "BD/{BDD0A694-741E-44C0-6906-D1666FAF7351}.wem"
+     },
+     {
+      "Id": "924948417",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Speaker\\factory_speaker03.wav",
+      "Path": "Media/924948417.wem",
+      "CachePath": "8F/{8FA2DE4F-D1E8-A015-D502-4A8D10E462C2}.wem"
+     },
+     {
+      "Id": "1051428755",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Speaker\\factory_speaker02.wav",
+      "Path": "Media/1051428755.wem",
+      "CachePath": "A7/{A7565493-B45B-14FF-8967-236321840404}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "2748973500",
@@ -21,14 +50,33 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Third Tower\\speaker",
       "GUID": "{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}",
       "Color": "4",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "704733505"
+       },
+       {
+        "Id": "924948417"
+       },
+       {
+        "Id": "1051428755"
+       }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "518384578",
+        "Name": "Third_Tower_Verb",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Third_Tower_Verb",
+        "GUID": "{5594FFD1-A5C6-4E32-9C9A-3B430EFB420B}",
+        "Color": "25"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{913E7795-FBC1-F4F6-5138-984527D3C8EE}"
+  "FileHash": "{7AA5DB16-55E8-36CD-97FC-6AA13E7210F7}"
  }
 }

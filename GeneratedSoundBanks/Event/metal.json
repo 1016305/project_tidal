@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{18273E7B-63FF-4436-9E82-C529AFBA5CC8}",
     "Language": "SFX",
-    "Hash": "{1A38F995-A7D6-9504-C461-12376CFD6A5A}",
+    "Hash": "{8EC989AD-800F-865A-F880-DE8F5B473E0F}",
     "ObjectPath": "metal",
     "ShortName": "metal",
     "Path": "Event/metal.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "metal_bullet_ping03.wav",
       "Path": "Media/43590827.wem",
-      "CachePath": "04/{0403BDCB-02CF-97EB-D976-66EC500A3C32}.wem"
+      "CachePath": "7E/{7E1A9862-9407-9C90-5F03-759FC277DCBA}.wem"
      },
      {
       "Id": "284252044",
@@ -31,16 +31,7 @@
       "Location": "Loose",
       "ShortName": "metal_bullet_ping02.wav",
       "Path": "Media/284252044.wem",
-      "CachePath": "92/{921D414F-D3EB-0426-751E-E740A88002F9}.wem"
-     },
-     {
-      "Id": "284797051",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "metal_bullet_ping01.wav",
-      "Path": "Media/284797051.wem",
-      "CachePath": "99/{99723FEC-DA58-25E7-8E9D-BABB581FE04B}.wem"
+      "CachePath": "28/{289E0A72-98EC-E703-B97B-29AC3A21779A}.wem"
      },
      {
       "Id": "795721697",
@@ -49,14 +40,34 @@
       "Location": "Loose",
       "ShortName": "metal_bullet_ping04.wav",
       "Path": "Media/795721697.wem",
-      "CachePath": "A6/{A6B2DCE1-46B1-2AAB-1A3D-44ED784E805C}.wem"
+      "CachePath": "1A/{1AA14B1F-658E-0DC4-F2D1-3DB293FD18A9}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "2080872166",
+       "Name": "Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "GUID": "{3FF9AD86-E377-40F8-970F-3D4EE73288B5}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2473969246",
       "Name": "metal",
-      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\metal",
+      "ObjectPath": "\\Events\\Default Work Unit\\Pings\\metal",
       "GUID": "{18273E7B-63FF-4436-9E82-C529AFBA5CC8}",
       "Color": "12",
       "DurationType": "OneShot",
@@ -70,16 +81,23 @@
         "Id": "284252044"
        },
        {
-        "Id": "284797051"
-       },
-       {
         "Id": "795721697"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "2080872166"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{69AECA0E-E255-84DB-B508-2D39E2FB20DA}"
+  "FileHash": "{4CE0ECA0-4872-2639-5630-364F85B2D90E}"
  }
 }

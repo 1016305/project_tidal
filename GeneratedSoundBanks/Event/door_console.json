@@ -10,10 +10,33 @@
     "Type": "Event",
     "GUID": "{1C18790D-4652-45F0-B402-E12F5FCFE49B}",
     "Language": "SFX",
-    "Hash": "{211BAB59-01E9-588E-4E85-E0CEE32D49C2}",
+    "Hash": "{EAD0FB61-F940-A715-BEF8-F1FFD9E5B69E}",
     "ObjectPath": "door_console",
     "ShortName": "door_console",
     "Path": "Event/door_console.bnk",
+    "Media": [
+     {
+      "Id": "188656083",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "door_console_hum.wav",
+      "Path": "Media/188656083.wem",
+      "CachePath": "C7/{C7413ED2-A800-2981-34C4-031FDA3803D4}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3604890626",
+       "Name": "High_Pass_60Hz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\High Pass Filters\\High_Pass_60Hz",
+       "GUID": "{F9627628-0B10-4272-BC30-D4C20423CB38}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2315757787",
@@ -21,14 +44,23 @@
       "ObjectPath": "\\Events\\Default Work Unit\\First Tower\\door_console",
       "GUID": "{1C18790D-4652-45F0-B402-E12F5FCFE49B}",
       "Color": "4",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "188656083"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3604890626"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{5FF42E86-3F18-1933-1873-AF3D537DC9D7}"
+  "FileHash": "{CD898E0F-F5C6-5117-588C-69DDD9F1A214}"
  }
 }

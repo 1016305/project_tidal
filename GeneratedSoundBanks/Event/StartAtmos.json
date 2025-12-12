@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D554D848-29E0-40AC-95C3-E352BC300ACC}",
     "Language": "SFX",
-    "Hash": "{AA99F0ED-40C8-A135-227D-A54DF0ED7708}",
+    "Hash": "{2A7ABA13-EFF2-13E0-10A2-9F342C0E9E35}",
     "ObjectPath": "StartAtmos",
     "ShortName": "StartAtmos",
     "Path": "Event/StartAtmos.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "soft_wind_amb.wav",
       "Path": "Media/472452353.wem",
-      "CachePath": "69/{69D9F231-7198-58F4-8342-BEF42DD63BE1}.wem"
+      "CachePath": "4F/{4F3AD27D-E18C-5B51-4C21-F20DB7FBD937}.wem"
      },
      {
       "Id": "491444269",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Ambience\\factory_ambienceloop.wav",
       "Path": "Media/491444269.wem",
-      "CachePath": "4B/{4BF4A901-800E-20C3-21CF-51BD92BC38D1}.wem"
+      "CachePath": "79/{799BC812-E9F6-F1C6-5B67-A5D91091D1DE}.wem"
      },
      {
       "Id": "654365428",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "canyon_undergroundmachine_amb.wav",
       "Path": "Media/654365428.wem",
-      "CachePath": "4C/{4CC4E55B-02E6-5C51-B35D-ECD535D07316}.wem"
+      "CachePath": "5A/{5A47C126-85DD-59FB-8EAE-61127F7EA181}.wem"
      },
      {
       "Id": "750651976",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "first_tower_ambienceloop.wav",
       "Path": "Media/750651976.wem",
-      "CachePath": "65/{6580DE33-3870-A974-E434-5935BDF485E9}.wem"
+      "CachePath": "8C/{8C445F6C-074E-A1D5-07F1-5D8C601C9DDC}.wem"
      }
     ],
     "Plugins": {
@@ -65,6 +65,30 @@
      ],
      "ShareSets": [
       {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "2258521792",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "GUID": "{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      },
+      {
+       "Id": "2781261543",
+       "Name": "Brick_Wall_Minus_6dB_Peak_Slow_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Slow_Release",
+       "GUID": "{E0BA4DE6-A10C-49AF-A3E4-C5F71BA79EE6}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      },
+      {
        "Id": "3216246379",
        "Name": "Space_Dreaming",
        "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Space_Dreaming",
@@ -79,6 +103,14 @@
        "GUID": "{972799F5-C6E5-4E4F-83E3-95AA307CDFD1}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
+      },
+      {
+       "Id": "3900114836",
+       "Name": "Metal_Hangar",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Metal_Hangar",
+       "GUID": "{C4A4605C-42EF-476A-B53C-E31C7A442C24}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
       }
      ]
     },
@@ -89,6 +121,16 @@
       "ObjectPath": "\\Events\\Default Work Unit\\StartAtmos",
       "GUID": "{D554D848-29E0-40AC-95C3-E352BC300ACC}",
       "DurationType": "Infinite",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "2258521792"
+        }
+       ]
+      },
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -113,6 +155,9 @@
          ],
          "ShareSets": [
           {
+           "Id": "2781261543"
+          },
+          {
            "Id": "3216246379"
           },
           {
@@ -132,7 +177,14 @@
          {
           "Id": "491444269"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3900114836"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -193,6 +245,6 @@
     ]
    }
   ],
-  "FileHash": "{44982C03-C3C0-B655-30A2-5F3915460603}"
+  "FileHash": "{F154DBC2-9D45-5A9F-1A87-BC5ABCB139DE}"
  }
 }

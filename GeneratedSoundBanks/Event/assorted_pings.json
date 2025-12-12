@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{70E8D780-CEB4-421D-BF51-8F23F81B2DA1}",
     "Language": "SFX",
-    "Hash": "{CDF371A0-BDB7-35CC-1649-48CAE3A73502}",
+    "Hash": "{C336E97E-ADD1-607C-A516-6CE2BBD5CC6C}",
     "ObjectPath": "assorted_pings",
     "ShortName": "assorted_pings",
     "Path": "Event/assorted_pings.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "rock_bullet_ping_01.wav",
       "Path": "Media/38044229.wem",
-      "CachePath": "F2/{F2320573-EECE-DE33-9457-37F762716759}.wem"
+      "CachePath": "95/{95DC7FC2-9771-B257-8D21-589ACB9EF3E2}.wem"
      },
      {
       "Id": "43590827",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "metal_bullet_ping03.wav",
       "Path": "Media/43590827.wem",
-      "CachePath": "04/{0403BDCB-02CF-97EB-D976-66EC500A3C32}.wem"
+      "CachePath": "7E/{7E1A9862-9407-9C90-5F03-759FC277DCBA}.wem"
      },
      {
       "Id": "61613521",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "rock_bullet_ping_03.wav",
       "Path": "Media/61613521.wem",
-      "CachePath": "C7/{C7DF2F5F-9296-86CF-C7B0-BA33DCB472A3}.wem"
+      "CachePath": "4A/{4A1AD6D7-D222-4443-64AD-1C53C57BB36F}.wem"
      },
      {
       "Id": "122689272",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "rock_bullet_ping_02.wav",
       "Path": "Media/122689272.wem",
-      "CachePath": "AF/{AFC4289C-610B-26F4-26C6-6210A2433368}.wem"
+      "CachePath": "2A/{2AFB5B5D-3E46-EED7-0B43-5206C8C01344}.wem"
      },
      {
       "Id": "196751130",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "enemy_bullet_ping_06.wav",
       "Path": "Media/196751130.wem",
-      "CachePath": "24/{24E1652E-F6B5-3A1A-3908-A53EE6768FB9}.wem"
+      "CachePath": "62/{627B803B-29C0-4419-3188-E984AD27336B}.wem"
      },
      {
       "Id": "212138637",
@@ -67,7 +67,7 @@
       "Location": "Loose",
       "ShortName": "enemy_bullet_ping_05.wav",
       "Path": "Media/212138637.wem",
-      "CachePath": "F7/{F7D51A5E-F6E5-9920-A48F-829F9C1958E1}.wem"
+      "CachePath": "D0/{D03DC55F-7BB0-7BDB-648A-7DF518121C03}.wem"
      },
      {
       "Id": "229104501",
@@ -76,7 +76,7 @@
       "Location": "Loose",
       "ShortName": "rock_bullet_ping_07.wav",
       "Path": "Media/229104501.wem",
-      "CachePath": "55/{55E2C8A5-0990-9F4D-1D46-BC49DE88E2C1}.wem"
+      "CachePath": "41/{4189AFFB-24FA-56AD-817B-3A0AF0EA4D3E}.wem"
      },
      {
       "Id": "279385734",
@@ -85,7 +85,7 @@
       "Location": "Loose",
       "ShortName": "enemy_bullet_ping_04.wav",
       "Path": "Media/279385734.wem",
-      "CachePath": "99/{99D20991-38C8-0124-5F88-7B8CF6965698}.wem"
+      "CachePath": "79/{79EEBD80-97D2-866D-2571-3ED7A1FE0AF8}.wem"
      },
      {
       "Id": "284252044",
@@ -94,7 +94,7 @@
       "Location": "Loose",
       "ShortName": "metal_bullet_ping02.wav",
       "Path": "Media/284252044.wem",
-      "CachePath": "92/{921D414F-D3EB-0426-751E-E740A88002F9}.wem"
+      "CachePath": "28/{289E0A72-98EC-E703-B97B-29AC3A21779A}.wem"
      },
      {
       "Id": "284797051",
@@ -103,7 +103,7 @@
       "Location": "Loose",
       "ShortName": "metal_bullet_ping01.wav",
       "Path": "Media/284797051.wem",
-      "CachePath": "99/{99723FEC-DA58-25E7-8E9D-BABB581FE04B}.wem"
+      "CachePath": "96/{96780708-75D6-F470-E8BC-02055A643B0A}.wem"
      },
      {
       "Id": "333253904",
@@ -112,7 +112,7 @@
       "Location": "Loose",
       "ShortName": "enemy_bullet_ping_02.wav",
       "Path": "Media/333253904.wem",
-      "CachePath": "7B/{7B130CB6-3DF9-CF6F-0AB0-CB4C4A367C22}.wem"
+      "CachePath": "D0/{D0901792-25BB-D90E-3FBF-227E023C2C5A}.wem"
      },
      {
       "Id": "337845362",
@@ -121,7 +121,7 @@
       "Location": "Loose",
       "ShortName": "rock_bullet_ping_08.wav",
       "Path": "Media/337845362.wem",
-      "CachePath": "23/{233E5643-F8D7-1F38-C3AB-4A5539DE6C9F}.wem"
+      "CachePath": "0F/{0F58D380-97EC-76AD-FC9D-C985D87A70A5}.wem"
      },
      {
       "Id": "402255042",
@@ -130,7 +130,7 @@
       "Location": "Loose",
       "ShortName": "enemy_bullet_ping_03.wav",
       "Path": "Media/402255042.wem",
-      "CachePath": "E8/{E80B86A1-36DC-63DE-FF5D-24D99A2BE9C6}.wem"
+      "CachePath": "92/{92A670FC-6BF2-B556-97B9-75E578B948ED}.wem"
      },
      {
       "Id": "471978831",
@@ -139,7 +139,7 @@
       "Location": "Loose",
       "ShortName": "enemy_bullet_ping_07.wav",
       "Path": "Media/471978831.wem",
-      "CachePath": "31/{310852A4-6293-05B9-27FA-45CD86838C02}.wem"
+      "CachePath": "85/{85134534-6EF4-142C-84B9-66864301C71C}.wem"
      },
      {
       "Id": "596806294",
@@ -148,7 +148,7 @@
       "Location": "Loose",
       "ShortName": "rock_bullet_ping_05.wav",
       "Path": "Media/596806294.wem",
-      "CachePath": "15/{15A50D32-8E28-92C8-EC5C-87BE434F06FD}.wem"
+      "CachePath": "9E/{9E896576-CEE7-DCD0-3E3E-8FE5F3F29759}.wem"
      },
      {
       "Id": "667197684",
@@ -157,7 +157,7 @@
       "Location": "Loose",
       "ShortName": "enemy_bullet_ping_01.wav",
       "Path": "Media/667197684.wem",
-      "CachePath": "5A/{5AA339BE-A571-39C9-DB54-2FD7C23D3B6B}.wem"
+      "CachePath": "E7/{E797C7BA-2853-04B4-3E34-A56C74C14CF9}.wem"
      },
      {
       "Id": "714744341",
@@ -166,7 +166,7 @@
       "Location": "Loose",
       "ShortName": "enemy_bullet_ping_08.wav",
       "Path": "Media/714744341.wem",
-      "CachePath": "3E/{3EA9CA34-F35B-7CF8-E4A1-BE005EEA0E24}.wem"
+      "CachePath": "5E/{5E2141A3-6E3C-9EC4-2D12-B79CC5D9E79E}.wem"
      },
      {
       "Id": "795721697",
@@ -175,7 +175,7 @@
       "Location": "Loose",
       "ShortName": "metal_bullet_ping04.wav",
       "Path": "Media/795721697.wem",
-      "CachePath": "A6/{A6B2DCE1-46B1-2AAB-1A3D-44ED784E805C}.wem"
+      "CachePath": "1A/{1AA14B1F-658E-0DC4-F2D1-3DB293FD18A9}.wem"
      },
      {
       "Id": "983353706",
@@ -184,7 +184,7 @@
       "Location": "Loose",
       "ShortName": "rock_bullet_ping_06.wav",
       "Path": "Media/983353706.wem",
-      "CachePath": "CC/{CC7A66C1-2C01-41C6-15DF-33173578B421}.wem"
+      "CachePath": "D2/{D2B4D8AE-5570-12A4-FBF3-94A2CDE24DCE}.wem"
      },
      {
       "Id": "1009516407",
@@ -193,14 +193,34 @@
       "Location": "Loose",
       "ShortName": "rock_bullet_ping_04.wav",
       "Path": "Media/1009516407.wem",
-      "CachePath": "AC/{AC66A1FA-ACBA-FFAE-7B0B-631FA5576D94}.wem"
+      "CachePath": "4B/{4B31B5EE-9E96-78F5-0A12-6AF88FBB6B45}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "2080872166",
+       "Name": "Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "GUID": "{3FF9AD86-E377-40F8-970F-3D4EE73288B5}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1417418280",
       "Name": "assorted_pings",
-      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\assorted_pings",
+      "ObjectPath": "\\Events\\Default Work Unit\\Pings\\assorted_pings",
       "GUID": "{70E8D780-CEB4-421D-BF51-8F23F81B2DA1}",
       "Color": "12",
       "MaxAttenuation": "50",
@@ -268,11 +288,21 @@
        {
         "Id": "1009516407"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "2080872166"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{5F3579D4-8C4F-8963-998D-131961883E25}"
+  "FileHash": "{0984BAB7-0F90-C52A-2755-80BB2853787B}"
  }
 }

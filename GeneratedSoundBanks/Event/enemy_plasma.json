@@ -1,0 +1,53 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "4283809968",
+    "Type": "Event",
+    "GUID": "{7F377203-31E5-4F33-88A1-3D21DCD70F08}",
+    "Language": "SFX",
+    "Hash": "{E234E1FC-DE0A-6365-0DC3-2F41CD160D48}",
+    "ObjectPath": "enemy_plasma",
+    "ShortName": "enemy_plasma",
+    "Path": "Event/enemy_plasma.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "1459522457",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "GUID": "{2144284E-7ADD-4341-86A4-4E468BEC9A2D}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "4283809968",
+      "Name": "enemy_plasma",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_plasma",
+      "GUID": "{7F377203-31E5-4F33-88A1-3D21DCD70F08}",
+      "Color": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2A7AF944-F00E-C5A5-8BDD-3E540F7B919C}"
+ }
+}

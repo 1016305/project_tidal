@@ -10,25 +10,154 @@
     "Type": "Event",
     "GUID": "{EBA2F312-5FB1-4C0D-B46B-436888974182}",
     "Language": "SFX",
-    "Hash": "{AA55E4AE-3812-58E4-57E3-06D290CB02EC}",
+    "Hash": "{7960355D-F671-C215-4A51-88F52DC2C9AA}",
     "ObjectPath": "enemy",
     "ShortName": "enemy",
     "Path": "Event/enemy.bnk",
+    "Media": [
+     {
+      "Id": "196751130",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_bullet_ping_06.wav",
+      "Path": "Media/196751130.wem",
+      "CachePath": "62/{627B803B-29C0-4419-3188-E984AD27336B}.wem"
+     },
+     {
+      "Id": "212138637",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_bullet_ping_05.wav",
+      "Path": "Media/212138637.wem",
+      "CachePath": "D0/{D03DC55F-7BB0-7BDB-648A-7DF518121C03}.wem"
+     },
+     {
+      "Id": "279385734",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_bullet_ping_04.wav",
+      "Path": "Media/279385734.wem",
+      "CachePath": "79/{79EEBD80-97D2-866D-2571-3ED7A1FE0AF8}.wem"
+     },
+     {
+      "Id": "333253904",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_bullet_ping_02.wav",
+      "Path": "Media/333253904.wem",
+      "CachePath": "D0/{D0901792-25BB-D90E-3FBF-227E023C2C5A}.wem"
+     },
+     {
+      "Id": "402255042",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_bullet_ping_03.wav",
+      "Path": "Media/402255042.wem",
+      "CachePath": "92/{92A670FC-6BF2-B556-97B9-75E578B948ED}.wem"
+     },
+     {
+      "Id": "471978831",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_bullet_ping_07.wav",
+      "Path": "Media/471978831.wem",
+      "CachePath": "85/{85134534-6EF4-142C-84B9-66864301C71C}.wem"
+     },
+     {
+      "Id": "667197684",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_bullet_ping_01.wav",
+      "Path": "Media/667197684.wem",
+      "CachePath": "E7/{E797C7BA-2853-04B4-3E34-A56C74C14CF9}.wem"
+     },
+     {
+      "Id": "714744341",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_bullet_ping_08.wav",
+      "Path": "Media/714744341.wem",
+      "CachePath": "5E/{5E2141A3-6E3C-9EC4-2D12-B79CC5D9E79E}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "2080872166",
+       "Name": "Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "GUID": "{3FF9AD86-E377-40F8-970F-3D4EE73288B5}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2299321487",
       "Name": "enemy",
-      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\enemy",
+      "ObjectPath": "\\Events\\Default Work Unit\\Pings\\enemy",
       "GUID": "{EBA2F312-5FB1-4C0D-B46B-436888974182}",
       "Color": "12",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.36194408",
+      "DurationMax": "0.8499098",
+      "MediaRefs": [
+       {
+        "Id": "196751130"
+       },
+       {
+        "Id": "212138637"
+       },
+       {
+        "Id": "279385734"
+       },
+       {
+        "Id": "333253904"
+       },
+       {
+        "Id": "402255042"
+       },
+       {
+        "Id": "471978831"
+       },
+       {
+        "Id": "667197684"
+       },
+       {
+        "Id": "714744341"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "2080872166"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{F29B13E1-9014-2CC5-9C84-529DBCE10484}"
+  "FileHash": "{EAD20C8D-8BC3-BE4F-A232-0E34486163B5}"
  }
 }

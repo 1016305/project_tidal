@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3417972020	toothdoor_opening			\Default Work Unit\First Tower\toothdoor_opening	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+

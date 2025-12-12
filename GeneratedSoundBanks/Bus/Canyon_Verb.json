@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2862970847",
+    "Type": "Bus",
+    "GUID": "{23D9D23A-DF6F-4EAF-9312-283C9E53E7AE}",
+    "Language": "SFX",
+    "Hash": "{C5A166CB-B1AF-BDCD-5FC1-87DAF5C4ED3A}",
+    "ObjectPath": "Canyon_Verb",
+    "ShortName": "Canyon_Verb",
+    "Path": "Bus/Canyon_Verb.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "48620415",
+       "Name": "Have_U_Ever_Been_Outside",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Exteriors\\Have_U_Ever_Been_Outside",
+       "GUID": "{FE29AE8D-FD86-4652-A95D-68D32F5760EC}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "2862970847",
+      "Name": "Canyon_Verb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Canyon_Verb",
+      "GUID": "{23D9D23A-DF6F-4EAF-9312-283C9E53E7AE}",
+      "Color": "21",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "48620415"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4108EAB4-3499-6CB5-6288-EEA3286434F9}"
+ }
+}

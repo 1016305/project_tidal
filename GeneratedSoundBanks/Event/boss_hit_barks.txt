@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	1644873300	boss_hit_barks			\Default Work Unit\Enemy Boss\boss_hit_barks	
-

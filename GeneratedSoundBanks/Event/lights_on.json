@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{857D5D76-7D63-43C3-878D-B8A113A7E4BC}",
     "Language": "SFX",
-    "Hash": "{19F78FBE-72BC-5C3F-E0CC-3AEA24F1AA10}",
+    "Hash": "{25038AC3-30E2-0CF4-DC5B-77CE050CD022}",
     "ObjectPath": "lights_on",
     "ShortName": "lights_on",
     "Path": "Event/lights_on.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "light_on_01.wav",
       "Path": "Media/56906530.wem",
-      "CachePath": "FD/{FD3A9D16-718B-A0FE-2879-D494F4410CDA}.wem"
+      "CachePath": "32/{327C4EAA-7FFC-23E7-7D20-A70951089D40}.wem"
      },
      {
       "Id": "88461833",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "light_on_02.wav",
       "Path": "Media/88461833.wem",
-      "CachePath": "01/{01D0FA10-D2E3-BD9D-8C2C-45C70E70F026}.wem"
+      "CachePath": "09/{093A2280-ABD3-47DD-4EDB-F7B9342332CF}.wem"
      },
      {
       "Id": "133753980",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "light_on_04.wav",
       "Path": "Media/133753980.wem",
-      "CachePath": "74/{745CAA4A-6378-EE38-6E3C-D61877E5D0E1}.wem"
+      "CachePath": "D1/{D1ED37B4-DD26-2C44-5050-53C99D68A1A0}.wem"
      },
      {
       "Id": "760863978",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "light_on_05.wav",
       "Path": "Media/760863978.wem",
-      "CachePath": "1C/{1C4CAEDC-A437-1F58-5EE8-BE58166BA68E}.wem"
+      "CachePath": "42/{42141FF5-F40C-9B9E-7B26-E3B0C2020835}.wem"
      },
      {
       "Id": "853712018",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "light_on_03.wav",
       "Path": "Media/853712018.wem",
-      "CachePath": "5C/{5C8CC7DD-B6AD-87F9-270A-14ABB4F72BCF}.wem"
+      "CachePath": "DA/{DA8626D1-B74E-93DB-BF2A-DA292D20A46D}.wem"
      }
     ],
     "Plugins": {
@@ -106,11 +106,20 @@
          "Id": "10176546"
         }
        ]
-      }
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2540843761",
+        "Name": "First_Tower_Verb",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\First_Tower_Verb",
+        "GUID": "{1332E2DC-853C-42B6-A659-92C90F2675EC}",
+        "Color": "15"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{E77C8FD2-9319-2A43-4C31-E04A30289D32}"
+  "FileHash": "{1B680085-9830-9B57-7D21-FD1C725730D2}"
  }
 }

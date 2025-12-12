@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}",
     "Language": "SFX",
-    "Hash": "{D8F0FA14-1236-81AF-C7FD-C77DC5019C59}",
+    "Hash": "{7CBDDA0C-0019-F44B-8CA5-A281B22E9AA2}",
     "ObjectPath": "assault_rifle_fire",
     "ShortName": "assault_rifle_fire",
     "Path": "Event/assault_rifle_fire.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "assault_rifle_gunfire01.wav",
       "Path": "Media/445722309.wem",
-      "CachePath": "F4/{F41955F8-1BD7-EFF1-62A0-A6DFAB7FBFF2}.wem"
+      "CachePath": "63/{6338CED9-38F5-9A38-32F4-702B96505DD9}.wem"
      },
      {
       "Id": "478542978",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "assault_rifle_gunfire04.wav",
       "Path": "Media/478542978.wem",
-      "CachePath": "02/{02B04CC7-7632-179C-5C9B-A16A989D77C1}.wem"
+      "CachePath": "9C/{9C3458FE-F05F-68B9-069A-DCD6E90F7D2E}.wem"
      },
      {
       "Id": "483902979",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "assault_rifle_gunfire03.wav",
       "Path": "Media/483902979.wem",
-      "CachePath": "83/{8335BDD4-872A-EE8A-EDA5-C3262E006E0B}.wem"
+      "CachePath": "10/{10527EEE-024F-2808-046F-466983F1F51A}.wem"
      },
      {
       "Id": "743935165",
@@ -49,11 +49,19 @@
       "Location": "Loose",
       "ShortName": "assault_rifle_gunfire02.wav",
       "Path": "Media/743935165.wem",
-      "CachePath": "63/{6394B63E-E360-2D4C-86EE-EACEFCB9BB5E}.wem"
+      "CachePath": "B6/{B6C03CD8-75F5-94F7-9D23-D65F2F032A7A}.wem"
      }
     ],
     "Plugins": {
      "ShareSets": [
+      {
+       "Id": "1459522457",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "GUID": "{2144284E-7ADD-4341-86A4-4E468BEC9A2D}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      },
       {
        "Id": "2998002419",
        "Name": "Boost_3dB_10KHz",
@@ -72,8 +80,8 @@
       "GUID": "{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}",
       "Color": "8",
       "DurationType": "OneShot",
-      "DurationMin": "0.7109524",
-      "DurationMax": "0.71875286",
+      "DurationMin": "0.39501807",
+      "DurationMax": "0.47981733",
       "MediaRefs": [
        {
         "Id": "445722309"
@@ -91,6 +99,9 @@
       "PluginRefs": {
        "ShareSets": [
         {
+         "Id": "1459522457"
+        },
+        {
          "Id": "2998002419"
         }
        ]
@@ -99,6 +110,6 @@
     ]
    }
   ],
-  "FileHash": "{9B0CFC94-D23C-D838-4373-8491204BDEB8}"
+  "FileHash": "{9268F0E9-EA21-65FD-59A5-7C7F399899DD}"
  }
 }

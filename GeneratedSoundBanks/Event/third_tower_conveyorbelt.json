@@ -10,10 +10,33 @@
     "Type": "Event",
     "GUID": "{BA9FE5AD-7631-4FA0-984B-293B17A93785}",
     "Language": "SFX",
-    "Hash": "{234F9481-D4A9-09A0-F441-A856BB15263A}",
+    "Hash": "{D5E200D1-08F2-49AF-B477-F84BDD795820}",
     "ObjectPath": "third_tower_conveyorbelt",
     "ShortName": "third_tower_conveyorbelt",
     "Path": "Event/third_tower_conveyorbelt.bnk",
+    "Media": [
+     {
+      "Id": "749723545",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambience\\factory_conveyorbelt.wav",
+      "Path": "Media/749723545.wem",
+      "CachePath": "54/{54413F5D-E78B-4E29-5574-FD56163B3F3E}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3430197945",
@@ -21,14 +44,32 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Third Tower\\third_tower_conveyorbelt",
       "GUID": "{BA9FE5AD-7631-4FA0-984B-293B17A93785}",
       "Color": "4",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "749723545"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "518384578",
+        "Name": "Third_Tower_Verb",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Third_Tower_Verb",
+        "GUID": "{5594FFD1-A5C6-4E32-9C9A-3B430EFB420B}",
+        "Color": "25"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{031B28E2-D964-6BBC-AB40-AB4FE9454DAA}"
+  "FileHash": "{52831AB0-D4D3-E2B9-80A6-346E05888762}"
  }
 }

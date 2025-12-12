@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3208241451	melee			\Default Work Unit\Pings\melee	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+	2080872166	Brick_Wall_Minus_6dB_Peak_Fast_Release	Wwise Peak Limiter			
+

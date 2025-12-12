@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1FA8C10E-718A-46AB-B604-4D02BA976176}",
     "Language": "SFX",
-    "Hash": "{F66B6EC5-7D77-331C-D83E-2EC75383FBD2}",
+    "Hash": "{CA3E0B14-CC2C-9E19-77EF-9D076ADE7453}",
     "ObjectPath": "idle_barks",
     "ShortName": "idle_barks",
     "Path": "Event/idle_barks.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
       "Path": "Media/195666167.wem",
-      "CachePath": "9F/{9F9140E2-CD7C-B02C-5CE3-179C903C4C83}.wem"
+      "CachePath": "CF/{CF16470B-A733-70B7-6CA3-926AB2F70DE2}.wem"
      },
      {
       "Id": "199980290",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
       "Path": "Media/199980290.wem",
-      "CachePath": "00/{007D3932-F3BD-8DC4-F68F-549827CCCB99}.wem"
+      "CachePath": "2A/{2A078B1B-6A32-66FD-3AD3-9AFB3640F641}.wem"
      },
      {
       "Id": "363213464",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
       "Path": "Media/363213464.wem",
-      "CachePath": "DD/{DD8B84BD-DEF4-385F-E196-9ECE6EAA3A5F}.wem"
+      "CachePath": "35/{358E6D56-E596-7B10-6005-47277A1C3394}.wem"
      },
      {
       "Id": "478178618",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
       "Path": "Media/478178618.wem",
-      "CachePath": "7C/{7C695EF8-2E11-3074-2E75-50067B81F0F0}.wem"
+      "CachePath": "9E/{9E403C8F-6D68-A4C3-55C9-8E64CD9D6DA0}.wem"
      },
      {
       "Id": "770351086",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
       "Path": "Media/770351086.wem",
-      "CachePath": "02/{02C2272B-4C6D-9648-1F4A-A20B7A52FCF8}.wem"
+      "CachePath": "71/{71E571E3-67EE-C434-9317-A0E96D7EAA1F}.wem"
      }
     ],
     "Events": [
@@ -93,6 +93,6 @@
     ]
    }
   ],
-  "FileHash": "{5B149A2D-0C77-A46E-9740-0269B51F547E}"
+  "FileHash": "{D2546755-00DB-2C0A-184D-507E66E1B80A}"
  }
 }

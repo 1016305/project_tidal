@@ -1,0 +1,6 @@
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	518384578	Third_Tower_Verb			\Default Work Unit\Reverbs\Third_Tower_Verb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	3290519051	Aluminium_Tank	Wwise RoomVerb			
+

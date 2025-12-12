@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3786392610	boss_intro_animation			\Default Work Unit\Enemy Boss\boss_intro_animation	
 
+Effect plug-ins	ID	Name	Type				Notes
+	2998002419	Boost_3dB_10KHz	Wwise Parametric EQ			
+

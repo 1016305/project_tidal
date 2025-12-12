@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D69E7259-D6F4-4333-937A-A808AD223C7F}",
     "Language": "SFX",
-    "Hash": "{B50B1D8D-F287-B709-7A5B-2CC52BBB5C90}",
+    "Hash": "{728549FB-8F8B-FEA9-1EF3-370C816D6BDA}",
     "ObjectPath": "combat_barks",
     "ShortName": "combat_barks",
     "Path": "Event/combat_barks.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_combatbark.wav",
       "Path": "Media/58604364.wem",
-      "CachePath": "62/{62EA5DC2-F7DC-2D9E-5C97-34169E09B4BE}.wem"
+      "CachePath": "70/{70EB6730-9B58-BD61-70A6-38F4BE880AB0}.wem"
      },
      {
       "Id": "140344306",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_combatbark.wav",
       "Path": "Media/140344306.wem",
-      "CachePath": "BF/{BFD022AC-8510-25E2-7E34-F03E3CC97275}.wem"
+      "CachePath": "8E/{8E82F1C3-310C-A7A2-A0B2-47D51521BA00}.wem"
      },
      {
       "Id": "302041538",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_combatbark.wav",
       "Path": "Media/302041538.wem",
-      "CachePath": "F0/{F0F6831E-FF98-A227-E315-48B755FB19DA}.wem"
+      "CachePath": "B4/{B4CA89F7-A12C-F037-D415-B2333E17C2B3}.wem"
      },
      {
       "Id": "372022351",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_combatbark.wav",
       "Path": "Media/372022351.wem",
-      "CachePath": "04/{04FF89C5-2C82-5533-BE64-B493040D09B1}.wem"
+      "CachePath": "6B/{6BE8B587-32B2-4C32-6118-1049D78C98A7}.wem"
      },
      {
       "Id": "709355210",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_combatbark.wav",
       "Path": "Media/709355210.wem",
-      "CachePath": "EE/{EE718A7D-5EF4-3BF4-2985-D0C2968C9091}.wem"
+      "CachePath": "5A/{5A3CBE90-4A73-727C-B20A-3E0900CA69C6}.wem"
      }
     ],
     "Events": [
@@ -91,6 +91,6 @@
     ]
    }
   ],
-  "FileHash": "{5D969298-82E6-672C-8340-03459C16416F}"
+  "FileHash": "{EC207B95-42DF-B684-09E1-0BA1F9BDD9DB}"
  }
 }

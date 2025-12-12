@@ -1,0 +1,6 @@
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	4068741826	Boss_Arena_Verb			\Default Work Unit\Reverbs\Boss_Arena_Verb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	3216246379	Space_Dreaming	Wwise RoomVerb			
+

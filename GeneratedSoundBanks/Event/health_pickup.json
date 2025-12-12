@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5ADFBE78-DFEE-45E7-8D95-899DFC96764D}",
     "Language": "SFX",
-    "Hash": "{CAC3A0DE-8FF6-4252-B76D-3DB03FF261D0}",
+    "Hash": "{9AF26B05-8776-0F17-FB09-5E35A1E35FF3}",
     "ObjectPath": "health_pickup",
     "ShortName": "health_pickup",
     "Path": "Event/health_pickup.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "SFX\\healthpickup.wav",
       "Path": "Media/261928895.wem",
-      "CachePath": "A1/{A1F42A7A-16C9-FF82-368B-B5F5BB0AC13E}.wem"
+      "CachePath": "F2/{F25CF03E-8C8E-3FF6-371D-929B10D4E3C2}.wem"
      }
     ],
     "Events": [
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{99C5B80C-A6F4-4DB2-46C1-404B3C76FB6F}"
+  "FileHash": "{F92C9D4F-4FBD-CD2C-7786-FDAAF7384040}"
  }
 }

@@ -2,5 +2,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	3448658748	assault_rifle_fire			\Default Work Unit\Weapons\assault_rifle_fire	
 
 Effect plug-ins	ID	Name	Type				Notes
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
 	2998002419	Boost_3dB_10KHz	Wwise Parametric EQ			
 

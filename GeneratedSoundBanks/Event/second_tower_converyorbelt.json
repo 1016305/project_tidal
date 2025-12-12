@@ -10,10 +10,33 @@
     "Type": "Event",
     "GUID": "{5265D1D1-E44C-4096-856D-5885F6B536CB}",
     "Language": "SFX",
-    "Hash": "{12DDA002-98E7-97EA-25FF-0DA6ABA7B76D}",
+    "Hash": "{949DFB92-67B9-6CBF-6896-955916BCA9EC}",
     "ObjectPath": "second_tower_converyorbelt",
     "ShortName": "second_tower_converyorbelt",
     "Path": "Event/second_tower_converyorbelt.bnk",
+    "Media": [
+     {
+      "Id": "430700844",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "toxic_waste_disposal_conveyorbelt.wav",
+      "Path": "Media/430700844.wem",
+      "CachePath": "D6/{D600AC40-DD2B-E7C2-84B5-9ACB13E33E3F}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2080872166",
+       "Name": "Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "GUID": "{3FF9AD86-E377-40F8-970F-3D4EE73288B5}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3971991686",
@@ -21,14 +44,32 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Second Tower\\second_tower_converyorbelt",
       "GUID": "{5265D1D1-E44C-4096-856D-5885F6B536CB}",
       "Color": "4",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "430700844"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2080872166"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2870411437",
+        "Name": "Second_Tower_Verb",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Second_Tower_Verb",
+        "GUID": "{DE5B648F-E157-41E2-AE09-466F3E32B8D3}",
+        "Color": "17"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{82C56A56-F192-2548-AFF8-87B6EDC54885}"
+  "FileHash": "{AA9708E4-BD0D-2BC0-09DF-FEECCC4EAE99}"
  }
 }

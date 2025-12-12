@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{A5412561-BC37-4B86-AF19-36223CDD0755}",
     "Language": "SFX",
-    "Hash": "{2C6F2288-6305-4060-C9A3-FCF4A2C09A72}",
+    "Hash": "{95858867-9677-1E17-E79A-227C3F34F00C}",
     "ObjectPath": "assault_rifle_empty_clip",
     "ShortName": "assault_rifle_empty_clip",
     "Path": "Event/assault_rifle_empty_clip.bnk",
+    "Media": [
+     {
+      "Id": "1045961606",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapons\\Assault Rifle\\mech, click.wav",
+      "Path": "Media/1045961606.wem",
+      "CachePath": "B8/{B81C2978-B6F5-AD65-C11F-2F8B9E942C19}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "2049160996",
@@ -21,14 +32,18 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\assault_rifle_empty_clip",
       "GUID": "{A5412561-BC37-4B86-AF19-36223CDD0755}",
       "Color": "8",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.18176462",
+      "DurationMax": "0.19257292",
+      "MediaRefs": [
+       {
+        "Id": "1045961606"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{EC68CD83-E599-9B8A-29E1-F0A7C55BBC2C}"
+  "FileHash": "{76AA3135-4564-1D9B-F173-1310D3C49C5F}"
  }
 }

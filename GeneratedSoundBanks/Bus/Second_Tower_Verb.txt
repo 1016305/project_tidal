@@ -1,0 +1,6 @@
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	2870411437	Second_Tower_Verb			\Default Work Unit\Reverbs\Second_Tower_Verb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	415841907	Space_Garage	Wwise RoomVerb			
+

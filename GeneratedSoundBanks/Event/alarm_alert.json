@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{1E815BA4-01BB-4C77-9539-03FAA272089E}",
     "Language": "SFX",
-    "Hash": "{FE219DF4-4C36-FA66-D568-DA7BB1C941D0}",
+    "Hash": "{677D70C8-F825-75CA-BC27-EBF92A0B89E5}",
     "ObjectPath": "alarm_alert",
     "ShortName": "alarm_alert",
     "Path": "Event/alarm_alert.bnk",
+    "Media": [
+     {
+      "Id": "155405967",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Movement\\boss_alarm_02.wav",
+      "Path": "Media/155405967.wem",
+      "CachePath": "C1/{C193524F-A3B8-30FE-D36F-427CFD8CF3AB}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "4151049751",
@@ -21,14 +32,27 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Boss Arena\\alarm_alert",
       "GUID": "{1E815BA4-01BB-4C77-9539-03FAA272089E}",
       "Color": "4",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "1.0468935",
+      "DurationMax": "1.0468935",
+      "MediaRefs": [
+       {
+        "Id": "155405967"
+       }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "2862970847",
+        "Name": "Canyon_Verb",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Canyon_Verb",
+        "GUID": "{23D9D23A-DF6F-4EAF-9312-283C9E53E7AE}",
+        "Color": "21"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{93087199-328E-2A05-B7C1-4C9DAD3C327E}"
+  "FileHash": "{EC768F0B-23F6-102B-66D1-9293F952FD36}"
  }
 }

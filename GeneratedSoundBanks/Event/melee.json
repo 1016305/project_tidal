@@ -1,0 +1,79 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "3208241451",
+    "Type": "Event",
+    "GUID": "{72D3CFE6-0358-4B20-B7D9-FB618633F9BD}",
+    "Language": "SFX",
+    "Hash": "{12020038-36D6-EBBC-6D0B-0327BEFF4292}",
+    "ObjectPath": "melee",
+    "ShortName": "melee",
+    "Path": "Event/melee.bnk",
+    "Media": [
+     {
+      "Id": "441567983",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "melee_ping.wav",
+      "Path": "Media/441567983.wem",
+      "CachePath": "6B/{6BCBD677-5E9B-7E8A-AFE9-93F11BBFB656}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "2080872166",
+       "Name": "Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "GUID": "{3FF9AD86-E377-40F8-970F-3D4EE73288B5}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "3208241451",
+      "Name": "melee",
+      "ObjectPath": "\\Events\\Default Work Unit\\Pings\\melee",
+      "GUID": "{72D3CFE6-0358-4B20-B7D9-FB618633F9BD}",
+      "Color": "12",
+      "DurationType": "OneShot",
+      "DurationMin": "0.46961933",
+      "DurationMax": "0.46961933",
+      "MediaRefs": [
+       {
+        "Id": "441567983"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "2080872166"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F32CFB26-E1E8-067B-1282-31D7883D7B08}"
+ }
+}

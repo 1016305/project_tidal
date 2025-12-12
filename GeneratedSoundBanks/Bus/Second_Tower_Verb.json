@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2870411437",
+    "Type": "Bus",
+    "GUID": "{DE5B648F-E157-41E2-AE09-466F3E32B8D3}",
+    "Language": "SFX",
+    "Hash": "{E99CF0C4-8EA7-BD17-FCBE-C16AA20A09B0}",
+    "ObjectPath": "Second_Tower_Verb",
+    "ShortName": "Second_Tower_Verb",
+    "Path": "Bus/Second_Tower_Verb.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "415841907",
+       "Name": "Space_Garage",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Space_Garage",
+       "GUID": "{1AF92D84-49DD-4BBC-8F29-6C6D10082B6E}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "2870411437",
+      "Name": "Second_Tower_Verb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Second_Tower_Verb",
+      "GUID": "{DE5B648F-E157-41E2-AE09-466F3E32B8D3}",
+      "Color": "17",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "415841907"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{575672E6-611C-C9E2-70AE-9BF568E7390D}"
+ }
+}

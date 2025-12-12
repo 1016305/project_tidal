@@ -1,0 +1,79 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "682605002",
+    "Type": "Event",
+    "GUID": "{5A2886A0-389E-4AC3-986C-684AD3AC4C8E}",
+    "Language": "SFX",
+    "Hash": "{E4E5E60C-BA6D-E38D-9E99-D802D098696B}",
+    "ObjectPath": "enemy_melee",
+    "ShortName": "enemy_melee",
+    "Path": "Event/enemy_melee.bnk",
+    "Media": [
+     {
+      "Id": "503151493",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_melee.wav",
+      "Path": "Media/503151493.wem",
+      "CachePath": "6E/{6E5E3491-89C6-E728-1A69-A76B2FEC8C5B}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "1459522457",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "GUID": "{2144284E-7ADD-4341-86A4-4E468BEC9A2D}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "682605002",
+      "Name": "enemy_melee",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_melee",
+      "GUID": "{5A2886A0-389E-4AC3-986C-684AD3AC4C8E}",
+      "Color": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "3.5890064",
+      "DurationMax": "3.9707673",
+      "MediaRefs": [
+       {
+        "Id": "503151493"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "1459522457"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7D5A4F04-0AF8-AA37-E2B7-7212961BE77B}"
+ }
+}

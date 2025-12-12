@@ -125,8 +125,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="door_console" ID="{1C18790D-4652-45F0-B402-E12F5FCFE49B}"/>
-						<Event Name="elevator" ID="{68A19D79-B2C2-4F98-93DB-26BB86587B30}"/>
+						<Event Name="door_console" ID="{1C18790D-4652-45F0-B402-E12F5FCFE49B}">
+							<ChildrenList>
+								<Action Name="" ID="{708C9464-94FB-49D8-BBBB-8F6E8FD08FE3}" ShortID="717067195">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="door_console_hum" ID="{15950C95-FA7C-4D13-9C33-B9FE38EEA4BE}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="elevator" ID="{68A19D79-B2C2-4F98-93DB-26BB86587B30}">
+							<ChildrenList>
+								<Action Name="" ID="{22D07515-B5D1-42B9-9C8D-1D48609C92C7}" ShortID="819160650">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="elevator_descend" ID="{F08DF0A7-8333-47F3-9B61-44533B014B6A}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="first_tower_amb" ID="{0A7549B4-58E1-4FB8-B992-B28C5770A0A3}"/>
 					</ChildrenList>
 				</Folder>
@@ -164,6 +184,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Enemy Combat Bark" ID="{2D32388D-11FA-4E1C-8E7D-280D895A2588}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D09FA71D-E8EF-44F4-8433-C5637460D364}" ShortID="283197609">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Idle Bark" ID="{C42FA56F-376C-4706-992D-C946FEF967B8}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -268,8 +298,60 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="enemy_fire" ID="{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}"/>
-						<Event Name="enemy_alert" ID="{CD7BF1D8-49A3-453C-8289-1BC072862E93}"/>
+						<Event Name="enemy_fire" ID="{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}">
+							<ChildrenList>
+								<Action Name="" ID="{48BB352F-E3D1-4E1F-AD9E-5F6EFF403BB6}" ShortID="639851448">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Gunfire" ID="{327F670E-4A2E-4BC8-8C62-C2C272BC65E5}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="enemy_alert" ID="{CD7BF1D8-49A3-453C-8289-1BC072862E93}">
+							<ChildrenList>
+								<Action Name="" ID="{A1B4F3AE-C706-4898-B3B2-7C89DFEE337C}" ShortID="625511699">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="enemy_alert" ID="{CCF26271-95B5-4E0A-84A8-858CCFE46776}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0AAE6A7E-057A-4016-9E19-16D7AC5545AE}" ShortID="6393889">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Idle Bark" ID="{C42FA56F-376C-4706-992D-C946FEF967B8}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="enemy_melee" ID="{5A2886A0-389E-4AC3-986C-684AD3AC4C8E}">
+							<ChildrenList>
+								<Action Name="" ID="{437E185E-2E98-42AD-824A-DE681A2B3FB8}" ShortID="701303466">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="enemy_melee" ID="{7A215DF6-9664-4BCD-93B6-8251C69502D9}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="enemy_plasma" ID="{7F377203-31E5-4F33-88A1-3D21DCD70F08}">
+							<ChildrenList>
+								<Action Name="" ID="{28E60F53-31F3-4D23-AFC1-FE3D421C752A}" ShortID="937789618">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Plasma Orb" ID="{95D39053-27F0-432F-B961-DA2391773F3E}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Weapons" ID="{2EE7421E-BB6F-4C36-8793-B9D3606086BC}" ShortID="543150394">
@@ -289,8 +371,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="assault_rifle_reload" ID="{AF325875-E58B-4D25-84F3-764AF865CF79}"/>
-						<Event Name="assault_rifle_empty_clip" ID="{A5412561-BC37-4B86-AF19-36223CDD0755}"/>
+						<Event Name="assault_rifle_reload" ID="{AF325875-E58B-4D25-84F3-764AF865CF79}">
+							<ChildrenList>
+								<Action Name="" ID="{89E5A428-F174-454B-A115-AEE5007EBC23}" ShortID="587008706">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="assault_rifle_reload" ID="{38BD2BF0-8B8F-427C-93A6-50FC9CBDE6B0}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="assault_rifle_empty_clip" ID="{A5412561-BC37-4B86-AF19-36223CDD0755}">
+							<ChildrenList>
+								<Action Name="" ID="{E992C3DE-301D-46E7-AA84-400A1EF46124}" ShortID="646144678">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mech, click" ID="{1B913B09-C1F6-42C7-81B9-B6C161C5BF35}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemy Boss" ID="{6BFEEC23-7573-497B-BD71-167B876C76E6}" ShortID="723647789">
@@ -299,19 +401,185 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="boss_intro_animation" ID="{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}"/>
-						<Event Name="boss_combat_barks" ID="{71599AD0-8564-4A70-8B5A-220F348FB2FB}"/>
-						<Event Name="boss_hit_barks" ID="{1C5E639C-224A-4297-9074-6C2B0D55F58A}"/>
-						<Event Name="boss_death" ID="{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}"/>
-						<Event Name="boss_movement" ID="{9A0CEEB0-7F1E-4248-A797-C84ECF701575}"/>
-						<Event Name="boss_weapon_fire" ID="{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}"/>
-						<Event Name="boss_coolingvent_open" ID="{CB456DD8-D658-4FE0-BDE8-9D9CD2619EB3}"/>
-						<Event Name="boss_coolingvent_close" ID="{5222F25B-473D-47B4-950D-946A83AADBA4}">
+						<Event Name="boss_intro_animation" ID="{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}">
 							<ChildrenList>
-								<Action Name="" ID="{0C71EC7E-7D32-4B31-B411-BAA84353C749}" ShortID="965898880"/>
+								<Action Name="" ID="{CC2908D6-0FDF-4ACE-95F7-36CDCFE5AE21}" ShortID="294421387">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="boss_intro_animation" ID="{CD8745A9-4C5D-4FA3-A7F2-45ECE9C48B04}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="boss_coolingvent_destroy" ID="{7D91000F-DC0F-4DF7-A397-494476201105}"/>
+						<Event Name="boss_combat_barks" ID="{71599AD0-8564-4A70-8B5A-220F348FB2FB}">
+							<PropertyList>
+								<Property Name="InstanceLimit" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{EA676CD5-856F-4876-845D-6F708D216866}" ShortID="953929084">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss Combat Bark" ID="{F1DDCAF8-AF85-4265-B928-B4E41F2D7D99}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_death" ID="{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}">
+							<ChildrenList>
+								<Action Name="" ID="{DA197649-877D-44D8-BBB0-35B7D4B41220}" ShortID="632120514">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1.5"/>
+										<Property Name="FadeInCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="enemy_boss_deathbark" ID="{ECADE2A4-3730-47F4-876B-79C7543F3F3D}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6C9522CA-5D88-4843-B0F2-6E14EB4E2B23}" ShortID="987063367">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="boss_death_animation" ID="{EE8DCC90-0B77-4195-A057-E64284B3EF0B}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{418C0A4F-FE86-4D41-8849-59E057E0C07A}" ShortID="879329778">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss Combat Bark" ID="{F1DDCAF8-AF85-4265-B928-B4E41F2D7D99}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F0FA72BC-E74F-4411-B1AF-822974B640CF}" ShortID="233163849">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss Hit Bark" ID="{7C1B3B55-14F6-4B38-B354-075335696B22}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_movement" ID="{9A0CEEB0-7F1E-4248-A797-C84ECF701575}">
+							<ChildrenList>
+								<Action Name="" ID="{44BF6FCC-1181-4DBF-9B3E-CC54EB5EE71D}" ShortID="182025535">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="boss_movement_01" ID="{4ADA4061-CE5B-42D7-9DD8-BB38E5C85F2A}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_weapon_fire" ID="{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}">
+							<ChildrenList>
+								<Action Name="" ID="{83FA6E02-4E4E-4949-8CA1-1A0C0797BE64}" ShortID="916885015">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy - Big Laser v01" ID="{09BAC0CD-5F40-4D9C-A502-082F5B71EAA7}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_coolingvent_open" ID="{CB456DD8-D658-4FE0-BDE8-9D9CD2619EB3}">
+							<ChildrenList>
+								<Action Name="" ID="{AFD8F898-C65D-45E8-97A8-2490835126A9}" ShortID="881290782">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cooling_vent_open" ID="{90BA1819-3631-4A5B-8D83-F74057F6F459}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_coolingvent_close" ID="{5222F25B-473D-47B4-950D-946A83AADBA4}">
+							<ChildrenList>
+								<Action Name="" ID="{81D24EC7-BEE2-45AE-BD07-1562520A884D}" ShortID="131853068">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cooling_vent_closed" ID="{8D006DAE-D336-40FC-BA2B-A35B01E6CDAC}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_coolingvent_destroy" ID="{7D91000F-DC0F-4DF7-A397-494476201105}">
+							<ChildrenList>
+								<Action Name="" ID="{47D8A64B-A496-4C21-BE1D-3251D6CC77DA}" ShortID="290130707">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cooling Vents Destroyed" ID="{65E07E6B-1023-4D47-AEFB-3C2D30157AD1}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{ACF32606-2DCD-4302-B7B4-94E59C5FB393}" ShortID="507161240">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.5">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{7EF6DE52-83D2-41ED-9A25-39C2CFA201A3}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.5"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Hit Bark" ID="{6FD402FF-AC95-49DC-8BE9-DC67A1EAAE23}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B38F5E42-2DE0-405B-B9EA-82EB8A99B4E4}" ShortID="743839955">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss Combat Bark" ID="{F1DDCAF8-AF85-4265-B928-B4E41F2D7D99}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_movement_stop" ID="{4822A875-3423-4C31-AAAE-E16B49019B35}">
+							<ChildrenList>
+								<Action Name="" ID="{DC745A10-7461-42EE-A068-76B182DDA9C1}" ShortID="66744133">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Movement Stop" ID="{635B09C4-C136-407B-A1FB-41E2298CAF1D}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{25621B96-0CFD-4EB3-BDCE-084963A8D942}" ShortID="763692004">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="boss_movement_01" ID="{4ADA4061-CE5B-42D7-9DD8-BB38E5C85F2A}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Second Tower" ID="{4D78BF6E-6CA4-407D-A316-99D2E3FAF8F2}" ShortID="958894495">
@@ -321,7 +589,17 @@
 					</PropertyList>
 					<ChildrenList>
 						<Event Name="second_tower_amb" ID="{0680BB3C-6F96-4BBA-AA89-908140A2DF2E}"/>
-						<Event Name="second_tower_converyorbelt" ID="{5265D1D1-E44C-4096-856D-5885F6B536CB}"/>
+						<Event Name="second_tower_converyorbelt" ID="{5265D1D1-E44C-4096-856D-5885F6B536CB}">
+							<ChildrenList>
+								<Action Name="" ID="{AF5C3885-CDC3-4682-8BD1-50CC89B9CBBF}" ShortID="76805398">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="toxic_waste_disposal_conveyorbelt" ID="{BABCCA54-F221-4E5B-8B6C-698A053C2D6F}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Third Tower" ID="{6998538F-4A40-4947-A391-2A8289337198}" ShortID="702691969">
@@ -330,9 +608,39 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="alarm" ID="{F813228F-7B1C-4629-95C9-DB3F537C3764}"/>
-						<Event Name="speaker" ID="{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}"/>
-						<Event Name="third_tower_conveyorbelt" ID="{BA9FE5AD-7631-4FA0-984B-293B17A93785}"/>
+						<Event Name="alarm" ID="{F813228F-7B1C-4629-95C9-DB3F537C3764}">
+							<ChildrenList>
+								<Action Name="" ID="{E33227BD-E49C-4A4F-97EC-D1DCAED8A7B6}" ShortID="1029740651">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="alarms" ID="{3C069499-BDB2-4E66-9FB0-EEA00EC1CBFB}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="speaker" ID="{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}">
+							<ChildrenList>
+								<Action Name="" ID="{6C03AF3B-DF23-4A81-9570-B486378A1BE4}" ShortID="826734542">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Speakers" ID="{C448F981-1FFD-4B76-8B8C-1A2CB500BA95}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="third_tower_conveyorbelt" ID="{BA9FE5AD-7631-4FA0-984B-293B17A93785}">
+							<ChildrenList>
+								<Action Name="" ID="{42F10718-7E68-4F73-9296-5041853DDA94}" ShortID="130579981">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="factory_conveyorbelt" ID="{78113758-3AC7-4961-8DC8-096A0446E44C}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="third_tower_amb" ID="{1FB55A85-BA2B-476C-B981-7CF7B6A9F445}"/>
 					</ChildrenList>
 				</Folder>
@@ -345,14 +653,44 @@
 						<Event Name="canyon_amb" ID="{B949D462-D727-4E77-A282-E1465394076D}"/>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Bullet Pings" ID="{0444B75D-6FC6-494B-9DC2-937AE8617596}" ShortID="216561502">
+				<Folder Name="Pings" ID="{0444B75D-6FC6-494B-9DC2-937AE8617596}" ShortID="216561502">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="12"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="enemy" ID="{EBA2F312-5FB1-4C0D-B46B-436888974182}"/>
-						<Event Name="player" ID="{295BFF33-04A9-48E5-B18A-536E8128CD09}"/>
+						<Event Name="enemy" ID="{EBA2F312-5FB1-4C0D-B46B-436888974182}">
+							<ChildrenList>
+								<Action Name="" ID="{CA77D0EE-0919-47B2-A583-82F4C58D19C8}" ShortID="815608334">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy" ID="{DCD08C8A-58FF-4F34-8DEB-44D0B546E4A8}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="player" ID="{295BFF33-04A9-48E5-B18A-536E8128CD09}">
+							<ChildrenList>
+								<Action Name="" ID="{675E4733-657D-4608-9EC2-59BBDF83266F}" ShortID="128907504">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player" ID="{51D431AF-49C8-4239-B6CC-E6FDDFF1F31C}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E7190731-B1E1-4F56-AE31-310E27E0557E}" ShortID="853800001">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Plasma Orb" ID="{95D39053-27F0-432F-B961-DA2391773F3E}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="metal" ID="{18273E7B-63FF-4436-9E82-C529AFBA5CC8}">
 							<ChildrenList>
 								<Action Name="" ID="{C5D00D89-94A9-4835-B6C8-E99043311EF5}" ShortID="438203452">
@@ -364,14 +702,45 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="dirt_grass" ID="{F38718AC-1CC8-4493-ABC9-82387EC5816C}"/>
-						<Event Name="boss" ID="{203BF74C-3EC5-49CD-8C05-64EE16CAE55A}"/>
+						<Event Name="dirt_grass" ID="{F38718AC-1CC8-4493-ABC9-82387EC5816C}">
+							<ChildrenList>
+								<Action Name="" ID="{027681D6-FA9A-45AD-8FAF-FBB7F380786B}" ShortID="119829147">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rock" ID="{325AEBB6-87E9-4F0E-9D6C-3D0D3EED771D}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss" ID="{203BF74C-3EC5-49CD-8C05-64EE16CAE55A}">
+							<ChildrenList>
+								<Action Name="" ID="{1748470A-DC77-47DB-ACED-9F383A631822}" ShortID="537514953">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy Boss" ID="{911BF7E4-C141-4E57-9D98-871AD0D40CAE}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="assorted_pings" ID="{70E8D780-CEB4-421D-BF51-8F23F81B2DA1}">
 							<ChildrenList>
 								<Action Name="" ID="{7724F520-0ED7-4197-9EE0-9EC36C60FDF9}" ShortID="816507481">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="AssortedPings" ID="{B190190D-F135-4106-A29E-B15A839007B1}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="melee" ID="{72D3CFE6-0358-4B20-B7D9-FB618633F9BD}">
+							<ChildrenList>
+								<Action Name="" ID="{5B3A9E40-C5DB-420B-86F5-D477F77F7C51}" ShortID="456889040">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="melee_ping" ID="{4127BD6B-77E8-45C3-9DB2-C834F10B6157}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -413,6 +782,9 @@
 						<Event Name="movement" ID="{F6890812-9B8F-4E90-BC0E-7EEF93E59808}">
 							<ChildrenList>
 								<Action Name="" ID="{CB66BBA7-2597-4B03-8480-D25B6E4D1744}" ShortID="938200200">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="79"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Movement" ID="{00C41F13-4394-4370-8EB7-E401A4EF0654}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
@@ -445,7 +817,17 @@
 					</PropertyList>
 					<ChildrenList>
 						<Event Name="arena_amb" ID="{47CCD088-37D4-47D4-B51C-DB56FEDD6D72}"/>
-						<Event Name="alarm_alert" ID="{1E815BA4-01BB-4C77-9539-03FAA272089E}"/>
+						<Event Name="alarm_alert" ID="{1E815BA4-01BB-4C77-9539-03FAA272089E}">
+							<ChildrenList>
+								<Action Name="" ID="{F25ADDE3-FBE5-4544-B55D-80432E295758}" ShortID="798280212">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="boss_alarm_02" ID="{0115506F-D62A-44DE-B3F8-0ED2D1C6E888}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{7870C054-905B-4908-93B7-8DF7177601C2}" ShortID="402821505">
@@ -454,9 +836,39 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="menu_click" ID="{3C8A4119-9658-4B45-A150-236263E3D0C3}"/>
-						<Event Name="menu_confirm" ID="{3F529DF2-03BD-44FD-85B6-639C953D7E23}"/>
-						<Event Name="menu_cancel" ID="{19A600E6-E371-463E-804C-B55E9891369F}"/>
+						<Event Name="menu_click" ID="{3C8A4119-9658-4B45-A150-236263E3D0C3}">
+							<ChildrenList>
+								<Action Name="" ID="{22620107-95D5-4C87-85DC-7DC2EBFA2758}" ShortID="252696295">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ui_menu_click" ID="{6D635E25-17A7-4016-97D0-571D0DB4F1C3}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="menu_confirm" ID="{3F529DF2-03BD-44FD-85B6-639C953D7E23}">
+							<ChildrenList>
+								<Action Name="" ID="{2C34AD2F-0BBA-4E51-AD87-47304EE75309}" ShortID="439691455">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ui_menu_confirm" ID="{F41FF927-6A0F-446A-BFF8-9467C3606574}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="menu_cancel" ID="{19A600E6-E371-463E-804C-B55E9891369F}">
+							<ChildrenList>
+								<Action Name="" ID="{CBBEF0C0-1D92-477A-A40A-2C8B4F8CF3D4}" ShortID="383885179">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ui_menu_cancel" ID="{0FAD98D4-58B9-4DA8-BC22-A069EDDAA961}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="StartAtmos" ID="{D554D848-29E0-40AC-95C3-E352BC300ACC}">

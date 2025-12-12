@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F6890812-9B8F-4E90-BC0E-7EEF93E59808}",
     "Language": "SFX",
-    "Hash": "{D19F58E5-4908-8EDB-E4BF-024988772901}",
+    "Hash": "{6A111C74-90A5-EA8F-D0AA-F88424CB7A17}",
     "ObjectPath": "movement",
     "ShortName": "movement",
     "Path": "Event/movement.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_01.wav",
       "Path": "Media/20452153.wem",
-      "CachePath": "BE/{BE62E135-09CC-09F6-5228-9D9414964F95}.wem"
+      "CachePath": "DF/{DF167D82-2D44-20E1-1D1E-4430ABF3D168}.wem"
      },
      {
       "Id": "220202397",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_02.wav",
       "Path": "Media/220202397.wem",
-      "CachePath": "D9/{D93177C6-E303-E1FB-B9BC-0EF6C368483E}.wem"
+      "CachePath": "A8/{A8612D6B-79DD-6BC1-7DA4-B932BF99529E}.wem"
      },
      {
       "Id": "468160147",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_03.wav",
       "Path": "Media/468160147.wem",
-      "CachePath": "89/{89D74854-BAD4-D772-504C-A0141138A9A0}.wem"
+      "CachePath": "59/{59D077AA-B1FA-5764-4FC2-EB413200C2D5}.wem"
      },
      {
       "Id": "529294884",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_05.wav",
       "Path": "Media/529294884.wem",
-      "CachePath": "15/{15013C0C-0DDA-138A-7DF8-88E8848EBB27}.wem"
+      "CachePath": "8C/{8CF70195-3029-2DA5-BCD5-30919FFE0148}.wem"
      },
      {
       "Id": "534996132",
@@ -58,9 +58,21 @@
       "Location": "Loose",
       "ShortName": "Character\\Equipment Foley\\equipment_mvmnt_04.wav",
       "Path": "Media/534996132.wem",
-      "CachePath": "98/{9884442C-30E2-CAD1-62B6-587A8895F890}.wem"
+      "CachePath": "E0/{E0361CA0-F2E0-6CA3-4979-2BBFF503CBE3}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2129636626",
@@ -69,7 +81,7 @@
       "GUID": "{F6890812-9B8F-4E90-BC0E-7EEF93E59808}",
       "Color": "1",
       "DurationType": "OneShot",
-      "DurationMin": "0.26279444",
+      "DurationMin": "0",
       "DurationMax": "0.52028483",
       "MediaRefs": [
        {
@@ -87,11 +99,18 @@
        {
         "Id": "534996132"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{7B6397F9-D833-1193-0FE3-81BB9ECBA51B}"
+  "FileHash": "{07D1CE6E-E1B3-C909-3982-CFF30B185C6E}"
  }
 }

@@ -1,3 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	4240339038	enemy_fire			\Default Work Unit\Enemy\enemy_fire	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+

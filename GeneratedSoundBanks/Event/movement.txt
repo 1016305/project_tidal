@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2129636626	movement			\Default Work Unit\Player\movement	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+

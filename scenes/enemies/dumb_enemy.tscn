@@ -1,13 +1,16 @@
-[gd_scene load_steps=49 format=4 uid="uid://ctui55budl18a"]
+[gd_scene load_steps=52 format=4 uid="uid://ctui55budl18a"]
 
 [ext_resource type="Script" uid="uid://b0kjwp2j62s63" path="res://scripts/enemy/dumb enemy/dumb_enemy.gd" id="1_6ixqb"]
 [ext_resource type="Material" uid="uid://d34c4yhjr3qps" path="res://models/enemies/the enemy/enemy_material.tres" id="2_8v64s"]
 [ext_resource type="WwiseEvent" uid="uid://1w04q3kn7r23" path="res://Wwise/resources/Event/{D69E7259-D6F4-4333-937A-A808AD223C7F}.tres" id="2_67dsm"]
+[ext_resource type="WwiseEvent" uid="uid://cbmgmadsk883w" path="res://Wwise/resources/Event/{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}.tres" id="3_1gpoh"]
 [ext_resource type="Shader" uid="uid://d0fnqb3cf58ru" path="res://materials/shaders/enemy_thruster.tres" id="3_2x3kc"]
 [ext_resource type="Script" uid="uid://qyokm0db7eaq" path="res://scenes/enemies/generic_hitbox.gd" id="3_cbrdg"]
-[ext_resource type="WwiseEvent" uid="uid://dh7o1y6xbe6tk" path="res://Wwise/resources/Event/{6A549BA7-1316-4482-9C73-C8A236DB9AF1}.tres" id="3_tknad"]
 [ext_resource type="WwiseEvent" uid="uid://dm7awsho7qc82" path="res://Wwise/resources/Event/{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}.tres" id="4_57l2t"]
 [ext_resource type="WwiseEvent" uid="uid://b81l34j8a1d36" path="res://Wwise/resources/Event/{C11A5FAA-D601-48A5-8892-7869C8301D6B}.tres" id="4_fastd"]
+[ext_resource type="WwiseEvent" uid="uid://boninavgwavpi" path="res://Wwise/resources/Event/{CD7BF1D8-49A3-453C-8289-1BC072862E93}.tres" id="5_jlgy8"]
+[ext_resource type="WwiseEvent" uid="uid://cswjpf7uxcsgo" path="res://Wwise/resources/Event/{5A2886A0-389E-4AC3-986C-684AD3AC4C8E}.tres" id="6_7vj6c"]
+[ext_resource type="WwiseEvent" uid="uid://buv5bxwq3mh6" path="res://Wwise/resources/Event/{1FA8C10E-718A-46AB-B604-4D02BA976176}.tres" id="8_qef6r"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8v64s"]
 
@@ -1722,9 +1725,12 @@ _data = {
 [node name="dumb enemy" type="CharacterBody3D"]
 script = ExtResource("1_6ixqb")
 combat_barks = ExtResource("2_67dsm")
-shooting_sounds = ExtResource("3_tknad")
+shooting_sounds = ExtResource("3_1gpoh")
 hovering_sounds = ExtResource("4_fastd")
+alert_sounds = ExtResource("5_jlgy8")
+melee_sounds = ExtResource("6_7vj6c")
 death_sounds = ExtResource("4_57l2t")
+idle_sounds = ExtResource("8_qef6r")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 visible = false

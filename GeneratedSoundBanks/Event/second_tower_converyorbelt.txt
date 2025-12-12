@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3971991686	second_tower_converyorbelt			\Default Work Unit\Second Tower\second_tower_converyorbelt	
 
+Effect plug-ins	ID	Name	Type				Notes
+	2080872166	Brick_Wall_Minus_6dB_Peak_Fast_Release	Wwise Peak Limiter			
+

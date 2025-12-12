@@ -27,9 +27,9 @@ namespace AK
         static const AkUniqueID BOSS_COOLINGVENT_DESTROY = 3802256100U;
         static const AkUniqueID BOSS_COOLINGVENT_OPEN = 536492462U;
         static const AkUniqueID BOSS_DEATH = 4052139381U;
-        static const AkUniqueID BOSS_HIT_BARKS = 1644873300U;
         static const AkUniqueID BOSS_INTRO_ANIMATION = 3786392610U;
         static const AkUniqueID BOSS_MOVEMENT = 2663270342U;
+        static const AkUniqueID BOSS_MOVEMENT_STOP = 1925754261U;
         static const AkUniqueID BOSS_WEAPON_FIRE = 1510202224U;
         static const AkUniqueID BUTTON = 977454165U;
         static const AkUniqueID CANYON_AMB = 1984278272U;
@@ -42,7 +42,9 @@ namespace AK
         static const AkUniqueID ENEMY_ALERT = 493036092U;
         static const AkUniqueID ENEMY_DEATH = 1205999388U;
         static const AkUniqueID ENEMY_FIRE = 4240339038U;
+        static const AkUniqueID ENEMY_MELEE = 682605002U;
         static const AkUniqueID ENEMY_MOVEMENT = 62399725U;
+        static const AkUniqueID ENEMY_PLASMA = 4283809968U;
         static const AkUniqueID FIRST_TOWER_AMB = 1347192966U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID HEALTH_PICKUP = 3731941266U;
@@ -51,6 +53,7 @@ namespace AK
         static const AkUniqueID LIGHTS_ON = 1063352154U;
         static const AkUniqueID LOW_HEALTH = 72790338U;
         static const AkUniqueID LOW_HEALTH_STOP = 2143495873U;
+        static const AkUniqueID MELEE = 3208241451U;
         static const AkUniqueID MENU_CANCEL = 3180909377U;
         static const AkUniqueID MENU_CLICK = 760777789U;
         static const AkUniqueID MENU_CONFIRM = 4046753069U;
@@ -127,7 +130,11 @@ namespace AK
 
     namespace AUX_BUSSES
     {
+        static const AkUniqueID BOSS_ARENA_VERB = 4068741826U;
+        static const AkUniqueID CANYON_VERB = 2862970847U;
         static const AkUniqueID FIRST_TOWER_VERB = 2540843761U;
+        static const AkUniqueID SECOND_TOWER_VERB = 2870411437U;
+        static const AkUniqueID THIRD_TOWER_VERB = 518384578U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

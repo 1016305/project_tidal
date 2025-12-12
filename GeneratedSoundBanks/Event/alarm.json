@@ -10,10 +10,33 @@
     "Type": "Event",
     "GUID": "{F813228F-7B1C-4629-95C9-DB3F537C3764}",
     "Language": "SFX",
-    "Hash": "{07F9A3A1-AD17-AC3F-61AC-73ECF48388B5}",
+    "Hash": "{F2F16BC3-B2C7-6E43-A699-551603CE67BA}",
     "ObjectPath": "alarm",
     "ShortName": "alarm",
     "Path": "Event/alarm.bnk",
+    "Media": [
+     {
+      "Id": "986309620",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "alarms.wav",
+      "Path": "Media/986309620.wem",
+      "CachePath": "57/{5709ED42-B182-806C-872C-B5BC6B5378C7}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2258521792",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "GUID": "{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "855317084",
@@ -21,14 +44,34 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Third Tower\\alarm",
       "GUID": "{F813228F-7B1C-4629-95C9-DB3F537C3764}",
       "Color": "4",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "90.075645",
+      "DurationMax": "90.075645",
+      "MediaRefs": [
+       {
+        "Id": "986309620"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2258521792"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "518384578",
+        "Name": "Third_Tower_Verb",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Third_Tower_Verb",
+        "GUID": "{5594FFD1-A5C6-4E32-9C9A-3B430EFB420B}",
+        "Color": "25"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{354D839C-66CB-7C8B-B1B7-D0B184474818}"
+  "FileHash": "{8C59038A-65D3-A80C-36F1-F114C36B312B}"
  }
 }

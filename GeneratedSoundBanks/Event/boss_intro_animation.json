@@ -10,10 +10,33 @@
     "Type": "Event",
     "GUID": "{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}",
     "Language": "SFX",
-    "Hash": "{61857DB5-8079-FD68-ED6A-855BF55A5074}",
+    "Hash": "{8D030813-6698-405A-D30E-251D09D67D10}",
     "ObjectPath": "boss_intro_animation",
     "ShortName": "boss_intro_animation",
     "Path": "Event/boss_intro_animation.bnk",
+    "Media": [
+     {
+      "Id": "556035762",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Animations\\boss_intro_animation.wav",
+      "Path": "Media/556035762.wem",
+      "CachePath": "53/{539288C0-3304-E083-5970-DB244A6BD14A}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2998002419",
+       "Name": "Boost_3dB_10KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Shelving EQ\\High Shelf\\Boost_3dB_10KHz",
+       "GUID": "{59632554-9396-4E15-889E-7A2F5458DEC3}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3786392610",
@@ -21,14 +44,25 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_intro_animation",
       "GUID": "{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}",
       "Color": "10",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "11.334014",
+      "DurationMax": "11.334014",
+      "MediaRefs": [
+       {
+        "Id": "556035762"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2998002419"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{F2FA0F11-94EB-4F65-1338-F019823AE47B}"
+  "FileHash": "{AE1E3DA2-DA35-3860-5267-4829F3D796FB}"
  }
 }

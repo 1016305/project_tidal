@@ -10,10 +10,42 @@
     "Type": "Event",
     "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
     "Language": "SFX",
-    "Hash": "{0617082A-3149-B893-D931-71CAC95B94FA}",
+    "Hash": "{DA97C5F8-3F22-4559-337D-FBDC9CCFBC55}",
     "ObjectPath": "boss_death",
     "ShortName": "boss_death",
     "Path": "Event/boss_death.bnk",
+    "Media": [
+     {
+      "Id": "469403989",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Animations\\boss_death_animation.wav",
+      "Path": "Media/469403989.wem",
+      "CachePath": "36/{36AA9F93-0C61-F751-8941-3C6C11AE43F5}.wem"
+     },
+     {
+      "Id": "593340090",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Boss\\Barks\\enemy_boss_deathbark.wav",
+      "Path": "Media/593340090.wem",
+      "CachePath": "0D/{0DA54C79-E24D-3EF7-84C0-DAB13C93EBD9}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2258521792",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "GUID": "{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "4052139381",
@@ -21,14 +53,28 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_death",
       "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
       "Color": "10",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "11.278279",
+      "DurationMax": "11.278279",
+      "MediaRefs": [
+       {
+        "Id": "469403989"
+       },
+       {
+        "Id": "593340090"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2258521792"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{1BF3ABA7-D71B-6010-D340-A3B54ED84347}"
+  "FileHash": "{C94A5116-15C9-8B4C-7E55-F61A4B210971}"
  }
 }

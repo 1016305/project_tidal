@@ -150,7 +150,7 @@
 							<PropertyList>
 								<Property Name="Ratio" Type="Real32" Value="50"/>
 								<Property Name="ReleaseTime" Type="Real32" Value="0.02"/>
-								<Property Name="Threshold" Type="Real32" Value="-6"/>
+								<Property Name="Threshold" Type="Real32" Value="-11.6"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Brick_Wall_Minus_6dB_Peak_Slow_Release" ID="{E0BA4DE6-A10C-49AF-A3E4-C5F71BA79EE6}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
@@ -190,14 +190,15 @@
 							<PropertyList>
 								<Property Name="Ratio" Type="Real32" Value="50"/>
 								<Property Name="ReleaseTime" Type="Real32" Value="0.02"/>
-								<Property Name="Threshold" Type="Real32" Value="-1"/>
+								<Property Name="Threshold" Type="Real32" Value="-8.5"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Brick_Wall_Minus_1dB_Peak_Slow_Release" ID="{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
 							<PropertyList>
+								<Property Name="OutputGain" Type="Real32" Value="2.9"/>
 								<Property Name="Ratio" Type="Real32" Value="50"/>
 								<Property Name="ReleaseTime" Type="Real32" Value="0.25"/>
-								<Property Name="Threshold" Type="Real32" Value="-1"/>
+								<Property Name="Threshold" Type="Real32" Value="-5.5"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Nasty_Radio" ID="{7E6FAC41-3332-47EA-9AC6-625A78B63226}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
@@ -225,7 +226,6 @@
 												<Property Name="OnOffBand1" Type="bool" Value="False"/>
 												<Property Name="OnOffBand2" Type="bool" Value="False"/>
 												<Property Name="OnOffBand3" Type="bool" Value="True"/>
-												<Property Name="OutputLevel" Type="Real32" Value="-7.5"/>
 											</PropertyList>
 										</Effect>
 										<Effect Name="Cut_3dB_10KHz" ID="{83EAB3EA-A43D-470F-A183-7F02DAA44A4D}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
@@ -494,16 +494,16 @@
 										</Effect>
 										<Effect Name="Club_Music_Distant_01" ID="{972799F5-C6E5-4E4F-83E3-95AA307CDFD1}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 											<PropertyList>
+												<Property Name="FilterTypeBand2" Type="int32" Value="1"/>
 												<Property Name="FilterTypeBand3" Type="int32" Value="7"/>
 												<Property Name="FrequencyBand1" Type="Real32" Value="150"/>
-												<Property Name="FrequencyBand2" Type="Real32" Value="275"/>
-												<Property Name="FrequencyBand3" Type="Real32" Value="703.42"/>
+												<Property Name="FrequencyBand2" Type="Real32" Value="26.01864"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="669.134"/>
 												<Property Name="GainBand1" Type="Real32" Value="3"/>
-												<Property Name="GainBand2" Type="Real32" Value="4"/>
-												<Property Name="OnOffBand2" Type="bool" Value="False"/>
+												<Property Name="GainBand2" Type="Real32" Value="2.703072"/>
 												<Property Name="OnOffBand3" Type="bool" Value="True"/>
-												<Property Name="OutputLevel" Type="Real32" Value="-6"/>
-												<Property Name="QFactorBand3" Type="Real32" Value="0.8144001"/>
+												<Property Name="QFactorBand3" Type="Real32" Value="0.8544976"/>
+												<Property Name="RolloffRateBand2" Type="int32" Value="48"/>
 											</PropertyList>
 										</Effect>
 										<Effect Name="Club_Music_Distant_02" ID="{3E941520-4EE5-423A-A522-789936746CAD}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
@@ -609,10 +609,11 @@
 									<PropertyList>
 										<Property Name="FilterTypeBand1" Type="int32" Value="8"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-										<Property Name="FrequencyBand1" Type="Real32" Value="78.59727"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="1011.378"/>
 										<Property Name="FrequencyBand3" Type="Real32" Value="20000"/>
 										<Property Name="OnOffBand2" Type="bool" Value="False"/>
-										<Property Name="QFactorBand1" Type="Real32" Value="0.8806521"/>
+										<Property Name="QFactorBand1" Type="Real32" Value="0.6809198"/>
+										<Property Name="RolloffRateBand1" Type="int32" Value="24"/>
 									</PropertyList>
 								</Effect>
 							</ChildrenList>
@@ -1403,21 +1404,23 @@
 								</Effect>
 								<Effect Name="Aluminium_Tank" ID="{0D20C91A-F750-47E0-AE32-00E5F2AA1272}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>
-										<Property Name="DecayTime" Type="Real32" Value="10"/>
-										<Property Name="Density" Type="Real32" Value="100"/>
+										<Property Name="DecayTime" Type="Real32" Value="9.1"/>
+										<Property Name="Density" Type="Real32" Value="89"/>
 										<Property Name="Diffusion" Type="Real32" Value="53"/>
-										<Property Name="ERLevel" Type="Real32" Value="-25"/>
+										<Property Name="ERLevel" Type="Real32" Value="-21"/>
 										<Property Name="ERPattern" Type="int32" Value="30"/>
+										<Property Name="EnableToneControls" Type="bool" Value="True"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="490"/>
+										<Property Name="Filter1Gain" Type="Real32" Value="-5"/>
 										<Property Name="Filter2Freq" Type="Real32" Value="2200"/>
 										<Property Name="Filter2InsertPos" Type="int32" Value="0"/>
 										<Property Name="Filter2Q" Type="Real32" Value="0.1"/>
 										<Property Name="Filter3Freq" Type="Real32" Value="15000"/>
-										<Property Name="Filter3Gain" Type="Real32" Value="-3.5"/>
+										<Property Name="Filter3Gain" Type="Real32" Value="9"/>
 										<Property Name="HFDamping" Type="Real32" Value="10"/>
 										<Property Name="PreDelay" Type="Real32" Value="100"/>
 										<Property Name="Quality" Type="int32" Value="6"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-14"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-12"/>
 										<Property Name="RoomSize" Type="Real32" Value="71"/>
 										<Property Name="StereoWidth" Type="Real32" Value="130"/>
 									</PropertyList>
@@ -1427,19 +1430,23 @@
 										<Property Name="DecayTime" Type="Real32" Value="4.8"/>
 										<Property Name="Density" Type="Real32" Value="94"/>
 										<Property Name="Diffusion" Type="Real32" Value="53"/>
+										<Property Name="DryLevel" Type="Real32" Value="-4.3"/>
 										<Property Name="ERLevel" Type="Real32" Value="-22"/>
 										<Property Name="ERPattern" Type="int32" Value="30"/>
+										<Property Name="EnableToneControls" Type="bool" Value="True"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="590"/>
-										<Property Name="Filter1Gain" Type="Real32" Value="-7"/>
+										<Property Name="Filter1Gain" Type="Real32" Value="-4"/>
 										<Property Name="Filter2Freq" Type="Real32" Value="2200"/>
 										<Property Name="Filter2InsertPos" Type="int32" Value="0"/>
 										<Property Name="Filter2Q" Type="Real32" Value="0.1"/>
-										<Property Name="Filter3Freq" Type="Real32" Value="12000"/>
-										<Property Name="Filter3Gain" Type="Real32" Value="2.5"/>
+										<Property Name="Filter3Curve" Type="int32" Value="0"/>
+										<Property Name="Filter3Freq" Type="Real32" Value="12190"/>
+										<Property Name="Filter3Gain" Type="Real32" Value="-3"/>
 										<Property Name="HFDamping" Type="Real32" Value="5.65"/>
 										<Property Name="PreDelay" Type="Real32" Value="125"/>
 										<Property Name="Quality" Type="int32" Value="12"/>
-										<Property Name="RoomShape" Type="Real32" Value="60"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-10"/>
+										<Property Name="RoomShape" Type="Real32" Value="27"/>
 										<Property Name="RoomSize" Type="Real32" Value="71"/>
 										<Property Name="StereoWidth" Type="Real32" Value="140"/>
 									</PropertyList>
@@ -1449,7 +1456,7 @@
 										<Property Name="DecayTime" Type="Real32" Value="5.8"/>
 										<Property Name="Density" Type="Real32" Value="100"/>
 										<Property Name="Diffusion" Type="Real32" Value="53"/>
-										<Property Name="DryLevel" Type="Real32" Value="-96"/>
+										<Property Name="DryLevel" Type="Real32" Value="-34"/>
 										<Property Name="ERLevel" Type="Real32" Value="-6"/>
 										<Property Name="ERPattern" Type="int32" Value="29"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="490"/>
@@ -1462,7 +1469,7 @@
 										<Property Name="HFDamping" Type="Real32" Value="7.05"/>
 										<Property Name="PreDelay" Type="Real32" Value="200"/>
 										<Property Name="Quality" Type="int32" Value="6"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-15"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-18"/>
 										<Property Name="RoomShape" Type="Real32" Value="81"/>
 										<Property Name="RoomSize" Type="Real32" Value="100"/>
 										<Property Name="StereoWidth" Type="Real32" Value="120"/>
@@ -1483,7 +1490,7 @@
 										<Property Name="Filter3InsertPos" Type="int32" Value="1"/>
 										<Property Name="HFDamping" Type="Real32" Value="1.4"/>
 										<Property Name="PreDelay" Type="Real32" Value="128"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-16"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-18"/>
 										<Property Name="RoomShape" Type="Real32" Value="69"/>
 										<Property Name="RoomSize" Type="Real32" Value="38"/>
 										<Property Name="StereoWidth" Type="Real32" Value="150"/>
@@ -1509,7 +1516,7 @@
 										<Property Name="HFDamping" Type="Real32" Value="5.05"/>
 										<Property Name="PreDelay" Type="Real32" Value="145"/>
 										<Property Name="Quality" Type="int32" Value="12"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-37"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-21"/>
 										<Property Name="RoomSize" Type="Real32" Value="73"/>
 										<Property Name="StereoWidth" Type="Real32" Value="28"/>
 									</PropertyList>
