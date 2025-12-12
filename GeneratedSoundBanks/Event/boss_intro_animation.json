@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}",
     "Language": "SFX",
-    "Hash": "{8D030813-6698-405A-D30E-251D09D67D10}",
+    "Hash": "{58F5D98D-8339-D28C-BF0B-5F11A0165337}",
     "ObjectPath": "boss_intro_animation",
     "ShortName": "boss_intro_animation",
     "Path": "Event/boss_intro_animation.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Animations\\boss_intro_animation.wav",
       "Path": "Media/556035762.wem",
-      "CachePath": "53/{539288C0-3304-E083-5970-DB244A6BD14A}.wem"
+      "CachePath": "1F/{1F3FCFCA-C7C7-C7D5-0D16-E0A986019D97}.wem"
      }
     ],
     "Plugins": {
@@ -63,6 +63,6 @@
     ]
    }
   ],
-  "FileHash": "{AE1E3DA2-DA35-3860-5267-4829F3D796FB}"
+  "FileHash": "{C3BB1505-1C61-8A8E-EC75-BF912D52B858}"
  }
 }

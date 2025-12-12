@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{72D3CFE6-0358-4B20-B7D9-FB618633F9BD}",
     "Language": "SFX",
-    "Hash": "{12020038-36D6-EBBC-6D0B-0327BEFF4292}",
+    "Hash": "{738A0B99-D328-DBEB-A8D9-3DF2E1F3CC01}",
     "ObjectPath": "melee",
     "ShortName": "melee",
     "Path": "Event/melee.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "melee_ping.wav",
       "Path": "Media/441567983.wem",
-      "CachePath": "6B/{6BCBD677-5E9B-7E8A-AFE9-93F11BBFB656}.wem"
+      "CachePath": "27/{27799AC6-4DD4-157F-F8C7-614ECFB3C83C}.wem"
      }
     ],
     "Plugins": {
@@ -74,6 +74,6 @@
     ]
    }
   ],
-  "FileHash": "{F32CFB26-E1E8-067B-1282-31D7883D7B08}"
+  "FileHash": "{06BD62BD-425A-6566-89A1-E6584A9D96BA}"
  }
 }

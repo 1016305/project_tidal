@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{295BFF33-04A9-48E5-B18A-536E8128CD09}",
     "Language": "SFX",
-    "Hash": "{D02FF130-677D-49DC-B0C8-DC09D5A8F101}",
+    "Hash": "{8682A1B9-3B3B-7B1C-723F-A1269E2F1C6D}",
     "ObjectPath": "player",
     "ShortName": "player",
     "Path": "Event/player.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "gunfire_ping_transient.wav",
       "Path": "Media/195083466.wem",
-      "CachePath": "5F/{5F2EFEBA-6DEA-B882-7954-B5F9AA3FCE0F}.wem"
+      "CachePath": "67/{67BD3B6C-79A9-CF22-CDEE-91694B27F924}.wem"
      },
      {
       "Id": "452450408",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "gunfire_ping_transient.wav",
       "Path": "Media/452450408.wem",
-      "CachePath": "5C/{5CF204B1-E821-3D45-B13F-27032580976C}.wem"
+      "CachePath": "74/{741B7B83-10C0-383E-B18B-A8FA247A9359}.wem"
      },
      {
       "Id": "826514972",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "gunfire_ping_transient.wav",
       "Path": "Media/826514972.wem",
-      "CachePath": "C1/{C1D2BE50-776B-9160-3E26-39AEFDED738E}.wem"
+      "CachePath": "DF/{DF4C9679-83B0-74D1-87E8-8B4DEBEB2A40}.wem"
      },
      {
       "Id": "897927971",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "gunfire_ping_transient.wav",
       "Path": "Media/897927971.wem",
-      "CachePath": "FA/{FA4A7F09-B147-E973-42CC-C2D176925520}.wem"
+      "CachePath": "F2/{F2FD2E83-A724-9A41-B520-162D92EB772E}.wem"
      },
      {
       "Id": "923569534",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "gunfire_ping_transient.wav",
       "Path": "Media/923569534.wem",
-      "CachePath": "A4/{A4422C6C-D757-8C96-717E-79700CD62F85}.wem"
+      "CachePath": "B5/{B5B6A714-591A-70F9-D307-75C4353D7476}.wem"
      }
     ],
     "Plugins": {
@@ -122,6 +122,6 @@
     ]
    }
   ],
-  "FileHash": "{96E04E4E-4E39-D998-2B86-C5D3ED3757E9}"
+  "FileHash": "{078BA44C-B5D8-6C60-A657-E6FB2EA440CB}"
  }
 }

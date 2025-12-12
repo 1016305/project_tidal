@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}",
     "Language": "SFX",
-    "Hash": "{A6C2F79F-961E-076B-850F-34EE57599578}",
+    "Hash": "{D27ED027-6F27-3B84-F756-E4669460D87B}",
     "ObjectPath": "enemy_death",
     "ShortName": "enemy_death",
     "Path": "Event/enemy_death.bnk",
@@ -77,7 +77,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_death",
       "GUID": "{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}",
       "Color": "10",
-      "MaxAttenuation": "25",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "1.6760628",
       "DurationMax": "2.919239",
@@ -105,6 +105,6 @@
     ]
    }
   ],
-  "FileHash": "{3104ABF1-9D99-557C-0D68-C57FAF507E5D}"
+  "FileHash": "{94170644-0999-190D-C93A-EB0064970B34}"
  }
 }

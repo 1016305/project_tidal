@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CD7BF1D8-49A3-453C-8289-1BC072862E93}",
     "Language": "SFX",
-    "Hash": "{FFAA1CBA-5FAC-29D8-7178-13786E4BCEA0}",
+    "Hash": "{796C4A21-2DD7-42E0-10CB-D52D02C23955}",
     "ObjectPath": "enemy_alert",
     "ShortName": "enemy_alert",
     "Path": "Event/enemy_alert.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "enemy_alert.wav",
       "Path": "Media/195288589.wem",
-      "CachePath": "70/{7009A532-D2DE-26C1-75B6-FD366AADED3D}.wem"
+      "CachePath": "5F/{5F7FBAD9-9242-F7B2-F385-85D9DE747206}.wem"
      }
     ],
     "Events": [
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{FE0D70AC-1403-1104-932C-3B0BA7CAEFE0}"
+  "FileHash": "{854CD5CD-9CA2-E99A-A027-DC146130E1C1}"
  }
 }

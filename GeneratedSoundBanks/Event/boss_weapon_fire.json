@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}",
     "Language": "SFX",
-    "Hash": "{86020702-4916-EE5E-E3FE-5FB91307CE8D}",
+    "Hash": "{0A65EF36-5FC0-B87C-7D05-D297C588E170}",
     "ObjectPath": "boss_weapon_fire",
     "ShortName": "boss_weapon_fire",
     "Path": "Event/boss_weapon_fire.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Enemy - Big Laser v01.wav",
       "Path": "Media/205395986.wem",
-      "CachePath": "4D/{4D636271-3C7C-7966-B0B5-97BE35E59917}.wem"
+      "CachePath": "EB/{EB29B73F-2195-D72B-B3FF-3EDC5A11AB46}.wem"
      }
     ],
     "Plugins": {
@@ -63,6 +63,6 @@
     ]
    }
   ],
-  "FileHash": "{574BACF9-EB7D-58E7-14FD-D9EEE7CA2E8A}"
+  "FileHash": "{06713AC4-7331-2D89-C17F-84BC1E31AB95}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{EBA2F312-5FB1-4C0D-B46B-436888974182}",
     "Language": "SFX",
-    "Hash": "{7960355D-F671-C215-4A51-88F52DC2C9AA}",
+    "Hash": "{939CEBD1-7603-E200-756C-F27AC7A78C45}",
     "ObjectPath": "enemy",
     "ShortName": "enemy",
     "Path": "Event/enemy.bnk",
@@ -158,6 +158,6 @@
     ]
    }
   ],
-  "FileHash": "{EAD20C8D-8BC3-BE4F-A232-0E34486163B5}"
+  "FileHash": "{F05CF023-F476-9E18-58E2-D8328037E238}"
  }
 }

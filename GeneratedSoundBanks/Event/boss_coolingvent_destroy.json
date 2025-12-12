@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7D91000F-DC0F-4DF7-A397-494476201105}",
     "Language": "SFX",
-    "Hash": "{00831AB0-F448-EAA9-2603-2105FECF94C9}",
+    "Hash": "{EAD8CA23-D0E2-258C-6DD1-AE885198A79B}",
     "ObjectPath": "boss_coolingvent_destroy",
     "ShortName": "boss_coolingvent_destroy",
     "Path": "Event/boss_coolingvent_destroy.bnk",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "Cooling Vents\\cooling_vent_destroy_02.wav",
       "Path": "Media/356056050.wem",
-      "CachePath": "3D/{3DD91EF3-D2E8-E32F-53AC-B3671456AF8A}.wem"
+      "CachePath": "5A/{5A3BF1EC-B3C7-9BE0-23E2-26F7B8DD2FBD}.wem"
      },
      {
       "Id": "539935795",
@@ -67,7 +67,7 @@
       "Location": "Loose",
       "ShortName": "Cooling Vents\\cooling_vent_destroy_01.wav",
       "Path": "Media/539935795.wem",
-      "CachePath": "64/{643C874E-16E5-32DE-8B2B-11C828460AA1}.wem"
+      "CachePath": "0E/{0E46FFB2-E73D-05DD-8387-A3D0272D6199}.wem"
      },
      {
       "Id": "604977064",
@@ -76,7 +76,7 @@
       "Location": "Loose",
       "ShortName": "Cooling Vents\\cooling_vent_destroy_03.wav",
       "Path": "Media/604977064.wem",
-      "CachePath": "93/{93D064E8-7E79-7183-5B6E-180DE50ADE7B}.wem"
+      "CachePath": "A3/{A3894C38-F00B-D0CA-741E-17604A4E6E23}.wem"
      },
      {
       "Id": "619156272",
@@ -94,7 +94,7 @@
       "Location": "Loose",
       "ShortName": "Cooling Vents\\cooling_vent_destroy_04.wav",
       "Path": "Media/627143268.wem",
-      "CachePath": "53/{5326A3F0-162E-EBF1-C8C6-F9AEAE922C7B}.wem"
+      "CachePath": "26/{268CAB2B-446D-DDAC-ECA6-E1E9C2EF1C9E}.wem"
      }
     ],
     "Events": [
@@ -140,6 +140,6 @@
     ]
    }
   ],
-  "FileHash": "{852FD8F2-DA39-3732-587C-CC248DE9B160}"
+  "FileHash": "{6BF88F7D-0366-59E8-2C96-EB9F380D320B}"
  }
 }

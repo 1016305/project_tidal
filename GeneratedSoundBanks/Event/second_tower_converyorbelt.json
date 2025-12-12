@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5265D1D1-E44C-4096-856D-5885F6B536CB}",
     "Language": "SFX",
-    "Hash": "{949DFB92-67B9-6CBF-6896-955916BCA9EC}",
+    "Hash": "{225ED977-7F10-722D-A44D-9C4AAA94C11D}",
     "ObjectPath": "second_tower_converyorbelt",
     "ShortName": "second_tower_converyorbelt",
     "Path": "Event/second_tower_converyorbelt.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "toxic_waste_disposal_conveyorbelt.wav",
       "Path": "Media/430700844.wem",
-      "CachePath": "D6/{D600AC40-DD2B-E7C2-84B5-9ACB13E33E3F}.wem"
+      "CachePath": "1F/{1F1B1709-343A-1774-B80F-8204FCA812B4}.wem"
      }
     ],
     "Plugins": {
@@ -70,6 +70,6 @@
     ]
    }
   ],
-  "FileHash": "{AA9708E4-BD0D-2BC0-09DF-FEECCC4EAE99}"
+  "FileHash": "{11AEA692-9CC6-1F7F-A11A-65211D9D1550}"
  }
 }

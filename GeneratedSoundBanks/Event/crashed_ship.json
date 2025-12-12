@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{DA56627C-D39E-4E24-A266-621C8B978AB1}",
     "Language": "SFX",
-    "Hash": "{E9E5883B-58F9-1287-7B4A-0D45FC4AF84B}",
+    "Hash": "{DDB2EA45-B186-4DE0-29F6-03627E506C17}",
     "ObjectPath": "crashed_ship",
     "ShortName": "crashed_ship",
     "Path": "Event/crashed_ship.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "crashed_ship.wav",
       "Path": "Media/811941973.wem",
-      "CachePath": "B0/{B0C98A3E-3B47-46FA-37ED-A0028363E92C}.wem"
+      "CachePath": "C7/{C7F5AE26-7F7E-C93B-AABA-18B121361BF8}.wem"
      }
     ],
     "Plugins": {
@@ -82,6 +82,6 @@
     ]
    }
   ],
-  "FileHash": "{91F1A4C1-CB5F-4832-253A-F67BA7B690DB}"
+  "FileHash": "{8D903345-4CA5-FF2C-DD1C-B8E667328F49}"
  }
 }

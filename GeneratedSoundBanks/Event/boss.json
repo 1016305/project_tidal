@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{203BF74C-3EC5-49CD-8C05-64EE16CAE55A}",
     "Language": "SFX",
-    "Hash": "{048FEF44-10E8-8D72-0B7C-8BE0317517D9}",
+    "Hash": "{FCED3541-4FC5-59BC-76EF-9C02E2606F66}",
     "ObjectPath": "boss",
     "ShortName": "boss",
     "Path": "Event/boss.bnk",
@@ -158,6 +158,6 @@
     ]
    }
   ],
-  "FileHash": "{A0F4DC91-01EC-DF98-6C1C-6FBB00A0D37B}"
+  "FileHash": "{3540AA8F-DFEB-6870-69BD-031F379B97C4}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E34EE7D4-61AE-4129-8949-DD3FD338E6E7}",
     "Language": "SFX",
-    "Hash": "{FDE07580-216C-DFB0-8964-CBF7F9CF4558}",
+    "Hash": "{4AE80BA7-92BC-C4F7-DC12-C769C21629FC}",
     "ObjectPath": "ammo_pickup",
     "ShortName": "ammo_pickup",
     "Path": "Event/ammo_pickup.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "SFX\\pick up ammo.wav",
       "Path": "Media/1052192619.wem",
-      "CachePath": "D9/{D93390EC-AD78-4399-FC43-0DE3818ADF04}.wem"
+      "CachePath": "5B/{5BEB75DC-AAE3-9E8A-9D0E-C1CDB1E9114D}.wem"
      }
     ],
     "Events": [
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{617B1570-B8BB-45E2-AB90-1DFE2B670408}"
+  "FileHash": "{72C13CF4-59DD-BF2C-9998-E030F3FED998}"
  }
 }

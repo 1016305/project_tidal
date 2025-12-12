@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
     "Language": "SFX",
-    "Hash": "{DA97C5F8-3F22-4559-337D-FBDC9CCFBC55}",
+    "Hash": "{4B6B3CCC-BBA7-719F-2525-DCE6F1D19955}",
     "ObjectPath": "boss_death",
     "ShortName": "boss_death",
     "Path": "Event/boss_death.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Animations\\boss_death_animation.wav",
       "Path": "Media/469403989.wem",
-      "CachePath": "36/{36AA9F93-0C61-F751-8941-3C6C11AE43F5}.wem"
+      "CachePath": "FA/{FAA254E6-5C03-42CC-343F-625C31B8BB1A}.wem"
      },
      {
       "Id": "593340090",
@@ -75,6 +75,6 @@
     ]
    }
   ],
-  "FileHash": "{C94A5116-15C9-8B4C-7E55-F61A4B210971}"
+  "FileHash": "{57298F21-117D-FA2D-B829-BD1086186F5D}"
  }
 }

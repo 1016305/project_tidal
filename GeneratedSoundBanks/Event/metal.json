@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{18273E7B-63FF-4436-9E82-C529AFBA5CC8}",
     "Language": "SFX",
-    "Hash": "{8EC989AD-800F-865A-F880-DE8F5B473E0F}",
+    "Hash": "{C6BAD305-2E4B-B39A-E537-0A6AFE203B44}",
     "ObjectPath": "metal",
     "ShortName": "metal",
     "Path": "Event/metal.bnk",
@@ -98,6 +98,6 @@
     ]
    }
   ],
-  "FileHash": "{4CE0ECA0-4872-2639-5630-364F85B2D90E}"
+  "FileHash": "{98E1AC8C-AD90-5FEC-D6C0-626236F32D36}"
  }
 }

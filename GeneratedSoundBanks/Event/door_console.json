@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1C18790D-4652-45F0-B402-E12F5FCFE49B}",
     "Language": "SFX",
-    "Hash": "{EAD0FB61-F940-A715-BEF8-F1FFD9E5B69E}",
+    "Hash": "{4B33C97D-F922-9C59-2395-77A9CFE387A1}",
     "ObjectPath": "door_console",
     "ShortName": "door_console",
     "Path": "Event/door_console.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "door_console_hum.wav",
       "Path": "Media/188656083.wem",
-      "CachePath": "C7/{C7413ED2-A800-2981-34C4-031FDA3803D4}.wem"
+      "CachePath": "C5/{C5AC96D4-4AD5-1727-4EE4-F972359FD056}.wem"
      }
     ],
     "Plugins": {
@@ -61,6 +61,6 @@
     ]
    }
   ],
-  "FileHash": "{CD898E0F-F5C6-5117-588C-69DDD9F1A214}"
+  "FileHash": "{83615E3B-6D31-AE05-61CF-C0B038F771C5}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{70E8D780-CEB4-421D-BF51-8F23F81B2DA1}",
     "Language": "SFX",
-    "Hash": "{C336E97E-ADD1-607C-A516-6CE2BBD5CC6C}",
+    "Hash": "{0FF7A70C-C9DA-FB93-669C-074D10D7040E}",
     "ObjectPath": "assorted_pings",
     "ShortName": "assorted_pings",
     "Path": "Event/assorted_pings.bnk",
@@ -303,6 +303,6 @@
     ]
    }
   ],
-  "FileHash": "{0984BAB7-0F90-C52A-2755-80BB2853787B}"
+  "FileHash": "{015DE86F-402B-F6B5-4653-73C77E2FFB6A}"
  }
 }

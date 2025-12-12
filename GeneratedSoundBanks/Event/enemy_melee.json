@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5A2886A0-389E-4AC3-986C-684AD3AC4C8E}",
     "Language": "SFX",
-    "Hash": "{E4E5E60C-BA6D-E38D-9E99-D802D098696B}",
+    "Hash": "{ADA77483-2526-EAF9-C108-CFBA801B9B48}",
     "ObjectPath": "enemy_melee",
     "ShortName": "enemy_melee",
     "Path": "Event/enemy_melee.bnk",
@@ -52,6 +52,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_melee",
       "GUID": "{5A2886A0-389E-4AC3-986C-684AD3AC4C8E}",
       "Color": "10",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "3.5890064",
       "DurationMax": "3.9707673",
@@ -74,6 +75,6 @@
     ]
    }
   ],
-  "FileHash": "{7D5A4F04-0AF8-AA37-E2B7-7212961BE77B}"
+  "FileHash": "{AB5EBB45-32CC-F483-3403-6F5F624D19D4}"
  }
 }

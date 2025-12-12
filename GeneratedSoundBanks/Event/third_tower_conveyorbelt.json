@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{BA9FE5AD-7631-4FA0-984B-293B17A93785}",
     "Language": "SFX",
-    "Hash": "{D5E200D1-08F2-49AF-B477-F84BDD795820}",
+    "Hash": "{F2921373-DCD0-E527-8F43-FC12DCFCBE48}",
     "ObjectPath": "third_tower_conveyorbelt",
     "ShortName": "third_tower_conveyorbelt",
     "Path": "Event/third_tower_conveyorbelt.bnk",
@@ -70,6 +70,6 @@
     ]
    }
   ],
-  "FileHash": "{52831AB0-D4D3-E2B9-80A6-346E05888762}"
+  "FileHash": "{15FD8EA6-FD90-36D4-1EC2-2F24AEA34AD0}"
  }
 }

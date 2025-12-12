@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C11A5FAA-D601-48A5-8892-7869C8301D6B}",
     "Language": "SFX",
-    "Hash": "{9A701851-8F03-AD36-695D-8EB7E1080FBA}",
+    "Hash": "{B0DB0644-5607-A4D8-F2C2-98AC2AB90AD0}",
     "ObjectPath": "enemy_movement",
     "ShortName": "enemy_movement",
     "Path": "Event/enemy_movement.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Movement\\Enemy - Floating Movement v02.wav",
       "Path": "Media/278877721.wem",
-      "CachePath": "CD/{CDB46E8F-85D5-6CF6-24DF-08BF131CB850}.wem"
+      "CachePath": "89/{89D95136-B16A-1CB8-1454-86349B58A8F7}.wem"
      }
     ],
     "Plugins": {
@@ -44,7 +44,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_movement",
       "GUID": "{C11A5FAA-D601-48A5-8892-7869C8301D6B}",
       "Color": "10",
-      "MaxAttenuation": "50",
+      "MaxAttenuation": "40",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -62,6 +62,6 @@
     ]
    }
   ],
-  "FileHash": "{F39D099F-5853-E9C5-30D8-9E4C276632B5}"
+  "FileHash": "{C9543008-68A7-6234-139D-7530E0EE84C8}"
  }
 }

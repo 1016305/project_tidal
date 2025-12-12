@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{68A19D79-B2C2-4F98-93DB-26BB86587B30}",
     "Language": "SFX",
-    "Hash": "{C835CA9A-F030-1BAF-FE8C-46BD2D5667C4}",
+    "Hash": "{8EA74EFC-86CA-533D-D51E-531A2262F9BC}",
     "ObjectPath": "elevator",
     "ShortName": "elevator",
     "Path": "Event/elevator.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "elevator_descend.wav",
       "Path": "Media/21133762.wem",
-      "CachePath": "1A/{1A4A228F-CA82-A36C-A100-7E39703E2045}.wem"
+      "CachePath": "FB/{FB1209B6-4627-D14A-438C-114F860EFD4B}.wem"
      }
     ],
     "Events": [
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{A51EFBA4-B798-B385-BDD8-7E589641CDB6}"
+  "FileHash": "{F0971977-3BCA-7586-889C-5CC0CAF18CB2}"
  }
 }

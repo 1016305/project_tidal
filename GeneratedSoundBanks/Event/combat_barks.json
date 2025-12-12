@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D69E7259-D6F4-4333-937A-A808AD223C7F}",
     "Language": "SFX",
-    "Hash": "{728549FB-8F8B-FEA9-1EF3-370C816D6BDA}",
+    "Hash": "{328049E4-D6D3-770C-865F-E647EE7E0B9D}",
     "ObjectPath": "combat_barks",
     "ShortName": "combat_barks",
     "Path": "Event/combat_barks.bnk",
@@ -68,7 +68,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\combat_barks",
       "GUID": "{D69E7259-D6F4-4333-937A-A808AD223C7F}",
       "Color": "10",
-      "MaxAttenuation": "50",
+      "MaxAttenuation": "40",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -91,6 +91,6 @@
     ]
    }
   ],
-  "FileHash": "{EC207B95-42DF-B684-09E1-0BA1F9BDD9DB}"
+  "FileHash": "{3B46C5E1-E05D-F67D-ADA2-C018E8AE6B11}"
  }
 }

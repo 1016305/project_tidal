@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}",
     "Language": "SFX",
-    "Hash": "{C1DE92B2-6182-EA19-7658-88C903438CDA}",
+    "Hash": "{E304AB8B-8901-4CBE-0871-8C4AD97BA3ED}",
     "ObjectPath": "enemy_fire",
     "ShortName": "enemy_fire",
     "Path": "Event/enemy_fire.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/70116733.wem",
-      "CachePath": "4B/{4B296045-17D6-3CC2-B85B-A50CBC6520E8}.wem"
+      "CachePath": "AC/{AC19246F-9945-F246-F4AB-8451FB052198}.wem"
      },
      {
       "Id": "523095064",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/523095064.wem",
-      "CachePath": "73/{7313FD94-567C-750D-1C88-5D0D5245BDF0}.wem"
+      "CachePath": "75/{7525AB7C-3B41-A127-3589-153ED8FFF739}.wem"
      },
      {
       "Id": "643151873",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/643151873.wem",
-      "CachePath": "E2/{E204AE4B-32A3-FD0B-34B9-78C57710F595}.wem"
+      "CachePath": "15/{15E4E73D-7F24-B5B1-8D67-4F1F1F3FEC0C}.wem"
      },
      {
       "Id": "806977981",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/806977981.wem",
-      "CachePath": "69/{69677A00-C90B-8B0C-F143-47928663D919}.wem"
+      "CachePath": "21/{2117868C-2923-D155-23BB-79A1093594AF}.wem"
      },
      {
       "Id": "843919648",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/843919648.wem",
-      "CachePath": "73/{739176DE-2C81-779E-A09F-89251400A025}.wem"
+      "CachePath": "46/{468EF8F1-5125-4DE7-29B3-CA5CD58F439D}.wem"
      },
      {
       "Id": "933300372",
@@ -67,7 +67,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/933300372.wem",
-      "CachePath": "F2/{F2A8B34A-8299-53C6-FB99-3624F1A0F2B4}.wem"
+      "CachePath": "54/{54DFFEC6-41FA-7C1D-DE3B-7441FEE9F413}.wem"
      }
     ],
     "Plugins": {
@@ -97,9 +97,10 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_fire",
       "GUID": "{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}",
       "Color": "10",
+      "MaxAttenuation": "45",
       "DurationType": "OneShot",
       "DurationMin": "0.79940724",
-      "DurationMax": "1.4350256",
+      "DurationMax": "1.5424707",
       "MediaRefs": [
        {
         "Id": "70116733"
@@ -134,6 +135,6 @@
     ]
    }
   ],
-  "FileHash": "{31DF1668-FA89-A1D2-6CA4-5937BE52D0F3}"
+  "FileHash": "{53F60DDA-DAF3-F5F8-13AE-8021FB1457C8}"
  }
 }

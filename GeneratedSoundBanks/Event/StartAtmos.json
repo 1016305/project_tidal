@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D554D848-29E0-40AC-95C3-E352BC300ACC}",
     "Language": "SFX",
-    "Hash": "{2A7ABA13-EFF2-13E0-10A2-9F342C0E9E35}",
+    "Hash": "{E794BBE8-C76C-FB20-2584-EDBEA4A05313}",
     "ObjectPath": "StartAtmos",
     "ShortName": "StartAtmos",
     "Path": "Event/StartAtmos.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "soft_wind_amb.wav",
       "Path": "Media/472452353.wem",
-      "CachePath": "4F/{4F3AD27D-E18C-5B51-4C21-F20DB7FBD937}.wem"
+      "CachePath": "D9/{D913BA66-01FD-1D5B-7D2E-179B7A0EEA5E}.wem"
      },
      {
       "Id": "491444269",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Ambience\\factory_ambienceloop.wav",
       "Path": "Media/491444269.wem",
-      "CachePath": "79/{799BC812-E9F6-F1C6-5B67-A5D91091D1DE}.wem"
+      "CachePath": "DE/{DEE81EAF-E5CE-AF91-E6F5-59E933F61AE2}.wem"
      },
      {
       "Id": "654365428",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "first_tower_ambienceloop.wav",
       "Path": "Media/750651976.wem",
-      "CachePath": "8C/{8C445F6C-074E-A1D5-07F1-5D8C601C9DDC}.wem"
+      "CachePath": "17/{17464C97-A743-3099-4CA5-B94289EEAADA}.wem"
      }
     ],
     "Plugins": {
@@ -245,6 +245,6 @@
     ]
    }
   ],
-  "FileHash": "{F154DBC2-9D45-5A9F-1A87-BC5ABCB139DE}"
+  "FileHash": "{47FA65FF-1BEE-099B-C0BA-9A15660BBCAF}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E0808C22-AE4B-4D00-851C-6AA8B1BB976B}",
     "Language": "SFX",
-    "Hash": "{BD6093F1-8C22-A963-B121-158F7061DB01}",
+    "Hash": "{D2410D75-DB1E-EECB-9D58-9CDF90DDBED1}",
     "ObjectPath": "toothdoor_opening",
     "ShortName": "toothdoor_opening",
     "Path": "Event/toothdoor_opening.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "toothdoor_opening.wav",
       "Path": "Media/145769930.wem",
-      "CachePath": "D8/{D863763B-8471-474D-BA01-9F787219477B}.wem"
+      "CachePath": "A5/{A5140118-DCC9-3618-C9C3-45F3FB13F59A}.wem"
      },
      {
       "Id": "1009519512",
@@ -84,6 +84,6 @@
     ]
    }
   ],
-  "FileHash": "{3BC79B90-BD99-E474-47F6-2B2C2614AD4D}"
+  "FileHash": "{659FCEF7-F918-B1BA-F270-EDA7C9F07761}"
  }
 }

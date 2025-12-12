@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F38718AC-1CC8-4493-ABC9-82387EC5816C}",
     "Language": "SFX",
-    "Hash": "{0C29EA5A-CE04-D65F-EEEF-0434DF47EE5C}",
+    "Hash": "{E0C14905-9997-A493-8A7E-957CF92DDA10}",
     "ObjectPath": "dirt_grass",
     "ShortName": "dirt_grass",
     "Path": "Event/dirt_grass.bnk",
@@ -158,6 +158,6 @@
     ]
    }
   ],
-  "FileHash": "{E3635D52-DCDD-4D23-3A74-C96E18E99A23}"
+  "FileHash": "{FCE8EE33-4E82-2588-D002-6AEADCA3DD49}"
  }
 }

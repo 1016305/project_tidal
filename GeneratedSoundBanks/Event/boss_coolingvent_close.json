@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5222F25B-473D-47B4-950D-946A83AADBA4}",
     "Language": "SFX",
-    "Hash": "{5926C34F-577C-A337-CF2F-0394AE1AFE8C}",
+    "Hash": "{7C185258-5EB9-333B-3E77-2ED32F6AF740}",
     "ObjectPath": "boss_coolingvent_close",
     "ShortName": "boss_coolingvent_close",
     "Path": "Event/boss_coolingvent_close.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Cooling Vents\\cooling_vent_closed.wav",
       "Path": "Media/588091234.wem",
-      "CachePath": "E3/{E3424D19-8936-892D-E94D-CAE78D269B89}.wem"
+      "CachePath": "49/{4909F796-B655-DB58-8D71-16FF4F77599A}.wem"
      }
     ],
     "Events": [
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{2DFA969E-469C-ABED-D2FD-834C48E38370}"
+  "FileHash": "{6A8B06F5-0A7E-540B-EC9E-A68B84D67747}"
  }
 }

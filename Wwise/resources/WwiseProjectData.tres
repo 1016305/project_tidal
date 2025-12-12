@@ -178,8 +178,11 @@ guid = "{5594FFD1-A5C6-4E32-9C9A-3B430EFB420B}"
 id = 518384578
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_26l8v"]
+path = "\\Busses\\Default Work Unit\\Reverbs"
 children = [SubResource("WwiseTreeObject_tnib1"), SubResource("WwiseTreeObject_o7sea"), SubResource("WwiseTreeObject_lrto0"), SubResource("WwiseTreeObject_i5cxa"), SubResource("WwiseTreeObject_ptp8y")]
+type = 2
 name = "Reverbs"
+guid = "{9DD65F07-E8FB-45DE-B393-D2C7EC9793A5}"
 id = 3545700988
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_hir8t"]
@@ -225,7 +228,7 @@ name = "Canyon"
 id = 2927127661
 
 [sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_l65hi"]
-max_attenuation = 50.0
+max_attenuation = 40.0
 max_duration = 0.0
 min_duration = 0.0
 path = "\\Events\\Default Work Unit\\Enemy\\combat_barks"
@@ -244,7 +247,7 @@ guid = "{CD7BF1D8-49A3-453C-8289-1BC072862E93}"
 id = 493036092
 
 [sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_myib7"]
-max_attenuation = 25.0
+max_attenuation = 40.0
 max_duration = 2.91924
 min_duration = 1.67606
 path = "\\Events\\Default Work Unit\\Enemy\\enemy_death"
@@ -254,7 +257,8 @@ guid = "{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}"
 id = 1205999388
 
 [sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_gv40o"]
-max_duration = 1.43503
+max_attenuation = 45.0
+max_duration = 1.54247
 min_duration = 0.799407
 path = "\\Events\\Default Work Unit\\Enemy\\enemy_fire"
 type = 3
@@ -263,6 +267,7 @@ guid = "{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}"
 id = 4240339038
 
 [sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_0hqp2"]
+max_attenuation = 40.0
 max_duration = 3.97077
 min_duration = 3.58901
 path = "\\Events\\Default Work Unit\\Enemy\\enemy_melee"
@@ -272,7 +277,7 @@ guid = "{5A2886A0-389E-4AC3-986C-684AD3AC4C8E}"
 id = 682605002
 
 [sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_h61g6"]
-max_attenuation = 50.0
+max_attenuation = 40.0
 max_duration = 0.0
 min_duration = 0.0
 path = "\\Events\\Default Work Unit\\Enemy\\enemy_movement"
@@ -282,6 +287,7 @@ guid = "{C11A5FAA-D601-48A5-8892-7869C8301D6B}"
 id = 62399725
 
 [sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_q407k"]
+max_attenuation = 40.0
 max_duration = 0.0
 min_duration = 0.0
 path = "\\Events\\Default Work Unit\\Enemy\\enemy_plasma"
@@ -291,7 +297,7 @@ guid = "{7F377203-31E5-4F33-88A1-3D21DCD70F08}"
 id = 4283809968
 
 [sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_o561g"]
-max_attenuation = 25.0
+max_attenuation = 40.0
 max_duration = 1.33436
 min_duration = 0.548436
 path = "\\Events\\Default Work Unit\\Enemy\\hit_barks"
@@ -301,7 +307,7 @@ guid = "{6A549BA7-1316-4482-9C73-C8A236DB9AF1}"
 id = 143989192
 
 [sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_dipfp"]
-max_attenuation = 25.0
+max_attenuation = 40.0
 max_duration = 3.94348
 min_duration = 2.35771
 path = "\\Events\\Default Work Unit\\Enemy\\idle_barks"

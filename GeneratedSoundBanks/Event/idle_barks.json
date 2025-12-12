@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1FA8C10E-718A-46AB-B604-4D02BA976176}",
     "Language": "SFX",
-    "Hash": "{CA3E0B14-CC2C-9E19-77EF-9D076ADE7453}",
+    "Hash": "{530CBFA2-2C23-E80A-E4DC-8E9D766FB98F}",
     "ObjectPath": "idle_barks",
     "ShortName": "idle_barks",
     "Path": "Event/idle_barks.bnk",
@@ -68,7 +68,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\idle_barks",
       "GUID": "{1FA8C10E-718A-46AB-B604-4D02BA976176}",
       "Color": "10",
-      "MaxAttenuation": "25",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "2.3577118",
       "DurationMax": "3.9434845",
@@ -93,6 +93,6 @@
     ]
    }
   ],
-  "FileHash": "{D2546755-00DB-2C0A-184D-507E66E1B80A}"
+  "FileHash": "{A0740086-101E-F7BA-68B0-CD27A7F39CD4}"
  }
 }
