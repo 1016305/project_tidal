@@ -1,0 +1,113 @@
+[gd_resource type="VisualShader" load_steps=7 format=3 uid="uid://clpevlgx5njhm"]
+
+[sub_resource type="VisualShaderNodeTextureParameterTriplanar" id="VisualShaderNodeTextureParameterTriplanar_xa7p4"]
+parameter_name = "albedo"
+texture_type = 1
+texture_filter = 3
+
+[sub_resource type="VisualShaderNodeTextureParameterTriplanar" id="VisualShaderNodeTextureParameterTriplanar_xn0xp"]
+parameter_name = "normal"
+texture_filter = 3
+
+[sub_resource type="VisualShaderNodeTextureParameterTriplanar" id="VisualShaderNodeTextureParameterTriplanar_x00f3"]
+parameter_name = "metal"
+texture_filter = 3
+
+[sub_resource type="VisualShaderNodeTextureParameterTriplanar" id="VisualShaderNodeTextureParameterTriplanar_qos6j"]
+parameter_name = "rough"
+texture_filter = 3
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_xn0xp"]
+default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(0, 0, 0, 0)]
+op_type = 2
+operator = 2
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_xa7p4"]
+parameter_name = "ColorParameter"
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+uniform vec4 ColorParameter : source_color;
+uniform sampler2D albedo : source_color, filter_nearest_mipmap;
+uniform sampler2D metal : filter_nearest_mipmap;
+uniform sampler2D rough : filter_nearest_mipmap;
+uniform sampler2D normal : filter_nearest_mipmap;
+
+
+// TextureParameterTriplanar
+	vec4 triplanar_texture(sampler2D p_sampler, vec3 p_weights, vec3 p_triplanar_pos) {
+		vec4 samp = vec4(0.0);
+		samp += texture(p_sampler, p_triplanar_pos.xy) * p_weights.z;
+		samp += texture(p_sampler, p_triplanar_pos.xz) * p_weights.y;
+		samp += texture(p_sampler, p_triplanar_pos.zy * vec2(-1.0, 1.0)) * p_weights.x;
+		return samp;
+	}
+
+	uniform vec3 triplanar_scale = vec3(1.0, 1.0, 1.0);
+	uniform vec3 triplanar_offset;
+	uniform float triplanar_sharpness = 0.5;
+
+	varying vec3 triplanar_power_normal;
+	varying vec3 triplanar_pos;
+
+void vertex() {
+// TextureParameterTriplanar
+	{
+		triplanar_power_normal = pow(abs(NORMAL), vec3(triplanar_sharpness));
+		triplanar_power_normal /= dot(triplanar_power_normal, vec3(1.0));
+		triplanar_pos = VERTEX * triplanar_scale + triplanar_offset;
+		triplanar_pos *= vec3(1.0, -1.0, 1.0);
+	}
+}
+
+void fragment() {
+// ColorParameter:8
+	vec4 n_out8p0 = ColorParameter;
+
+
+// TextureParameterTriplanar:2
+	vec4 n_out2p0 = triplanar_texture(albedo, triplanar_power_normal, triplanar_pos);
+
+
+// VectorOp:7
+	vec4 n_out7p0 = n_out8p0 * n_out2p0;
+
+
+// TextureParameterTriplanar:4
+	vec4 n_out4p0 = triplanar_texture(metal, triplanar_power_normal, triplanar_pos);
+
+
+// TextureParameterTriplanar:5
+	vec4 n_out5p0 = triplanar_texture(rough, triplanar_power_normal, triplanar_pos);
+
+
+// TextureParameterTriplanar:3
+	vec4 n_out3p0 = triplanar_texture(normal, triplanar_power_normal, triplanar_pos);
+
+
+// Output:0
+	ALBEDO = vec3(n_out7p0.xyz);
+	METALLIC = n_out4p0.x;
+	ROUGHNESS = n_out5p0.x;
+	NORMAL = vec3(n_out3p0.xyz);
+
+
+}
+"
+graph_offset = Vector2(-603.467, -131.361)
+nodes/fragment/0/position = Vector2(700, 120)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTextureParameterTriplanar_xa7p4")
+nodes/fragment/2/position = Vector2(-380, 160)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTextureParameterTriplanar_xn0xp")
+nodes/fragment/3/position = Vector2(-380, 520)
+nodes/fragment/4/node = SubResource("VisualShaderNodeTextureParameterTriplanar_x00f3")
+nodes/fragment/4/position = Vector2(-380, 880)
+nodes/fragment/5/node = SubResource("VisualShaderNodeTextureParameterTriplanar_qos6j")
+nodes/fragment/5/position = Vector2(-380, 1240)
+nodes/fragment/7/node = SubResource("VisualShaderNodeVectorOp_xn0xp")
+nodes/fragment/7/position = Vector2(200, 200)
+nodes/fragment/8/node = SubResource("VisualShaderNodeColorParameter_xa7p4")
+nodes/fragment/8/position = Vector2(-320, -20)
+nodes/fragment/connections = PackedInt32Array(3, 0, 0, 8, 4, 0, 0, 2, 5, 0, 0, 3, 7, 0, 0, 0, 8, 0, 7, 0, 2, 0, 7, 1)
