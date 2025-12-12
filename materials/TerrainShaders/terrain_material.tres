@@ -1,0 +1,38 @@
+[gd_resource type="ShaderMaterial" load_steps=16 format=3 uid="uid://dv0c7dvv5y1e8"]
+
+[ext_resource type="Shader" uid="uid://c17pxoopw76j7" path="res://materials/TerrainShaders/terrain_material_shader.tres" id="1_sbb20"]
+[ext_resource type="Texture2D" uid="uid://dcf8xsoc1dmmt" path="res://textures/terraintextures/grass/LandscapeTriplanarGrassTexture_BaseColorScaled.png" id="2_emo6b"]
+[ext_resource type="Texture2D" uid="uid://4uuld6u4adb4" path="res://textures/terraintextures/grass/LandscapeTriplanarGrassTexture_MetallicScaled.png" id="3_umabx"]
+[ext_resource type="Texture2D" uid="uid://dvxuvhk8rh08u" path="res://textures/terraintextures/grass/LandscapeTriplanarGrassTexture_NormalScaled.png" id="4_jof5g"]
+[ext_resource type="Texture2D" uid="uid://bqqarj88joiav" path="res://textures/terraintextures/grass/LandscapeTriplanarGrassTexture_RoughnessScaled.png" id="5_la777"]
+[ext_resource type="Texture2D" uid="uid://c1onb6tcktytk" path="res://textures/terraintextures/sand/LandscapeTriplanarSandTexture_BaseColorScaled.png" id="6_xrama"]
+[ext_resource type="Texture2D" uid="uid://bi51dejpjr2d0" path="res://textures/terraintextures/SandMask.png" id="7_03kbo"]
+[ext_resource type="Texture2D" uid="uid://dkwr6f65rflbo" path="res://textures/terraintextures/sand/LandscapeTriplanarSandTexture_MetallicScaled.png" id="8_nt566"]
+[ext_resource type="Texture2D" uid="uid://bmfseywyoa7f3" path="res://textures/terraintextures/sand/LandscapeTriplanarSandTexture_NormalScaled.png" id="9_hgcn8"]
+[ext_resource type="Texture2D" uid="uid://erpikl2n0yw5" path="res://textures/terraintextures/sand/LandscapeTriplanarSandTexture_RoughnessScaled.png" id="10_xonyg"]
+[ext_resource type="Texture2D" uid="uid://dsw7rwpk4nypy" path="res://textures/terraintextures/stone/LandscapeTriplanarStoneTexture_BaseColorScaled.png" id="11_sgpdb"]
+[ext_resource type="Texture2D" uid="uid://bjjbsgkjfu2gc" path="res://textures/terraintextures/Stone-GrassMask.png" id="12_w0lol"]
+[ext_resource type="Texture2D" uid="uid://eqmof7aq8mlt" path="res://textures/terraintextures/stone/LandscapeTriplanarStoneTexture_MetallicScaled.png" id="13_728md"]
+[ext_resource type="Texture2D" uid="uid://t854ovjsl0r0" path="res://textures/terraintextures/stone/LandscapeTriplanarStoneTexture_NormalScaled.png" id="14_w56ju"]
+[ext_resource type="Texture2D" uid="uid://klthr0drc418" path="res://textures/terraintextures/stone/LandscapeTriplanarStoneTexture_RoughnessScaled.png" id="15_w6un7"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_sbb20")
+shader_parameter/GrassAlbedo = ExtResource("2_emo6b")
+shader_parameter/StoneAlbedo = ExtResource("11_sgpdb")
+shader_parameter/StoneGrassMask = ExtResource("12_w0lol")
+shader_parameter/SandAlbedo = ExtResource("6_xrama")
+shader_parameter/SandMask = ExtResource("7_03kbo")
+shader_parameter/GrassMetallic = ExtResource("3_umabx")
+shader_parameter/StoneMetallic = ExtResource("13_728md")
+shader_parameter/SandMetallic = ExtResource("8_nt566")
+shader_parameter/GrassRoughness = ExtResource("5_la777")
+shader_parameter/StoneRoughness = ExtResource("15_w6un7")
+shader_parameter/SandRoughness = ExtResource("10_xonyg")
+shader_parameter/GrassNormal = ExtResource("4_jof5g")
+shader_parameter/StoneNormal = ExtResource("14_w56ju")
+shader_parameter/SandNormal = ExtResource("9_hgcn8")
+shader_parameter/triplanar_scale = Vector3(0.02, 0.02, 0.02)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5
