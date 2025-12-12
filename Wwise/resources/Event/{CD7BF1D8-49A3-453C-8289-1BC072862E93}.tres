@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://2v3rrl7nns43"]
+
+[resource]
+name = "enemy_alert"
+id = 493036092
+guid = "{CD7BF1D8-49A3-453C-8289-1BC072862E93}"
+dummy = true

@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://dtxgacgd57b5x"]
+
+[ext_resource type="Shader" uid="uid://clpevlgx5njhm" path="res://materials/metals/decor_pillars_shader.tres" id="1_1jtlr"]
+[ext_resource type="Texture2D" uid="uid://33pr4a25tcvq" path="res://materials/metals/metal1_basecolor.png" id="2_0as5t"]
+[ext_resource type="Texture2D" uid="uid://rlem7y7abl5" path="res://materials/metals/metal1_metallic.png" id="3_h4sk8"]
+[ext_resource type="Texture2D" uid="uid://cptof837smli0" path="res://materials/metals/metal1_normal.png" id="4_tnalj"]
+[ext_resource type="Texture2D" uid="uid://cpjdnefxlojng" path="res://materials/metals/metal1_rough.png" id="5_dayyf"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_1jtlr")
+shader_parameter/ColorParameter = Color(0.0093, 0.01, 0.00987167, 1)
+shader_parameter/albedo = ExtResource("2_0as5t")
+shader_parameter/metal = ExtResource("3_h4sk8")
+shader_parameter/rough = ExtResource("5_dayyf")
+shader_parameter/normal = ExtResource("4_tnalj")
+shader_parameter/triplanar_scale = Vector3(0.1, 0.1, 0.1)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5

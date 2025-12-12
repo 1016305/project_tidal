@@ -19,6 +19,7 @@ var vfx
 @onready var draw_from_here: Node3D = $"Icosphere/Main gun/DrawFromHere"
 @onready var draw_to_here: Node3D = $"Icosphere/Main gun/ToHere"
 @onready var player_damage_tick: Timer = $player_damage_tick
+@export var the_door: Node3D
 
 @export_category("Flare")
 @export var left_lights: Array[OmniLight3D]
@@ -125,6 +126,7 @@ func _ready() -> void:
 	player_damage_tick.wait_time = damage_tick
 	vfx = VFXDAMAGE.instantiate()
 	add_child(vfx)
+	startup_sequence.play("RESET")
 
 func _physics_process(delta: float) -> void:
 	main_behaviour()
@@ -331,6 +333,10 @@ func dead():
 		encounter.kill_all_enemies()
 		await get_tree().create_timer(1).timeout
 		deathanimation.play("death_animation")
+		await deathanimation.animation_finished
+		print("boss says animation is finished")
+		print("emitting the signal")
+		the_door.open_door()
 
 func open_all_heatsinks(time):
 	for h in heatsinks_array:

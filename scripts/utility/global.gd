@@ -48,6 +48,8 @@ var dialogue_volume = 100
 var music_volume = 100
 var master_volume = 50
 
+signal boss_is_dead
+
 
 func _ready() -> void:
 	self.get_mouse_sens.connect(store_sens)
