@@ -150,8 +150,11 @@ guid = "{1332E2DC-853C-42B6-A659-92C90F2675EC}"
 id = 2540843761
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_o7sea"]
+path = "\\Busses\\Default Work Unit\\Reverbs"
 children = [SubResource("WwiseTreeObject_tnib1")]
+type = 2
 name = "Reverbs"
+guid = "{9DD65F07-E8FB-45DE-B393-D2C7EC9793A5}"
 id = 3545700988
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_lrto0"]
