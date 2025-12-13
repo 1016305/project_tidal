@@ -9,7 +9,7 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_1jtlr")
-shader_parameter/ColorParameter = Color(0.0093, 0.01, 0.00987167, 1)
+shader_parameter/ColorParameter = Color(1, 1, 1, 1)
 shader_parameter/albedo = ExtResource("2_0as5t")
 shader_parameter/metal = ExtResource("3_h4sk8")
 shader_parameter/rough = ExtResource("5_dayyf")

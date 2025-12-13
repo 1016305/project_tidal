@@ -90,12 +90,11 @@ void fragment() {
 	ALBEDO = vec3(n_out6p0.xyz);
 	METALLIC = n_out3p0.x;
 	ROUGHNESS = n_out5p0.x;
-	NORMAL = vec3(n_out4p0.xyz);
+	NORMAL_MAP = vec3(n_out4p0.xyz);
 
 
 }
 "
-graph_offset = Vector2(-429.379, -239.721)
 nodes/fragment/0/position = Vector2(720, 140)
 nodes/fragment/2/node = SubResource("VisualShaderNodeTextureParameterTriplanar_pgkbd")
 nodes/fragment/2/position = Vector2(-340, -540)
@@ -109,4 +108,4 @@ nodes/fragment/6/node = SubResource("VisualShaderNodeVectorOp_ied5m")
 nodes/fragment/6/position = Vector2(400, -280)
 nodes/fragment/7/node = SubResource("VisualShaderNodeColorConstant_1t0q3")
 nodes/fragment/7/position = Vector2(80, -140)
-nodes/fragment/connections = PackedInt32Array(4, 0, 0, 8, 3, 0, 0, 2, 5, 0, 0, 3, 2, 0, 6, 0, 6, 0, 0, 0, 7, 0, 6, 1)
+nodes/fragment/connections = PackedInt32Array(3, 0, 0, 2, 5, 0, 0, 3, 2, 0, 6, 0, 6, 0, 0, 0, 7, 0, 6, 1, 4, 0, 0, 9)

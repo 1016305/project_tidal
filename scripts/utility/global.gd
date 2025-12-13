@@ -48,7 +48,12 @@ var dialogue_volume = 100
 var music_volume = 100
 var master_volume = 50
 
+var blur_scene
+
 signal boss_is_dead
+const CREDITS = preload("res://scenes/credits.tscn")
+func load_fresh_scene():
+	get_tree().change_scene_to_packed(CREDITS)
 
 
 func _ready() -> void:

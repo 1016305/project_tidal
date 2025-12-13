@@ -3,7 +3,7 @@
 [ext_resource type="Shader" uid="uid://c17pxoopw76j7" path="res://materials/TerrainShaders/terrain_material_shader.tres" id="1_sbb20"]
 [ext_resource type="Texture2D" uid="uid://dcf8xsoc1dmmt" path="res://textures/terraintextures/grass/LandscapeTriplanarGrassTexture_BaseColorScaled.png" id="2_emo6b"]
 [ext_resource type="Texture2D" uid="uid://4uuld6u4adb4" path="res://textures/terraintextures/grass/LandscapeTriplanarGrassTexture_MetallicScaled.png" id="3_umabx"]
-[ext_resource type="Texture2D" uid="uid://dvxuvhk8rh08u" path="res://textures/terraintextures/grass/LandscapeTriplanarGrassTexture_NormalScaled.png" id="4_jof5g"]
+[ext_resource type="Texture2D" uid="uid://bt8e1aqvdb3cs" path="res://textures/terraintextures/grass/LandscapeTriplanarGrassTexture_NormalScaled.png" id="4_jof5g"]
 [ext_resource type="Texture2D" uid="uid://bqqarj88joiav" path="res://textures/terraintextures/grass/LandscapeTriplanarGrassTexture_RoughnessScaled.png" id="5_la777"]
 [ext_resource type="Texture2D" uid="uid://c1onb6tcktytk" path="res://textures/terraintextures/sand/LandscapeTriplanarSandTexture_BaseColorScaled.png" id="6_xrama"]
 [ext_resource type="Texture2D" uid="uid://bi51dejpjr2d0" path="res://textures/terraintextures/SandMask.png" id="7_03kbo"]

@@ -983,13 +983,12 @@ surface_material_override/0 = ExtResource("5_lcv7r")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink1/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_n201j")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink1" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink1" node_paths=PackedStringArray("model", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("6_s1xmj")
 model = NodePath("..")
-broken_var = NodePath("")
-lights = [NodePath(""), NodePath(""), NodePath("")]
+lights = [null, null, null]
 explosion_pos = NodePath("../explosion_pos")
 soundplayer = NodePath("../AkEvent3D")
 heatsink_close = ExtResource("7_24180")
@@ -1024,13 +1023,12 @@ surface_material_override/0 = ExtResource("10_it4in")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink2/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_n201j")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink2" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink2" node_paths=PackedStringArray("model", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("6_s1xmj")
 model = NodePath("..")
-broken_var = NodePath("")
-lights = [NodePath(""), NodePath(""), NodePath("")]
+lights = [null, null, null]
 explosion_pos = NodePath("../explosion_pos2")
 soundplayer = NodePath("../AkEvent3D")
 heatsink_close = ExtResource("7_24180")
@@ -1065,13 +1063,12 @@ surface_material_override/0 = ExtResource("11_0ywmg")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink3/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_n201j")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink3" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink3" node_paths=PackedStringArray("model", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("6_s1xmj")
 model = NodePath("..")
-broken_var = NodePath("")
-lights = [NodePath(""), NodePath(""), NodePath("")]
+lights = [null, null, null]
 explosion_pos = NodePath("../explosion_pos3")
 soundplayer = NodePath("../AkEvent3D")
 heatsink_close = ExtResource("7_24180")
@@ -1106,13 +1103,12 @@ surface_material_override/0 = ExtResource("12_ym8hx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Turret_Base/Heatsink4/MainCollision"]
 shape = SubResource("ConcavePolygonShape3D_n201j")
 
-[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink4" node_paths=PackedStringArray("model", "broken_var", "lights", "explosion_pos", "soundplayer")]
+[node name="HeatsinkCollision" type="StaticBody3D" parent="Turret_Base/Heatsink4" node_paths=PackedStringArray("model", "lights", "explosion_pos", "soundplayer")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("6_s1xmj")
 model = NodePath("..")
-broken_var = NodePath("")
-lights = [NodePath(""), NodePath(""), NodePath("")]
+lights = [null, null, null]
 explosion_pos = NodePath("../explosion_pos4")
 soundplayer = NodePath("../AkEvent3D")
 heatsink_close = ExtResource("7_24180")

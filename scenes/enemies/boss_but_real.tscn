@@ -803,7 +803,7 @@ tracks/11/keys = {
 
 [sub_resource type="Animation" id="Animation_kfh3s"]
 resource_name = "death_animation"
-length = 10.0
+length = 12.0
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -813,7 +813,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(-0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.687037, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.34, 0.68, 1.08, 1.48, 1.82, 2.16, 2.56, 4.20329, 4.33836, 7.99721, 8.99579)
+"times": PackedFloat32Array(2.00421, 2.34421, 2.68421, 3.08421, 3.48421, 3.82421, 4.16421, 4.56421, 6.2075, 6.34257, 10.0014, 11)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -824,7 +824,7 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(7.922, -0.25, 0, 0.25, 0, 4.96042, -0.25, 0, 0.25, 0, 4.96042, -0.25, 0, 0.25, 0, 6.05586, -0.25, 0, 0.25, 0, 7.922, -0.25, 0, 0.25, 0, 4.96042, -0.25, 0, 0.25, 0, 4.96042, -0.25, 0, 0.25, 0, 6.05586, -0.25, 0, 0.25, 0, 6.05586, -0.25, 0, 0.25, 0, 5.28245, -0.25, 0, 0.25, 0, 5.28245, -0.25, 0, 0.930902, -0.000709057, 0.508682, -0.467682, 0.0226535, 0.25, 0),
-"times": PackedFloat32Array(0, 0.34, 0.68, 1.08, 1.48, 1.82, 2.16, 2.56, 4.20329, 4.33836, 7.99721, 8.99579)
+"times": PackedFloat32Array(2.00421, 2.34421, 2.68421, 3.08421, 3.48421, 3.82421, 4.16421, 4.56421, 6.2075, 6.34257, 10.0014, 11)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
@@ -835,7 +835,7 @@ tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -0.537082, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.34, 0.68, 1.08, 1.48, 1.82, 2.16, 2.56, 4.20329, 4.33836, 7.99721, 8.99579)
+"times": PackedFloat32Array(2.00421, 2.34421, 2.68421, 3.08421, 3.48421, 3.82421, 4.16421, 4.56421, 6.2075, 6.34257, 10.0014, 11)
 }
 tracks/3/type = "bezier"
 tracks/3/imported = false
@@ -846,7 +846,7 @@ tracks/3/loop_wrap = true
 tracks/3/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(-0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0, -0.007, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.333333, 0.68, 1.08, 1.48, 1.81333, 2.16, 2.56, 4.20161, 4.43333, 5.64534)
+"times": PackedFloat32Array(2.00421, 2.33754, 2.68421, 3.08421, 3.48421, 3.81754, 4.16421, 4.56421, 6.20582, 6.43754, 7.64955)
 }
 tracks/4/type = "bezier"
 tracks/4/imported = false
@@ -857,7 +857,7 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(22.616, -0.25, 0, 0.25, 0, 19.37, -0.25, 0, 0.25, 0, 19.37, -0.25, 0, 0.25, 0, 20.7052, -0.25, 0, 0.25, 0, 22.616, -0.25, 0, 0.25, 0, 19.37, -0.25, 0, 0.25, 0, 19.37, -0.25, 0, 0.25, 0, 20.7052, -0.25, 0, 0.25, 0, 20.7052, -0.25, 0, 0.25, 0, 83.3227, -0.25, 0, 0.93133, 1.2808, -0.46444, -0.218394, 0.299346, 0.25, 0),
-"times": PackedFloat32Array(0, 0.333333, 0.68, 1.08, 1.48, 1.81333, 2.16, 2.56, 4.20161, 4.46667, 5.33333)
+"times": PackedFloat32Array(2.00421, 2.33754, 2.68421, 3.08421, 3.48421, 3.81754, 4.16421, 4.56421, 6.20582, 6.47088, 7.33754)
 }
 tracks/5/type = "bezier"
 tracks/5/imported = false
@@ -868,7 +868,7 @@ tracks/5/loop_wrap = true
 tracks/5/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -6.54998, -0.25, 0, 0.25, 0, -18.3344, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.333333, 0.68, 1.08, 1.48, 1.81333, 2.16, 2.56, 4.20161, 4.43333, 5.64534)
+"times": PackedFloat32Array(2.00421, 2.33754, 2.68421, 3.08421, 3.48421, 3.81754, 4.16421, 4.56421, 6.20582, 6.43754, 7.64955)
 }
 tracks/6/type = "bezier"
 tracks/6/imported = false
@@ -879,7 +879,7 @@ tracks/6/loop_wrap = true
 tracks/6/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(-0.111701, -0.25, 0, 0.25, 0, -0.449427, -0.25, 0, 0.25, 0, -0.0697492, -0.25, 0, 0.25, 0, 0.29928, -0.25, 0, 0.25, 0, -0.111701, -0.25, 0, 0.25, 0, -0.111701, -0.25, 0, 0.25, 0, -0.111701, -0.25, 0, 0.25, 0, -0.099372, -0.25, 0, 0.25, 0, 0.0174285, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.6, 1.5, 2.6, 3.23333, 3.97474, 4.20161, 4.46631, 5.6441)
+"times": PackedFloat32Array(2.00421, 2.60421, 3.50421, 4.60421, 5.23754, 5.97895, 6.20582, 6.47052, 7.64831)
 }
 tracks/7/type = "bezier"
 tracks/7/imported = false
@@ -890,7 +890,7 @@ tracks/7/loop_wrap = true
 tracks/7/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.967471, -0.25, 0, 0.25, 0, 2.59531, -0.25, 0, 0.25, 0, -1.25371, -0.25, 0, 0.25, 0, 6.28319, -0.25, 0, 0.25, 0, 6.28319, -0.25, 0, 0.25, 0, 6.28319, -0.25, 0, 0.25, 0, 3.02668, -0.25, 0, 0.25, 0, 2.51038, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.6, 1.5, 2.6, 3.23333, 3.97474, 4.20161, 4.46631, 5.6441)
+"times": PackedFloat32Array(2.00421, 2.60421, 3.50421, 4.60421, 5.23754, 5.97895, 6.20582, 6.47052, 7.64831)
 }
 tracks/8/type = "bezier"
 tracks/8/imported = false
@@ -901,7 +901,7 @@ tracks/8/loop_wrap = true
 tracks/8/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.224122, -0.25, 0, 0.25, 0, 0.667295, -0.25, 0, 0.25, 0, 0.502439, -0.25, 0, 0.25, 0, 5.11272e-07, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -2.28082, -0.25, 0, 0.25, 0, -1.45659, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.6, 1.5, 2.6, 3.97474, 3.975, 4.20161, 4.46631, 5.6441)
+"times": PackedFloat32Array(2.00421, 2.60421, 3.50421, 4.60421, 5.97895, 5.97921, 6.20582, 6.47052, 7.64831)
 }
 tracks/9/type = "bezier"
 tracks/9/imported = false
@@ -912,7 +912,7 @@ tracks/9/loop_wrap = true
 tracks/9/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.112778, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(4.20329, 4.33836)
+"times": PackedFloat32Array(6.2075, 6.34257)
 }
 tracks/10/type = "bezier"
 tracks/10/imported = false
@@ -923,7 +923,7 @@ tracks/10/loop_wrap = true
 tracks/10/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.0102019, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(4.20329, 4.33836)
+"times": PackedFloat32Array(6.2075, 6.34257)
 }
 tracks/11/type = "bezier"
 tracks/11/imported = false
@@ -934,7 +934,7 @@ tracks/11/loop_wrap = true
 tracks/11/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.090408, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(4.20329, 4.33836)
+"times": PackedFloat32Array(6.2075, 6.34257)
 }
 tracks/12/type = "method"
 tracks/12/imported = false
@@ -943,7 +943,7 @@ tracks/12/path = NodePath(".")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(4.26667),
+"times": PackedFloat32Array(6.27088),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],

@@ -12,11 +12,7 @@ extends Node3D
 #cubes
 @onready var cube_001: MeshInstance3D = $Cube_001
 @onready var cube_002: MeshInstance3D = $Cube_002
-
-
-func ready():
-	await get_tree().physics_frame
-	open_door()
+const CREDITS = preload("res://scenes/credits.tscn")
 
 func open_door():
 	print("door detects signal")
@@ -26,6 +22,10 @@ func open_door():
 
 func close_door():
 	animation_player.play("close_big_door")
+	await animation_player.animation_finished
+	Global.blur_scene.slow_fade_to_black()
+	await get_tree().create_timer(4).timeout
+	Global.load_fresh_scene()
 
 func turn_on_lights():
 	omni_light_3d_3.visible = true

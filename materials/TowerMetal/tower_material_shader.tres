@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=16 format=3 uid="uid://j7nnucm3tfl"]
+[gd_resource type="VisualShader" load_steps=17 format=3 uid="uid://j7nnucm3tfl"]
 
 [sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_3keiw"]
 default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(1, 1, 1, 1), 2, Quaternion(0.5, 0.5, 0.5, 0.5)]
@@ -6,6 +6,7 @@ op_type = 5
 
 [sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_hfxe5"]
 default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(1, 1, 1, 1), 2, Quaternion(0.5, 0.5, 0.5, 0.5)]
+expanded_output_ports = [0]
 op_type = 5
 
 [sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_gbhkg"]
@@ -25,6 +26,10 @@ parameter_name = "Mask"
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_qqd52"]
 source = 5
+
+[sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_3keiw"]
+default_input_values = [0, 0.0, 1, 0.0, 2, 0.0, 3, 0.0]
+op_type = 2
 
 [sub_resource type="VisualShaderNodeTextureParameterTriplanar" id="VisualShaderNodeTextureParameterTriplanar_3keiw"]
 parameter_name = "Material1Albedo"
@@ -159,18 +164,26 @@ void fragment() {
 
 // Mix:11
 	vec4 n_out11p0 = mix(n_out3p0, n_out9p0, n_out14p0);
+	float n_out11p1 = n_out11p0.r;
+	float n_out11p2 = n_out11p0.g;
+	float n_out11p3 = n_out11p0.b;
+	float n_out11p4 = n_out11p0.a;
+
+
+// VectorCompose:17
+	vec4 n_out17p0 = vec4(n_out11p1, n_out11p2, n_out11p3, n_out11p4);
 
 
 // Output:0
 	ALBEDO = vec3(n_out10p0.xyz);
 	METALLIC = n_out13p0.x;
 	ROUGHNESS = n_out12p0.x;
-	NORMAL = vec3(n_out11p0.xyz);
+	NORMAL_MAP = vec3(n_out17p0.xyz);
 
 
 }
 "
-nodes/fragment/0/position = Vector2(980, -60)
+nodes/fragment/0/position = Vector2(1220, -60)
 nodes/fragment/2/node = SubResource("VisualShaderNodeTextureParameterTriplanar_3keiw")
 nodes/fragment/2/position = Vector2(-440, -1540)
 nodes/fragment/3/node = SubResource("VisualShaderNodeTextureParameterTriplanar_hfxe5")
@@ -190,7 +203,7 @@ nodes/fragment/9/position = Vector2(-460, 1240)
 nodes/fragment/10/node = SubResource("VisualShaderNodeMix_3keiw")
 nodes/fragment/10/position = Vector2(280, -580)
 nodes/fragment/11/node = SubResource("VisualShaderNodeMix_hfxe5")
-nodes/fragment/11/position = Vector2(320, 640)
+nodes/fragment/11/position = Vector2(260, 600)
 nodes/fragment/12/node = SubResource("VisualShaderNodeMix_gbhkg")
 nodes/fragment/12/position = Vector2(300, 240)
 nodes/fragment/13/node = SubResource("VisualShaderNodeMix_5c1rr")
@@ -201,4 +214,6 @@ nodes/fragment/15/node = SubResource("VisualShaderNodeTexture2DParameter_8dl3j")
 nodes/fragment/15/position = Vector2(-2040, -60)
 nodes/fragment/16/node = SubResource("VisualShaderNodeTexture_qqd52")
 nodes/fragment/16/position = Vector2(-1360, 80)
-nodes/fragment/connections = PackedInt32Array(6, 0, 10, 1, 2, 0, 10, 0, 10, 0, 0, 0, 8, 0, 13, 1, 4, 0, 13, 0, 13, 0, 0, 2, 5, 0, 12, 0, 7, 0, 12, 1, 12, 0, 0, 3, 3, 0, 11, 0, 9, 0, 11, 1, 11, 0, 0, 8, 14, 0, 10, 2, 14, 0, 13, 2, 14, 0, 12, 2, 14, 0, 11, 2, 15, 0, 16, 2, 16, 0, 14, 0)
+nodes/fragment/17/node = SubResource("VisualShaderNodeVectorCompose_3keiw")
+nodes/fragment/17/position = Vector2(800, 600)
+nodes/fragment/connections = PackedInt32Array(6, 0, 10, 1, 2, 0, 10, 0, 10, 0, 0, 0, 8, 0, 13, 1, 4, 0, 13, 0, 13, 0, 0, 2, 5, 0, 12, 0, 7, 0, 12, 1, 12, 0, 0, 3, 3, 0, 11, 0, 9, 0, 11, 1, 14, 0, 10, 2, 14, 0, 13, 2, 14, 0, 12, 2, 14, 0, 11, 2, 15, 0, 16, 2, 16, 0, 14, 0, 11, 4, 17, 3, 11, 1, 17, 0, 17, 0, 0, 9, 11, 2, 17, 1, 11, 3, 17, 2)

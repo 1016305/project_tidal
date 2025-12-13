@@ -736,3 +736,6 @@ func do_idle_barks():
 
 func _on_stop_trying_timeout() -> void:
 	current_state = States.Attack
+
+func set_state_to_attack():
+	current_state = States.Attack

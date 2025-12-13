@@ -279,13 +279,13 @@ func phase_4():
 		aim_at_player = true
 		await get_tree().create_timer(ph4_aim_time).timeout
 		shoot_location = Global.player.position
-		aim_at_player = false
 		lights(left_lights,ph4_shoot_wait)
 		lights(right_lights,ph4_shoot_wait)
 		await get_tree().create_timer(ph4_shoot_wait).timeout
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
+		aim_at_player = false
 		await get_tree().create_timer(ph4_shoot_time).timeout
 		lights_off(left_lights)
 		lights_off(right_lights)
@@ -294,13 +294,14 @@ func phase_4():
 		aim_at_player = true
 		await get_tree().create_timer(ph4_aim_time).timeout
 		shoot_location = Global.player.position
-		aim_at_player = false
+		
 		lights(left_lights,ph4_shoot_wait)
 		lights(right_lights,ph4_shoot_wait)
 		await get_tree().create_timer(ph4_shoot_wait).timeout
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
+		aim_at_player = false
 		await get_tree().create_timer(ph4_shoot_time).timeout
 		lights_off(left_lights)
 		lights_off(right_lights)
@@ -309,13 +310,14 @@ func phase_4():
 		aim_at_player = true
 		await get_tree().create_timer(ph4_aim_time).timeout
 		shoot_location = Global.player.position
-		aim_at_player = false
+		
 		lights(left_lights,ph4_shoot_wait)
 		lights(right_lights,ph4_shoot_wait)
 		await get_tree().create_timer(ph4_shoot_wait).timeout
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
+		aim_at_player = false
 		await get_tree().create_timer(ph4_shoot_time).timeout
 		lights_off(left_lights)
 		lights_off(right_lights)
