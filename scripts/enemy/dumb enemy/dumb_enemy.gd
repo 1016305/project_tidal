@@ -10,6 +10,7 @@ class_name DumbEnemy extends CharacterBody3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var saw_spin: AnimationPlayer = $SawSpin
 @onready var stop_trying: Timer = $stop_trying
+@export var wait_for_map = true
 
 ##DELETEME
 @export var monitor: bool = false

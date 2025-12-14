@@ -12,8 +12,7 @@ func _ready() -> void:
 		ringingears.post(self)
 	if visible:
 		wait_a_bit()
-		var tween = create_tween()
-		tween.tween_property(color_rect,"color", Color(0,0,0,0),2)
+		
 	
 
 func _physics_process(delta: float) -> void:
@@ -27,6 +26,8 @@ func kill_when_good():
 		
 func wait_a_bit():
 	await get_tree().create_timer(0.1).timeout
+	var tween = create_tween()
+	tween.tween_property(color_rect,"color", Color(0,0,0,0),2)
 	Global.main_camera.intro_blur_and_exposure()
 
 func slow_fade_to_black():

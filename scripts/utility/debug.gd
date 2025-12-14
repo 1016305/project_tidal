@@ -11,9 +11,10 @@ func _ready() -> void:
 	Global.debug = self
 
 func _input(event):
+	pass
 	#toggle panel
-	if event.is_action_pressed("debug"):
-		visible = !visible
+	#if event.is_action_pressed("debug"):
+		#visible = !visible
 
 func _process(delta):
 	if visible:

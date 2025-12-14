@@ -116,7 +116,6 @@ func _physics_process(delta: float) -> void:
 		footstep_sounds()
 		movement_foley()
 		heartbeat_noise()
-	toggle_mouse()
 	if !is_dead:
 		handle_head_roll(input_dir, delta)
 		handle_crouch(delta)
@@ -145,7 +144,6 @@ func _physics_process(delta: float) -> void:
 		is_moving = true
 		
 	player_debug()
-	spawn_test_enemy()
 
 func handle_gravity(delta):
 	#gravities the player so they're always goin down down
@@ -223,14 +221,6 @@ func handle_head_roll(dir, delta):
 	else:
 		camera.rotation.z = lerp(camera.rotation.z, 0.0, 12 * delta)
 
-func toggle_mouse():
-	if Input.is_action_just_pressed("toggle_mouse_visible"):
-		if !is_mouse_hidden:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			is_mouse_hidden = true
-		elif is_mouse_hidden:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-			is_mouse_hidden = false
 			
 func handle_sprint(delta):
 	fov_change(delta, FOV_MIN, FOV_MAX)
@@ -427,11 +417,6 @@ func player_debug():
 	Global.debug.add_property('Global Position', global_position,1)
 	Global.debug.add_property('Regen Timer', regen_timer.time_left, 1)
 
-func spawn_test_enemy():
-	if Input.is_action_just_pressed("spawn_test_enemy"):
-		var new_enemy = enemyscene.instantiate()
-		new_enemy.position = Vector3(3.4,1.5,1.2)
-		get_tree().root.add_child(new_enemy)
 		
 func take_damage_test():
 	if Input.is_action_just_pressed("test_damage"):

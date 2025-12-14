@@ -12,3 +12,4 @@ metallic_texture = ExtResource("2_cmwg4")
 roughness_texture = ExtResource("4_wuekv")
 normal_enabled = true
 normal_texture = ExtResource("3_lbi1h")
+texture_filter = 4

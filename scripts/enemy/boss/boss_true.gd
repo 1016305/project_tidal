@@ -36,7 +36,7 @@ var vfx
 @export var movement: WwiseEvent
 @export var movement_stop: WwiseEvent
 @export var weapon_fire: WwiseEvent
-@export var combat_barks_interval: float
+@export var combat_barks_interval: float = 2
 @onready var combat_barks_timer: Timer = $combat_barks_timer
 
 @export_category("Primary Logic")
@@ -241,6 +241,8 @@ func phase_3():
 			encounter.spawn_enemy(spawn_enemies_here[2].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[3].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[5].global_position)
+			var i = NavigationServer3D.get_maps()
+			NavigationServer3D.map_force_update(i[0])
 		aim_at_player = true
 		playsound(movement)
 		await get_tree().create_timer(ph3_aim_time).timeout
@@ -291,6 +293,8 @@ func phase_4():
 			encounter.spawn_enemy(spawn_enemies_here[3].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[4].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[5].global_position)
+			var i = NavigationServer3D.get_maps()
+			NavigationServer3D.map_force_update(i[0])
 
 		aim_at_player = true
 		playsound(movement)

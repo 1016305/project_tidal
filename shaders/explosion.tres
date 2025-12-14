@@ -26,7 +26,7 @@ operator = 2
 output_port_for_preview = 0
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_cwa0r"]
-size = Vector2(1004, 579)
+size = Vector2(1004, 402)
 title = "Pixelate"
 attached_nodes = PackedInt32Array(16, 17, 18, 19, 15)
 
