@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://b20vb60ww3nkq"]
+
+[resource]
+name = "elevator"
+id = 3705378287
+guid = "{68A19D79-B2C2-4F98-93DB-26BB86587B30}"
+dummy = true

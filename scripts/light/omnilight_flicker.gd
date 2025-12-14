@@ -1,3 +1,4 @@
+@tool
 extends OmniLight3D
 
 #Max brightness of the light

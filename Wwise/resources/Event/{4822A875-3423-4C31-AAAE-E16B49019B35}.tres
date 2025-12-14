@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://drdwkjqk7uu48"]
+
+[resource]
+name = "boss_movement_stop"
+id = 1925754261
+guid = "{4822A875-3423-4C31-AAAE-E16B49019B35}"
+dummy = true

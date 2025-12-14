@@ -9,3 +9,4 @@ func _on_body_entered(body: Node3D) -> void:
 			Global.begin_boss.emit()
 			is_done = true
 			boss_encounter.set_encounter()
+			queue_free()

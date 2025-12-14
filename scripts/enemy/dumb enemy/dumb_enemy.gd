@@ -30,6 +30,7 @@ var do_idle_bark: bool = false
 @export var combat_bark_max_interval: float = 5
 @export var combat_barks: WwiseEvent
 @export var shooting_sounds: WwiseEvent
+@export var hit_sounds: WwiseEvent
 @export var hovering_sounds: WwiseEvent
 @export var alert_sounds: WwiseEvent
 @export var melee_sounds: WwiseEvent
@@ -39,6 +40,8 @@ var do_idle_bark: bool = false
 ## Idle barks will pick a random number of seconds before playing. This is the upper bound.
 @export var idle_bark_max_interval: float = 5
 @export var idle_sounds: WwiseEvent
+
+@onready var hit_bark_cooldown: Timer = $hit_bark_cooldown
 
 @onready var soundhole: AkEvent3D = $soundhole
 
@@ -167,7 +170,10 @@ func _ready() -> void:
 	set_physics_process(false)
 	call_deferred("dump_first_physics_frame")
 	playsound(hovering_sounds)
-	origin = position
+	if origin_override:
+		origin = origin_override_coord
+	else:
+		origin = position
 	shoot_delay_timer.wait_time = 60/rate_of_fire
 	melee_raycast.target_position = Vector3(0,0,-melee_range)
 	current_hp = max_hp
@@ -254,12 +260,7 @@ func idle_behavior():
 
 #returns random position on unit circle scaled within the min/max range
 func get_random_spot() -> Vector3:
-	var _origin
-	if origin_override:
-		_origin = origin_override_coord
-	else:
-		_origin = origin
-	var random_pos = _origin + random_vector(random_patrol_min_dist, random_patrol_max_dist)
+	var random_pos = origin + random_vector(random_patrol_min_dist, random_patrol_max_dist)
 	var map = agent.get_navigation_map()
 	var here = NavigationServer3D.map_get_closest_point(map, random_pos)
 	print(name," ", here)
@@ -276,18 +277,18 @@ func next_target_in_sequence() -> Vector3:
 
 	#print(node.position)
 	var map = agent.get_navigation_map()
-	var here = NavigationServer3D.map_get_closest_point(map, node.position) #node.position when using the other nodes
+	var here = NavigationServer3D.map_get_closest_point(map, node.global_position) #node.position when using the other nodes
 	return here
 	
 #select a random node in the node group
 func random_target_in_sequence() -> Vector3:
 	var number_of_points = len(patrol_points) - 1
-	var rand_next = 0
+	var rand_next = randi_range(0,number_of_points)
 	if rand_next == next_target:
 		rand_next = randi_range(0,number_of_points)
 	var node = get_node(patrol_points[rand_next])
 	var map = agent.get_navigation_map()
-	var here = NavigationServer3D.map_get_closest_point(map, node.position) #node.position when using the other nodes
+	var here = NavigationServer3D.map_get_closest_point(map, node.global_position) #node.position when using the other nodes
 	return here
 
 ## Alert Detection Behaviours
@@ -585,6 +586,9 @@ func check_body_part(bodypart,damage):
 
 func take_damage(damage):
 	current_hp-=damage
+	if hit_bark_cooldown.is_stopped():
+		playsound(hit_sounds)
+		hit_bark_cooldown.start()
 	if current_state == States.Idle:
 		current_state = States.Alert
 
@@ -737,4 +741,7 @@ func do_idle_barks():
 			await get_tree().create_timer(randf_range(idle_bark_min_interval,idle_bark_max_interval)).timeout
 
 func _on_stop_trying_timeout() -> void:
+	current_state = States.Attack
+
+func set_state_to_attack():
 	current_state = States.Attack

@@ -234,20 +234,21 @@ func shoot_sounds():
 	fire_sounds.post_event()
 	
 func reload():
-	if weapon_type.weapon_reserve_ammo != 0 and !is_reloading:
-		is_reloading = !is_reloading
-		Global.player_is_reloading.emit()
-		await get_tree().create_timer(weapon_type.weapon_reload_time).timeout
-		var pending_ammo = weapon_type.weapon_max_ammo - weapon_type.weapon_current_ammo
-		
-		if pending_ammo < weapon_type.weapon_reserve_ammo:
-			weapon_type.weapon_reserve_ammo -= pending_ammo
-			weapon_type.weapon_current_ammo = weapon_type.weapon_max_ammo
-		else:
-			weapon_type.weapon_current_ammo += weapon_type.weapon_reserve_ammo
-			weapon_type.weapon_reserve_ammo = 0
-		Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
-		is_reloading = !is_reloading
+	if weapon_type.weapon_current_ammo != weapon_type.weapon_max_ammo:
+		if weapon_type.weapon_reserve_ammo != 0 and !is_reloading:
+			is_reloading = !is_reloading
+			Global.player_is_reloading.emit()
+			await get_tree().create_timer(weapon_type.weapon_reload_time).timeout
+			var pending_ammo = weapon_type.weapon_max_ammo - weapon_type.weapon_current_ammo
+			
+			if pending_ammo < weapon_type.weapon_reserve_ammo:
+				weapon_type.weapon_reserve_ammo -= pending_ammo
+				weapon_type.weapon_current_ammo = weapon_type.weapon_max_ammo
+			else:
+				weapon_type.weapon_current_ammo += weapon_type.weapon_reserve_ammo
+				weapon_type.weapon_reserve_ammo = 0
+			Global.ammo_update.emit(weapon_type.weapon_current_ammo, weapon_type.weapon_reserve_ammo)
+			is_reloading = !is_reloading
 
 func weapon_spread(delta,mask):
 	var camera = Global.main_camera

@@ -1,0 +1,28 @@
+[gd_resource type="ShaderMaterial" load_steps=11 format=3 uid="uid://c00xlc21g2wj7"]
+
+[ext_resource type="Shader" uid="uid://j7nnucm3tfl" path="res://materials/TowerMetal/tower_material_shader.tres" id="1_uataq"]
+[ext_resource type="Texture2D" uid="uid://b5uicf7275umi" path="res://textures/spawntowertextures/SpawnTowerMask.png" id="2_ib6xk"]
+[ext_resource type="Texture2D" uid="uid://dqggg75svhqdl" path="res://textures/spawntowertextures/metal/SpawnTowerMetalTex_BaseColorScaled.png" id="3_6k2uq"]
+[ext_resource type="Texture2D" uid="uid://cuhb7gdy587rm" path="res://textures/spawntowertextures/metal/SpawnTowerMetalTex_MetallicScaled.png" id="4_1q2yo"]
+[ext_resource type="Texture2D" uid="uid://ctcvg2o13vva2" path="res://textures/spawntowertextures/metal/SpawnTowerMetalTex_NormalScaled.png" id="5_t87f1"]
+[ext_resource type="Texture2D" uid="uid://cqhfds4d2284y" path="res://textures/spawntowertextures/metal/SpawnTowerMetalTex_RoughnessScaled.png" id="6_7s66i"]
+[ext_resource type="Texture2D" uid="uid://77od7gmxaagy" path="res://textures/spawntowertextures/stone/SpawnTowerStoneTex_BaseColorScaled.png" id="7_pw3tn"]
+[ext_resource type="Texture2D" uid="uid://dca6ve10v2l5p" path="res://textures/spawntowertextures/stone/SpawnTowerStoneTex_MetallicScaled.png" id="8_23a5q"]
+[ext_resource type="Texture2D" uid="uid://ojqw0x7ueulo" path="res://textures/spawntowertextures/stone/SpawnTowerStoneTex_NormalScaled.png" id="9_uunv2"]
+[ext_resource type="Texture2D" uid="uid://b5rayl2stje1o" path="res://textures/spawntowertextures/stone/SpawnTowerStoneTex_RoughnessScaled.png" id="10_rirdo"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_uataq")
+shader_parameter/Material1Albedo = ExtResource("7_pw3tn")
+shader_parameter/Material2Albedo = ExtResource("3_6k2uq")
+shader_parameter/Mask = ExtResource("2_ib6xk")
+shader_parameter/Material1Metallic = ExtResource("8_23a5q")
+shader_parameter/Material2Metallic = ExtResource("4_1q2yo")
+shader_parameter/Material1Roughness = ExtResource("10_rirdo")
+shader_parameter/Material2Roughness = ExtResource("6_7s66i")
+shader_parameter/Material1Normal = ExtResource("9_uunv2")
+shader_parameter/Material2Normal = ExtResource("5_t87f1")
+shader_parameter/triplanar_scale = Vector3(0.02, 0.02, 0.02)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5
