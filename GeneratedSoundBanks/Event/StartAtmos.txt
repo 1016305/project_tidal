@@ -13,6 +13,10 @@ Switch	ID	Name	Switch Group			Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	961645553	Parametric EQ (Custom)	Wwise Parametric EQ			
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+	2258521792	Brick_Wall_Minus_1dB_Peak_Slow_Release	Wwise Peak Limiter			
+	2781261543	Brick_Wall_Minus_6dB_Peak_Slow_Release	Wwise Peak Limiter			
 	3216246379	Space_Dreaming	Wwise RoomVerb			
 	3491912475	Club_Music_Distant_01	Wwise Parametric EQ			
+	3900114836	Metal_Hangar	Wwise RoomVerb			
 

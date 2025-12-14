@@ -10,10 +10,93 @@
     "Type": "Event",
     "GUID": "{7D91000F-DC0F-4DF7-A397-494476201105}",
     "Language": "SFX",
-    "Hash": "{0A2D209B-6ECB-FEA2-D42F-529BF12E50BD}",
+    "Hash": "{C4A33F26-CF60-1125-8FC2-C87465F23A93}",
     "ObjectPath": "boss_coolingvent_destroy",
     "ShortName": "boss_coolingvent_destroy",
     "Path": "Event/boss_coolingvent_destroy.bnk",
+    "Media": [
+     {
+      "Id": "92867497",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/92867497.wem",
+      "CachePath": "F2/{F2C881BA-AF97-1E76-0A68-35C5FEB09ECB}.wem"
+     },
+     {
+      "Id": "134533631",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/134533631.wem",
+      "CachePath": "30/{30159AE4-9D12-CE38-2B53-8A4855951FAF}.wem"
+     },
+     {
+      "Id": "253060480",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/253060480.wem",
+      "CachePath": "17/{17E02F29-F199-73F2-358F-6C1E87A78E50}.wem"
+     },
+     {
+      "Id": "261362267",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/261362267.wem",
+      "CachePath": "2A/{2A79DA14-B0E7-C2A7-F4AF-2738A6BF98C9}.wem"
+     },
+     {
+      "Id": "356056050",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cooling Vents\\cooling_vent_destroy_02.wav",
+      "Path": "Media/356056050.wem",
+      "CachePath": "5A/{5A3BF1EC-B3C7-9BE0-23E2-26F7B8DD2FBD}.wem"
+     },
+     {
+      "Id": "539935795",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cooling Vents\\cooling_vent_destroy_01.wav",
+      "Path": "Media/539935795.wem",
+      "CachePath": "0E/{0E46FFB2-E73D-05DD-8387-A3D0272D6199}.wem"
+     },
+     {
+      "Id": "604977064",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cooling Vents\\cooling_vent_destroy_03.wav",
+      "Path": "Media/604977064.wem",
+      "CachePath": "A3/{A3894C38-F00B-D0CA-741E-17604A4E6E23}.wem"
+     },
+     {
+      "Id": "619156272",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/619156272.wem",
+      "CachePath": "B3/{B3A6725A-FEF3-05B9-6AD3-2514F709BCA0}.wem"
+     },
+     {
+      "Id": "627143268",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cooling Vents\\cooling_vent_destroy_04.wav",
+      "Path": "Media/627143268.wem",
+      "CachePath": "26/{268CAB2B-446D-DDAC-ECA6-E1E9C2EF1C9E}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "3802256100",
@@ -21,14 +104,43 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_coolingvent_destroy",
       "GUID": "{7D91000F-DC0F-4DF7-A397-494476201105}",
       "Color": "10",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "1.1174203",
+      "DurationMax": "2.3343647",
+      "MediaRefs": [
+       {
+        "Id": "92867497"
+       },
+       {
+        "Id": "134533631"
+       },
+       {
+        "Id": "253060480"
+       },
+       {
+        "Id": "261362267"
+       },
+       {
+        "Id": "356056050"
+       },
+       {
+        "Id": "539935795"
+       },
+       {
+        "Id": "604977064"
+       },
+       {
+        "Id": "619156272"
+       },
+       {
+        "Id": "627143268"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{CF4DF264-2433-41A8-78E9-F971C1E4FF4D}"
+  "FileHash": "{0C4D826E-6D8E-57A1-FACD-F5A184153166}"
  }
 }

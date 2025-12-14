@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{CD7BF1D8-49A3-453C-8289-1BC072862E93}",
     "Language": "SFX",
-    "Hash": "{22307142-3467-9868-8202-A90F459283D6}",
+    "Hash": "{796C4A21-2DD7-42E0-10CB-D52D02C23955}",
     "ObjectPath": "enemy_alert",
     "ShortName": "enemy_alert",
     "Path": "Event/enemy_alert.bnk",
+    "Media": [
+     {
+      "Id": "195288589",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_alert.wav",
+      "Path": "Media/195288589.wem",
+      "CachePath": "5F/{5F7FBAD9-9242-F7B2-F385-85D9DE747206}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "493036092",
@@ -21,14 +32,18 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_alert",
       "GUID": "{CD7BF1D8-49A3-453C-8289-1BC072862E93}",
       "Color": "10",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.95229834",
+      "DurationMax": "0.95229834",
+      "MediaRefs": [
+       {
+        "Id": "195288589"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{BB677CD1-430F-9A09-293F-190CCEB67DDB}"
+  "FileHash": "{854CD5CD-9CA2-E99A-A027-DC146130E1C1}"
  }
 }

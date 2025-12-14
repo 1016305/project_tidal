@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}",
     "Language": "SFX",
-    "Hash": "{D8F0FA14-1236-81AF-C7FD-C77DC5019C59}",
+    "Hash": "{4929A61C-4A6E-6928-9649-79363071A711}",
     "ObjectPath": "assault_rifle_fire",
     "ShortName": "assault_rifle_fire",
     "Path": "Event/assault_rifle_fire.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "assault_rifle_gunfire01.wav",
       "Path": "Media/445722309.wem",
-      "CachePath": "F4/{F41955F8-1BD7-EFF1-62A0-A6DFAB7FBFF2}.wem"
+      "CachePath": "0F/{0F3D63FF-DA65-3542-F3C3-9DC27939B3CE}.wem"
      },
      {
       "Id": "478542978",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "assault_rifle_gunfire04.wav",
       "Path": "Media/478542978.wem",
-      "CachePath": "02/{02B04CC7-7632-179C-5C9B-A16A989D77C1}.wem"
+      "CachePath": "AB/{ABD81963-1841-D7C9-34DD-CC23DB551FC4}.wem"
      },
      {
       "Id": "483902979",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "assault_rifle_gunfire03.wav",
       "Path": "Media/483902979.wem",
-      "CachePath": "83/{8335BDD4-872A-EE8A-EDA5-C3262E006E0B}.wem"
+      "CachePath": "C9/{C9FA3483-8BDC-CF59-F2D9-69A23590BBE0}.wem"
      },
      {
       "Id": "743935165",
@@ -49,11 +49,19 @@
       "Location": "Loose",
       "ShortName": "assault_rifle_gunfire02.wav",
       "Path": "Media/743935165.wem",
-      "CachePath": "63/{6394B63E-E360-2D4C-86EE-EACEFCB9BB5E}.wem"
+      "CachePath": "33/{3344CC1B-2E5A-2B81-628C-1FAFE6F95E63}.wem"
      }
     ],
     "Plugins": {
      "ShareSets": [
+      {
+       "Id": "1459522457",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "GUID": "{2144284E-7ADD-4341-86A4-4E468BEC9A2D}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      },
       {
        "Id": "2998002419",
        "Name": "Boost_3dB_10KHz",
@@ -71,9 +79,10 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\assault_rifle_fire",
       "GUID": "{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}",
       "Color": "8",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "0.7109524",
-      "DurationMax": "0.71875286",
+      "DurationMin": "0.39501807",
+      "DurationMax": "0.47981733",
       "MediaRefs": [
        {
         "Id": "445722309"
@@ -91,6 +100,9 @@
       "PluginRefs": {
        "ShareSets": [
         {
+         "Id": "1459522457"
+        },
+        {
          "Id": "2998002419"
         }
        ]
@@ -99,6 +111,6 @@
     ]
    }
   ],
-  "FileHash": "{9B0CFC94-D23C-D838-4373-8491204BDEB8}"
+  "FileHash": "{BEDBB49D-2011-B941-83E0-AE328946D5B6}"
  }
 }

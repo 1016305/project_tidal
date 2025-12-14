@@ -10,7 +10,7 @@
     "Type": "Bus",
     "GUID": "{1332E2DC-853C-42B6-A659-92C90F2675EC}",
     "Language": "SFX",
-    "Hash": "{98001C04-FBD8-8573-DAA9-0260FED7286A}",
+    "Hash": "{570E6535-9599-DD4E-C69B-8A5CEAB28F89}",
     "ObjectPath": "First_Tower_Verb",
     "ShortName": "First_Tower_Verb",
     "Path": "Bus/First_Tower_Verb.bnk",
@@ -32,7 +32,7 @@
       "Name": "First_Tower_Verb",
       "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\First_Tower_Verb",
       "GUID": "{1332E2DC-853C-42B6-A659-92C90F2675EC}",
-      "Color": "4",
+      "Color": "15",
       "PluginRefs": {
        "ShareSets": [
         {
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{A5153E85-FABA-C6E1-C07E-BBDE054EFDE9}"
+  "FileHash": "{562C938A-2BDF-3A7C-6C18-AE04E5F11860}"
  }
 }

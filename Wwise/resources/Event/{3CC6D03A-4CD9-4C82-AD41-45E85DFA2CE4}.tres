@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://cbmgmadsk883w"]
+
+[resource]
+name = "enemy_fire"
+id = 4240339038
+guid = "{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}"
+dummy = true

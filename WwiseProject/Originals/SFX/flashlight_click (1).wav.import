@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bflvyw056qhfs"
+path="res://.godot/imported/flashlight_click (1).wav-b4d00438c460f65f7380dc757102011f.sample"
+
+[deps]
+
+source_file="res://WwiseProject/Originals/SFX/flashlight_click (1).wav"
+dest_files=["res://.godot/imported/flashlight_click (1).wav-b4d00438c460f65f7380dc757102011f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

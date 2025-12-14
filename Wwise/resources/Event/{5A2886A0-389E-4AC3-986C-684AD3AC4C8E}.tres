@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://cswjpf7uxcsgo"]
+
+[resource]
+name = "enemy_melee"
+id = 682605002
+guid = "{5A2886A0-389E-4AC3-986C-684AD3AC4C8E}"
+dummy = true

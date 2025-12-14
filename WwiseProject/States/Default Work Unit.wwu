@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A9747214-26E6-4C0A-8A16-D654113AE083}" SchemaVersion="132">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{A9747214-26E6-4C0A-8A16-D654113AE083}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A9747214-26E6-4C0A-8A16-D654113AE083}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="MusicStateGroup" ID="{DCFA7345-6877-4069-B009-51418695A10E}">
+					<ChildrenList>
+						<State Name="None" ID="{10C625E6-9EB2-4E1D-94F2-27E6806923B9}"/>
+						<State Name="Combat" ID="{B7498178-B61B-40D9-8475-42035C45A831}"/>
+						<State Name="Ambient" ID="{6838F25F-0900-4176-B0BE-35118BD528DF}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="AreaStates" ID="{48E72681-000E-4084-B6E0-5CE154144F84}">
+					<ChildrenList>
+						<State Name="None" ID="{17B85D27-E875-4CFA-A8D0-D7B93151C106}"/>
+						<State Name="Canyon01" ID="{0335D5E2-CBE7-4597-B619-42F3524F87A6}"/>
+						<State Name="Canyon02" ID="{E2779B2C-BE55-4B87-BCA7-E7ACCF13AFA0}"/>
+						<State Name="SecondTower" ID="{ED435102-D65F-4BFC-9D91-A25165F36D24}"/>
+						<State Name="ThirdTower" ID="{5BC0BF68-CF6A-4C42-9520-641E1FFE53A1}"/>
+						<State Name="BossArena" ID="{0F9909C4-6D9E-4EEB-970C-EF57B1260C54}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

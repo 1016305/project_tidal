@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "518384578",
+    "Type": "Bus",
+    "GUID": "{5594FFD1-A5C6-4E32-9C9A-3B430EFB420B}",
+    "Language": "SFX",
+    "Hash": "{866D0CA4-73DB-6B07-A331-7B22B5DCBF4F}",
+    "ObjectPath": "Third_Tower_Verb",
+    "ShortName": "Third_Tower_Verb",
+    "Path": "Bus/Third_Tower_Verb.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3290519051",
+       "Name": "Aluminium_Tank",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Aluminium_Tank",
+       "GUID": "{0D20C91A-F750-47E0-AE32-00E5F2AA1272}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "518384578",
+      "Name": "Third_Tower_Verb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Third_Tower_Verb",
+      "GUID": "{5594FFD1-A5C6-4E32-9C9A-3B430EFB420B}",
+      "Color": "25",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3290519051"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{772CB51E-D4B6-986D-BC5B-3C4987DA2D28}"
+ }
+}

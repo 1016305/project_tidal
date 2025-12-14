@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7EC976F9-DACF-499D-983D-A3EF6EB13861}",
     "Language": "SFX",
-    "Hash": "{A486C19C-72BC-0B79-50EF-F27DCC400AAB}",
+    "Hash": "{AA2FB5F3-CA5B-332B-1A99-592432594CB6}",
     "ObjectPath": "low_health",
     "ShortName": "low_health",
     "Path": "Event/low_health.bnk",
@@ -42,6 +42,6 @@
     ]
    }
   ],
-  "FileHash": "{C787D4F1-AEB9-824E-D4BB-8CE49EA97A82}"
+  "FileHash": "{1B62C52A-D291-DD2A-8141-73DB17E36034}"
  }
 }

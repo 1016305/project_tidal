@@ -50,7 +50,7 @@
 						<Property Name="Channels" Type="int32">
 							<ValueList>
 								<Value Platform="Mac">4</Value>
-								<Value Platform="Windows">3</Value>
+								<Value Platform="Windows">0</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Color" Type="int16" Value="10"/>
