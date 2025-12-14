@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://du1v4o521ang6"
+path="res://.godot/imported/Laser - Layer v2.5.wav-beb5627c3b1d5c2dece5903a796fcf59.sample"
+
+[deps]
+
+source_file="res://WwiseProject/Originals/SFX/Laser - Layer v2.5.wav"
+dest_files=["res://.godot/imported/Laser - Layer v2.5.wav-beb5627c3b1d5c2dece5903a796fcf59.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
