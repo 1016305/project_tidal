@@ -1,4 +1,3 @@
-@tool
 class_name GenericSoundScript extends Node3D
 var SOUNDS_TABLE = preload("res://scripts/utility/sounds_table.tres")
 var global_sound_controller: Node3D

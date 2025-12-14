@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://cguh3445hi4kl"]
+
+[resource]
+name = "lights_on"
+id = 1063352154
+guid = "{857D5D76-7D63-43C3-878D-B8A113A7E4BC}"
+dummy = true

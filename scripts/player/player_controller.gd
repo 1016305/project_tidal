@@ -26,6 +26,8 @@ var interact_result
 @onready var ak_footsteps: AkEvent3D = $footsteps
 
 
+@export var flashlight_sfx: WwiseEvent
+
 @onready var heartbeat: AkEvent3D = $heartbeat
 @export var heartbeat_out: WwiseEvent
 @export var heartbeat_in: WwiseEvent
@@ -300,6 +302,8 @@ func reload():
 func toggle_flashlight():
 	if Input.is_action_just_pressed("toggle_flashlight"):
 		flashlight.visible = !flashlight.visible
+		if flashlight_sfx != null:
+			flashlight_sfx.post(self)
 		
 func footstep_sounds():
 	if is_moving and !is_falling:

@@ -30,6 +30,7 @@ var do_idle_bark: bool = false
 @export var combat_bark_max_interval: float = 5
 @export var combat_barks: WwiseEvent
 @export var shooting_sounds: WwiseEvent
+@export var hit_sounds: WwiseEvent
 @export var hovering_sounds: WwiseEvent
 @export var alert_sounds: WwiseEvent
 @export var melee_sounds: WwiseEvent
@@ -39,6 +40,8 @@ var do_idle_bark: bool = false
 ## Idle barks will pick a random number of seconds before playing. This is the upper bound.
 @export var idle_bark_max_interval: float = 5
 @export var idle_sounds: WwiseEvent
+
+@onready var hit_bark_cooldown: Timer = $hit_bark_cooldown
 
 @onready var soundhole: AkEvent3D = $soundhole
 
@@ -583,6 +586,9 @@ func check_body_part(bodypart,damage):
 
 func take_damage(damage):
 	current_hp-=damage
+	if hit_bark_cooldown.is_stopped():
+		playsound(hit_sounds)
+		hit_bark_cooldown.start()
 	if current_state == States.Idle:
 		current_state = States.Alert
 

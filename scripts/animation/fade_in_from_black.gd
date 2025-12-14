@@ -4,9 +4,12 @@ extends Control
 
 var color_transparent: Color = Color(0,0,0,0)
 @export var lerp_speed: float = 0.1
+@export var ringingears: WwiseEvent
 
 func _ready() -> void:
 	Global.blur_scene = self
+	if ringingears != null:
+		ringingears.post(self)
 	if visible:
 		wait_a_bit()
 		var tween = create_tween()

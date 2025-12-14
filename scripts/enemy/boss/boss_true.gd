@@ -12,6 +12,8 @@ var vfx
 @onready var startup_sequence: AnimationPlayer = $"startup sequence"
 @export var encounter: EnemyEncounter
 @export var spawn_enemies_here: Array[Node3D]
+@onready var sounds: AkEvent3D = $sounds
+@onready var alarm: AkEvent3D = $alarm
 
 #@onready var eye: CSGSphere3D = $CSGSphere3D
 @onready var rotate_me: MeshInstance3D = $"Icosphere"
@@ -30,10 +32,12 @@ var vfx
 @export_category("Sounds")
 @export var combat_barks: WwiseEvent
 @export var death: WwiseEvent
-@export var hit_barks: WwiseEvent
 @export var intro_sounds: WwiseEvent
 @export var movement: WwiseEvent
+@export var movement_stop: WwiseEvent
 @export var weapon_fire: WwiseEvent
+@export var combat_barks_interval: float
+@onready var combat_barks_timer: Timer = $combat_barks_timer
 
 @export_category("Primary Logic")
 @export var heatsinks_array: Array[Heatsink]
@@ -127,6 +131,7 @@ func _ready() -> void:
 	vfx = VFXDAMAGE.instantiate()
 	add_child(vfx)
 	startup_sequence.play("RESET")
+	combat_barks_timer.wait_time = combat_barks_interval
 
 func _physics_process(delta: float) -> void:
 	main_behaviour()
@@ -134,6 +139,7 @@ func _physics_process(delta: float) -> void:
 	sphere_cast()
 	#eye_look_at_player()
 	debug()
+	do_combat_barks()
 	
 func main_behaviour():
 	match current_phase:
@@ -174,9 +180,11 @@ func phase_1():
 		print("begin phase 1")
 		ph1_bool = true
 		aim_at_player = true
+		playsound(movement)
 		await get_tree().create_timer(ph1_aim_time).timeout
 		shoot_location = Global.player.position
 		aim_at_player = false
+		playsound(movement_stop)
 		lights(left_lights,ph1_shoot_wait)
 		lights(right_lights,ph1_shoot_wait)
 		await get_tree().create_timer(ph1_shoot_wait).timeout
@@ -203,9 +211,11 @@ func phase_2():
 		print("begin phase 2")
 		ph2_bool = true
 		aim_at_player = true
+		playsound(movement)
 		await get_tree().create_timer(ph2_aim_time).timeout
 		shoot_location = Global.player.position
 		aim_at_player = false
+		playsound(movement_stop)
 		lights(left_lights,ph2_shoot_wait)
 		lights(right_lights,ph2_shoot_wait)
 		await get_tree().create_timer(ph2_shoot_wait).timeout
@@ -226,14 +236,17 @@ func phase_3():
 	if !ph3_bool:
 		ph3_bool = !ph3_bool
 		if encounter.check_alive_enemies(1):
+			alarm.post_event()
 			encounter.spawn_enemy(spawn_enemies_here[0].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[2].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[3].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[5].global_position)
 		aim_at_player = true
+		playsound(movement)
 		await get_tree().create_timer(ph3_aim_time).timeout
 		shoot_location = Global.player.position
 		aim_at_player = false
+		playsound(movement_stop)
 		lights(left_lights,ph3_shoot_wait)
 		lights(right_lights,ph3_shoot_wait)
 		await get_tree().create_timer(ph3_shoot_wait).timeout
@@ -246,9 +259,11 @@ func phase_3():
 		await get_tree().create_timer(ph3_next_shot_wait).timeout
 		
 		aim_at_player = true
+		playsound(movement)
 		await get_tree().create_timer(ph3_aim_time).timeout
 		shoot_location = Global.player.position
 		aim_at_player = false
+		playsound(movement_stop)
 		lights(left_lights,ph3_shoot_wait)
 		lights(right_lights,ph3_shoot_wait)
 		await get_tree().create_timer(ph3_shoot_wait).timeout
@@ -269,6 +284,7 @@ func phase_4():
 	if !ph4_bool:
 		ph4_bool = !ph4_bool
 		if encounter.check_alive_enemies(2):
+			alarm.post_event()
 			encounter.spawn_enemy(spawn_enemies_here[0].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[1].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[2].global_position)
@@ -277,6 +293,7 @@ func phase_4():
 			encounter.spawn_enemy(spawn_enemies_here[5].global_position)
 
 		aim_at_player = true
+		playsound(movement)
 		await get_tree().create_timer(ph4_aim_time).timeout
 		shoot_location = Global.player.position
 		lights(left_lights,ph4_shoot_wait)
@@ -286,12 +303,14 @@ func phase_4():
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
 		aim_at_player = false
+		playsound(movement_stop)
 		await get_tree().create_timer(ph4_shoot_time).timeout
 		lights_off(left_lights)
 		lights_off(right_lights)
 		await get_tree().create_timer(ph4_next_shot_wait).timeout
 		
 		aim_at_player = true
+		playsound(movement)
 		await get_tree().create_timer(ph4_aim_time).timeout
 		shoot_location = Global.player.position
 		
@@ -302,12 +321,14 @@ func phase_4():
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
 		aim_at_player = false
+		playsound(movement_stop)
 		await get_tree().create_timer(ph4_shoot_time).timeout
 		lights_off(left_lights)
 		lights_off(right_lights)
 		await get_tree().create_timer(ph4_next_shot_wait).timeout
 		
 		aim_at_player = true
+		playsound(movement)
 		await get_tree().create_timer(ph4_aim_time).timeout
 		shoot_location = Global.player.position
 		
@@ -318,6 +339,7 @@ func phase_4():
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
 		aim_at_player = false
+		playsound(movement_stop)
 		await get_tree().create_timer(ph4_shoot_time).timeout
 		lights_off(left_lights)
 		lights_off(right_lights)
@@ -371,6 +393,8 @@ func shoot(time):
 	var stretch_distance = laser_tube.global_position.distance_to(pos)
 	laser_tube.visible = true
 	var tween = create_tween()
+	## START THE SOUND EFFECT HERE
+	
 	tween.tween_property(laser_tube,"scale",Vector3(laser_tube.scale.x,stretch_distance,laser_tube.scale.z),0.8)
 	await tween.finished
 	#spherecast will constantly fire while the player is inside it
@@ -380,6 +404,7 @@ func shoot(time):
 	await get_tree().create_timer(time).timeout
 	vfx.on_end()
 	doing_damage = false
+	## END THE SOUND EFFECT HERE
 	laser_tube.scale = Vector3(laser_tube.scale.x,0.01,laser_tube.scale.z)
 	laser_tube.visible = false
 	
@@ -473,6 +498,15 @@ func heatsink_destroyed(heatsink:Heatsink):
 	heatsinks_remaining -= 1
 	change_state()
 
+func playsound(event:WwiseEvent):
+	sounds.event = event
+	sounds.post_event()
+	
+func do_combat_barks():
+	if combat_barks_timer.is_stopped():
+		playsound(combat_barks)
+		combat_barks_timer.start()
+
 func startup_lights(lightsarray):
 	for i in lightsarray:
 		await get_tree().create_timer(1).timeout
@@ -504,3 +538,9 @@ func death_explosions():
 	exp2.global_position = explode_point_2.global_position
 	get_tree().root.add_child(exp3)
 	exp3.global_position = explode_point_3.global_position
+
+func boss_death_sounds():
+	playsound(death)
+
+func boss_intro_sounds():
+	playsound(intro_sounds)
