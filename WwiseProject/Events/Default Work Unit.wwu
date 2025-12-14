@@ -489,7 +489,17 @@
 								<Action Name="" ID="{83FA6E02-4E4E-4949-8CA1-1A0C0797BE64}" ShortID="916885015">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Enemy - Big Laser v01" ID="{09BAC0CD-5F40-4D9C-A502-082F5B71EAA7}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+											<ObjectRef Name="Laser" ID="{D63DE445-8659-4DC7-889C-92A5A61681F6}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{15F10936-F306-406F-B2AE-13454C079285}" ShortID="872962798">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Charge" ID="{67C26AB3-9049-4FB6-88A1-9BBF42DB6E4C}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -575,6 +585,56 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="boss_movement_01" ID="{4ADA4061-CE5B-42D7-9DD8-BB38E5C85F2A}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_weapon_charge" ID="{4DD885CB-211E-4313-B86A-5D0AA5F87A63}">
+							<ChildrenList>
+								<Action Name="" ID="{9D4348E5-8FF7-4BEF-9626-D5CCDD6AEED9}" ShortID="370623510">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Charge" ID="{67C26AB3-9049-4FB6-88A1-9BBF42DB6E4C}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_weapon_end" ID="{84F385BC-5D08-439C-B6E1-8ED05D2DE819}">
+							<ChildrenList>
+								<Action Name="" ID="{5B052DD4-26F5-4935-9637-6C0EBF732D68}" ShortID="59026060">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Laser" ID="{D63DE445-8659-4DC7-889C-92A5A61681F6}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{22EE315E-0081-4FEF-AC2F-7BD6B81FDDD1}" ShortID="955163000">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Laser End" ID="{E2CA7DD3-BFCE-4293-9BAF-D94E37167689}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_weapon_load" ID="{C862E9EB-B587-4F65-8750-653F1454A9FB}">
+							<ChildrenList>
+								<Action Name="" ID="{9BD9FD52-7AF2-4B80-B393-1DA9BF417861}" ShortID="355905816">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Load" ID="{1B258E19-A95D-4AE3-956F-EA6663AB3B9B}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -746,6 +806,11 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="player_boss_ping" ID="{6340B59E-E5E7-4A53-BF69-3BEAE35083EB}">
+							<ChildrenList>
+								<Action Name="" ID="{82043E82-F1C7-436C-AEF2-9FE9957DF13A}" ShortID="176349418"/>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{4B01063A-24D0-4FCF-91F1-6E47CD04ABAC}" ShortID="23859266">
@@ -808,6 +873,32 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="flashlight" ID="{B3BEE4C3-E527-4E9C-85AE-158ED5590733}">
+							<ChildrenList>
+								<Action Name="" ID="{7255429D-B784-445F-9C4C-66C79977099A}" ShortID="789811875">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Flashlight" ID="{7412864C-CF1A-444B-BB55-5B10C5F1A923}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tinnitus" ID="{31B680B4-17A3-43F5-B32C-FA6199436C87}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{B691ABCC-920F-453B-949D-2D20F2139F36}" ShortID="66415045">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tinnitus" ID="{63D2E97F-200B-4FF0-931F-2EBB2DF93F39}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Boss Arena" ID="{A5389D28-2E28-4B05-870C-87BAC8E4AC07}" ShortID="730454828">
@@ -823,6 +914,21 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="boss_alarm_02" ID="{0115506F-D62A-44DE-B3F8-0ED2D1C6E888}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="open_arena_door" ID="{10ABE41B-B953-4C42-AB22-14D992B77585}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{89C475C4-3285-4547-9670-B69E6E2BF00F}" ShortID="625484322">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="toothdoor_opening" ID="{B3107CB5-ACF6-4C60-BA51-EF53AE1B5237}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
