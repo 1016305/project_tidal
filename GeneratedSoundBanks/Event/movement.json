@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F6890812-9B8F-4E90-BC0E-7EEF93E59808}",
     "Language": "SFX",
-    "Hash": "{DEDA4BFB-0809-F2E2-CDFC-2A403BEFBB7E}",
+    "Hash": "{59E8AE9F-0F64-6428-9A5E-062B54D60559}",
     "ObjectPath": "movement",
     "ShortName": "movement",
     "Path": "Event/movement.bnk",
@@ -111,6 +111,6 @@
     ]
    }
   ],
-  "FileHash": "{6E9F2B15-716F-60BB-65FE-0ED79DD98B5A}"
+  "FileHash": "{283312DD-8EA6-84AB-D680-3EDCFF33D49A}"
  }
 }

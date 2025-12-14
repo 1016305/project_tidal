@@ -243,6 +243,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Basic Enviroment Attenuation" ID="{B7A8B831-3476-4477-A72C-64856D9C7264}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -422,108 +425,12 @@
 								<Sound Name="crashed_ship" ID="{5CF266FB-FC32-4F70-A735-19885D42122F}" ShortID="830880967">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
-										<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.2"/>
+										<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.6"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<Custom>
-												<Attenuation Name="First Tower Attenuation" ID="{B424D856-265C-4C7D-AF7A-5614F4D4E090}" ShortID="1013291911">
-													<CurveUsageInfoList>
-														<VolumeDryUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																<Curve Name="VolumeDry" ID="{F6B05200-3C17-424A-81F2-0B3F91B2B283}">
-																	<PropertyList>
-																		<Property Name="Flags" Type="int32" Value="3"/>
-																	</PropertyList>
-																	<PointList>
-																		<Point>
-																			<XPos>0</XPos>
-																			<YPos>0</YPos>
-																			<Flags>5</Flags>
-																			<SegmentShape>Log1</SegmentShape>
-																		</Point>
-																		<Point>
-																			<XPos>100</XPos>
-																			<YPos>-199.99999</YPos>
-																			<Flags>37</Flags>
-																		</Point>
-																	</PointList>
-																</Curve>
-															</CurveUsageInfo>
-														</VolumeDryUsage>
-														<VolumeWetGameUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-														</VolumeWetGameUsage>
-														<VolumeWetUserUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-														</VolumeWetUserUsage>
-														<LowPassFilterUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-														</LowPassFilterUsage>
-														<HighPassFilterUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-														</HighPassFilterUsage>
-														<HighShelfUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-														</HighShelfUsage>
-														<SpreadUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-														</SpreadUsage>
-														<FocusUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-														</FocusUsage>
-														<ObstructionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</ObstructionVolumeUsage>
-														<ObstructionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</ObstructionLPFUsage>
-														<ObstructionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</ObstructionHPFUsage>
-														<ObstructionHSFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</ObstructionHSFUsage>
-														<OcclusionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</OcclusionVolumeUsage>
-														<OcclusionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</OcclusionLPFUsage>
-														<OcclusionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</OcclusionHPFUsage>
-														<OcclusionHSFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</OcclusionHSFUsage>
-														<DiffractionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</DiffractionVolumeUsage>
-														<DiffractionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</DiffractionLPFUsage>
-														<DiffractionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</DiffractionHPFUsage>
-														<DiffractionHSFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</DiffractionHSFUsage>
-														<TransmissionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</TransmissionVolumeUsage>
-														<TransmissionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</TransmissionLPFUsage>
-														<TransmissionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</TransmissionHPFUsage>
-														<TransmissionHSFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</TransmissionHSFUsage>
-													</CurveUsageInfoList>
-												</Attenuation>
-											</Custom>
+											<ObjectRef Name="Crashed Ship Attenuation" ID="{A6F729B6-013A-4918-8EB8-25FFFF586965}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
@@ -586,6 +493,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Basic Enviroment Attenuation" ID="{B7A8B831-3476-4477-A72C-64856D9C7264}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -647,6 +557,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Basic Enviroment Attenuation" ID="{B7A8B831-3476-4477-A72C-64856D9C7264}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -701,6 +614,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Basic Enviroment Attenuation" ID="{B7A8B831-3476-4477-A72C-64856D9C7264}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -714,9 +630,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="toxic_waste_disposal_conveyorbelt" ID="{5A925D40-6D0E-4511-BF08-E86B3D176D1B}">
 											<PropertyList>
-												<Property Name="CrossfadeDuration" Type="Real64" Value="941.234843377331"/>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="941.23484337733"/>
 												<Property Name="LoopBegin" Type="Real64" Value="0.470617421688665"/>
-												<Property Name="LoopEnd" Type="Real64" Value="66.8864975829265"/>
+												<Property Name="LoopEnd" Type="Real64" Value="66.3095130620306"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -756,6 +672,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Basic Enviroment Attenuation" ID="{B7A8B831-3476-4477-A72C-64856D9C7264}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -810,6 +729,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Alarm Attenuation" ID="{B8F70ED6-6B55-4530-B5E3-FC499275A12D}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -876,6 +798,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Alarm Attenuation" ID="{B8F70ED6-6B55-4530-B5E3-FC499275A12D}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -982,6 +907,9 @@
 							<ChildrenList>
 								<Sound Name="boss_alarm_02" ID="{0115506F-D62A-44DE-B3F8-0ED2D1C6E888}" ShortID="810022909">
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Alarm Attenuation" ID="{B8F70ED6-6B55-4530-B5E3-FC499275A12D}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -989,7 +917,7 @@
 											<ObjectRef Name="Atmosphere" ID="{36EB2E3C-21B9-42CA-A230-716620784CD3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
 										</Reference>
 										<Reference Name="UserAuxSend0">
-											<ObjectRef Name="Canyon_Verb" ID="{23D9D23A-DF6F-4EAF-9312-283C9E53E7AE}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+											<ObjectRef Name="Boss_Arena_Verb" ID="{D7325445-39E7-4F5B-95E3-CF9FC47AC191}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -1438,6 +1366,7 @@
 					<ChildrenList>
 						<PropertyContainer Name="Foley" ID="{265AB2DF-DEDC-4E2D-AA98-0E54DCBF6B13}" ShortID="890458542">
 							<PropertyList>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -2440,6 +2369,11 @@
 						</SwitchContainer>
 						<Sound Name="tinnitus" ID="{63D2E97F-200B-4FF0-931F-2EBB2DF93F39}" ShortID="590644039">
 							<PropertyList>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
 										<Value>14</Value>
@@ -2487,6 +2421,9 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Enemy Boss Attenuation" ID="{17C8A3A9-C2A2-4DFF-8BDB-EB7552E65C73}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -2878,6 +2815,7 @@
 									<ChildrenList>
 										<Sound Name="boss_death_animation" ID="{EE8DCC90-0B77-4195-A057-E64284B3EF0B}" ShortID="1066508667">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
 												<Property Name="UserAuxSendVolume0" Type="Real64">
 													<ValueList>
 														<Value>-7</Value>
@@ -2885,6 +2823,9 @@
 												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Enemy Boss Animation Attenuation" ID="{6FF13D66-61A2-4A34-9314-5072B62ED6E9}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 												</Reference>
@@ -2929,6 +2870,9 @@
 										</Sound>
 										<Sound Name="boss_intro_animation" ID="{CD8745A9-4C5D-4FA3-A7F2-45ECE9C48B04}" ShortID="551020788">
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Enemy Boss Animation Attenuation" ID="{6FF13D66-61A2-4A34-9314-5072B62ED6E9}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 												</Reference>
@@ -2969,6 +2913,9 @@
 								</Folder>
 								<PropertyContainer Name="Cooling Vents" ID="{D8CDF3DC-8430-4784-B7F5-B74A588FDBAD}" ShortID="566799287">
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Enemy Boss Attenuation" ID="{17C8A3A9-C2A2-4DFF-8BDB-EB7552E65C73}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -3184,6 +3131,9 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Enemy Boss Attenuation" ID="{17C8A3A9-C2A2-4DFF-8BDB-EB7552E65C73}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -3376,6 +3326,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Enemy Boss Animation Attenuation" ID="{6FF13D66-61A2-4A34-9314-5072B62ED6E9}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -4314,7 +4267,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="Enemy Attenuation" ID="{97AD8BAD-17CE-444F-B07B-264D2C1D75DC}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+											<ObjectRef Name="Enemy Gunfire Attenuation" ID="{B3023B61-AE49-4914-9284-A28DF64559A4}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
@@ -4736,6 +4689,9 @@
 					<ChildrenList>
 						<PropertyContainer Name="Assault Rifle" ID="{0FB23DC0-2350-4459-8E0B-79A4E5E99751}" ShortID="6515883">
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Assault Rifle" ID="{F28BA8E8-2A14-4D43-A601-03B5FE0C8526}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 								</Reference>
@@ -4989,6 +4945,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Pings" ID="{40AB9481-C821-47C8-88BE-E1FA3911488E}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 								</Reference>
@@ -6933,7 +6892,7 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSegment>
-						<MusicSegment Name="combat_track01" ID="{6DFD7C5B-26D9-4C91-B1CD-B11D69273914}" ShortID="26089072">
+						<MusicSegment Name="test_combat_track" ID="{6DFD7C5B-26D9-4C91-B1CD-B11D69273914}" ShortID="26089072">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="102353.375222025"/>
 							</PropertyList>
@@ -7073,6 +7032,457 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSegment>
+						<MusicSwitchContainer Name="Main Music Switch" ID="{FC592B9B-7DF9-427F-838A-C940FDA2FE10}" ShortID="881142128">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{E5135340-8741-4E0A-9C88-27BC49D6506F}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{4DE22B8F-A8E0-45AA-BD3F-E05E49B4B460}">
+													<PropertyList>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="canyon_boss" ID="{BBBB45A9-3BE1-47AF-AA68-DFD6FC7C5C99}" ShortID="781376731">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="56170.2267573696"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="canyon_boss" ID="{38A2DDA7-2C9D-4A38-AD0D-882B39BD86F7}" ShortID="469959053">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{C010A6D6-2ADB-41C7-8A1B-6A18593AAE0C}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="canyon_boss" ID="{8EE8B794-F8E9-49A8-9919-71FADC5090B8}">
+													<Language>SFX</Language>
+													<AudioFile>canyon_boss.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="109859528"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{805FCA5A-FCD5-49B9-90D0-4CDC5AC8BEB0}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="canyon_boss" ID="{ADF0C738-FDA3-44A7-9F00-906CB6D20CC7}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="56170.2267573696"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="canyon_boss" ID="{8EE8B794-F8E9-49A8-9919-71FADC5090B8}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<MusicCue Name="Entry Cue" ID="{F6FBA77F-9E4E-49A3-B39F-DB1869F3C14B}"/>
+											<MusicCue Name="Exit Cue" ID="{60AEB24D-CAFE-4B81-B753-D7A7F21A669F}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="56170.2267573696"/>
+												</PropertyList>
+											</MusicCue>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="combat_track01" ID="{84FFF879-7800-4524-9AD2-94723B63EC75}" ShortID="275210983">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="102453.445959331"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="combat_track01" ID="{BB7C1D97-CDCA-46FA-843C-189F3A9BC177}" ShortID="1039874739">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{D282E3A7-13A3-4367-8097-F844F57A9077}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="combat_track01" ID="{3C9251DF-DBD0-4665-896F-DEA45060410E}">
+													<Language>SFX</Language>
+													<AudioFile>combat_track01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="856990354"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{A348D995-985F-41BB-A88C-C68B2496A2D2}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="combat_track01" ID="{30F544F8-AE52-4ACC-A321-CA3CA7B13E2E}">
+																	<PropertyList>
+																		<Property Name="BeginTrimOffset" Type="Real64" Value="1639.01400874448"/>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="100965.532879819"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="-1639.01400874448"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="combat_track01" ID="{3C9251DF-DBD0-4665-896F-DEA45060410E}"/>
+																	<PropertyCurveList>
+																		<PropertyCurve PropertyName="Highpass">
+																			<Curve Name="" ID="{E1E23300-7A2C-4678-BE54-8C641725029C}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>1.63901</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100.965532879819</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</PropertyCurve>
+																		<PropertyCurve PropertyName="Lowpass">
+																			<Curve Name="" ID="{D8F5FEEB-6CCC-417D-89ED-75D3AC099685}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>1.63901</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100.965532879819</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</PropertyCurve>
+																		<PropertyCurve PropertyName="Volume">
+																			<Curve Name="" ID="{2CBE613B-96E7-445D-B0B4-77FBB25D544F}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>1.63901</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100.965532879819</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</PropertyCurve>
+																	</PropertyCurveList>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<MusicCue Name="Entry Cue" ID="{AEED1BD3-F6D4-4BAF-9CF2-A9356A01BFCE}">
+												<PropertyList>
+													<Property Name="TimeMs" Type="Real64" Value="186.251591902789"/>
+												</PropertyList>
+											</MusicCue>
+											<MusicCue Name="Exit Cue" ID="{64BA297E-E7F1-435C-BF2D-643FC4EA6B36}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="101151.784471721"/>
+												</PropertyList>
+											</MusicCue>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="tidal_combat_01" ID="{395F91C2-9A9F-494A-8CF1-DE7375FAE83E}" ShortID="1014630648">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="187944.216595963"/>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="136"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="tidal_combat_01" ID="{68B7976F-647F-4EB8-B612-7A839F3BE381}" ShortID="549947088">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{C6CF6BA0-48AF-4EF5-9A89-94C14C606BCA}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tidal_combat_01" ID="{4065E0FF-133D-4355-AAB9-48F6B2497CE3}">
+													<Language>SFX</Language>
+													<AudioFile>tidal_combat_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="606056518"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{29FD9900-99A9-4F4A-BB3B-DC47B3767E23}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="tidal_combat_01" ID="{CBBAD620-F103-47A9-8634-7AD09CE2C642}">
+																	<PropertyList>
+																		<Property Name="BeginTrimOffset" Type="Real64" Value="3528.5935919977"/>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="172933.761398258"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="-3528.5935919977"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="tidal_combat_01" ID="{4065E0FF-133D-4355-AAB9-48F6B2497CE3}"/>
+																	<PropertyCurveList>
+																		<PropertyCurve PropertyName="Highpass">
+																			<Curve Name="" ID="{FAB1077E-1B72-44C8-9335-FC0B3E43EB63}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>3.52859</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>172.93376</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</PropertyCurve>
+																		<PropertyCurve PropertyName="Lowpass">
+																			<Curve Name="" ID="{11CAC39F-07BB-46A7-B30E-6A323B190854}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>3.52859</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>172.93376</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</PropertyCurve>
+																		<PropertyCurve PropertyName="Volume">
+																			<Curve Name="" ID="{1ED9527B-0B7F-466A-AE90-1CADF7F16969}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>3.52859</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>172.93376</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</PropertyCurve>
+																	</PropertyCurveList>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<MusicCue Name="Entry Cue" ID="{A52B6304-4294-4DD6-BDCF-E997E1B0EA61}"/>
+											<MusicCue Name="Exit Cue" ID="{CCB996A0-9144-4F68-A0E6-FDA0FD37C220}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="169405.16780626"/>
+												</PropertyList>
+											</MusicCue>
+											<MusicCue Name="" ID="{E4910489-E4E1-4B3A-BAD7-D97A2C498B15}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="98800.1057999972"/>
+												</PropertyList>
+											</MusicCue>
+											<MusicCue Name="" ID="{EC3CD71C-2A98-492B-A0C6-189DD5341EC0}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="21176.4705882353"/>
+												</PropertyList>
+											</MusicCue>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Arguments">
+									<PluginInnerObject Name="" ID="{DC3BEC15-6926-48B1-AABD-1ABD4953C4CE}" PluginName="MusicArgumentsSlot" CompanyID="0" PluginID="89">
+										<ReferenceList>
+											<Reference Name="Argument">
+												<ObjectRef Name="MusicStateGroup" ID="{DCFA7345-6877-4069-B009-51418695A10E}" WorkUnitID="{A9747214-26E6-4C0A-8A16-D654113AE083}"/>
+											</Reference>
+										</ReferenceList>
+									</PluginInnerObject>
+									<PluginInnerObject Name="" ID="{2FE5449E-5B35-41C9-A928-81CAD7892D6D}" PluginName="MusicArgumentsSlot" CompanyID="0" PluginID="89">
+										<ReferenceList>
+											<Reference Name="Argument">
+												<ObjectRef Name="AreaStates" ID="{48E72681-000E-4084-B6E0-5CE154144F84}" WorkUnitID="{A9747214-26E6-4C0A-8A16-D654113AE083}"/>
+											</Reference>
+										</ReferenceList>
+									</PluginInnerObject>
+								</ObjectList>
+								<ObjectList Name="Entries">
+									<MultiSwitchEntry Name="" ID="{41E7C0A8-DADF-442E-AAA2-036A1802576D}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="canyon_boss" ID="{BBBB45A9-3BE1-47AF-AA68-DFD6FC7C5C99}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<PluginInnerObject Name="" ID="{4326B3BA-EA18-4381-8148-12AEA781F86A}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+													<ReferenceList>
+														<Reference Name="EntryPathObject">
+															<ObjectRef Name="MusicStateGroup" ID="{DCFA7345-6877-4069-B009-51418695A10E}" WorkUnitID="{A9747214-26E6-4C0A-8A16-D654113AE083}"/>
+														</Reference>
+													</ReferenceList>
+												</PluginInnerObject>
+												<PluginInnerObject Name="" ID="{118C0C40-C18F-442C-AECE-8BCB2D512DBD}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+													<ReferenceList>
+														<Reference Name="EntryPathObject">
+															<ObjectRef Name="Canyon02" ID="{E2779B2C-BE55-4B87-BCA7-E7ACCF13AFA0}" WorkUnitID="{A9747214-26E6-4C0A-8A16-D654113AE083}"/>
+														</Reference>
+													</ReferenceList>
+												</PluginInnerObject>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+									<MultiSwitchEntry Name="" ID="{119206C5-89C2-4BE9-A11A-7F813E3947D5}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="tidal_combat_01" ID="{395F91C2-9A9F-494A-8CF1-DE7375FAE83E}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<PluginInnerObject Name="" ID="{9723BBDA-C267-4FF7-BDFC-4DAE2DEFE26D}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+													<ReferenceList>
+														<Reference Name="EntryPathObject">
+															<ObjectRef Name="Combat" ID="{B7498178-B61B-40D9-8475-42035C45A831}" WorkUnitID="{A9747214-26E6-4C0A-8A16-D654113AE083}"/>
+														</Reference>
+													</ReferenceList>
+												</PluginInnerObject>
+												<PluginInnerObject Name="" ID="{2715BBE7-84D5-4433-A0F8-A99E7DEB3B15}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+													<ReferenceList>
+														<Reference Name="EntryPathObject">
+															<ObjectRef Name="BossArena" ID="{0F9909C4-6D9E-4EEB-970C-EF57B1260C54}" WorkUnitID="{A9747214-26E6-4C0A-8A16-D654113AE083}"/>
+														</Reference>
+													</ReferenceList>
+												</PluginInnerObject>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSwitchContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

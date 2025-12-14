@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{203BF74C-3EC5-49CD-8C05-64EE16CAE55A}",
     "Language": "SFX",
-    "Hash": "{FCED3541-4FC5-59BC-76EF-9C02E2606F66}",
+    "Hash": "{F9E4490E-506D-7837-23B1-92AA32C2887B}",
     "ObjectPath": "boss",
     "ShortName": "boss",
     "Path": "Event/boss.bnk",
@@ -115,6 +115,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Pings\\boss",
       "GUID": "{203BF74C-3EC5-49CD-8C05-64EE16CAE55A}",
       "Color": "12",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.56631315",
       "DurationMax": "0.92683315",
@@ -158,6 +159,6 @@
     ]
    }
   ],
-  "FileHash": "{3540AA8F-DFEB-6870-69BD-031F379B97C4}"
+  "FileHash": "{C2F631DC-EF30-C273-63E9-B4E686E6B3C9}"
  }
 }

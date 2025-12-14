@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{EBA2F312-5FB1-4C0D-B46B-436888974182}",
     "Language": "SFX",
-    "Hash": "{939CEBD1-7603-E200-756C-F27AC7A78C45}",
+    "Hash": "{3D2120DA-D2E9-79CE-BA02-2A7181A2B56D}",
     "ObjectPath": "enemy",
     "ShortName": "enemy",
     "Path": "Event/enemy.bnk",
@@ -115,6 +115,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Pings\\enemy",
       "GUID": "{EBA2F312-5FB1-4C0D-B46B-436888974182}",
       "Color": "12",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.36194408",
       "DurationMax": "0.8499098",
@@ -158,6 +159,6 @@
     ]
    }
   ],
-  "FileHash": "{F05CF023-F476-9E18-58E2-D8328037E238}"
+  "FileHash": "{7366896D-CFA1-7D3A-3FB3-040CB0C1E26F}"
  }
 }

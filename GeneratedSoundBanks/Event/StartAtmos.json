@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D554D848-29E0-40AC-95C3-E352BC300ACC}",
     "Language": "SFX",
-    "Hash": "{E794BBE8-C76C-FB20-2584-EDBEA4A05313}",
+    "Hash": "{AE814C43-E5CD-E12B-C17B-6F1C411CA25F}",
     "ObjectPath": "StartAtmos",
     "ShortName": "StartAtmos",
     "Path": "Event/StartAtmos.bnk",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Ambience\\factory_ambienceloop.wav",
       "Path": "Media/491444269.wem",
-      "CachePath": "DE/{DEE81EAF-E5CE-AF91-E6F5-59E933F61AE2}.wem"
+      "CachePath": "18/{1848065C-590D-8377-F753-5DEB04A4551A}.wem"
      },
      {
       "Id": "654365428",
@@ -245,6 +245,6 @@
     ]
    }
   ],
-  "FileHash": "{47FA65FF-1BEE-099B-C0BA-9A15660BBCAF}"
+  "FileHash": "{4722BF37-6603-8AF4-175E-6FF6F9B3A551}"
  }
 }

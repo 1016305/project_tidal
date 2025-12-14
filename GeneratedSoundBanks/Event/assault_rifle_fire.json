@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}",
     "Language": "SFX",
-    "Hash": "{1F305677-EC14-374C-A9EF-61F9A9AC834C}",
+    "Hash": "{4929A61C-4A6E-6928-9649-79363071A711}",
     "ObjectPath": "assault_rifle_fire",
     "ShortName": "assault_rifle_fire",
     "Path": "Event/assault_rifle_fire.bnk",
@@ -79,6 +79,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\assault_rifle_fire",
       "GUID": "{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}",
       "Color": "8",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.39501807",
       "DurationMax": "0.47981733",
@@ -110,6 +111,6 @@
     ]
    }
   ],
-  "FileHash": "{EE2B66B3-7F6A-C59C-D3F2-35FB4D81ACDA}"
+  "FileHash": "{BEDBB49D-2011-B941-83E0-AE328946D5B6}"
  }
 }

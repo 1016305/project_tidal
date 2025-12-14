@@ -1,3 +1,18 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	82754628	AreaStates			\Default Work Unit\AreaStates	
+	2163007642	MusicStateGroup			\Default Work Unit\MusicStateGroup	
+
+State	ID	Name	State Group			Notes
+	166364116	Canyon01	AreaStates			
+	166364119	Canyon02	AreaStates			
+	606742876	SecondTower	AreaStates			
+	735597211	BossArena	AreaStates			
+	748895195	None	AreaStates			
+	3019845671	ThirdTower	AreaStates			
+	77978275	Ambient	MusicStateGroup			
+	748895195	None	MusicStateGroup			
+	2764240573	Combat	MusicStateGroup			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	988953028	SFXVolume			\Default Work Unit\Volume\SFXVolume	
 	1866264637	DialogueVolume			\Default Work Unit\Volume\DialogueVolume	

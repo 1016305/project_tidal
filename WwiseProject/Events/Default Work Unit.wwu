@@ -885,6 +885,25 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Music" ID="{860BFE1D-49AE-44CE-90CC-87C164874FAB}" ShortID="100503806">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="24"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="play_mainmusicswitch" ID="{08B6D71A-D9CC-4911-BC3A-EFFBCDB243AF}">
+							<ChildrenList>
+								<Action Name="" ID="{914EB025-5A29-483B-91DD-F6874785728B}" ShortID="62775953">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Main Music Switch" ID="{FC592B9B-7DF9-427F-838A-C940FDA2FE10}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

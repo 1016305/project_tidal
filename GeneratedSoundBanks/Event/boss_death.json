@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
     "Language": "SFX",
-    "Hash": "{4B6B3CCC-BBA7-719F-2525-DCE6F1D19955}",
+    "Hash": "{FB53AABC-6466-FCC3-C115-BC254BB1377A}",
     "ObjectPath": "boss_death",
     "ShortName": "boss_death",
     "Path": "Event/boss_death.bnk",
@@ -53,6 +53,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_death",
       "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
       "Color": "10",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "11.278279",
       "DurationMax": "11.278279",
@@ -75,6 +76,6 @@
     ]
    }
   ],
-  "FileHash": "{57298F21-117D-FA2D-B829-BD1086186F5D}"
+  "FileHash": "{F97787DF-89AE-8CC8-A3B5-91C319D06168}"
  }
 }

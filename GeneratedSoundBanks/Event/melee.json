@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{72D3CFE6-0358-4B20-B7D9-FB618633F9BD}",
     "Language": "SFX",
-    "Hash": "{738A0B99-D328-DBEB-A8D9-3DF2E1F3CC01}",
+    "Hash": "{FE98559C-956A-71C4-2F66-350460C0D8C8}",
     "ObjectPath": "melee",
     "ShortName": "melee",
     "Path": "Event/melee.bnk",
@@ -52,6 +52,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Pings\\melee",
       "GUID": "{72D3CFE6-0358-4B20-B7D9-FB618633F9BD}",
       "Color": "12",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.46961933",
       "DurationMax": "0.46961933",
@@ -74,6 +75,6 @@
     ]
    }
   ],
-  "FileHash": "{06BD62BD-425A-6566-89A1-E6584A9D96BA}"
+  "FileHash": "{253D189A-C609-F7A1-42DF-68F9B5777025}"
  }
 }

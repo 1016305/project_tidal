@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}",
     "Language": "SFX",
-    "Hash": "{B6C9A796-9472-4502-0C66-B42D5491724C}",
+    "Hash": "{F1086BC4-D696-A9D9-569F-D4DED17664A5}",
     "ObjectPath": "speaker",
     "ShortName": "speaker",
     "Path": "Event/speaker.bnk",
@@ -50,6 +50,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Third Tower\\speaker",
       "GUID": "{95FE2F4F-CB40-4788-898A-BFF0F4AAD43F}",
       "Color": "4",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0",
@@ -77,6 +78,6 @@
     ]
    }
   ],
-  "FileHash": "{7AA5DB16-55E8-36CD-97FC-6AA13E7210F7}"
+  "FileHash": "{EE43D62F-E78E-D5AA-1CF4-80BE8D202DCA}"
  }
 }

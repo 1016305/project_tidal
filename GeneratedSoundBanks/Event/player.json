@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{295BFF33-04A9-48E5-B18A-536E8128CD09}",
     "Language": "SFX",
-    "Hash": "{8682A1B9-3B3B-7B1C-723F-A1269E2F1C6D}",
+    "Hash": "{E382D474-71E0-3DBF-38DC-D7256B429292}",
     "ObjectPath": "player",
     "ShortName": "player",
     "Path": "Event/player.bnk",
@@ -88,6 +88,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Pings\\player",
       "GUID": "{295BFF33-04A9-48E5-B18A-536E8128CD09}",
       "Color": "12",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.502383",
       "DurationMax": "0.78132236",
@@ -122,6 +123,6 @@
     ]
    }
   ],
-  "FileHash": "{078BA44C-B5D8-6C60-A657-E6FB2EA440CB}"
+  "FileHash": "{6821FCE3-C6A0-24ED-D1BB-B3DD570A811E}"
  }
 }

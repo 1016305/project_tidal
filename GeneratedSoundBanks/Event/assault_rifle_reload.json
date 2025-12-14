@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{AF325875-E58B-4D25-84F3-764AF865CF79}",
     "Language": "SFX",
-    "Hash": "{9BC7D6A7-DB1C-C51A-516B-C823E84A0530}",
+    "Hash": "{C719DF2F-B4C1-F7CC-AE40-C6971DB61254}",
     "ObjectPath": "assault_rifle_reload",
     "ShortName": "assault_rifle_reload",
     "Path": "Event/assault_rifle_reload.bnk",
@@ -32,6 +32,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\assault_rifle_reload",
       "GUID": "{AF325875-E58B-4D25-84F3-764AF865CF79}",
       "Color": "8",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "2.1706803",
       "DurationMax": "2.1706803",
@@ -44,6 +45,6 @@
     ]
    }
   ],
-  "FileHash": "{82F5F8AD-DD8E-19C2-BC81-0A8EC4CA93FB}"
+  "FileHash": "{10F8FF66-CBCC-2F20-CEF2-B1F2A5C6D88E}"
  }
 }

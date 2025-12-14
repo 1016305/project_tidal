@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4822A875-3423-4C31-AAAE-E16B49019B35}",
     "Language": "SFX",
-    "Hash": "{7DD31B72-E20D-C1E1-B072-3470ABEDEBE4}",
+    "Hash": "{1616AAEC-C934-2F61-B3F5-E51ED1D66094}",
     "ObjectPath": "boss_movement_stop",
     "ShortName": "boss_movement_stop",
     "Path": "Event/boss_movement_stop.bnk",
@@ -59,6 +59,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_movement_stop",
       "GUID": "{4822A875-3423-4C31-AAAE-E16B49019B35}",
       "Color": "10",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "1.3086784",
       "DurationMax": "1.6402458",
@@ -80,6 +81,6 @@
     ]
    }
   ],
-  "FileHash": "{395AA2BA-3DDB-42D5-059A-76E468F44019}"
+  "FileHash": "{C02E98C1-8DD1-83C6-19D9-DCC598547F85}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1E815BA4-01BB-4C77-9539-03FAA272089E}",
     "Language": "SFX",
-    "Hash": "{677D70C8-F825-75CA-BC27-EBF92A0B89E5}",
+    "Hash": "{A3812B3C-4FD2-FA0B-FB31-2F2716042CDA}",
     "ObjectPath": "alarm_alert",
     "ShortName": "alarm_alert",
     "Path": "Event/alarm_alert.bnk",
@@ -32,6 +32,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Boss Arena\\alarm_alert",
       "GUID": "{1E815BA4-01BB-4C77-9539-03FAA272089E}",
       "Color": "4",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "1.0468935",
       "DurationMax": "1.0468935",
@@ -53,6 +54,6 @@
     ]
    }
   ],
-  "FileHash": "{EC768F0B-23F6-102B-66D1-9293F952FD36}"
+  "FileHash": "{B02B3C45-2D06-4D6C-F5E3-33B5C9DE7875}"
  }
 }

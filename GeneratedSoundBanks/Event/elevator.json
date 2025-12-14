@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{68A19D79-B2C2-4F98-93DB-26BB86587B30}",
     "Language": "SFX",
-    "Hash": "{8EA74EFC-86CA-533D-D51E-531A2262F9BC}",
+    "Hash": "{43B17E04-8DC4-9C49-03D2-D8855B239015}",
     "ObjectPath": "elevator",
     "ShortName": "elevator",
     "Path": "Event/elevator.bnk",
@@ -32,6 +32,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\First Tower\\elevator",
       "GUID": "{68A19D79-B2C2-4F98-93DB-26BB86587B30}",
       "Color": "4",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "24.541546",
       "DurationMax": "24.541546",
@@ -44,6 +45,6 @@
     ]
    }
   ],
-  "FileHash": "{F0971977-3BCA-7586-889C-5CC0CAF18CB2}"
+  "FileHash": "{10FAF7C9-E095-8607-3A9F-C4CA7BF86A7D}"
  }
 }

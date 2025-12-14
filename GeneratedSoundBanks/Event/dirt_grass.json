@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F38718AC-1CC8-4493-ABC9-82387EC5816C}",
     "Language": "SFX",
-    "Hash": "{E0C14905-9997-A493-8A7E-957CF92DDA10}",
+    "Hash": "{CFE3AC00-6203-E7D0-B7D0-27B70AD84E2F}",
     "ObjectPath": "dirt_grass",
     "ShortName": "dirt_grass",
     "Path": "Event/dirt_grass.bnk",
@@ -115,6 +115,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Pings\\dirt_grass",
       "GUID": "{F38718AC-1CC8-4493-ABC9-82387EC5816C}",
       "Color": "12",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.23894174",
       "DurationMax": "0.40234083",
@@ -158,6 +159,6 @@
     ]
    }
   ],
-  "FileHash": "{FCE8EE33-4E82-2588-D002-6AEADCA3DD49}"
+  "FileHash": "{1ED29FDC-26DD-6B07-F16F-A75364975C1D}"
  }
 }

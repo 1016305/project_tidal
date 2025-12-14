@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{18273E7B-63FF-4436-9E82-C529AFBA5CC8}",
     "Language": "SFX",
-    "Hash": "{C6BAD305-2E4B-B39A-E537-0A6AFE203B44}",
+    "Hash": "{E4D06198-DCF5-756F-0BBD-8F5ED022F7E3}",
     "ObjectPath": "metal",
     "ShortName": "metal",
     "Path": "Event/metal.bnk",
@@ -70,6 +70,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Pings\\metal",
       "GUID": "{18273E7B-63FF-4436-9E82-C529AFBA5CC8}",
       "Color": "12",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.19345823",
       "DurationMax": "1.7516274",
@@ -98,6 +99,6 @@
     ]
    }
   ],
-  "FileHash": "{98E1AC8C-AD90-5FEC-D6C0-626236F32D36}"
+  "FileHash": "{4C918E34-A529-2654-CE73-C10DA22C0C84}"
  }
 }

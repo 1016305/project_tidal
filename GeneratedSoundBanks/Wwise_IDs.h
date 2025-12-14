@@ -59,6 +59,7 @@ namespace AK
         static const AkUniqueID MENU_CONFIRM = 4046753069U;
         static const AkUniqueID METAL = 2473969246U;
         static const AkUniqueID MOVEMENT = 2129636626U;
+        static const AkUniqueID PLAY_MAINMUSICSWITCH = 3684206702U;
         static const AkUniqueID PLAYER = 1069431850U;
         static const AkUniqueID SECOND_TOWER_AMB = 3833734562U;
         static const AkUniqueID SECOND_TOWER_CONVERYORBELT = 3971991686U;
@@ -70,6 +71,37 @@ namespace AK
         static const AkUniqueID THIRD_TOWER_CONVEYORBELT = 3430197945U;
         static const AkUniqueID TOOTHDOOR_OPENING = 3417972020U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace AREASTATES
+        {
+            static const AkUniqueID GROUP = 82754628U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BOSSARENA = 735597211U;
+                static const AkUniqueID CANYON01 = 166364116U;
+                static const AkUniqueID CANYON02 = 166364119U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SECONDTOWER = 606742876U;
+                static const AkUniqueID THIRDTOWER = 3019845671U;
+            } // namespace STATE
+        } // namespace AREASTATES
+
+        namespace MUSICSTATEGROUP
+        {
+            static const AkUniqueID GROUP = 2163007642U;
+
+            namespace STATE
+            {
+                static const AkUniqueID AMBIENT = 77978275U;
+                static const AkUniqueID COMBAT = 2764240573U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MUSICSTATEGROUP
+
+    } // namespace STATES
 
     namespace SWITCHES
     {

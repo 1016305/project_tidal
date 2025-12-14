@@ -68,6 +68,9 @@
 										</Property>
 									</PropertyList>
 								</Bus>
+								<Bus Name="Environment" ID="{4F18AFDC-7F1C-4223-A25B-D28ED21702D8}"/>
+								<Bus Name="Weapons" ID="{1A90138E-2B2A-4E2F-9D90-DED81A81D9C3}"/>
+								<Bus Name="Player" ID="{F86EDA78-1542-451F-8EDA-361E8973B190}"/>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">

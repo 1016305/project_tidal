@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{9A0CEEB0-7F1E-4248-A797-C84ECF701575}",
     "Language": "SFX",
-    "Hash": "{A9D074D0-7247-96C7-A50B-A8E672FF0334}",
+    "Hash": "{AB6E0AEA-C12C-3448-29E5-AFFE35A08764}",
     "ObjectPath": "boss_movement",
     "ShortName": "boss_movement",
     "Path": "Event/boss_movement.bnk",
@@ -32,6 +32,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_movement",
       "GUID": "{9A0CEEB0-7F1E-4248-A797-C84ECF701575}",
       "Color": "10",
+      "MaxAttenuation": "100",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -42,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{D6FBB7E5-C161-8370-6E95-4360525908EA}"
+  "FileHash": "{8755EADE-33EC-D930-4FA1-4164FA7FDD83}"
  }
 }

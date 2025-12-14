@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5222F25B-473D-47B4-950D-946A83AADBA4}",
     "Language": "SFX",
-    "Hash": "{7C185258-5EB9-333B-3E77-2ED32F6AF740}",
+    "Hash": "{0A6E8501-985B-88F1-21D5-A463778FDE8F}",
     "ObjectPath": "boss_coolingvent_close",
     "ShortName": "boss_coolingvent_close",
     "Path": "Event/boss_coolingvent_close.bnk",
@@ -32,6 +32,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_coolingvent_close",
       "GUID": "{5222F25B-473D-47B4-950D-946A83AADBA4}",
       "Color": "10",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "3.2523851",
       "DurationMax": "3.2523851",
@@ -44,6 +45,6 @@
     ]
    }
   ],
-  "FileHash": "{6A8B06F5-0A7E-540B-EC9E-A68B84D67747}"
+  "FileHash": "{B2EFF947-AFEB-D934-0CF7-9EEAA7EDC947}"
  }
 }

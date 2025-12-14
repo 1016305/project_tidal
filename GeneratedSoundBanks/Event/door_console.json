@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1C18790D-4652-45F0-B402-E12F5FCFE49B}",
     "Language": "SFX",
-    "Hash": "{4B33C97D-F922-9C59-2395-77A9CFE387A1}",
+    "Hash": "{38CA15BB-61C9-7F6C-6AC5-07004AB22D18}",
     "ObjectPath": "door_console",
     "ShortName": "door_console",
     "Path": "Event/door_console.bnk",
@@ -44,6 +44,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\First Tower\\door_console",
       "GUID": "{1C18790D-4652-45F0-B402-E12F5FCFE49B}",
       "Color": "4",
+      "MaxAttenuation": "100",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -61,6 +62,6 @@
     ]
    }
   ],
-  "FileHash": "{83615E3B-6D31-AE05-61CF-C0B038F771C5}"
+  "FileHash": "{A010A19C-3BAC-DC21-CB0E-202BC08C34C5}"
  }
 }

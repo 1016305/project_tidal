@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5265D1D1-E44C-4096-856D-5885F6B536CB}",
     "Language": "SFX",
-    "Hash": "{225ED977-7F10-722D-A44D-9C4AAA94C11D}",
+    "Hash": "{20E838EC-D4E4-0215-267D-09AC08A25E31}",
     "ObjectPath": "second_tower_converyorbelt",
     "ShortName": "second_tower_converyorbelt",
     "Path": "Event/second_tower_converyorbelt.bnk",
@@ -44,6 +44,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Second Tower\\second_tower_converyorbelt",
       "GUID": "{5265D1D1-E44C-4096-856D-5885F6B536CB}",
       "Color": "4",
+      "MaxAttenuation": "100",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -70,6 +71,6 @@
     ]
    }
   ],
-  "FileHash": "{11AEA692-9CC6-1F7F-A11A-65211D9D1550}"
+  "FileHash": "{54B83CFB-9A73-9A19-31C9-09F24AC8A66F}"
  }
 }
