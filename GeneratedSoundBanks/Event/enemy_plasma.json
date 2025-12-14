@@ -10,10 +10,39 @@
     "Type": "Event",
     "GUID": "{7F377203-31E5-4F33-88A1-3D21DCD70F08}",
     "Language": "SFX",
-    "Hash": "{EB54284C-CB27-B53B-21A9-85B86E71F02F}",
+    "Hash": "{0815B5D9-9C12-5875-A3B2-D6114129B65F}",
     "ObjectPath": "enemy_plasma",
     "ShortName": "enemy_plasma",
     "Path": "Event/enemy_plasma.bnk",
+    "Media": [
+     {
+      "Id": "466014584",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_plasma_orb.wav",
+      "Path": "Media/466014584.wem",
+      "CachePath": "D6/{D6D3BB8A-7466-EE22-F588-77C934AB04B6}.wem"
+     },
+     {
+      "Id": "783691836",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_plasma_orb.wav",
+      "Path": "Media/783691836.wem",
+      "CachePath": "94/{94AF2718-D895-5181-B789-12E05BF79560}.wem"
+     },
+     {
+      "Id": "967665621",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_plasma_orb.wav",
+      "Path": "Media/967665621.wem",
+      "CachePath": "C0/{C0FF5A35-AE4E-A695-04E5-1B88A50A52D3}.wem"
+     }
+    ],
     "Plugins": {
      "ShareSets": [
       {
@@ -43,12 +72,33 @@
       "Color": "10",
       "MaxAttenuation": "45",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "2.8100183",
+      "DurationMax": "4.244921",
+      "MediaRefs": [
+       {
+        "Id": "466014584"
+       },
+       {
+        "Id": "783691836"
+       },
+       {
+        "Id": "967665621"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "1459522457"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{326E43FD-4E3F-740C-BFEA-510C247061A5}"
+  "FileHash": "{A7DA3271-9064-DCCD-7B03-0FFFD6C8920E}"
  }
 }

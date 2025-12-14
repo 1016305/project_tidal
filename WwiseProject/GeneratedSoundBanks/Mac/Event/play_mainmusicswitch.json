@@ -1,0 +1,171 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "3684206702",
+    "Type": "Event",
+    "GUID": "{08B6D71A-D9CC-4911-BC3A-EFFBCDB243AF}",
+    "Language": "SFX",
+    "Hash": "{7D081AD2-4DF9-0954-5EDE-C0DDD4ACCEF1}",
+    "ObjectPath": "play_mainmusicswitch",
+    "ShortName": "play_mainmusicswitch",
+    "Path": "Event/play_mainmusicswitch.bnk",
+    "Media": [
+     {
+      "Id": "109859528",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "canyon_boss.wav",
+      "Path": "Media/109859528.wem",
+      "CachePath": "E3/{E34C61A0-B4E3-687F-6C23-4D8D42819E13}.wem"
+     },
+     {
+      "Id": "606056518",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "tidal_combat_01.wav",
+      "Path": "Media/606056518.wem",
+      "CachePath": "D6/{D6C8D41A-E3F6-49D0-1719-3984D83C077F}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3684206702",
+      "Name": "play_mainmusicswitch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\play_mainmusicswitch",
+      "GUID": "{08B6D71A-D9CC-4911-BC3A-EFFBCDB243AF}",
+      "Color": "24",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2163007642",
+         "Id": "0",
+         "GUID": "{DCFA7345-6877-4069-B009-51418695A10E}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "82754628",
+           "Id": "166364119",
+           "GUID": "{E2779B2C-BE55-4B87-BCA7-E7ACCF13AFA0}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "109859528"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2163007642",
+         "Id": "2764240573",
+         "GUID": "{B7498178-B61B-40D9-8475-42035C45A831}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "82754628",
+           "Id": "735597211",
+           "GUID": "{0F9909C4-6D9E-4EEB-970C-EF57B1260C54}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "606056518"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "82754628",
+      "Name": "AreaStates",
+      "ObjectPath": "\\States\\Default Work Unit\\AreaStates",
+      "GUID": "{48E72681-000E-4084-B6E0-5CE154144F84}",
+      "States": [
+       {
+        "Id": "166364116",
+        "Name": "Canyon01",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\Canyon01",
+        "GUID": "{0335D5E2-CBE7-4597-B619-42F3524F87A6}"
+       },
+       {
+        "Id": "166364119",
+        "Name": "Canyon02",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\Canyon02",
+        "GUID": "{E2779B2C-BE55-4B87-BCA7-E7ACCF13AFA0}"
+       },
+       {
+        "Id": "606742876",
+        "Name": "SecondTower",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\SecondTower",
+        "GUID": "{ED435102-D65F-4BFC-9D91-A25165F36D24}"
+       },
+       {
+        "Id": "735597211",
+        "Name": "BossArena",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\BossArena",
+        "GUID": "{0F9909C4-6D9E-4EEB-970C-EF57B1260C54}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\None",
+        "GUID": "{17B85D27-E875-4CFA-A8D0-D7B93151C106}"
+       },
+       {
+        "Id": "3019845671",
+        "Name": "ThirdTower",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\ThirdTower",
+        "GUID": "{5BC0BF68-CF6A-4C42-9520-641E1FFE53A1}"
+       }
+      ]
+     },
+     {
+      "Id": "2163007642",
+      "Name": "MusicStateGroup",
+      "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup",
+      "GUID": "{DCFA7345-6877-4069-B009-51418695A10E}",
+      "States": [
+       {
+        "Id": "77978275",
+        "Name": "Ambient",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\Ambient",
+        "GUID": "{6838F25F-0900-4176-B0BE-35118BD528DF}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\None",
+        "GUID": "{10C625E6-9EB2-4E1D-94F2-27E6806923B9}"
+       },
+       {
+        "Id": "2764240573",
+        "Name": "Combat",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\Combat",
+        "GUID": "{B7498178-B61B-40D9-8475-42035C45A831}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{62174376-020B-7F9F-2476-F11DC737D7DC}"
+ }
+}

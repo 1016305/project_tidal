@@ -1,0 +1,85 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1167979795",
+    "Type": "Event",
+    "GUID": "{B3BEE4C3-E527-4E9C-85AE-158ED5590733}",
+    "Language": "SFX",
+    "Hash": "{A1EE12F4-D2EB-5C3C-BAB8-A8D2522F0A53}",
+    "ObjectPath": "flashlight",
+    "ShortName": "flashlight",
+    "Path": "Event/flashlight.bnk",
+    "Media": [
+     {
+      "Id": "222393441",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashlight_click (1).wav",
+      "Path": "Media/222393441.wem",
+      "CachePath": "C4/{C49EC8B8-636E-B84B-A89C-51D64FA9146B}.wem"
+     },
+     {
+      "Id": "597836587",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashlight_click (1).wav",
+      "Path": "Media/597836587.wem",
+      "CachePath": "D3/{D300D30C-203B-F487-4870-8006B115387C}.wem"
+     },
+     {
+      "Id": "905582687",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashlight_click (1).wav",
+      "Path": "Media/905582687.wem",
+      "CachePath": "FD/{FDFCF50A-32BC-CC36-1D11-B4616E11A457}.wem"
+     },
+     {
+      "Id": "1002171767",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "flashlight_click (1).wav",
+      "Path": "Media/1002171767.wem",
+      "CachePath": "22/{228CD7EE-EFA8-9C29-0DB8-94923B071A30}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1167979795",
+      "Name": "flashlight",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\flashlight",
+      "GUID": "{B3BEE4C3-E527-4E9C-85AE-158ED5590733}",
+      "Color": "1",
+      "DurationType": "OneShot",
+      "DurationMin": "0.21270011",
+      "DurationMax": "0.30969355",
+      "MediaRefs": [
+       {
+        "Id": "222393441"
+       },
+       {
+        "Id": "597836587"
+       },
+       {
+        "Id": "905582687"
+       },
+       {
+        "Id": "1002171767"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4CE633A1-9637-1EC2-A8C9-E42812FE3C37}"
+ }
+}

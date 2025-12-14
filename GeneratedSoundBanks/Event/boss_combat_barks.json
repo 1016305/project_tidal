@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{71599AD0-8564-4A70-8B5A-220F348FB2FB}",
     "Language": "SFX",
-    "Hash": "{ADDB0BFC-95FB-3F52-8AD2-43A3583CDEBD}",
+    "Hash": "{952D09D0-1B66-D44F-D739-964C4F8EBDA2}",
     "ObjectPath": "boss_combat_barks",
     "ShortName": "boss_combat_barks",
     "Path": "Event/boss_combat_barks.bnk",
@@ -93,6 +93,6 @@
     ]
    }
   ],
-  "FileHash": "{485D6867-458E-4CEB-2EF1-054C5F4EDD79}"
+  "FileHash": "{C321644D-6461-696E-2961-ADA900B4D7C7}"
  }
 }

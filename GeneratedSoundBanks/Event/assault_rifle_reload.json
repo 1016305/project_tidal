@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{AF325875-E58B-4D25-84F3-764AF865CF79}",
     "Language": "SFX",
-    "Hash": "{C719DF2F-B4C1-F7CC-AE40-C6971DB61254}",
+    "Hash": "{EEA36D61-68F8-6CCD-843E-A505E2B4F7F5}",
     "ObjectPath": "assault_rifle_reload",
     "ShortName": "assault_rifle_reload",
     "Path": "Event/assault_rifle_reload.bnk",
@@ -45,6 +45,6 @@
     ]
    }
   ],
-  "FileHash": "{10F8FF66-CBCC-2F20-CEF2-B1F2A5C6D88E}"
+  "FileHash": "{32000ACE-00EE-81B7-41A7-13DF745EE1FA}"
  }
 }

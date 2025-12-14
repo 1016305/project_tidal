@@ -1,0 +1,34 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2849476825",
+    "Type": "Event",
+    "GUID": "{6340B59E-E5E7-4A53-BF69-3BEAE35083EB}",
+    "Language": "SFX",
+    "Hash": "{3C227932-FA1B-FAFA-7F23-985C73C5A882}",
+    "ObjectPath": "player_boss_ping",
+    "ShortName": "player_boss_ping",
+    "Path": "Event/player_boss_ping.bnk",
+    "Events": [
+     {
+      "Id": "2849476825",
+      "Name": "player_boss_ping",
+      "ObjectPath": "\\Events\\Default Work Unit\\Pings\\player_boss_ping",
+      "GUID": "{6340B59E-E5E7-4A53-BF69-3BEAE35083EB}",
+      "Color": "12",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{B63133E3-9E10-E59D-C135-C9917821BD56}"
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2126477276",
+    "Type": "Event",
+    "GUID": "{10ABE41B-B953-4C42-AB22-14D992B77585}",
+    "Language": "SFX",
+    "Hash": "{14B2B1D6-4DD0-35A6-C5A2-04695B264316}",
+    "ObjectPath": "open_arena_door",
+    "ShortName": "open_arena_door",
+    "Path": "Event/open_arena_door.bnk",
+    "Media": [
+     {
+      "Id": "145769930",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "toothdoor_opening.wav",
+      "Path": "Media/145769930.wem",
+      "CachePath": "A5/{A5140118-DCC9-3618-C9C3-45F3FB13F59A}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2126477276",
+      "Name": "open_arena_door",
+      "ObjectPath": "\\Events\\Default Work Unit\\Boss Arena\\open_arena_door",
+      "GUID": "{10ABE41B-B953-4C42-AB22-14D992B77585}",
+      "Color": "4",
+      "MaxAttenuation": "75",
+      "DurationType": "OneShot",
+      "DurationMin": "13.687041",
+      "DurationMax": "13.687041",
+      "MediaRefs": [
+       {
+        "Id": "145769930"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2540843761",
+        "Name": "First_Tower_Verb",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\First_Tower_Verb",
+        "GUID": "{1332E2DC-853C-42B6-A659-92C90F2675EC}",
+        "Color": "15"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4A5F0CEE-1FCF-BAF5-2268-6F68FECCCC96}"
+ }
+}

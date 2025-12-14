@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
     "Language": "SFX",
-    "Hash": "{FB53AABC-6466-FCC3-C115-BC254BB1377A}",
+    "Hash": "{1B7756D6-CE14-23FC-0846-DBEDB210F81D}",
     "ObjectPath": "boss_death",
     "ShortName": "boss_death",
     "Path": "Event/boss_death.bnk",
@@ -76,6 +76,6 @@
     ]
    }
   ],
-  "FileHash": "{F97787DF-89AE-8CC8-A3B5-91C319D06168}"
+  "FileHash": "{B9734A38-E15E-F2B2-C7C7-43A8098FEE3A}"
  }
 }

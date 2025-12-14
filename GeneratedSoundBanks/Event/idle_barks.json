@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1FA8C10E-718A-46AB-B604-4D02BA976176}",
     "Language": "SFX",
-    "Hash": "{530CBFA2-2C23-E80A-E4DC-8E9D766FB98F}",
+    "Hash": "{36C74BAF-80FB-D496-D3F9-CF175B0151E6}",
     "ObjectPath": "idle_barks",
     "ShortName": "idle_barks",
     "Path": "Event/idle_barks.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
       "Path": "Media/195666167.wem",
-      "CachePath": "CF/{CF16470B-A733-70B7-6CA3-926AB2F70DE2}.wem"
+      "CachePath": "95/{9541D78D-B982-6841-9649-0FCD3FB98F1A}.wem"
      },
      {
       "Id": "199980290",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
       "Path": "Media/199980290.wem",
-      "CachePath": "2A/{2A078B1B-6A32-66FD-3AD3-9AFB3640F641}.wem"
+      "CachePath": "83/{830D9897-D1F3-2FBE-C146-AC61D1CAF19C}.wem"
      },
      {
       "Id": "363213464",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
       "Path": "Media/363213464.wem",
-      "CachePath": "35/{358E6D56-E596-7B10-6005-47277A1C3394}.wem"
+      "CachePath": "06/{068250C1-404B-37D8-3FE5-979872CAA770}.wem"
      },
      {
       "Id": "478178618",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
       "Path": "Media/478178618.wem",
-      "CachePath": "9E/{9E403C8F-6D68-A4C3-55C9-8E64CD9D6DA0}.wem"
+      "CachePath": "AC/{ACFB02BE-2A91-CB9F-133D-11572AA57F14}.wem"
      },
      {
       "Id": "770351086",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_idlebark.wav",
       "Path": "Media/770351086.wem",
-      "CachePath": "71/{71E571E3-67EE-C434-9317-A0E96D7EAA1F}.wem"
+      "CachePath": "2C/{2C53B89A-8722-3AA7-D9CC-D7545BFB6B33}.wem"
      }
     ],
     "Events": [
@@ -93,6 +93,6 @@
     ]
    }
   ],
-  "FileHash": "{A0740086-101E-F7BA-68B0-CD27A7F39CD4}"
+  "FileHash": "{6EA59538-174C-1559-202E-8252F7F3E1DB}"
  }
 }

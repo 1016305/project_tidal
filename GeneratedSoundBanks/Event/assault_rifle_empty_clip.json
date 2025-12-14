@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A5412561-BC37-4B86-AF19-36223CDD0755}",
     "Language": "SFX",
-    "Hash": "{461AF565-9456-6B0E-4BA0-A40871F1CE55}",
+    "Hash": "{9357AEBD-2E5C-5DEF-72F3-1155CA0A88A4}",
     "ObjectPath": "assault_rifle_empty_clip",
     "ShortName": "assault_rifle_empty_clip",
     "Path": "Event/assault_rifle_empty_clip.bnk",
@@ -45,6 +45,6 @@
     ]
    }
   ],
-  "FileHash": "{8EE148C8-AA60-3A24-353E-F14EEA628119}"
+  "FileHash": "{887E9A29-C3B8-7C81-7A65-E04FAEBE9508}"
  }
 }

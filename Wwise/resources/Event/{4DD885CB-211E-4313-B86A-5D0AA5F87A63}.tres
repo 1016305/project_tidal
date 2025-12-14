@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://bwp4tjxvt1b0a"]
+
+[resource]
+name = "boss_weapon_charge"
+id = 1218785992
+guid = "{4DD885CB-211E-4313-B86A-5D0AA5F87A63}"
+dummy = true

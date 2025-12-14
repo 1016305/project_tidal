@@ -1,0 +1,93 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "351931552",
+    "Type": "Event",
+    "GUID": "{C862E9EB-B587-4F65-8750-653F1454A9FB}",
+    "Language": "SFX",
+    "Hash": "{FF4FA9A5-DD30-6911-F0AB-A032D9F1F302}",
+    "ObjectPath": "boss_weapon_load",
+    "ShortName": "boss_weapon_load",
+    "Path": "Event/boss_weapon_load.bnk",
+    "Media": [
+     {
+      "Id": "74409646",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Load\\enemy_boss_load_laser_03.wav",
+      "Path": "Media/74409646.wem",
+      "CachePath": "C6/{C6E4E885-0AD8-B3C3-635A-4189EEEC0CED}.wem"
+     },
+     {
+      "Id": "695740853",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Load\\enemy_boss_load_laser_01.wav",
+      "Path": "Media/695740853.wem",
+      "CachePath": "BB/{BB6417A9-8E36-57B5-2929-8C789458619D}.wem"
+     },
+     {
+      "Id": "954626877",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Load\\enemy_boss_load_laser_02.wav",
+      "Path": "Media/954626877.wem",
+      "CachePath": "19/{197C4BBA-0C64-8FB1-A047-D3C45755FA40}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2258521792",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "GUID": "{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "351931552",
+      "Name": "boss_weapon_load",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_weapon_load",
+      "GUID": "{C862E9EB-B587-4F65-8750-653F1454A9FB}",
+      "Color": "10",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "3.5395312",
+      "DurationMax": "4.6740637",
+      "MediaRefs": [
+       {
+        "Id": "74409646"
+       },
+       {
+        "Id": "695740853"
+       },
+       {
+        "Id": "954626877"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2258521792"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{9CEA1205-1E82-BB98-0B95-519B59D8E75B}"
+ }
+}

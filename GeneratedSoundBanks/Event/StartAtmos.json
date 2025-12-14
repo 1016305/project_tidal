@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D554D848-29E0-40AC-95C3-E352BC300ACC}",
     "Language": "SFX",
-    "Hash": "{AE814C43-E5CD-E12B-C17B-6F1C411CA25F}",
+    "Hash": "{06F0DEAA-F952-64A3-2C13-1135F209C6BD}",
     "ObjectPath": "StartAtmos",
     "ShortName": "StartAtmos",
     "Path": "Event/StartAtmos.bnk",
@@ -32,6 +32,15 @@
       "ShortName": "Ambience\\factory_ambienceloop.wav",
       "Path": "Media/491444269.wem",
       "CachePath": "18/{1848065C-590D-8377-F753-5DEB04A4551A}.wem"
+     },
+     {
+      "Id": "591770972",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "toxic_waste_disposal_ambienceloop.wav",
+      "Path": "Media/591770972.wem",
+      "CachePath": "1B/{1B2AD11D-8AC8-53CC-2DB5-E3035749D79B}.wem"
      },
      {
       "Id": "654365428",
@@ -121,16 +130,6 @@
       "ObjectPath": "\\Events\\Default Work Unit\\StartAtmos",
       "GUID": "{D554D848-29E0-40AC-95C3-E352BC300ACC}",
       "DurationType": "Infinite",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "1008402193"
-        },
-        {
-         "Id": "2258521792"
-        }
-       ]
-      },
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -199,6 +198,29 @@
           "Id": "750651976"
          }
         ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "32875597",
+         "Id": "606742876",
+         "GUID": "{2C7434C5-5C67-4BCE-B22A-0AB3CFA6B74B}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "591770972"
+         }
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "1008402193"
+          },
+          {
+           "Id": "2258521792"
+          }
+         ]
+        }
        }
       ]
      }
@@ -245,6 +267,6 @@
     ]
    }
   ],
-  "FileHash": "{4722BF37-6603-8AF4-175E-6FF6F9B3A551}"
+  "FileHash": "{79DFECC9-7AE2-6BB9-C39E-255C92A3C438}"
  }
 }

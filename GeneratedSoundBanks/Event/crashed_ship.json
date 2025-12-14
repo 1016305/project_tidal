@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{DA56627C-D39E-4E24-A266-621C8B978AB1}",
     "Language": "SFX",
-    "Hash": "{F8595CE7-D9D8-7551-4583-02441F97DD90}",
+    "Hash": "{D16E5C0F-DA80-ED43-E7A0-388549C079FC}",
     "ObjectPath": "crashed_ship",
     "ShortName": "crashed_ship",
     "Path": "Event/crashed_ship.bnk",
@@ -82,6 +82,6 @@
     ]
    }
   ],
-  "FileHash": "{6FF18F9E-45DB-E795-E5FE-5E17B9342286}"
+  "FileHash": "{08A1E5B0-24B9-7B01-5035-A14DBF5D9856}"
  }
 }

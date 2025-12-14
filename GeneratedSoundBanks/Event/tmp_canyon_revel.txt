@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2780447606	tmp_canyon_revel			\Default Work Unit\Canyon\tmp_canyon_revel	
+

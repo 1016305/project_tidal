@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://r2eqxq1nd6f8"]
+
+[resource]
+name = "flashlight"
+id = 1167979795
+guid = "{B3BEE4C3-E527-4E9C-85AE-158ED5590733}"
+dummy = true

@@ -10,10 +10,42 @@
     "Type": "Event",
     "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
     "Language": "SFX",
-    "Hash": "{0617082A-3149-B893-D931-71CAC95B94FA}",
+    "Hash": "{86639EA1-CFB5-B6AB-3E45-E4EBEF9457B6}",
     "ObjectPath": "boss_death",
     "ShortName": "boss_death",
     "Path": "Event/boss_death.bnk",
+    "Media": [
+     {
+      "Id": "469403989",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Animations\\boss_death_animation.wav",
+      "Path": "Media/469403989.wem",
+      "CachePath": "5A/{5ACC8D5D-537D-B847-A851-21C2CA89D976}.wem"
+     },
+     {
+      "Id": "593340090",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Boss\\Barks\\enemy_boss_deathbark.wav",
+      "Path": "Media/593340090.wem",
+      "CachePath": "9F/{9F92229C-07DE-7526-FC10-9B20028BEB50}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2258521792",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "GUID": "{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "4052139381",
@@ -21,14 +53,29 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_death",
       "GUID": "{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}",
       "Color": "10",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "11.278279",
+      "DurationMax": "11.278279",
+      "MediaRefs": [
+       {
+        "Id": "469403989"
+       },
+       {
+        "Id": "593340090"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2258521792"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{0C4B8BD2-E9B6-02BF-3768-5982CFA588A8}"
+  "FileHash": "{02CAF1C1-1877-99D5-E987-547BB0322439}"
  }
 }

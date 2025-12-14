@@ -1,0 +1,81 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1218785992",
+    "Type": "Event",
+    "GUID": "{4DD885CB-211E-4313-B86A-5D0AA5F87A63}",
+    "Language": "SFX",
+    "Hash": "{9F2029C6-9D08-F9E8-5B14-763341F88252}",
+    "ObjectPath": "boss_weapon_charge",
+    "ShortName": "boss_weapon_charge",
+    "Path": "Event/boss_weapon_charge.bnk",
+    "Media": [
+     {
+      "Id": "765582917",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Charge\\enemy_boss_weapon_charge_03.wav",
+      "Path": "Media/765582917.wem",
+      "CachePath": "0D/{0D25E1CC-CE98-17E4-9F41-98A86DCC9146}.wem"
+     },
+     {
+      "Id": "849243478",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Charge\\enemy_boss_weapon_charge_02.wav",
+      "Path": "Media/849243478.wem",
+      "CachePath": "BC/{BC1C846E-888E-3650-BDB1-C261B8B87905}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2258521792",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "GUID": "{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "1218785992",
+      "Name": "boss_weapon_charge",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_weapon_charge",
+      "GUID": "{4DD885CB-211E-4313-B86A-5D0AA5F87A63}",
+      "Color": "10",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "13.189319",
+      "DurationMax": "15.947771",
+      "MediaRefs": [
+       {
+        "Id": "765582917"
+       },
+       {
+        "Id": "849243478"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2258521792"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{81C4DA83-94BA-727D-33A3-8C9DDE3511AF}"
+ }
+}

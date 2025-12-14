@@ -1,6 +1,7 @@
-[gd_scene load_steps=70 format=4 uid="uid://3gtwd2weqttt"]
+[gd_scene load_steps=74 format=4 uid="uid://3gtwd2weqttt"]
 
 [ext_resource type="Script" uid="uid://c56j7okj58yeu" path="res://scripts/enemy/boss/boss_true.gd" id="1_ae8oe"]
+[ext_resource type="WwiseEvent" uid="uid://dhm8e52lbw3em" path="res://Wwise/resources/Event/{3A4CE97E-F943-44C1-9AFF-732B84FA207D}.tres" id="2_4xdim"]
 [ext_resource type="Material" uid="uid://cg8m1dntsh1fr" path="res://models/enemies/boss/boss_material.tres" id="2_38w4d"]
 [ext_resource type="WwiseEvent" uid="uid://br4np7hn3w7kl" path="res://Wwise/resources/Event/{71599AD0-8564-4A70-8B5A-220F348FB2FB}.tres" id="2_cmpxh"]
 [ext_resource type="WwiseEvent" uid="uid://djhfytyr0gb4e" path="res://Wwise/resources/Event/{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}.tres" id="3_b8etm"]
@@ -15,10 +16,13 @@
 [ext_resource type="WwiseEvent" uid="uid://g42h2r8gug48" path="res://Wwise/resources/Event/{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}.tres" id="7_yjtbe"]
 [ext_resource type="WwiseEvent" uid="uid://cr2u7ccg6i7fw" path="res://Wwise/resources/Event/{5222F25B-473D-47B4-950D-946A83AADBA4}.tres" id="8_ajr1p"]
 [ext_resource type="Material" uid="uid://fs7tbl16nlm" path="res://models/enemies/boss/heatsink_2_mat.tres" id="8_b8etm"]
+[ext_resource type="WwiseEvent" uid="uid://bwp4tjxvt1b0a" path="res://Wwise/resources/Event/{4DD885CB-211E-4313-B86A-5D0AA5F87A63}.tres" id="8_owrls"]
+[ext_resource type="WwiseEvent" uid="uid://dxtkk0ofvimw4" path="res://Wwise/resources/Event/{84F385BC-5D08-439C-B6E1-8ED05D2DE819}.tres" id="9_4xdim"]
 [ext_resource type="Material" uid="uid://dt2fdfnc0ndim" path="res://models/enemies/boss/heatsink_3_mat.tres" id="9_66uvb"]
 [ext_resource type="WwiseEvent" uid="uid://c3d0l2nqrivjf" path="res://Wwise/resources/Event/{CB456DD8-D658-4FE0-BDE8-9D9CD2619EB3}.tres" id="9_kfh3s"]
 [ext_resource type="Material" uid="uid://bglr2hsrfkdgx" path="res://models/enemies/boss/heatsink_4_mat.tres" id="10_45p6h"]
 [ext_resource type="WwiseEvent" uid="uid://dgaedy08ufelx" path="res://Wwise/resources/Event/{7D91000F-DC0F-4DF7-A397-494476201105}.tres" id="10_cmpxh"]
+[ext_resource type="WwiseEvent" uid="uid://dfg2p85uoyg0s" path="res://Wwise/resources/Event/{C862E9EB-B587-4F65-8750-653F1454A9FB}.tres" id="10_dgq1v"]
 [ext_resource type="Material" uid="uid://dkm3ge8jdtpda" path="res://shaders/big boss lazser.tres" id="11_yjtbe"]
 [ext_resource type="ArrayMesh" uid="uid://daewfq1ogqpct" path="res://models/enemies/boss/heatsink_destroyed.tres" id="12_38w4d"]
 [ext_resource type="WwiseEvent" uid="uid://c1te48qrekp5n" path="res://Wwise/resources/Event/{1E815BA4-01BB-4C77-9539-03FAA272089E}.tres" id="22_8gx6b"]
@@ -581,6 +585,20 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(-5.61489, 4.44259, 1.41791e-06), Vector3(-6.91984, 4.44259, 1.3737e-06), Vector3(-6.91984, 4.44259, 1.3737e-06), Vector3(-5.61489, 4.44259, 1.41791e-06)]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_loading_sounds"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w4qw4"]
 _data = {
@@ -994,6 +1012,7 @@ _data = {
 
 [node name="BossBut Real" type="Node3D" node_paths=PackedStringArray("left_lights", "right_lights", "startup_lights_l", "startup_lights_r", "heatsinks_array", "explode_point_1", "explode_point_2", "explode_point_3")]
 script = ExtResource("1_ae8oe")
+endmusic = ExtResource("2_4xdim")
 left_lights = [NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D2"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D3"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D4"), NodePath("Icosphere/Main gun/Lights/LLights/OmniLight3D5")]
 right_lights = [NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D2"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D3"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D4"), NodePath("Icosphere/Main gun/Lights/RLights/OmniLight3D5")]
 startup_lights_l = [NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D2"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D3"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D4"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D5"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D6"), NodePath("Icosphere/Main gun/GunLights/L/OmniLight3D7")]
@@ -1004,6 +1023,10 @@ intro_sounds = ExtResource("4_b8etm")
 movement = ExtResource("5_45p6h")
 movement_stop = ExtResource("6_yjtbe")
 weapon_fire = ExtResource("7_yjtbe")
+laser_charge = ExtResource("8_owrls")
+laser_fire = ExtResource("7_yjtbe")
+laser_fire_stop = ExtResource("9_4xdim")
+loading_sounds = ExtResource("10_dgq1v")
 heatsinks_array = [NodePath("Turret_Base/Heatsink1/HeatsinkCollision"), NodePath("Turret_Base/Heatsink2/HeatsinkCollision"), NodePath("Turret_Base/Heatsink3/HeatsinkCollision"), NodePath("Turret_Base/Heatsink4/HeatsinkCollision")]
 ph1_shoot_time = 3
 ph2_aim_time = 2.5
@@ -1642,3 +1665,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.6874, 0)
 
 [node name="alarm" type="AkEvent3D" parent="."]
 event = ExtResource("22_8gx6b")
+
+[node name="loadingsounds" type="AkEvent3D" parent="."]
+event = ExtResource("10_dgq1v")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.8766, 0)

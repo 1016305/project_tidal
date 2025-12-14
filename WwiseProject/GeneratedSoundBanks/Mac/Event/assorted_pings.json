@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{70E8D780-CEB4-421D-BF51-8F23F81B2DA1}",
     "Language": "SFX",
-    "Hash": "{9E06936E-1B2D-7C34-9F4C-5B41B4053F05}",
+    "Hash": "{1345C7FA-BAF4-28C3-CDC3-78210E010888}",
     "ObjectPath": "assorted_pings",
     "ShortName": "assorted_pings",
     "Path": "Event/assorted_pings.bnk",
@@ -196,11 +196,31 @@
       "CachePath": "79/{79EFCB4F-9F6C-A632-6E3D-02AB8571E433}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "2080872166",
+       "Name": "Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "GUID": "{3FF9AD86-E377-40F8-970F-3D4EE73288B5}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1417418280",
       "Name": "assorted_pings",
-      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\assorted_pings",
+      "ObjectPath": "\\Events\\Default Work Unit\\Pings\\assorted_pings",
       "GUID": "{70E8D780-CEB4-421D-BF51-8F23F81B2DA1}",
       "Color": "12",
       "MaxAttenuation": "50",
@@ -268,11 +288,21 @@
        {
         "Id": "1009516407"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "2080872166"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{E6F1E181-193C-EA62-59FC-DBE2C8CB7043}"
+  "FileHash": "{AB92F99D-8DD1-ACA3-A55F-57989CE8683E}"
  }
 }

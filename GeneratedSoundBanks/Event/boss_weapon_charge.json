@@ -1,0 +1,81 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "1218785992",
+    "Type": "Event",
+    "GUID": "{4DD885CB-211E-4313-B86A-5D0AA5F87A63}",
+    "Language": "SFX",
+    "Hash": "{3EC29EB2-A5A2-3269-C5B2-DAB8F5DC0DF5}",
+    "ObjectPath": "boss_weapon_charge",
+    "ShortName": "boss_weapon_charge",
+    "Path": "Event/boss_weapon_charge.bnk",
+    "Media": [
+     {
+      "Id": "765582917",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Charge\\enemy_boss_weapon_charge_03.wav",
+      "Path": "Media/765582917.wem",
+      "CachePath": "C5/{C56FEA41-B292-B92F-E966-728254062B61}.wem"
+     },
+     {
+      "Id": "849243478",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Charge\\enemy_boss_weapon_charge_02.wav",
+      "Path": "Media/849243478.wem",
+      "CachePath": "3C/{3CFBC154-DA9B-CBC0-B7C7-63EA027037E7}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2258521792",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "GUID": "{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "1218785992",
+      "Name": "boss_weapon_charge",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_weapon_charge",
+      "GUID": "{4DD885CB-211E-4313-B86A-5D0AA5F87A63}",
+      "Color": "10",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "13.189319",
+      "DurationMax": "15.947771",
+      "MediaRefs": [
+       {
+        "Id": "765582917"
+       },
+       {
+        "Id": "849243478"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2258521792"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{010EC7EF-26FC-6BF8-AD53-B6CA8973C731}"
+ }
+}

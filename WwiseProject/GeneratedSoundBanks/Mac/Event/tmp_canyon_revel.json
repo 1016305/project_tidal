@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2780447606",
+    "Type": "Event",
+    "GUID": "{3A4CE97E-F943-44C1-9AFF-732B84FA207D}",
+    "Language": "SFX",
+    "Hash": "{A6B9C4C3-9583-A47F-92E7-E10AC0ABB83C}",
+    "ObjectPath": "tmp_canyon_revel",
+    "ShortName": "tmp_canyon_revel",
+    "Path": "Event/tmp_canyon_revel.bnk",
+    "Media": [
+     {
+      "Id": "1009519512",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "MX\\canyon_reveal.wav",
+      "Path": "Media/1009519512.wem",
+      "CachePath": "B2/{B2A33D72-4A50-E53A-89B7-9574A7650784}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2780447606",
+      "Name": "tmp_canyon_revel",
+      "ObjectPath": "\\Events\\Default Work Unit\\Canyon\\tmp_canyon_revel",
+      "GUID": "{3A4CE97E-F943-44C1-9AFF-732B84FA207D}",
+      "Color": "4",
+      "DurationType": "OneShot",
+      "DurationMin": "55.652176",
+      "DurationMax": "55.652176",
+      "MediaRefs": [
+       {
+        "Id": "1009519512"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{61EC7E92-7745-549E-9845-A2922B26A254}"
+ }
+}

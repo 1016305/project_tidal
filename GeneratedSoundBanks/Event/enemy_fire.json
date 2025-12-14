@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3CC6D03A-4CD9-4C82-AD41-45E85DFA2CE4}",
     "Language": "SFX",
-    "Hash": "{11AB0201-267F-DB43-10F2-CDF959838CF7}",
+    "Hash": "{CAC120D9-5FBA-717F-96F8-FAF4D953DFE7}",
     "ObjectPath": "enemy_fire",
     "ShortName": "enemy_fire",
     "Path": "Event/enemy_fire.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/70116733.wem",
-      "CachePath": "AC/{AC19246F-9945-F246-F4AB-8451FB052198}.wem"
+      "CachePath": "25/{251B649A-65B8-5A45-8C87-46AB87CAD56D}.wem"
      },
      {
       "Id": "523095064",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/523095064.wem",
-      "CachePath": "75/{7525AB7C-3B41-A127-3589-153ED8FFF739}.wem"
+      "CachePath": "22/{22C4A2B6-1672-C449-E62B-41B703BDF87C}.wem"
      },
      {
       "Id": "643151873",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/643151873.wem",
-      "CachePath": "15/{15E4E73D-7F24-B5B1-8D67-4F1F1F3FEC0C}.wem"
+      "CachePath": "9D/{9DAC687E-F68E-639B-4989-54BB57D56C69}.wem"
      },
      {
       "Id": "806977981",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/806977981.wem",
-      "CachePath": "21/{2117868C-2923-D155-23BB-79A1093594AF}.wem"
+      "CachePath": "49/{49EF3B5B-7464-2EF3-C033-1F501187BEEF}.wem"
      },
      {
       "Id": "843919648",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/843919648.wem",
-      "CachePath": "46/{468EF8F1-5125-4DE7-29B3-CA5CD58F439D}.wem"
+      "CachePath": "26/{265E5F5F-B94F-613A-2544-6F2D5F506CBD}.wem"
      },
      {
       "Id": "933300372",
@@ -67,7 +67,7 @@
       "Location": "Loose",
       "ShortName": "enemy_gunfire.wav",
       "Path": "Media/933300372.wem",
-      "CachePath": "54/{54DFFEC6-41FA-7C1D-DE3B-7441FEE9F413}.wem"
+      "CachePath": "C4/{C4CFAD46-6230-EBEC-05CD-B0CAB3533B5A}.wem"
      }
     ],
     "Plugins": {
@@ -135,6 +135,6 @@
     ]
    }
   ],
-  "FileHash": "{B4EA8C6E-FA3B-50E5-1CD7-44710B5B4AAE}"
+  "FileHash": "{73CF977A-0626-56EC-3397-B50645CC970A}"
  }
 }

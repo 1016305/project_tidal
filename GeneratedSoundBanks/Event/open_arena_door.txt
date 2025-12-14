@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2126477276	open_arena_door			\Default Work Unit\Boss Arena\open_arena_door	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+

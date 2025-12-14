@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://dfg2p85uoyg0s"]
+
+[resource]
+name = "boss_weapon_load"
+id = 351931552
+guid = "{C862E9EB-B587-4F65-8750-653F1454A9FB}"
+dummy = true

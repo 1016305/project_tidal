@@ -10,19 +10,55 @@
     "Type": "Event",
     "GUID": "{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}",
     "Language": "SFX",
-    "Hash": "{08FCE613-D3BF-EF85-AAE6-8AAF2C924E38}",
+    "Hash": "{C50DA1AD-5868-9330-064A-6EEA22EF544C}",
     "ObjectPath": "boss_weapon_fire",
     "ShortName": "boss_weapon_fire",
     "Path": "Event/boss_weapon_fire.bnk",
     "Media": [
      {
-      "Id": "205395986",
+      "Id": "234877969",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Weapon\\Enemy - Big Laser v01.wav",
-      "Path": "Media/205395986.wem",
-      "CachePath": "EB/{EB29B73F-2195-D72B-B3FF-3EDC5A11AB46}.wem"
+      "ShortName": "Weapon\\Laser\\enemy_boss_laser_01.wav",
+      "Path": "Media/234877969.wem",
+      "CachePath": "02/{02272D1B-3521-0AF1-9B0E-13ABBA09EB5A}.wem"
+     },
+     {
+      "Id": "272569101",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Laser\\enemy_boss_laser_04.wav",
+      "Path": "Media/272569101.wem",
+      "CachePath": "B2/{B2F7C938-C9E6-4F67-AA48-AE7BED442008}.wem"
+     },
+     {
+      "Id": "396391263",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Laser\\enemy_boss_laser_02.wav",
+      "Path": "Media/396391263.wem",
+      "CachePath": "72/{72306654-7D8C-3970-07A2-00E9B1C3E0FC}.wem"
+     },
+     {
+      "Id": "811174196",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Laser\\enemy_boss_laser_03.wav",
+      "Path": "Media/811174196.wem",
+      "CachePath": "3E/{3E3B4162-DA35-3EAC-B87F-A3DA2949FAF9}.wem"
+     },
+     {
+      "Id": "918355346",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Laser\\enemy_boss_laser_05.wav",
+      "Path": "Media/918355346.wem",
+      "CachePath": "03/{0395FDA4-8CC1-EF3A-F948-D874D1659D2D}.wem"
      }
     ],
     "Plugins": {
@@ -46,11 +82,23 @@
       "Color": "10",
       "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "11.265787",
-      "DurationMax": "11.265787",
+      "DurationMin": "13.480844",
+      "DurationMax": "14.271156",
       "MediaRefs": [
        {
-        "Id": "205395986"
+        "Id": "234877969"
+       },
+       {
+        "Id": "272569101"
+       },
+       {
+        "Id": "396391263"
+       },
+       {
+        "Id": "811174196"
+       },
+       {
+        "Id": "918355346"
        }
       ],
       "PluginRefs": {
@@ -64,6 +112,6 @@
     ]
    }
   ],
-  "FileHash": "{D5AD5B56-076E-EC64-9952-090AAD667CB8}"
+  "FileHash": "{614AD46A-7663-44D3-AD75-37BFCF2E8D7F}"
  }
 }

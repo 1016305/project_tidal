@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{18273E7B-63FF-4436-9E82-C529AFBA5CC8}",
     "Language": "SFX",
-    "Hash": "{A4CFBEA5-29E5-B4AB-16B5-49509F35BC46}",
+    "Hash": "{486322EC-04CD-B058-7592-16245081C688}",
     "ObjectPath": "metal",
     "ShortName": "metal",
     "Path": "Event/metal.bnk",
@@ -34,15 +34,6 @@
       "CachePath": "6F/{6F1B98CD-DA4F-DD8F-19CB-D634F10B6113}.wem"
      },
      {
-      "Id": "284797051",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "metal_bullet_ping01.wav",
-      "Path": "Media/284797051.wem",
-      "CachePath": "4F/{4FF46283-2D90-3F74-256F-FFD938D5034E}.wem"
-     },
-     {
       "Id": "795721697",
       "Language": "SFX",
       "Streaming": "false",
@@ -52,13 +43,34 @@
       "CachePath": "EC/{EC39883B-DE4B-B8BF-2C0B-E1F2AE132028}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "2080872166",
+       "Name": "Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "GUID": "{3FF9AD86-E377-40F8-970F-3D4EE73288B5}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2473969246",
       "Name": "metal",
-      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\metal",
+      "ObjectPath": "\\Events\\Default Work Unit\\Pings\\metal",
       "GUID": "{18273E7B-63FF-4436-9E82-C529AFBA5CC8}",
       "Color": "12",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0.19345823",
       "DurationMax": "1.7516274",
@@ -70,16 +82,23 @@
         "Id": "284252044"
        },
        {
-        "Id": "284797051"
-       },
-       {
         "Id": "795721697"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "2080872166"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{2D30BF66-4648-D07E-BD69-7F1DAF20A1C7}"
+  "FileHash": "{F0708FEF-6617-A068-2B63-EACDF9CE7998}"
  }
 }

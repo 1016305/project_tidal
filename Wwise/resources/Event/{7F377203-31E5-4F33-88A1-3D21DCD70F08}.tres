@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://ekyg8q0ti6u7"]
+
+[resource]
+name = "enemy_plasma"
+id = 4283809968
+guid = "{7F377203-31E5-4F33-88A1-3D21DCD70F08}"
+dummy = true

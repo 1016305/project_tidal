@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	62399725	enemy_movement			\Default Work Unit\Enemy\enemy_movement	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+

@@ -1,6 +1,7 @@
 class_name Bullet extends Node3D
 @onready var gpu_particles_3d: GPUParticles3D = $GPUParticles3D
 @onready var area_3d: Area3D = $StaticBody3D/Area3D
+@export var bulletsound: WwiseEvent
 var direction
 var speed = 20
 var damage = 0

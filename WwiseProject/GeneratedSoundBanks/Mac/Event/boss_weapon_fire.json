@@ -10,10 +10,69 @@
     "Type": "Event",
     "GUID": "{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}",
     "Language": "SFX",
-    "Hash": "{9D0EB78A-2F2A-E1FF-17D1-FA5D67D17E7B}",
+    "Hash": "{D5AA9A69-FF47-B195-BA50-68D45A1CBB9A}",
     "ObjectPath": "boss_weapon_fire",
     "ShortName": "boss_weapon_fire",
     "Path": "Event/boss_weapon_fire.bnk",
+    "Media": [
+     {
+      "Id": "234877969",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Laser\\enemy_boss_laser_01.wav",
+      "Path": "Media/234877969.wem",
+      "CachePath": "20/{206733F3-6493-5527-BD81-874745945A4F}.wem"
+     },
+     {
+      "Id": "272569101",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Laser\\enemy_boss_laser_04.wav",
+      "Path": "Media/272569101.wem",
+      "CachePath": "7F/{7FE43862-323D-AD47-4F1F-0C8311E0AA08}.wem"
+     },
+     {
+      "Id": "396391263",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Laser\\enemy_boss_laser_02.wav",
+      "Path": "Media/396391263.wem",
+      "CachePath": "9C/{9C9F436B-1579-5DF1-4E19-FDC55645B46A}.wem"
+     },
+     {
+      "Id": "811174196",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Laser\\enemy_boss_laser_03.wav",
+      "Path": "Media/811174196.wem",
+      "CachePath": "D1/{D1D0007B-65D9-D45C-4B83-B18DF04DA111}.wem"
+     },
+     {
+      "Id": "918355346",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon\\Laser\\enemy_boss_laser_05.wav",
+      "Path": "Media/918355346.wem",
+      "CachePath": "34/{3461FB21-175E-A4E4-F849-9814D273E168}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2258521792",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Slow_Release",
+       "GUID": "{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1510202224",
@@ -21,14 +80,38 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_weapon_fire",
       "GUID": "{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}",
       "Color": "10",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "13.480844",
+      "DurationMax": "14.271156",
+      "MediaRefs": [
+       {
+        "Id": "234877969"
+       },
+       {
+        "Id": "272569101"
+       },
+       {
+        "Id": "396391263"
+       },
+       {
+        "Id": "811174196"
+       },
+       {
+        "Id": "918355346"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2258521792"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{0FD18BAB-7232-DEC3-EECB-DFA063C3DBF0}"
+  "FileHash": "{180A4E31-C149-6DE0-3CB4-E2150EDABA4F}"
  }
 }

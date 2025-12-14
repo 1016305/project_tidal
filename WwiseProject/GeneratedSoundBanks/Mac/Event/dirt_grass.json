@@ -10,25 +10,155 @@
     "Type": "Event",
     "GUID": "{F38718AC-1CC8-4493-ABC9-82387EC5816C}",
     "Language": "SFX",
-    "Hash": "{ECEB4637-FB2B-C456-3430-6C2765AC9F05}",
+    "Hash": "{74945C7E-F0EF-8926-FE99-44D00ACAE035}",
     "ObjectPath": "dirt_grass",
     "ShortName": "dirt_grass",
     "Path": "Event/dirt_grass.bnk",
+    "Media": [
+     {
+      "Id": "38044229",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rock_bullet_ping_01.wav",
+      "Path": "Media/38044229.wem",
+      "CachePath": "4F/{4F62CEB4-E451-8E78-17D1-E0ED61AC96A0}.wem"
+     },
+     {
+      "Id": "61613521",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rock_bullet_ping_03.wav",
+      "Path": "Media/61613521.wem",
+      "CachePath": "67/{67D1FD30-6F41-892E-C4A9-95386BD2B1A3}.wem"
+     },
+     {
+      "Id": "122689272",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rock_bullet_ping_02.wav",
+      "Path": "Media/122689272.wem",
+      "CachePath": "23/{23783347-79F9-6D4D-A3CD-3B8999743987}.wem"
+     },
+     {
+      "Id": "229104501",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rock_bullet_ping_07.wav",
+      "Path": "Media/229104501.wem",
+      "CachePath": "D5/{D5A39D38-6E99-A3EE-AC3E-49AA301224DE}.wem"
+     },
+     {
+      "Id": "337845362",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rock_bullet_ping_08.wav",
+      "Path": "Media/337845362.wem",
+      "CachePath": "6F/{6F4EA267-FA72-3574-1452-61997B7F714C}.wem"
+     },
+     {
+      "Id": "596806294",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rock_bullet_ping_05.wav",
+      "Path": "Media/596806294.wem",
+      "CachePath": "EA/{EA963003-E868-B6BB-8EE2-917E0AFD8D01}.wem"
+     },
+     {
+      "Id": "983353706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rock_bullet_ping_06.wav",
+      "Path": "Media/983353706.wem",
+      "CachePath": "C2/{C2C374A6-8B77-A53C-1F2F-94A0D224D83D}.wem"
+     },
+     {
+      "Id": "1009516407",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "rock_bullet_ping_04.wav",
+      "Path": "Media/1009516407.wem",
+      "CachePath": "79/{79EFCB4F-9F6C-A632-6E3D-02AB8571E433}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "2080872166",
+       "Name": "Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "GUID": "{3FF9AD86-E377-40F8-970F-3D4EE73288B5}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "95152949",
       "Name": "dirt_grass",
-      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\dirt_grass",
+      "ObjectPath": "\\Events\\Default Work Unit\\Pings\\dirt_grass",
       "GUID": "{F38718AC-1CC8-4493-ABC9-82387EC5816C}",
       "Color": "12",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.23894174",
+      "DurationMax": "0.40234083",
+      "MediaRefs": [
+       {
+        "Id": "38044229"
+       },
+       {
+        "Id": "61613521"
+       },
+       {
+        "Id": "122689272"
+       },
+       {
+        "Id": "229104501"
+       },
+       {
+        "Id": "337845362"
+       },
+       {
+        "Id": "596806294"
+       },
+       {
+        "Id": "983353706"
+       },
+       {
+        "Id": "1009516407"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "2080872166"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{F6AA29A3-A721-586C-8787-D7DD4DEA0F2C}"
+  "FileHash": "{805B4FF3-3534-196B-CB02-276473384DEB}"
  }
 }

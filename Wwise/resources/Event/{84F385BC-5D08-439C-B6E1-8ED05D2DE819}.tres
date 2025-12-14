@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://dxtkk0ofvimw4"]
+
+[resource]
+name = "boss_weapon_end"
+id = 2068915659
+guid = "{84F385BC-5D08-439C-B6E1-8ED05D2DE819}"
+dummy = true

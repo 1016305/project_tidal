@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://cl11ltjgxghp5"]
+
+[resource]
+name = "tinnitus"
+id = 2153205415
+guid = "{31B680B4-17A3-43F5-B32C-FA6199436C87}"
+dummy = true

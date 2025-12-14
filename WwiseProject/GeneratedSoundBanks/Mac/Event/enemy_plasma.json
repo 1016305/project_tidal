@@ -1,0 +1,104 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "4283809968",
+    "Type": "Event",
+    "GUID": "{7F377203-31E5-4F33-88A1-3D21DCD70F08}",
+    "Language": "SFX",
+    "Hash": "{99E17119-4421-3A88-9D22-CBF2117FDE57}",
+    "ObjectPath": "enemy_plasma",
+    "ShortName": "enemy_plasma",
+    "Path": "Event/enemy_plasma.bnk",
+    "Media": [
+     {
+      "Id": "466014584",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_plasma_orb.wav",
+      "Path": "Media/466014584.wem",
+      "CachePath": "12/{12082DDB-EBBD-5EB1-AD3B-343043EB11EC}.wem"
+     },
+     {
+      "Id": "783691836",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_plasma_orb.wav",
+      "Path": "Media/783691836.wem",
+      "CachePath": "87/{876FB759-425F-BC00-F42E-000DCE526E13}.wem"
+     },
+     {
+      "Id": "967665621",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_plasma_orb.wav",
+      "Path": "Media/967665621.wem",
+      "CachePath": "B0/{B0B4209A-7E41-2D8B-ADDD-85FB1CB0298C}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "1459522457",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "GUID": "{2144284E-7ADD-4341-86A4-4E468BEC9A2D}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "4283809968",
+      "Name": "enemy_plasma",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_plasma",
+      "GUID": "{7F377203-31E5-4F33-88A1-3D21DCD70F08}",
+      "Color": "10",
+      "MaxAttenuation": "45",
+      "DurationType": "OneShot",
+      "DurationMin": "2.8100183",
+      "DurationMax": "4.244921",
+      "MediaRefs": [
+       {
+        "Id": "466014584"
+       },
+       {
+        "Id": "783691836"
+       },
+       {
+        "Id": "967665621"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "1459522457"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E8D33149-E59F-33E5-92A3-2727C1484EAF}"
+ }
+}

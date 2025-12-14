@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://dsb1mn22d220l"]
+[gd_scene load_steps=21 format=3 uid="uid://dsb1mn22d220l"]
 
 [ext_resource type="Script" uid="uid://beis6e7q2vp36" path="res://scripts/player/player_controller.gd" id="1_3vyb7"]
+[ext_resource type="WwiseEvent" uid="uid://r2eqxq1nd6f8" path="res://Wwise/resources/Event/{B3BEE4C3-E527-4E9C-85AE-158ED5590733}.tres" id="2_f1ej7"]
 [ext_resource type="PackedScene" uid="uid://dlfk08xleb3kw" path="res://scenes/user_interface.tscn" id="2_g2els"]
 [ext_resource type="WwiseEvent" uid="uid://rw2jou0iac60" path="res://Wwise/resources/Event/{1DCA8750-2190-4A49-BC5C-5AA5789839DB}.tres" id="2_jej6c"]
 [ext_resource type="CameraAttributesPractical" uid="uid://b3nasx2od2mkl" path="res://scripts/animation/woozy_head_camera_attrib.tres" id="2_smehm"]
@@ -54,6 +55,7 @@ script = ExtResource("1_3vyb7")
 standard_interval = 0.45
 sprinting_interval = 0.2
 crouching_interval = 0.65
+flashlight_sfx = ExtResource("2_f1ej7")
 heartbeat_out = ExtResource("2_jej6c")
 heartbeat_in = ExtResource("12_3v2ag")
 

@@ -10,12 +10,44 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{7F63D799-77B4-0BE7-4205-AD672CB7F0D9}",
+    "Hash": "{9D7B3C0B-B1AB-4425-8EC9-06BFE69C2CB9}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "ShareSets": [
+      {
+       "Id": "48620415",
+       "Name": "Have_U_Ever_Been_Outside",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Exteriors\\Have_U_Ever_Been_Outside",
+       "GUID": "{FE29AE8D-FD86-4652-A95D-68D32F5760EC}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "415841907",
+       "Name": "Space_Garage",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Space_Garage",
+       "GUID": "{1AF92D84-49DD-4BBC-8F29-6C6D10082B6E}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "3216246379",
+       "Name": "Space_Dreaming",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Space_Dreaming",
+       "GUID": "{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "3290519051",
+       "Name": "Aluminium_Tank",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Aluminium_Tank",
+       "GUID": "{0D20C91A-F750-47E0-AE32-00E5F2AA1272}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
       {
        "Id": "3900114836",
        "Name": "Metal_Hangar",
@@ -50,6 +82,27 @@
       "Name": "SFX",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX",
       "GUID": "{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}",
+      "Color": "7"
+     },
+     {
+      "Id": "1069431850",
+      "Name": "Player",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Player",
+      "GUID": "{F86EDA78-1542-451F-8EDA-361E8973B190}",
+      "Color": "7"
+     },
+     {
+      "Id": "1229948536",
+      "Name": "Environment",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Environment",
+      "GUID": "{4F18AFDC-7F1C-4223-A25B-D28ED21702D8}",
+      "Color": "7"
+     },
+     {
+      "Id": "1467963052",
+      "Name": "Weapons",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Weapons",
+      "GUID": "{1A90138E-2B2A-4E2F-9D90-DED81A81D9C3}",
       "Color": "7"
      },
      {
@@ -88,15 +141,71 @@
     ],
     "AuxBusses": [
      {
+      "Id": "518384578",
+      "Name": "Third_Tower_Verb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Third_Tower_Verb",
+      "GUID": "{5594FFD1-A5C6-4E32-9C9A-3B430EFB420B}",
+      "Color": "25",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3290519051"
+        }
+       ]
+      }
+     },
+     {
       "Id": "2540843761",
       "Name": "First_Tower_Verb",
       "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\First_Tower_Verb",
       "GUID": "{1332E2DC-853C-42B6-A659-92C90F2675EC}",
-      "Color": "4",
+      "Color": "15",
       "PluginRefs": {
        "ShareSets": [
         {
          "Id": "3900114836"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2862970847",
+      "Name": "Canyon_Verb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Canyon_Verb",
+      "GUID": "{23D9D23A-DF6F-4EAF-9312-283C9E53E7AE}",
+      "Color": "21",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "48620415"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2870411437",
+      "Name": "Second_Tower_Verb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Second_Tower_Verb",
+      "GUID": "{DE5B648F-E157-41E2-AE09-466F3E32B8D3}",
+      "Color": "17",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "415841907"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "4068741826",
+      "Name": "Boss_Arena_Verb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\Boss_Arena_Verb",
+      "GUID": "{D7325445-39E7-4F5B-95E3-CF9FC47AC191}",
+      "Color": "23",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3216246379"
         }
        ]
       }
@@ -186,6 +295,78 @@
       "Name": "SS_Air_Turbulence",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Turbulence",
       "GUID": "{EDA87B19-73AA-40A0-9F19-2073606DB710}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "82754628",
+      "Name": "AreaStates",
+      "ObjectPath": "\\States\\Default Work Unit\\AreaStates",
+      "GUID": "{48E72681-000E-4084-B6E0-5CE154144F84}",
+      "States": [
+       {
+        "Id": "166364116",
+        "Name": "Canyon01",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\Canyon01",
+        "GUID": "{0335D5E2-CBE7-4597-B619-42F3524F87A6}"
+       },
+       {
+        "Id": "166364119",
+        "Name": "Canyon02",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\Canyon02",
+        "GUID": "{E2779B2C-BE55-4B87-BCA7-E7ACCF13AFA0}"
+       },
+       {
+        "Id": "606742876",
+        "Name": "SecondTower",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\SecondTower",
+        "GUID": "{ED435102-D65F-4BFC-9D91-A25165F36D24}"
+       },
+       {
+        "Id": "735597211",
+        "Name": "BossArena",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\BossArena",
+        "GUID": "{0F9909C4-6D9E-4EEB-970C-EF57B1260C54}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\None",
+        "GUID": "{17B85D27-E875-4CFA-A8D0-D7B93151C106}"
+       },
+       {
+        "Id": "3019845671",
+        "Name": "ThirdTower",
+        "ObjectPath": "\\States\\Default Work Unit\\AreaStates\\ThirdTower",
+        "GUID": "{5BC0BF68-CF6A-4C42-9520-641E1FFE53A1}"
+       }
+      ]
+     },
+     {
+      "Id": "2163007642",
+      "Name": "MusicStateGroup",
+      "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup",
+      "GUID": "{DCFA7345-6877-4069-B009-51418695A10E}",
+      "States": [
+       {
+        "Id": "77978275",
+        "Name": "Ambient",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\Ambient",
+        "GUID": "{6838F25F-0900-4176-B0BE-35118BD528DF}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\None",
+        "GUID": "{10C625E6-9EB2-4E1D-94F2-27E6806923B9}"
+       },
+       {
+        "Id": "2764240573",
+        "Name": "Combat",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\Combat",
+        "GUID": "{B7498178-B61B-40D9-8475-42035C45A831}"
+       }
+      ]
      }
     ],
     "SwitchGroups": [
@@ -727,6 +908,6 @@
     ]
    }
   ],
-  "FileHash": "{961CDB3F-0819-FE21-EE37-A08C2B37B2FA}"
+  "FileHash": "{D63F0F05-7E16-319F-1083-D0D3E6B129DA}"
  }
 }

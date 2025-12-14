@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "171",
+  "SoundBanks": [
+   {
+    "Id": "2153205415",
+    "Type": "Event",
+    "GUID": "{31B680B4-17A3-43F5-B32C-FA6199436C87}",
+    "Language": "SFX",
+    "Hash": "{98542CC2-29CF-839F-5969-706A147F8098}",
+    "ObjectPath": "tinnitus",
+    "ShortName": "tinnitus",
+    "Path": "Event/tinnitus.bnk",
+    "Media": [
+     {
+      "Id": "292271655",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "tinnitus.wav",
+      "Path": "Media/292271655.wem",
+      "CachePath": "08/{08911E73-F7B3-F59B-A2D3-17C713CE85E3}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2153205415",
+      "Name": "tinnitus",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\tinnitus",
+      "GUID": "{31B680B4-17A3-43F5-B32C-FA6199436C87}",
+      "Color": "1",
+      "DurationType": "OneShot",
+      "DurationMin": "6.995319",
+      "DurationMax": "6.995319",
+      "MediaRefs": [
+       {
+        "Id": "292271655"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D6CF9160-45D7-03E7-3800-3FA2C605C2BC}"
+ }
+}

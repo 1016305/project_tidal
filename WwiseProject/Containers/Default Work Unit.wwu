@@ -2417,7 +2417,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>-19</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2431,6 +2431,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="tinnitus" ID="{34A74BF8-1E52-4C77-A6BD-16D687C51D1A}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.58288709804605"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="6.99531903305336"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>tinnitus.wav</AudioFile>
 									<MediaIDList>
@@ -3670,6 +3675,45 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<PluginInnerObject Name="" ID="{B9AAA08F-2A85-413F-AF63-36CFA37B83EA}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="enemy_boss_laser_01" ID="{261E57C5-C3FB-4EB5-B095-C55F7A223885}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{50B14AAC-2109-412E-A8A7-3BA44AC120ED}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="enemy_boss_laser_02" ID="{10DE2DDA-47CF-4964-8745-D2793C89017F}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{FE3512A1-9FF0-4626-8AA8-10A682FD152A}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="enemy_boss_laser_03" ID="{78068CF8-11A8-41A2-8BA5-D7660773FA2F}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{178DF75F-6BA3-4F43-B03E-0378AB362501}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="enemy_boss_laser_04" ID="{FD2BBE53-A63E-4C79-BD67-D31D613C823C}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{2DE46C9D-BF1E-4877-8510-DC1C4824D946}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="enemy_boss_laser_05" ID="{5875AF5F-F372-498D-BF7A-11A636FAF842}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+												</ObjectList>
+											</ObjectLists>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Laser End" ID="{E2CA7DD3-BFCE-4293-9BAF-D94E37167689}" ShortID="482375902">
 											<PropertyList>
@@ -3826,6 +3870,45 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<PluginInnerObject Name="" ID="{B49C88BD-1D9D-43F1-819A-50FA33967B37}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="enemy_boss_laser_end_01" ID="{C8A4CDCA-EA23-493F-B81F-1A1F421B02AC}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{60A0439E-5997-41A7-9E9A-520A05731AA4}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="enemy_boss_laser_end_02" ID="{8FD7E27A-AB05-43EA-9A75-0D3EDEB65667}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{49B56CE0-6EC1-4FC4-AE8A-AF3200B7F84D}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="enemy_boss_laser_end_03" ID="{D49B3802-F8CF-4A87-A000-CFCCE22AAB54}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{F29EB0E3-E31D-4A4C-89B3-FEEB81329C68}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="enemy_boss_laser_end_04" ID="{C554578E-39F8-4A4E-95F0-A9E60BCAB0FA}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{E5E083DB-F031-48BB-86DF-2D2F525BAAC9}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="enemy_boss_laser_end_05" ID="{89DC888B-5AFA-4EB1-AED0-D6BA6129026F}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+												</ObjectList>
+											</ObjectLists>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Load" ID="{1B258E19-A95D-4AE3-956F-EA6663AB3B9B}" ShortID="401021053">
 											<PropertyList>
@@ -5086,7 +5169,7 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Enemy Plasma Orb" ID="{95D39053-27F0-432F-B961-DA2391773F3E}" ShortID="174878253">
 											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-6</Value>

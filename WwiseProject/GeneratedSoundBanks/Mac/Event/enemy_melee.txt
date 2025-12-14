@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	682605002	enemy_melee			\Default Work Unit\Enemy\enemy_melee	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+

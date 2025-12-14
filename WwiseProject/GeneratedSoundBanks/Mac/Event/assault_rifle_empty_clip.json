@@ -6,29 +6,45 @@
   "SoundBankVersion": "171",
   "SoundBanks": [
    {
-	"Id": "2049160996",
-	"Type": "Event",
-	"GUID": "{A5412561-BC37-4B86-AF19-36223CDD0755}",
-	"Language": "SFX",
-	"Hash": "{2C6F2288-6305-4060-C9A3-FCF4A2C09A72}",
-	"ObjectPath": "assault_rifle_empty_clip",
-	"ShortName": "assault_rifle_empty_clip",
-	"Path": "Event/assault_rifle_empty_clip.bnk",
-	"Events": [
-	 {
-	  "Id": "2049160996",
-	  "Name": "assault_rifle_empty_clip",
-	  "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\assault_rifle_empty_clip",
-	  "GUID": "{A5412561-BC37-4B86-AF19-36223CDD0755}",
-	  "Color": "8",
-	  "MaxAttenuation": "0",
-	  "DurationType": "OneShot",
-	  "DurationMin": "0",
-	  "DurationMax": "0"
-	 }
-	]
+    "Id": "2049160996",
+    "Type": "Event",
+    "GUID": "{A5412561-BC37-4B86-AF19-36223CDD0755}",
+    "Language": "SFX",
+    "Hash": "{E7BA649B-4668-57AC-E464-E0A67E6FC774}",
+    "ObjectPath": "assault_rifle_empty_clip",
+    "ShortName": "assault_rifle_empty_clip",
+    "Path": "Event/assault_rifle_empty_clip.bnk",
+    "Media": [
+     {
+      "Id": "1045961606",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapons\\Assault Rifle\\mech, click.wav",
+      "Path": "Media/1045961606.wem",
+      "CachePath": "B8/{B8490689-8E2E-95A4-3E7A-4FE3BCC4176A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2049160996",
+      "Name": "assault_rifle_empty_clip",
+      "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\assault_rifle_empty_clip",
+      "GUID": "{A5412561-BC37-4B86-AF19-36223CDD0755}",
+      "Color": "8",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0.18176462",
+      "DurationMax": "0.19257292",
+      "MediaRefs": [
+       {
+        "Id": "1045961606"
+       }
+      ]
+     }
+    ]
    }
   ],
-  "FileHash": "{200653A0-F0D2-A9C0-0661-2FE59227CCB6}"
+  "FileHash": "{40F8891C-B69E-3E39-CAFA-FE7742F5AE18}"
  }
 }

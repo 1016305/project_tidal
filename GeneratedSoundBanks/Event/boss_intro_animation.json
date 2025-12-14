@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}",
     "Language": "SFX",
-    "Hash": "{2A83C4A9-C580-F380-9460-B32D6D16D1BF}",
+    "Hash": "{9A9877F4-F55D-0EF9-2CF8-9BAE1264A3B0}",
     "ObjectPath": "boss_intro_animation",
     "ShortName": "boss_intro_animation",
     "Path": "Event/boss_intro_animation.bnk",
@@ -64,6 +64,6 @@
     ]
    }
   ],
-  "FileHash": "{D2786C50-9A37-5F94-F3E3-F2634885E156}"
+  "FileHash": "{5A01D788-EDF0-12E2-CDD1-124604A8A65A}"
  }
 }

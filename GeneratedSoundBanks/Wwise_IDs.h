@@ -30,7 +30,10 @@ namespace AK
         static const AkUniqueID BOSS_INTRO_ANIMATION = 3786392610U;
         static const AkUniqueID BOSS_MOVEMENT = 2663270342U;
         static const AkUniqueID BOSS_MOVEMENT_STOP = 1925754261U;
+        static const AkUniqueID BOSS_WEAPON_CHARGE = 1218785992U;
+        static const AkUniqueID BOSS_WEAPON_END = 2068915659U;
         static const AkUniqueID BOSS_WEAPON_FIRE = 1510202224U;
+        static const AkUniqueID BOSS_WEAPON_LOAD = 351931552U;
         static const AkUniqueID BUTTON = 977454165U;
         static const AkUniqueID CANYON_AMB = 1984278272U;
         static const AkUniqueID COMBAT_BARKS = 2313023713U;
@@ -46,6 +49,7 @@ namespace AK
         static const AkUniqueID ENEMY_MOVEMENT = 62399725U;
         static const AkUniqueID ENEMY_PLASMA = 4283809968U;
         static const AkUniqueID FIRST_TOWER_AMB = 1347192966U;
+        static const AkUniqueID FLASHLIGHT = 1167979795U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID HEALTH_PICKUP = 3731941266U;
         static const AkUniqueID HIT_BARKS = 143989192U;
@@ -59,8 +63,10 @@ namespace AK
         static const AkUniqueID MENU_CONFIRM = 4046753069U;
         static const AkUniqueID METAL = 2473969246U;
         static const AkUniqueID MOVEMENT = 2129636626U;
+        static const AkUniqueID OPEN_ARENA_DOOR = 2126477276U;
         static const AkUniqueID PLAY_MAINMUSICSWITCH = 3684206702U;
         static const AkUniqueID PLAYER = 1069431850U;
+        static const AkUniqueID PLAYER_BOSS_PING = 2849476825U;
         static const AkUniqueID SECOND_TOWER_AMB = 3833734562U;
         static const AkUniqueID SECOND_TOWER_CONVERYORBELT = 3971991686U;
         static const AkUniqueID SFX_PLAYTESTSOUND = 2888769156U;
@@ -69,6 +75,8 @@ namespace AK
         static const AkUniqueID TEST_EVENT_01 = 1336498786U;
         static const AkUniqueID THIRD_TOWER_AMB = 2771423855U;
         static const AkUniqueID THIRD_TOWER_CONVEYORBELT = 3430197945U;
+        static const AkUniqueID TINNITUS = 2153205415U;
+        static const AkUniqueID TMP_CANYON_REVEL = 2780447606U;
         static const AkUniqueID TOOTHDOOR_OPENING = 3417972020U;
     } // namespace EVENTS
 
@@ -154,10 +162,13 @@ namespace AK
     {
         static const AkUniqueID ATMOSPHERE = 2145253833U;
         static const AkUniqueID DIALOGUE = 3930136735U;
+        static const AkUniqueID ENVIRONMENT = 1229948536U;
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID PLAYER = 1069431850U;
         static const AkUniqueID REVERBS = 3545700988U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID WEAPONS = 1467963052U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES

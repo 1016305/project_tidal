@@ -14,6 +14,9 @@ var vfx
 @export var spawn_enemies_here: Array[Node3D]
 @onready var sounds: AkEvent3D = $sounds
 @onready var alarm: AkEvent3D = $alarm
+@onready var loadingsounds: AkEvent3D = $loadingsounds
+##DELETEME
+@export var endmusic: WwiseEvent
 
 #@onready var eye: CSGSphere3D = $CSGSphere3D
 @onready var rotate_me: MeshInstance3D = $"Icosphere"
@@ -38,6 +41,11 @@ var vfx
 @export var weapon_fire: WwiseEvent
 @export var combat_barks_interval: float = 2
 @onready var combat_barks_timer: Timer = $combat_barks_timer
+@export_category("Shooting Sounds")
+@export var laser_charge: WwiseEvent
+@export var laser_fire: WwiseEvent
+@export var laser_fire_stop: WwiseEvent
+@export var loading_sounds: WwiseEvent
 
 @export_category("Primary Logic")
 @export var heatsinks_array: Array[Heatsink]
@@ -185,15 +193,18 @@ func phase_1():
 		shoot_location = Global.player.position
 		aim_at_player = false
 		playsound(movement_stop)
+		playsound(laser_charge)
 		lights(left_lights,ph1_shoot_wait)
 		lights(right_lights,ph1_shoot_wait)
 		await get_tree().create_timer(ph1_shoot_wait).timeout
+		playsound(laser_fire)
 		#play sound effect (early?) charge up sound effect warns player that shooting will happen soon
 		# maybe use an animated cylinder whose scale extends forwards to shoot? and just check collisions?
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph1_shoot_time)
 		await get_tree().create_timer(ph1_shoot_time).timeout
+		playsound(laser_fire_stop)
 		lights_off(left_lights)
 		lights_off(right_lights)
 		await get_tree().create_timer(ph1_heatsink_delay).timeout
@@ -216,14 +227,16 @@ func phase_2():
 		shoot_location = Global.player.position
 		aim_at_player = false
 		playsound(movement_stop)
+		playsound(laser_charge)
 		lights(left_lights,ph2_shoot_wait)
 		lights(right_lights,ph2_shoot_wait)
 		await get_tree().create_timer(ph2_shoot_wait).timeout
-
+		playsound(laser_fire)
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph2_shoot_time)
 		await get_tree().create_timer(ph2_shoot_time).timeout
+		playsound(laser_fire_stop)
 		lights_off(left_lights)
 		lights_off(right_lights)
 		await get_tree().create_timer(ph2_heatsink_delay).timeout
@@ -249,13 +262,16 @@ func phase_3():
 		shoot_location = Global.player.position
 		aim_at_player = false
 		playsound(movement_stop)
+		playsound(laser_charge)
 		lights(left_lights,ph3_shoot_wait)
 		lights(right_lights,ph3_shoot_wait)
 		await get_tree().create_timer(ph3_shoot_wait).timeout
+		playsound(laser_fire)
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph3_shoot_time)
 		await get_tree().create_timer(ph3_shoot_time).timeout
+		playsound(laser_fire_stop)
 		lights_off(left_lights)
 		lights_off(right_lights)
 		await get_tree().create_timer(ph3_next_shot_wait).timeout
@@ -266,13 +282,16 @@ func phase_3():
 		shoot_location = Global.player.position
 		aim_at_player = false
 		playsound(movement_stop)
+		playsound(laser_charge)
 		lights(left_lights,ph3_shoot_wait)
 		lights(right_lights,ph3_shoot_wait)
 		await get_tree().create_timer(ph3_shoot_wait).timeout
+		playsound(laser_fire)
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph3_shoot_time)
 		await get_tree().create_timer(ph3_shoot_time).timeout
+		playsound(laser_fire_stop)
 		lights_off(left_lights)
 		lights_off(right_lights)
 		
@@ -298,14 +317,18 @@ func phase_4():
 
 		aim_at_player = true
 		playsound(movement)
+		playsound(laser_charge)
 		await get_tree().create_timer(ph4_aim_time).timeout
 		shoot_location = Global.player.position
 		lights(left_lights,ph4_shoot_wait)
 		lights(right_lights,ph4_shoot_wait)
 		await get_tree().create_timer(ph4_shoot_wait).timeout
+		playsound(laser_fire)
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
+		playsound(laser_fire_stop)
+		
 		aim_at_player = false
 		playsound(movement_stop)
 		await get_tree().create_timer(ph4_shoot_time).timeout
@@ -315,36 +338,47 @@ func phase_4():
 		
 		aim_at_player = true
 		playsound(movement)
+		playsound(laser_charge)
+		
 		await get_tree().create_timer(ph4_aim_time).timeout
 		shoot_location = Global.player.position
 		
 		lights(left_lights,ph4_shoot_wait)
 		lights(right_lights,ph4_shoot_wait)
 		await get_tree().create_timer(ph4_shoot_wait).timeout
+		playsound(laser_fire)
+		
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
 		aim_at_player = false
 		playsound(movement_stop)
 		await get_tree().create_timer(ph4_shoot_time).timeout
+		playsound(laser_fire_stop)
+		
 		lights_off(left_lights)
 		lights_off(right_lights)
 		await get_tree().create_timer(ph4_next_shot_wait).timeout
 		
 		aim_at_player = true
 		playsound(movement)
+		playsound(laser_charge)
 		await get_tree().create_timer(ph4_aim_time).timeout
 		shoot_location = Global.player.position
 		
 		lights(left_lights,ph4_shoot_wait)
 		lights(right_lights,ph4_shoot_wait)
 		await get_tree().create_timer(ph4_shoot_wait).timeout
+		playsound(laser_fire)
+		
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
 		aim_at_player = false
 		playsound(movement_stop)
 		await get_tree().create_timer(ph4_shoot_time).timeout
+		playsound(laser_fire_stop)
+		
 		lights_off(left_lights)
 		lights_off(right_lights)
 		await get_tree().create_timer(ph4_next_shot_wait).timeout
@@ -365,6 +399,7 @@ func dead():
 		print("boss says animation is finished")
 		print("emitting the signal")
 		the_door.open_door()
+		endmusic.post(self)
 
 func open_all_heatsinks(time):
 	for h in heatsinks_array:
@@ -548,3 +583,6 @@ func boss_death_sounds():
 
 func boss_intro_sounds():
 	playsound(intro_sounds)
+
+func play_loading_sounds():
+	loadingsounds.post_event()

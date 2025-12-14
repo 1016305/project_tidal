@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{9A0CEEB0-7F1E-4248-A797-C84ECF701575}",
     "Language": "SFX",
-    "Hash": "{AB6E0AEA-C12C-3448-29E5-AFFE35A08764}",
+    "Hash": "{677B49A1-B172-0FEA-2225-09F9B21E90D3}",
     "ObjectPath": "boss_movement",
     "ShortName": "boss_movement",
     "Path": "Event/boss_movement.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{8755EADE-33EC-D930-4FA1-4164FA7FDD83}"
+  "FileHash": "{343F8C38-C73C-9B39-602E-C131BB6C692E}"
  }
 }

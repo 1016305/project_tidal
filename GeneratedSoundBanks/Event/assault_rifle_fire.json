@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4AA998B1-129D-45FF-AF06-0AA4CB5B7746}",
     "Language": "SFX",
-    "Hash": "{4929A61C-4A6E-6928-9649-79363071A711}",
+    "Hash": "{3CFA983D-B628-E2E8-6B2B-A01483A973F1}",
     "ObjectPath": "assault_rifle_fire",
     "ShortName": "assault_rifle_fire",
     "Path": "Event/assault_rifle_fire.bnk",
@@ -111,6 +111,6 @@
     ]
    }
   ],
-  "FileHash": "{BEDBB49D-2011-B941-83E0-AE328946D5B6}"
+  "FileHash": "{8A4B79D8-BA1C-B048-F469-C7AE77494AD5}"
  }
 }

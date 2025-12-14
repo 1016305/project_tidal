@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}",
     "Language": "SFX",
-    "Hash": "{35585E9F-161D-8242-22FC-CBACBBD3562F}",
+    "Hash": "{0180B86B-0846-3209-B0C7-9ACDBD3920A9}",
     "ObjectPath": "enemy_death",
     "ShortName": "enemy_death",
     "Path": "Event/enemy_death.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
       "Path": "Media/23971810.wem",
-      "CachePath": "13/{1325A337-B9DE-2D95-BE70-0E60DEDC51B1}.wem"
+      "CachePath": "77/{779E430C-AD95-77AB-EC06-32B26506BAB9}.wem"
      },
      {
       "Id": "413017173",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
       "Path": "Media/413017173.wem",
-      "CachePath": "CC/{CC4565D0-641D-3B5F-D067-189104AA3B8A}.wem"
+      "CachePath": "D7/{D774B987-86D5-7321-C50F-22014E243DAD}.wem"
      },
      {
       "Id": "429256383",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
       "Path": "Media/429256383.wem",
-      "CachePath": "34/{340314DF-DB6F-D5B4-CE77-4B6EB7584254}.wem"
+      "CachePath": "7E/{7E3A7F07-2DA4-9661-2A3F-9076DBC49A3E}.wem"
      },
      {
       "Id": "535790677",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
       "Path": "Media/535790677.wem",
-      "CachePath": "56/{56673D54-1C2C-EC3C-F8DC-C2637FCC8922}.wem"
+      "CachePath": "8E/{8E489AB5-E56F-ECE8-D9E1-B77068784A63}.wem"
      },
      {
       "Id": "670430667",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
       "Path": "Media/670430667.wem",
-      "CachePath": "A1/{A1F7F41F-FA17-8D3C-C1C7-5EC953DA20E7}.wem"
+      "CachePath": "0B/{0B7ED871-F06F-A61F-120A-25AA1C0F6769}.wem"
      },
      {
       "Id": "763644950",
@@ -67,7 +67,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Barks\\enemy_deathbark.wav",
       "Path": "Media/763644950.wem",
-      "CachePath": "56/{56A17718-BC6F-15FC-EE36-9C1DEF4026E4}.wem"
+      "CachePath": "2B/{2BE7ECAD-4ABD-DF01-F105-CD2C022D73C8}.wem"
      }
     ],
     "Events": [
@@ -77,7 +77,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_death",
       "GUID": "{E4279328-97BD-4BA4-95A6-9EFD33AAC15A}",
       "Color": "10",
-      "MaxAttenuation": "25",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "1.6760628",
       "DurationMax": "2.919239",
@@ -105,6 +105,6 @@
     ]
    }
   ],
-  "FileHash": "{96FCAAB1-A997-11CB-F134-BEC0164737EA}"
+  "FileHash": "{62372CBC-5943-8A41-BBD5-AC9D69C82B9E}"
  }
 }

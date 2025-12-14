@@ -525,6 +525,17 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{CDA37B44-8EE5-4F62-91BD-6F15474CF8D4}" ShortID="187719598">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cooling_vent_open" ID="{90BA1819-3631-4A5B-8D83-F74057F6F459}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="boss_coolingvent_destroy" ID="{7D91000F-DC0F-4DF7-A397-494476201105}">
@@ -711,6 +722,17 @@
 					</PropertyList>
 					<ChildrenList>
 						<Event Name="canyon_amb" ID="{B949D462-D727-4E77-A282-E1465394076D}"/>
+						<Event Name="tmp_canyon_revel" ID="{3A4CE97E-F943-44C1-9AFF-732B84FA207D}">
+							<ChildrenList>
+								<Action Name="" ID="{53EB1F2D-CF46-4DA7-9653-3D56BA120243}" ShortID="869799933">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="canyon_reveal" ID="{C822397E-BD0C-4A27-94FE-CEDC11CE825C}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Pings" ID="{0444B75D-6FC6-494B-9DC2-937AE8617596}" ShortID="216561502">

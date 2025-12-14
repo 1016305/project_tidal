@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C11A5FAA-D601-48A5-8892-7869C8301D6B}",
     "Language": "SFX",
-    "Hash": "{913C31FF-40B8-ED81-5457-2AE11D973B76}",
+    "Hash": "{8D4006AA-493D-28B1-F3DD-9E8B7BF81A9E}",
     "ObjectPath": "enemy_movement",
     "ShortName": "enemy_movement",
     "Path": "Event/enemy_movement.bnk",
@@ -22,9 +22,21 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Movement\\Enemy - Floating Movement v02.wav",
       "Path": "Media/278877721.wem",
-      "CachePath": "BE/{BEDDCD96-4F28-D1DA-2A6E-FEA3806BE4F3}.wem"
+      "CachePath": "B7/{B7059C3B-726C-0026-8BC9-5C2188F7C16B}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "62399725",
@@ -32,17 +44,24 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\enemy_movement",
       "GUID": "{C11A5FAA-D601-48A5-8892-7869C8301D6B}",
       "Color": "10",
-      "MaxAttenuation": "50",
+      "MaxAttenuation": "40",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "278877721"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{A57D3418-FDA4-94C9-A358-414E208A8BC2}"
+  "FileHash": "{36ABD4B5-F3F1-C7E9-EFBB-6FA8FEBB5389}"
  }
 }

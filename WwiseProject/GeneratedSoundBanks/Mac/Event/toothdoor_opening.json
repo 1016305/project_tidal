@@ -10,19 +10,19 @@
     "Type": "Event",
     "GUID": "{E0808C22-AE4B-4D00-851C-6AA8B1BB976B}",
     "Language": "SFX",
-    "Hash": "{DE25B4F9-E621-C56F-D298-B7B478FAA7B5}",
+    "Hash": "{43736ACF-F227-AB11-D775-76438D1E954F}",
     "ObjectPath": "toothdoor_opening",
     "ShortName": "toothdoor_opening",
     "Path": "Event/toothdoor_opening.bnk",
     "Media": [
      {
-      "Id": "383057084",
+      "Id": "145769930",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "toothdoor_opening_24_44khz.wav",
-      "Path": "Media/383057084.wem",
-      "CachePath": "2D/{2D64B22B-7519-B0F2-AECA-A34C4C3C7C43}.wem"
+      "ShortName": "toothdoor_opening.wav",
+      "Path": "Media/145769930.wem",
+      "CachePath": "A1/{A156CF90-1709-7D61-C411-237BE1DF9B8A}.wem"
      },
      {
       "Id": "1009519512",
@@ -34,6 +34,18 @@
       "CachePath": "B2/{B2A33D72-4A50-E53A-89B7-9574A7650784}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3417972020",
@@ -46,16 +58,32 @@
       "DurationMax": "56.652176",
       "MediaRefs": [
        {
-        "Id": "383057084"
+        "Id": "145769930"
        },
        {
         "Id": "1009519512"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2540843761",
+        "Name": "First_Tower_Verb",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Reverbs\\First_Tower_Verb",
+        "GUID": "{1332E2DC-853C-42B6-A659-92C90F2675EC}",
+        "Color": "15"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{10B3C88A-31F3-8B89-1FCC-5525AC9CC075}"
+  "FileHash": "{BAAFC35F-7AA9-AB9A-FAC2-A853635A49B3}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CD7BF1D8-49A3-453C-8289-1BC072862E93}",
     "Language": "SFX",
-    "Hash": "{796C4A21-2DD7-42E0-10CB-D52D02C23955}",
+    "Hash": "{615FCDC2-F799-FB84-5CC4-0D23740107DF}",
     "ObjectPath": "enemy_alert",
     "ShortName": "enemy_alert",
     "Path": "Event/enemy_alert.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "enemy_alert.wav",
       "Path": "Media/195288589.wem",
-      "CachePath": "5F/{5F7FBAD9-9242-F7B2-F385-85D9DE747206}.wem"
+      "CachePath": "8C/{8C29172E-5DE6-18D4-E7E7-4402C70A36C7}.wem"
      }
     ],
     "Events": [
@@ -33,8 +33,8 @@
       "GUID": "{CD7BF1D8-49A3-453C-8289-1BC072862E93}",
       "Color": "10",
       "DurationType": "OneShot",
-      "DurationMin": "0.95229834",
-      "DurationMax": "0.95229834",
+      "DurationMin": "0.91192406",
+      "DurationMax": "1.4802028",
       "MediaRefs": [
        {
         "Id": "195288589"
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{854CD5CD-9CA2-E99A-A027-DC146130E1C1}"
+  "FileHash": "{B48C7D47-1374-12F3-1485-C19A2A4B39CE}"
  }
 }

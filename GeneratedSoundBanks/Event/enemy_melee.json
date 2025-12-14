@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5A2886A0-389E-4AC3-986C-684AD3AC4C8E}",
     "Language": "SFX",
-    "Hash": "{F6A3142C-E22F-E4EB-9739-DAE45313F56A}",
+    "Hash": "{4E66A55A-B054-008F-31C8-CE746E0DD95F}",
     "ObjectPath": "enemy_melee",
     "ShortName": "enemy_melee",
     "Path": "Event/enemy_melee.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "enemy_melee.wav",
       "Path": "Media/503151493.wem",
-      "CachePath": "6E/{6E5E3491-89C6-E728-1A69-A76B2FEC8C5B}.wem"
+      "CachePath": "9C/{9CAF5F2B-6C20-2C93-E1FD-C5020D17EB51}.wem"
      }
     ],
     "Plugins": {
@@ -75,6 +75,6 @@
     ]
    }
   ],
-  "FileHash": "{F09D5166-6FBD-F2A4-ED1F-AD553717D535}"
+  "FileHash": "{9540B086-4BDA-0B0A-ED94-8A3B30105AA4}"
  }
 }

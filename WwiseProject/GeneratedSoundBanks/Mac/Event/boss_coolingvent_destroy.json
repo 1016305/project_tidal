@@ -10,10 +10,93 @@
     "Type": "Event",
     "GUID": "{7D91000F-DC0F-4DF7-A397-494476201105}",
     "Language": "SFX",
-    "Hash": "{0A2D209B-6ECB-FEA2-D42F-529BF12E50BD}",
+    "Hash": "{3C751C95-F881-622D-1F84-52571A78D86F}",
     "ObjectPath": "boss_coolingvent_destroy",
     "ShortName": "boss_coolingvent_destroy",
     "Path": "Event/boss_coolingvent_destroy.bnk",
+    "Media": [
+     {
+      "Id": "92867497",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/92867497.wem",
+      "CachePath": "CC/{CCB6354E-21F3-A519-EA6E-4197D14F74AF}.wem"
+     },
+     {
+      "Id": "134533631",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/134533631.wem",
+      "CachePath": "69/{69C458AA-C6E9-2F54-9B44-BB077AFD9567}.wem"
+     },
+     {
+      "Id": "253060480",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/253060480.wem",
+      "CachePath": "29/{2902B4EF-78B8-E286-FEE3-A09EE066A14A}.wem"
+     },
+     {
+      "Id": "261362267",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/261362267.wem",
+      "CachePath": "EE/{EEBE32C9-775D-438B-05DE-C1DFB2EB14F3}.wem"
+     },
+     {
+      "Id": "356056050",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cooling Vents\\cooling_vent_destroy_02.wav",
+      "Path": "Media/356056050.wem",
+      "CachePath": "E8/{E8E16CAA-5AB8-7744-CE5D-85B8E6CA9892}.wem"
+     },
+     {
+      "Id": "539935795",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cooling Vents\\cooling_vent_destroy_01.wav",
+      "Path": "Media/539935795.wem",
+      "CachePath": "1C/{1CEE21E7-C69C-CFC5-16AD-94771DF9F14F}.wem"
+     },
+     {
+      "Id": "604977064",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cooling Vents\\cooling_vent_destroy_03.wav",
+      "Path": "Media/604977064.wem",
+      "CachePath": "45/{45120BED-A723-1BBA-40A9-373B9C482594}.wem"
+     },
+     {
+      "Id": "619156272",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemy\\Soldier\\Barks\\enemy_hitbark.wav",
+      "Path": "Media/619156272.wem",
+      "CachePath": "83/{832F8849-9979-421D-A1C7-F7D90EBA573F}.wem"
+     },
+     {
+      "Id": "627143268",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cooling Vents\\cooling_vent_destroy_04.wav",
+      "Path": "Media/627143268.wem",
+      "CachePath": "9C/{9CAE6BE2-7CF3-9AF2-33D2-341282487120}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "3802256100",
@@ -21,14 +104,43 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_coolingvent_destroy",
       "GUID": "{7D91000F-DC0F-4DF7-A397-494476201105}",
       "Color": "10",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "1.1174203",
+      "DurationMax": "2.3343647",
+      "MediaRefs": [
+       {
+        "Id": "92867497"
+       },
+       {
+        "Id": "134533631"
+       },
+       {
+        "Id": "253060480"
+       },
+       {
+        "Id": "261362267"
+       },
+       {
+        "Id": "356056050"
+       },
+       {
+        "Id": "539935795"
+       },
+       {
+        "Id": "604977064"
+       },
+       {
+        "Id": "619156272"
+       },
+       {
+        "Id": "627143268"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{0C199C50-3F2E-268E-3657-6BF31A786E61}"
+  "FileHash": "{9FB4D3FC-D7C2-5ADC-8637-534251F53670}"
  }
 }

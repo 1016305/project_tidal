@@ -10,25 +10,119 @@
     "Type": "Event",
     "GUID": "{295BFF33-04A9-48E5-B18A-536E8128CD09}",
     "Language": "SFX",
-    "Hash": "{2C443536-CF14-B8B1-B636-C1525502DEBC}",
+    "Hash": "{2E0C7954-BBF5-50B5-FB35-6ADD54FEE386}",
     "ObjectPath": "player",
     "ShortName": "player",
     "Path": "Event/player.bnk",
+    "Media": [
+     {
+      "Id": "195083466",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gunfire_ping_transient.wav",
+      "Path": "Media/195083466.wem",
+      "CachePath": "E1/{E17EBE4F-B565-D772-C398-697BC9C85E04}.wem"
+     },
+     {
+      "Id": "452450408",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gunfire_ping_transient.wav",
+      "Path": "Media/452450408.wem",
+      "CachePath": "39/{39FDC70A-5EEC-D942-C46F-8F01158BFAD6}.wem"
+     },
+     {
+      "Id": "826514972",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gunfire_ping_transient.wav",
+      "Path": "Media/826514972.wem",
+      "CachePath": "54/{5464BE8A-2B32-3C99-391C-865EB1F2C5FD}.wem"
+     },
+     {
+      "Id": "897927971",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gunfire_ping_transient.wav",
+      "Path": "Media/897927971.wem",
+      "CachePath": "5B/{5BB87C34-81E4-1322-0B38-70E4FEBFEE47}.wem"
+     },
+     {
+      "Id": "923569534",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gunfire_ping_transient.wav",
+      "Path": "Media/923569534.wem",
+      "CachePath": "3B/{3B14BEB9-723E-6513-AE1D-D92ACCA54E1B}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "2080872166",
+       "Name": "Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_6dB_Peak_Fast_Release",
+       "GUID": "{3FF9AD86-E377-40F8-970F-3D4EE73288B5}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1069431850",
       "Name": "player",
-      "ObjectPath": "\\Events\\Default Work Unit\\Bullet Pings\\player",
+      "ObjectPath": "\\Events\\Default Work Unit\\Pings\\player",
       "GUID": "{295BFF33-04A9-48E5-B18A-536E8128CD09}",
       "Color": "12",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.502383",
+      "DurationMax": "0.78132236",
+      "MediaRefs": [
+       {
+        "Id": "195083466"
+       },
+       {
+        "Id": "452450408"
+       },
+       {
+        "Id": "826514972"
+       },
+       {
+        "Id": "897927971"
+       },
+       {
+        "Id": "923569534"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "2080872166"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{9A785398-23EC-D9C4-512F-F0E23CBEC367}"
+  "FileHash": "{7E6CEFF2-DCFF-EA22-93D7-6C2C2C3E6E65}"
  }
 }

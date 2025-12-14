@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{5222F25B-473D-47B4-950D-946A83AADBA4}",
     "Language": "SFX",
-    "Hash": "{5FB660E4-3A5A-03D6-C929-BD54B15D6973}",
+    "Hash": "{AC35EE37-AE84-283C-8917-7A79C053FD33}",
     "ObjectPath": "boss_coolingvent_close",
     "ShortName": "boss_coolingvent_close",
     "Path": "Event/boss_coolingvent_close.bnk",
+    "Media": [
+     {
+      "Id": "588091234",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cooling Vents\\cooling_vent_closed.wav",
+      "Path": "Media/588091234.wem",
+      "CachePath": "D1/{D15F5685-2EDC-311D-5F47-26A33CEFEF83}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "133455498",
@@ -21,14 +32,19 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_coolingvent_close",
       "GUID": "{5222F25B-473D-47B4-950D-946A83AADBA4}",
       "Color": "10",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "3.2523851",
+      "DurationMax": "3.2523851",
+      "MediaRefs": [
+       {
+        "Id": "588091234"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{4CB3D973-2893-1E83-0A44-11C5F0608D1B}"
+  "FileHash": "{11B17FD4-E6EF-CF43-BC79-B20C8924F7C4}"
  }
 }

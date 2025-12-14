@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4822A875-3423-4C31-AAAE-E16B49019B35}",
     "Language": "SFX",
-    "Hash": "{1616AAEC-C934-2F61-B3F5-E51ED1D66094}",
+    "Hash": "{6559E321-31A4-FC09-E428-682AA6546F04}",
     "ObjectPath": "boss_movement_stop",
     "ShortName": "boss_movement_stop",
     "Path": "Event/boss_movement_stop.bnk",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "Movement\\boss_movement_stop_01.wav",
       "Path": "Media/512408401.wem",
-      "CachePath": "69/{697D2FF6-B3F7-FB07-3FB1-5B215D94296E}.wem"
+      "CachePath": "9A/{9A71E8E0-78A1-EDAB-DF13-4C1E48FA53BA}.wem"
      },
      {
       "Id": "781482765",
@@ -81,6 +81,6 @@
     ]
    }
   ],
-  "FileHash": "{C02E98C1-8DD1-83C6-19D9-DCC598547F85}"
+  "FileHash": "{E3915B7A-8C0D-AE49-DC45-DD4DF7273905}"
  }
 }

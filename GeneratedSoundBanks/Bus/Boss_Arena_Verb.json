@@ -10,7 +10,7 @@
     "Type": "Bus",
     "GUID": "{D7325445-39E7-4F5B-95E3-CF9FC47AC191}",
     "Language": "SFX",
-    "Hash": "{A45D4690-39A5-DFD3-4E94-4BC8B924D0D2}",
+    "Hash": "{ED6EC636-E63D-AE58-8365-AE3B755B500A}",
     "ObjectPath": "Boss_Arena_Verb",
     "ShortName": "Boss_Arena_Verb",
     "Path": "Bus/Boss_Arena_Verb.bnk",
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{A307DFCF-4AF1-2081-AE31-B4DBDD46F865}"
+  "FileHash": "{431647DC-1B72-8F92-C43D-A6F3D4B832D1}"
  }
 }

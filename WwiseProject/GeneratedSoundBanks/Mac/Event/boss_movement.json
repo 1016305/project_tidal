@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{9A0CEEB0-7F1E-4248-A797-C84ECF701575}",
     "Language": "SFX",
-    "Hash": "{EA82B680-4D8F-F81A-5B34-5CD5021FB79D}",
+    "Hash": "{2BFD0C4D-2871-703C-B357-CEA957055D96}",
     "ObjectPath": "boss_movement",
     "ShortName": "boss_movement",
     "Path": "Event/boss_movement.bnk",
+    "Media": [
+     {
+      "Id": "112469921",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Movement\\boss_movement_01.wav",
+      "Path": "Media/112469921.wem",
+      "CachePath": "90/{90D95BE8-2AA1-4DFA-826E-2C9D59B19FDA}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "2663270342",
@@ -21,14 +32,17 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_movement",
       "GUID": "{9A0CEEB0-7F1E-4248-A797-C84ECF701575}",
       "Color": "10",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "MaxAttenuation": "100",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "112469921"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{6BD19BDA-843C-FDFA-FCDF-CB502FCB6B6B}"
+  "FileHash": "{298D7511-E653-0DF0-4A58-792725FD8159}"
  }
 }

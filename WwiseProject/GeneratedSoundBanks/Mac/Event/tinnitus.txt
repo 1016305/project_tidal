@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2153205415	tinnitus			\Default Work Unit\Player\tinnitus	
+

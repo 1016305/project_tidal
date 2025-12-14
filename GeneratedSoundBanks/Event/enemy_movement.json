@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C11A5FAA-D601-48A5-8892-7869C8301D6B}",
     "Language": "SFX",
-    "Hash": "{B0DB0644-5607-A4D8-F2C2-98AC2AB90AD0}",
+    "Hash": "{40F50FD1-E370-7017-8487-0B3E1261B238}",
     "ObjectPath": "enemy_movement",
     "ShortName": "enemy_movement",
     "Path": "Event/enemy_movement.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Enemy\\Soldier\\Movement\\Enemy - Floating Movement v02.wav",
       "Path": "Media/278877721.wem",
-      "CachePath": "89/{89D95136-B16A-1CB8-1454-86349B58A8F7}.wem"
+      "CachePath": "F1/{F12D36FF-2815-0927-1B95-D6034829FC74}.wem"
      }
     ],
     "Plugins": {
@@ -62,6 +62,6 @@
     ]
    }
   ],
-  "FileHash": "{C9543008-68A7-6234-139D-7530E0EE84C8}"
+  "FileHash": "{96569942-3A6B-2052-C0F3-DC3C65A4D8C5}"
  }
 }
