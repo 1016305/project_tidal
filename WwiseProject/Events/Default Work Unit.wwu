@@ -746,6 +746,11 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="player_boss_ping" ID="{6340B59E-E5E7-4A53-BF69-3BEAE35083EB}">
+							<ChildrenList>
+								<Action Name="" ID="{82043E82-F1C7-436C-AEF2-9FE9957DF13A}" ShortID="176349418"/>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{4B01063A-24D0-4FCF-91F1-6E47CD04ABAC}" ShortID="23859266">
@@ -803,6 +808,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="low_health_heartbeat" ID="{38ACD54B-D2BC-4AB2-8E26-086E2A653643}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="flashlight" ID="{B3BEE4C3-E527-4E9C-85AE-158ED5590733}">
+							<ChildrenList>
+								<Action Name="" ID="{7255429D-B784-445F-9C4C-66C79977099A}" ShortID="789811875">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Flashlight" ID="{7412864C-CF1A-444B-BB55-5B10C5F1A923}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

@@ -1302,6 +1302,18 @@
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="toxic_waste_disposal_ambienceloop" ID="{E1EDCF12-F0D9-483D-B54D-93FA4FAC5566}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>2</Value>
+												</ValueList>
+											</Property>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>2</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Canyon AMB" ID="{B3EDDA32-5D24-4BDB-8FED-237E0FDD9339}"/>
@@ -1351,6 +1363,12 @@
 										<SwitchRef Name="FirstTower" ID="{E9BBBE8E-C88A-42BF-9C94-AE3E0527855A}"/>
 										<ItemList>
 											<ItemRef Name="first_tower_amb" ID="{49558907-3CDC-406E-A5C7-76447F247DFA}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="SecondTower" ID="{2C7434C5-5C67-4BCE-B22A-0AB3CFA6B74B}"/>
+										<ItemList>
+											<ItemRef Name="toxic_waste_disposal_ambienceloop" ID="{E1EDCF12-F0D9-483D-B54D-93FA4FAC5566}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>
@@ -1408,14 +1426,14 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-2</Value>
+												<Value>-4</Value>
 											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{599383F2-F8FA-4F39-893E-7100FBE4EBE0}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Min" Type="Real64" Value="-7"/>
+															<Property Name="Min" Type="Real64" Value="-3"/>
 														</PropertyList>
 													</Modifier>
 												</ModifierInfo>
@@ -2134,6 +2152,11 @@
 													<Modifier Name="" ID="{1119FD2D-F5D2-4FCA-8C31-304D4B0A3391}"/>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -4229,6 +4252,33 @@
 									</ChildrenList>
 								</Folder>
 								<Sound Name="enemy_alert" ID="{CCF26271-95B5-4E0A-84A8-858CCFE46776}" ShortID="848656312">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{009ACCA4-CB0C-492D-937A-6D0B99EAB4C3}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.5"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{CAEAFD03-FFA8-4054-B72A-286555839D6B}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="75"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
@@ -7483,6 +7533,28 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSwitchContainer>
+						<Sound Name="Tidal Credits SFX" ID="{36A9286E-7775-47C6-98CC-53C5EB26935C}" ShortID="886717743">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="combat_track01" ID="{235F68D5-BE89-45CD-83E5-75004F8EB50F}">
+									<Language>SFX</Language>
+									<AudioFile>combat_track01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1002921475"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="combat_track01" ID="{235F68D5-BE89-45CD-83E5-75004F8EB50F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
