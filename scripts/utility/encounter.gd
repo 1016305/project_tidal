@@ -48,11 +48,14 @@ func set_encounter():
 
 func spawn_enemy(pos):
 	var new_enemy = DUMB_ENEMY.instantiate()
+	new_enemy.wait_for_map = false
 	get_tree().root.add_child(new_enemy)
 	new_enemy.set_state_to_attack()
+
 	new_enemy.origin_override = true
 	new_enemy.origin_override_coord = Vector3(-366,-128,-973)
 	new_enemy.global_position = pos
+	print(new_enemy.current_state)
 	wave.append(new_enemy)
 
 func check_alive_enemies(limit) -> bool:

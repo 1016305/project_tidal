@@ -161,27 +161,51 @@ var stored_current_hp
 var debug_bool: bool = false
 
 func _ready() -> void:
-	current_state = States.Idle
-	Global.player_is_assigned.connect(assign_player)
-	Global.enemy_hit_something.connect(enemy_hit_something)
-	Global.weapon_fired.connect(alert_from_weapon_fire)
-	Global.checkpoint_reached.connect(store_data)
-	Global.player_respawned.connect(load_data)
-	force_map()
-	set_physics_process(false)
-	call_deferred("dump_first_physics_frame")
-	playsound(hovering_sounds)
-	if origin_override:
-		origin = origin_override_coord
+	if wait_for_map:
+		await NavigationServer3D.map_changed
+		current_state = States.Idle
+		Global.player_is_assigned.connect(assign_player)
+		Global.enemy_hit_something.connect(enemy_hit_something)
+		Global.weapon_fired.connect(alert_from_weapon_fire)
+		Global.checkpoint_reached.connect(store_data)
+		Global.player_respawned.connect(load_data)
+		force_map()
+		set_physics_process(false)
+		call_deferred("dump_first_physics_frame")
+		playsound(hovering_sounds)
+		if origin_override:
+			origin = origin_override_coord
+		else:
+			origin = position
+		shoot_delay_timer.wait_time = 60/rate_of_fire
+		melee_raycast.target_position = Vector3(0,0,-melee_range)
+		current_hp = max_hp
+		animation_player.play("idle_animation")
+		saw_spin.play("saw_spin")
+		saw_spin.speed_scale = 2
+		print(name," ",origin)
 	else:
-		origin = position
-	shoot_delay_timer.wait_time = 60/rate_of_fire
-	melee_raycast.target_position = Vector3(0,0,-melee_range)
-	current_hp = max_hp
-	animation_player.play("idle_animation")
-	saw_spin.play("saw_spin")
-	saw_spin.speed_scale = 2
-	print(name," ",origin)
+		current_state = States.Idle
+		Global.player_is_assigned.connect(assign_player)
+		Global.enemy_hit_something.connect(enemy_hit_something)
+		Global.weapon_fired.connect(alert_from_weapon_fire)
+		Global.checkpoint_reached.connect(store_data)
+		Global.player_respawned.connect(load_data)
+		force_map()
+		set_physics_process(false)
+		call_deferred("dump_first_physics_frame")
+		playsound(hovering_sounds)
+		if origin_override:
+			origin = origin_override_coord
+		else:
+			origin = position
+		shoot_delay_timer.wait_time = 60/rate_of_fire
+		melee_raycast.target_position = Vector3(0,0,-melee_range)
+		current_hp = max_hp
+		animation_player.play("idle_animation")
+		saw_spin.play("saw_spin")
+		saw_spin.speed_scale = 2
+		print(name," ",origin)
 
 func _physics_process(delta: float) -> void:
 	main_behaviour()

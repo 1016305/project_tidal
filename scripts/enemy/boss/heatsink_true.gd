@@ -48,8 +48,7 @@ func heatsink_expose(time):
 	heatsink_anim.play("retract_heatsink")
 	soundplayer.event = heatsink_close
 	soundplayer.post_event()
-	timer.wait_time = 1
-	await timer.timeout
+	await heatsink_anim.animation_finished
 	get_parent().get_parent().get_parent().heatsinks_done.emit()
 
 func death_behaviour():

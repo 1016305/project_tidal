@@ -4,17 +4,16 @@ class EVENTS:
 
 	const ALARM_ALERT : int = 4151049751
 	const ARENA_AMB : int = 521672771
-	const BOSS : int = 1560169506
-	const DIRT_GRASS : int = 95152949
-	const ENEMY : int = 2299321487
-	const METAL : int = 2473969246
-	const PLAYER : int = 1069431850
+	const OPEN_ARENA_DOOR : int = 2126477276
 	const CANYON_AMB : int = 1984278272
+	const TMP_CANYON_REVEL : int = 2780447606
 	const COMBAT_BARKS : int = 2313023713
 	const ENEMY_ALERT : int = 493036092
 	const ENEMY_DEATH : int = 1205999388
 	const ENEMY_FIRE : int = 4240339038
+	const ENEMY_MELEE : int = 682605002
 	const ENEMY_MOVEMENT : int = 62399725
+	const ENEMY_PLASMA : int = 4283809968
 	const HIT_BARKS : int = 143989192
 	const IDLE_BARKS : int = 825403295
 	const BOSS_COMBAT_BARKS : int = 1126987445
@@ -22,20 +21,37 @@ class EVENTS:
 	const BOSS_COOLINGVENT_DESTROY : int = 3802256100
 	const BOSS_COOLINGVENT_OPEN : int = 536492462
 	const BOSS_DEATH : int = 4052139381
-	const BOSS_HIT_BARKS : int = 1644873300
 	const BOSS_INTRO_ANIMATION : int = 3786392610
 	const BOSS_MOVEMENT : int = 2663270342
+	const BOSS_MOVEMENT_STOP : int = 1925754261
+	const BOSS_WEAPON_CHARGE : int = 1218785992
+	const BOSS_WEAPON_END : int = 2068915659
 	const BOSS_WEAPON_FIRE : int = 1510202224
+	const BOSS_WEAPON_LOAD : int = 351931552
 	const CRASHED_SHIP : int = 547033482
 	const DOOR_CONSOLE : int = 2315757787
 	const ELEVATOR : int = 3705378287
 	const FIRST_TOWER_AMB : int = 1347192966
 	const LIGHTS_ON : int = 1063352154
 	const TOOTHDOOR_OPENING : int = 3417972020
+	const AMMO_PICKUP : int = 4253579710
 	const BUTTON : int = 977454165
+	const HEALTH_PICKUP : int = 3731941266
+	const PLAY_MAINMUSICSWITCH : int = 3684206702
+	const ASSORTED_PINGS : int = 1417418280
+	const BOSS : int = 1560169506
+	const DIRT_GRASS : int = 95152949
+	const ENEMY : int = 2299321487
+	const MELEE : int = 3208241451
+	const METAL : int = 2473969246
+	const PLAYER : int = 1069431850
+	const PLAYER_BOSS_PING : int = 2849476825
+	const FLASHLIGHT : int = 1167979795
 	const FOOTSTEPS : int = 2385628198
 	const LOW_HEALTH : int = 72790338
+	const LOW_HEALTH_STOP : int = 2143495873
 	const MOVEMENT : int = 2129636626
+	const TINNITUS : int = 2153205415
 	const SECOND_TOWER_AMB : int = 3833734562
 	const SECOND_TOWER_CONVERYORBELT : int = 3971991686
 	const ALARM : int = 855317084
@@ -48,17 +64,58 @@ class EVENTS:
 	const ASSAULT_RIFLE_EMPTY_CLIP : int = 2049160996
 	const ASSAULT_RIFLE_FIRE : int = 3448658748
 	const ASSAULT_RIFLE_RELOAD : int = 1010747703
+	const STARTATMOS : int = 782580947
 	const TEST_EVENT_01 : int = 1336498786
 	const SFX_PLAYTESTSOUND : int = 2888769156
 
 class STATES:
-	pass
+
+	class AREASTATES:
+		const GROUP : int = 82754628
+	
+		class STATE:
+			const BOSSARENA : int = 735597211
+			const CANYON01 : int = 166364116
+			const CANYON02 : int = 166364119
+			const NONE : int = 748895195
+			const SECONDTOWER : int = 606742876
+			const THIRDTOWER : int = 3019845671
+
+	class MUSICSTATEGROUP:
+		const GROUP : int = 2163007642
+	
+		class STATE:
+			const AMBIENT : int = 77978275
+			const COMBAT : int = 2764240573
+			const NONE : int = 748895195
+
 
 class SWITCHES:
-	pass
+
+	class AMBIENCECONTROLLER:
+		const GROUP : int = 32875597
+	
+		class SWITCH:
+			const ARENA : int = 680256650
+			const CANYON : int = 2927127661
+			const FIRSTTOWER : int = 2512621488
+			const SECONDTOWER : int = 606742876
+			const THIRDTOWER : int = 3019845671
+
+	class FOOTSTEPSTERRAIN:
+		const GROUP : int = 665703777
+	
+		class SWITCH:
+			const GRASS : int = 4248645337
+			const METAL : int = 2473969246
+
 
 class GAME_PARAMETERS:
 
+	const DIALOGUEVOLUME : int = 1866264637
+	const MASTERVOLUME : int = 2918011349
+	const MUSICVOLUME : int = 2346531308
+	const SFXVOLUME : int = 988953028
 	const SS_AIR_FEAR : int = 1351367891
 	const SS_AIR_FREEFALL : int = 3002758120
 	const SS_AIR_FURY : int = 1029930033
@@ -78,7 +135,11 @@ class BANKS:
 
 class AUX_BUSSES:
 
+	const BOSS_ARENA_VERB : int = 4068741826
+	const CANYON_VERB : int = 2862970847
 	const FIRST_TOWER_VERB : int = 2540843761
+	const SECOND_TOWER_VERB : int = 2870411437
+	const THIRD_TOWER_VERB : int = 518384578
 
 class ACOUSTIC_TEXTURES:
 
@@ -96,3 +157,4 @@ class ACOUSTIC_TEXTURES:
 	const WOOD : int = 2058049674
 	const WOOD_BRIGHT : int = 4262522749
 	const WOOD_DEEP : int = 1755085759
+

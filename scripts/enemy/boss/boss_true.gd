@@ -210,6 +210,8 @@ func phase_1():
 		await get_tree().create_timer(ph1_heatsink_delay).timeout
 		open_all_heatsinks(ph1_damage_phase_time)
 		await self.heatsinks_done
+		print("heatsinks done")
+		change_state()
 		print("phase complete, restarting")
 		ph1_bool = false
 		
@@ -242,6 +244,7 @@ func phase_2():
 		await get_tree().create_timer(ph2_heatsink_delay).timeout
 		open_all_heatsinks(ph2_damage_phase_time)
 		await self.heatsinks_done
+		change_state()
 		print("phase complete, restarting")
 		ph2_bool = false
 
@@ -254,8 +257,8 @@ func phase_3():
 			encounter.spawn_enemy(spawn_enemies_here[2].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[3].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[5].global_position)
-			var i = NavigationServer3D.get_maps()
-			NavigationServer3D.map_force_update(i[0])
+		var i = NavigationServer3D.get_maps()
+		NavigationServer3D.map_force_update(i[0])
 		aim_at_player = true
 		playsound(movement)
 		await get_tree().create_timer(ph3_aim_time).timeout
@@ -298,6 +301,7 @@ func phase_3():
 		await get_tree().create_timer(ph3_heatsink_delay).timeout
 		open_all_heatsinks(ph3_damage_phase_time)
 		await self.heatsinks_done
+		change_state()
 		print("phase complete, restarting")
 		ph3_bool = false
 
@@ -312,8 +316,8 @@ func phase_4():
 			encounter.spawn_enemy(spawn_enemies_here[3].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[4].global_position)
 			encounter.spawn_enemy(spawn_enemies_here[5].global_position)
-			var i = NavigationServer3D.get_maps()
-			NavigationServer3D.map_force_update(i[0])
+		var i = NavigationServer3D.get_maps()
+		NavigationServer3D.map_force_update(i[0])
 
 		aim_at_player = true
 		playsound(movement)
@@ -386,11 +390,12 @@ func phase_4():
 		await get_tree().create_timer(ph4_heatsink_delay).timeout
 		open_all_heatsinks(ph3_damage_phase_time)
 		await self.heatsinks_done
+		change_state()
 		print("phase complete, restarting")
 		ph4_bool = false
 
 func dead():
-	if !dead_bool:
+	if !dead_bool && !ph4_bool:
 		dead_bool = true
 		encounter.kill_all_enemies()
 		await get_tree().create_timer(1).timeout
@@ -495,6 +500,7 @@ func slow_rotate(delta):
 func debug():
 	Global.debug.add_property("Boss Phase", Phases.keys()[current_phase], 1)
 	Global.debug.add_property("Start Bool", start_bool, 1)
+	Global.debug.add_property("Heatsinks Remaining", heatsinks_remaining, 1)
 
 func change_state():
 	current_phase = return_phase_from_heatsinks()
@@ -535,7 +541,8 @@ func heatsink_destroyed(heatsink:Heatsink):
 			h.other_heatsink_died()
 	heatsinks_array.erase(heatsink)
 	heatsinks_remaining -= 1
-	change_state()
+	self.heatsinks_done.emit()
+	#change_state()
 
 func playsound(event:WwiseEvent):
 	sounds.event = event
