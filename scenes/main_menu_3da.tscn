@@ -3269,7 +3269,7 @@ size = Vector3(5.89603, 1.22375, 8.25128)
 [node name="OmniLight3D3" type="OmniLight3D" parent="ship_segment_Imported"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.1098, 2.14995, -5.67464)
 light_color = Color(0.796875, 0.689678, 0.435791, 1)
-light_energy = 0.803469
+light_energy = 0.550829
 shadow_enabled = true
 omni_range = 10.098
 script = ExtResource("29_ef2kd")
@@ -3280,7 +3280,7 @@ flicker_speed = 0.3
 [node name="OmniLight3D" type="OmniLight3D" parent="ship_segment_Imported"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.15471, 0.957176, -7.83945)
 light_color = Color(0.871094, 0.473721, 0.183746, 1)
-light_energy = 7.68499
+light_energy = 7.25894
 shadow_enabled = true
 shadow_bias = 0.0
 shadow_normal_bias = 0.779
@@ -3292,7 +3292,7 @@ flicker_speed = 0.5
 [node name="OmniLight3D2" type="OmniLight3D" parent="ship_segment_Imported"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.29866, 0.957176, -7.81727)
 light_color = Color(0.871094, 0.473721, 0.183746, 1)
-light_energy = 7.03523
+light_energy = 7.89228
 shadow_enabled = true
 script = ExtResource("29_ef2kd")
 max_light_energy = 8.365

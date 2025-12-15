@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://dt57x1ox0ea6o" path="res://resources/themes/main_menu.tres" id="1_a320b"]
 [ext_resource type="Script" uid="uid://c2ytlua81mdml" path="res://scripts/animation/cutscene.gd" id="2_0sipp"]
 [ext_resource type="StyleBox" uid="uid://5hlkgiwhb1wf" path="res://materials/shaders/loadingbar.tres" id="3_0sipp"]
-[ext_resource type="VideoStream" uid="uid://dw503tgbfi2ve" path="res://videos/tidal_trailer_final.ogv" id="3_2bm7f"]
+[ext_resource type="VideoStream" uid="uid://cvid8l2aexbxp" path="res://videos/introv2.ogv" id="3_2bm7f"]
 
 [node name="Cutscene" type="Control"]
 layout_mode = 3
