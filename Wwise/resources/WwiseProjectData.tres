@@ -109,71 +109,68 @@ name = "Factory Acoustic Textures"
 id = 2954047558
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_mqnyt"]
-path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Dialogue"
-type = 2
-name = "Dialogue"
-guid = "{E6BB215E-5D2B-4BBE-9076-C532FE503298}"
-id = 3930136735
-
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_v560u"]
-path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Music"
-type = 2
-name = "Music"
-guid = "{4CBD492C-1D58-43B4-93E0-92CE7475D46A}"
-id = 3991942870
-
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_yyrou"]
 path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Atmosphere"
 type = 2
 name = "Atmosphere"
 guid = "{36EB2E3C-21B9-42CA-A230-716620784CD3}"
 id = 2145253833
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_geu6g"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_v560u"]
 path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Enemy"
 type = 2
 name = "Enemy"
 guid = "{213F3D6A-BC32-4017-9B07-74F5BE8960B7}"
 id = 2299321487
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_5n8hf"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_yyrou"]
 path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Enemy Boss"
 type = 2
 name = "Enemy Boss"
 guid = "{1336D3AA-C7BC-493B-B7F9-397461EE23D1}"
 id = 2808834954
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_tnib1"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_geu6g"]
 path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Environment"
 type = 2
 name = "Environment"
 guid = "{4F18AFDC-7F1C-4223-A25B-D28ED21702D8}"
 id = 1229948536
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_o7sea"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_5n8hf"]
 path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Player"
 type = 2
 name = "Player"
 guid = "{F86EDA78-1542-451F-8EDA-361E8973B190}"
 id = 1069431850
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_lrto0"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_tnib1"]
 path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Weapons"
 type = 2
 name = "Weapons"
 guid = "{1A90138E-2B2A-4E2F-9D90-DED81A81D9C3}"
 id = 1467963052
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_i5cxa"]
-path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX"
-children = [SubResource("WwiseTreeObject_yyrou"), SubResource("WwiseTreeObject_geu6g"), SubResource("WwiseTreeObject_5n8hf"), SubResource("WwiseTreeObject_tnib1"), SubResource("WwiseTreeObject_o7sea"), SubResource("WwiseTreeObject_lrto0")]
-type = 2
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_o7sea"]
+children = [SubResource("WwiseTreeObject_mqnyt"), SubResource("WwiseTreeObject_v560u"), SubResource("WwiseTreeObject_yyrou"), SubResource("WwiseTreeObject_geu6g"), SubResource("WwiseTreeObject_5n8hf"), SubResource("WwiseTreeObject_tnib1")]
 name = "SFX"
-guid = "{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}"
 id = 393239870
 
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_lrto0"]
+path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Dialogue"
+type = 2
+name = "Dialogue"
+guid = "{E6BB215E-5D2B-4BBE-9076-C532FE503298}"
+id = 3930136735
+
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_i5cxa"]
+path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Music"
+type = 2
+name = "Music"
+guid = "{4CBD492C-1D58-43B4-93E0-92CE7475D46A}"
+id = 3991942870
+
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_ptp8y"]
-children = [SubResource("WwiseTreeObject_mqnyt"), SubResource("WwiseTreeObject_v560u"), SubResource("WwiseTreeObject_i5cxa")]
+children = [SubResource("WwiseTreeObject_o7sea"), SubResource("WwiseTreeObject_lrto0"), SubResource("WwiseTreeObject_i5cxa")]
 name = "Main Audio Bus"
 id = 2246998526
 
