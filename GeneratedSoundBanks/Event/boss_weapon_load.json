@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C862E9EB-B587-4F65-8750-653F1454A9FB}",
     "Language": "SFX",
-    "Hash": "{FF4FA9A5-DD30-6911-F0AB-A032D9F1F302}",
+    "Hash": "{E5F083E9-E9EA-FA37-9E0B-F2C7A374EB41}",
     "ObjectPath": "boss_weapon_load",
     "ShortName": "boss_weapon_load",
     "Path": "Event/boss_weapon_load.bnk",
@@ -22,25 +22,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Load\\enemy_boss_load_laser_03.wav",
       "Path": "Media/74409646.wem",
-      "CachePath": "C6/{C6E4E885-0AD8-B3C3-635A-4189EEEC0CED}.wem"
-     },
-     {
-      "Id": "695740853",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Weapon\\Load\\enemy_boss_load_laser_01.wav",
-      "Path": "Media/695740853.wem",
-      "CachePath": "BB/{BB6417A9-8E36-57B5-2929-8C789458619D}.wem"
-     },
-     {
-      "Id": "954626877",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Weapon\\Load\\enemy_boss_load_laser_02.wav",
-      "Path": "Media/954626877.wem",
-      "CachePath": "19/{197C4BBA-0C64-8FB1-A047-D3C45755FA40}.wem"
+      "CachePath": "15/{15CB80B6-5F31-6853-59B6-AA5EA2409138}.wem"
      }
     ],
     "Plugins": {
@@ -64,17 +46,11 @@
       "Color": "10",
       "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "3.5395312",
-      "DurationMax": "4.6740637",
+      "DurationMin": "2.48991",
+      "DurationMax": "2.48991",
       "MediaRefs": [
        {
         "Id": "74409646"
-       },
-       {
-        "Id": "695740853"
-       },
-       {
-        "Id": "954626877"
        }
       ],
       "PluginRefs": {
@@ -88,6 +64,6 @@
     ]
    }
   ],
-  "FileHash": "{9CEA1205-1E82-BB98-0B95-519B59D8E75B}"
+  "FileHash": "{801646E2-8AC5-433A-311C-29F27A767E0D}"
  }
 }

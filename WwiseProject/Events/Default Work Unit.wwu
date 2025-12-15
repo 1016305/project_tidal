@@ -476,9 +476,23 @@
 						<Event Name="boss_movement" ID="{9A0CEEB0-7F1E-4248-A797-C84ECF701575}">
 							<ChildrenList>
 								<Action Name="" ID="{44BF6FCC-1181-4DBF-9B3E-CC54EB5EE71D}" ShortID="182025535">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="boss_movement_01" ID="{4ADA4061-CE5B-42D7-9DD8-BB38E5C85F2A}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6C619592-173A-4DD4-B806-F2204467024C}" ShortID="788564530">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="boss_intro_animation" ID="{CD8745A9-4C5D-4FA3-A7F2-45ECE9C48B04}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -487,6 +501,9 @@
 						<Event Name="boss_weapon_fire" ID="{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}">
 							<ChildrenList>
 								<Action Name="" ID="{83FA6E02-4E4E-4949-8CA1-1A0C0797BE64}" ShortID="916885015">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Laser" ID="{D63DE445-8659-4DC7-889C-92A5A61681F6}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
@@ -496,10 +513,34 @@
 								<Action Name="" ID="{15F10936-F306-406F-B2AE-13454C079285}" ShortID="872962798">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Charge" ID="{67C26AB3-9049-4FB6-88A1-9BBF42DB6E4C}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4D111452-980A-4B0F-A0EF-EFEDA2FDC0C6}" ShortID="916265186">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="enemy_boss_load_laser_03" ID="{7AC05B88-8DFA-4253-BD11-647145682EBB}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BB44B721-BF64-4439-935C-B6CC69AE9275}" ShortID="181783826">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss Combat Bark" ID="{F1DDCAF8-AF85-4265-B928-B4E41F2D7D99}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -529,6 +570,11 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -578,11 +624,24 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{7FA3EA53-924E-415B-88C7-8B1B23A5163E}" ShortID="847850353">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cooling_vent_open" ID="{90BA1819-3631-4A5B-8D83-F74057F6F459}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="boss_movement_stop" ID="{4822A875-3423-4C31-AAAE-E16B49019B35}">
 							<ChildrenList>
 								<Action Name="" ID="{DC745A10-7461-42EE-A068-76B182DDA9C1}" ShortID="66744133">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Movement Stop" ID="{635B09C4-C136-407B-A1FB-41E2298CAF1D}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
@@ -592,6 +651,8 @@
 								<Action Name="" ID="{25621B96-0CFD-4EB3-BDCE-084963A8D942}" ShortID="763692004">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -605,11 +666,23 @@
 							<ChildrenList>
 								<Action Name="" ID="{9D4348E5-8FF7-4BEF-9626-D5CCDD6AEED9}" ShortID="370623510">
 									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Charge" ID="{67C26AB3-9049-4FB6-88A1-9BBF42DB6E4C}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1D16FC48-F03B-405B-88A4-83347B36A68E}" ShortID="25467713">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss Combat Bark" ID="{F1DDCAF8-AF85-4265-B928-B4E41F2D7D99}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -620,7 +693,8 @@
 								<Action Name="" ID="{5B052DD4-26F5-4935-9637-6C0EBF732D68}" ShortID="59026060">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.4"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -630,7 +704,7 @@
 								</Action>
 								<Action Name="" ID="{22EE315E-0081-4FEF-AC2F-7BD6B81FDDD1}" ShortID="955163000">
 									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -642,10 +716,10 @@
 						</Event>
 						<Event Name="boss_weapon_load" ID="{C862E9EB-B587-4F65-8750-653F1454A9FB}">
 							<ChildrenList>
-								<Action Name="" ID="{9BD9FD52-7AF2-4B80-B393-1DA9BF417861}" ShortID="355905816">
+								<Action Name="" ID="{FDFA0094-C0CC-45B0-BE95-F58DC2BF0FB0}" ShortID="53423295">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Load" ID="{1B258E19-A95D-4AE3-956F-EA6663AB3B9B}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
+											<ObjectRef Name="enemy_boss_load_laser_03" ID="{7AC05B88-8DFA-4253-BD11-647145682EBB}" WorkUnitID="{16EA33B2-2442-45BE-98ED-2D85FFBBD0EF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

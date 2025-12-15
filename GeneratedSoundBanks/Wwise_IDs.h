@@ -162,6 +162,8 @@ namespace AK
     {
         static const AkUniqueID ATMOSPHERE = 2145253833U;
         static const AkUniqueID DIALOGUE = 3930136735U;
+        static const AkUniqueID ENEMY = 2299321487U;
+        static const AkUniqueID ENEMY_BOSS = 2808834954U;
         static const AkUniqueID ENVIRONMENT = 1229948536U;
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
         static const AkUniqueID MUSIC = 3991942870U;

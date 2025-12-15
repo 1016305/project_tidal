@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3A4CE97E-F943-44C1-9AFF-732B84FA207D}",
     "Language": "SFX",
-    "Hash": "{F61F6464-D6CF-62DC-7FD1-CD35C51F9974}",
+    "Hash": "{4D6A9ED6-8EFE-59F4-24F4-B4FF92C19404}",
     "ObjectPath": "tmp_canyon_revel",
     "ShortName": "tmp_canyon_revel",
     "Path": "Event/tmp_canyon_revel.bnk",
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{3B43891A-9BE9-7310-72D8-7C7388233945}"
+  "FileHash": "{0E9D2BB4-1E47-6E2C-F316-75F7CA5C9E7C}"
  }
 }

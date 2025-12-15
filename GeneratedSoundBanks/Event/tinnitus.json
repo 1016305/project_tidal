@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{31B680B4-17A3-43F5-B32C-FA6199436C87}",
     "Language": "SFX",
-    "Hash": "{0C41DE70-384C-1C0A-1909-10336DD38C88}",
+    "Hash": "{9989BFCD-83F1-5078-EA3C-9755283C03A4}",
     "ObjectPath": "tinnitus",
     "ShortName": "tinnitus",
     "Path": "Event/tinnitus.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "tinnitus.wav",
       "Path": "Media/292271655.wem",
-      "CachePath": "3E/{3E2189A8-F50D-127C-DAA5-03011D5C1EF0}.wem"
+      "CachePath": "39/{39FA5D98-CD93-D87C-394A-2AEABE9E6026}.wem"
      }
     ],
     "Events": [
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{8B2E6AA6-2696-CC05-229F-846C3627BAA4}"
+  "FileHash": "{13A4D0F2-114D-435E-63FE-869F3EC93A70}"
  }
 }

@@ -195,10 +195,10 @@
 						</Effect>
 						<Effect Name="Brick_Wall_Minus_1dB_Peak_Slow_Release" ID="{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
 							<PropertyList>
-								<Property Name="OutputGain" Type="Real32" Value="2.9"/>
-								<Property Name="Ratio" Type="Real32" Value="50"/>
+								<Property Name="OutputGain" Type="Real32" Value="0.9"/>
+								<Property Name="Ratio" Type="Real32" Value="34.9"/>
 								<Property Name="ReleaseTime" Type="Real32" Value="0.25"/>
-								<Property Name="Threshold" Type="Real32" Value="-5.5"/>
+								<Property Name="Threshold" Type="Real32" Value="-5"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Nasty_Radio" ID="{7E6FAC41-3332-47EA-9AC6-625A78B63226}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">

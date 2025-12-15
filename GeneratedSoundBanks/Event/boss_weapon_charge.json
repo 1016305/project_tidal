@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4DD885CB-211E-4313-B86A-5D0AA5F87A63}",
     "Language": "SFX",
-    "Hash": "{3EC29EB2-A5A2-3269-C5B2-DAB8F5DC0DF5}",
+    "Hash": "{35FE16B2-F8BF-C151-4F5D-912199D88BEE}",
     "ObjectPath": "boss_weapon_charge",
     "ShortName": "boss_weapon_charge",
     "Path": "Event/boss_weapon_charge.bnk",
@@ -76,6 +76,6 @@
     ]
    }
   ],
-  "FileHash": "{010EC7EF-26FC-6BF8-AD53-B6CA8973C731}"
+  "FileHash": "{D3A69F7C-702F-E67A-0FAC-F22CF0E68F75}"
  }
 }
