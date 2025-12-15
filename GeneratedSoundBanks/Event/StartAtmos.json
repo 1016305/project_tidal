@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D554D848-29E0-40AC-95C3-E352BC300ACC}",
     "Language": "SFX",
-    "Hash": "{06F0DEAA-F952-64A3-2C13-1135F209C6BD}",
+    "Hash": "{97D9353C-D784-6640-51D8-9A995EEF529E}",
     "ObjectPath": "StartAtmos",
     "ShortName": "StartAtmos",
     "Path": "Event/StartAtmos.bnk",
@@ -267,6 +267,6 @@
     ]
    }
   ],
-  "FileHash": "{79DFECC9-7AE2-6BB9-C39E-255C92A3C438}"
+  "FileHash": "{036986CC-237F-30C5-8150-02EAFF19D52D}"
  }
 }

@@ -171,11 +171,6 @@
 												<Value>-3</Value>
 											</ValueList>
 										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>4</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -199,6 +194,11 @@
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.812054130375541"/>
 												<Property Name="TrimEnd" Type="Real64" Value="14.4990955274377"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>6.9</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>toothdoor_opening.wav</AudioFile>
@@ -425,8 +425,12 @@
 								<Sound Name="crashed_ship" ID="{5CF266FB-FC32-4F70-A735-19885D42122F}" ShortID="830880967">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
-										<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.6"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -436,7 +440,7 @@
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+											<ObjectRef Name="Environment" ID="{4F18AFDC-7F1C-4223-A25B-D28ED21702D8}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
 										</Reference>
 										<Reference Name="UserAuxSend0">
 											<ObjectRef Name="First_Tower_Verb" ID="{1332E2DC-853C-42B6-A659-92C90F2675EC}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
@@ -2462,9 +2466,6 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Enemy Boss Attenuation" ID="{17C8A3A9-C2A2-4DFF-8BDB-EB7552E65C73}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
@@ -2477,7 +2478,7 @@
 											<PropertyList>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>5</Value>
+														<Value>4</Value>
 													</ValueList>
 												</Property>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -2857,128 +2858,13 @@
 										</Sound>
 									</ChildrenList>
 								</PropertyContainer>
-								<Folder Name="Animations" ID="{476C9B48-0A6B-437E-9AEA-5C0FCCD1118D}" ShortID="488248042">
-									<ChildrenList>
-										<Sound Name="boss_death_animation" ID="{EE8DCC90-0B77-4195-A057-E64284B3EF0B}" ShortID="1066508667">
-											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="1"/>
-												<Property Name="MakeUpGain" Type="Real64">
-													<ValueList>
-														<Value>8</Value>
-													</ValueList>
-												</Property>
-												<Property Name="UserAuxSendVolume0" Type="Real64">
-													<ValueList>
-														<Value>-7</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy Boss Animation Attenuation" ID="{6FF13D66-61A2-4A34-9314-5072B62ED6E9}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
-												</Reference>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="boss_death_animation" ID="{90B17C6A-12AB-4420-9368-7F764F3D21F7}">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0887277235906225"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.522507705589222"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimEnd" Type="Real64" Value="11.2782790791305"/>
-														<Property Name="VolumeOffset" Type="Real64">
-															<ValueList>
-																<Value>3.2</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Animations\boss_death_animation.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="469403989"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Effects">
-													<EffectSlot Name="" ID="{F60320FB-90BF-49AA-8ACC-7CB84BC66435}" ShortID="681015036">
-														<ReferenceList>
-															<Reference Name="Effect" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
-																<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Slow_Release" ID="{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-															</Reference>
-														</ReferenceList>
-													</EffectSlot>
-												</ObjectList>
-											</ObjectLists>
-											<ActiveSourceList>
-												<ActiveSource Name="boss_death_animation" ID="{90B17C6A-12AB-4420-9368-7F764F3D21F7}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="boss_intro_animation" ID="{CD8745A9-4C5D-4FA3-A7F2-45ECE9C48B04}" ShortID="551020788">
-											<PropertyList>
-												<Property Name="MakeUpGain" Type="Real64">
-													<ValueList>
-														<Value>8</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="Enemy Boss Animation Attenuation" ID="{6FF13D66-61A2-4A34-9314-5072B62ED6E9}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
-												</Reference>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="boss_intro_animation" ID="{7D5525D2-652C-49F7-AD75-2AA2C4D2B196}">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0786401660982051"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.108130228385033"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Animations\boss_intro_animation.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="556035762"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Effects">
-													<EffectSlot Name="" ID="{2E90F6BC-4DD2-46B5-8698-47F25577652E}" ShortID="1038855896">
-														<ReferenceList>
-															<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
-																<ObjectRef Name="Boost_3dB_10KHz" ID="{59632554-9396-4E15-889E-7A2F5458DEC3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-															</Reference>
-														</ReferenceList>
-													</EffectSlot>
-												</ObjectList>
-											</ObjectLists>
-											<ActiveSourceList>
-												<ActiveSource Name="boss_intro_animation" ID="{7D5525D2-652C-49F7-AD75-2AA2C4D2B196}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</Folder>
 								<PropertyContainer Name="Cooling Vents" ID="{D8CDF3DC-8430-4784-B7F5-B74A588FDBAD}" ShortID="566799287">
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Enemy Boss Attenuation" ID="{17C8A3A9-C2A2-4DFF-8BDB-EB7552E65C73}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+											<ObjectRef Name="Enemy Boss" ID="{1336D3AA-C7BC-493B-B7F9-397461EE23D1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3187,16 +3073,18 @@
 								<PropertyContainer Name="Movement" ID="{E67B30C8-91BF-414D-9340-7FF138BCA286}" ShortID="337147062">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+										<Property Name="LoudnessNormalizationTarget" Type="Real64" Value="-16"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="Enemy Boss Attenuation" ID="{17C8A3A9-C2A2-4DFF-8BDB-EB7552E65C73}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+											<ObjectRef Name="Enemy Boss Movement Attenuation" ID="{17C8A3A9-C2A2-4DFF-8BDB-EB7552E65C73}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Mono Conversion Settings" ID="{E0B2F1FB-6A20-4EED-8548-E98A09B592D7}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+											<ObjectRef Name="Enemy Boss" ID="{1336D3AA-C7BC-493B-B7F9-397461EE23D1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3254,7 +3142,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>11</Value>
+														<Value>5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3384,27 +3272,25 @@
 									</ChildrenList>
 								</PropertyContainer>
 								<PropertyContainer Name="Weapon" ID="{015DD609-0D60-4599-ABD0-C57913935D4D}" ShortID="68906299">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>5</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="Enemy Boss Animation Attenuation" ID="{6FF13D66-61A2-4A34-9314-5072B62ED6E9}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+											<ObjectRef Name="Enemy Boss Weapon Attenuation" ID="{4327EE3E-7BA3-4480-ADA2-6690AB108CB1}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+											<ObjectRef Name="Enemy Boss" ID="{1336D3AA-C7BC-493B-B7F9-397461EE23D1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Enemy - Big Laser v01" ID="{09BAC0CD-5F40-4D9C-A502-082F5B71EAA7}" ShortID="104131201">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
 											</PropertyList>
@@ -3438,6 +3324,23 @@
 											</ActiveSourceList>
 										</Sound>
 										<RandomSequenceContainer Name="Charge" ID="{67C26AB3-9049-4FB6-88A1-9BBF42DB6E4C}" ShortID="1053343282">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>26</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
@@ -3536,9 +3439,24 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Laser" ID="{D63DE445-8659-4DC7-889C-92A5A61681F6}" ShortID="306568561">
 											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="1"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Enemy Boss Laser Attenuation" ID="{9228C826-5BF8-443A-9D75-3882DCB18710}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
 												</Reference>
@@ -3559,9 +3477,10 @@
 													<ChildrenList>
 														<AudioFileSource Name="enemy_boss_laser_01" ID="{02FCBAEC-F119-40B2-986F-FF85E3AFA36A}">
 															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.15420598929681"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0524748751507775"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.0385514973242032"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0998112952958132"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Weapon\Laser\enemy_boss_laser_01.wav</AudioFile>
@@ -3586,10 +3505,10 @@
 													<ChildrenList>
 														<AudioFileSource Name="enemy_boss_laser_02" ID="{D9085251-EDD4-49B1-A668-BE40F2070BC8}">
 															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0571627140994623"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0533253777152143"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.0741326793471657"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.044913561078149"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0767467276849605"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Weapon\Laser\enemy_boss_laser_02.wav</AudioFile>
@@ -3614,7 +3533,7 @@
 													<ChildrenList>
 														<AudioFileSource Name="enemy_boss_laser_03" ID="{25E7D620-ACF8-4945-8FE3-A7E0B3535C45}">
 															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0493427434932318"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0935790804737492"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.0917239793081599"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 																<Property Name="TrimEnd" Type="Real64" Value="13.4808438394893"/>
@@ -3641,6 +3560,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="enemy_boss_laser_04" ID="{A5349B37-A2A4-4636-97A0-DBED397C5431}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0928635561761962"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.391379361166161"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Weapon\Laser\enemy_boss_laser_04.wav</AudioFile>
 															<MediaIDList>
@@ -3663,6 +3587,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="enemy_boss_laser_05" ID="{7C110922-2331-4CD8-9035-0434927A8F78}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.130947361731463"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.101580374010214"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Weapon\Laser\enemy_boss_laser_05.wav</AudioFile>
 															<MediaIDList>
@@ -3675,6 +3604,9 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{AC531364-B518-4421-9564-DC7404511848}"/>
+											</PositioningInfo>
 											<ObjectLists>
 												<ObjectList Name="Playlist">
 													<PluginInnerObject Name="" ID="{B9AAA08F-2A85-413F-AF63-36CFA37B83EA}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
@@ -3717,7 +3649,17 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Laser End" ID="{E2CA7DD3-BFCE-4293-9BAF-D94E37167689}" ShortID="482375902">
 											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -3912,6 +3854,11 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Load" ID="{1B258E19-A95D-4AE3-956F-EA6663AB3B9B}" ShortID="401021053">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
@@ -3935,10 +3882,10 @@
 													<ChildrenList>
 														<AudioFileSource Name="enemy_boss_load_laser_01" ID="{3003FA7B-EBF3-4E63-8520-B6C2D1163787}">
 															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.56600260592968"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.394643888130982"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="4.67406383092028"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.440437273715649"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.99344791805793"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Weapon\Load\enemy_boss_load_laser_01.wav</AudioFile>
@@ -3966,6 +3913,7 @@
 																<Property Name="FadeInDuration" Type="Real64" Value="0.431650113067915"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.271322928214118"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.23201569978771"/>
 																<Property Name="TrimEnd" Type="Real64" Value="4.48916156754858"/>
 															</PropertyList>
 															<Language>SFX</Language>
@@ -3979,40 +3927,285 @@
 														<ActiveSource Name="enemy_boss_load_laser_02" ID="{4575956A-F65B-44E9-9E6F-7912A5642DAF}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="enemy_boss_load_laser_03" ID="{7AC05B88-8DFA-4253-BD11-647145682EBB}" ShortID="202294878">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="enemy_boss_load_laser_03" ID="{67D178E7-38C1-4CDB-8D2C-35B77F6A2272}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.184992905600535"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.110995743360321"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="3.53953131879915"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>Weapon\Load\enemy_boss_load_laser_03.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="74409646"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="enemy_boss_load_laser_03" ID="{67D178E7-38C1-4CDB-8D2C-35B77F6A2272}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
+										<Sound Name="enemy_boss_load_laser_03" ID="{7AC05B88-8DFA-4253-BD11-647145682EBB}" ShortID="202294878">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Enemy Boss Animation Attenuation" ID="{6FF13D66-61A2-4A34-9314-5072B62ED6E9}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="enemy_boss_load_laser_03" ID="{67D178E7-38C1-4CDB-8D2C-35B77F6A2272}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.184992905600535"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0390267455535056"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.495460212678678"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.98537003568667"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Weapon\Load\enemy_boss_load_laser_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="74409646"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="enemy_boss_load_laser_03" ID="{67D178E7-38C1-4CDB-8D2C-35B77F6A2272}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Effects">
 											<EffectSlot Name="" ID="{AFE90E08-9EE4-4C94-B734-91FA378BEA1C}" ShortID="69484022">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+														<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Slow_Release" ID="{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+								</PropertyContainer>
+								<PropertyContainer Name="Animations" ID="{4FB1F129-00AB-4361-AE9F-1ADCCB9DF523}" ShortID="151659842">
+									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="1"/>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Enemy Boss Animation Attenuation" ID="{6FF13D66-61A2-4A34-9314-5072B62ED6E9}" WorkUnitID="{E9178C7E-5A2C-4CED-A7C7-BE54D910ACC4}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Enemy Boss" ID="{1336D3AA-C7BC-493B-B7F9-397461EE23D1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="boss_death_animation" ID="{EE8DCC90-0B77-4195-A057-E64284B3EF0B}" ShortID="1066508667">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<Custom>
+														<Attenuation Name="Attenuation (Custom)" ID="{B0DFCB6A-F44F-4364-B94C-CE3C5B610709}" ShortID="582228073">
+															<CurveUsageInfoList>
+																<VolumeDryUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																		<Curve Name="VolumeDry" ID="{5EDB6C03-F367-4A56-9F5C-A19B8231C19A}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="3"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>-200</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</VolumeDryUsage>
+																<VolumeWetGameUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																</VolumeWetGameUsage>
+																<VolumeWetUserUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																</VolumeWetUserUsage>
+																<LowPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</LowPassFilterUsage>
+																<HighPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</HighPassFilterUsage>
+																<HighShelfUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</HighShelfUsage>
+																<SpreadUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</SpreadUsage>
+																<FocusUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</FocusUsage>
+																<ObstructionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionVolumeUsage>
+																<ObstructionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionLPFUsage>
+																<ObstructionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionHPFUsage>
+																<ObstructionHSFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionHSFUsage>
+																<OcclusionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionVolumeUsage>
+																<OcclusionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionLPFUsage>
+																<OcclusionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionHPFUsage>
+																<OcclusionHSFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionHSFUsage>
+																<DiffractionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionVolumeUsage>
+																<DiffractionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionLPFUsage>
+																<DiffractionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionHPFUsage>
+																<DiffractionHSFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionHSFUsage>
+																<TransmissionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionVolumeUsage>
+																<TransmissionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionLPFUsage>
+																<TransmissionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionHPFUsage>
+																<TransmissionHSFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionHSFUsage>
+															</CurveUsageInfoList>
+														</Attenuation>
+													</Custom>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="boss_death_animation" ID="{90B17C6A-12AB-4420-9368-7F764F3D21F7}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0887277235906225"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.522507705589222"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="11.2782790791305"/>
+														<Property Name="VolumeOffset" Type="Real64">
+															<ValueList>
+																<Value>2.5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Animations\boss_death_animation.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="469403989"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{F60320FB-90BF-49AA-8ACC-7CB84BC66435}" ShortID="681015036">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+																<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Slow_Release" ID="{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="boss_death_animation" ID="{90B17C6A-12AB-4420-9368-7F764F3D21F7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="boss_intro_animation" ID="{CD8745A9-4C5D-4FA3-A7F2-45ECE9C48B04}" ShortID="551020788">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Project Tidal Stereo Conversion Settings" ID="{FDDDBD12-F99B-4CE7-9F86-CA4DC48A4B74}" WorkUnitID="{85376D08-AD97-4AED-ABEB-D02E17031707}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{DC8A4698-FB82-4754-B6C1-F72FE4D783F1}" WorkUnitID="{9F0996D2-2291-42CD-9C62-E61DDEEDEAA6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="boss_intro_animation" ID="{7D5525D2-652C-49F7-AD75-2AA2C4D2B196}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0786401660982051"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.108130228385033"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="VolumeOffset" Type="Real64">
+															<ValueList>
+																<Value>1.6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Animations\boss_intro_animation.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="556035762"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{2E90F6BC-4DD2-46B5-8698-47F25577652E}" ShortID="1038855896">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<ObjectRef Name="Boost_3dB_10KHz" ID="{59632554-9396-4E15-889E-7A2F5458DEC3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="boss_intro_animation" ID="{7D5525D2-652C-49F7-AD75-2AA2C4D2B196}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{D774EB0F-18B7-470E-A165-BED224C939F6}"/>
+									</PositioningInfo>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{AC396601-9CFA-46CC-8B49-592744BD31F2}" ShortID="350284963">
+												<PropertyList>
+													<Property Name="Bypass" Type="bool" Value="True"/>
+												</PropertyList>
 												<ReferenceList>
 													<Reference Name="Effect" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
 														<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Slow_Release" ID="{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
@@ -7587,7 +7780,7 @@
 																<Property Name="BeginTrimOffset" Type="Real64" Value="701.230166021216"/>
 																<Property Name="EndTrimOffset" Type="Real64" Value="55652.1768707483"/>
 																<Property Name="FadeInDuration" Type="Real64" Value="1211.21574130938"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="5519.46360907144"/>
 																<Property Name="PlayAt" Type="Real64" Value="-701.230166021216"/>
 															</PropertyList>
 															<AudioSourceRef Name="canyon_reveal" ID="{CC423730-D1D2-47C4-A170-E2E872D34F20}"/>
@@ -7624,7 +7817,7 @@
 																			</Point>
 																			<Point>
 																				<XPos>55.6521768707483</XPos>
-																				<YPos>0</YPos>
+																				<YPos>-2.17643</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F813228F-7B1C-4629-95C9-DB3F537C3764}",
     "Language": "SFX",
-    "Hash": "{976B8B43-7553-759F-1510-5D459FC89A20}",
+    "Hash": "{C0ED1873-90D8-ED8C-7423-DCD0E6B886A6}",
     "ObjectPath": "alarm",
     "ShortName": "alarm",
     "Path": "Event/alarm.bnk",
@@ -73,6 +73,6 @@
     ]
    }
   ],
-  "FileHash": "{76676785-A101-DC5D-67B1-468AE0D0397B}"
+  "FileHash": "{CCAAE0A9-3FF7-9D75-5069-4B7D45033C07}"
  }
 }

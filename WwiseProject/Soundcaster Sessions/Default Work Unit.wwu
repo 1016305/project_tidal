@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{EBBD188C-82C4-4198-BA5C-B9AB2B0159B8}" SchemaVersion="132">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{EBBD188C-82C4-4198-BA5C-B9AB2B0159B8}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{EBBD188C-82C4-4198-BA5C-B9AB2B0159B8}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Boss" ID="{56A8F181-0BA9-41B4-87E1-8F6DF8B87157}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="boss_intro_animation" ID="{3E9B144C-233F-4D0E-A865-E8A9EA8B3493}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_movement" ID="{9A0CEEB0-7F1E-4248-A797-C84ECF701575}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_movement_stop" ID="{4822A875-3423-4C31-AAAE-E16B49019B35}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_combat_barks" ID="{71599AD0-8564-4A70-8B5A-220F348FB2FB}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_weapon_load" ID="{C862E9EB-B587-4F65-8750-653F1454A9FB}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_weapon_charge" ID="{4DD885CB-211E-4313-B86A-5D0AA5F87A63}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_weapon_fire" ID="{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_weapon_end" ID="{84F385BC-5D08-439C-B6E1-8ED05D2DE819}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_coolingvent_open" ID="{CB456DD8-D658-4FE0-BDE8-9D9CD2619EB3}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_coolingvent_destroy" ID="{7D91000F-DC0F-4DF7-A397-494476201105}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_coolingvent_close" ID="{5222F25B-473D-47B4-950D-946A83AADBA4}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_death" ID="{C1023DA7-4736-492D-B2CA-E47DAAD5FCF8}" WorkUnitID="{31D313D2-EF91-4CE4-95DB-1F61F3764C92}"/>
+							<Position X="5" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

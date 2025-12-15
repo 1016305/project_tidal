@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{9A0CEEB0-7F1E-4248-A797-C84ECF701575}",
     "Language": "SFX",
-    "Hash": "{677B49A1-B172-0FEA-2225-09F9B21E90D3}",
+    "Hash": "{6C562C66-2CEF-44AA-7448-A92D276C758E}",
     "ObjectPath": "boss_movement",
     "ShortName": "boss_movement",
     "Path": "Event/boss_movement.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Movement\\boss_movement_01.wav",
       "Path": "Media/112469921.wem",
-      "CachePath": "A4/{A4A439C0-C798-BBFA-A115-7E0298312C60}.wem"
+      "CachePath": "C3/{C3515C48-7027-54B3-48EB-3A181022B417}.wem"
      }
     ],
     "Events": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{343F8C38-C73C-9B39-602E-C131BB6C692E}"
+  "FileHash": "{9305C765-039B-94C9-F1D5-CBF520211577}"
  }
 }

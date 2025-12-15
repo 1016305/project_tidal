@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}",
     "Language": "SFX",
-    "Hash": "{C50DA1AD-5868-9330-064A-6EEA22EF544C}",
+    "Hash": "{7FBC264C-FB15-668E-6E28-3EE06F5B5642}",
     "ObjectPath": "boss_weapon_fire",
     "ShortName": "boss_weapon_fire",
     "Path": "Event/boss_weapon_fire.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Laser\\enemy_boss_laser_01.wav",
       "Path": "Media/234877969.wem",
-      "CachePath": "02/{02272D1B-3521-0AF1-9B0E-13ABBA09EB5A}.wem"
+      "CachePath": "03/{03C45450-F3ED-38BE-9F85-8907E4F3B2B3}.wem"
      },
      {
       "Id": "272569101",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Laser\\enemy_boss_laser_04.wav",
       "Path": "Media/272569101.wem",
-      "CachePath": "B2/{B2F7C938-C9E6-4F67-AA48-AE7BED442008}.wem"
+      "CachePath": "FB/{FB06054E-C16C-5204-BA7A-24EBB6E6D859}.wem"
      },
      {
       "Id": "396391263",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Laser\\enemy_boss_laser_02.wav",
       "Path": "Media/396391263.wem",
-      "CachePath": "72/{72306654-7D8C-3970-07A2-00E9B1C3E0FC}.wem"
+      "CachePath": "62/{62C3B377-B8B9-D62F-A43D-230D62A5EC86}.wem"
      },
      {
       "Id": "811174196",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Laser\\enemy_boss_laser_03.wav",
       "Path": "Media/811174196.wem",
-      "CachePath": "3E/{3E3B4162-DA35-3EAC-B87F-A3DA2949FAF9}.wem"
+      "CachePath": "01/{01771104-9A7C-3823-8F60-42E18C0AA271}.wem"
      },
      {
       "Id": "918355346",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Laser\\enemy_boss_laser_05.wav",
       "Path": "Media/918355346.wem",
-      "CachePath": "03/{0395FDA4-8CC1-EF3A-F948-D874D1659D2D}.wem"
+      "CachePath": "A6/{A6018BF0-B30B-3F15-C532-CE4C628151AB}.wem"
      }
     ],
     "Plugins": {
@@ -83,7 +83,7 @@
       "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "13.480844",
-      "DurationMax": "14.271156",
+      "DurationMax": "13.879777",
       "MediaRefs": [
        {
         "Id": "234877969"
@@ -112,6 +112,6 @@
     ]
    }
   ],
-  "FileHash": "{614AD46A-7663-44D3-AD75-37BFCF2E8D7F}"
+  "FileHash": "{3C7A9F0A-B0A7-F1D5-61D3-D23552624CD0}"
  }
 }

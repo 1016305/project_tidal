@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{84F385BC-5D08-439C-B6E1-8ED05D2DE819}",
     "Language": "SFX",
-    "Hash": "{0F57D7C0-1D35-6E6F-ADEA-719F4D645749}",
+    "Hash": "{445CC503-7778-286A-A701-F88ABD8C7858}",
     "ObjectPath": "boss_weapon_end",
     "ShortName": "boss_weapon_end",
     "Path": "Event/boss_weapon_end.bnk",
@@ -112,6 +112,6 @@
     ]
    }
   ],
-  "FileHash": "{5885B640-8E86-9F20-6AFB-1AE733379379}"
+  "FileHash": "{65966EEE-E11E-5381-E110-9637C7853571}"
  }
 }

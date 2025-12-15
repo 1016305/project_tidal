@@ -71,6 +71,8 @@
 								<Bus Name="Environment" ID="{4F18AFDC-7F1C-4223-A25B-D28ED21702D8}"/>
 								<Bus Name="Weapons" ID="{1A90138E-2B2A-4E2F-9D90-DED81A81D9C3}"/>
 								<Bus Name="Player" ID="{F86EDA78-1542-451F-8EDA-361E8973B190}"/>
+								<Bus Name="Enemy" ID="{213F3D6A-BC32-4017-9B07-74F5BE8960B7}"/>
+								<Bus Name="Enemy Boss" ID="{1336D3AA-C7BC-493B-B7F9-397461EE23D1}"/>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">

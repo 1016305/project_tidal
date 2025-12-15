@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{71599AD0-8564-4A70-8B5A-220F348FB2FB}",
     "Language": "SFX",
-    "Hash": "{952D09D0-1B66-D44F-D739-964C4F8EBDA2}",
+    "Hash": "{6F80D2C0-5275-7ACA-2B7D-F97B1DC6A402}",
     "ObjectPath": "boss_combat_barks",
     "ShortName": "boss_combat_barks",
     "Path": "Event/boss_combat_barks.bnk",
@@ -68,7 +68,6 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_combat_barks",
       "GUID": "{71599AD0-8564-4A70-8B5A-220F348FB2FB}",
       "Color": "10",
-      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "2.5547233",
       "DurationMax": "5.5433073",
@@ -93,6 +92,6 @@
     ]
    }
   ],
-  "FileHash": "{C321644D-6461-696E-2961-ADA900B4D7C7}"
+  "FileHash": "{4F94CF58-7DFB-4EC8-94B6-99EF8EC66768}"
  }
 }

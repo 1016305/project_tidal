@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{10ABE41B-B953-4C42-AB22-14D992B77585}",
     "Language": "SFX",
-    "Hash": "{14B2B1D6-4DD0-35A6-C5A2-04695B264316}",
+    "Hash": "{B0D5CD6B-CBAF-5D3E-B022-9275E5D012B0}",
     "ObjectPath": "open_arena_door",
     "ShortName": "open_arena_door",
     "Path": "Event/open_arena_door.bnk",
@@ -73,6 +73,6 @@
     ]
    }
   ],
-  "FileHash": "{4A5F0CEE-1FCF-BAF5-2268-6F68FECCCC96}"
+  "FileHash": "{153F4BF1-F27C-DB8A-2BDB-0EFE164CD54E}"
  }
 }

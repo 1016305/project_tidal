@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7D91000F-DC0F-4DF7-A397-494476201105}",
     "Language": "SFX",
-    "Hash": "{2CC15B98-3579-142D-63CE-24C659FB5AE8}",
+    "Hash": "{81F0049D-D018-DA8C-B1FB-943832D229E4}",
     "ObjectPath": "boss_coolingvent_destroy",
     "ShortName": "boss_coolingvent_destroy",
     "Path": "Event/boss_coolingvent_destroy.bnk",
@@ -104,7 +104,6 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy Boss\\boss_coolingvent_destroy",
       "GUID": "{7D91000F-DC0F-4DF7-A397-494476201105}",
       "Color": "10",
-      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "1.1174203",
       "DurationMax": "2.3343647",
@@ -141,6 +140,6 @@
     ]
    }
   ],
-  "FileHash": "{BF901BAB-7A85-BE87-AD3E-EE0837A1575F}"
+  "FileHash": "{4A4587F8-E19B-0EC8-42CD-7D7A56D91F95}"
  }
 }
