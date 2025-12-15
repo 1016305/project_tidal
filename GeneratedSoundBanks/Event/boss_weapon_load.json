@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C862E9EB-B587-4F65-8750-653F1454A9FB}",
     "Language": "SFX",
-    "Hash": "{E5F083E9-E9EA-FA37-9E0B-F2C7A374EB41}",
+    "Hash": "{DD62B32E-E8C3-4647-2806-6F9AA627F4BD}",
     "ObjectPath": "boss_weapon_load",
     "ShortName": "boss_weapon_load",
     "Path": "Event/boss_weapon_load.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Load\\enemy_boss_load_laser_03.wav",
       "Path": "Media/74409646.wem",
-      "CachePath": "15/{15CB80B6-5F31-6853-59B6-AA5EA2409138}.wem"
+      "CachePath": "06/{06C8F70C-DA09-5B82-729A-9092F2B51C07}.wem"
      }
     ],
     "Plugins": {
@@ -64,6 +64,6 @@
     ]
    }
   ],
-  "FileHash": "{801646E2-8AC5-433A-311C-29F27A767E0D}"
+  "FileHash": "{470A433D-0E10-5958-5456-720FEE143C9B}"
  }
 }

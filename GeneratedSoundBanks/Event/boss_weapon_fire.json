@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A0CBD1FF-62D2-42F2-8C72-A842E12DAFAC}",
     "Language": "SFX",
-    "Hash": "{7FBC264C-FB15-668E-6E28-3EE06F5B5642}",
+    "Hash": "{F5CBE56E-1A8B-4FEC-17F1-B627D8DEA2DA}",
     "ObjectPath": "boss_weapon_fire",
     "ShortName": "boss_weapon_fire",
     "Path": "Event/boss_weapon_fire.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Laser\\enemy_boss_laser_01.wav",
       "Path": "Media/234877969.wem",
-      "CachePath": "03/{03C45450-F3ED-38BE-9F85-8907E4F3B2B3}.wem"
+      "CachePath": "2E/{2E224292-4DC4-ED99-6D50-A053B33115AB}.wem"
      },
      {
       "Id": "272569101",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Laser\\enemy_boss_laser_04.wav",
       "Path": "Media/272569101.wem",
-      "CachePath": "FB/{FB06054E-C16C-5204-BA7A-24EBB6E6D859}.wem"
+      "CachePath": "8B/{8B6C710A-77D1-501D-7E66-6ABB6B7430A0}.wem"
      },
      {
       "Id": "396391263",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Laser\\enemy_boss_laser_02.wav",
       "Path": "Media/396391263.wem",
-      "CachePath": "62/{62C3B377-B8B9-D62F-A43D-230D62A5EC86}.wem"
+      "CachePath": "3E/{3E17197D-3D66-81CB-7B95-9EB42451475E}.wem"
      },
      {
       "Id": "811174196",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Laser\\enemy_boss_laser_03.wav",
       "Path": "Media/811174196.wem",
-      "CachePath": "01/{01771104-9A7C-3823-8F60-42E18C0AA271}.wem"
+      "CachePath": "3C/{3C364B6E-9870-7C05-9CB0-BF30AA98B380}.wem"
      },
      {
       "Id": "918355346",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "Weapon\\Laser\\enemy_boss_laser_05.wav",
       "Path": "Media/918355346.wem",
-      "CachePath": "A6/{A6018BF0-B30B-3F15-C532-CE4C628151AB}.wem"
+      "CachePath": "C6/{C6344DB7-79DD-BB77-A4BC-EE292AE12C5E}.wem"
      }
     ],
     "Plugins": {
@@ -112,6 +112,6 @@
     ]
    }
   ],
-  "FileHash": "{3C7A9F0A-B0A7-F1D5-61D3-D23552624CD0}"
+  "FileHash": "{4898ECB8-63AE-4E3A-4E26-4A05FB30C198}"
  }
 }

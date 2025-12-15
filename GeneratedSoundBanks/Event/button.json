@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A1FEA889-5899-4FEA-8BFE-31E347E96E1D}",
     "Language": "SFX",
-    "Hash": "{8D933944-DE4F-1191-F44F-56454900A2EF}",
+    "Hash": "{5EFEFF35-F330-F121-7F3F-B1467DA92D73}",
     "ObjectPath": "button",
     "ShortName": "button",
     "Path": "Event/button.bnk",
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{86F1335F-ECDC-898C-064D-657D489D73F7}"
+  "FileHash": "{89B6430A-9D9F-DF61-1AAF-061F539C242E}"
  }
 }

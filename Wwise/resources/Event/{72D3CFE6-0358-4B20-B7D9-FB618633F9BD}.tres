@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://y2o3appupwmb"]
+
+[resource]
+name = "melee"
+id = 3208241451
+guid = "{72D3CFE6-0358-4B20-B7D9-FB618633F9BD}"
+dummy = true
