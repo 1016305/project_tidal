@@ -10,7 +10,7 @@ extends Control
 const world = preload("res://scenes/cutscene.tscn")
 
 func _ready() -> void:
-	pass
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 ##Main Menu buttons
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_packed(world)

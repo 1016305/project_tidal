@@ -52,8 +52,11 @@ var blur_scene
 
 signal boss_is_dead
 const CREDITS = preload("res://scenes/credits.tscn")
+const MAIN_MENU_3_DA = preload("res://scenes/main_menu_3da.tscn")
 func load_fresh_scene():
 	get_tree().change_scene_to_packed(CREDITS)
+func load_main_scene():
+	get_tree().change_scene_to_packed(MAIN_MENU_3_DA)
 
 
 func _ready() -> void:

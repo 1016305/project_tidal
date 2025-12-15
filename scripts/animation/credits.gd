@@ -2,7 +2,7 @@ extends Control
 
 @onready var skip: Label = $PanelContainer/Label
 @onready var video: VideoStreamPlayer = $VideoStreamPlayer
-
+const MAIN_MENU_3_DA = preload("res://scenes/main_menu_3da.tscn")
 const _tex = preload("res://materials/shaders/loadingbar.tres")
 var tex
 var transparent: Color = Color(1,1,1,0)
@@ -81,7 +81,7 @@ func show_loading_bar(delta):
 
 func _on_skiptimer_timeout() -> void:
 	video.stop()
-	get_tree().quit()
+	Global.load_main_scene()
 
 func _on_video_stream_player_finished() -> void:
-	get_tree().quit()
+	Global.load_main_scene()
