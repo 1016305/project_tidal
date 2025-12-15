@@ -24,5 +24,5 @@ func rotate_to_target(target):
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body == Global.player:
-		Global.player.damage(damage)
+		Global.player.damage(damage,0)
 	queue_free()

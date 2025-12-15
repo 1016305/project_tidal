@@ -156,12 +156,16 @@ func main_behaviour():
 		Phases.Start:
 			startup_animation()
 		Phases.Phase1:
+			abc_always_be_castin()
 			phase_1()
 		Phases.Phase2:
+			abc_always_be_castin()
 			phase_2()
 		Phases.Phase3:
+			abc_always_be_castin()
 			phase_3()
 		Phases.Phase4:
+			abc_always_be_castin()
 			phase_4()
 		Phases.Dead:
 			dead()
@@ -203,6 +207,7 @@ func phase_1():
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph1_shoot_time)
+		Global.main_camera.trigger_shake(0.1,1.8)
 		await get_tree().create_timer(ph1_shoot_time).timeout
 		playsound(laser_fire_stop)
 		lights_off(left_lights)
@@ -237,6 +242,7 @@ func phase_2():
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph2_shoot_time)
+		Global.main_camera.trigger_shake(0.2,1.5)
 		await get_tree().create_timer(ph2_shoot_time).timeout
 		playsound(laser_fire_stop)
 		lights_off(left_lights)
@@ -273,6 +279,7 @@ func phase_3():
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph3_shoot_time)
+		Global.main_camera.trigger_shake(0.18,2)
 		await get_tree().create_timer(ph3_shoot_time).timeout
 		playsound(laser_fire_stop)
 		lights_off(left_lights)
@@ -293,6 +300,7 @@ func phase_3():
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph3_shoot_time)
+		Global.main_camera.trigger_shake(0.18,2)
 		await get_tree().create_timer(ph3_shoot_time).timeout
 		playsound(laser_fire_stop)
 		lights_off(left_lights)
@@ -331,6 +339,7 @@ func phase_4():
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
+		Global.main_camera.trigger_shake(0.13,2.2)
 		playsound(laser_fire_stop)
 		
 		aim_at_player = false
@@ -355,9 +364,12 @@ func phase_4():
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
+		Global.main_camera.trigger_shake(0.13,2.2)
+
+		await get_tree().create_timer(ph4_shoot_time/2).timeout
 		aim_at_player = false
 		playsound(movement_stop)
-		await get_tree().create_timer(ph4_shoot_time).timeout
+		await get_tree().create_timer(ph4_shoot_time/2).timeout
 		playsound(laser_fire_stop)
 		
 		lights_off(left_lights)
@@ -378,10 +390,11 @@ func phase_4():
 		print("Shooting! KaBLAM")
 		firing_thing.play("rear_recoil")
 		shoot(ph4_shoot_time)
-		aim_at_player = false
-		playsound(movement_stop)
+		Global.main_camera.trigger_shake(0.13,2.2)
 		await get_tree().create_timer(ph4_shoot_time).timeout
 		playsound(laser_fire_stop)
+		aim_at_player = false
+		playsound(movement_stop)
 		
 		lights_off(left_lights)
 		lights_off(right_lights)
@@ -421,10 +434,7 @@ func set_heatsink_hp():
 #	if Global.player != null:
 #		eye.look_at(Global.player.player_head.global_position)
 
-func shoot(time):
-	#do lights and charge up sound effect
-	#unhide cylinder with cool effect on it
-	#animate cylinder to stretch to cast point
+func abc_always_be_castin():
 	draw_to_here.position.x = draw_from_here.position.distance_to(Global.player.position)
 	var origin = draw_from_here.global_position
 	var end = (draw_to_here.global_position - origin) * 1000
@@ -433,8 +443,15 @@ func shoot(time):
 	query.collide_with_areas = true
 	query.collision_mask = 1
 	var result = get_world_3d().direct_space_state.intersect_ray(query)
-	var pos = result.get("position")
-	var stretch_distance = laser_tube.global_position.distance_to(pos)
+	target_pos = result.get("position")
+	
+
+func shoot(time):
+	#do lights and charge up sound effect
+	#unhide cylinder with cool effect on it
+	#animate cylinder to stretch to cast point
+	
+	var stretch_distance = laser_tube.global_position.distance_to(target_pos)
 	laser_tube.visible = true
 	var tween = create_tween()
 	## START THE SOUND EFFECT HERE
@@ -442,7 +459,6 @@ func shoot(time):
 	tween.tween_property(laser_tube,"scale",Vector3(laser_tube.scale.x,stretch_distance,laser_tube.scale.z),0.8)
 	await tween.finished
 	#spherecast will constantly fire while the player is inside it
-	target_pos = pos
 	doing_damage = true
 	vfx.on_start()
 	await get_tree().create_timer(time).timeout
@@ -572,7 +588,7 @@ func lights_off(lightsarray):
 func damage_player(damage):
 	if player_damage_tick.is_stopped():
 		player_damage_tick.start()
-		Global.player.damage(damage)
+		Global.player.damage(damage,3)
 		
 func death_explosions():
 	var exp1 = VFX_EXPLOSION.instantiate()
@@ -593,3 +609,6 @@ func boss_intro_sounds():
 
 func play_loading_sounds():
 	loadingsounds.post_event()
+	
+func shake_the_baby():
+	Global.main_camera.trigger_shake(0.23,1.5)

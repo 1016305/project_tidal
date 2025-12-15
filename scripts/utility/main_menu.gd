@@ -5,10 +5,12 @@ extends Control
 @onready var but_options: Button = $Main/Button2
 @onready var but_exit: Button = $Main/Button3
 @onready var options: VBoxContainer = $Options
+@onready var tex: ColorRect = $ColorRect2
 
 const world = preload("res://scenes/cutscene.tscn")
 
-	
+func _ready() -> void:
+	pass
 ##Main Menu buttons
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_packed(world)
@@ -16,6 +18,7 @@ func _on_start_pressed() -> void:
 func _on_options_pressed() -> void:
 	main.visible = false
 	options.visible = true
+	tex.visible = true
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
@@ -25,7 +28,7 @@ func _on_exit_pressed() -> void:
 func _on_back_pressed() -> void:
 	options.visible = false
 	main.visible = true
-
+	tex.visible = false
 
 func _on_mouse_sensitivity(value: float) -> void:
 	Global.emit_signal("get_mouse_sens", value)

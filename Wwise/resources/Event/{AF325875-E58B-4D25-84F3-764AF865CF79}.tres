@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://du2uyhdlypn01"]
+
+[resource]
+name = "assault_rifle_reload"
+id = 1010747703
+guid = "{AF325875-E58B-4D25-84F3-764AF865CF79}"
+dummy = true

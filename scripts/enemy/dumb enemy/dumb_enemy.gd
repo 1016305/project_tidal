@@ -381,6 +381,7 @@ func alert():
 
 ## Attack Behaviours
 func attack():
+	do_look_at_target = false
 	#stand still
 	agent.target_position = position
 	#shoot at player rand(x) number of times
@@ -408,6 +409,8 @@ func shoot_loop(i,rate):
 			if current_state != States.Attack:
 				break
 			else:
+				animation_player.stop()
+				animation_player.play("RESET")
 				animation_player.play("shoot")##
 				alternate_shoot()
 				await shoot_delay_timer.timeout
@@ -476,7 +479,7 @@ func test_draw_ray(collision):
 
 func enemy_hit_something(body):
 	if body == Global.player:
-		Global.player.damage(randi_range(min_damage,max_damage))
+		Global.player.damage(randi_range(min_damage,max_damage),0)
 		#print("I hit the player")
 	#print("I hit the ",body)
 
@@ -585,12 +588,13 @@ func melee():
 			agent.target_position = position
 			animation_player.stop()
 			print("stop on 545")
+			animation_player.play("RESET")
 			animation_player.play("melee")
 			playsound(melee_sounds)
 			print("play melee 5")
 			await get_tree().create_timer(1.3).timeout
 			if melee_raycast.get_collider() == Global.player:
-				Global.player.damage(randi_range(min_melee_damage,max_melee_damage))
+				Global.player.damage(randi_range(min_melee_damage,max_melee_damage),1)
 				await get_tree().create_timer(melee_cooldown).timeout
 				melee_bool = !melee_bool
 			else:

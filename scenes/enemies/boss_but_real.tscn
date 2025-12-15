@@ -839,6 +839,18 @@ tracks/11/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Turret_Base/OmniLight3D:light_energy")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_kfh3s"]
 resource_name = "death_animation"
@@ -1001,6 +1013,32 @@ tracks/13/keys = {
 "values": [{
 "args": [],
 "method": &"boss_death_sounds"
+}]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Turret_Base/OmniLight3D:light_energy")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 6.26667, 6.33333, 6.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 80.0, 0.0]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath(".")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(6.26667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"shake_the_baby"
 }]
 }
 
@@ -1299,6 +1337,12 @@ shadow_normal_bias = 6.0
 transform = Transform3D(1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, -0.0122116, 0, -2.41674)
 
 [node name="AkEvent3D" type="AkEvent3D" parent="Turret_Base/Heatsink4"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Turret_Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.9768, 0)
+light_color = Color(1, 0.582014, 0.302694, 1)
+light_energy = 0.0
+omni_range = 37.92
 
 [node name="Stem" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.74446, 0, 0, 0, 1.74446, 0, 0, 0, 1.74446, -0.007, 7.922, 0)

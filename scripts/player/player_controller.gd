@@ -32,6 +32,11 @@ var interact_result
 @export var heartbeat_out: WwiseEvent
 @export var heartbeat_in: WwiseEvent
 var heartbeat_playing: bool = false
+@export var hit_by_bullet: WwiseEvent
+@export var hit_by_melee: WwiseEvent
+@export var hit_by_boss: WwiseEvent
+@onready var ooftimer: Timer = $ooftimer
+@export var death_call: WwiseEvent
 
 #player movement adjustable variables
 var mouse_sens = 0.3
@@ -132,7 +137,7 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("interact"):
 			interact()
 	
-	take_damage_test()
+	#take_damage_test()
 	#I cannot fathom why this only works here. Probably part of some insidious component of move_and_slide
 	#If you move this ANYWHERE it will fuck up the checks for moving. I will not put this into its own
 	#method. It is a monument to all our sins.
@@ -316,7 +321,7 @@ func movement_foley():
 
 ##Getters and Setters
 #Player damage and health
-func damage(damage):
+func damage(damage,type):
 	if !is_dead:
 		current_health -= damage
 		regen_bool = false
@@ -324,6 +329,7 @@ func damage(damage):
 			current_health = 0
 		Global.player_health.emit(current_health,max_health)
 		Global.player_was_hit.emit()
+		damage_oof(type)
 		print("Took ", damage, " damage")
 		death_check()
 	
@@ -341,6 +347,8 @@ func death_check():
 		
 func death_anim():
 	if is_dead:
+		if death_call != null:
+			death_call.post(self)
 		var dir = 1
 		dir = lerp_angle(player_head.rotation.z, dir, 1)
 		Global.player_died.emit()
@@ -403,7 +411,21 @@ func overcharge_health():
 			current_health -= 1
 			await get_tree().create_timer(1).timeout
 			overcharge_bool = false
-	
+
+func damage_oof(hit_type):
+	var sond: WwiseEvent
+	if hit_type == 0:
+		sond == hit_by_bullet
+	elif hit_type == 1:
+		sond == hit_by_melee
+	elif hit_type == 2:
+		sond == hit_by_boss
+	if ooftimer.is_stopped():
+		if sond != null:
+			sond.post(self)
+			ooftimer.start()
+		
+
 ##Debug Info
 func player_debug():
 
@@ -416,8 +438,3 @@ func player_debug():
 	Global.debug.add_property('Current Velocity', velocity.snappedf(0.01), 1)
 	Global.debug.add_property('Global Position', global_position,1)
 	Global.debug.add_property('Regen Timer', regen_timer.time_left, 1)
-
-		
-func take_damage_test():
-	if Input.is_action_just_pressed("test_damage"):
-		damage(5)

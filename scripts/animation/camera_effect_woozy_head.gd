@@ -2,6 +2,20 @@ extends Camera3D
 
 const effects = preload("res://scripts/animation/woozy_head_camera_attrib.tres")
 
+var max_shake: float = 10.0
+var shake_fade: float = 10.0
+var _shake_strength: float = 0.0
+
+func _physics_process(delta: float) -> void:
+	if _shake_strength > 0:
+		_shake_strength = lerp(_shake_strength,0.0,delta*shake_fade)
+		h_offset = randf_range(-_shake_strength,_shake_strength)
+		v_offset = randf_range(-_shake_strength,_shake_strength)
+	else: 
+		h_offset = 0
+		v_offset = 0
+	
+
 func exposure():
 	var tween = get_tree().create_tween()
 	tween.set_trans(Tween.TRANS_QUAD)
@@ -30,3 +44,7 @@ func blur():
 func intro_blur_and_exposure():
 	exposure()
 	blur()
+
+func trigger_shake(strength, duration):
+	_shake_strength = strength
+	shake_fade = duration

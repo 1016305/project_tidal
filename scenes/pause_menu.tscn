@@ -44,11 +44,12 @@ alignment = 1
 [node name="TextureRect" type="TextureRect" parent="pause_main"]
 layout_mode = 2
 texture = ExtResource("3_7l7mv")
-stretch_mode = 2
+expand_mode = 5
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="pause_main"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 95
 text = "P A U S E D"
 horizontal_alignment = 1
 

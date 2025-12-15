@@ -12,6 +12,8 @@ extends Node3D
 #cubes
 @onready var cube_001: MeshInstance3D = $Cube_001
 @onready var cube_002: MeshInstance3D = $Cube_002
+@onready var ak_event_3d: AkEvent3D = $final_big_door_Imported/AkEvent3D
+
 const CREDITS = preload("res://scenes/credits.tscn")
 
 func open_door():
@@ -21,6 +23,8 @@ func open_door():
 	animation_player.play("open_big_door")
 
 func close_door():
+	if animation_player.current_animation == "open_big_door":
+		await animation_player.animation_finished
 	animation_player.play("close_big_door")
 	await animation_player.animation_finished
 	Global.blur_scene.slow_fade_to_black()
@@ -28,6 +32,7 @@ func close_door():
 	Global.load_fresh_scene()
 
 func turn_on_lights():
+	ak_event_3d.post_event()
 	omni_light_3d_3.visible = true
 	omni_light_3d_4.visible = true
 	spot_light_3d_2.visible = true

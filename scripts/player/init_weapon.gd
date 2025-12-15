@@ -24,6 +24,7 @@ var raycast_test = preload("res://scenes/weapons/weapon_extra/raycast_test.tscn"
 @onready var muzzle_flare: Node3D = $muzzle_flare
 @onready var fire_sounds: AkEvent3D = $fire_sounds
 @export var ricochet_sound: WwiseEvent
+@export var reload_sound: WwiseEvent
 
 
 var decal_size
@@ -238,7 +239,16 @@ func reload():
 		if weapon_type.weapon_reserve_ammo != 0 and !is_reloading:
 			is_reloading = !is_reloading
 			Global.player_is_reloading.emit()
-			await get_tree().create_timer(weapon_type.weapon_reload_time).timeout
+			reload_sound.post(self)
+			#mesh0 is the body
+			#mesh1 is the mag
+			#mesh2 is the trigger
+			#mesh3 is the sight
+			var tween = create_tween()
+			var tween2 = create_tween()
+			tween.tween_property(self,"position",Vector3.DOWN,1)
+			await get_tree().create_timer(weapon_type.weapon_reload_time - 1).timeout
+			tween2.tween_property(self,"position",Vector3.ZERO,1)
 			var pending_ammo = weapon_type.weapon_max_ammo - weapon_type.weapon_current_ammo
 			
 			if pending_ammo < weapon_type.weapon_reserve_ammo:
